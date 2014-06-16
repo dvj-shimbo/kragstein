@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated kragstein -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="kragstein.presentation.KragsteinModelWizardID"
+            name="%_UI_KragsteinModelWizard_label"
+            class="kragstein.presentation.KragsteinModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/KragsteinModelFile.gif">
+         <description>%_UI_KragsteinModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated kragstein -->
+      <editor
+            id="kragstein.presentation.KragsteinEditorID"
+            name="%_UI_KragsteinEditor_label"
+            icon="icons/full/obj16/KragsteinModelFile.gif"
+            extensions="kragstein"
+            class="kragstein.presentation.KragsteinEditor"
+            contributorClass="kragstein.presentation.KragsteinActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

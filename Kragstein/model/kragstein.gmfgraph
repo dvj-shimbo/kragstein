@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gmfgraph:Canvas xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gmfgraph="http://www.eclipse.org/gmf/2006/GraphicalDefinition" name="kragstein">
+  <figures name="Default">
+    <descriptors name="GeneralizationFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="GeneralizationFigure"/>
+    </descriptors>
+    <descriptors name="RealizationFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="RealizationFigure">
+        <children xsi:type="gmfgraph:Label" name="RealizationNameFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="RealizationLowerBoundFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="RealizationUpperBoundFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.1/@actualFigure/@children.0"/>
+      <accessors figure="//@figures.0/@descriptors.1/@actualFigure/@children.1"/>
+      <accessors figure="//@figures.0/@descriptors.1/@actualFigure/@children.2"/>
+    </descriptors>
+    <descriptors name="AssociationFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="AssociationFigure">
+        <children xsi:type="gmfgraph:Label" name="AssociationNameFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="AssociationLowerBoundFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="AssociationUpperBoundFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.2/@actualFigure/@children.0"/>
+      <accessors figure="//@figures.0/@descriptors.2/@actualFigure/@children.1"/>
+      <accessors figure="//@figures.0/@descriptors.2/@actualFigure/@children.2"/>
+    </descriptors>
+    <descriptors name="AggregationFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="AggregationFigure">
+        <children xsi:type="gmfgraph:Label" name="AggregationNameFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="AggregationLowerBoundFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="AggregationUpperBoundFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.3/@actualFigure/@children.0"/>
+      <accessors figure="//@figures.0/@descriptors.3/@actualFigure/@children.1"/>
+      <accessors figure="//@figures.0/@descriptors.3/@actualFigure/@children.2"/>
+    </descriptors>
+    <descriptors name="CompositionFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="CompositionFigure">
+        <children xsi:type="gmfgraph:Label" name="CompositionNameFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="CompositionLowerBoundFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="CompositionUpperBoundFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.4/@actualFigure/@children.0"/>
+      <accessors figure="//@figures.0/@descriptors.4/@actualFigure/@children.1"/>
+      <accessors figure="//@figures.0/@descriptors.4/@actualFigure/@children.2"/>
+    </descriptors>
+    <descriptors name="DependencyFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="DependencyFigure">
+        <children xsi:type="gmfgraph:Label" name="DependencyNameFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="DependencyLowerBoundFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="DependencyUpperBoundFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.5/@actualFigure/@children.0"/>
+      <accessors figure="//@figures.0/@descriptors.5/@actualFigure/@children.1"/>
+      <accessors figure="//@figures.0/@descriptors.5/@actualFigure/@children.2"/>
+    </descriptors>
+    <descriptors name="InterfaceFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="InterfaceFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="InterfaceNameFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="InterfaceVisibilityFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.6/@actualFigure/@children.0"/>
+      <accessors figure="//@figures.0/@descriptors.6/@actualFigure/@children.1"/>
+    </descriptors>
+    <descriptors name="ClassFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="ClassFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="ClassNameFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="ClassVisibilityFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.7/@actualFigure/@children.0"/>
+      <accessors figure="//@figures.0/@descriptors.7/@actualFigure/@children.1"/>
+    </descriptors>
+    <descriptors name="AttributeFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="AttributeFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="AttributeNameFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="AttributeTypeFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="AttributeVisibilityFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.8/@actualFigure/@children.0"/>
+      <accessors figure="//@figures.0/@descriptors.8/@actualFigure/@children.1"/>
+      <accessors figure="//@figures.0/@descriptors.8/@actualFigure/@children.2"/>
+    </descriptors>
+    <descriptors name="MethodFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="MethodFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="MethodNameFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="MethodTypeFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="MethodVisibilityFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.9/@actualFigure/@children.0"/>
+      <accessors figure="//@figures.0/@descriptors.9/@actualFigure/@children.1"/>
+      <accessors figure="//@figures.0/@descriptors.9/@actualFigure/@children.2"/>
+    </descriptors>
+    <descriptors name="ParameterFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="ParameterFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="ParameterNameFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="ParameterTypeFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.10/@actualFigure/@children.0"/>
+      <accessors figure="//@figures.0/@descriptors.10/@actualFigure/@children.1"/>
+    </descriptors>
+    <descriptors name="DrakonDiagrammFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="DrakonDiagrammFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="DrakonDiagrammNameFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.11/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="HeaderFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="HeaderFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="HeaderNameFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.12/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="FormalParametersFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="FormalParametersFigure"/>
+    </descriptors>
+    <descriptors name="BranchFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="BranchFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="BranchNameFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="BranchIsLoopFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.14/@actualFigure/@children.0"/>
+      <accessors figure="//@figures.0/@descriptors.14/@actualFigure/@children.1"/>
+    </descriptors>
+    <descriptors name="BranchConnectionFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="BranchConnectionFigure"/>
+    </descriptors>
+    <descriptors name="RouteFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="RouteFigure"/>
+    </descriptors>
+    <descriptors name="RightCommentFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="RightCommentFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="RightCommentValueFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.17/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="LeftCommentFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="LeftCommentFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="LeftCommentValueFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.18/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="ValencePointFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="ValencePointFigure"/>
+    </descriptors>
+    <descriptors name="ConnectionFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="ConnectionFigure"/>
+    </descriptors>
+    <descriptors name="ActionFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="ActionFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="ActionNameFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="ActionValueFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.21/@actualFigure/@children.0"/>
+      <accessors figure="//@figures.0/@descriptors.21/@actualFigure/@children.1"/>
+    </descriptors>
+    <descriptors name="QuestionFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="QuestionFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="QuestionNameFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="QuestionValueFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="QuestionYesBelowFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.22/@actualFigure/@children.0"/>
+      <accessors figure="//@figures.0/@descriptors.22/@actualFigure/@children.1"/>
+      <accessors figure="//@figures.0/@descriptors.22/@actualFigure/@children.2"/>
+    </descriptors>
+    <descriptors name="ChoiceFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="ChoiceFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="ChoiceNameFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="ChoiceValueFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.23/@actualFigure/@children.0"/>
+      <accessors figure="//@figures.0/@descriptors.23/@actualFigure/@children.1"/>
+    </descriptors>
+    <descriptors name="CaseFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="CaseFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="CaseNameFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="CaseValueFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.24/@actualFigure/@children.0"/>
+      <accessors figure="//@figures.0/@descriptors.24/@actualFigure/@children.1"/>
+    </descriptors>
+    <descriptors name="HeadlineFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="HeadlineFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="HeadlineNameFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.25/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="AdressFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="AdressFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="AdressNameFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.26/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="InsertionFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="InsertionFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="InsertionNameFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="InsertionValueFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.27/@actualFigure/@children.0"/>
+      <accessors figure="//@figures.0/@descriptors.27/@actualFigure/@children.1"/>
+    </descriptors>
+    <descriptors name="ShelfFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="ShelfFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="ShelfNameFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="ShelfValueFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.28/@actualFigure/@children.0"/>
+      <accessors figure="//@figures.0/@descriptors.28/@actualFigure/@children.1"/>
+    </descriptors>
+    <descriptors name="BeginLoopFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="BeginLoopFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="BeginLoopNameFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="BeginLoopValueFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.29/@actualFigure/@children.0"/>
+      <accessors figure="//@figures.0/@descriptors.29/@actualFigure/@children.1"/>
+    </descriptors>
+    <descriptors name="EndLoopFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="EndLoopFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="EndLoopNameFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="EndLoopValueFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.30/@actualFigure/@children.0"/>
+      <accessors figure="//@figures.0/@descriptors.30/@actualFigure/@children.1"/>
+    </descriptors>
+    <descriptors name="OutputFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="OutputFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="OutputNameFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="OutputValueFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.31/@actualFigure/@children.0"/>
+      <accessors figure="//@figures.0/@descriptors.31/@actualFigure/@children.1"/>
+    </descriptors>
+    <descriptors name="InputFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="InputFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="InputNameFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="InputValueFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.32/@actualFigure/@children.0"/>
+      <accessors figure="//@figures.0/@descriptors.32/@actualFigure/@children.1"/>
+    </descriptors>
+    <descriptors name="CommentFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="CommentFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="CommentValueFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.33/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="LoopArrowFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="LoopArrowFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="LoopArrowNameFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.34/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="EmptyConnectorFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="EmptyConnectorFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="EmptyConnectorNameFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.35/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="EndFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="EndFigure"/>
+    </descriptors>
+    <descriptors name="InterfaceMethodFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="InterfaceMethodFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="InterfaceMethodNameFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="InterfaceMethodTypeFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="InterfaceMethodVisibilityFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.37/@actualFigure/@children.0"/>
+      <accessors figure="//@figures.0/@descriptors.37/@actualFigure/@children.1"/>
+      <accessors figure="//@figures.0/@descriptors.37/@actualFigure/@children.2"/>
+    </descriptors>
+    <descriptors name="InterfaceParameterFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="InterfaceParameterFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="InterfaceParameterNameFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="InterfaceParameterTypeFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.38/@actualFigure/@children.0"/>
+      <accessors figure="//@figures.0/@descriptors.38/@actualFigure/@children.1"/>
+    </descriptors>
+  </figures>
+  <nodes name="Interface" figure="InterfaceFigure"/>
+  <nodes name="Class" figure="ClassFigure"/>
+  <nodes name="Attribute" figure="AttributeFigure"/>
+  <nodes name="Method" figure="MethodFigure"/>
+  <nodes name="Parameter" figure="ParameterFigure"/>
+  <nodes name="DrakonDiagramm" figure="DrakonDiagrammFigure"/>
+  <nodes name="Header" figure="HeaderFigure"/>
+  <nodes name="FormalParameters" figure="FormalParametersFigure"/>
+  <nodes name="Branch" figure="BranchFigure"/>
+  <nodes name="Route" figure="RouteFigure"/>
+  <nodes name="RightComment" figure="RightCommentFigure"/>
+  <nodes name="LeftComment" figure="LeftCommentFigure"/>
+  <nodes name="ValencePoint" figure="ValencePointFigure"/>
+  <nodes name="Action" figure="ActionFigure"/>
+  <nodes name="Question" figure="QuestionFigure"/>
+  <nodes name="Choice" figure="ChoiceFigure"/>
+  <nodes name="Case" figure="CaseFigure"/>
+  <nodes name="Headline" figure="HeadlineFigure"/>
+  <nodes name="Adress" figure="AdressFigure"/>
+  <nodes name="Insertion" figure="InsertionFigure"/>
+  <nodes name="Shelf" figure="ShelfFigure"/>
+  <nodes name="BeginLoop" figure="BeginLoopFigure"/>
+  <nodes name="EndLoop" figure="EndLoopFigure"/>
+  <nodes name="Output" figure="OutputFigure"/>
+  <nodes name="Input" figure="InputFigure"/>
+  <nodes name="Comment" figure="CommentFigure"/>
+  <nodes name="LoopArrow" figure="LoopArrowFigure"/>
+  <nodes name="EmptyConnector" figure="EmptyConnectorFigure"/>
+  <nodes name="End" figure="EndFigure"/>
+  <nodes name="InterfaceMethod" figure="InterfaceMethodFigure"/>
+  <nodes name="InterfaceParameter" figure="InterfaceParameterFigure"/>
+  <connections name="Generalization" figure="GeneralizationFigure"/>
+  <connections name="Realization" figure="RealizationFigure"/>
+  <connections name="Association" figure="AssociationFigure"/>
+  <connections name="Aggregation" figure="AggregationFigure"/>
+  <connections name="Composition" figure="CompositionFigure"/>
+  <connections name="Dependency" figure="DependencyFigure"/>
+  <connections name="BranchConnection" figure="BranchConnectionFigure"/>
+  <connections name="Connection" figure="ConnectionFigure"/>
+  <labels name="RealizationName" figure="RealizationFigure" accessor="//@figures.0/@descriptors.1/@accessors.0"/>
+  <labels name="RealizationLowerBound" figure="RealizationFigure" accessor="//@figures.0/@descriptors.1/@accessors.1"/>
+  <labels name="RealizationUpperBound" figure="RealizationFigure" accessor="//@figures.0/@descriptors.1/@accessors.2"/>
+  <labels name="AssociationName" figure="AssociationFigure" accessor="//@figures.0/@descriptors.2/@accessors.0"/>
+  <labels name="AssociationLowerBound" figure="AssociationFigure" accessor="//@figures.0/@descriptors.2/@accessors.1"/>
+  <labels name="AssociationUpperBound" figure="AssociationFigure" accessor="//@figures.0/@descriptors.2/@accessors.2"/>
+  <labels name="AggregationName" figure="AggregationFigure" accessor="//@figures.0/@descriptors.3/@accessors.0"/>
+  <labels name="AggregationLowerBound" figure="AggregationFigure" accessor="//@figures.0/@descriptors.3/@accessors.1"/>
+  <labels name="AggregationUpperBound" figure="AggregationFigure" accessor="//@figures.0/@descriptors.3/@accessors.2"/>
+  <labels name="CompositionName" figure="CompositionFigure" accessor="//@figures.0/@descriptors.4/@accessors.0"/>
+  <labels name="CompositionLowerBound" figure="CompositionFigure" accessor="//@figures.0/@descriptors.4/@accessors.1"/>
+  <labels name="CompositionUpperBound" figure="CompositionFigure" accessor="//@figures.0/@descriptors.4/@accessors.2"/>
+  <labels name="DependencyName" figure="DependencyFigure" accessor="//@figures.0/@descriptors.5/@accessors.0"/>
+  <labels name="DependencyLowerBound" figure="DependencyFigure" accessor="//@figures.0/@descriptors.5/@accessors.1"/>
+  <labels name="DependencyUpperBound" figure="DependencyFigure" accessor="//@figures.0/@descriptors.5/@accessors.2"/>
+  <labels name="InterfaceName" figure="InterfaceFigure" accessor="//@figures.0/@descriptors.6/@accessors.0"/>
+  <labels name="InterfaceVisibility" figure="InterfaceFigure" accessor="//@figures.0/@descriptors.6/@accessors.1"/>
+  <labels name="ClassName" figure="ClassFigure" accessor="//@figures.0/@descriptors.7/@accessors.0"/>
+  <labels name="ClassVisibility" figure="ClassFigure" accessor="//@figures.0/@descriptors.7/@accessors.1"/>
+  <labels name="AttributeName" figure="AttributeFigure" accessor="//@figures.0/@descriptors.8/@accessors.0"/>
+  <labels name="AttributeType" figure="AttributeFigure" accessor="//@figures.0/@descriptors.8/@accessors.1"/>
+  <labels name="AttributeVisibility" figure="AttributeFigure" accessor="//@figures.0/@descriptors.8/@accessors.2"/>
+  <labels name="MethodName" figure="MethodFigure" accessor="//@figures.0/@descriptors.9/@accessors.0"/>
+  <labels name="MethodType" figure="MethodFigure" accessor="//@figures.0/@descriptors.9/@accessors.1"/>
+  <labels name="MethodVisibility" figure="MethodFigure" accessor="//@figures.0/@descriptors.9/@accessors.2"/>
+  <labels name="ParameterName" figure="ParameterFigure" accessor="//@figures.0/@descriptors.10/@accessors.0"/>
+  <labels name="ParameterType" figure="ParameterFigure" accessor="//@figures.0/@descriptors.10/@accessors.1"/>
+  <labels name="DrakonDiagrammName" figure="DrakonDiagrammFigure" accessor="//@figures.0/@descriptors.11/@accessors.0"/>
+  <labels name="HeaderName" figure="HeaderFigure" accessor="//@figures.0/@descriptors.12/@accessors.0"/>
+  <labels name="BranchName" figure="BranchFigure" accessor="//@figures.0/@descriptors.14/@accessors.0"/>
+  <labels name="BranchIsLoop" figure="BranchFigure" accessor="//@figures.0/@descriptors.14/@accessors.1"/>
+  <labels name="RightCommentValue" figure="RightCommentFigure" accessor="//@figures.0/@descriptors.17/@accessors.0"/>
+  <labels name="LeftCommentValue" figure="LeftCommentFigure" accessor="//@figures.0/@descriptors.18/@accessors.0"/>
+  <labels name="ActionName" figure="ActionFigure" accessor="//@figures.0/@descriptors.21/@accessors.0"/>
+  <labels name="ActionValue" figure="ActionFigure" accessor="//@figures.0/@descriptors.21/@accessors.1"/>
+  <labels name="QuestionName" figure="QuestionFigure" accessor="//@figures.0/@descriptors.22/@accessors.0"/>
+  <labels name="QuestionValue" figure="QuestionFigure" accessor="//@figures.0/@descriptors.22/@accessors.1"/>
+  <labels name="QuestionYesBelow" figure="QuestionFigure" accessor="//@figures.0/@descriptors.22/@accessors.2"/>
+  <labels name="ChoiceName" figure="ChoiceFigure" accessor="//@figures.0/@descriptors.23/@accessors.0"/>
+  <labels name="ChoiceValue" figure="ChoiceFigure" accessor="//@figures.0/@descriptors.23/@accessors.1"/>
+  <labels name="CaseName" figure="CaseFigure" accessor="//@figures.0/@descriptors.24/@accessors.0"/>
+  <labels name="CaseValue" figure="CaseFigure" accessor="//@figures.0/@descriptors.24/@accessors.1"/>
+  <labels name="HeadlineName" figure="HeadlineFigure" accessor="//@figures.0/@descriptors.25/@accessors.0"/>
+  <labels name="AdressName" figure="AdressFigure" accessor="//@figures.0/@descriptors.26/@accessors.0"/>
+  <labels name="InsertionName" figure="InsertionFigure" accessor="//@figures.0/@descriptors.27/@accessors.0"/>
+  <labels name="InsertionValue" figure="InsertionFigure" accessor="//@figures.0/@descriptors.27/@accessors.1"/>
+  <labels name="ShelfName" figure="ShelfFigure" accessor="//@figures.0/@descriptors.28/@accessors.0"/>
+  <labels name="ShelfValue" figure="ShelfFigure" accessor="//@figures.0/@descriptors.28/@accessors.1"/>
+  <labels name="BeginLoopName" figure="BeginLoopFigure" accessor="//@figures.0/@descriptors.29/@accessors.0"/>
+  <labels name="BeginLoopValue" figure="BeginLoopFigure" accessor="//@figures.0/@descriptors.29/@accessors.1"/>
+  <labels name="EndLoopName" figure="EndLoopFigure" accessor="//@figures.0/@descriptors.30/@accessors.0"/>
+  <labels name="EndLoopValue" figure="EndLoopFigure" accessor="//@figures.0/@descriptors.30/@accessors.1"/>
+  <labels name="OutputName" figure="OutputFigure" accessor="//@figures.0/@descriptors.31/@accessors.0"/>
+  <labels name="OutputValue" figure="OutputFigure" accessor="//@figures.0/@descriptors.31/@accessors.1"/>
+  <labels name="InputName" figure="InputFigure" accessor="//@figures.0/@descriptors.32/@accessors.0"/>
+  <labels name="InputValue" figure="InputFigure" accessor="//@figures.0/@descriptors.32/@accessors.1"/>
+  <labels name="CommentValue" figure="CommentFigure" accessor="//@figures.0/@descriptors.33/@accessors.0"/>
+  <labels name="LoopArrowName" figure="LoopArrowFigure" accessor="//@figures.0/@descriptors.34/@accessors.0"/>
+  <labels name="EmptyConnectorName" figure="EmptyConnectorFigure" accessor="//@figures.0/@descriptors.35/@accessors.0"/>
+  <labels name="InterfaceMethodName" figure="InterfaceMethodFigure" accessor="//@figures.0/@descriptors.37/@accessors.0"/>
+  <labels name="InterfaceMethodType" figure="InterfaceMethodFigure" accessor="//@figures.0/@descriptors.37/@accessors.1"/>
+  <labels name="InterfaceMethodVisibility" figure="InterfaceMethodFigure" accessor="//@figures.0/@descriptors.37/@accessors.2"/>
+  <labels name="InterfaceParameterName" figure="InterfaceParameterFigure" accessor="//@figures.0/@descriptors.38/@accessors.0"/>
+  <labels name="InterfaceParameterType" figure="InterfaceParameterFigure" accessor="//@figures.0/@descriptors.38/@accessors.1"/>
+</gmfgraph:Canvas>

@@ -1,7 +1,0 @@
-eclipse.preferences.version=1
-gmf_dashboard/domainGenerationModel=platform\:/resource/Kragstein/model/kragstein.genmodel
-gmf_dashboard/domainModel=platform\:/resource/Kragstein/model/kragstein.ecore
-gmf_dashboard/generationModel=platform\:/resource/Kragstein/model/kragstein.gmfgen
-gmf_dashboard/graphicalDefinitionModel=platform\:/resource/Kragstein/model/kragstein.gmfgraph
-gmf_dashboard/mappingModel=platform\:/resource/Kragstein/model/kragstein.gmfmap
-gmf_dashboard/toolingDefinitionModel=platform\:/resource/Kragstein/model/kragstein.gmftool

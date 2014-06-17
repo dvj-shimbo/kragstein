@@ -4,7 +4,7 @@
  */
 package kragstein.validation;
 
-import kragstein.DrakonDiagramm;
+import kragstein.DrakonDiagram;
 import kragstein.Parameter;
 
 import org.eclipse.emf.common.util.EList;
@@ -19,7 +19,7 @@ public interface MethodValidator {
 	boolean validate();
 
 	boolean validateParameters(EList<Parameter> value);
-	boolean validateDrakonDiadramm(DrakonDiagramm value);
+	boolean validateDrakonDiadram(DrakonDiagram value);
 	boolean validateName(String value);
 	boolean validateType(String value);
 	boolean validateVisibility(String value);

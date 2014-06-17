@@ -16,7 +16,7 @@ import kragstein.Choice;
 import kragstein.Comment;
 import kragstein.Composition;
 import kragstein.Dependency;
-import kragstein.DrakonDiagramm;
+import kragstein.DrakonDiagram;
 import kragstein.EmptyConnector;
 import kragstein.End;
 import kragstein.EndLoop;
@@ -35,13 +35,13 @@ import kragstein.LoopArrow;
 import kragstein.Method;
 import kragstein.Output;
 import kragstein.Parameter;
+import kragstein.Project;
 import kragstein.Question;
 import kragstein.Realization;
 import kragstein.Relationship;
 import kragstein.RightComment;
 import kragstein.Route;
 import kragstein.Shelf;
-import kragstein.UMLDiagramm;
 import kragstein.ValencePoint;
 
 import org.eclipse.emf.common.notify.Adapter;
@@ -108,8 +108,12 @@ public class KragsteinAdapterFactory extends AdapterFactoryImpl {
 	protected KragsteinSwitch<Adapter> modelSwitch =
 		new KragsteinSwitch<Adapter>() {
 			@Override
-			public Adapter caseUMLDiagramm(UMLDiagramm object) {
-				return createUMLDiagrammAdapter();
+			public Adapter caseProject(Project object) {
+				return createProjectAdapter();
+			}
+			@Override
+			public Adapter casePackage(kragstein.Package object) {
+				return createPackageAdapter();
 			}
 			@Override
 			public Adapter caseRelationship(Relationship object) {
@@ -164,8 +168,8 @@ public class KragsteinAdapterFactory extends AdapterFactoryImpl {
 				return createParameterAdapter();
 			}
 			@Override
-			public Adapter caseDrakonDiagramm(DrakonDiagramm object) {
-				return createDrakonDiagrammAdapter();
+			public Adapter caseDrakonDiagram(DrakonDiagram object) {
+				return createDrakonDiagramAdapter();
 			}
 			@Override
 			public Adapter caseHeader(Header object) {
@@ -292,16 +296,30 @@ public class KragsteinAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link kragstein.UMLDiagramm <em>UML Diagramm</em>}'.
+	 * Creates a new adapter for an object of class '{@link kragstein.Project <em>Project</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see kragstein.UMLDiagramm
+	 * @see kragstein.Project
 	 * @generated
 	 */
-	public Adapter createUMLDiagrammAdapter() {
+	public Adapter createProjectAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link kragstein.Package <em>Package</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see kragstein.Package
+	 * @generated
+	 */
+	public Adapter createPackageAdapter() {
 		return null;
 	}
 
@@ -488,16 +506,16 @@ public class KragsteinAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link kragstein.DrakonDiagramm <em>Drakon Diagramm</em>}'.
+	 * Creates a new adapter for an object of class '{@link kragstein.DrakonDiagram <em>Drakon Diagram</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see kragstein.DrakonDiagramm
+	 * @see kragstein.DrakonDiagram
 	 * @generated
 	 */
-	public Adapter createDrakonDiagrammAdapter() {
+	public Adapter createDrakonDiagramAdapter() {
 		return null;
 	}
 

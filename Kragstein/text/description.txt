@@ -7,9 +7,13 @@ This can be disabled with -vmargs -Dorg.eclipse.emf.examples.generator.validator
 
 Package kragstein <http:///kragstein.ecore>
 
-  Class UMLDiagramm
+  Class Project
+    Attribute name : EString
     Attribute lang : EString
-    Attribute packageName : EString
+    Reference packages : Package<<0..*>>
+
+  Class Package
+    Attribute name : EString
     Reference classes : Class<<0..*>>
 
   Class Relationship
@@ -47,7 +51,7 @@ Package kragstein <http:///kragstein.ecore>
     Reference importedPackages : ImportedPackage<<0..*>>
 
   Class ImportedPackage
-    Attribute packageName : EString
+    Attribute name : EString
     Attribute isInternal : EBoolean
     Attribute path : EString
 
@@ -61,7 +65,7 @@ Package kragstein <http:///kragstein.ecore>
 
   Class Method
     Reference parameters : Parameter<<0..*>>
-    Reference drakonDiadramm : DrakonDiagramm<<1..1>>
+    Reference drakonDiadram : DrakonDiagram<<1..1>>
     Attribute name : EString
     Attribute type : EString
     Attribute visibility : EString
@@ -74,7 +78,7 @@ Package kragstein <http:///kragstein.ecore>
     Attribute type : EString
     Attribute value : EString
 
-  Class DrakonDiagramm
+  Class DrakonDiagram
     Reference header : Header<<1..1>>
     Reference branches : Branch<<1..*>>
     Attribute name : EString

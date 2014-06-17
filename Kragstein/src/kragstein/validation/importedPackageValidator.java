@@ -14,7 +14,7 @@ package kragstein.validation;
 public interface ImportedPackageValidator {
 	boolean validate();
 
-	boolean validatePackageName(String value);
+	boolean validateName(String value);
 	boolean validateIsInternal(boolean value);
 	boolean validatePath(String value);
 }

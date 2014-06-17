@@ -16,7 +16,7 @@ import kragstein.Choice;
 import kragstein.Comment;
 import kragstein.Composition;
 import kragstein.Dependency;
-import kragstein.DrakonDiagramm;
+import kragstein.DrakonDiagram;
 import kragstein.EmptyConnector;
 import kragstein.End;
 import kragstein.EndLoop;
@@ -35,12 +35,12 @@ import kragstein.LoopArrow;
 import kragstein.Method;
 import kragstein.Output;
 import kragstein.Parameter;
+import kragstein.Project;
 import kragstein.Question;
 import kragstein.Realization;
 import kragstein.RightComment;
 import kragstein.Route;
 import kragstein.Shelf;
-import kragstein.UMLDiagramm;
 import kragstein.ValencePoint;
 
 import org.eclipse.emf.ecore.EClass;
@@ -95,7 +95,8 @@ public class KragsteinFactoryImpl extends EFactoryImpl implements KragsteinFacto
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case KragsteinPackage.UML_DIAGRAMM: return createUMLDiagramm();
+			case KragsteinPackage.PROJECT: return createProject();
+			case KragsteinPackage.PACKAGE: return createPackage();
 			case KragsteinPackage.GENERALIZATION: return createGeneralization();
 			case KragsteinPackage.REALIZATION: return createRealization();
 			case KragsteinPackage.ASSOCIATION: return createAssociation();
@@ -108,7 +109,7 @@ public class KragsteinFactoryImpl extends EFactoryImpl implements KragsteinFacto
 			case KragsteinPackage.ATTRIBUTE: return createAttribute();
 			case KragsteinPackage.METHOD: return createMethod();
 			case KragsteinPackage.PARAMETER: return createParameter();
-			case KragsteinPackage.DRAKON_DIAGRAMM: return createDrakonDiagramm();
+			case KragsteinPackage.DRAKON_DIAGRAM: return createDrakonDiagram();
 			case KragsteinPackage.HEADER: return createHeader();
 			case KragsteinPackage.FORMAL_PARAMETERS: return createFormalParameters();
 			case KragsteinPackage.BRANCH: return createBranch();
@@ -144,9 +145,19 @@ public class KragsteinFactoryImpl extends EFactoryImpl implements KragsteinFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public UMLDiagramm createUMLDiagramm() {
-		UMLDiagrammImpl umlDiagramm = new UMLDiagrammImpl();
-		return umlDiagramm;
+	public Project createProject() {
+		ProjectImpl project = new ProjectImpl();
+		return project;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public kragstein.Package createPackage() {
+		PackageImpl package_ = new PackageImpl();
+		return package_;
 	}
 
 	/**
@@ -274,9 +285,9 @@ public class KragsteinFactoryImpl extends EFactoryImpl implements KragsteinFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DrakonDiagramm createDrakonDiagramm() {
-		DrakonDiagrammImpl drakonDiagramm = new DrakonDiagrammImpl();
-		return drakonDiagramm;
+	public DrakonDiagram createDrakonDiagram() {
+		DrakonDiagramImpl drakonDiagram = new DrakonDiagramImpl();
+		return drakonDiagram;
 	}
 
 	/**

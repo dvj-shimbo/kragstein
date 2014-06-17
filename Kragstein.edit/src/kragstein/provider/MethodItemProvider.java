@@ -218,7 +218,7 @@ public class MethodItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(KragsteinPackage.Literals.METHOD__PARAMETERS);
-			childrenFeatures.add(KragsteinPackage.Literals.METHOD__DRAKON_DIADRAMM);
+			childrenFeatures.add(KragsteinPackage.Literals.METHOD__DRAKON_DIADRAM);
 		}
 		return childrenFeatures;
 	}
@@ -283,7 +283,7 @@ public class MethodItemProvider
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case KragsteinPackage.METHOD__PARAMETERS:
-			case KragsteinPackage.METHOD__DRAKON_DIADRAMM:
+			case KragsteinPackage.METHOD__DRAKON_DIADRAM:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -308,8 +308,8 @@ public class MethodItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(KragsteinPackage.Literals.METHOD__DRAKON_DIADRAMM,
-				 KragsteinFactory.eINSTANCE.createDrakonDiagramm()));
+				(KragsteinPackage.Literals.METHOD__DRAKON_DIADRAM,
+				 KragsteinFactory.eINSTANCE.createDrakonDiagram()));
 	}
 
 	/**

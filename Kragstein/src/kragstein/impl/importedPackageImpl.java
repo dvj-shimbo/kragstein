@@ -19,7 +19,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link kragstein.impl.ImportedPackageImpl#getPackageName <em>Package Name</em>}</li>
+ *   <li>{@link kragstein.impl.ImportedPackageImpl#getName <em>Name</em>}</li>
  *   <li>{@link kragstein.impl.ImportedPackageImpl#isIsInternal <em>Is Internal</em>}</li>
  *   <li>{@link kragstein.impl.ImportedPackageImpl#getPath <em>Path</em>}</li>
  * </ul>
@@ -29,24 +29,24 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  */
 public class ImportedPackageImpl extends MinimalEObjectImpl.Container implements ImportedPackage {
 	/**
-	 * The default value of the '{@link #getPackageName() <em>Package Name</em>}' attribute.
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPackageName()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String PACKAGE_NAME_EDEFAULT = null;
+	protected static final String NAME_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getPackageName() <em>Package Name</em>}' attribute.
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPackageName()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected String packageName = PACKAGE_NAME_EDEFAULT;
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #isIsInternal() <em>Is Internal</em>}' attribute.
@@ -112,8 +112,8 @@ public class ImportedPackageImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getPackageName() {
-		return packageName;
+	public String getName() {
+		return name;
 	}
 
 	/**
@@ -121,11 +121,11 @@ public class ImportedPackageImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPackageName(String newPackageName) {
-		String oldPackageName = packageName;
-		packageName = newPackageName;
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, KragsteinPackage.IMPORTED_PACKAGE__PACKAGE_NAME, oldPackageName, packageName));
+			eNotify(new ENotificationImpl(this, Notification.SET, KragsteinPackage.IMPORTED_PACKAGE__NAME, oldName, name));
 	}
 
 	/**
@@ -178,8 +178,8 @@ public class ImportedPackageImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case KragsteinPackage.IMPORTED_PACKAGE__PACKAGE_NAME:
-				return getPackageName();
+			case KragsteinPackage.IMPORTED_PACKAGE__NAME:
+				return getName();
 			case KragsteinPackage.IMPORTED_PACKAGE__IS_INTERNAL:
 				return isIsInternal();
 			case KragsteinPackage.IMPORTED_PACKAGE__PATH:
@@ -196,8 +196,8 @@ public class ImportedPackageImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case KragsteinPackage.IMPORTED_PACKAGE__PACKAGE_NAME:
-				setPackageName((String)newValue);
+			case KragsteinPackage.IMPORTED_PACKAGE__NAME:
+				setName((String)newValue);
 				return;
 			case KragsteinPackage.IMPORTED_PACKAGE__IS_INTERNAL:
 				setIsInternal((Boolean)newValue);
@@ -217,8 +217,8 @@ public class ImportedPackageImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case KragsteinPackage.IMPORTED_PACKAGE__PACKAGE_NAME:
-				setPackageName(PACKAGE_NAME_EDEFAULT);
+			case KragsteinPackage.IMPORTED_PACKAGE__NAME:
+				setName(NAME_EDEFAULT);
 				return;
 			case KragsteinPackage.IMPORTED_PACKAGE__IS_INTERNAL:
 				setIsInternal(IS_INTERNAL_EDEFAULT);
@@ -238,8 +238,8 @@ public class ImportedPackageImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case KragsteinPackage.IMPORTED_PACKAGE__PACKAGE_NAME:
-				return PACKAGE_NAME_EDEFAULT == null ? packageName != null : !PACKAGE_NAME_EDEFAULT.equals(packageName);
+			case KragsteinPackage.IMPORTED_PACKAGE__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case KragsteinPackage.IMPORTED_PACKAGE__IS_INTERNAL:
 				return isInternal != IS_INTERNAL_EDEFAULT;
 			case KragsteinPackage.IMPORTED_PACKAGE__PATH:
@@ -258,8 +258,8 @@ public class ImportedPackageImpl extends MinimalEObjectImpl.Container implements
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (packageName: ");
-		result.append(packageName);
+		result.append(" (name: ");
+		result.append(name);
 		result.append(", isInternal: ");
 		result.append(isInternal);
 		result.append(", path: ");

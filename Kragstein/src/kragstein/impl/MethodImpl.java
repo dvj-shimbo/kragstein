@@ -4,7 +4,7 @@ package kragstein.impl;
 
 import java.util.Collection;
 
-import kragstein.DrakonDiagramm;
+import kragstein.DrakonDiagram;
 import kragstein.KragsteinPackage;
 import kragstein.Method;
 import kragstein.Parameter;
@@ -31,7 +31,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * <ul>
  *   <li>{@link kragstein.impl.MethodImpl#getParameters <em>Parameters</em>}</li>
- *   <li>{@link kragstein.impl.MethodImpl#getDrakonDiadramm <em>Drakon Diadramm</em>}</li>
+ *   <li>{@link kragstein.impl.MethodImpl#getDrakonDiadram <em>Drakon Diadram</em>}</li>
  *   <li>{@link kragstein.impl.MethodImpl#getName <em>Name</em>}</li>
  *   <li>{@link kragstein.impl.MethodImpl#getType <em>Type</em>}</li>
  *   <li>{@link kragstein.impl.MethodImpl#getVisibility <em>Visibility</em>}</li>
@@ -55,14 +55,14 @@ public class MethodImpl extends MinimalEObjectImpl.Container implements Method {
 	protected EList<Parameter> parameters;
 
 	/**
-	 * The cached value of the '{@link #getDrakonDiadramm() <em>Drakon Diadramm</em>}' containment reference.
+	 * The cached value of the '{@link #getDrakonDiadram() <em>Drakon Diadram</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDrakonDiadramm()
+	 * @see #getDrakonDiadram()
 	 * @generated
 	 * @ordered
 	 */
-	protected DrakonDiagramm drakonDiadramm;
+	protected DrakonDiagram drakonDiadram;
 
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -220,8 +220,8 @@ public class MethodImpl extends MinimalEObjectImpl.Container implements Method {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DrakonDiagramm getDrakonDiadramm() {
-		return drakonDiadramm;
+	public DrakonDiagram getDrakonDiadram() {
+		return drakonDiadram;
 	}
 
 	/**
@@ -229,11 +229,11 @@ public class MethodImpl extends MinimalEObjectImpl.Container implements Method {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetDrakonDiadramm(DrakonDiagramm newDrakonDiadramm, NotificationChain msgs) {
-		DrakonDiagramm oldDrakonDiadramm = drakonDiadramm;
-		drakonDiadramm = newDrakonDiadramm;
+	public NotificationChain basicSetDrakonDiadram(DrakonDiagram newDrakonDiadram, NotificationChain msgs) {
+		DrakonDiagram oldDrakonDiadram = drakonDiadram;
+		drakonDiadram = newDrakonDiadram;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, KragsteinPackage.METHOD__DRAKON_DIADRAMM, oldDrakonDiadramm, newDrakonDiadramm);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, KragsteinPackage.METHOD__DRAKON_DIADRAM, oldDrakonDiadram, newDrakonDiadram);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -244,18 +244,18 @@ public class MethodImpl extends MinimalEObjectImpl.Container implements Method {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDrakonDiadramm(DrakonDiagramm newDrakonDiadramm) {
-		if (newDrakonDiadramm != drakonDiadramm) {
+	public void setDrakonDiadram(DrakonDiagram newDrakonDiadram) {
+		if (newDrakonDiadram != drakonDiadram) {
 			NotificationChain msgs = null;
-			if (drakonDiadramm != null)
-				msgs = ((InternalEObject)drakonDiadramm).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - KragsteinPackage.METHOD__DRAKON_DIADRAMM, null, msgs);
-			if (newDrakonDiadramm != null)
-				msgs = ((InternalEObject)newDrakonDiadramm).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - KragsteinPackage.METHOD__DRAKON_DIADRAMM, null, msgs);
-			msgs = basicSetDrakonDiadramm(newDrakonDiadramm, msgs);
+			if (drakonDiadram != null)
+				msgs = ((InternalEObject)drakonDiadram).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - KragsteinPackage.METHOD__DRAKON_DIADRAM, null, msgs);
+			if (newDrakonDiadram != null)
+				msgs = ((InternalEObject)newDrakonDiadram).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - KragsteinPackage.METHOD__DRAKON_DIADRAM, null, msgs);
+			msgs = basicSetDrakonDiadram(newDrakonDiadram, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, KragsteinPackage.METHOD__DRAKON_DIADRAMM, newDrakonDiadramm, newDrakonDiadramm));
+			eNotify(new ENotificationImpl(this, Notification.SET, KragsteinPackage.METHOD__DRAKON_DIADRAM, newDrakonDiadram, newDrakonDiadram));
 	}
 
 	/**
@@ -394,8 +394,8 @@ public class MethodImpl extends MinimalEObjectImpl.Container implements Method {
 		switch (featureID) {
 			case KragsteinPackage.METHOD__PARAMETERS:
 				return ((InternalEList<?>)getParameters()).basicRemove(otherEnd, msgs);
-			case KragsteinPackage.METHOD__DRAKON_DIADRAMM:
-				return basicSetDrakonDiadramm(null, msgs);
+			case KragsteinPackage.METHOD__DRAKON_DIADRAM:
+				return basicSetDrakonDiadram(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -410,8 +410,8 @@ public class MethodImpl extends MinimalEObjectImpl.Container implements Method {
 		switch (featureID) {
 			case KragsteinPackage.METHOD__PARAMETERS:
 				return getParameters();
-			case KragsteinPackage.METHOD__DRAKON_DIADRAMM:
-				return getDrakonDiadramm();
+			case KragsteinPackage.METHOD__DRAKON_DIADRAM:
+				return getDrakonDiadram();
 			case KragsteinPackage.METHOD__NAME:
 				return getName();
 			case KragsteinPackage.METHOD__TYPE:
@@ -441,8 +441,8 @@ public class MethodImpl extends MinimalEObjectImpl.Container implements Method {
 				getParameters().clear();
 				getParameters().addAll((Collection<? extends Parameter>)newValue);
 				return;
-			case KragsteinPackage.METHOD__DRAKON_DIADRAMM:
-				setDrakonDiadramm((DrakonDiagramm)newValue);
+			case KragsteinPackage.METHOD__DRAKON_DIADRAM:
+				setDrakonDiadram((DrakonDiagram)newValue);
 				return;
 			case KragsteinPackage.METHOD__NAME:
 				setName((String)newValue);
@@ -477,8 +477,8 @@ public class MethodImpl extends MinimalEObjectImpl.Container implements Method {
 			case KragsteinPackage.METHOD__PARAMETERS:
 				getParameters().clear();
 				return;
-			case KragsteinPackage.METHOD__DRAKON_DIADRAMM:
-				setDrakonDiadramm((DrakonDiagramm)null);
+			case KragsteinPackage.METHOD__DRAKON_DIADRAM:
+				setDrakonDiadram((DrakonDiagram)null);
 				return;
 			case KragsteinPackage.METHOD__NAME:
 				setName(NAME_EDEFAULT);
@@ -512,8 +512,8 @@ public class MethodImpl extends MinimalEObjectImpl.Container implements Method {
 		switch (featureID) {
 			case KragsteinPackage.METHOD__PARAMETERS:
 				return parameters != null && !parameters.isEmpty();
-			case KragsteinPackage.METHOD__DRAKON_DIADRAMM:
-				return drakonDiadramm != null;
+			case KragsteinPackage.METHOD__DRAKON_DIADRAM:
+				return drakonDiadram != null;
 			case KragsteinPackage.METHOD__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case KragsteinPackage.METHOD__TYPE:

@@ -60,7 +60,7 @@ public class ImportedPackageItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addPackageNamePropertyDescriptor(object);
+			addNamePropertyDescriptor(object);
 			addIsInternalPropertyDescriptor(object);
 			addPathPropertyDescriptor(object);
 		}
@@ -68,19 +68,19 @@ public class ImportedPackageItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Package Name feature.
+	 * This adds a property descriptor for the Name feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addPackageNamePropertyDescriptor(Object object) {
+	protected void addNamePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ImportedPackage_packageName_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ImportedPackage_packageName_feature", "_UI_ImportedPackage_type"),
-				 KragsteinPackage.Literals.IMPORTED_PACKAGE__PACKAGE_NAME,
+				 getString("_UI_ImportedPackage_name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ImportedPackage_name_feature", "_UI_ImportedPackage_type"),
+				 KragsteinPackage.Literals.IMPORTED_PACKAGE__NAME,
 				 true,
 				 false,
 				 false,
@@ -152,7 +152,7 @@ public class ImportedPackageItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((ImportedPackage)object).getPackageName();
+		String label = ((ImportedPackage)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_ImportedPackage_type") :
 			getString("_UI_ImportedPackage_type") + " " + label;
@@ -171,7 +171,7 @@ public class ImportedPackageItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ImportedPackage.class)) {
-			case KragsteinPackage.IMPORTED_PACKAGE__PACKAGE_NAME:
+			case KragsteinPackage.IMPORTED_PACKAGE__NAME:
 			case KragsteinPackage.IMPORTED_PACKAGE__IS_INTERNAL:
 			case KragsteinPackage.IMPORTED_PACKAGE__PATH:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));

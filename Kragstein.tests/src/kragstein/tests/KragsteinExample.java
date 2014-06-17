@@ -7,7 +7,7 @@ import java.io.IOException;
 
 import kragstein.KragsteinFactory;
 import kragstein.KragsteinPackage;
-import kragstein.UMLDiagramm;
+import kragstein.Project;
 
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.common.util.URI;
@@ -60,7 +60,7 @@ public class KragsteinExample {
 			System.out.println("Enter a list of file paths or URIs that have content like this:");
 			try {
 				Resource resource = resourceSet.createResource(URI.createURI("http:///My.kragstein"));
-				UMLDiagramm root = KragsteinFactory.eINSTANCE.createUMLDiagramm();
+				Project root = KragsteinFactory.eINSTANCE.createProject();
 				resource.getContents().add(root);
 				resource.save(System.out, null);
 			}

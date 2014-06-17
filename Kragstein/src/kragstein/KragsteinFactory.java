@@ -22,13 +22,22 @@ public interface KragsteinFactory extends EFactory {
 	KragsteinFactory eINSTANCE = kragstein.impl.KragsteinFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>UML Diagramm</em>'.
+	 * Returns a new object of class '<em>Project</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>UML Diagramm</em>'.
+	 * @return a new object of class '<em>Project</em>'.
 	 * @generated
 	 */
-	UMLDiagramm createUMLDiagramm();
+	Project createProject();
+
+	/**
+	 * Returns a new object of class '<em>Package</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Package</em>'.
+	 * @generated
+	 */
+	Package createPackage();
 
 	/**
 	 * Returns a new object of class '<em>Generalization</em>'.
@@ -139,13 +148,13 @@ public interface KragsteinFactory extends EFactory {
 	Parameter createParameter();
 
 	/**
-	 * Returns a new object of class '<em>Drakon Diagramm</em>'.
+	 * Returns a new object of class '<em>Drakon Diagram</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Drakon Diagramm</em>'.
+	 * @return a new object of class '<em>Drakon Diagram</em>'.
 	 * @generated
 	 */
-	DrakonDiagramm createDrakonDiagramm();
+	DrakonDiagram createDrakonDiagram();
 
 	/**
 	 * Returns a new object of class '<em>Header</em>'.

@@ -16,7 +16,7 @@ import kragstein.Choice;
 import kragstein.Comment;
 import kragstein.Composition;
 import kragstein.Dependency;
-import kragstein.DrakonDiagramm;
+import kragstein.DrakonDiagram;
 import kragstein.EmptyConnector;
 import kragstein.End;
 import kragstein.EndLoop;
@@ -35,13 +35,13 @@ import kragstein.LoopArrow;
 import kragstein.Method;
 import kragstein.Output;
 import kragstein.Parameter;
+import kragstein.Project;
 import kragstein.Question;
 import kragstein.Realization;
 import kragstein.Relationship;
 import kragstein.RightComment;
 import kragstein.Route;
 import kragstein.Shelf;
-import kragstein.UMLDiagramm;
 import kragstein.ValencePoint;
 
 import org.eclipse.emf.ecore.EObject;
@@ -106,9 +106,15 @@ public class KragsteinSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case KragsteinPackage.UML_DIAGRAMM: {
-				UMLDiagramm umlDiagramm = (UMLDiagramm)theEObject;
-				T result = caseUMLDiagramm(umlDiagramm);
+			case KragsteinPackage.PROJECT: {
+				Project project = (Project)theEObject;
+				T result = caseProject(project);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case KragsteinPackage.PACKAGE: {
+				kragstein.Package package_ = (kragstein.Package)theEObject;
+				T result = casePackage(package_);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -196,9 +202,9 @@ public class KragsteinSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case KragsteinPackage.DRAKON_DIAGRAMM: {
-				DrakonDiagramm drakonDiagramm = (DrakonDiagramm)theEObject;
-				T result = caseDrakonDiagramm(drakonDiagramm);
+			case KragsteinPackage.DRAKON_DIAGRAM: {
+				DrakonDiagram drakonDiagram = (DrakonDiagram)theEObject;
+				T result = caseDrakonDiagram(drakonDiagram);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -378,17 +384,32 @@ public class KragsteinSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>UML Diagramm</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Project</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>UML Diagramm</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Project</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseUMLDiagramm(UMLDiagramm object) {
+	public T caseProject(Project object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Package</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Package</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePackage(kragstein.Package object) {
 		return null;
 	}
 
@@ -588,17 +609,17 @@ public class KragsteinSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Drakon Diagramm</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Drakon Diagram</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Drakon Diagramm</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Drakon Diagram</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDrakonDiagramm(DrakonDiagramm object) {
+	public T caseDrakonDiagram(DrakonDiagram object) {
 		return null;
 	}
 

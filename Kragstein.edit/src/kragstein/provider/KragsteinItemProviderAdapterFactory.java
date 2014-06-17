@@ -72,26 +72,49 @@ public class KragsteinItemProviderAdapterFactory extends KragsteinAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link kragstein.UMLDiagramm} instances.
+	 * This keeps track of the one adapter used for all {@link kragstein.Project} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected UMLDiagrammItemProvider umlDiagrammItemProvider;
+	protected ProjectItemProvider projectItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link kragstein.UMLDiagramm}.
+	 * This creates an adapter for a {@link kragstein.Project}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createUMLDiagrammAdapter() {
-		if (umlDiagrammItemProvider == null) {
-			umlDiagrammItemProvider = new UMLDiagrammItemProvider(this);
+	public Adapter createProjectAdapter() {
+		if (projectItemProvider == null) {
+			projectItemProvider = new ProjectItemProvider(this);
 		}
 
-		return umlDiagrammItemProvider;
+		return projectItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link kragstein.Package} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected PackageItemProvider packageItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link kragstein.Package}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createPackageAdapter() {
+		if (packageItemProvider == null) {
+			packageItemProvider = new PackageItemProvider(this);
+		}
+
+		return packageItemProvider;
 	}
 
 	/**
@@ -371,26 +394,26 @@ public class KragsteinItemProviderAdapterFactory extends KragsteinAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link kragstein.DrakonDiagramm} instances.
+	 * This keeps track of the one adapter used for all {@link kragstein.DrakonDiagram} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected DrakonDiagrammItemProvider drakonDiagrammItemProvider;
+	protected DrakonDiagramItemProvider drakonDiagramItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link kragstein.DrakonDiagramm}.
+	 * This creates an adapter for a {@link kragstein.DrakonDiagram}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createDrakonDiagrammAdapter() {
-		if (drakonDiagrammItemProvider == null) {
-			drakonDiagrammItemProvider = new DrakonDiagrammItemProvider(this);
+	public Adapter createDrakonDiagramAdapter() {
+		if (drakonDiagramItemProvider == null) {
+			drakonDiagramItemProvider = new DrakonDiagramItemProvider(this);
 		}
 
-		return drakonDiagrammItemProvider;
+		return drakonDiagramItemProvider;
 	}
 
 	/**
@@ -1067,7 +1090,8 @@ public class KragsteinItemProviderAdapterFactory extends KragsteinAdapterFactory
 	 * @generated
 	 */
 	public void dispose() {
-		if (umlDiagrammItemProvider != null) umlDiagrammItemProvider.dispose();
+		if (projectItemProvider != null) projectItemProvider.dispose();
+		if (packageItemProvider != null) packageItemProvider.dispose();
 		if (generalizationItemProvider != null) generalizationItemProvider.dispose();
 		if (realizationItemProvider != null) realizationItemProvider.dispose();
 		if (associationItemProvider != null) associationItemProvider.dispose();
@@ -1080,7 +1104,7 @@ public class KragsteinItemProviderAdapterFactory extends KragsteinAdapterFactory
 		if (attributeItemProvider != null) attributeItemProvider.dispose();
 		if (methodItemProvider != null) methodItemProvider.dispose();
 		if (parameterItemProvider != null) parameterItemProvider.dispose();
-		if (drakonDiagrammItemProvider != null) drakonDiagrammItemProvider.dispose();
+		if (drakonDiagramItemProvider != null) drakonDiagramItemProvider.dispose();
 		if (headerItemProvider != null) headerItemProvider.dispose();
 		if (formalParametersItemProvider != null) formalParametersItemProvider.dispose();
 		if (branchItemProvider != null) branchItemProvider.dispose();

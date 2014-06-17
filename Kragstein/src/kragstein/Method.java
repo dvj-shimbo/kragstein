@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link kragstein.Method#getParameters <em>Parameters</em>}</li>
- *   <li>{@link kragstein.Method#getDrakonDiadramm <em>Drakon Diadramm</em>}</li>
+ *   <li>{@link kragstein.Method#getDrakonDiadram <em>Drakon Diadram</em>}</li>
  *   <li>{@link kragstein.Method#getName <em>Name</em>}</li>
  *   <li>{@link kragstein.Method#getType <em>Type</em>}</li>
  *   <li>{@link kragstein.Method#getVisibility <em>Visibility</em>}</li>
@@ -47,30 +47,30 @@ public interface Method extends EObject {
 	EList<Parameter> getParameters();
 
 	/**
-	 * Returns the value of the '<em><b>Drakon Diadramm</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Drakon Diadram</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Drakon Diadramm</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Drakon Diadram</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Drakon Diadramm</em>' containment reference.
-	 * @see #setDrakonDiadramm(DrakonDiagramm)
-	 * @see kragstein.KragsteinPackage#getMethod_DrakonDiadramm()
+	 * @return the value of the '<em>Drakon Diadram</em>' containment reference.
+	 * @see #setDrakonDiadram(DrakonDiagram)
+	 * @see kragstein.KragsteinPackage#getMethod_DrakonDiadram()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	DrakonDiagramm getDrakonDiadramm();
+	DrakonDiagram getDrakonDiadram();
 
 	/**
-	 * Sets the value of the '{@link kragstein.Method#getDrakonDiadramm <em>Drakon Diadramm</em>}' containment reference.
+	 * Sets the value of the '{@link kragstein.Method#getDrakonDiadram <em>Drakon Diadram</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Drakon Diadramm</em>' containment reference.
-	 * @see #getDrakonDiadramm()
+	 * @param value the new value of the '<em>Drakon Diadram</em>' containment reference.
+	 * @see #getDrakonDiadram()
 	 * @generated
 	 */
-	void setDrakonDiadramm(DrakonDiagramm value);
+	void setDrakonDiadram(DrakonDiagram value);
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.

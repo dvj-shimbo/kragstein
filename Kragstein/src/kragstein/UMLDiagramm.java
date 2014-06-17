@@ -17,7 +17,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link kragstein.UMLDiagramm#getLang <em>Lang</em>}</li>
  *   <li>{@link kragstein.UMLDiagramm#getPackageName <em>Package Name</em>}</li>
  *   <li>{@link kragstein.UMLDiagramm#getClasses <em>Classes</em>}</li>
- *   <li>{@link kragstein.UMLDiagramm#getImportedPackages <em>Imported Packages</em>}</li>
  * </ul>
  * </p>
  *
@@ -93,21 +92,5 @@ public interface UMLDiagramm extends EObject {
 	 * @generated
 	 */
 	EList<kragstein.Class> getClasses();
-
-	/**
-	 * Returns the value of the '<em><b>Imported Packages</b></em>' containment reference list.
-	 * The list contents are of type {@link kragstein.importedPackage}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Imported Packages</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Imported Packages</em>' containment reference list.
-	 * @see kragstein.KragsteinPackage#getUMLDiagramm_ImportedPackages()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<importedPackage> getImportedPackages();
 
 } // UMLDiagramm

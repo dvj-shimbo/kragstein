@@ -173,8 +173,9 @@ public class ClassItemProvider
 			childrenFeatures.add(KragsteinPackage.Literals.CLASS__ATTRIBUTES);
 			childrenFeatures.add(KragsteinPackage.Literals.CLASS__METHODS);
 			childrenFeatures.add(KragsteinPackage.Literals.CLASS__COMMENTS);
-			childrenFeatures.add(KragsteinPackage.Literals.CLASS__TARGET_RELATIONSHIPS);
-			childrenFeatures.add(KragsteinPackage.Literals.CLASS__SOURCE_RELATIONSHIPS);
+			childrenFeatures.add(KragsteinPackage.Literals.CLASS__TARGET_RELATIONSHIP);
+			childrenFeatures.add(KragsteinPackage.Literals.CLASS__SOURCE_RELATIONSHIP);
+			childrenFeatures.add(KragsteinPackage.Literals.CLASS__IMPORTED_PACKAGES);
 		}
 		return childrenFeatures;
 	}
@@ -239,8 +240,9 @@ public class ClassItemProvider
 			case KragsteinPackage.CLASS__ATTRIBUTES:
 			case KragsteinPackage.CLASS__METHODS:
 			case KragsteinPackage.CLASS__COMMENTS:
-			case KragsteinPackage.CLASS__TARGET_RELATIONSHIPS:
-			case KragsteinPackage.CLASS__SOURCE_RELATIONSHIPS:
+			case KragsteinPackage.CLASS__TARGET_RELATIONSHIP:
+			case KragsteinPackage.CLASS__SOURCE_RELATIONSHIP:
+			case KragsteinPackage.CLASS__IMPORTED_PACKAGES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -275,63 +277,68 @@ public class ClassItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(KragsteinPackage.Literals.CLASS__TARGET_RELATIONSHIPS,
+				(KragsteinPackage.Literals.CLASS__TARGET_RELATIONSHIP,
 				 KragsteinFactory.eINSTANCE.createGeneralization()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(KragsteinPackage.Literals.CLASS__TARGET_RELATIONSHIPS,
+				(KragsteinPackage.Literals.CLASS__TARGET_RELATIONSHIP,
 				 KragsteinFactory.eINSTANCE.createRealization()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(KragsteinPackage.Literals.CLASS__TARGET_RELATIONSHIPS,
+				(KragsteinPackage.Literals.CLASS__TARGET_RELATIONSHIP,
 				 KragsteinFactory.eINSTANCE.createAssociation()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(KragsteinPackage.Literals.CLASS__TARGET_RELATIONSHIPS,
+				(KragsteinPackage.Literals.CLASS__TARGET_RELATIONSHIP,
 				 KragsteinFactory.eINSTANCE.createAggregation()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(KragsteinPackage.Literals.CLASS__TARGET_RELATIONSHIPS,
+				(KragsteinPackage.Literals.CLASS__TARGET_RELATIONSHIP,
 				 KragsteinFactory.eINSTANCE.createComposition()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(KragsteinPackage.Literals.CLASS__TARGET_RELATIONSHIPS,
+				(KragsteinPackage.Literals.CLASS__TARGET_RELATIONSHIP,
 				 KragsteinFactory.eINSTANCE.createDependency()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(KragsteinPackage.Literals.CLASS__SOURCE_RELATIONSHIPS,
+				(KragsteinPackage.Literals.CLASS__SOURCE_RELATIONSHIP,
 				 KragsteinFactory.eINSTANCE.createGeneralization()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(KragsteinPackage.Literals.CLASS__SOURCE_RELATIONSHIPS,
+				(KragsteinPackage.Literals.CLASS__SOURCE_RELATIONSHIP,
 				 KragsteinFactory.eINSTANCE.createRealization()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(KragsteinPackage.Literals.CLASS__SOURCE_RELATIONSHIPS,
+				(KragsteinPackage.Literals.CLASS__SOURCE_RELATIONSHIP,
 				 KragsteinFactory.eINSTANCE.createAssociation()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(KragsteinPackage.Literals.CLASS__SOURCE_RELATIONSHIPS,
+				(KragsteinPackage.Literals.CLASS__SOURCE_RELATIONSHIP,
 				 KragsteinFactory.eINSTANCE.createAggregation()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(KragsteinPackage.Literals.CLASS__SOURCE_RELATIONSHIPS,
+				(KragsteinPackage.Literals.CLASS__SOURCE_RELATIONSHIP,
 				 KragsteinFactory.eINSTANCE.createComposition()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(KragsteinPackage.Literals.CLASS__SOURCE_RELATIONSHIPS,
+				(KragsteinPackage.Literals.CLASS__SOURCE_RELATIONSHIP,
 				 KragsteinFactory.eINSTANCE.createDependency()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(KragsteinPackage.Literals.CLASS__IMPORTED_PACKAGES,
+				 KragsteinFactory.eINSTANCE.createImportedPackage()));
 	}
 
 	/**
@@ -346,8 +353,8 @@ public class ClassItemProvider
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == KragsteinPackage.Literals.CLASS__TARGET_RELATIONSHIPS ||
-			childFeature == KragsteinPackage.Literals.CLASS__SOURCE_RELATIONSHIPS;
+			childFeature == KragsteinPackage.Literals.CLASS__TARGET_RELATIONSHIP ||
+			childFeature == KragsteinPackage.Literals.CLASS__SOURCE_RELATIONSHIP;
 
 		if (qualify) {
 			return getString

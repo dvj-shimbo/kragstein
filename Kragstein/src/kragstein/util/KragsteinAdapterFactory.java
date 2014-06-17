@@ -14,7 +14,6 @@ import kragstein.Case;
 import kragstein.CaseConnection;
 import kragstein.Choice;
 import kragstein.Comment;
-import kragstein.CommentLink;
 import kragstein.Composition;
 import kragstein.Dependency;
 import kragstein.DrakonDiagramm;
@@ -27,6 +26,7 @@ import kragstein.Header;
 import kragstein.Headline;
 import kragstein.Icon;
 import kragstein.IconConnection;
+import kragstein.ImportedPackage;
 import kragstein.Input;
 import kragstein.Insertion;
 import kragstein.KragsteinPackage;
@@ -43,7 +43,6 @@ import kragstein.Route;
 import kragstein.Shelf;
 import kragstein.UMLDiagramm;
 import kragstein.ValencePoint;
-import kragstein.importedPackage;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
@@ -113,10 +112,6 @@ public class KragsteinAdapterFactory extends AdapterFactoryImpl {
 				return createUMLDiagrammAdapter();
 			}
 			@Override
-			public Adapter caseimportedPackage(importedPackage object) {
-				return createimportedPackageAdapter();
-			}
-			@Override
 			public Adapter caseRelationship(Relationship object) {
 				return createRelationshipAdapter();
 			}
@@ -149,12 +144,12 @@ public class KragsteinAdapterFactory extends AdapterFactoryImpl {
 				return createCommentAdapter();
 			}
 			@Override
-			public Adapter caseCommentLink(CommentLink object) {
-				return createCommentLinkAdapter();
-			}
-			@Override
 			public Adapter caseClass(kragstein.Class object) {
 				return createClassAdapter();
+			}
+			@Override
+			public Adapter caseImportedPackage(ImportedPackage object) {
+				return createImportedPackageAdapter();
 			}
 			@Override
 			public Adapter caseAttribute(Attribute object) {
@@ -311,20 +306,6 @@ public class KragsteinAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link kragstein.importedPackage <em>imported Package</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see kragstein.importedPackage
-	 * @generated
-	 */
-	public Adapter createimportedPackageAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link kragstein.Relationship <em>Relationship</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -437,20 +418,6 @@ public class KragsteinAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link kragstein.CommentLink <em>Comment Link</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see kragstein.CommentLink
-	 * @generated
-	 */
-	public Adapter createCommentLinkAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link kragstein.Class <em>Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -461,6 +428,20 @@ public class KragsteinAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createClassAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link kragstein.ImportedPackage <em>Imported Package</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see kragstein.ImportedPackage
+	 * @generated
+	 */
+	public Adapter createImportedPackageAdapter() {
 		return null;
 	}
 

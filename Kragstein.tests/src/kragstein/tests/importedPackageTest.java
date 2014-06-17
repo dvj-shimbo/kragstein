@@ -6,24 +6,24 @@ import junit.framework.TestCase;
 
 import junit.textui.TestRunner;
 
+import kragstein.ImportedPackage;
 import kragstein.KragsteinFactory;
-import kragstein.importedPackage;
 
 /**
  * <!-- begin-user-doc -->
- * A test case for the model object '<em><b>imported Package</b></em>'.
+ * A test case for the model object '<em><b>Imported Package</b></em>'.
  * <!-- end-user-doc -->
  * @generated
  */
-public class importedPackageTest extends TestCase {
+public class ImportedPackageTest extends TestCase {
 
 	/**
-	 * The fixture for this imported Package test case.
+	 * The fixture for this Imported Package test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected importedPackage fixture = null;
+	protected ImportedPackage fixture = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -31,36 +31,36 @@ public class importedPackageTest extends TestCase {
 	 * @generated
 	 */
 	public static void main(String[] args) {
-		TestRunner.run(importedPackageTest.class);
+		TestRunner.run(ImportedPackageTest.class);
 	}
 
 	/**
-	 * Constructs a new imported Package test case with the given name.
+	 * Constructs a new Imported Package test case with the given name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public importedPackageTest(String name) {
+	public ImportedPackageTest(String name) {
 		super(name);
 	}
 
 	/**
-	 * Sets the fixture for this imported Package test case.
+	 * Sets the fixture for this Imported Package test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void setFixture(importedPackage fixture) {
+	protected void setFixture(ImportedPackage fixture) {
 		this.fixture = fixture;
 	}
 
 	/**
-	 * Returns the fixture for this imported Package test case.
+	 * Returns the fixture for this Imported Package test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected importedPackage getFixture() {
+	protected ImportedPackage getFixture() {
 		return fixture;
 	}
 
@@ -72,7 +72,7 @@ public class importedPackageTest extends TestCase {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(KragsteinFactory.eINSTANCE.createimportedPackage());
+		setFixture(KragsteinFactory.eINSTANCE.createImportedPackage());
 	}
 
 	/**
@@ -86,4 +86,4 @@ public class importedPackageTest extends TestCase {
 		setFixture(null);
 	}
 
-} //importedPackageTest
+} //ImportedPackageTest

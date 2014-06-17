@@ -14,7 +14,6 @@ import kragstein.Case;
 import kragstein.CaseConnection;
 import kragstein.Choice;
 import kragstein.Comment;
-import kragstein.CommentLink;
 import kragstein.Composition;
 import kragstein.Dependency;
 import kragstein.DrakonDiagramm;
@@ -26,6 +25,7 @@ import kragstein.Generalization;
 import kragstein.Header;
 import kragstein.Headline;
 import kragstein.IconConnection;
+import kragstein.ImportedPackage;
 import kragstein.Input;
 import kragstein.Insertion;
 import kragstein.KragsteinFactory;
@@ -42,7 +42,6 @@ import kragstein.Route;
 import kragstein.Shelf;
 import kragstein.UMLDiagramm;
 import kragstein.ValencePoint;
-import kragstein.importedPackage;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
@@ -97,7 +96,6 @@ public class KragsteinFactoryImpl extends EFactoryImpl implements KragsteinFacto
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case KragsteinPackage.UML_DIAGRAMM: return createUMLDiagramm();
-			case KragsteinPackage.IMPORTED_PACKAGE: return createimportedPackage();
 			case KragsteinPackage.GENERALIZATION: return createGeneralization();
 			case KragsteinPackage.REALIZATION: return createRealization();
 			case KragsteinPackage.ASSOCIATION: return createAssociation();
@@ -105,8 +103,8 @@ public class KragsteinFactoryImpl extends EFactoryImpl implements KragsteinFacto
 			case KragsteinPackage.COMPOSITION: return createComposition();
 			case KragsteinPackage.DEPENDENCY: return createDependency();
 			case KragsteinPackage.COMMENT: return createComment();
-			case KragsteinPackage.COMMENT_LINK: return createCommentLink();
 			case KragsteinPackage.CLASS: return createClass();
+			case KragsteinPackage.IMPORTED_PACKAGE: return createImportedPackage();
 			case KragsteinPackage.ATTRIBUTE: return createAttribute();
 			case KragsteinPackage.METHOD: return createMethod();
 			case KragsteinPackage.PARAMETER: return createParameter();
@@ -149,16 +147,6 @@ public class KragsteinFactoryImpl extends EFactoryImpl implements KragsteinFacto
 	public UMLDiagramm createUMLDiagramm() {
 		UMLDiagrammImpl umlDiagramm = new UMLDiagrammImpl();
 		return umlDiagramm;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public importedPackage createimportedPackage() {
-		importedPackageImpl importedPackage = new importedPackageImpl();
-		return importedPackage;
 	}
 
 	/**
@@ -236,9 +224,9 @@ public class KragsteinFactoryImpl extends EFactoryImpl implements KragsteinFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CommentLink createCommentLink() {
-		CommentLinkImpl commentLink = new CommentLinkImpl();
-		return commentLink;
+	public kragstein.Class createClass() {
+		ClassImpl class_ = new ClassImpl();
+		return class_;
 	}
 
 	/**
@@ -246,9 +234,9 @@ public class KragsteinFactoryImpl extends EFactoryImpl implements KragsteinFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public kragstein.Class createClass() {
-		ClassImpl class_ = new ClassImpl();
-		return class_;
+	public ImportedPackage createImportedPackage() {
+		ImportedPackageImpl importedPackage = new ImportedPackageImpl();
+		return importedPackage;
 	}
 
 	/**

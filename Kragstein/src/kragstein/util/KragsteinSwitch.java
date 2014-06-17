@@ -14,7 +14,6 @@ import kragstein.Case;
 import kragstein.CaseConnection;
 import kragstein.Choice;
 import kragstein.Comment;
-import kragstein.CommentLink;
 import kragstein.Composition;
 import kragstein.Dependency;
 import kragstein.DrakonDiagramm;
@@ -27,6 +26,7 @@ import kragstein.Header;
 import kragstein.Headline;
 import kragstein.Icon;
 import kragstein.IconConnection;
+import kragstein.ImportedPackage;
 import kragstein.Input;
 import kragstein.Insertion;
 import kragstein.KragsteinPackage;
@@ -43,7 +43,6 @@ import kragstein.Route;
 import kragstein.Shelf;
 import kragstein.UMLDiagramm;
 import kragstein.ValencePoint;
-import kragstein.importedPackage;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
@@ -113,12 +112,6 @@ public class KragsteinSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case KragsteinPackage.IMPORTED_PACKAGE: {
-				importedPackage importedPackage = (importedPackage)theEObject;
-				T result = caseimportedPackage(importedPackage);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case KragsteinPackage.RELATIONSHIP: {
 				Relationship relationship = (Relationship)theEObject;
 				T result = caseRelationship(relationship);
@@ -173,15 +166,15 @@ public class KragsteinSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case KragsteinPackage.COMMENT_LINK: {
-				CommentLink commentLink = (CommentLink)theEObject;
-				T result = caseCommentLink(commentLink);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case KragsteinPackage.CLASS: {
 				kragstein.Class class_ = (kragstein.Class)theEObject;
 				T result = caseClass(class_);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case KragsteinPackage.IMPORTED_PACKAGE: {
+				ImportedPackage importedPackage = (ImportedPackage)theEObject;
+				T result = caseImportedPackage(importedPackage);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -400,21 +393,6 @@ public class KragsteinSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>imported Package</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>imported Package</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseimportedPackage(importedPackage object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Relationship</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -535,21 +513,6 @@ public class KragsteinSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Comment Link</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Comment Link</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseCommentLink(CommentLink object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -561,6 +524,21 @@ public class KragsteinSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseClass(kragstein.Class object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Imported Package</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Imported Package</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseImportedPackage(ImportedPackage object) {
 		return null;
 	}
 

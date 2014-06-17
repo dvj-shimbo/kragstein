@@ -5,14 +5,14 @@
     complianceLevel="7.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
   <foreignModel>kragstein.ecore</foreignModel>
   <genPackages prefix="Kragstein" disposableProviderFactory="true" ecorePackage="kragstein.ecore#/">
-    <genClasses ecoreClass="kragstein.ecore#//UMLDiagramm">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kragstein.ecore#//UMLDiagramm/lang"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kragstein.ecore#//UMLDiagramm/packageName"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference kragstein.ecore#//UMLDiagramm/classes"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference kragstein.ecore#//UMLDiagramm/importedPackages"/>
+    <genClasses ecoreClass="kragstein.ecore#//Project">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kragstein.ecore#//Project/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kragstein.ecore#//Project/lang"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference kragstein.ecore#//Project/packages"/>
     </genClasses>
-    <genClasses ecoreClass="kragstein.ecore#//importedPackage">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kragstein.ecore#//importedPackage/packageName"/>
+    <genClasses ecoreClass="kragstein.ecore#//Package">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kragstein.ecore#//Package/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference kragstein.ecore#//Package/classes"/>
     </genClasses>
     <genClasses image="false" ecoreClass="kragstein.ecore#//Relationship">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference kragstein.ecore#//Relationship/target"/>
@@ -30,22 +30,22 @@
     <genClasses ecoreClass="kragstein.ecore#//Comment">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kragstein.ecore#//Comment/value"/>
     </genClasses>
-    <genClasses ecoreClass="kragstein.ecore#//CommentLink">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference kragstein.ecore#//CommentLink/sourceCommentLink"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference kragstein.ecore#//CommentLink/targetCommentLink"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference kragstein.ecore#//CommentLink/source"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference kragstein.ecore#//CommentLink/target"/>
-    </genClasses>
     <genClasses ecoreClass="kragstein.ecore#//Class">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference kragstein.ecore#//Class/attributes"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference kragstein.ecore#//Class/methods"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference kragstein.ecore#//Class/comments"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference kragstein.ecore#//Class/targetRelationships"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference kragstein.ecore#//Class/sourceRelationships"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference kragstein.ecore#//Class/targetRelationship"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference kragstein.ecore#//Class/sourceRelationship"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kragstein.ecore#//Class/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kragstein.ecore#//Class/visibility"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kragstein.ecore#//Class/isSingletone"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kragstein.ecore#//Class/isInterface"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference kragstein.ecore#//Class/importedPackages"/>
+    </genClasses>
+    <genClasses ecoreClass="kragstein.ecore#//ImportedPackage">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kragstein.ecore#//ImportedPackage/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kragstein.ecore#//ImportedPackage/isInternal"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kragstein.ecore#//ImportedPackage/path"/>
     </genClasses>
     <genClasses ecoreClass="kragstein.ecore#//Attribute">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kragstein.ecore#//Attribute/name"/>
@@ -57,7 +57,7 @@
     </genClasses>
     <genClasses ecoreClass="kragstein.ecore#//Method">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference kragstein.ecore#//Method/parameters"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference kragstein.ecore#//Method/drakonDiadramm"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference kragstein.ecore#//Method/drakonDiadram"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kragstein.ecore#//Method/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kragstein.ecore#//Method/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kragstein.ecore#//Method/visibility"/>
@@ -70,10 +70,10 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kragstein.ecore#//Parameter/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kragstein.ecore#//Parameter/value"/>
     </genClasses>
-    <genClasses ecoreClass="kragstein.ecore#//DrakonDiagramm">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference kragstein.ecore#//DrakonDiagramm/header"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference kragstein.ecore#//DrakonDiagramm/branches"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kragstein.ecore#//DrakonDiagramm/name"/>
+    <genClasses ecoreClass="kragstein.ecore#//DrakonDiagram">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference kragstein.ecore#//DrakonDiagram/header"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference kragstein.ecore#//DrakonDiagram/branches"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kragstein.ecore#//DrakonDiagram/name"/>
     </genClasses>
     <genClasses ecoreClass="kragstein.ecore#//Header">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference kragstein.ecore#//Header/formalParameters"/>

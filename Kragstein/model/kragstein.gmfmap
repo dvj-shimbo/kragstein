@@ -8,27 +8,7 @@
     xmlns:gmftool="http://www.eclipse.org/gmf/2005/ToolDefinition">
   <nodes>
     <containmentFeature
-        href="kragstein.ecore#//UMLDiagramm/units"/>
-    <ownedChild>
-      <domainMetaElement
-          href="kragstein.ecore#//Interface"/>
-      <labelMappings
-          xsi:type="gmfmap:FeatureLabelMapping">
-        <diagramLabel
-            href="kragstein.gmfgraph#InterfaceName"/>
-        <features
-            href="kragstein.ecore#//Unit/name"/>
-      </labelMappings>
-      <tool
-          xsi:type="gmftool:CreationTool"
-          href="kragstein.gmftool#//@palette/@tools.0/@tools.0"/>
-      <diagramNode
-          href="kragstein.gmfgraph#Interface"/>
-    </ownedChild>
-  </nodes>
-  <nodes>
-    <containmentFeature
-        href="kragstein.ecore#//UMLDiagramm/units"/>
+        href="kragstein.ecore#//Package/classes"/>
     <ownedChild>
       <domainMetaElement
           href="kragstein.ecore#//Class"/>
@@ -37,82 +17,32 @@
         <diagramLabel
             href="kragstein.gmfgraph#ClassName"/>
         <features
-            href="kragstein.ecore#//Unit/name"/>
+            href="kragstein.ecore#//Class/name"/>
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
-          href="kragstein.gmftool#//@palette/@tools.0/@tools.1"/>
+          href="kragstein.gmftool#//@palette/@tools.0/@tools.8"/>
       <diagramNode
           href="kragstein.gmfgraph#Class"/>
     </ownedChild>
   </nodes>
   <links>
     <domainMetaElement
-        href="kragstein.ecore#//Aggregation"/>
-    <labelMappings
-        xsi:type="gmfmap:FeatureLabelMapping">
-      <features
-          href="kragstein.ecore#//ClassMultipleRelationships/name"/>
-    </labelMappings>
-    <containmentFeature
-        href="kragstein.ecore#//Class/sourceConnections"/>
-    <tool
-        xsi:type="gmftool:CreationTool"
-        href="kragstein.gmftool#//@palette/@tools.0/@tools.2"/>
-    <diagramLink
-        href="kragstein.gmfgraph#Aggregation"/>
-    <linkMetaFeature
-        xsi:type="ecore:EReference"
-        href="kragstein.ecore#//Relationship/target"/>
-  </links>
-  <links>
-    <domainMetaElement
-        href="kragstein.ecore#//Generalization"/>
-    <containmentFeature
-        href="kragstein.ecore#//Unit/sourceConnection"/>
-    <tool
-        xsi:type="gmftool:CreationTool"
-        href="kragstein.gmftool#//@palette/@tools.0/@tools.3"/>
-    <diagramLink
-        href="kragstein.gmfgraph#Generalization"/>
-    <linkMetaFeature
-        xsi:type="ecore:EReference"
-        href="kragstein.ecore#//Relationship/target"/>
-  </links>
-  <links>
-    <domainMetaElement
         href="kragstein.ecore#//Composition"/>
     <labelMappings
         xsi:type="gmfmap:FeatureLabelMapping">
+      <diagramLabel
+          href="kragstein.gmfgraph#CompositionName"/>
       <features
-          href="kragstein.ecore#//ClassMultipleRelationships/name"/>
+          href="kragstein.ecore#//Relationship/name"/>
     </labelMappings>
     <containmentFeature
-        href="kragstein.ecore#//Class/sourceConnections"/>
+        href="kragstein.ecore#//Class/sourceRelationship"/>
     <tool
         xsi:type="gmftool:CreationTool"
-        href="kragstein.gmftool#//@palette/@tools.0/@tools.6"/>
+        href="kragstein.gmftool#//@palette/@tools.0/@tools.5"/>
     <diagramLink
         href="kragstein.gmfgraph#Composition"/>
-    <linkMetaFeature
-        xsi:type="ecore:EReference"
-        href="kragstein.ecore#//Relationship/target"/>
-  </links>
-  <links>
-    <domainMetaElement
-        href="kragstein.ecore#//Association"/>
-    <labelMappings
-        xsi:type="gmfmap:FeatureLabelMapping">
-      <features
-          href="kragstein.ecore#//ClassMultipleRelationships/name"/>
-    </labelMappings>
-    <containmentFeature
-        href="kragstein.ecore#//Class/sourceConnections"/>
-    <tool
-        xsi:type="gmftool:CreationTool"
-        href="kragstein.gmftool#//@palette/@tools.0/@tools.7"/>
-    <diagramLink
-        href="kragstein.gmfgraph#Association"/>
     <linkMetaFeature
         xsi:type="ecore:EReference"
         href="kragstein.ecore#//Relationship/target"/>
@@ -122,16 +52,39 @@
         href="kragstein.ecore#//Dependency"/>
     <labelMappings
         xsi:type="gmfmap:FeatureLabelMapping">
+      <diagramLabel
+          href="kragstein.gmfgraph#DependencyName"/>
       <features
-          href="kragstein.ecore#//ClassMultipleRelationships/name"/>
+          href="kragstein.ecore#//Relationship/name"/>
     </labelMappings>
     <containmentFeature
-        href="kragstein.ecore#//Class/sourceConnections"/>
+        href="kragstein.ecore#//Class/sourceRelationship"/>
     <tool
         xsi:type="gmftool:CreationTool"
-        href="kragstein.gmftool#//@palette/@tools.0/@tools.8"/>
+        href="kragstein.gmftool#//@palette/@tools.0/@tools.6"/>
     <diagramLink
         href="kragstein.gmfgraph#Dependency"/>
+    <linkMetaFeature
+        xsi:type="ecore:EReference"
+        href="kragstein.ecore#//Relationship/target"/>
+  </links>
+  <links>
+    <domainMetaElement
+        href="kragstein.ecore#//Association"/>
+    <labelMappings
+        xsi:type="gmfmap:FeatureLabelMapping">
+      <diagramLabel
+          href="kragstein.gmfgraph#AssociationName"/>
+      <features
+          href="kragstein.ecore#//Relationship/name"/>
+    </labelMappings>
+    <containmentFeature
+        href="kragstein.ecore#//Class/sourceRelationship"/>
+    <tool
+        xsi:type="gmftool:CreationTool"
+        href="kragstein.gmftool#//@palette/@tools.0/@tools.3"/>
+    <diagramLink
+        href="kragstein.gmfgraph#Association"/>
     <linkMetaFeature
         xsi:type="ecore:EReference"
         href="kragstein.ecore#//Relationship/target"/>
@@ -141,16 +94,60 @@
         href="kragstein.ecore#//Realization"/>
     <labelMappings
         xsi:type="gmfmap:FeatureLabelMapping">
+      <diagramLabel
+          href="kragstein.gmfgraph#RealizationName"/>
       <features
-          href="kragstein.ecore#//ClassMultipleRelationships/name"/>
+          href="kragstein.ecore#//Relationship/name"/>
     </labelMappings>
     <containmentFeature
-        href="kragstein.ecore#//Class/sourceConnections"/>
+        href="kragstein.ecore#//Class/sourceRelationship"/>
     <tool
         xsi:type="gmftool:CreationTool"
-        href="kragstein.gmftool#//@palette/@tools.0/@tools.9"/>
+        href="kragstein.gmftool#//@palette/@tools.0/@tools.2"/>
     <diagramLink
         href="kragstein.gmfgraph#Realization"/>
+    <linkMetaFeature
+        xsi:type="ecore:EReference"
+        href="kragstein.ecore#//Relationship/target"/>
+  </links>
+  <links>
+    <domainMetaElement
+        href="kragstein.ecore#//Generalization"/>
+    <labelMappings
+        xsi:type="gmfmap:FeatureLabelMapping">
+      <diagramLabel
+          href="kragstein.gmfgraph#GeneralizationName"/>
+      <features
+          href="kragstein.ecore#//Relationship/name"/>
+    </labelMappings>
+    <containmentFeature
+        href="kragstein.ecore#//Class/sourceRelationship"/>
+    <tool
+        xsi:type="gmftool:CreationTool"
+        href="kragstein.gmftool#//@palette/@tools.0/@tools.1"/>
+    <diagramLink
+        href="kragstein.gmfgraph#Generalization"/>
+    <linkMetaFeature
+        xsi:type="ecore:EReference"
+        href="kragstein.ecore#//Relationship/target"/>
+  </links>
+  <links>
+    <domainMetaElement
+        href="kragstein.ecore#//Aggregation"/>
+    <labelMappings
+        xsi:type="gmfmap:FeatureLabelMapping">
+      <diagramLabel
+          href="kragstein.gmfgraph#AggregationName"/>
+      <features
+          href="kragstein.ecore#//Relationship/name"/>
+    </labelMappings>
+    <containmentFeature
+        href="kragstein.ecore#//Class/sourceRelationship"/>
+    <tool
+        xsi:type="gmftool:CreationTool"
+        href="kragstein.gmftool#//@palette/@tools.0/@tools.4"/>
+    <diagramLink
+        href="kragstein.gmfgraph#Aggregation"/>
     <linkMetaFeature
         xsi:type="ecore:EReference"
         href="kragstein.ecore#//Relationship/target"/>
@@ -161,7 +158,7 @@
     <domainModel
         href="kragstein.ecore#/"/>
     <domainMetaElement
-        href="kragstein.ecore#//UMLDiagramm"/>
+        href="kragstein.ecore#//Package"/>
     <palette
         href="kragstein.gmftool#//@palette"/>
   </diagram>

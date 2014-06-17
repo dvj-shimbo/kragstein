@@ -66,6 +66,9 @@ public class MethodItemProvider
 			addNamePropertyDescriptor(object);
 			addTypePropertyDescriptor(object);
 			addVisibilityPropertyDescriptor(object);
+			addIsConstPropertyDescriptor(object);
+			addIsVirtualPropertyDescriptor(object);
+			addIsStaticPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -132,6 +135,72 @@ public class MethodItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Is Const feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIsConstPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Method_isConst_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Method_isConst_feature", "_UI_Method_type"),
+				 KragsteinPackage.Literals.METHOD__IS_CONST,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Is Virtual feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIsVirtualPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Method_isVirtual_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Method_isVirtual_feature", "_UI_Method_type"),
+				 KragsteinPackage.Literals.METHOD__IS_VIRTUAL,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Is Static feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIsStaticPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Method_isStatic_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Method_isStatic_feature", "_UI_Method_type"),
+				 KragsteinPackage.Literals.METHOD__IS_STATIC,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -208,6 +277,9 @@ public class MethodItemProvider
 			case KragsteinPackage.METHOD__NAME:
 			case KragsteinPackage.METHOD__TYPE:
 			case KragsteinPackage.METHOD__VISIBILITY:
+			case KragsteinPackage.METHOD__IS_CONST:
+			case KragsteinPackage.METHOD__IS_VIRTUAL:
+			case KragsteinPackage.METHOD__IS_STATIC:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case KragsteinPackage.METHOD__PARAMETERS:

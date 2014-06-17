@@ -2,6 +2,7 @@
  */
 package kragstein;
 
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,7 +20,7 @@ package kragstein;
  * @model
  * @generated
  */
-public interface Comment extends Icon {
+public interface Comment extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->

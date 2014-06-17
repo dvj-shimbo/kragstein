@@ -63,25 +63,48 @@ public class UMLDiagrammItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addNamePropertyDescriptor(object);
+			addLangPropertyDescriptor(object);
+			addPackageNamePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Name feature.
+	 * This adds a property descriptor for the Lang feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addNamePropertyDescriptor(Object object) {
+	protected void addLangPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_UMLDiagramm_name_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_UMLDiagramm_name_feature", "_UI_UMLDiagramm_type"),
-				 KragsteinPackage.Literals.UML_DIAGRAMM__NAME,
+				 getString("_UI_UMLDiagramm_lang_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_UMLDiagramm_lang_feature", "_UI_UMLDiagramm_type"),
+				 KragsteinPackage.Literals.UML_DIAGRAMM__LANG,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Package Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addPackageNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_UMLDiagramm_packageName_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_UMLDiagramm_packageName_feature", "_UI_UMLDiagramm_type"),
+				 KragsteinPackage.Literals.UML_DIAGRAMM__PACKAGE_NAME,
 				 true,
 				 false,
 				 false,
@@ -103,6 +126,7 @@ public class UMLDiagrammItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(KragsteinPackage.Literals.UML_DIAGRAMM__UNITS);
+			childrenFeatures.add(KragsteinPackage.Literals.UML_DIAGRAMM__PACKAGES);
 		}
 		return childrenFeatures;
 	}
@@ -139,7 +163,7 @@ public class UMLDiagrammItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((UMLDiagramm)object).getName();
+		String label = ((UMLDiagramm)object).getPackageName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_UMLDiagramm_type") :
 			getString("_UI_UMLDiagramm_type") + " " + label;
@@ -158,10 +182,12 @@ public class UMLDiagrammItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(UMLDiagramm.class)) {
-			case KragsteinPackage.UML_DIAGRAMM__NAME:
+			case KragsteinPackage.UML_DIAGRAMM__LANG:
+			case KragsteinPackage.UML_DIAGRAMM__PACKAGE_NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case KragsteinPackage.UML_DIAGRAMM__UNITS:
+			case KragsteinPackage.UML_DIAGRAMM__PACKAGES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -188,6 +214,11 @@ public class UMLDiagrammItemProvider
 			(createChildParameter
 				(KragsteinPackage.Literals.UML_DIAGRAMM__UNITS,
 				 KragsteinFactory.eINSTANCE.createClass()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(KragsteinPackage.Literals.UML_DIAGRAMM__PACKAGES,
+				 KragsteinFactory.eINSTANCE.createimportedPackage()));
 	}
 
 	/**

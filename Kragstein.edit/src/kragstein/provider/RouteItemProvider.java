@@ -211,11 +211,6 @@ public class RouteItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(KragsteinPackage.Literals.ROUTE__ICONS,
-				 KragsteinFactory.eINSTANCE.createComment()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(KragsteinPackage.Literals.ROUTE__ICONS,
 				 KragsteinFactory.eINSTANCE.createLoopArrow()));
 
 		newChildDescriptors.add

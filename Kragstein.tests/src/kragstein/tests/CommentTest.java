@@ -2,6 +2,8 @@
  */
 package kragstein.tests;
 
+import junit.framework.TestCase;
+
 import junit.textui.TestRunner;
 
 import kragstein.Comment;
@@ -13,7 +15,15 @@ import kragstein.KragsteinFactory;
  * <!-- end-user-doc -->
  * @generated
  */
-public class CommentTest extends IconTest {
+public class CommentTest extends TestCase {
+
+	/**
+	 * The fixture for this Comment test case.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Comment fixture = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -35,14 +45,23 @@ public class CommentTest extends IconTest {
 	}
 
 	/**
+	 * Sets the fixture for this Comment test case.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void setFixture(Comment fixture) {
+		this.fixture = fixture;
+	}
+
+	/**
 	 * Returns the fixture for this Comment test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	protected Comment getFixture() {
-		return (Comment)fixture;
+		return fixture;
 	}
 
 	/**

@@ -7,6 +7,7 @@ import java.util.Collection;
 import kragstein.KragsteinPackage;
 import kragstein.UMLDiagramm;
 import kragstein.Unit;
+import kragstein.importedPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -29,8 +30,10 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link kragstein.impl.UMLDiagrammImpl#getName <em>Name</em>}</li>
+ *   <li>{@link kragstein.impl.UMLDiagrammImpl#getLang <em>Lang</em>}</li>
+ *   <li>{@link kragstein.impl.UMLDiagrammImpl#getPackageName <em>Package Name</em>}</li>
  *   <li>{@link kragstein.impl.UMLDiagrammImpl#getUnits <em>Units</em>}</li>
+ *   <li>{@link kragstein.impl.UMLDiagrammImpl#getPackages <em>Packages</em>}</li>
  * </ul>
  * </p>
  *
@@ -38,24 +41,44 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class UMLDiagrammImpl extends MinimalEObjectImpl.Container implements UMLDiagramm {
 	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * The default value of the '{@link #getLang() <em>Lang</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getName()
+	 * @see #getLang()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NAME_EDEFAULT = null;
+	protected static final String LANG_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * The cached value of the '{@link #getLang() <em>Lang</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getName()
+	 * @see #getLang()
 	 * @generated
 	 * @ordered
 	 */
-	protected String name = NAME_EDEFAULT;
+	protected String lang = LANG_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getPackageName() <em>Package Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPackageName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String PACKAGE_NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getPackageName() <em>Package Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPackageName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String packageName = PACKAGE_NAME_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getUnits() <em>Units</em>}' containment reference list.
@@ -66,6 +89,16 @@ public class UMLDiagrammImpl extends MinimalEObjectImpl.Container implements UML
 	 * @ordered
 	 */
 	protected EList<Unit> units;
+
+	/**
+	 * The cached value of the '{@link #getPackages() <em>Packages</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPackages()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<importedPackage> packages;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -91,8 +124,8 @@ public class UMLDiagrammImpl extends MinimalEObjectImpl.Container implements UML
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
-		return name;
+	public String getLang() {
+		return lang;
 	}
 
 	/**
@@ -100,11 +133,32 @@ public class UMLDiagrammImpl extends MinimalEObjectImpl.Container implements UML
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
+	public void setLang(String newLang) {
+		String oldLang = lang;
+		lang = newLang;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, KragsteinPackage.UML_DIAGRAMM__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, KragsteinPackage.UML_DIAGRAMM__LANG, oldLang, lang));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getPackageName() {
+		return packageName;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPackageName(String newPackageName) {
+		String oldPackageName = packageName;
+		packageName = newPackageName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, KragsteinPackage.UML_DIAGRAMM__PACKAGE_NAME, oldPackageName, packageName));
 	}
 
 	/**
@@ -124,11 +178,25 @@ public class UMLDiagrammImpl extends MinimalEObjectImpl.Container implements UML
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<importedPackage> getPackages() {
+		if (packages == null) {
+			packages = new EObjectContainmentEList<importedPackage>(importedPackage.class, this, KragsteinPackage.UML_DIAGRAMM__PACKAGES);
+		}
+		return packages;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case KragsteinPackage.UML_DIAGRAMM__UNITS:
 				return ((InternalEList<?>)getUnits()).basicRemove(otherEnd, msgs);
+			case KragsteinPackage.UML_DIAGRAMM__PACKAGES:
+				return ((InternalEList<?>)getPackages()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -141,10 +209,14 @@ public class UMLDiagrammImpl extends MinimalEObjectImpl.Container implements UML
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case KragsteinPackage.UML_DIAGRAMM__NAME:
-				return getName();
+			case KragsteinPackage.UML_DIAGRAMM__LANG:
+				return getLang();
+			case KragsteinPackage.UML_DIAGRAMM__PACKAGE_NAME:
+				return getPackageName();
 			case KragsteinPackage.UML_DIAGRAMM__UNITS:
 				return getUnits();
+			case KragsteinPackage.UML_DIAGRAMM__PACKAGES:
+				return getPackages();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -158,12 +230,19 @@ public class UMLDiagrammImpl extends MinimalEObjectImpl.Container implements UML
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case KragsteinPackage.UML_DIAGRAMM__NAME:
-				setName((String)newValue);
+			case KragsteinPackage.UML_DIAGRAMM__LANG:
+				setLang((String)newValue);
+				return;
+			case KragsteinPackage.UML_DIAGRAMM__PACKAGE_NAME:
+				setPackageName((String)newValue);
 				return;
 			case KragsteinPackage.UML_DIAGRAMM__UNITS:
 				getUnits().clear();
 				getUnits().addAll((Collection<? extends Unit>)newValue);
+				return;
+			case KragsteinPackage.UML_DIAGRAMM__PACKAGES:
+				getPackages().clear();
+				getPackages().addAll((Collection<? extends importedPackage>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -177,11 +256,17 @@ public class UMLDiagrammImpl extends MinimalEObjectImpl.Container implements UML
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case KragsteinPackage.UML_DIAGRAMM__NAME:
-				setName(NAME_EDEFAULT);
+			case KragsteinPackage.UML_DIAGRAMM__LANG:
+				setLang(LANG_EDEFAULT);
+				return;
+			case KragsteinPackage.UML_DIAGRAMM__PACKAGE_NAME:
+				setPackageName(PACKAGE_NAME_EDEFAULT);
 				return;
 			case KragsteinPackage.UML_DIAGRAMM__UNITS:
 				getUnits().clear();
+				return;
+			case KragsteinPackage.UML_DIAGRAMM__PACKAGES:
+				getPackages().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -195,10 +280,14 @@ public class UMLDiagrammImpl extends MinimalEObjectImpl.Container implements UML
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case KragsteinPackage.UML_DIAGRAMM__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case KragsteinPackage.UML_DIAGRAMM__LANG:
+				return LANG_EDEFAULT == null ? lang != null : !LANG_EDEFAULT.equals(lang);
+			case KragsteinPackage.UML_DIAGRAMM__PACKAGE_NAME:
+				return PACKAGE_NAME_EDEFAULT == null ? packageName != null : !PACKAGE_NAME_EDEFAULT.equals(packageName);
 			case KragsteinPackage.UML_DIAGRAMM__UNITS:
 				return units != null && !units.isEmpty();
+			case KragsteinPackage.UML_DIAGRAMM__PACKAGES:
+				return packages != null && !packages.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -213,8 +302,10 @@ public class UMLDiagrammImpl extends MinimalEObjectImpl.Container implements UML
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
+		result.append(" (lang: ");
+		result.append(lang);
+		result.append(", packageName: ");
+		result.append(packageName);
 		result.append(')');
 		return result.toString();
 	}

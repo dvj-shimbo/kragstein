@@ -9,12 +9,15 @@ import kragstein.ClassMultipleRelationships;
 import kragstein.KragsteinPackage;
 import kragstein.Method;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -30,6 +33,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link kragstein.impl.ClassImpl#getSourceConnections <em>Source Connections</em>}</li>
  *   <li>{@link kragstein.impl.ClassImpl#getAttributes <em>Attributes</em>}</li>
  *   <li>{@link kragstein.impl.ClassImpl#getMethods <em>Methods</em>}</li>
+ *   <li>{@link kragstein.impl.ClassImpl#isIsSingletone <em>Is Singletone</em>}</li>
  * </ul>
  * </p>
  *
@@ -75,6 +79,26 @@ public class ClassImpl extends UnitImpl implements kragstein.Class {
 	 * @ordered
 	 */
 	protected EList<Method> methods;
+
+	/**
+	 * The default value of the '{@link #isIsSingletone() <em>Is Singletone</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isIsSingletone()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean IS_SINGLETONE_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isIsSingletone() <em>Is Singletone</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isIsSingletone()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean isSingletone = IS_SINGLETONE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -148,6 +172,27 @@ public class ClassImpl extends UnitImpl implements kragstein.Class {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isIsSingletone() {
+		return isSingletone;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setIsSingletone(boolean newIsSingletone) {
+		boolean oldIsSingletone = isSingletone;
+		isSingletone = newIsSingletone;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, KragsteinPackage.CLASS__IS_SINGLETONE, oldIsSingletone, isSingletone));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -179,6 +224,8 @@ public class ClassImpl extends UnitImpl implements kragstein.Class {
 				return getAttributes();
 			case KragsteinPackage.CLASS__METHODS:
 				return getMethods();
+			case KragsteinPackage.CLASS__IS_SINGLETONE:
+				return isIsSingletone();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -208,6 +255,9 @@ public class ClassImpl extends UnitImpl implements kragstein.Class {
 				getMethods().clear();
 				getMethods().addAll((Collection<? extends Method>)newValue);
 				return;
+			case KragsteinPackage.CLASS__IS_SINGLETONE:
+				setIsSingletone((Boolean)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -232,6 +282,9 @@ public class ClassImpl extends UnitImpl implements kragstein.Class {
 			case KragsteinPackage.CLASS__METHODS:
 				getMethods().clear();
 				return;
+			case KragsteinPackage.CLASS__IS_SINGLETONE:
+				setIsSingletone(IS_SINGLETONE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -252,8 +305,26 @@ public class ClassImpl extends UnitImpl implements kragstein.Class {
 				return attributes != null && !attributes.isEmpty();
 			case KragsteinPackage.CLASS__METHODS:
 				return methods != null && !methods.isEmpty();
+			case KragsteinPackage.CLASS__IS_SINGLETONE:
+				return isSingletone != IS_SINGLETONE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (isSingletone: ");
+		result.append(isSingletone);
+		result.append(')');
+		return result.toString();
 	}
 
 } //ClassImpl

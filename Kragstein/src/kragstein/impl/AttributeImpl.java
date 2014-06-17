@@ -22,6 +22,9 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link kragstein.impl.AttributeImpl#getName <em>Name</em>}</li>
  *   <li>{@link kragstein.impl.AttributeImpl#getType <em>Type</em>}</li>
  *   <li>{@link kragstein.impl.AttributeImpl#getVisibility <em>Visibility</em>}</li>
+ *   <li>{@link kragstein.impl.AttributeImpl#isIsConst <em>Is Const</em>}</li>
+ *   <li>{@link kragstein.impl.AttributeImpl#isIsStatic <em>Is Static</em>}</li>
+ *   <li>{@link kragstein.impl.AttributeImpl#getValue <em>Value</em>}</li>
  * </ul>
  * </p>
  *
@@ -87,6 +90,66 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
 	 * @ordered
 	 */
 	protected String visibility = VISIBILITY_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isIsConst() <em>Is Const</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isIsConst()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean IS_CONST_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isIsConst() <em>Is Const</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isIsConst()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean isConst = IS_CONST_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isIsStatic() <em>Is Static</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isIsStatic()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean IS_STATIC_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isIsStatic() <em>Is Static</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isIsStatic()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean isStatic = IS_STATIC_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getValue()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String VALUE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getValue()
+	 * @generated
+	 * @ordered
+	 */
+	protected String value = VALUE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -175,6 +238,69 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isIsConst() {
+		return isConst;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setIsConst(boolean newIsConst) {
+		boolean oldIsConst = isConst;
+		isConst = newIsConst;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, KragsteinPackage.ATTRIBUTE__IS_CONST, oldIsConst, isConst));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isIsStatic() {
+		return isStatic;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setIsStatic(boolean newIsStatic) {
+		boolean oldIsStatic = isStatic;
+		isStatic = newIsStatic;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, KragsteinPackage.ATTRIBUTE__IS_STATIC, oldIsStatic, isStatic));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getValue() {
+		return value;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setValue(String newValue) {
+		String oldValue = value;
+		value = newValue;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, KragsteinPackage.ATTRIBUTE__VALUE, oldValue, value));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -184,6 +310,12 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
 				return getType();
 			case KragsteinPackage.ATTRIBUTE__VISIBILITY:
 				return getVisibility();
+			case KragsteinPackage.ATTRIBUTE__IS_CONST:
+				return isIsConst();
+			case KragsteinPackage.ATTRIBUTE__IS_STATIC:
+				return isIsStatic();
+			case KragsteinPackage.ATTRIBUTE__VALUE:
+				return getValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -204,6 +336,15 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
 				return;
 			case KragsteinPackage.ATTRIBUTE__VISIBILITY:
 				setVisibility((String)newValue);
+				return;
+			case KragsteinPackage.ATTRIBUTE__IS_CONST:
+				setIsConst((Boolean)newValue);
+				return;
+			case KragsteinPackage.ATTRIBUTE__IS_STATIC:
+				setIsStatic((Boolean)newValue);
+				return;
+			case KragsteinPackage.ATTRIBUTE__VALUE:
+				setValue((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -226,6 +367,15 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
 			case KragsteinPackage.ATTRIBUTE__VISIBILITY:
 				setVisibility(VISIBILITY_EDEFAULT);
 				return;
+			case KragsteinPackage.ATTRIBUTE__IS_CONST:
+				setIsConst(IS_CONST_EDEFAULT);
+				return;
+			case KragsteinPackage.ATTRIBUTE__IS_STATIC:
+				setIsStatic(IS_STATIC_EDEFAULT);
+				return;
+			case KragsteinPackage.ATTRIBUTE__VALUE:
+				setValue(VALUE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -244,6 +394,12 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
 				return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
 			case KragsteinPackage.ATTRIBUTE__VISIBILITY:
 				return VISIBILITY_EDEFAULT == null ? visibility != null : !VISIBILITY_EDEFAULT.equals(visibility);
+			case KragsteinPackage.ATTRIBUTE__IS_CONST:
+				return isConst != IS_CONST_EDEFAULT;
+			case KragsteinPackage.ATTRIBUTE__IS_STATIC:
+				return isStatic != IS_STATIC_EDEFAULT;
+			case KragsteinPackage.ATTRIBUTE__VALUE:
+				return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -264,6 +420,12 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
 		result.append(type);
 		result.append(", visibility: ");
 		result.append(visibility);
+		result.append(", isConst: ");
+		result.append(isConst);
+		result.append(", isStatic: ");
+		result.append(isStatic);
+		result.append(", value: ");
+		result.append(value);
 		result.append(')');
 		return result.toString();
 	}

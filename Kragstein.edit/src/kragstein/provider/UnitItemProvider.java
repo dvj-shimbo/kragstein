@@ -127,6 +127,7 @@ public class UnitItemProvider
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(KragsteinPackage.Literals.UNIT__SOURCE_CONNECTION);
 			childrenFeatures.add(KragsteinPackage.Literals.UNIT__TARGET_CONNECTION);
+			childrenFeatures.add(KragsteinPackage.Literals.UNIT__COMMENTS);
 		}
 		return childrenFeatures;
 	}
@@ -177,6 +178,7 @@ public class UnitItemProvider
 				return;
 			case KragsteinPackage.UNIT__SOURCE_CONNECTION:
 			case KragsteinPackage.UNIT__TARGET_CONNECTION:
+			case KragsteinPackage.UNIT__COMMENTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -203,6 +205,11 @@ public class UnitItemProvider
 			(createChildParameter
 				(KragsteinPackage.Literals.UNIT__TARGET_CONNECTION,
 				 KragsteinFactory.eINSTANCE.createGeneralization()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(KragsteinPackage.Literals.UNIT__COMMENTS,
+				 KragsteinFactory.eINSTANCE.createComment()));
 	}
 
 	/**

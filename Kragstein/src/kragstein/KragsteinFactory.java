@@ -31,6 +31,15 @@ public interface KragsteinFactory extends EFactory {
 	UMLDiagramm createUMLDiagramm();
 
 	/**
+	 * Returns a new object of class '<em>imported Package</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>imported Package</em>'.
+	 * @generated
+	 */
+	importedPackage createimportedPackage();
+
+	/**
 	 * Returns a new object of class '<em>Generalization</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -83,6 +92,24 @@ public interface KragsteinFactory extends EFactory {
 	 * @generated
 	 */
 	Dependency createDependency();
+
+	/**
+	 * Returns a new object of class '<em>Comment</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Comment</em>'.
+	 * @generated
+	 */
+	Comment createComment();
+
+	/**
+	 * Returns a new object of class '<em>Comment Link</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Comment Link</em>'.
+	 * @generated
+	 */
+	CommentLink createCommentLink();
 
 	/**
 	 * Returns a new object of class '<em>Interface</em>'.
@@ -326,15 +353,6 @@ public interface KragsteinFactory extends EFactory {
 	 * @generated
 	 */
 	Input createInput();
-
-	/**
-	 * Returns a new object of class '<em>Comment</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Comment</em>'.
-	 * @generated
-	 */
-	Comment createComment();
 
 	/**
 	 * Returns a new object of class '<em>Loop Arrow</em>'.

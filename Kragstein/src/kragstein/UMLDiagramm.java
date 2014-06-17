@@ -14,8 +14,10 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link kragstein.UMLDiagramm#getName <em>Name</em>}</li>
+ *   <li>{@link kragstein.UMLDiagramm#getLang <em>Lang</em>}</li>
+ *   <li>{@link kragstein.UMLDiagramm#getPackageName <em>Package Name</em>}</li>
  *   <li>{@link kragstein.UMLDiagramm#getUnits <em>Units</em>}</li>
+ *   <li>{@link kragstein.UMLDiagramm#getPackages <em>Packages</em>}</li>
  * </ul>
  * </p>
  *
@@ -25,30 +27,56 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface UMLDiagramm extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * Returns the value of the '<em><b>Lang</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Lang</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
-	 * @see kragstein.KragsteinPackage#getUMLDiagramm_Name()
+	 * @return the value of the '<em>Lang</em>' attribute.
+	 * @see #setLang(String)
+	 * @see kragstein.KragsteinPackage#getUMLDiagramm_Lang()
 	 * @model
 	 * @generated
 	 */
-	String getName();
+	String getLang();
 
 	/**
-	 * Sets the value of the '{@link kragstein.UMLDiagramm#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link kragstein.UMLDiagramm#getLang <em>Lang</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
+	 * @param value the new value of the '<em>Lang</em>' attribute.
+	 * @see #getLang()
 	 * @generated
 	 */
-	void setName(String value);
+	void setLang(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Package Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Package Name</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Package Name</em>' attribute.
+	 * @see #setPackageName(String)
+	 * @see kragstein.KragsteinPackage#getUMLDiagramm_PackageName()
+	 * @model
+	 * @generated
+	 */
+	String getPackageName();
+
+	/**
+	 * Sets the value of the '{@link kragstein.UMLDiagramm#getPackageName <em>Package Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Package Name</em>' attribute.
+	 * @see #getPackageName()
+	 * @generated
+	 */
+	void setPackageName(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Units</b></em>' containment reference list.
@@ -65,5 +93,21 @@ public interface UMLDiagramm extends EObject {
 	 * @generated
 	 */
 	EList<Unit> getUnits();
+
+	/**
+	 * Returns the value of the '<em><b>Packages</b></em>' containment reference list.
+	 * The list contents are of type {@link kragstein.importedPackage}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Packages</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Packages</em>' containment reference list.
+	 * @see kragstein.KragsteinPackage#getUMLDiagramm_Packages()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<importedPackage> getPackages();
 
 } // UMLDiagramm

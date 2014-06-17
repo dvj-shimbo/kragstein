@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link kragstein.Unit#getSourceConnection <em>Source Connection</em>}</li>
  *   <li>{@link kragstein.Unit#getTargetConnection <em>Target Connection</em>}</li>
  *   <li>{@link kragstein.Unit#getVisibility <em>Visibility</em>}</li>
+ *   <li>{@link kragstein.Unit#getComments <em>Comments</em>}</li>
  * </ul>
  * </p>
  *
@@ -127,5 +128,31 @@ public interface Unit extends EObject {
 	 * @generated
 	 */
 	void setVisibility(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Comments</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Comments</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Comments</em>' containment reference.
+	 * @see #setComments(Comment)
+	 * @see kragstein.KragsteinPackage#getUnit_Comments()
+	 * @model containment="true"
+	 * @generated
+	 */
+	Comment getComments();
+
+	/**
+	 * Sets the value of the '{@link kragstein.Unit#getComments <em>Comments</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Comments</em>' containment reference.
+	 * @see #getComments()
+	 * @generated
+	 */
+	void setComments(Comment value);
 
 } // Unit

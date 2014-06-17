@@ -63,6 +63,9 @@ public class AttributeItemProvider
 			addNamePropertyDescriptor(object);
 			addTypePropertyDescriptor(object);
 			addVisibilityPropertyDescriptor(object);
+			addIsConstPropertyDescriptor(object);
+			addIsStaticPropertyDescriptor(object);
+			addValuePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -134,6 +137,72 @@ public class AttributeItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Is Const feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIsConstPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Attribute_isConst_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Attribute_isConst_feature", "_UI_Attribute_type"),
+				 KragsteinPackage.Literals.ATTRIBUTE__IS_CONST,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Is Static feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIsStaticPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Attribute_isStatic_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Attribute_isStatic_feature", "_UI_Attribute_type"),
+				 KragsteinPackage.Literals.ATTRIBUTE__IS_STATIC,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Value feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addValuePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Attribute_value_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Attribute_value_feature", "_UI_Attribute_type"),
+				 KragsteinPackage.Literals.ATTRIBUTE__VALUE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns Attribute.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -174,6 +243,9 @@ public class AttributeItemProvider
 			case KragsteinPackage.ATTRIBUTE__NAME:
 			case KragsteinPackage.ATTRIBUTE__TYPE:
 			case KragsteinPackage.ATTRIBUTE__VISIBILITY:
+			case KragsteinPackage.ATTRIBUTE__IS_CONST:
+			case KragsteinPackage.ATTRIBUTE__IS_STATIC:
+			case KragsteinPackage.ATTRIBUTE__VALUE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

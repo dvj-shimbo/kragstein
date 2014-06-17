@@ -15,6 +15,9 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link kragstein.Attribute#getName <em>Name</em>}</li>
  *   <li>{@link kragstein.Attribute#getType <em>Type</em>}</li>
  *   <li>{@link kragstein.Attribute#getVisibility <em>Visibility</em>}</li>
+ *   <li>{@link kragstein.Attribute#isIsConst <em>Is Const</em>}</li>
+ *   <li>{@link kragstein.Attribute#isIsStatic <em>Is Static</em>}</li>
+ *   <li>{@link kragstein.Attribute#getValue <em>Value</em>}</li>
  * </ul>
  * </p>
  *
@@ -100,5 +103,83 @@ public interface Attribute extends EObject {
 	 * @generated
 	 */
 	void setVisibility(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Is Const</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Is Const</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Is Const</em>' attribute.
+	 * @see #setIsConst(boolean)
+	 * @see kragstein.KragsteinPackage#getAttribute_IsConst()
+	 * @model
+	 * @generated
+	 */
+	boolean isIsConst();
+
+	/**
+	 * Sets the value of the '{@link kragstein.Attribute#isIsConst <em>Is Const</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Is Const</em>' attribute.
+	 * @see #isIsConst()
+	 * @generated
+	 */
+	void setIsConst(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Is Static</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Is Static</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Is Static</em>' attribute.
+	 * @see #setIsStatic(boolean)
+	 * @see kragstein.KragsteinPackage#getAttribute_IsStatic()
+	 * @model
+	 * @generated
+	 */
+	boolean isIsStatic();
+
+	/**
+	 * Sets the value of the '{@link kragstein.Attribute#isIsStatic <em>Is Static</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Is Static</em>' attribute.
+	 * @see #isIsStatic()
+	 * @generated
+	 */
+	void setIsStatic(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Value</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Value</em>' attribute.
+	 * @see #setValue(String)
+	 * @see kragstein.KragsteinPackage#getAttribute_Value()
+	 * @model
+	 * @generated
+	 */
+	String getValue();
+
+	/**
+	 * Sets the value of the '{@link kragstein.Attribute#getValue <em>Value</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Value</em>' attribute.
+	 * @see #getValue()
+	 * @generated
+	 */
+	void setValue(String value);
 
 } // Attribute

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <gmfgraph:Canvas xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gmfgraph="http://www.eclipse.org/gmf/2006/GraphicalDefinition" name="kragstein">
   <figures name="Default">
@@ -410,3 +411,55 @@
   <labels name="InterfaceParameterName" figure="InterfaceParameterFigure" accessor="//@figures.0/@descriptors.38/@accessors.0"/>
   <labels name="InterfaceParameterType" figure="InterfaceParameterFigure" accessor="//@figures.0/@descriptors.38/@accessors.1"/>
 </gmfgraph:Canvas>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<gmfgraph:Canvas
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:gmfgraph="http://www.eclipse.org/gmf/2006/GraphicalDefinition"
+    name="UmlClassGraph">
+  <figures>
+    <descriptors
+        name="Class">
+      <actualFigure
+          xsi:type="gmfgraph:Rectangle"
+          name="Class"/>
+    </descriptors>
+    <descriptors
+        name="Generalization">
+      <actualFigure
+          xsi:type="gmfgraph:PolylineConnection"
+          name="aa"/>
+    </descriptors>
+    <descriptors
+        name="Interface">
+      <actualFigure
+          xsi:type="gmfgraph:Rectangle"
+          name="Interface Rectangle"/>
+    </descriptors>
+  </figures>
+  <nodes
+      name="InterfaceNode"
+      figure="Interface"/>
+  <nodes
+      name="ClassNode"
+      figure="Class"/>
+  <connections
+      name="GeneralizationConnection"
+      figure="Generalization"/>
+  <labels>
+    <facets
+        xsi:type="gmfgraph:GeneralFacet"
+        identifier="ClassLabel"
+        data="Class"/>
+  </labels>
+  <labels
+      name="1">
+    <facets
+        xsi:type="gmfgraph:GeneralFacet"
+        identifier="Interface"
+        data="Interface"/>
+  </labels>
+</gmfgraph:Canvas>
+>>>>>>> shedever_dev

@@ -19,6 +19,9 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link kragstein.Method#getName <em>Name</em>}</li>
  *   <li>{@link kragstein.Method#getType <em>Type</em>}</li>
  *   <li>{@link kragstein.Method#getVisibility <em>Visibility</em>}</li>
+ *   <li>{@link kragstein.Method#isIsConst <em>Is Const</em>}</li>
+ *   <li>{@link kragstein.Method#isIsVirtual <em>Is Virtual</em>}</li>
+ *   <li>{@link kragstein.Method#isIsStatic <em>Is Static</em>}</li>
  * </ul>
  * </p>
  *
@@ -146,5 +149,83 @@ public interface Method extends EObject {
 	 * @generated
 	 */
 	void setVisibility(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Is Const</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Is Const</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Is Const</em>' attribute.
+	 * @see #setIsConst(boolean)
+	 * @see kragstein.KragsteinPackage#getMethod_IsConst()
+	 * @model
+	 * @generated
+	 */
+	boolean isIsConst();
+
+	/**
+	 * Sets the value of the '{@link kragstein.Method#isIsConst <em>Is Const</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Is Const</em>' attribute.
+	 * @see #isIsConst()
+	 * @generated
+	 */
+	void setIsConst(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Is Virtual</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Is Virtual</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Is Virtual</em>' attribute.
+	 * @see #setIsVirtual(boolean)
+	 * @see kragstein.KragsteinPackage#getMethod_IsVirtual()
+	 * @model
+	 * @generated
+	 */
+	boolean isIsVirtual();
+
+	/**
+	 * Sets the value of the '{@link kragstein.Method#isIsVirtual <em>Is Virtual</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Is Virtual</em>' attribute.
+	 * @see #isIsVirtual()
+	 * @generated
+	 */
+	void setIsVirtual(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Is Static</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Is Static</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Is Static</em>' attribute.
+	 * @see #setIsStatic(boolean)
+	 * @see kragstein.KragsteinPackage#getMethod_IsStatic()
+	 * @model
+	 * @generated
+	 */
+	boolean isIsStatic();
+
+	/**
+	 * Sets the value of the '{@link kragstein.Method#isIsStatic <em>Is Static</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Is Static</em>' attribute.
+	 * @see #isIsStatic()
+	 * @generated
+	 */
+	void setIsStatic(boolean value);
 
 } // Method

@@ -14,7 +14,9 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
@@ -45,8 +47,31 @@ public class ClassItemProvider extends UnitItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addIsSingletonePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Is Singletone feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIsSingletonePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Class_isSingletone_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Class_isSingletone_feature", "_UI_Class_type"),
+				 KragsteinPackage.Literals.CLASS__IS_SINGLETONE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -120,6 +145,9 @@ public class ClassItemProvider extends UnitItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(kragstein.Class.class)) {
+			case KragsteinPackage.CLASS__IS_SINGLETONE:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
 			case KragsteinPackage.CLASS__TARGET_CONNECTIONS:
 			case KragsteinPackage.CLASS__SOURCE_CONNECTIONS:
 			case KragsteinPackage.CLASS__ATTRIBUTES:

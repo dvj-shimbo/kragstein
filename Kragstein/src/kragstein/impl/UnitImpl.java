@@ -2,6 +2,7 @@
  */
 package kragstein.impl;
 
+import kragstein.Comment;
 import kragstein.Generalization;
 import kragstein.KragsteinPackage;
 import kragstein.Unit;
@@ -26,6 +27,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link kragstein.impl.UnitImpl#getSourceConnection <em>Source Connection</em>}</li>
  *   <li>{@link kragstein.impl.UnitImpl#getTargetConnection <em>Target Connection</em>}</li>
  *   <li>{@link kragstein.impl.UnitImpl#getVisibility <em>Visibility</em>}</li>
+ *   <li>{@link kragstein.impl.UnitImpl#getComments <em>Comments</em>}</li>
  * </ul>
  * </p>
  *
@@ -91,6 +93,16 @@ public abstract class UnitImpl extends MinimalEObjectImpl.Container implements U
 	 * @ordered
 	 */
 	protected String visibility = VISIBILITY_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getComments() <em>Comments</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getComments()
+	 * @generated
+	 * @ordered
+	 */
+	protected Comment comments;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -244,6 +256,49 @@ public abstract class UnitImpl extends MinimalEObjectImpl.Container implements U
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Comment getComments() {
+		return comments;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetComments(Comment newComments, NotificationChain msgs) {
+		Comment oldComments = comments;
+		comments = newComments;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, KragsteinPackage.UNIT__COMMENTS, oldComments, newComments);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setComments(Comment newComments) {
+		if (newComments != comments) {
+			NotificationChain msgs = null;
+			if (comments != null)
+				msgs = ((InternalEObject)comments).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - KragsteinPackage.UNIT__COMMENTS, null, msgs);
+			if (newComments != null)
+				msgs = ((InternalEObject)newComments).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - KragsteinPackage.UNIT__COMMENTS, null, msgs);
+			msgs = basicSetComments(newComments, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, KragsteinPackage.UNIT__COMMENTS, newComments, newComments));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -251,6 +306,8 @@ public abstract class UnitImpl extends MinimalEObjectImpl.Container implements U
 				return basicSetSourceConnection(null, msgs);
 			case KragsteinPackage.UNIT__TARGET_CONNECTION:
 				return basicSetTargetConnection(null, msgs);
+			case KragsteinPackage.UNIT__COMMENTS:
+				return basicSetComments(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -271,6 +328,8 @@ public abstract class UnitImpl extends MinimalEObjectImpl.Container implements U
 				return getTargetConnection();
 			case KragsteinPackage.UNIT__VISIBILITY:
 				return getVisibility();
+			case KragsteinPackage.UNIT__COMMENTS:
+				return getComments();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -294,6 +353,9 @@ public abstract class UnitImpl extends MinimalEObjectImpl.Container implements U
 				return;
 			case KragsteinPackage.UNIT__VISIBILITY:
 				setVisibility((String)newValue);
+				return;
+			case KragsteinPackage.UNIT__COMMENTS:
+				setComments((Comment)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -319,6 +381,9 @@ public abstract class UnitImpl extends MinimalEObjectImpl.Container implements U
 			case KragsteinPackage.UNIT__VISIBILITY:
 				setVisibility(VISIBILITY_EDEFAULT);
 				return;
+			case KragsteinPackage.UNIT__COMMENTS:
+				setComments((Comment)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -339,6 +404,8 @@ public abstract class UnitImpl extends MinimalEObjectImpl.Container implements U
 				return targetConnection != null;
 			case KragsteinPackage.UNIT__VISIBILITY:
 				return VISIBILITY_EDEFAULT == null ? visibility != null : !VISIBILITY_EDEFAULT.equals(visibility);
+			case KragsteinPackage.UNIT__COMMENTS:
+				return comments != null;
 		}
 		return super.eIsSet(featureID);
 	}

@@ -16,6 +16,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link kragstein.Class#getSourceConnections <em>Source Connections</em>}</li>
  *   <li>{@link kragstein.Class#getAttributes <em>Attributes</em>}</li>
  *   <li>{@link kragstein.Class#getMethods <em>Methods</em>}</li>
+ *   <li>{@link kragstein.Class#isIsSingletone <em>Is Singletone</em>}</li>
  * </ul>
  * </p>
  *
@@ -87,5 +88,31 @@ public interface Class extends Unit {
 	 * @generated
 	 */
 	EList<Method> getMethods();
+
+	/**
+	 * Returns the value of the '<em><b>Is Singletone</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Is Singletone</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Is Singletone</em>' attribute.
+	 * @see #setIsSingletone(boolean)
+	 * @see kragstein.KragsteinPackage#getClass_IsSingletone()
+	 * @model
+	 * @generated
+	 */
+	boolean isIsSingletone();
+
+	/**
+	 * Sets the value of the '{@link kragstein.Class#isIsSingletone <em>Is Singletone</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Is Singletone</em>' attribute.
+	 * @see #isIsSingletone()
+	 * @generated
+	 */
+	void setIsSingletone(boolean value);
 
 } // Class

@@ -35,6 +35,9 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link kragstein.impl.MethodImpl#getName <em>Name</em>}</li>
  *   <li>{@link kragstein.impl.MethodImpl#getType <em>Type</em>}</li>
  *   <li>{@link kragstein.impl.MethodImpl#getVisibility <em>Visibility</em>}</li>
+ *   <li>{@link kragstein.impl.MethodImpl#isIsConst <em>Is Const</em>}</li>
+ *   <li>{@link kragstein.impl.MethodImpl#isIsVirtual <em>Is Virtual</em>}</li>
+ *   <li>{@link kragstein.impl.MethodImpl#isIsStatic <em>Is Static</em>}</li>
  * </ul>
  * </p>
  *
@@ -120,6 +123,66 @@ public class MethodImpl extends MinimalEObjectImpl.Container implements Method {
 	 * @ordered
 	 */
 	protected String visibility = VISIBILITY_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isIsConst() <em>Is Const</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isIsConst()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean IS_CONST_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isIsConst() <em>Is Const</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isIsConst()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean isConst = IS_CONST_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isIsVirtual() <em>Is Virtual</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isIsVirtual()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean IS_VIRTUAL_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isIsVirtual() <em>Is Virtual</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isIsVirtual()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean isVirtual = IS_VIRTUAL_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isIsStatic() <em>Is Static</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isIsStatic()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean IS_STATIC_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isIsStatic() <em>Is Static</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isIsStatic()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean isStatic = IS_STATIC_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -263,6 +326,69 @@ public class MethodImpl extends MinimalEObjectImpl.Container implements Method {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isIsConst() {
+		return isConst;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setIsConst(boolean newIsConst) {
+		boolean oldIsConst = isConst;
+		isConst = newIsConst;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, KragsteinPackage.METHOD__IS_CONST, oldIsConst, isConst));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isIsVirtual() {
+		return isVirtual;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setIsVirtual(boolean newIsVirtual) {
+		boolean oldIsVirtual = isVirtual;
+		isVirtual = newIsVirtual;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, KragsteinPackage.METHOD__IS_VIRTUAL, oldIsVirtual, isVirtual));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isIsStatic() {
+		return isStatic;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setIsStatic(boolean newIsStatic) {
+		boolean oldIsStatic = isStatic;
+		isStatic = newIsStatic;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, KragsteinPackage.METHOD__IS_STATIC, oldIsStatic, isStatic));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -292,6 +418,12 @@ public class MethodImpl extends MinimalEObjectImpl.Container implements Method {
 				return getType();
 			case KragsteinPackage.METHOD__VISIBILITY:
 				return getVisibility();
+			case KragsteinPackage.METHOD__IS_CONST:
+				return isIsConst();
+			case KragsteinPackage.METHOD__IS_VIRTUAL:
+				return isIsVirtual();
+			case KragsteinPackage.METHOD__IS_STATIC:
+				return isIsStatic();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -321,6 +453,15 @@ public class MethodImpl extends MinimalEObjectImpl.Container implements Method {
 			case KragsteinPackage.METHOD__VISIBILITY:
 				setVisibility((String)newValue);
 				return;
+			case KragsteinPackage.METHOD__IS_CONST:
+				setIsConst((Boolean)newValue);
+				return;
+			case KragsteinPackage.METHOD__IS_VIRTUAL:
+				setIsVirtual((Boolean)newValue);
+				return;
+			case KragsteinPackage.METHOD__IS_STATIC:
+				setIsStatic((Boolean)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -348,6 +489,15 @@ public class MethodImpl extends MinimalEObjectImpl.Container implements Method {
 			case KragsteinPackage.METHOD__VISIBILITY:
 				setVisibility(VISIBILITY_EDEFAULT);
 				return;
+			case KragsteinPackage.METHOD__IS_CONST:
+				setIsConst(IS_CONST_EDEFAULT);
+				return;
+			case KragsteinPackage.METHOD__IS_VIRTUAL:
+				setIsVirtual(IS_VIRTUAL_EDEFAULT);
+				return;
+			case KragsteinPackage.METHOD__IS_STATIC:
+				setIsStatic(IS_STATIC_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -370,6 +520,12 @@ public class MethodImpl extends MinimalEObjectImpl.Container implements Method {
 				return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
 			case KragsteinPackage.METHOD__VISIBILITY:
 				return VISIBILITY_EDEFAULT == null ? visibility != null : !VISIBILITY_EDEFAULT.equals(visibility);
+			case KragsteinPackage.METHOD__IS_CONST:
+				return isConst != IS_CONST_EDEFAULT;
+			case KragsteinPackage.METHOD__IS_VIRTUAL:
+				return isVirtual != IS_VIRTUAL_EDEFAULT;
+			case KragsteinPackage.METHOD__IS_STATIC:
+				return isStatic != IS_STATIC_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -390,6 +546,12 @@ public class MethodImpl extends MinimalEObjectImpl.Container implements Method {
 		result.append(type);
 		result.append(", visibility: ");
 		result.append(visibility);
+		result.append(", isConst: ");
+		result.append(isConst);
+		result.append(", isVirtual: ");
+		result.append(isVirtual);
+		result.append(", isStatic: ");
+		result.append(isStatic);
 		result.append(')');
 		return result.toString();
 	}

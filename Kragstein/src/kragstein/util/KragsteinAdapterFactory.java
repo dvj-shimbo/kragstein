@@ -14,6 +14,7 @@ import kragstein.Case;
 import kragstein.Choice;
 import kragstein.ClassMultipleRelationships;
 import kragstein.Comment;
+import kragstein.CommentLink;
 import kragstein.Composition;
 import kragstein.Connection;
 import kragstein.Dependency;
@@ -46,6 +47,7 @@ import kragstein.Shelf;
 import kragstein.UMLDiagramm;
 import kragstein.Unit;
 import kragstein.ValencePoint;
+import kragstein.importedPackage;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
@@ -115,6 +117,10 @@ public class KragsteinAdapterFactory extends AdapterFactoryImpl {
 				return createUMLDiagrammAdapter();
 			}
 			@Override
+			public Adapter caseimportedPackage(importedPackage object) {
+				return createimportedPackageAdapter();
+			}
+			@Override
 			public Adapter caseRelationship(Relationship object) {
 				return createRelationshipAdapter();
 			}
@@ -145,6 +151,14 @@ public class KragsteinAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseDependency(Dependency object) {
 				return createDependencyAdapter();
+			}
+			@Override
+			public Adapter caseComment(Comment object) {
+				return createCommentAdapter();
+			}
+			@Override
+			public Adapter caseCommentLink(CommentLink object) {
+				return createCommentLinkAdapter();
 			}
 			@Override
 			public Adapter caseUnit(Unit object) {
@@ -263,10 +277,6 @@ public class KragsteinAdapterFactory extends AdapterFactoryImpl {
 				return createInputAdapter();
 			}
 			@Override
-			public Adapter caseComment(Comment object) {
-				return createCommentAdapter();
-			}
-			@Override
 			public Adapter caseLoopArrow(LoopArrow object) {
 				return createLoopArrowAdapter();
 			}
@@ -317,6 +327,20 @@ public class KragsteinAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createUMLDiagrammAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link kragstein.importedPackage <em>imported Package</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see kragstein.importedPackage
+	 * @generated
+	 */
+	public Adapter createimportedPackageAdapter() {
 		return null;
 	}
 
@@ -429,6 +453,34 @@ public class KragsteinAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createDependencyAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link kragstein.Comment <em>Comment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see kragstein.Comment
+	 * @generated
+	 */
+	public Adapter createCommentAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link kragstein.CommentLink <em>Comment Link</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see kragstein.CommentLink
+	 * @generated
+	 */
+	public Adapter createCommentLinkAdapter() {
 		return null;
 	}
 
@@ -835,20 +887,6 @@ public class KragsteinAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createInputAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link kragstein.Comment <em>Comment</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see kragstein.Comment
-	 * @generated
-	 */
-	public Adapter createCommentAdapter() {
 		return null;
 	}
 

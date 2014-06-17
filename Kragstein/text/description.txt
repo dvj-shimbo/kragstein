@@ -11,10 +11,6 @@ Package kragstein <http:///kragstein.ecore>
     Attribute lang : EString
     Attribute packageName : EString
     Reference classes : Class<<0..*>>
-    Reference importedPackages : importedPackage<<0..*>>
-
-  Class importedPackage
-    Attribute packageName : EString
 
   Class Relationship
     Reference target : Class
@@ -38,22 +34,22 @@ Package kragstein <http:///kragstein.ecore>
   Class Comment
     Attribute value : EString
 
-  Class CommentLink
-    Reference sourceCommentLink : Comment<<0..*>>
-    Reference targetCommentLink : Comment<<0..*>>
-    Reference source : Comment
-    Reference target : Comment
-
   Class Class
     Reference attributes : Attribute<<0..*>>
     Reference methods : Method<<0..*>>
     Reference comments : Comment
-    Reference targetRelationships : Relationship<<0..*>>
-    Reference sourceRelationships : Relationship<<0..*>>
+    Reference targetRelationship : Relationship<<0..*>>
+    Reference sourceRelationship : Relationship<<0..*>>
     Attribute name : EString
     Attribute visibility : EString
     Attribute isSingletone : EBoolean
     Attribute isInterface : EBoolean
+    Reference importedPackages : ImportedPackage<<0..*>>
+
+  Class ImportedPackage
+    Attribute packageName : EString
+    Attribute isInternal : EBoolean
+    Attribute path : EString
 
   Class Attribute
     Attribute name : EString

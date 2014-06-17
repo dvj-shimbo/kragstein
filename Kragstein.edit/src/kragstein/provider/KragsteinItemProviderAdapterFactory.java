@@ -95,29 +95,6 @@ public class KragsteinItemProviderAdapterFactory extends KragsteinAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link kragstein.importedPackage} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected importedPackageItemProvider importedPackageItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link kragstein.importedPackage}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createimportedPackageAdapter() {
-		if (importedPackageItemProvider == null) {
-			importedPackageItemProvider = new importedPackageItemProvider(this);
-		}
-
-		return importedPackageItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link kragstein.Generalization} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -279,29 +256,6 @@ public class KragsteinItemProviderAdapterFactory extends KragsteinAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link kragstein.CommentLink} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected CommentLinkItemProvider commentLinkItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link kragstein.CommentLink}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createCommentLinkAdapter() {
-		if (commentLinkItemProvider == null) {
-			commentLinkItemProvider = new CommentLinkItemProvider(this);
-		}
-
-		return commentLinkItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link kragstein.Class} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -322,6 +276,29 @@ public class KragsteinItemProviderAdapterFactory extends KragsteinAdapterFactory
 		}
 
 		return classItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link kragstein.ImportedPackage} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ImportedPackageItemProvider importedPackageItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link kragstein.ImportedPackage}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createImportedPackageAdapter() {
+		if (importedPackageItemProvider == null) {
+			importedPackageItemProvider = new ImportedPackageItemProvider(this);
+		}
+
+		return importedPackageItemProvider;
 	}
 
 	/**
@@ -1091,7 +1068,6 @@ public class KragsteinItemProviderAdapterFactory extends KragsteinAdapterFactory
 	 */
 	public void dispose() {
 		if (umlDiagrammItemProvider != null) umlDiagrammItemProvider.dispose();
-		if (importedPackageItemProvider != null) importedPackageItemProvider.dispose();
 		if (generalizationItemProvider != null) generalizationItemProvider.dispose();
 		if (realizationItemProvider != null) realizationItemProvider.dispose();
 		if (associationItemProvider != null) associationItemProvider.dispose();
@@ -1099,8 +1075,8 @@ public class KragsteinItemProviderAdapterFactory extends KragsteinAdapterFactory
 		if (compositionItemProvider != null) compositionItemProvider.dispose();
 		if (dependencyItemProvider != null) dependencyItemProvider.dispose();
 		if (commentItemProvider != null) commentItemProvider.dispose();
-		if (commentLinkItemProvider != null) commentLinkItemProvider.dispose();
 		if (classItemProvider != null) classItemProvider.dispose();
+		if (importedPackageItemProvider != null) importedPackageItemProvider.dispose();
 		if (attributeItemProvider != null) attributeItemProvider.dispose();
 		if (methodItemProvider != null) methodItemProvider.dispose();
 		if (parameterItemProvider != null) parameterItemProvider.dispose();

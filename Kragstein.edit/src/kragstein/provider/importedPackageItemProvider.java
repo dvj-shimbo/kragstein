@@ -6,8 +6,8 @@ package kragstein.provider;
 import java.util.Collection;
 import java.util.List;
 
+import kragstein.ImportedPackage;
 import kragstein.KragsteinPackage;
-import kragstein.importedPackage;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
@@ -26,12 +26,12 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link kragstein.importedPackage} object.
+ * This is the item provider adapter for a {@link kragstein.ImportedPackage} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class importedPackageItemProvider 
+public class ImportedPackageItemProvider 
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -45,7 +45,7 @@ public class importedPackageItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public importedPackageItemProvider(AdapterFactory adapterFactory) {
+	public ImportedPackageItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -61,6 +61,8 @@ public class importedPackageItemProvider
 			super.getPropertyDescriptors(object);
 
 			addPackageNamePropertyDescriptor(object);
+			addIsInternalPropertyDescriptor(object);
+			addPathPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -76,8 +78,8 @@ public class importedPackageItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_importedPackage_packageName_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_importedPackage_packageName_feature", "_UI_importedPackage_type"),
+				 getString("_UI_ImportedPackage_packageName_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ImportedPackage_packageName_feature", "_UI_ImportedPackage_type"),
 				 KragsteinPackage.Literals.IMPORTED_PACKAGE__PACKAGE_NAME,
 				 true,
 				 false,
@@ -88,14 +90,58 @@ public class importedPackageItemProvider
 	}
 
 	/**
-	 * This returns importedPackage.gif.
+	 * This adds a property descriptor for the Is Internal feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIsInternalPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ImportedPackage_isInternal_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ImportedPackage_isInternal_feature", "_UI_ImportedPackage_type"),
+				 KragsteinPackage.Literals.IMPORTED_PACKAGE__IS_INTERNAL,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Path feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addPathPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ImportedPackage_path_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ImportedPackage_path_feature", "_UI_ImportedPackage_type"),
+				 KragsteinPackage.Literals.IMPORTED_PACKAGE__PATH,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This returns ImportedPackage.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/importedPackage"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ImportedPackage"));
 	}
 
 	/**
@@ -106,10 +152,10 @@ public class importedPackageItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((importedPackage)object).getPackageName();
+		String label = ((ImportedPackage)object).getPackageName();
 		return label == null || label.length() == 0 ?
-			getString("_UI_importedPackage_type") :
-			getString("_UI_importedPackage_type") + " " + label;
+			getString("_UI_ImportedPackage_type") :
+			getString("_UI_ImportedPackage_type") + " " + label;
 	}
 	
 
@@ -124,8 +170,10 @@ public class importedPackageItemProvider
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(importedPackage.class)) {
+		switch (notification.getFeatureID(ImportedPackage.class)) {
 			case KragsteinPackage.IMPORTED_PACKAGE__PACKAGE_NAME:
+			case KragsteinPackage.IMPORTED_PACKAGE__IS_INTERNAL:
+			case KragsteinPackage.IMPORTED_PACKAGE__PATH:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

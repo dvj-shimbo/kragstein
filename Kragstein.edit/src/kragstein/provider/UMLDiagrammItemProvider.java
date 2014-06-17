@@ -126,7 +126,6 @@ public class UMLDiagrammItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(KragsteinPackage.Literals.UML_DIAGRAMM__CLASSES);
-			childrenFeatures.add(KragsteinPackage.Literals.UML_DIAGRAMM__IMPORTED_PACKAGES);
 		}
 		return childrenFeatures;
 	}
@@ -187,7 +186,6 @@ public class UMLDiagrammItemProvider
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case KragsteinPackage.UML_DIAGRAMM__CLASSES:
-			case KragsteinPackage.UML_DIAGRAMM__IMPORTED_PACKAGES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -209,11 +207,6 @@ public class UMLDiagrammItemProvider
 			(createChildParameter
 				(KragsteinPackage.Literals.UML_DIAGRAMM__CLASSES,
 				 KragsteinFactory.eINSTANCE.createClass()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(KragsteinPackage.Literals.UML_DIAGRAMM__IMPORTED_PACKAGES,
-				 KragsteinFactory.eINSTANCE.createimportedPackage()));
 	}
 
 	/**

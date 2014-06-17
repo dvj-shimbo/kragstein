@@ -94,22 +94,13 @@ public interface KragsteinPackage extends EPackage {
 	int UML_DIAGRAMM__CLASSES = 2;
 
 	/**
-	 * The feature id for the '<em><b>Imported Packages</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UML_DIAGRAMM__IMPORTED_PACKAGES = 3;
-
-	/**
 	 * The number of structural features of the '<em>UML Diagramm</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UML_DIAGRAMM_FEATURE_COUNT = 4;
+	int UML_DIAGRAMM_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>UML Diagramm</em>' class.
@@ -121,43 +112,6 @@ public interface KragsteinPackage extends EPackage {
 	int UML_DIAGRAMM_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link kragstein.impl.importedPackageImpl <em>imported Package</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see kragstein.impl.importedPackageImpl
-	 * @see kragstein.impl.KragsteinPackageImpl#getimportedPackage()
-	 * @generated
-	 */
-	int IMPORTED_PACKAGE = 1;
-
-	/**
-	 * The feature id for the '<em><b>Package Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMPORTED_PACKAGE__PACKAGE_NAME = 0;
-
-	/**
-	 * The number of structural features of the '<em>imported Package</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMPORTED_PACKAGE_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>imported Package</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMPORTED_PACKAGE_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link kragstein.Relationship <em>Relationship</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -165,7 +119,7 @@ public interface KragsteinPackage extends EPackage {
 	 * @see kragstein.impl.KragsteinPackageImpl#getRelationship()
 	 * @generated
 	 */
-	int RELATIONSHIP = 2;
+	int RELATIONSHIP = 1;
 
 	/**
 	 * The feature id for the '<em><b>Target</b></em>' reference.
@@ -238,7 +192,7 @@ public interface KragsteinPackage extends EPackage {
 	 * @see kragstein.impl.KragsteinPackageImpl#getGeneralization()
 	 * @generated
 	 */
-	int GENERALIZATION = 3;
+	int GENERALIZATION = 2;
 
 	/**
 	 * The feature id for the '<em><b>Target</b></em>' reference.
@@ -311,7 +265,7 @@ public interface KragsteinPackage extends EPackage {
 	 * @see kragstein.impl.KragsteinPackageImpl#getRealization()
 	 * @generated
 	 */
-	int REALIZATION = 4;
+	int REALIZATION = 3;
 
 	/**
 	 * The feature id for the '<em><b>Target</b></em>' reference.
@@ -384,7 +338,7 @@ public interface KragsteinPackage extends EPackage {
 	 * @see kragstein.impl.KragsteinPackageImpl#getAssociation()
 	 * @generated
 	 */
-	int ASSOCIATION = 5;
+	int ASSOCIATION = 4;
 
 	/**
 	 * The feature id for the '<em><b>Target</b></em>' reference.
@@ -457,7 +411,7 @@ public interface KragsteinPackage extends EPackage {
 	 * @see kragstein.impl.KragsteinPackageImpl#getAggregation()
 	 * @generated
 	 */
-	int AGGREGATION = 6;
+	int AGGREGATION = 5;
 
 	/**
 	 * The feature id for the '<em><b>Target</b></em>' reference.
@@ -530,7 +484,7 @@ public interface KragsteinPackage extends EPackage {
 	 * @see kragstein.impl.KragsteinPackageImpl#getComposition()
 	 * @generated
 	 */
-	int COMPOSITION = 7;
+	int COMPOSITION = 6;
 
 	/**
 	 * The feature id for the '<em><b>Target</b></em>' reference.
@@ -603,7 +557,7 @@ public interface KragsteinPackage extends EPackage {
 	 * @see kragstein.impl.KragsteinPackageImpl#getDependency()
 	 * @generated
 	 */
-	int DEPENDENCY = 8;
+	int DEPENDENCY = 7;
 
 	/**
 	 * The feature id for the '<em><b>Target</b></em>' reference.
@@ -676,7 +630,7 @@ public interface KragsteinPackage extends EPackage {
 	 * @see kragstein.impl.KragsteinPackageImpl#getComment()
 	 * @generated
 	 */
-	int COMMENT = 9;
+	int COMMENT = 8;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -706,70 +660,6 @@ public interface KragsteinPackage extends EPackage {
 	int COMMENT_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link kragstein.impl.CommentLinkImpl <em>Comment Link</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see kragstein.impl.CommentLinkImpl
-	 * @see kragstein.impl.KragsteinPackageImpl#getCommentLink()
-	 * @generated
-	 */
-	int COMMENT_LINK = 10;
-
-	/**
-	 * The feature id for the '<em><b>Source Comment Link</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMMENT_LINK__SOURCE_COMMENT_LINK = 0;
-
-	/**
-	 * The feature id for the '<em><b>Target Comment Link</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMMENT_LINK__TARGET_COMMENT_LINK = 1;
-
-	/**
-	 * The feature id for the '<em><b>Source</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMMENT_LINK__SOURCE = 2;
-
-	/**
-	 * The feature id for the '<em><b>Target</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMMENT_LINK__TARGET = 3;
-
-	/**
-	 * The number of structural features of the '<em>Comment Link</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMMENT_LINK_FEATURE_COUNT = 4;
-
-	/**
-	 * The number of operations of the '<em>Comment Link</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMMENT_LINK_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link kragstein.impl.ClassImpl <em>Class</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -777,7 +667,7 @@ public interface KragsteinPackage extends EPackage {
 	 * @see kragstein.impl.KragsteinPackageImpl#getClass_()
 	 * @generated
 	 */
-	int CLASS = 11;
+	int CLASS = 9;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -807,22 +697,22 @@ public interface KragsteinPackage extends EPackage {
 	int CLASS__COMMENTS = 2;
 
 	/**
-	 * The feature id for the '<em><b>Target Relationships</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Target Relationship</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS__TARGET_RELATIONSHIPS = 3;
+	int CLASS__TARGET_RELATIONSHIP = 3;
 
 	/**
-	 * The feature id for the '<em><b>Source Relationships</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Source Relationship</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS__SOURCE_RELATIONSHIPS = 4;
+	int CLASS__SOURCE_RELATIONSHIP = 4;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -861,13 +751,22 @@ public interface KragsteinPackage extends EPackage {
 	int CLASS__IS_INTERFACE = 8;
 
 	/**
+	 * The feature id for the '<em><b>Imported Packages</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASS__IMPORTED_PACKAGES = 9;
+
+	/**
 	 * The number of structural features of the '<em>Class</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS_FEATURE_COUNT = 9;
+	int CLASS_FEATURE_COUNT = 10;
 
 	/**
 	 * The number of operations of the '<em>Class</em>' class.
@@ -879,6 +778,61 @@ public interface KragsteinPackage extends EPackage {
 	int CLASS_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link kragstein.impl.ImportedPackageImpl <em>Imported Package</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see kragstein.impl.ImportedPackageImpl
+	 * @see kragstein.impl.KragsteinPackageImpl#getImportedPackage()
+	 * @generated
+	 */
+	int IMPORTED_PACKAGE = 10;
+
+	/**
+	 * The feature id for the '<em><b>Package Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPORTED_PACKAGE__PACKAGE_NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Is Internal</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPORTED_PACKAGE__IS_INTERNAL = 1;
+
+	/**
+	 * The feature id for the '<em><b>Path</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPORTED_PACKAGE__PATH = 2;
+
+	/**
+	 * The number of structural features of the '<em>Imported Package</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPORTED_PACKAGE_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>Imported Package</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPORTED_PACKAGE_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link kragstein.impl.AttributeImpl <em>Attribute</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -886,7 +840,7 @@ public interface KragsteinPackage extends EPackage {
 	 * @see kragstein.impl.KragsteinPackageImpl#getAttribute()
 	 * @generated
 	 */
-	int ATTRIBUTE = 12;
+	int ATTRIBUTE = 11;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -968,7 +922,7 @@ public interface KragsteinPackage extends EPackage {
 	 * @see kragstein.impl.KragsteinPackageImpl#getMethod()
 	 * @generated
 	 */
-	int METHOD = 13;
+	int METHOD = 12;
 
 	/**
 	 * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
@@ -1068,7 +1022,7 @@ public interface KragsteinPackage extends EPackage {
 	 * @see kragstein.impl.KragsteinPackageImpl#getParameter()
 	 * @generated
 	 */
-	int PARAMETER = 14;
+	int PARAMETER = 13;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1123,7 +1077,7 @@ public interface KragsteinPackage extends EPackage {
 	 * @see kragstein.impl.KragsteinPackageImpl#getDrakonDiagramm()
 	 * @generated
 	 */
-	int DRAKON_DIAGRAMM = 15;
+	int DRAKON_DIAGRAMM = 14;
 
 	/**
 	 * The feature id for the '<em><b>Header</b></em>' containment reference.
@@ -1178,7 +1132,7 @@ public interface KragsteinPackage extends EPackage {
 	 * @see kragstein.impl.KragsteinPackageImpl#getHeader()
 	 * @generated
 	 */
-	int HEADER = 16;
+	int HEADER = 15;
 
 	/**
 	 * The feature id for the '<em><b>Formal Parameters</b></em>' containment reference.
@@ -1224,7 +1178,7 @@ public interface KragsteinPackage extends EPackage {
 	 * @see kragstein.impl.KragsteinPackageImpl#getFormalParameters()
 	 * @generated
 	 */
-	int FORMAL_PARAMETERS = 17;
+	int FORMAL_PARAMETERS = 16;
 
 	/**
 	 * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
@@ -1261,7 +1215,7 @@ public interface KragsteinPackage extends EPackage {
 	 * @see kragstein.impl.KragsteinPackageImpl#getBranch()
 	 * @generated
 	 */
-	int BRANCH = 18;
+	int BRANCH = 17;
 
 	/**
 	 * The feature id for the '<em><b>Source Branch Connection</b></em>' containment reference.
@@ -1325,7 +1279,7 @@ public interface KragsteinPackage extends EPackage {
 	 * @see kragstein.impl.KragsteinPackageImpl#getBranchConnection()
 	 * @generated
 	 */
-	int BRANCH_CONNECTION = 19;
+	int BRANCH_CONNECTION = 18;
 
 	/**
 	 * The feature id for the '<em><b>Source</b></em>' reference.
@@ -1371,7 +1325,7 @@ public interface KragsteinPackage extends EPackage {
 	 * @see kragstein.impl.KragsteinPackageImpl#getRoute()
 	 * @generated
 	 */
-	int ROUTE = 20;
+	int ROUTE = 19;
 
 	/**
 	 * The feature id for the '<em><b>Icons</b></em>' containment reference list.
@@ -1408,7 +1362,7 @@ public interface KragsteinPackage extends EPackage {
 	 * @see kragstein.impl.KragsteinPackageImpl#getRightComment()
 	 * @generated
 	 */
-	int RIGHT_COMMENT = 21;
+	int RIGHT_COMMENT = 20;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1445,7 +1399,7 @@ public interface KragsteinPackage extends EPackage {
 	 * @see kragstein.impl.KragsteinPackageImpl#getLeftComment()
 	 * @generated
 	 */
-	int LEFT_COMMENT = 22;
+	int LEFT_COMMENT = 21;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1482,7 +1436,7 @@ public interface KragsteinPackage extends EPackage {
 	 * @see kragstein.impl.KragsteinPackageImpl#getValencePoint()
 	 * @generated
 	 */
-	int VALENCE_POINT = 23;
+	int VALENCE_POINT = 22;
 
 	/**
 	 * The number of structural features of the '<em>Valence Point</em>' class.
@@ -1510,7 +1464,7 @@ public interface KragsteinPackage extends EPackage {
 	 * @see kragstein.impl.KragsteinPackageImpl#getIconConnection()
 	 * @generated
 	 */
-	int ICON_CONNECTION = 24;
+	int ICON_CONNECTION = 23;
 
 	/**
 	 * The feature id for the '<em><b>Target</b></em>' reference.
@@ -1556,7 +1510,7 @@ public interface KragsteinPackage extends EPackage {
 	 * @see kragstein.impl.KragsteinPackageImpl#getIcon()
 	 * @generated
 	 */
-	int ICON = 25;
+	int ICON = 24;
 
 	/**
 	 * The feature id for the '<em><b>Source Icon Connection</b></em>' containment reference.
@@ -1629,7 +1583,7 @@ public interface KragsteinPackage extends EPackage {
 	 * @see kragstein.impl.KragsteinPackageImpl#getAction()
 	 * @generated
 	 */
-	int ACTION = 26;
+	int ACTION = 25;
 
 	/**
 	 * The feature id for the '<em><b>Source Icon Connection</b></em>' containment reference.
@@ -1720,7 +1674,7 @@ public interface KragsteinPackage extends EPackage {
 	 * @see kragstein.impl.KragsteinPackageImpl#getQuestion()
 	 * @generated
 	 */
-	int QUESTION = 27;
+	int QUESTION = 26;
 
 	/**
 	 * The feature id for the '<em><b>Source Icon Connection</b></em>' containment reference.
@@ -1829,7 +1783,7 @@ public interface KragsteinPackage extends EPackage {
 	 * @see kragstein.impl.KragsteinPackageImpl#getChoice()
 	 * @generated
 	 */
-	int CHOICE = 28;
+	int CHOICE = 27;
 
 	/**
 	 * The feature id for the '<em><b>Source Icon Connection</b></em>' containment reference.
@@ -1929,7 +1883,7 @@ public interface KragsteinPackage extends EPackage {
 	 * @see kragstein.impl.KragsteinPackageImpl#getCase()
 	 * @generated
 	 */
-	int CASE = 29;
+	int CASE = 28;
 
 	/**
 	 * The feature id for the '<em><b>Source Icon Connection</b></em>' containment reference.
@@ -2047,7 +2001,7 @@ public interface KragsteinPackage extends EPackage {
 	 * @see kragstein.impl.KragsteinPackageImpl#getCaseConnection()
 	 * @generated
 	 */
-	int CASE_CONNECTION = 30;
+	int CASE_CONNECTION = 29;
 
 	/**
 	 * The feature id for the '<em><b>Source</b></em>' reference.
@@ -2093,7 +2047,7 @@ public interface KragsteinPackage extends EPackage {
 	 * @see kragstein.impl.KragsteinPackageImpl#getHeadline()
 	 * @generated
 	 */
-	int HEADLINE = 31;
+	int HEADLINE = 30;
 
 	/**
 	 * The feature id for the '<em><b>Source Icon Connection</b></em>' containment reference.
@@ -2184,7 +2138,7 @@ public interface KragsteinPackage extends EPackage {
 	 * @see kragstein.impl.KragsteinPackageImpl#getAdress()
 	 * @generated
 	 */
-	int ADRESS = 32;
+	int ADRESS = 31;
 
 	/**
 	 * The feature id for the '<em><b>Source Icon Connection</b></em>' containment reference.
@@ -2275,7 +2229,7 @@ public interface KragsteinPackage extends EPackage {
 	 * @see kragstein.impl.KragsteinPackageImpl#getInsertion()
 	 * @generated
 	 */
-	int INSERTION = 33;
+	int INSERTION = 32;
 
 	/**
 	 * The feature id for the '<em><b>Source Icon Connection</b></em>' containment reference.
@@ -2375,7 +2329,7 @@ public interface KragsteinPackage extends EPackage {
 	 * @see kragstein.impl.KragsteinPackageImpl#getShelf()
 	 * @generated
 	 */
-	int SHELF = 34;
+	int SHELF = 33;
 
 	/**
 	 * The feature id for the '<em><b>Source Icon Connection</b></em>' containment reference.
@@ -2475,7 +2429,7 @@ public interface KragsteinPackage extends EPackage {
 	 * @see kragstein.impl.KragsteinPackageImpl#getBeginLoop()
 	 * @generated
 	 */
-	int BEGIN_LOOP = 35;
+	int BEGIN_LOOP = 34;
 
 	/**
 	 * The feature id for the '<em><b>Source Icon Connection</b></em>' containment reference.
@@ -2566,7 +2520,7 @@ public interface KragsteinPackage extends EPackage {
 	 * @see kragstein.impl.KragsteinPackageImpl#getEndLoop()
 	 * @generated
 	 */
-	int END_LOOP = 36;
+	int END_LOOP = 35;
 
 	/**
 	 * The feature id for the '<em><b>Source Icon Connection</b></em>' containment reference.
@@ -2657,7 +2611,7 @@ public interface KragsteinPackage extends EPackage {
 	 * @see kragstein.impl.KragsteinPackageImpl#getOutput()
 	 * @generated
 	 */
-	int OUTPUT = 37;
+	int OUTPUT = 36;
 
 	/**
 	 * The feature id for the '<em><b>Source Icon Connection</b></em>' containment reference.
@@ -2757,7 +2711,7 @@ public interface KragsteinPackage extends EPackage {
 	 * @see kragstein.impl.KragsteinPackageImpl#getInput()
 	 * @generated
 	 */
-	int INPUT = 38;
+	int INPUT = 37;
 
 	/**
 	 * The feature id for the '<em><b>Source Icon Connection</b></em>' containment reference.
@@ -2857,7 +2811,7 @@ public interface KragsteinPackage extends EPackage {
 	 * @see kragstein.impl.KragsteinPackageImpl#getLoopArrow()
 	 * @generated
 	 */
-	int LOOP_ARROW = 39;
+	int LOOP_ARROW = 38;
 
 	/**
 	 * The feature id for the '<em><b>Source Icon Connection</b></em>' containment reference.
@@ -2939,7 +2893,7 @@ public interface KragsteinPackage extends EPackage {
 	 * @see kragstein.impl.KragsteinPackageImpl#getEmptyConnector()
 	 * @generated
 	 */
-	int EMPTY_CONNECTOR = 40;
+	int EMPTY_CONNECTOR = 39;
 
 	/**
 	 * The feature id for the '<em><b>Source Icon Connection</b></em>' containment reference.
@@ -3021,7 +2975,7 @@ public interface KragsteinPackage extends EPackage {
 	 * @see kragstein.impl.KragsteinPackageImpl#getEnd()
 	 * @generated
 	 */
-	int END = 41;
+	int END = 40;
 
 	/**
 	 * The feature id for the '<em><b>Source Icon Connection</b></em>' containment reference.
@@ -3129,38 +3083,6 @@ public interface KragsteinPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getUMLDiagramm_Classes();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link kragstein.UMLDiagramm#getImportedPackages <em>Imported Packages</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Imported Packages</em>'.
-	 * @see kragstein.UMLDiagramm#getImportedPackages()
-	 * @see #getUMLDiagramm()
-	 * @generated
-	 */
-	EReference getUMLDiagramm_ImportedPackages();
-
-	/**
-	 * Returns the meta object for class '{@link kragstein.importedPackage <em>imported Package</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>imported Package</em>'.
-	 * @see kragstein.importedPackage
-	 * @generated
-	 */
-	EClass getimportedPackage();
-
-	/**
-	 * Returns the meta object for the attribute '{@link kragstein.importedPackage#getPackageName <em>Package Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Package Name</em>'.
-	 * @see kragstein.importedPackage#getPackageName()
-	 * @see #getimportedPackage()
-	 * @generated
-	 */
-	EAttribute getimportedPackage_PackageName();
 
 	/**
 	 * Returns the meta object for class '{@link kragstein.Relationship <em>Relationship</em>}'.
@@ -3309,60 +3231,6 @@ public interface KragsteinPackage extends EPackage {
 	EAttribute getComment_Value();
 
 	/**
-	 * Returns the meta object for class '{@link kragstein.CommentLink <em>Comment Link</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Comment Link</em>'.
-	 * @see kragstein.CommentLink
-	 * @generated
-	 */
-	EClass getCommentLink();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link kragstein.CommentLink#getSourceCommentLink <em>Source Comment Link</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Source Comment Link</em>'.
-	 * @see kragstein.CommentLink#getSourceCommentLink()
-	 * @see #getCommentLink()
-	 * @generated
-	 */
-	EReference getCommentLink_SourceCommentLink();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link kragstein.CommentLink#getTargetCommentLink <em>Target Comment Link</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Target Comment Link</em>'.
-	 * @see kragstein.CommentLink#getTargetCommentLink()
-	 * @see #getCommentLink()
-	 * @generated
-	 */
-	EReference getCommentLink_TargetCommentLink();
-
-	/**
-	 * Returns the meta object for the reference '{@link kragstein.CommentLink#getSource <em>Source</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Source</em>'.
-	 * @see kragstein.CommentLink#getSource()
-	 * @see #getCommentLink()
-	 * @generated
-	 */
-	EReference getCommentLink_Source();
-
-	/**
-	 * Returns the meta object for the reference '{@link kragstein.CommentLink#getTarget <em>Target</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Target</em>'.
-	 * @see kragstein.CommentLink#getTarget()
-	 * @see #getCommentLink()
-	 * @generated
-	 */
-	EReference getCommentLink_Target();
-
-	/**
 	 * Returns the meta object for class '{@link kragstein.Class <em>Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3406,26 +3274,26 @@ public interface KragsteinPackage extends EPackage {
 	EReference getClass_Comments();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link kragstein.Class#getTargetRelationships <em>Target Relationships</em>}'.
+	 * Returns the meta object for the containment reference list '{@link kragstein.Class#getTargetRelationship <em>Target Relationship</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Target Relationships</em>'.
-	 * @see kragstein.Class#getTargetRelationships()
+	 * @return the meta object for the containment reference list '<em>Target Relationship</em>'.
+	 * @see kragstein.Class#getTargetRelationship()
 	 * @see #getClass_()
 	 * @generated
 	 */
-	EReference getClass_TargetRelationships();
+	EReference getClass_TargetRelationship();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link kragstein.Class#getSourceRelationships <em>Source Relationships</em>}'.
+	 * Returns the meta object for the containment reference list '{@link kragstein.Class#getSourceRelationship <em>Source Relationship</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Source Relationships</em>'.
-	 * @see kragstein.Class#getSourceRelationships()
+	 * @return the meta object for the containment reference list '<em>Source Relationship</em>'.
+	 * @see kragstein.Class#getSourceRelationship()
 	 * @see #getClass_()
 	 * @generated
 	 */
-	EReference getClass_SourceRelationships();
+	EReference getClass_SourceRelationship();
 
 	/**
 	 * Returns the meta object for the attribute '{@link kragstein.Class#getName <em>Name</em>}'.
@@ -3470,6 +3338,60 @@ public interface KragsteinPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getClass_IsInterface();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link kragstein.Class#getImportedPackages <em>Imported Packages</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Imported Packages</em>'.
+	 * @see kragstein.Class#getImportedPackages()
+	 * @see #getClass_()
+	 * @generated
+	 */
+	EReference getClass_ImportedPackages();
+
+	/**
+	 * Returns the meta object for class '{@link kragstein.ImportedPackage <em>Imported Package</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Imported Package</em>'.
+	 * @see kragstein.ImportedPackage
+	 * @generated
+	 */
+	EClass getImportedPackage();
+
+	/**
+	 * Returns the meta object for the attribute '{@link kragstein.ImportedPackage#getPackageName <em>Package Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Package Name</em>'.
+	 * @see kragstein.ImportedPackage#getPackageName()
+	 * @see #getImportedPackage()
+	 * @generated
+	 */
+	EAttribute getImportedPackage_PackageName();
+
+	/**
+	 * Returns the meta object for the attribute '{@link kragstein.ImportedPackage#isIsInternal <em>Is Internal</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Is Internal</em>'.
+	 * @see kragstein.ImportedPackage#isIsInternal()
+	 * @see #getImportedPackage()
+	 * @generated
+	 */
+	EAttribute getImportedPackage_IsInternal();
+
+	/**
+	 * Returns the meta object for the attribute '{@link kragstein.ImportedPackage#getPath <em>Path</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Path</em>'.
+	 * @see kragstein.ImportedPackage#getPath()
+	 * @see #getImportedPackage()
+	 * @generated
+	 */
+	EAttribute getImportedPackage_Path();
 
 	/**
 	 * Returns the meta object for class '{@link kragstein.Attribute <em>Attribute</em>}'.
@@ -4676,32 +4598,6 @@ public interface KragsteinPackage extends EPackage {
 		EReference UML_DIAGRAMM__CLASSES = eINSTANCE.getUMLDiagramm_Classes();
 
 		/**
-		 * The meta object literal for the '<em><b>Imported Packages</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference UML_DIAGRAMM__IMPORTED_PACKAGES = eINSTANCE.getUMLDiagramm_ImportedPackages();
-
-		/**
-		 * The meta object literal for the '{@link kragstein.impl.importedPackageImpl <em>imported Package</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see kragstein.impl.importedPackageImpl
-		 * @see kragstein.impl.KragsteinPackageImpl#getimportedPackage()
-		 * @generated
-		 */
-		EClass IMPORTED_PACKAGE = eINSTANCE.getimportedPackage();
-
-		/**
-		 * The meta object literal for the '<em><b>Package Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute IMPORTED_PACKAGE__PACKAGE_NAME = eINSTANCE.getimportedPackage_PackageName();
-
-		/**
 		 * The meta object literal for the '{@link kragstein.Relationship <em>Relationship</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4830,48 +4726,6 @@ public interface KragsteinPackage extends EPackage {
 		EAttribute COMMENT__VALUE = eINSTANCE.getComment_Value();
 
 		/**
-		 * The meta object literal for the '{@link kragstein.impl.CommentLinkImpl <em>Comment Link</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see kragstein.impl.CommentLinkImpl
-		 * @see kragstein.impl.KragsteinPackageImpl#getCommentLink()
-		 * @generated
-		 */
-		EClass COMMENT_LINK = eINSTANCE.getCommentLink();
-
-		/**
-		 * The meta object literal for the '<em><b>Source Comment Link</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference COMMENT_LINK__SOURCE_COMMENT_LINK = eINSTANCE.getCommentLink_SourceCommentLink();
-
-		/**
-		 * The meta object literal for the '<em><b>Target Comment Link</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference COMMENT_LINK__TARGET_COMMENT_LINK = eINSTANCE.getCommentLink_TargetCommentLink();
-
-		/**
-		 * The meta object literal for the '<em><b>Source</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference COMMENT_LINK__SOURCE = eINSTANCE.getCommentLink_Source();
-
-		/**
-		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference COMMENT_LINK__TARGET = eINSTANCE.getCommentLink_Target();
-
-		/**
 		 * The meta object literal for the '{@link kragstein.impl.ClassImpl <em>Class</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4906,20 +4760,20 @@ public interface KragsteinPackage extends EPackage {
 		EReference CLASS__COMMENTS = eINSTANCE.getClass_Comments();
 
 		/**
-		 * The meta object literal for the '<em><b>Target Relationships</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Target Relationship</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CLASS__TARGET_RELATIONSHIPS = eINSTANCE.getClass_TargetRelationships();
+		EReference CLASS__TARGET_RELATIONSHIP = eINSTANCE.getClass_TargetRelationship();
 
 		/**
-		 * The meta object literal for the '<em><b>Source Relationships</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Source Relationship</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CLASS__SOURCE_RELATIONSHIPS = eINSTANCE.getClass_SourceRelationships();
+		EReference CLASS__SOURCE_RELATIONSHIP = eINSTANCE.getClass_SourceRelationship();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -4952,6 +4806,48 @@ public interface KragsteinPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute CLASS__IS_INTERFACE = eINSTANCE.getClass_IsInterface();
+
+		/**
+		 * The meta object literal for the '<em><b>Imported Packages</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CLASS__IMPORTED_PACKAGES = eINSTANCE.getClass_ImportedPackages();
+
+		/**
+		 * The meta object literal for the '{@link kragstein.impl.ImportedPackageImpl <em>Imported Package</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see kragstein.impl.ImportedPackageImpl
+		 * @see kragstein.impl.KragsteinPackageImpl#getImportedPackage()
+		 * @generated
+		 */
+		EClass IMPORTED_PACKAGE = eINSTANCE.getImportedPackage();
+
+		/**
+		 * The meta object literal for the '<em><b>Package Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute IMPORTED_PACKAGE__PACKAGE_NAME = eINSTANCE.getImportedPackage_PackageName();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Internal</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute IMPORTED_PACKAGE__IS_INTERNAL = eINSTANCE.getImportedPackage_IsInternal();
+
+		/**
+		 * The meta object literal for the '<em><b>Path</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute IMPORTED_PACKAGE__PATH = eINSTANCE.getImportedPackage_Path();
 
 		/**
 		 * The meta object literal for the '{@link kragstein.impl.AttributeImpl <em>Attribute</em>}' class.

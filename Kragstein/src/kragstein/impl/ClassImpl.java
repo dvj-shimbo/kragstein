@@ -6,6 +6,7 @@ import java.util.Collection;
 
 import kragstein.Attribute;
 import kragstein.Comment;
+import kragstein.ImportedPackage;
 import kragstein.KragsteinPackage;
 import kragstein.Method;
 import kragstein.Relationship;
@@ -34,12 +35,13 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link kragstein.impl.ClassImpl#getAttributes <em>Attributes</em>}</li>
  *   <li>{@link kragstein.impl.ClassImpl#getMethods <em>Methods</em>}</li>
  *   <li>{@link kragstein.impl.ClassImpl#getComments <em>Comments</em>}</li>
- *   <li>{@link kragstein.impl.ClassImpl#getTargetRelationships <em>Target Relationships</em>}</li>
- *   <li>{@link kragstein.impl.ClassImpl#getSourceRelationships <em>Source Relationships</em>}</li>
+ *   <li>{@link kragstein.impl.ClassImpl#getTargetRelationship <em>Target Relationship</em>}</li>
+ *   <li>{@link kragstein.impl.ClassImpl#getSourceRelationship <em>Source Relationship</em>}</li>
  *   <li>{@link kragstein.impl.ClassImpl#getName <em>Name</em>}</li>
  *   <li>{@link kragstein.impl.ClassImpl#getVisibility <em>Visibility</em>}</li>
  *   <li>{@link kragstein.impl.ClassImpl#isIsSingletone <em>Is Singletone</em>}</li>
  *   <li>{@link kragstein.impl.ClassImpl#isIsInterface <em>Is Interface</em>}</li>
+ *   <li>{@link kragstein.impl.ClassImpl#getImportedPackages <em>Imported Packages</em>}</li>
  * </ul>
  * </p>
  *
@@ -77,24 +79,24 @@ public class ClassImpl extends MinimalEObjectImpl.Container implements kragstein
 	protected Comment comments;
 
 	/**
-	 * The cached value of the '{@link #getTargetRelationships() <em>Target Relationships</em>}' containment reference list.
+	 * The cached value of the '{@link #getTargetRelationship() <em>Target Relationship</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTargetRelationships()
+	 * @see #getTargetRelationship()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Relationship> targetRelationships;
+	protected EList<Relationship> targetRelationship;
 
 	/**
-	 * The cached value of the '{@link #getSourceRelationships() <em>Source Relationships</em>}' containment reference list.
+	 * The cached value of the '{@link #getSourceRelationship() <em>Source Relationship</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSourceRelationships()
+	 * @see #getSourceRelationship()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Relationship> sourceRelationships;
+	protected EList<Relationship> sourceRelationship;
 
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -175,6 +177,16 @@ public class ClassImpl extends MinimalEObjectImpl.Container implements kragstein
 	 * @ordered
 	 */
 	protected boolean isInterface = IS_INTERFACE_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getImportedPackages() <em>Imported Packages</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getImportedPackages()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<ImportedPackage> importedPackages;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -267,11 +279,11 @@ public class ClassImpl extends MinimalEObjectImpl.Container implements kragstein
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Relationship> getTargetRelationships() {
-		if (targetRelationships == null) {
-			targetRelationships = new EObjectContainmentEList<Relationship>(Relationship.class, this, KragsteinPackage.CLASS__TARGET_RELATIONSHIPS);
+	public EList<Relationship> getTargetRelationship() {
+		if (targetRelationship == null) {
+			targetRelationship = new EObjectContainmentEList<Relationship>(Relationship.class, this, KragsteinPackage.CLASS__TARGET_RELATIONSHIP);
 		}
-		return targetRelationships;
+		return targetRelationship;
 	}
 
 	/**
@@ -279,11 +291,11 @@ public class ClassImpl extends MinimalEObjectImpl.Container implements kragstein
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Relationship> getSourceRelationships() {
-		if (sourceRelationships == null) {
-			sourceRelationships = new EObjectContainmentEList<Relationship>(Relationship.class, this, KragsteinPackage.CLASS__SOURCE_RELATIONSHIPS);
+	public EList<Relationship> getSourceRelationship() {
+		if (sourceRelationship == null) {
+			sourceRelationship = new EObjectContainmentEList<Relationship>(Relationship.class, this, KragsteinPackage.CLASS__SOURCE_RELATIONSHIP);
 		}
-		return sourceRelationships;
+		return sourceRelationship;
 	}
 
 	/**
@@ -375,6 +387,18 @@ public class ClassImpl extends MinimalEObjectImpl.Container implements kragstein
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<ImportedPackage> getImportedPackages() {
+		if (importedPackages == null) {
+			importedPackages = new EObjectContainmentEList<ImportedPackage>(ImportedPackage.class, this, KragsteinPackage.CLASS__IMPORTED_PACKAGES);
+		}
+		return importedPackages;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -384,10 +408,12 @@ public class ClassImpl extends MinimalEObjectImpl.Container implements kragstein
 				return ((InternalEList<?>)getMethods()).basicRemove(otherEnd, msgs);
 			case KragsteinPackage.CLASS__COMMENTS:
 				return basicSetComments(null, msgs);
-			case KragsteinPackage.CLASS__TARGET_RELATIONSHIPS:
-				return ((InternalEList<?>)getTargetRelationships()).basicRemove(otherEnd, msgs);
-			case KragsteinPackage.CLASS__SOURCE_RELATIONSHIPS:
-				return ((InternalEList<?>)getSourceRelationships()).basicRemove(otherEnd, msgs);
+			case KragsteinPackage.CLASS__TARGET_RELATIONSHIP:
+				return ((InternalEList<?>)getTargetRelationship()).basicRemove(otherEnd, msgs);
+			case KragsteinPackage.CLASS__SOURCE_RELATIONSHIP:
+				return ((InternalEList<?>)getSourceRelationship()).basicRemove(otherEnd, msgs);
+			case KragsteinPackage.CLASS__IMPORTED_PACKAGES:
+				return ((InternalEList<?>)getImportedPackages()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -406,10 +432,10 @@ public class ClassImpl extends MinimalEObjectImpl.Container implements kragstein
 				return getMethods();
 			case KragsteinPackage.CLASS__COMMENTS:
 				return getComments();
-			case KragsteinPackage.CLASS__TARGET_RELATIONSHIPS:
-				return getTargetRelationships();
-			case KragsteinPackage.CLASS__SOURCE_RELATIONSHIPS:
-				return getSourceRelationships();
+			case KragsteinPackage.CLASS__TARGET_RELATIONSHIP:
+				return getTargetRelationship();
+			case KragsteinPackage.CLASS__SOURCE_RELATIONSHIP:
+				return getSourceRelationship();
 			case KragsteinPackage.CLASS__NAME:
 				return getName();
 			case KragsteinPackage.CLASS__VISIBILITY:
@@ -418,6 +444,8 @@ public class ClassImpl extends MinimalEObjectImpl.Container implements kragstein
 				return isIsSingletone();
 			case KragsteinPackage.CLASS__IS_INTERFACE:
 				return isIsInterface();
+			case KragsteinPackage.CLASS__IMPORTED_PACKAGES:
+				return getImportedPackages();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -442,13 +470,13 @@ public class ClassImpl extends MinimalEObjectImpl.Container implements kragstein
 			case KragsteinPackage.CLASS__COMMENTS:
 				setComments((Comment)newValue);
 				return;
-			case KragsteinPackage.CLASS__TARGET_RELATIONSHIPS:
-				getTargetRelationships().clear();
-				getTargetRelationships().addAll((Collection<? extends Relationship>)newValue);
+			case KragsteinPackage.CLASS__TARGET_RELATIONSHIP:
+				getTargetRelationship().clear();
+				getTargetRelationship().addAll((Collection<? extends Relationship>)newValue);
 				return;
-			case KragsteinPackage.CLASS__SOURCE_RELATIONSHIPS:
-				getSourceRelationships().clear();
-				getSourceRelationships().addAll((Collection<? extends Relationship>)newValue);
+			case KragsteinPackage.CLASS__SOURCE_RELATIONSHIP:
+				getSourceRelationship().clear();
+				getSourceRelationship().addAll((Collection<? extends Relationship>)newValue);
 				return;
 			case KragsteinPackage.CLASS__NAME:
 				setName((String)newValue);
@@ -461,6 +489,10 @@ public class ClassImpl extends MinimalEObjectImpl.Container implements kragstein
 				return;
 			case KragsteinPackage.CLASS__IS_INTERFACE:
 				setIsInterface((Boolean)newValue);
+				return;
+			case KragsteinPackage.CLASS__IMPORTED_PACKAGES:
+				getImportedPackages().clear();
+				getImportedPackages().addAll((Collection<? extends ImportedPackage>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -483,11 +515,11 @@ public class ClassImpl extends MinimalEObjectImpl.Container implements kragstein
 			case KragsteinPackage.CLASS__COMMENTS:
 				setComments((Comment)null);
 				return;
-			case KragsteinPackage.CLASS__TARGET_RELATIONSHIPS:
-				getTargetRelationships().clear();
+			case KragsteinPackage.CLASS__TARGET_RELATIONSHIP:
+				getTargetRelationship().clear();
 				return;
-			case KragsteinPackage.CLASS__SOURCE_RELATIONSHIPS:
-				getSourceRelationships().clear();
+			case KragsteinPackage.CLASS__SOURCE_RELATIONSHIP:
+				getSourceRelationship().clear();
 				return;
 			case KragsteinPackage.CLASS__NAME:
 				setName(NAME_EDEFAULT);
@@ -500,6 +532,9 @@ public class ClassImpl extends MinimalEObjectImpl.Container implements kragstein
 				return;
 			case KragsteinPackage.CLASS__IS_INTERFACE:
 				setIsInterface(IS_INTERFACE_EDEFAULT);
+				return;
+			case KragsteinPackage.CLASS__IMPORTED_PACKAGES:
+				getImportedPackages().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -519,10 +554,10 @@ public class ClassImpl extends MinimalEObjectImpl.Container implements kragstein
 				return methods != null && !methods.isEmpty();
 			case KragsteinPackage.CLASS__COMMENTS:
 				return comments != null;
-			case KragsteinPackage.CLASS__TARGET_RELATIONSHIPS:
-				return targetRelationships != null && !targetRelationships.isEmpty();
-			case KragsteinPackage.CLASS__SOURCE_RELATIONSHIPS:
-				return sourceRelationships != null && !sourceRelationships.isEmpty();
+			case KragsteinPackage.CLASS__TARGET_RELATIONSHIP:
+				return targetRelationship != null && !targetRelationship.isEmpty();
+			case KragsteinPackage.CLASS__SOURCE_RELATIONSHIP:
+				return sourceRelationship != null && !sourceRelationship.isEmpty();
 			case KragsteinPackage.CLASS__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case KragsteinPackage.CLASS__VISIBILITY:
@@ -531,6 +566,8 @@ public class ClassImpl extends MinimalEObjectImpl.Container implements kragstein
 				return isSingletone != IS_SINGLETONE_EDEFAULT;
 			case KragsteinPackage.CLASS__IS_INTERFACE:
 				return isInterface != IS_INTERFACE_EDEFAULT;
+			case KragsteinPackage.CLASS__IMPORTED_PACKAGES:
+				return importedPackages != null && !importedPackages.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

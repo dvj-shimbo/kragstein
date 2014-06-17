@@ -6,21 +6,23 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>imported Package</b></em>'.
+ * A representation of the model object '<em><b>Imported Package</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link kragstein.importedPackage#getPackageName <em>Package Name</em>}</li>
+ *   <li>{@link kragstein.ImportedPackage#getPackageName <em>Package Name</em>}</li>
+ *   <li>{@link kragstein.ImportedPackage#isIsInternal <em>Is Internal</em>}</li>
+ *   <li>{@link kragstein.ImportedPackage#getPath <em>Path</em>}</li>
  * </ul>
  * </p>
  *
- * @see kragstein.KragsteinPackage#getimportedPackage()
+ * @see kragstein.KragsteinPackage#getImportedPackage()
  * @model
  * @generated
  */
-public interface importedPackage extends EObject {
+public interface ImportedPackage extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Package Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -31,14 +33,14 @@ public interface importedPackage extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Package Name</em>' attribute.
 	 * @see #setPackageName(String)
-	 * @see kragstein.KragsteinPackage#getimportedPackage_PackageName()
+	 * @see kragstein.KragsteinPackage#getImportedPackage_PackageName()
 	 * @model
 	 * @generated
 	 */
 	String getPackageName();
 
 	/**
-	 * Sets the value of the '{@link kragstein.importedPackage#getPackageName <em>Package Name</em>}' attribute.
+	 * Sets the value of the '{@link kragstein.ImportedPackage#getPackageName <em>Package Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Package Name</em>' attribute.
@@ -47,4 +49,56 @@ public interface importedPackage extends EObject {
 	 */
 	void setPackageName(String value);
 
-} // importedPackage
+	/**
+	 * Returns the value of the '<em><b>Is Internal</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Is Internal</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Is Internal</em>' attribute.
+	 * @see #setIsInternal(boolean)
+	 * @see kragstein.KragsteinPackage#getImportedPackage_IsInternal()
+	 * @model
+	 * @generated
+	 */
+	boolean isIsInternal();
+
+	/**
+	 * Sets the value of the '{@link kragstein.ImportedPackage#isIsInternal <em>Is Internal</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Is Internal</em>' attribute.
+	 * @see #isIsInternal()
+	 * @generated
+	 */
+	void setIsInternal(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Path</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Path</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Path</em>' attribute.
+	 * @see #setPath(String)
+	 * @see kragstein.KragsteinPackage#getImportedPackage_Path()
+	 * @model
+	 * @generated
+	 */
+	String getPath();
+
+	/**
+	 * Sets the value of the '{@link kragstein.ImportedPackage#getPath <em>Path</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Path</em>' attribute.
+	 * @see #getPath()
+	 * @generated
+	 */
+	void setPath(String value);
+
+} // ImportedPackage

@@ -17,12 +17,13 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link kragstein.Class#getAttributes <em>Attributes</em>}</li>
  *   <li>{@link kragstein.Class#getMethods <em>Methods</em>}</li>
  *   <li>{@link kragstein.Class#getComments <em>Comments</em>}</li>
- *   <li>{@link kragstein.Class#getTargetRelationships <em>Target Relationships</em>}</li>
- *   <li>{@link kragstein.Class#getSourceRelationships <em>Source Relationships</em>}</li>
+ *   <li>{@link kragstein.Class#getTargetRelationship <em>Target Relationship</em>}</li>
+ *   <li>{@link kragstein.Class#getSourceRelationship <em>Source Relationship</em>}</li>
  *   <li>{@link kragstein.Class#getName <em>Name</em>}</li>
  *   <li>{@link kragstein.Class#getVisibility <em>Visibility</em>}</li>
  *   <li>{@link kragstein.Class#isIsSingletone <em>Is Singletone</em>}</li>
  *   <li>{@link kragstein.Class#isIsInterface <em>Is Interface</em>}</li>
+ *   <li>{@link kragstein.Class#getImportedPackages <em>Imported Packages</em>}</li>
  * </ul>
  * </p>
  *
@@ -90,36 +91,36 @@ public interface Class extends EObject {
 	void setComments(Comment value);
 
 	/**
-	 * Returns the value of the '<em><b>Target Relationships</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Target Relationship</b></em>' containment reference list.
 	 * The list contents are of type {@link kragstein.Relationship}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Target Relationships</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Target Relationship</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Target Relationships</em>' containment reference list.
-	 * @see kragstein.KragsteinPackage#getClass_TargetRelationships()
+	 * @return the value of the '<em>Target Relationship</em>' containment reference list.
+	 * @see kragstein.KragsteinPackage#getClass_TargetRelationship()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Relationship> getTargetRelationships();
+	EList<Relationship> getTargetRelationship();
 
 	/**
-	 * Returns the value of the '<em><b>Source Relationships</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Source Relationship</b></em>' containment reference list.
 	 * The list contents are of type {@link kragstein.Relationship}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Source Relationships</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Source Relationship</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Source Relationships</em>' containment reference list.
-	 * @see kragstein.KragsteinPackage#getClass_SourceRelationships()
+	 * @return the value of the '<em>Source Relationship</em>' containment reference list.
+	 * @see kragstein.KragsteinPackage#getClass_SourceRelationship()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Relationship> getSourceRelationships();
+	EList<Relationship> getSourceRelationship();
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
@@ -224,5 +225,21 @@ public interface Class extends EObject {
 	 * @generated
 	 */
 	void setIsInterface(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Imported Packages</b></em>' containment reference list.
+	 * The list contents are of type {@link kragstein.ImportedPackage}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Imported Packages</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Imported Packages</em>' containment reference list.
+	 * @see kragstein.KragsteinPackage#getClass_ImportedPackages()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<ImportedPackage> getImportedPackages();
 
 } // Class

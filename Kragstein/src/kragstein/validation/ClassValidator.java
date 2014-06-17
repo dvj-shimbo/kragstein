@@ -6,6 +6,7 @@ package kragstein.validation;
 
 import kragstein.Attribute;
 import kragstein.Comment;
+import kragstein.ImportedPackage;
 import kragstein.Method;
 import kragstein.Relationship;
 
@@ -23,10 +24,11 @@ public interface ClassValidator {
 	boolean validateAttributes(EList<Attribute> value);
 	boolean validateMethods(EList<Method> value);
 	boolean validateComments(Comment value);
-	boolean validateTargetRelationships(EList<Relationship> value);
-	boolean validateSourceRelationships(EList<Relationship> value);
+	boolean validateTargetRelationship(EList<Relationship> value);
+	boolean validateSourceRelationship(EList<Relationship> value);
 	boolean validateName(String value);
 	boolean validateVisibility(String value);
 	boolean validateIsSingletone(boolean value);
 	boolean validateIsInterface(boolean value);
+	boolean validateImportedPackages(EList<ImportedPackage> value);
 }

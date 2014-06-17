@@ -31,15 +31,6 @@ public interface KragsteinFactory extends EFactory {
 	UMLDiagramm createUMLDiagramm();
 
 	/**
-	 * Returns a new object of class '<em>imported Package</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>imported Package</em>'.
-	 * @generated
-	 */
-	importedPackage createimportedPackage();
-
-	/**
 	 * Returns a new object of class '<em>Generalization</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -103,15 +94,6 @@ public interface KragsteinFactory extends EFactory {
 	Comment createComment();
 
 	/**
-	 * Returns a new object of class '<em>Comment Link</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Comment Link</em>'.
-	 * @generated
-	 */
-	CommentLink createCommentLink();
-
-	/**
 	 * Returns a new object of class '<em>Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -119,6 +101,15 @@ public interface KragsteinFactory extends EFactory {
 	 * @generated
 	 */
 	Class createClass();
+
+	/**
+	 * Returns a new object of class '<em>Imported Package</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Imported Package</em>'.
+	 * @generated
+	 */
+	ImportedPackage createImportedPackage();
 
 	/**
 	 * Returns a new object of class '<em>Attribute</em>'.

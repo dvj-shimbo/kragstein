@@ -2,6 +2,8 @@
  */
 package kragstein.tests;
 
+import junit.framework.TestCase;
+
 import junit.textui.TestRunner;
 
 import kragstein.Aggregation;
@@ -13,7 +15,15 @@ import kragstein.KragsteinFactory;
  * <!-- end-user-doc -->
  * @generated
  */
-public class AggregationTest extends ClassMultipleRelationshipsTest {
+public class AggregationTest extends TestCase {
+
+	/**
+	 * The fixture for this Aggregation test case.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Aggregation fixture = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -35,14 +45,23 @@ public class AggregationTest extends ClassMultipleRelationshipsTest {
 	}
 
 	/**
+	 * Sets the fixture for this Aggregation test case.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void setFixture(Aggregation fixture) {
+		this.fixture = fixture;
+	}
+
+	/**
 	 * Returns the fixture for this Aggregation test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	protected Aggregation getFixture() {
-		return (Aggregation)fixture;
+		return fixture;
 	}
 
 	/**

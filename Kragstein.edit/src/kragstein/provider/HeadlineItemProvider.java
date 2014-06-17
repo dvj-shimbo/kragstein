@@ -46,6 +46,7 @@ public class HeadlineItemProvider extends IconItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
+			addIsLoopPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -68,6 +69,28 @@ public class HeadlineItemProvider extends IconItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Is Loop feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIsLoopPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Headline_isLoop_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Headline_isLoop_feature", "_UI_Headline_type"),
+				 KragsteinPackage.Literals.HEADLINE__IS_LOOP,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -111,6 +134,7 @@ public class HeadlineItemProvider extends IconItemProvider {
 
 		switch (notification.getFeatureID(Headline.class)) {
 			case KragsteinPackage.HEADLINE__NAME:
+			case KragsteinPackage.HEADLINE__IS_LOOP:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
@@ -141,8 +165,8 @@ public class HeadlineItemProvider extends IconItemProvider {
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == KragsteinPackage.Literals.ICON__SOURCE_CONNECTION ||
-			childFeature == KragsteinPackage.Literals.ICON__TARGET_CONNECTION;
+			childFeature == KragsteinPackage.Literals.ICON__SOURCE_ICON_CONNECTION ||
+			childFeature == KragsteinPackage.Literals.ICON__TARGET_ICON_CONNECTION;
 
 		if (qualify) {
 			return getString

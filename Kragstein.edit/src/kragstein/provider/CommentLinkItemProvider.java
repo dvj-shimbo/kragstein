@@ -124,8 +124,8 @@ public class CommentLinkItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(KragsteinPackage.Literals.COMMENT_LINK__SOURCE_CONNECTION);
-			childrenFeatures.add(KragsteinPackage.Literals.COMMENT_LINK__TARGET_CONNECTION);
+			childrenFeatures.add(KragsteinPackage.Literals.COMMENT_LINK__SOURCE_COMMENT_LINK);
+			childrenFeatures.add(KragsteinPackage.Literals.COMMENT_LINK__TARGET_COMMENT_LINK);
 		}
 		return childrenFeatures;
 	}
@@ -178,8 +178,8 @@ public class CommentLinkItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CommentLink.class)) {
-			case KragsteinPackage.COMMENT_LINK__SOURCE_CONNECTION:
-			case KragsteinPackage.COMMENT_LINK__TARGET_CONNECTION:
+			case KragsteinPackage.COMMENT_LINK__SOURCE_COMMENT_LINK:
+			case KragsteinPackage.COMMENT_LINK__TARGET_COMMENT_LINK:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -199,12 +199,12 @@ public class CommentLinkItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(KragsteinPackage.Literals.COMMENT_LINK__SOURCE_CONNECTION,
+				(KragsteinPackage.Literals.COMMENT_LINK__SOURCE_COMMENT_LINK,
 				 KragsteinFactory.eINSTANCE.createComment()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(KragsteinPackage.Literals.COMMENT_LINK__TARGET_CONNECTION,
+				(KragsteinPackage.Literals.COMMENT_LINK__TARGET_COMMENT_LINK,
 				 KragsteinFactory.eINSTANCE.createComment()));
 	}
 
@@ -220,8 +220,8 @@ public class CommentLinkItemProvider
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == KragsteinPackage.Literals.COMMENT_LINK__SOURCE_CONNECTION ||
-			childFeature == KragsteinPackage.Literals.COMMENT_LINK__TARGET_CONNECTION;
+			childFeature == KragsteinPackage.Literals.COMMENT_LINK__SOURCE_COMMENT_LINK ||
+			childFeature == KragsteinPackage.Literals.COMMENT_LINK__TARGET_COMMENT_LINK;
 
 		if (qualify) {
 			return getString

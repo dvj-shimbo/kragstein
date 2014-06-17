@@ -6,6 +6,7 @@ package kragstein.provider;
 import java.util.Collection;
 import java.util.List;
 
+import kragstein.Generalization;
 import kragstein.KragsteinPackage;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
@@ -20,7 +21,9 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
  * This is the item provider adapter for a {@link kragstein.Generalization} object.
@@ -59,6 +62,9 @@ public class GeneralizationItemProvider
 
 			addTargetPropertyDescriptor(object);
 			addSourcePropertyDescriptor(object);
+			addNamePropertyDescriptor(object);
+			addLowerBoundPropertyDescriptor(object);
+			addUpperBoundPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -108,6 +114,72 @@ public class GeneralizationItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Relationship_name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Relationship_name_feature", "_UI_Relationship_type"),
+				 KragsteinPackage.Literals.RELATIONSHIP__NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Lower Bound feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addLowerBoundPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Relationship_lowerBound_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Relationship_lowerBound_feature", "_UI_Relationship_type"),
+				 KragsteinPackage.Literals.RELATIONSHIP__LOWER_BOUND,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Upper Bound feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addUpperBoundPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Relationship_upperBound_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Relationship_upperBound_feature", "_UI_Relationship_type"),
+				 KragsteinPackage.Literals.RELATIONSHIP__UPPER_BOUND,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns Generalization.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -126,7 +198,10 @@ public class GeneralizationItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Generalization_type");
+		String label = ((Generalization)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Generalization_type") :
+			getString("_UI_Generalization_type") + " " + label;
 	}
 	
 
@@ -140,6 +215,14 @@ public class GeneralizationItemProvider
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(Generalization.class)) {
+			case KragsteinPackage.GENERALIZATION__NAME:
+			case KragsteinPackage.GENERALIZATION__LOWER_BOUND:
+			case KragsteinPackage.GENERALIZATION__UPPER_BOUND:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+		}
 		super.notifyChanged(notification);
 	}
 

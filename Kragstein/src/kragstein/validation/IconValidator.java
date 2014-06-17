@@ -4,7 +4,7 @@
  */
 package kragstein.validation;
 
-import kragstein.Connection;
+import kragstein.IconConnection;
 import kragstein.LeftComment;
 import kragstein.RightComment;
 import kragstein.ValencePoint;
@@ -18,8 +18,8 @@ import kragstein.ValencePoint;
 public interface IconValidator {
 	boolean validate();
 
-	boolean validateSourceConnection(Connection value);
-	boolean validateTargetConnection(Connection value);
+	boolean validateSourceIconConnection(IconConnection value);
+	boolean validateTargetIconConnection(IconConnection value);
 	boolean validateValencePoint(ValencePoint value);
 	boolean validateLeftComment(LeftComment value);
 	boolean validateRightComment(RightComment value);

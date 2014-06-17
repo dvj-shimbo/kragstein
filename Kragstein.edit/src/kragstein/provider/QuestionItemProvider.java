@@ -230,8 +230,8 @@ public class QuestionItemProvider extends IconItemProvider {
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == KragsteinPackage.Literals.ICON__SOURCE_CONNECTION ||
-			childFeature == KragsteinPackage.Literals.ICON__TARGET_CONNECTION;
+			childFeature == KragsteinPackage.Literals.ICON__SOURCE_ICON_CONNECTION ||
+			childFeature == KragsteinPackage.Literals.ICON__TARGET_ICON_CONNECTION;
 
 		if (qualify) {
 			return getString

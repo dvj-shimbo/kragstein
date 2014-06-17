@@ -2,6 +2,8 @@
  */
 package kragstein.tests;
 
+import junit.framework.TestCase;
+
 import junit.textui.TestRunner;
 
 import kragstein.KragsteinFactory;
@@ -13,7 +15,15 @@ import kragstein.Realization;
  * <!-- end-user-doc -->
  * @generated
  */
-public class RealizationTest extends ClassMultipleRelationshipsTest {
+public class RealizationTest extends TestCase {
+
+	/**
+	 * The fixture for this Realization test case.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Realization fixture = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -35,14 +45,23 @@ public class RealizationTest extends ClassMultipleRelationshipsTest {
 	}
 
 	/**
+	 * Sets the fixture for this Realization test case.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void setFixture(Realization fixture) {
+		this.fixture = fixture;
+	}
+
+	/**
 	 * Returns the fixture for this Realization test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	protected Realization getFixture() {
-		return (Realization)fixture;
+		return fixture;
 	}
 
 	/**

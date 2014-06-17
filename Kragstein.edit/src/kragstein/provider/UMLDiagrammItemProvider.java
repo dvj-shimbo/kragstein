@@ -125,8 +125,8 @@ public class UMLDiagrammItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(KragsteinPackage.Literals.UML_DIAGRAMM__UNITS);
-			childrenFeatures.add(KragsteinPackage.Literals.UML_DIAGRAMM__PACKAGES);
+			childrenFeatures.add(KragsteinPackage.Literals.UML_DIAGRAMM__CLASSES);
+			childrenFeatures.add(KragsteinPackage.Literals.UML_DIAGRAMM__IMPORTED_PACKAGES);
 		}
 		return childrenFeatures;
 	}
@@ -186,8 +186,8 @@ public class UMLDiagrammItemProvider
 			case KragsteinPackage.UML_DIAGRAMM__PACKAGE_NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case KragsteinPackage.UML_DIAGRAMM__UNITS:
-			case KragsteinPackage.UML_DIAGRAMM__PACKAGES:
+			case KragsteinPackage.UML_DIAGRAMM__CLASSES:
+			case KragsteinPackage.UML_DIAGRAMM__IMPORTED_PACKAGES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -207,17 +207,12 @@ public class UMLDiagrammItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(KragsteinPackage.Literals.UML_DIAGRAMM__UNITS,
-				 KragsteinFactory.eINSTANCE.createInterface()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(KragsteinPackage.Literals.UML_DIAGRAMM__UNITS,
+				(KragsteinPackage.Literals.UML_DIAGRAMM__CLASSES,
 				 KragsteinFactory.eINSTANCE.createClass()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(KragsteinPackage.Literals.UML_DIAGRAMM__PACKAGES,
+				(KragsteinPackage.Literals.UML_DIAGRAMM__IMPORTED_PACKAGES,
 				 KragsteinFactory.eINSTANCE.createimportedPackage()));
 	}
 

@@ -2,6 +2,8 @@
  */
 package kragstein.tests;
 
+import junit.framework.TestCase;
+
 import junit.textui.TestRunner;
 
 import kragstein.Composition;
@@ -13,7 +15,15 @@ import kragstein.KragsteinFactory;
  * <!-- end-user-doc -->
  * @generated
  */
-public class CompositionTest extends ClassMultipleRelationshipsTest {
+public class CompositionTest extends TestCase {
+
+	/**
+	 * The fixture for this Composition test case.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Composition fixture = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -35,14 +45,23 @@ public class CompositionTest extends ClassMultipleRelationshipsTest {
 	}
 
 	/**
+	 * Sets the fixture for this Composition test case.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void setFixture(Composition fixture) {
+		this.fixture = fixture;
+	}
+
+	/**
 	 * Returns the fixture for this Composition test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	protected Composition getFixture() {
-		return (Composition)fixture;
+		return fixture;
 	}
 
 	/**

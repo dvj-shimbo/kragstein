@@ -10,58 +10,50 @@ Package kragstein <http:///kragstein.ecore>
   Class UMLDiagramm
     Attribute lang : EString
     Attribute packageName : EString
-    Reference units : Unit<<0..*>>
-    Reference packages : importedPackage<<0..*>>
+    Reference classes : Class<<0..*>>
+    Reference importedPackages : importedPackage<<0..*>>
 
   Class importedPackage
     Attribute packageName : EString
 
   Class Relationship
-    Reference target : Unit
-    Reference source : Unit
-
-  Class Generalization -> Relationship
-
-  Class ClassMultipleRelationships -> Relationship
+    Reference target : Class
+    Reference source : Class
     Attribute name : EString
     Attribute lowerBound : EInt
     Attribute upperBound : EInt
 
-  Class Realization -> ClassMultipleRelationships
+  Class Generalization -> Relationship
 
-  Class Association -> ClassMultipleRelationships
+  Class Realization -> Relationship
 
-  Class Aggregation -> ClassMultipleRelationships
+  Class Association -> Relationship
 
-  Class Composition -> ClassMultipleRelationships
+  Class Aggregation -> Relationship
 
-  Class Dependency -> ClassMultipleRelationships
+  Class Composition -> Relationship
+
+  Class Dependency -> Relationship
 
   Class Comment
     Attribute value : EString
 
   Class CommentLink
-    Reference sourceConnection : Comment<<0..*>>
-    Reference targetConnection : Comment<<0..*>>
+    Reference sourceCommentLink : Comment<<0..*>>
+    Reference targetCommentLink : Comment<<0..*>>
     Reference source : Comment
     Reference target : Comment
 
-  Class Unit
-    Attribute name : EString
-    Reference sourceConnection : Generalization
-    Reference targetConnection : Generalization
-    Attribute visibility : EString
-    Reference comments : Comment
-
-  Class Interface -> Unit
-    Reference methods : InterfaceMethod<<0..*>>
-
-  Class Class -> Unit
-    Reference targetConnections : ClassMultipleRelationships<<0..*>>
-    Reference sourceConnections : ClassMultipleRelationships<<0..*>>
+  Class Class
     Reference attributes : Attribute<<0..*>>
     Reference methods : Method<<0..*>>
+    Reference comments : Comment
+    Reference targetRelationships : Relationship<<0..*>>
+    Reference sourceRelationships : Relationship<<0..*>>
+    Attribute name : EString
+    Attribute visibility : EString
     Attribute isSingletone : EBoolean
+    Attribute isInterface : EBoolean
 
   Class Attribute
     Attribute name : EString
@@ -99,11 +91,10 @@ Package kragstein <http:///kragstein.ecore>
     Reference parameters : Parameter<<1..*>>
 
   Class Branch
-    Reference sourceConnection : BranchConnection
-    Reference targetConnection : BranchConnection
+    Reference sourceBranchConnection : BranchConnection
+    Reference targetBranchConnection : BranchConnection
     Reference route : Route<<1..1>>
     Attribute name : EString
-    Attribute isLoop : EBoolean
 
   Class BranchConnection
     Reference source : Branch
@@ -120,13 +111,13 @@ Package kragstein <http:///kragstein.ecore>
 
   Class ValencePoint
 
-  Class Connection
+  Class IconConnection
     Reference target : Icon
     Reference source : Icon
 
   Class Icon
-    Reference sourceConnection : Connection
-    Reference targetConnection : Connection
+    Reference sourceIconConnection : IconConnection
+    Reference targetIconConnection : IconConnection
     Reference valencePoint : ValencePoint
     Reference leftComment : LeftComment
     Reference RightComment : RightComment
@@ -150,12 +141,20 @@ Package kragstein <http:///kragstein.ecore>
     Attribute name : EString
     Attribute value : EString
     Reference route : Route
+    Reference sourceCaseConnection : CaseConnection
+    Reference targetCaseConnection : CaseConnection
+
+  Class CaseConnection
+    Reference source : Case
+    Reference target : Case
 
   Class Headline -> Icon
     Attribute name : EString
+    Attribute isLoop : EBoolean
 
   Class Adress -> Icon
     Attribute name : EString
+    Attribute isLoop : EBoolean
 
   Class Insertion -> Icon
     Attribute name : EString
@@ -178,12 +177,12 @@ Package kragstein <http:///kragstein.ecore>
   Class Output -> Icon
     Attribute name : EString
     Attribute value : EString
-    Reference method : Method
+    Reference method : Method<<1..1>>
 
   Class Input -> Icon
     Attribute name : EString
     Attribute value : EString
-    Reference method : Method
+    Reference method : Method<<1..1>>
 
   Class LoopArrow -> Icon
     Attribute name : EString
@@ -192,16 +191,3 @@ Package kragstein <http:///kragstein.ecore>
     Attribute name : EString
 
   Class End -> Icon
-
-  Class InterfaceMethod
-    Attribute name : EString
-    Attribute type : EString
-    Reference parameters : InterfaceParameter<<0..*>>
-    Attribute visibility : EString
-    Attribute isConst : EBoolean
-    Attribute isVirtual : EBoolean
-    Attribute isStatic : EBoolean
-
-  Class InterfaceParameter
-    Attribute name : EString
-    Attribute type : EString

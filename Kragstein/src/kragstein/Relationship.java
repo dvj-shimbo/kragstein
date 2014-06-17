@@ -14,6 +14,9 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link kragstein.Relationship#getTarget <em>Target</em>}</li>
  *   <li>{@link kragstein.Relationship#getSource <em>Source</em>}</li>
+ *   <li>{@link kragstein.Relationship#getName <em>Name</em>}</li>
+ *   <li>{@link kragstein.Relationship#getLowerBound <em>Lower Bound</em>}</li>
+ *   <li>{@link kragstein.Relationship#getUpperBound <em>Upper Bound</em>}</li>
  * </ul>
  * </p>
  *
@@ -31,12 +34,12 @@ public interface Relationship extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Target</em>' reference.
-	 * @see #setTarget(Unit)
+	 * @see #setTarget(kragstein.Class)
 	 * @see kragstein.KragsteinPackage#getRelationship_Target()
 	 * @model
 	 * @generated
 	 */
-	Unit getTarget();
+	kragstein.Class getTarget();
 
 	/**
 	 * Sets the value of the '{@link kragstein.Relationship#getTarget <em>Target</em>}' reference.
@@ -46,7 +49,7 @@ public interface Relationship extends EObject {
 	 * @see #getTarget()
 	 * @generated
 	 */
-	void setTarget(Unit value);
+	void setTarget(kragstein.Class value);
 
 	/**
 	 * Returns the value of the '<em><b>Source</b></em>' reference.
@@ -57,12 +60,12 @@ public interface Relationship extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Source</em>' reference.
-	 * @see #setSource(Unit)
+	 * @see #setSource(kragstein.Class)
 	 * @see kragstein.KragsteinPackage#getRelationship_Source()
 	 * @model
 	 * @generated
 	 */
-	Unit getSource();
+	kragstein.Class getSource();
 
 	/**
 	 * Sets the value of the '{@link kragstein.Relationship#getSource <em>Source</em>}' reference.
@@ -72,6 +75,84 @@ public interface Relationship extends EObject {
 	 * @see #getSource()
 	 * @generated
 	 */
-	void setSource(Unit value);
+	void setSource(kragstein.Class value);
+
+	/**
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see kragstein.KragsteinPackage#getRelationship_Name()
+	 * @model
+	 * @generated
+	 */
+	String getName();
+
+	/**
+	 * Sets the value of the '{@link kragstein.Relationship#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Lower Bound</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Lower Bound</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Lower Bound</em>' attribute.
+	 * @see #setLowerBound(int)
+	 * @see kragstein.KragsteinPackage#getRelationship_LowerBound()
+	 * @model
+	 * @generated
+	 */
+	int getLowerBound();
+
+	/**
+	 * Sets the value of the '{@link kragstein.Relationship#getLowerBound <em>Lower Bound</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Lower Bound</em>' attribute.
+	 * @see #getLowerBound()
+	 * @generated
+	 */
+	void setLowerBound(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Upper Bound</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Upper Bound</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Upper Bound</em>' attribute.
+	 * @see #setUpperBound(int)
+	 * @see kragstein.KragsteinPackage#getRelationship_UpperBound()
+	 * @model
+	 * @generated
+	 */
+	int getUpperBound();
+
+	/**
+	 * Sets the value of the '{@link kragstein.Relationship#getUpperBound <em>Upper Bound</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Upper Bound</em>' attribute.
+	 * @see #getUpperBound()
+	 * @generated
+	 */
+	void setUpperBound(int value);
 
 } // Relationship

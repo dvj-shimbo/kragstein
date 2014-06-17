@@ -17,8 +17,8 @@ import org.eclipse.emf.common.util.EList;
 public interface CommentLinkValidator {
 	boolean validate();
 
-	boolean validateSourceConnection(EList<Comment> value);
-	boolean validateTargetConnection(EList<Comment> value);
+	boolean validateSourceCommentLink(EList<Comment> value);
+	boolean validateTargetCommentLink(EList<Comment> value);
 	boolean validateSource(Comment value);
 	boolean validateTarget(Comment value);
 }

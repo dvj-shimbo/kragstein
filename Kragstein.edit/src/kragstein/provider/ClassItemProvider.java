@@ -12,11 +12,19 @@ import kragstein.KragsteinPackage;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.util.ResourceLocator;
+
 import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
+import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
+import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.IItemPropertySource;
+import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
+import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
@@ -25,7 +33,14 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ClassItemProvider extends UnitItemProvider {
+public class ClassItemProvider 
+	extends ItemProviderAdapter
+	implements
+		IEditingDomainItemProvider,
+		IStructuredItemContentProvider,
+		ITreeItemContentProvider,
+		IItemLabelProvider,
+		IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -47,9 +62,56 @@ public class ClassItemProvider extends UnitItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addNamePropertyDescriptor(object);
+			addVisibilityPropertyDescriptor(object);
 			addIsSingletonePropertyDescriptor(object);
+			addIsInterfacePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Class_name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Class_name_feature", "_UI_Class_type"),
+				 KragsteinPackage.Literals.CLASS__NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Visibility feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addVisibilityPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Class_visibility_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Class_visibility_feature", "_UI_Class_type"),
+				 KragsteinPackage.Literals.CLASS__VISIBILITY,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -75,6 +137,28 @@ public class ClassItemProvider extends UnitItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Is Interface feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIsInterfacePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Class_isInterface_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Class_isInterface_feature", "_UI_Class_type"),
+				 KragsteinPackage.Literals.CLASS__IS_INTERFACE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -86,10 +170,11 @@ public class ClassItemProvider extends UnitItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(KragsteinPackage.Literals.CLASS__TARGET_CONNECTIONS);
-			childrenFeatures.add(KragsteinPackage.Literals.CLASS__SOURCE_CONNECTIONS);
 			childrenFeatures.add(KragsteinPackage.Literals.CLASS__ATTRIBUTES);
 			childrenFeatures.add(KragsteinPackage.Literals.CLASS__METHODS);
+			childrenFeatures.add(KragsteinPackage.Literals.CLASS__COMMENTS);
+			childrenFeatures.add(KragsteinPackage.Literals.CLASS__TARGET_RELATIONSHIPS);
+			childrenFeatures.add(KragsteinPackage.Literals.CLASS__SOURCE_RELATIONSHIPS);
 		}
 		return childrenFeatures;
 	}
@@ -145,13 +230,17 @@ public class ClassItemProvider extends UnitItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(kragstein.Class.class)) {
+			case KragsteinPackage.CLASS__NAME:
+			case KragsteinPackage.CLASS__VISIBILITY:
 			case KragsteinPackage.CLASS__IS_SINGLETONE:
+			case KragsteinPackage.CLASS__IS_INTERFACE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case KragsteinPackage.CLASS__TARGET_CONNECTIONS:
-			case KragsteinPackage.CLASS__SOURCE_CONNECTIONS:
 			case KragsteinPackage.CLASS__ATTRIBUTES:
 			case KragsteinPackage.CLASS__METHODS:
+			case KragsteinPackage.CLASS__COMMENTS:
+			case KragsteinPackage.CLASS__TARGET_RELATIONSHIPS:
+			case KragsteinPackage.CLASS__SOURCE_RELATIONSHIPS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -171,56 +260,6 @@ public class ClassItemProvider extends UnitItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(KragsteinPackage.Literals.CLASS__TARGET_CONNECTIONS,
-				 KragsteinFactory.eINSTANCE.createRealization()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(KragsteinPackage.Literals.CLASS__TARGET_CONNECTIONS,
-				 KragsteinFactory.eINSTANCE.createAssociation()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(KragsteinPackage.Literals.CLASS__TARGET_CONNECTIONS,
-				 KragsteinFactory.eINSTANCE.createAggregation()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(KragsteinPackage.Literals.CLASS__TARGET_CONNECTIONS,
-				 KragsteinFactory.eINSTANCE.createComposition()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(KragsteinPackage.Literals.CLASS__TARGET_CONNECTIONS,
-				 KragsteinFactory.eINSTANCE.createDependency()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(KragsteinPackage.Literals.CLASS__SOURCE_CONNECTIONS,
-				 KragsteinFactory.eINSTANCE.createRealization()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(KragsteinPackage.Literals.CLASS__SOURCE_CONNECTIONS,
-				 KragsteinFactory.eINSTANCE.createAssociation()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(KragsteinPackage.Literals.CLASS__SOURCE_CONNECTIONS,
-				 KragsteinFactory.eINSTANCE.createAggregation()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(KragsteinPackage.Literals.CLASS__SOURCE_CONNECTIONS,
-				 KragsteinFactory.eINSTANCE.createComposition()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(KragsteinPackage.Literals.CLASS__SOURCE_CONNECTIONS,
-				 KragsteinFactory.eINSTANCE.createDependency()));
-
-		newChildDescriptors.add
-			(createChildParameter
 				(KragsteinPackage.Literals.CLASS__ATTRIBUTES,
 				 KragsteinFactory.eINSTANCE.createAttribute()));
 
@@ -228,6 +267,71 @@ public class ClassItemProvider extends UnitItemProvider {
 			(createChildParameter
 				(KragsteinPackage.Literals.CLASS__METHODS,
 				 KragsteinFactory.eINSTANCE.createMethod()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(KragsteinPackage.Literals.CLASS__COMMENTS,
+				 KragsteinFactory.eINSTANCE.createComment()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(KragsteinPackage.Literals.CLASS__TARGET_RELATIONSHIPS,
+				 KragsteinFactory.eINSTANCE.createGeneralization()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(KragsteinPackage.Literals.CLASS__TARGET_RELATIONSHIPS,
+				 KragsteinFactory.eINSTANCE.createRealization()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(KragsteinPackage.Literals.CLASS__TARGET_RELATIONSHIPS,
+				 KragsteinFactory.eINSTANCE.createAssociation()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(KragsteinPackage.Literals.CLASS__TARGET_RELATIONSHIPS,
+				 KragsteinFactory.eINSTANCE.createAggregation()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(KragsteinPackage.Literals.CLASS__TARGET_RELATIONSHIPS,
+				 KragsteinFactory.eINSTANCE.createComposition()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(KragsteinPackage.Literals.CLASS__TARGET_RELATIONSHIPS,
+				 KragsteinFactory.eINSTANCE.createDependency()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(KragsteinPackage.Literals.CLASS__SOURCE_RELATIONSHIPS,
+				 KragsteinFactory.eINSTANCE.createGeneralization()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(KragsteinPackage.Literals.CLASS__SOURCE_RELATIONSHIPS,
+				 KragsteinFactory.eINSTANCE.createRealization()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(KragsteinPackage.Literals.CLASS__SOURCE_RELATIONSHIPS,
+				 KragsteinFactory.eINSTANCE.createAssociation()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(KragsteinPackage.Literals.CLASS__SOURCE_RELATIONSHIPS,
+				 KragsteinFactory.eINSTANCE.createAggregation()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(KragsteinPackage.Literals.CLASS__SOURCE_RELATIONSHIPS,
+				 KragsteinFactory.eINSTANCE.createComposition()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(KragsteinPackage.Literals.CLASS__SOURCE_RELATIONSHIPS,
+				 KragsteinFactory.eINSTANCE.createDependency()));
 	}
 
 	/**
@@ -242,10 +346,8 @@ public class ClassItemProvider extends UnitItemProvider {
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == KragsteinPackage.Literals.UNIT__SOURCE_CONNECTION ||
-			childFeature == KragsteinPackage.Literals.UNIT__TARGET_CONNECTION ||
-			childFeature == KragsteinPackage.Literals.CLASS__TARGET_CONNECTIONS ||
-			childFeature == KragsteinPackage.Literals.CLASS__SOURCE_CONNECTIONS;
+			childFeature == KragsteinPackage.Literals.CLASS__TARGET_RELATIONSHIPS ||
+			childFeature == KragsteinPackage.Literals.CLASS__SOURCE_RELATIONSHIPS;
 
 		if (qualify) {
 			return getString
@@ -253,6 +355,17 @@ public class ClassItemProvider extends UnitItemProvider {
 				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
 		}
 		return super.getCreateChildText(owner, feature, child, selection);
+	}
+
+	/**
+	 * Return the resource locator for this item provider's resources.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ResourceLocator getResourceLocator() {
+		return KragsteinEditPlugin.INSTANCE;
 	}
 
 }

@@ -14,8 +14,8 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link kragstein.CommentLink#getSourceConnection <em>Source Connection</em>}</li>
- *   <li>{@link kragstein.CommentLink#getTargetConnection <em>Target Connection</em>}</li>
+ *   <li>{@link kragstein.CommentLink#getSourceCommentLink <em>Source Comment Link</em>}</li>
+ *   <li>{@link kragstein.CommentLink#getTargetCommentLink <em>Target Comment Link</em>}</li>
  *   <li>{@link kragstein.CommentLink#getSource <em>Source</em>}</li>
  *   <li>{@link kragstein.CommentLink#getTarget <em>Target</em>}</li>
  * </ul>
@@ -27,36 +27,36 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface CommentLink extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Source Connection</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Source Comment Link</b></em>' containment reference list.
 	 * The list contents are of type {@link kragstein.Comment}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Source Connection</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Source Comment Link</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Source Connection</em>' containment reference list.
-	 * @see kragstein.KragsteinPackage#getCommentLink_SourceConnection()
+	 * @return the value of the '<em>Source Comment Link</em>' containment reference list.
+	 * @see kragstein.KragsteinPackage#getCommentLink_SourceCommentLink()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Comment> getSourceConnection();
+	EList<Comment> getSourceCommentLink();
 
 	/**
-	 * Returns the value of the '<em><b>Target Connection</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Target Comment Link</b></em>' containment reference list.
 	 * The list contents are of type {@link kragstein.Comment}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Target Connection</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Target Comment Link</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Target Connection</em>' containment reference list.
-	 * @see kragstein.KragsteinPackage#getCommentLink_TargetConnection()
+	 * @return the value of the '<em>Target Comment Link</em>' containment reference list.
+	 * @see kragstein.KragsteinPackage#getCommentLink_TargetCommentLink()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Comment> getTargetConnection();
+	EList<Comment> getTargetCommentLink();
 
 	/**
 	 * Returns the value of the '<em><b>Source</b></em>' reference.

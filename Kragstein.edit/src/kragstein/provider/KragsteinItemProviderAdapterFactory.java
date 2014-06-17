@@ -302,29 +302,6 @@ public class KragsteinItemProviderAdapterFactory extends KragsteinAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link kragstein.Interface} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected InterfaceItemProvider interfaceItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link kragstein.Interface}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createInterfaceAdapter() {
-		if (interfaceItemProvider == null) {
-			interfaceItemProvider = new InterfaceItemProvider(this);
-		}
-
-		return interfaceItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link kragstein.Class} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -624,26 +601,26 @@ public class KragsteinItemProviderAdapterFactory extends KragsteinAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link kragstein.Connection} instances.
+	 * This keeps track of the one adapter used for all {@link kragstein.IconConnection} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ConnectionItemProvider connectionItemProvider;
+	protected IconConnectionItemProvider iconConnectionItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link kragstein.Connection}.
+	 * This creates an adapter for a {@link kragstein.IconConnection}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createConnectionAdapter() {
-		if (connectionItemProvider == null) {
-			connectionItemProvider = new ConnectionItemProvider(this);
+	public Adapter createIconConnectionAdapter() {
+		if (iconConnectionItemProvider == null) {
+			iconConnectionItemProvider = new IconConnectionItemProvider(this);
 		}
 
-		return connectionItemProvider;
+		return iconConnectionItemProvider;
 	}
 
 	/**
@@ -736,6 +713,29 @@ public class KragsteinItemProviderAdapterFactory extends KragsteinAdapterFactory
 		}
 
 		return caseItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link kragstein.CaseConnection} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CaseConnectionItemProvider caseConnectionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link kragstein.CaseConnection}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCaseConnectionAdapter() {
+		if (caseConnectionItemProvider == null) {
+			caseConnectionItemProvider = new CaseConnectionItemProvider(this);
+		}
+
+		return caseConnectionItemProvider;
 	}
 
 	/**
@@ -992,52 +992,6 @@ public class KragsteinItemProviderAdapterFactory extends KragsteinAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link kragstein.InterfaceMethod} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected InterfaceMethodItemProvider interfaceMethodItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link kragstein.InterfaceMethod}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createInterfaceMethodAdapter() {
-		if (interfaceMethodItemProvider == null) {
-			interfaceMethodItemProvider = new InterfaceMethodItemProvider(this);
-		}
-
-		return interfaceMethodItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link kragstein.InterfaceParameter} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected InterfaceParameterItemProvider interfaceParameterItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link kragstein.InterfaceParameter}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createInterfaceParameterAdapter() {
-		if (interfaceParameterItemProvider == null) {
-			interfaceParameterItemProvider = new InterfaceParameterItemProvider(this);
-		}
-
-		return interfaceParameterItemProvider;
-	}
-
-	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1146,7 +1100,6 @@ public class KragsteinItemProviderAdapterFactory extends KragsteinAdapterFactory
 		if (dependencyItemProvider != null) dependencyItemProvider.dispose();
 		if (commentItemProvider != null) commentItemProvider.dispose();
 		if (commentLinkItemProvider != null) commentLinkItemProvider.dispose();
-		if (interfaceItemProvider != null) interfaceItemProvider.dispose();
 		if (classItemProvider != null) classItemProvider.dispose();
 		if (attributeItemProvider != null) attributeItemProvider.dispose();
 		if (methodItemProvider != null) methodItemProvider.dispose();
@@ -1160,11 +1113,12 @@ public class KragsteinItemProviderAdapterFactory extends KragsteinAdapterFactory
 		if (rightCommentItemProvider != null) rightCommentItemProvider.dispose();
 		if (leftCommentItemProvider != null) leftCommentItemProvider.dispose();
 		if (valencePointItemProvider != null) valencePointItemProvider.dispose();
-		if (connectionItemProvider != null) connectionItemProvider.dispose();
+		if (iconConnectionItemProvider != null) iconConnectionItemProvider.dispose();
 		if (actionItemProvider != null) actionItemProvider.dispose();
 		if (questionItemProvider != null) questionItemProvider.dispose();
 		if (choiceItemProvider != null) choiceItemProvider.dispose();
 		if (caseItemProvider != null) caseItemProvider.dispose();
+		if (caseConnectionItemProvider != null) caseConnectionItemProvider.dispose();
 		if (headlineItemProvider != null) headlineItemProvider.dispose();
 		if (adressItemProvider != null) adressItemProvider.dispose();
 		if (insertionItemProvider != null) insertionItemProvider.dispose();
@@ -1176,8 +1130,6 @@ public class KragsteinItemProviderAdapterFactory extends KragsteinAdapterFactory
 		if (loopArrowItemProvider != null) loopArrowItemProvider.dispose();
 		if (emptyConnectorItemProvider != null) emptyConnectorItemProvider.dispose();
 		if (endItemProvider != null) endItemProvider.dispose();
-		if (interfaceMethodItemProvider != null) interfaceMethodItemProvider.dispose();
-		if (interfaceParameterItemProvider != null) interfaceParameterItemProvider.dispose();
 	}
 
 }

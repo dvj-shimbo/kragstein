@@ -12,8 +12,8 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link kragstein.Icon#getSourceConnection <em>Source Connection</em>}</li>
- *   <li>{@link kragstein.Icon#getTargetConnection <em>Target Connection</em>}</li>
+ *   <li>{@link kragstein.Icon#getSourceIconConnection <em>Source Icon Connection</em>}</li>
+ *   <li>{@link kragstein.Icon#getTargetIconConnection <em>Target Icon Connection</em>}</li>
  *   <li>{@link kragstein.Icon#getValencePoint <em>Valence Point</em>}</li>
  *   <li>{@link kragstein.Icon#getLeftComment <em>Left Comment</em>}</li>
  *   <li>{@link kragstein.Icon#getRightComment <em>Right Comment</em>}</li>
@@ -26,56 +26,56 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Icon extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Source Connection</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Source Icon Connection</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Source Connection</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Source Icon Connection</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Source Connection</em>' containment reference.
-	 * @see #setSourceConnection(Connection)
-	 * @see kragstein.KragsteinPackage#getIcon_SourceConnection()
+	 * @return the value of the '<em>Source Icon Connection</em>' containment reference.
+	 * @see #setSourceIconConnection(IconConnection)
+	 * @see kragstein.KragsteinPackage#getIcon_SourceIconConnection()
 	 * @model containment="true"
 	 * @generated
 	 */
-	Connection getSourceConnection();
+	IconConnection getSourceIconConnection();
 
 	/**
-	 * Sets the value of the '{@link kragstein.Icon#getSourceConnection <em>Source Connection</em>}' containment reference.
+	 * Sets the value of the '{@link kragstein.Icon#getSourceIconConnection <em>Source Icon Connection</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Source Connection</em>' containment reference.
-	 * @see #getSourceConnection()
+	 * @param value the new value of the '<em>Source Icon Connection</em>' containment reference.
+	 * @see #getSourceIconConnection()
 	 * @generated
 	 */
-	void setSourceConnection(Connection value);
+	void setSourceIconConnection(IconConnection value);
 
 	/**
-	 * Returns the value of the '<em><b>Target Connection</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Target Icon Connection</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Target Connection</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Target Icon Connection</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Target Connection</em>' containment reference.
-	 * @see #setTargetConnection(Connection)
-	 * @see kragstein.KragsteinPackage#getIcon_TargetConnection()
+	 * @return the value of the '<em>Target Icon Connection</em>' containment reference.
+	 * @see #setTargetIconConnection(IconConnection)
+	 * @see kragstein.KragsteinPackage#getIcon_TargetIconConnection()
 	 * @model containment="true"
 	 * @generated
 	 */
-	Connection getTargetConnection();
+	IconConnection getTargetIconConnection();
 
 	/**
-	 * Sets the value of the '{@link kragstein.Icon#getTargetConnection <em>Target Connection</em>}' containment reference.
+	 * Sets the value of the '{@link kragstein.Icon#getTargetIconConnection <em>Target Icon Connection</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Target Connection</em>' containment reference.
-	 * @see #getTargetConnection()
+	 * @param value the new value of the '<em>Target Icon Connection</em>' containment reference.
+	 * @see #getTargetIconConnection()
 	 * @generated
 	 */
-	void setTargetConnection(Connection value);
+	void setTargetIconConnection(IconConnection value);
 
 	/**
 	 * Returns the value of the '<em><b>Valence Point</b></em>' containment reference.

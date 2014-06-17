@@ -13,5 +13,5 @@ package kragstein;
  * @model
  * @generated
  */
-public interface Composition extends ClassMultipleRelationships {
+public interface Composition extends Relationship {
 } // Composition

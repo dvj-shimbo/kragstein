@@ -3,6 +3,7 @@
 package kragstein.impl;
 
 import kragstein.Case;
+import kragstein.CaseConnection;
 import kragstein.KragsteinPackage;
 import kragstein.Route;
 
@@ -24,6 +25,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link kragstein.impl.CaseImpl#getName <em>Name</em>}</li>
  *   <li>{@link kragstein.impl.CaseImpl#getValue <em>Value</em>}</li>
  *   <li>{@link kragstein.impl.CaseImpl#getRoute <em>Route</em>}</li>
+ *   <li>{@link kragstein.impl.CaseImpl#getSourceCaseConnection <em>Source Case Connection</em>}</li>
+ *   <li>{@link kragstein.impl.CaseImpl#getTargetCaseConnection <em>Target Case Connection</em>}</li>
  * </ul>
  * </p>
  *
@@ -79,6 +82,26 @@ public class CaseImpl extends IconImpl implements Case {
 	 * @ordered
 	 */
 	protected Route route;
+
+	/**
+	 * The cached value of the '{@link #getSourceCaseConnection() <em>Source Case Connection</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSourceCaseConnection()
+	 * @generated
+	 * @ordered
+	 */
+	protected CaseConnection sourceCaseConnection;
+
+	/**
+	 * The cached value of the '{@link #getTargetCaseConnection() <em>Target Case Connection</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTargetCaseConnection()
+	 * @generated
+	 * @ordered
+	 */
+	protected CaseConnection targetCaseConnection;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -189,11 +212,101 @@ public class CaseImpl extends IconImpl implements Case {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public CaseConnection getSourceCaseConnection() {
+		return sourceCaseConnection;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetSourceCaseConnection(CaseConnection newSourceCaseConnection, NotificationChain msgs) {
+		CaseConnection oldSourceCaseConnection = sourceCaseConnection;
+		sourceCaseConnection = newSourceCaseConnection;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, KragsteinPackage.CASE__SOURCE_CASE_CONNECTION, oldSourceCaseConnection, newSourceCaseConnection);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSourceCaseConnection(CaseConnection newSourceCaseConnection) {
+		if (newSourceCaseConnection != sourceCaseConnection) {
+			NotificationChain msgs = null;
+			if (sourceCaseConnection != null)
+				msgs = ((InternalEObject)sourceCaseConnection).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - KragsteinPackage.CASE__SOURCE_CASE_CONNECTION, null, msgs);
+			if (newSourceCaseConnection != null)
+				msgs = ((InternalEObject)newSourceCaseConnection).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - KragsteinPackage.CASE__SOURCE_CASE_CONNECTION, null, msgs);
+			msgs = basicSetSourceCaseConnection(newSourceCaseConnection, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, KragsteinPackage.CASE__SOURCE_CASE_CONNECTION, newSourceCaseConnection, newSourceCaseConnection));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CaseConnection getTargetCaseConnection() {
+		return targetCaseConnection;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetTargetCaseConnection(CaseConnection newTargetCaseConnection, NotificationChain msgs) {
+		CaseConnection oldTargetCaseConnection = targetCaseConnection;
+		targetCaseConnection = newTargetCaseConnection;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, KragsteinPackage.CASE__TARGET_CASE_CONNECTION, oldTargetCaseConnection, newTargetCaseConnection);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTargetCaseConnection(CaseConnection newTargetCaseConnection) {
+		if (newTargetCaseConnection != targetCaseConnection) {
+			NotificationChain msgs = null;
+			if (targetCaseConnection != null)
+				msgs = ((InternalEObject)targetCaseConnection).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - KragsteinPackage.CASE__TARGET_CASE_CONNECTION, null, msgs);
+			if (newTargetCaseConnection != null)
+				msgs = ((InternalEObject)newTargetCaseConnection).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - KragsteinPackage.CASE__TARGET_CASE_CONNECTION, null, msgs);
+			msgs = basicSetTargetCaseConnection(newTargetCaseConnection, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, KragsteinPackage.CASE__TARGET_CASE_CONNECTION, newTargetCaseConnection, newTargetCaseConnection));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case KragsteinPackage.CASE__ROUTE:
 				return basicSetRoute(null, msgs);
+			case KragsteinPackage.CASE__SOURCE_CASE_CONNECTION:
+				return basicSetSourceCaseConnection(null, msgs);
+			case KragsteinPackage.CASE__TARGET_CASE_CONNECTION:
+				return basicSetTargetCaseConnection(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -212,6 +325,10 @@ public class CaseImpl extends IconImpl implements Case {
 				return getValue();
 			case KragsteinPackage.CASE__ROUTE:
 				return getRoute();
+			case KragsteinPackage.CASE__SOURCE_CASE_CONNECTION:
+				return getSourceCaseConnection();
+			case KragsteinPackage.CASE__TARGET_CASE_CONNECTION:
+				return getTargetCaseConnection();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -232,6 +349,12 @@ public class CaseImpl extends IconImpl implements Case {
 				return;
 			case KragsteinPackage.CASE__ROUTE:
 				setRoute((Route)newValue);
+				return;
+			case KragsteinPackage.CASE__SOURCE_CASE_CONNECTION:
+				setSourceCaseConnection((CaseConnection)newValue);
+				return;
+			case KragsteinPackage.CASE__TARGET_CASE_CONNECTION:
+				setTargetCaseConnection((CaseConnection)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -254,6 +377,12 @@ public class CaseImpl extends IconImpl implements Case {
 			case KragsteinPackage.CASE__ROUTE:
 				setRoute((Route)null);
 				return;
+			case KragsteinPackage.CASE__SOURCE_CASE_CONNECTION:
+				setSourceCaseConnection((CaseConnection)null);
+				return;
+			case KragsteinPackage.CASE__TARGET_CASE_CONNECTION:
+				setTargetCaseConnection((CaseConnection)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -272,6 +401,10 @@ public class CaseImpl extends IconImpl implements Case {
 				return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
 			case KragsteinPackage.CASE__ROUTE:
 				return route != null;
+			case KragsteinPackage.CASE__SOURCE_CASE_CONNECTION:
+				return sourceCaseConnection != null;
+			case KragsteinPackage.CASE__TARGET_CASE_CONNECTION:
+				return targetCaseConnection != null;
 		}
 		return super.eIsSet(featureID);
 	}

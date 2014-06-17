@@ -2,6 +2,8 @@
  */
 package kragstein.tests;
 
+import junit.framework.TestCase;
+
 import junit.textui.TestRunner;
 
 import kragstein.KragsteinFactory;
@@ -12,7 +14,15 @@ import kragstein.KragsteinFactory;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ClassTest extends UnitTest {
+public class ClassTest extends TestCase {
+
+	/**
+	 * The fixture for this Class test case.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected kragstein.Class fixture = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -34,14 +44,23 @@ public class ClassTest extends UnitTest {
 	}
 
 	/**
+	 * Sets the fixture for this Class test case.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void setFixture(kragstein.Class fixture) {
+		this.fixture = fixture;
+	}
+
+	/**
 	 * Returns the fixture for this Class test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	protected kragstein.Class getFixture() {
-		return (kragstein.Class)fixture;
+		return fixture;
 	}
 
 	/**

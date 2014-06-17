@@ -4,7 +4,6 @@
  */
 package kragstein.validation;
 
-import kragstein.Unit;
 import kragstein.importedPackage;
 
 import org.eclipse.emf.common.util.EList;
@@ -20,6 +19,6 @@ public interface UMLDiagrammValidator {
 
 	boolean validateLang(String value);
 	boolean validatePackageName(String value);
-	boolean validateUnits(EList<Unit> value);
-	boolean validatePackages(EList<importedPackage> value);
+	boolean validateClasses(EList<kragstein.Class> value);
+	boolean validateImportedPackages(EList<importedPackage> value);
 }

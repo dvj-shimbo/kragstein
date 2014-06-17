@@ -12,6 +12,7 @@ package kragstein;
  * The following features are supported:
  * <ul>
  *   <li>{@link kragstein.Adress#getName <em>Name</em>}</li>
+ *   <li>{@link kragstein.Adress#isIsLoop <em>Is Loop</em>}</li>
  * </ul>
  * </p>
  *
@@ -45,5 +46,31 @@ public interface Adress extends Icon {
 	 * @generated
 	 */
 	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Is Loop</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Is Loop</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Is Loop</em>' attribute.
+	 * @see #setIsLoop(boolean)
+	 * @see kragstein.KragsteinPackage#getAdress_IsLoop()
+	 * @model
+	 * @generated
+	 */
+	boolean isIsLoop();
+
+	/**
+	 * Sets the value of the '{@link kragstein.Adress#isIsLoop <em>Is Loop</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Is Loop</em>' attribute.
+	 * @see #isIsLoop()
+	 * @generated
+	 */
+	void setIsLoop(boolean value);
 
 } // Adress

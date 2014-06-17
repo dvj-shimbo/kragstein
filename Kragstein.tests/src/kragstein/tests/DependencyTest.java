@@ -2,6 +2,8 @@
  */
 package kragstein.tests;
 
+import junit.framework.TestCase;
+
 import junit.textui.TestRunner;
 
 import kragstein.Dependency;
@@ -13,7 +15,15 @@ import kragstein.KragsteinFactory;
  * <!-- end-user-doc -->
  * @generated
  */
-public class DependencyTest extends ClassMultipleRelationshipsTest {
+public class DependencyTest extends TestCase {
+
+	/**
+	 * The fixture for this Dependency test case.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Dependency fixture = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -35,14 +45,23 @@ public class DependencyTest extends ClassMultipleRelationshipsTest {
 	}
 
 	/**
+	 * Sets the fixture for this Dependency test case.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void setFixture(Dependency fixture) {
+		this.fixture = fixture;
+	}
+
+	/**
 	 * Returns the fixture for this Dependency test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	protected Dependency getFixture() {
-		return (Dependency)fixture;
+		return fixture;
 	}
 
 	/**

@@ -11,12 +11,11 @@ import kragstein.BeginLoop;
 import kragstein.Branch;
 import kragstein.BranchConnection;
 import kragstein.Case;
+import kragstein.CaseConnection;
 import kragstein.Choice;
-import kragstein.ClassMultipleRelationships;
 import kragstein.Comment;
 import kragstein.CommentLink;
 import kragstein.Composition;
-import kragstein.Connection;
 import kragstein.Dependency;
 import kragstein.DrakonDiagramm;
 import kragstein.EmptyConnector;
@@ -27,11 +26,9 @@ import kragstein.Generalization;
 import kragstein.Header;
 import kragstein.Headline;
 import kragstein.Icon;
+import kragstein.IconConnection;
 import kragstein.Input;
 import kragstein.Insertion;
-import kragstein.Interface;
-import kragstein.InterfaceMethod;
-import kragstein.InterfaceParameter;
 import kragstein.KragsteinFactory;
 import kragstein.KragsteinPackage;
 import kragstein.LeftComment;
@@ -46,7 +43,6 @@ import kragstein.RightComment;
 import kragstein.Route;
 import kragstein.Shelf;
 import kragstein.UMLDiagramm;
-import kragstein.Unit;
 import kragstein.ValencePoint;
 import kragstein.importedPackage;
 
@@ -97,13 +93,6 @@ public class KragsteinPackageImpl extends EPackageImpl implements KragsteinPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass classMultipleRelationshipsEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass realizationEClass = null;
 
 	/**
@@ -147,20 +136,6 @@ public class KragsteinPackageImpl extends EPackageImpl implements KragsteinPacka
 	 * @generated
 	 */
 	private EClass commentLinkEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass unitEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass interfaceEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -258,7 +233,7 @@ public class KragsteinPackageImpl extends EPackageImpl implements KragsteinPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass connectionEClass = null;
+	private EClass iconConnectionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -294,6 +269,13 @@ public class KragsteinPackageImpl extends EPackageImpl implements KragsteinPacka
 	 * @generated
 	 */
 	private EClass caseEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass caseConnectionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -371,20 +353,6 @@ public class KragsteinPackageImpl extends EPackageImpl implements KragsteinPacka
 	 * @generated
 	 */
 	private EClass endEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass interfaceMethodEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass interfaceParameterEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -479,7 +447,7 @@ public class KragsteinPackageImpl extends EPackageImpl implements KragsteinPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getUMLDiagramm_Units() {
+	public EReference getUMLDiagramm_Classes() {
 		return (EReference)umlDiagrammEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -488,7 +456,7 @@ public class KragsteinPackageImpl extends EPackageImpl implements KragsteinPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getUMLDiagramm_Packages() {
+	public EReference getUMLDiagramm_ImportedPackages() {
 		return (EReference)umlDiagrammEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -542,44 +510,35 @@ public class KragsteinPackageImpl extends EPackageImpl implements KragsteinPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getRelationship_Name() {
+		return (EAttribute)relationshipEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getRelationship_LowerBound() {
+		return (EAttribute)relationshipEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getRelationship_UpperBound() {
+		return (EAttribute)relationshipEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getGeneralization() {
 		return generalizationEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getClassMultipleRelationships() {
-		return classMultipleRelationshipsEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getClassMultipleRelationships_Name() {
-		return (EAttribute)classMultipleRelationshipsEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getClassMultipleRelationships_LowerBound() {
-		return (EAttribute)classMultipleRelationshipsEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getClassMultipleRelationships_UpperBound() {
-		return (EAttribute)classMultipleRelationshipsEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -659,7 +618,7 @@ public class KragsteinPackageImpl extends EPackageImpl implements KragsteinPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCommentLink_SourceConnection() {
+	public EReference getCommentLink_SourceCommentLink() {
 		return (EReference)commentLinkEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -668,7 +627,7 @@ public class KragsteinPackageImpl extends EPackageImpl implements KragsteinPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCommentLink_TargetConnection() {
+	public EReference getCommentLink_TargetCommentLink() {
 		return (EReference)commentLinkEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -695,78 +654,6 @@ public class KragsteinPackageImpl extends EPackageImpl implements KragsteinPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getUnit() {
-		return unitEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getUnit_Name() {
-		return (EAttribute)unitEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getUnit_SourceConnection() {
-		return (EReference)unitEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getUnit_TargetConnection() {
-		return (EReference)unitEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getUnit_Visibility() {
-		return (EAttribute)unitEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getUnit_Comments() {
-		return (EReference)unitEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getInterface() {
-		return interfaceEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getInterface_Methods() {
-		return (EReference)interfaceEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getClass_() {
 		return classEClass;
 	}
@@ -776,7 +663,7 @@ public class KragsteinPackageImpl extends EPackageImpl implements KragsteinPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getClass_TargetConnections() {
+	public EReference getClass_Attributes() {
 		return (EReference)classEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -785,7 +672,7 @@ public class KragsteinPackageImpl extends EPackageImpl implements KragsteinPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getClass_SourceConnections() {
+	public EReference getClass_Methods() {
 		return (EReference)classEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -794,7 +681,7 @@ public class KragsteinPackageImpl extends EPackageImpl implements KragsteinPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getClass_Attributes() {
+	public EReference getClass_Comments() {
 		return (EReference)classEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -803,7 +690,7 @@ public class KragsteinPackageImpl extends EPackageImpl implements KragsteinPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getClass_Methods() {
+	public EReference getClass_TargetRelationships() {
 		return (EReference)classEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -812,8 +699,44 @@ public class KragsteinPackageImpl extends EPackageImpl implements KragsteinPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getClass_SourceRelationships() {
+		return (EReference)classEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getClass_Name() {
+		return (EAttribute)classEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getClass_Visibility() {
+		return (EAttribute)classEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EAttribute getClass_IsSingletone() {
-		return (EAttribute)classEClass.getEStructuralFeatures().get(4);
+		return (EAttribute)classEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getClass_IsInterface() {
+		return (EAttribute)classEClass.getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -1091,7 +1014,7 @@ public class KragsteinPackageImpl extends EPackageImpl implements KragsteinPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getBranch_SourceConnection() {
+	public EReference getBranch_SourceBranchConnection() {
 		return (EReference)branchEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -1100,7 +1023,7 @@ public class KragsteinPackageImpl extends EPackageImpl implements KragsteinPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getBranch_TargetConnection() {
+	public EReference getBranch_TargetBranchConnection() {
 		return (EReference)branchEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -1120,15 +1043,6 @@ public class KragsteinPackageImpl extends EPackageImpl implements KragsteinPacka
 	 */
 	public EAttribute getBranch_Name() {
 		return (EAttribute)branchEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getBranch_IsLoop() {
-		return (EAttribute)branchEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -1226,8 +1140,8 @@ public class KragsteinPackageImpl extends EPackageImpl implements KragsteinPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getConnection() {
-		return connectionEClass;
+	public EClass getIconConnection() {
+		return iconConnectionEClass;
 	}
 
 	/**
@@ -1235,8 +1149,8 @@ public class KragsteinPackageImpl extends EPackageImpl implements KragsteinPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getConnection_Target() {
-		return (EReference)connectionEClass.getEStructuralFeatures().get(0);
+	public EReference getIconConnection_Target() {
+		return (EReference)iconConnectionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1244,8 +1158,8 @@ public class KragsteinPackageImpl extends EPackageImpl implements KragsteinPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getConnection_Source() {
-		return (EReference)connectionEClass.getEStructuralFeatures().get(1);
+	public EReference getIconConnection_Source() {
+		return (EReference)iconConnectionEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1262,7 +1176,7 @@ public class KragsteinPackageImpl extends EPackageImpl implements KragsteinPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getIcon_SourceConnection() {
+	public EReference getIcon_SourceIconConnection() {
 		return (EReference)iconEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -1271,7 +1185,7 @@ public class KragsteinPackageImpl extends EPackageImpl implements KragsteinPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getIcon_TargetConnection() {
+	public EReference getIcon_TargetIconConnection() {
 		return (EReference)iconEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -1451,6 +1365,51 @@ public class KragsteinPackageImpl extends EPackageImpl implements KragsteinPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getCase_SourceCaseConnection() {
+		return (EReference)caseEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCase_TargetCaseConnection() {
+		return (EReference)caseEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCaseConnection() {
+		return caseConnectionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCaseConnection_Source() {
+		return (EReference)caseConnectionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCaseConnection_Target() {
+		return (EReference)caseConnectionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getHeadline() {
 		return headlineEClass;
 	}
@@ -1469,6 +1428,15 @@ public class KragsteinPackageImpl extends EPackageImpl implements KragsteinPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getHeadline_IsLoop() {
+		return (EAttribute)headlineEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getAdress() {
 		return adressEClass;
 	}
@@ -1480,6 +1448,15 @@ public class KragsteinPackageImpl extends EPackageImpl implements KragsteinPacka
 	 */
 	public EAttribute getAdress_Name() {
 		return (EAttribute)adressEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAdress_IsLoop() {
+		return (EAttribute)adressEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1730,105 +1707,6 @@ public class KragsteinPackageImpl extends EPackageImpl implements KragsteinPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getInterfaceMethod() {
-		return interfaceMethodEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getInterfaceMethod_Name() {
-		return (EAttribute)interfaceMethodEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getInterfaceMethod_Type() {
-		return (EAttribute)interfaceMethodEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getInterfaceMethod_Parameters() {
-		return (EReference)interfaceMethodEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getInterfaceMethod_Visibility() {
-		return (EAttribute)interfaceMethodEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getInterfaceMethod_IsConst() {
-		return (EAttribute)interfaceMethodEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getInterfaceMethod_IsVirtual() {
-		return (EAttribute)interfaceMethodEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getInterfaceMethod_IsStatic() {
-		return (EAttribute)interfaceMethodEClass.getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getInterfaceParameter() {
-		return interfaceParameterEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getInterfaceParameter_Name() {
-		return (EAttribute)interfaceParameterEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getInterfaceParameter_Type() {
-		return (EAttribute)interfaceParameterEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public KragsteinFactory getKragsteinFactory() {
 		return (KragsteinFactory)getEFactoryInstance();
 	}
@@ -1855,8 +1733,8 @@ public class KragsteinPackageImpl extends EPackageImpl implements KragsteinPacka
 		umlDiagrammEClass = createEClass(UML_DIAGRAMM);
 		createEAttribute(umlDiagrammEClass, UML_DIAGRAMM__LANG);
 		createEAttribute(umlDiagrammEClass, UML_DIAGRAMM__PACKAGE_NAME);
-		createEReference(umlDiagrammEClass, UML_DIAGRAMM__UNITS);
-		createEReference(umlDiagrammEClass, UML_DIAGRAMM__PACKAGES);
+		createEReference(umlDiagrammEClass, UML_DIAGRAMM__CLASSES);
+		createEReference(umlDiagrammEClass, UML_DIAGRAMM__IMPORTED_PACKAGES);
 
 		importedPackageEClass = createEClass(IMPORTED_PACKAGE);
 		createEAttribute(importedPackageEClass, IMPORTED_PACKAGE__PACKAGE_NAME);
@@ -1864,13 +1742,11 @@ public class KragsteinPackageImpl extends EPackageImpl implements KragsteinPacka
 		relationshipEClass = createEClass(RELATIONSHIP);
 		createEReference(relationshipEClass, RELATIONSHIP__TARGET);
 		createEReference(relationshipEClass, RELATIONSHIP__SOURCE);
+		createEAttribute(relationshipEClass, RELATIONSHIP__NAME);
+		createEAttribute(relationshipEClass, RELATIONSHIP__LOWER_BOUND);
+		createEAttribute(relationshipEClass, RELATIONSHIP__UPPER_BOUND);
 
 		generalizationEClass = createEClass(GENERALIZATION);
-
-		classMultipleRelationshipsEClass = createEClass(CLASS_MULTIPLE_RELATIONSHIPS);
-		createEAttribute(classMultipleRelationshipsEClass, CLASS_MULTIPLE_RELATIONSHIPS__NAME);
-		createEAttribute(classMultipleRelationshipsEClass, CLASS_MULTIPLE_RELATIONSHIPS__LOWER_BOUND);
-		createEAttribute(classMultipleRelationshipsEClass, CLASS_MULTIPLE_RELATIONSHIPS__UPPER_BOUND);
 
 		realizationEClass = createEClass(REALIZATION);
 
@@ -1886,27 +1762,21 @@ public class KragsteinPackageImpl extends EPackageImpl implements KragsteinPacka
 		createEAttribute(commentEClass, COMMENT__VALUE);
 
 		commentLinkEClass = createEClass(COMMENT_LINK);
-		createEReference(commentLinkEClass, COMMENT_LINK__SOURCE_CONNECTION);
-		createEReference(commentLinkEClass, COMMENT_LINK__TARGET_CONNECTION);
+		createEReference(commentLinkEClass, COMMENT_LINK__SOURCE_COMMENT_LINK);
+		createEReference(commentLinkEClass, COMMENT_LINK__TARGET_COMMENT_LINK);
 		createEReference(commentLinkEClass, COMMENT_LINK__SOURCE);
 		createEReference(commentLinkEClass, COMMENT_LINK__TARGET);
 
-		unitEClass = createEClass(UNIT);
-		createEAttribute(unitEClass, UNIT__NAME);
-		createEReference(unitEClass, UNIT__SOURCE_CONNECTION);
-		createEReference(unitEClass, UNIT__TARGET_CONNECTION);
-		createEAttribute(unitEClass, UNIT__VISIBILITY);
-		createEReference(unitEClass, UNIT__COMMENTS);
-
-		interfaceEClass = createEClass(INTERFACE);
-		createEReference(interfaceEClass, INTERFACE__METHODS);
-
 		classEClass = createEClass(CLASS);
-		createEReference(classEClass, CLASS__TARGET_CONNECTIONS);
-		createEReference(classEClass, CLASS__SOURCE_CONNECTIONS);
 		createEReference(classEClass, CLASS__ATTRIBUTES);
 		createEReference(classEClass, CLASS__METHODS);
+		createEReference(classEClass, CLASS__COMMENTS);
+		createEReference(classEClass, CLASS__TARGET_RELATIONSHIPS);
+		createEReference(classEClass, CLASS__SOURCE_RELATIONSHIPS);
+		createEAttribute(classEClass, CLASS__NAME);
+		createEAttribute(classEClass, CLASS__VISIBILITY);
 		createEAttribute(classEClass, CLASS__IS_SINGLETONE);
+		createEAttribute(classEClass, CLASS__IS_INTERFACE);
 
 		attributeEClass = createEClass(ATTRIBUTE);
 		createEAttribute(attributeEClass, ATTRIBUTE__NAME);
@@ -1944,11 +1814,10 @@ public class KragsteinPackageImpl extends EPackageImpl implements KragsteinPacka
 		createEReference(formalParametersEClass, FORMAL_PARAMETERS__PARAMETERS);
 
 		branchEClass = createEClass(BRANCH);
-		createEReference(branchEClass, BRANCH__SOURCE_CONNECTION);
-		createEReference(branchEClass, BRANCH__TARGET_CONNECTION);
+		createEReference(branchEClass, BRANCH__SOURCE_BRANCH_CONNECTION);
+		createEReference(branchEClass, BRANCH__TARGET_BRANCH_CONNECTION);
 		createEReference(branchEClass, BRANCH__ROUTE);
 		createEAttribute(branchEClass, BRANCH__NAME);
-		createEAttribute(branchEClass, BRANCH__IS_LOOP);
 
 		branchConnectionEClass = createEClass(BRANCH_CONNECTION);
 		createEReference(branchConnectionEClass, BRANCH_CONNECTION__SOURCE);
@@ -1965,13 +1834,13 @@ public class KragsteinPackageImpl extends EPackageImpl implements KragsteinPacka
 
 		valencePointEClass = createEClass(VALENCE_POINT);
 
-		connectionEClass = createEClass(CONNECTION);
-		createEReference(connectionEClass, CONNECTION__TARGET);
-		createEReference(connectionEClass, CONNECTION__SOURCE);
+		iconConnectionEClass = createEClass(ICON_CONNECTION);
+		createEReference(iconConnectionEClass, ICON_CONNECTION__TARGET);
+		createEReference(iconConnectionEClass, ICON_CONNECTION__SOURCE);
 
 		iconEClass = createEClass(ICON);
-		createEReference(iconEClass, ICON__SOURCE_CONNECTION);
-		createEReference(iconEClass, ICON__TARGET_CONNECTION);
+		createEReference(iconEClass, ICON__SOURCE_ICON_CONNECTION);
+		createEReference(iconEClass, ICON__TARGET_ICON_CONNECTION);
 		createEReference(iconEClass, ICON__VALENCE_POINT);
 		createEReference(iconEClass, ICON__LEFT_COMMENT);
 		createEReference(iconEClass, ICON__RIGHT_COMMENT);
@@ -1995,12 +1864,20 @@ public class KragsteinPackageImpl extends EPackageImpl implements KragsteinPacka
 		createEAttribute(caseEClass, CASE__NAME);
 		createEAttribute(caseEClass, CASE__VALUE);
 		createEReference(caseEClass, CASE__ROUTE);
+		createEReference(caseEClass, CASE__SOURCE_CASE_CONNECTION);
+		createEReference(caseEClass, CASE__TARGET_CASE_CONNECTION);
+
+		caseConnectionEClass = createEClass(CASE_CONNECTION);
+		createEReference(caseConnectionEClass, CASE_CONNECTION__SOURCE);
+		createEReference(caseConnectionEClass, CASE_CONNECTION__TARGET);
 
 		headlineEClass = createEClass(HEADLINE);
 		createEAttribute(headlineEClass, HEADLINE__NAME);
+		createEAttribute(headlineEClass, HEADLINE__IS_LOOP);
 
 		adressEClass = createEClass(ADRESS);
 		createEAttribute(adressEClass, ADRESS__NAME);
+		createEAttribute(adressEClass, ADRESS__IS_LOOP);
 
 		insertionEClass = createEClass(INSERTION);
 		createEAttribute(insertionEClass, INSERTION__NAME);
@@ -2037,19 +1914,6 @@ public class KragsteinPackageImpl extends EPackageImpl implements KragsteinPacka
 		createEAttribute(emptyConnectorEClass, EMPTY_CONNECTOR__NAME);
 
 		endEClass = createEClass(END);
-
-		interfaceMethodEClass = createEClass(INTERFACE_METHOD);
-		createEAttribute(interfaceMethodEClass, INTERFACE_METHOD__NAME);
-		createEAttribute(interfaceMethodEClass, INTERFACE_METHOD__TYPE);
-		createEReference(interfaceMethodEClass, INTERFACE_METHOD__PARAMETERS);
-		createEAttribute(interfaceMethodEClass, INTERFACE_METHOD__VISIBILITY);
-		createEAttribute(interfaceMethodEClass, INTERFACE_METHOD__IS_CONST);
-		createEAttribute(interfaceMethodEClass, INTERFACE_METHOD__IS_VIRTUAL);
-		createEAttribute(interfaceMethodEClass, INTERFACE_METHOD__IS_STATIC);
-
-		interfaceParameterEClass = createEClass(INTERFACE_PARAMETER);
-		createEAttribute(interfaceParameterEClass, INTERFACE_PARAMETER__NAME);
-		createEAttribute(interfaceParameterEClass, INTERFACE_PARAMETER__TYPE);
 	}
 
 	/**
@@ -2081,14 +1945,11 @@ public class KragsteinPackageImpl extends EPackageImpl implements KragsteinPacka
 
 		// Add supertypes to classes
 		generalizationEClass.getESuperTypes().add(this.getRelationship());
-		classMultipleRelationshipsEClass.getESuperTypes().add(this.getRelationship());
-		realizationEClass.getESuperTypes().add(this.getClassMultipleRelationships());
-		associationEClass.getESuperTypes().add(this.getClassMultipleRelationships());
-		aggregationEClass.getESuperTypes().add(this.getClassMultipleRelationships());
-		compositionEClass.getESuperTypes().add(this.getClassMultipleRelationships());
-		dependencyEClass.getESuperTypes().add(this.getClassMultipleRelationships());
-		interfaceEClass.getESuperTypes().add(this.getUnit());
-		classEClass.getESuperTypes().add(this.getUnit());
+		realizationEClass.getESuperTypes().add(this.getRelationship());
+		associationEClass.getESuperTypes().add(this.getRelationship());
+		aggregationEClass.getESuperTypes().add(this.getRelationship());
+		compositionEClass.getESuperTypes().add(this.getRelationship());
+		dependencyEClass.getESuperTypes().add(this.getRelationship());
 		actionEClass.getESuperTypes().add(this.getIcon());
 		questionEClass.getESuperTypes().add(this.getIcon());
 		choiceEClass.getESuperTypes().add(this.getIcon());
@@ -2109,22 +1970,20 @@ public class KragsteinPackageImpl extends EPackageImpl implements KragsteinPacka
 		initEClass(umlDiagrammEClass, UMLDiagramm.class, "UMLDiagramm", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getUMLDiagramm_Lang(), ecorePackage.getEString(), "lang", null, 0, 1, UMLDiagramm.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getUMLDiagramm_PackageName(), ecorePackage.getEString(), "packageName", null, 0, 1, UMLDiagramm.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getUMLDiagramm_Units(), this.getUnit(), null, "units", null, 0, -1, UMLDiagramm.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getUMLDiagramm_Packages(), this.getimportedPackage(), null, "packages", null, 0, -1, UMLDiagramm.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getUMLDiagramm_Classes(), this.getClass_(), null, "classes", null, 0, -1, UMLDiagramm.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getUMLDiagramm_ImportedPackages(), this.getimportedPackage(), null, "importedPackages", null, 0, -1, UMLDiagramm.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(importedPackageEClass, importedPackage.class, "importedPackage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getimportedPackage_PackageName(), ecorePackage.getEString(), "packageName", null, 0, 1, importedPackage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(relationshipEClass, Relationship.class, "Relationship", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getRelationship_Target(), this.getUnit(), null, "target", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getRelationship_Source(), this.getUnit(), null, "source", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRelationship_Target(), this.getClass_(), null, "target", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRelationship_Source(), this.getClass_(), null, "source", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRelationship_Name(), ecorePackage.getEString(), "name", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRelationship_LowerBound(), ecorePackage.getEInt(), "lowerBound", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRelationship_UpperBound(), ecorePackage.getEInt(), "upperBound", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(generalizationEClass, Generalization.class, "Generalization", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(classMultipleRelationshipsEClass, ClassMultipleRelationships.class, "ClassMultipleRelationships", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getClassMultipleRelationships_Name(), ecorePackage.getEString(), "name", null, 0, 1, ClassMultipleRelationships.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getClassMultipleRelationships_LowerBound(), ecorePackage.getEInt(), "lowerBound", null, 0, 1, ClassMultipleRelationships.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getClassMultipleRelationships_UpperBound(), ecorePackage.getEInt(), "upperBound", null, 0, 1, ClassMultipleRelationships.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(realizationEClass, Realization.class, "Realization", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -2140,27 +1999,21 @@ public class KragsteinPackageImpl extends EPackageImpl implements KragsteinPacka
 		initEAttribute(getComment_Value(), ecorePackage.getEString(), "value", null, 0, 1, Comment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(commentLinkEClass, CommentLink.class, "CommentLink", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getCommentLink_SourceConnection(), this.getComment(), null, "sourceConnection", null, 0, -1, CommentLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCommentLink_TargetConnection(), this.getComment(), null, "targetConnection", null, 0, -1, CommentLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCommentLink_SourceCommentLink(), this.getComment(), null, "sourceCommentLink", null, 0, -1, CommentLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCommentLink_TargetCommentLink(), this.getComment(), null, "targetCommentLink", null, 0, -1, CommentLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCommentLink_Source(), this.getComment(), null, "source", null, 0, 1, CommentLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCommentLink_Target(), this.getComment(), null, "target", null, 0, 1, CommentLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(unitEClass, Unit.class, "Unit", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getUnit_Name(), ecorePackage.getEString(), "name", null, 0, 1, Unit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getUnit_SourceConnection(), this.getGeneralization(), null, "sourceConnection", null, 0, 1, Unit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getUnit_TargetConnection(), this.getGeneralization(), null, "targetConnection", null, 0, 1, Unit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getUnit_Visibility(), ecorePackage.getEString(), "visibility", null, 0, 1, Unit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getUnit_Comments(), this.getComment(), null, "comments", null, 0, 1, Unit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(interfaceEClass, Interface.class, "Interface", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getInterface_Methods(), this.getInterfaceMethod(), null, "methods", null, 0, -1, Interface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEClass(classEClass, kragstein.Class.class, "Class", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getClass_TargetConnections(), this.getClassMultipleRelationships(), null, "targetConnections", null, 0, -1, kragstein.Class.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getClass_SourceConnections(), this.getClassMultipleRelationships(), null, "sourceConnections", null, 0, -1, kragstein.Class.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getClass_Attributes(), this.getAttribute(), null, "attributes", null, 0, -1, kragstein.Class.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getClass_Methods(), this.getMethod(), null, "methods", null, 0, -1, kragstein.Class.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getClass_Comments(), this.getComment(), null, "comments", null, 0, 1, kragstein.Class.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getClass_TargetRelationships(), this.getRelationship(), null, "targetRelationships", null, 0, -1, kragstein.Class.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getClass_SourceRelationships(), this.getRelationship(), null, "sourceRelationships", null, 0, -1, kragstein.Class.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getClass_Name(), ecorePackage.getEString(), "name", null, 0, 1, kragstein.Class.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getClass_Visibility(), ecorePackage.getEString(), "visibility", null, 0, 1, kragstein.Class.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getClass_IsSingletone(), ecorePackage.getEBoolean(), "isSingletone", null, 0, 1, kragstein.Class.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getClass_IsInterface(), ecorePackage.getEBoolean(), "isInterface", null, 0, 1, kragstein.Class.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(attributeEClass, Attribute.class, "Attribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAttribute_Name(), ecorePackage.getEString(), "name", null, 0, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2198,11 +2051,10 @@ public class KragsteinPackageImpl extends EPackageImpl implements KragsteinPacka
 		initEReference(getFormalParameters_Parameters(), this.getParameter(), null, "parameters", null, 1, -1, FormalParameters.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(branchEClass, Branch.class, "Branch", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getBranch_SourceConnection(), this.getBranchConnection(), null, "sourceConnection", null, 0, 1, Branch.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getBranch_TargetConnection(), this.getBranchConnection(), null, "targetConnection", null, 0, 1, Branch.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBranch_SourceBranchConnection(), this.getBranchConnection(), null, "sourceBranchConnection", null, 0, 1, Branch.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBranch_TargetBranchConnection(), this.getBranchConnection(), null, "targetBranchConnection", null, 0, 1, Branch.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getBranch_Route(), this.getRoute(), null, "route", null, 1, 1, Branch.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getBranch_Name(), ecorePackage.getEString(), "name", null, 0, 1, Branch.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getBranch_IsLoop(), ecorePackage.getEBoolean(), "isLoop", null, 0, 1, Branch.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(branchConnectionEClass, BranchConnection.class, "BranchConnection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getBranchConnection_Source(), this.getBranch(), null, "source", null, 0, 1, BranchConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2219,13 +2071,13 @@ public class KragsteinPackageImpl extends EPackageImpl implements KragsteinPacka
 
 		initEClass(valencePointEClass, ValencePoint.class, "ValencePoint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(connectionEClass, Connection.class, "Connection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getConnection_Target(), this.getIcon(), null, "target", null, 0, 1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getConnection_Source(), this.getIcon(), null, "source", null, 0, 1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(iconConnectionEClass, IconConnection.class, "IconConnection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getIconConnection_Target(), this.getIcon(), null, "target", null, 0, 1, IconConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getIconConnection_Source(), this.getIcon(), null, "source", null, 0, 1, IconConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(iconEClass, Icon.class, "Icon", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getIcon_SourceConnection(), this.getConnection(), null, "sourceConnection", null, 0, 1, Icon.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getIcon_TargetConnection(), this.getConnection(), null, "targetConnection", null, 0, 1, Icon.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getIcon_SourceIconConnection(), this.getIconConnection(), null, "sourceIconConnection", null, 0, 1, Icon.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getIcon_TargetIconConnection(), this.getIconConnection(), null, "targetIconConnection", null, 0, 1, Icon.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getIcon_ValencePoint(), this.getValencePoint(), null, "valencePoint", null, 0, 1, Icon.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getIcon_LeftComment(), this.getLeftComment(), null, "leftComment", null, 0, 1, Icon.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getIcon_RightComment(), this.getRightComment(), null, "RightComment", null, 0, 1, Icon.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2249,12 +2101,20 @@ public class KragsteinPackageImpl extends EPackageImpl implements KragsteinPacka
 		initEAttribute(getCase_Name(), ecorePackage.getEString(), "name", null, 0, 1, Case.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCase_Value(), ecorePackage.getEString(), "value", null, 0, 1, Case.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCase_Route(), this.getRoute(), null, "route", null, 0, 1, Case.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCase_SourceCaseConnection(), this.getCaseConnection(), null, "sourceCaseConnection", null, 0, 1, Case.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCase_TargetCaseConnection(), this.getCaseConnection(), null, "targetCaseConnection", null, 0, 1, Case.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(caseConnectionEClass, CaseConnection.class, "CaseConnection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getCaseConnection_Source(), this.getCase(), null, "source", null, 0, 1, CaseConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCaseConnection_Target(), this.getCase(), null, "target", null, 0, 1, CaseConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(headlineEClass, Headline.class, "Headline", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getHeadline_Name(), ecorePackage.getEString(), "name", null, 0, 1, Headline.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getHeadline_IsLoop(), ecorePackage.getEBoolean(), "isLoop", null, 0, 1, Headline.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(adressEClass, Adress.class, "Adress", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAdress_Name(), ecorePackage.getEString(), "name", null, 0, 1, Adress.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAdress_IsLoop(), ecorePackage.getEBoolean(), "isLoop", null, 0, 1, Adress.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(insertionEClass, Insertion.class, "Insertion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getInsertion_Name(), ecorePackage.getEString(), "name", null, 0, 1, Insertion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2277,12 +2137,12 @@ public class KragsteinPackageImpl extends EPackageImpl implements KragsteinPacka
 		initEClass(outputEClass, Output.class, "Output", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getOutput_Name(), ecorePackage.getEString(), "name", null, 0, 1, Output.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getOutput_Value(), ecorePackage.getEString(), "value", null, 0, 1, Output.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getOutput_Method(), this.getMethod(), null, "method", null, 0, 1, Output.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOutput_Method(), this.getMethod(), null, "method", null, 1, 1, Output.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(inputEClass, Input.class, "Input", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getInput_Name(), ecorePackage.getEString(), "name", null, 0, 1, Input.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getInput_Value(), ecorePackage.getEString(), "value", null, 0, 1, Input.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getInput_Method(), this.getMethod(), null, "method", null, 0, 1, Input.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getInput_Method(), this.getMethod(), null, "method", null, 1, 1, Input.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(loopArrowEClass, LoopArrow.class, "LoopArrow", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getLoopArrow_Name(), ecorePackage.getEString(), "name", null, 0, 1, LoopArrow.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2291,19 +2151,6 @@ public class KragsteinPackageImpl extends EPackageImpl implements KragsteinPacka
 		initEAttribute(getEmptyConnector_Name(), ecorePackage.getEString(), "name", null, 0, 1, EmptyConnector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(endEClass, End.class, "End", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(interfaceMethodEClass, InterfaceMethod.class, "InterfaceMethod", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getInterfaceMethod_Name(), ecorePackage.getEString(), "name", null, 0, 1, InterfaceMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getInterfaceMethod_Type(), ecorePackage.getEString(), "type", null, 0, 1, InterfaceMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getInterfaceMethod_Parameters(), this.getInterfaceParameter(), null, "parameters", null, 0, -1, InterfaceMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getInterfaceMethod_Visibility(), ecorePackage.getEString(), "visibility", null, 0, 1, InterfaceMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getInterfaceMethod_IsConst(), ecorePackage.getEBoolean(), "isConst", null, 0, 1, InterfaceMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getInterfaceMethod_IsVirtual(), ecorePackage.getEBoolean(), "isVirtual", null, 0, 1, InterfaceMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getInterfaceMethod_IsStatic(), ecorePackage.getEBoolean(), "isStatic", null, 0, 1, InterfaceMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(interfaceParameterEClass, InterfaceParameter.class, "InterfaceParameter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getInterfaceParameter_Name(), ecorePackage.getEString(), "name", null, 0, 1, InterfaceParameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getInterfaceParameter_Type(), ecorePackage.getEString(), "type", null, 0, 1, InterfaceParameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

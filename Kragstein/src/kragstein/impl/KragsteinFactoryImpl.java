@@ -11,11 +11,11 @@ import kragstein.BeginLoop;
 import kragstein.Branch;
 import kragstein.BranchConnection;
 import kragstein.Case;
+import kragstein.CaseConnection;
 import kragstein.Choice;
 import kragstein.Comment;
 import kragstein.CommentLink;
 import kragstein.Composition;
-import kragstein.Connection;
 import kragstein.Dependency;
 import kragstein.DrakonDiagramm;
 import kragstein.EmptyConnector;
@@ -25,11 +25,9 @@ import kragstein.FormalParameters;
 import kragstein.Generalization;
 import kragstein.Header;
 import kragstein.Headline;
+import kragstein.IconConnection;
 import kragstein.Input;
 import kragstein.Insertion;
-import kragstein.Interface;
-import kragstein.InterfaceMethod;
-import kragstein.InterfaceParameter;
 import kragstein.KragsteinFactory;
 import kragstein.KragsteinPackage;
 import kragstein.LeftComment;
@@ -108,7 +106,6 @@ public class KragsteinFactoryImpl extends EFactoryImpl implements KragsteinFacto
 			case KragsteinPackage.DEPENDENCY: return createDependency();
 			case KragsteinPackage.COMMENT: return createComment();
 			case KragsteinPackage.COMMENT_LINK: return createCommentLink();
-			case KragsteinPackage.INTERFACE: return createInterface();
 			case KragsteinPackage.CLASS: return createClass();
 			case KragsteinPackage.ATTRIBUTE: return createAttribute();
 			case KragsteinPackage.METHOD: return createMethod();
@@ -122,11 +119,12 @@ public class KragsteinFactoryImpl extends EFactoryImpl implements KragsteinFacto
 			case KragsteinPackage.RIGHT_COMMENT: return createRightComment();
 			case KragsteinPackage.LEFT_COMMENT: return createLeftComment();
 			case KragsteinPackage.VALENCE_POINT: return createValencePoint();
-			case KragsteinPackage.CONNECTION: return createConnection();
+			case KragsteinPackage.ICON_CONNECTION: return createIconConnection();
 			case KragsteinPackage.ACTION: return createAction();
 			case KragsteinPackage.QUESTION: return createQuestion();
 			case KragsteinPackage.CHOICE: return createChoice();
 			case KragsteinPackage.CASE: return createCase();
+			case KragsteinPackage.CASE_CONNECTION: return createCaseConnection();
 			case KragsteinPackage.HEADLINE: return createHeadline();
 			case KragsteinPackage.ADRESS: return createAdress();
 			case KragsteinPackage.INSERTION: return createInsertion();
@@ -138,8 +136,6 @@ public class KragsteinFactoryImpl extends EFactoryImpl implements KragsteinFacto
 			case KragsteinPackage.LOOP_ARROW: return createLoopArrow();
 			case KragsteinPackage.EMPTY_CONNECTOR: return createEmptyConnector();
 			case KragsteinPackage.END: return createEnd();
-			case KragsteinPackage.INTERFACE_METHOD: return createInterfaceMethod();
-			case KragsteinPackage.INTERFACE_PARAMETER: return createInterfaceParameter();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -243,16 +239,6 @@ public class KragsteinFactoryImpl extends EFactoryImpl implements KragsteinFacto
 	public CommentLink createCommentLink() {
 		CommentLinkImpl commentLink = new CommentLinkImpl();
 		return commentLink;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Interface createInterface() {
-		InterfaceImpl interface_ = new InterfaceImpl();
-		return interface_;
 	}
 
 	/**
@@ -390,9 +376,9 @@ public class KragsteinFactoryImpl extends EFactoryImpl implements KragsteinFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Connection createConnection() {
-		ConnectionImpl connection = new ConnectionImpl();
-		return connection;
+	public IconConnection createIconConnection() {
+		IconConnectionImpl iconConnection = new IconConnectionImpl();
+		return iconConnection;
 	}
 
 	/**
@@ -433,6 +419,16 @@ public class KragsteinFactoryImpl extends EFactoryImpl implements KragsteinFacto
 	public Case createCase() {
 		CaseImpl case_ = new CaseImpl();
 		return case_;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CaseConnection createCaseConnection() {
+		CaseConnectionImpl caseConnection = new CaseConnectionImpl();
+		return caseConnection;
 	}
 
 	/**
@@ -543,26 +539,6 @@ public class KragsteinFactoryImpl extends EFactoryImpl implements KragsteinFacto
 	public End createEnd() {
 		EndImpl end = new EndImpl();
 		return end;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public InterfaceMethod createInterfaceMethod() {
-		InterfaceMethodImpl interfaceMethod = new InterfaceMethodImpl();
-		return interfaceMethod;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public InterfaceParameter createInterfaceParameter() {
-		InterfaceParameterImpl interfaceParameter = new InterfaceParameterImpl();
-		return interfaceParameter;
 	}
 
 	/**

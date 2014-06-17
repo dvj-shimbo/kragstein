@@ -11,12 +11,11 @@ import kragstein.BeginLoop;
 import kragstein.Branch;
 import kragstein.BranchConnection;
 import kragstein.Case;
+import kragstein.CaseConnection;
 import kragstein.Choice;
-import kragstein.ClassMultipleRelationships;
 import kragstein.Comment;
 import kragstein.CommentLink;
 import kragstein.Composition;
-import kragstein.Connection;
 import kragstein.Dependency;
 import kragstein.DrakonDiagramm;
 import kragstein.EmptyConnector;
@@ -27,11 +26,9 @@ import kragstein.Generalization;
 import kragstein.Header;
 import kragstein.Headline;
 import kragstein.Icon;
+import kragstein.IconConnection;
 import kragstein.Input;
 import kragstein.Insertion;
-import kragstein.Interface;
-import kragstein.InterfaceMethod;
-import kragstein.InterfaceParameter;
 import kragstein.KragsteinPackage;
 import kragstein.LeftComment;
 import kragstein.LoopArrow;
@@ -45,7 +42,6 @@ import kragstein.RightComment;
 import kragstein.Route;
 import kragstein.Shelf;
 import kragstein.UMLDiagramm;
-import kragstein.Unit;
 import kragstein.ValencePoint;
 import kragstein.importedPackage;
 
@@ -129,10 +125,6 @@ public class KragsteinAdapterFactory extends AdapterFactoryImpl {
 				return createGeneralizationAdapter();
 			}
 			@Override
-			public Adapter caseClassMultipleRelationships(ClassMultipleRelationships object) {
-				return createClassMultipleRelationshipsAdapter();
-			}
-			@Override
 			public Adapter caseRealization(Realization object) {
 				return createRealizationAdapter();
 			}
@@ -159,14 +151,6 @@ public class KragsteinAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseCommentLink(CommentLink object) {
 				return createCommentLinkAdapter();
-			}
-			@Override
-			public Adapter caseUnit(Unit object) {
-				return createUnitAdapter();
-			}
-			@Override
-			public Adapter caseInterface(Interface object) {
-				return createInterfaceAdapter();
 			}
 			@Override
 			public Adapter caseClass(kragstein.Class object) {
@@ -221,8 +205,8 @@ public class KragsteinAdapterFactory extends AdapterFactoryImpl {
 				return createValencePointAdapter();
 			}
 			@Override
-			public Adapter caseConnection(Connection object) {
-				return createConnectionAdapter();
+			public Adapter caseIconConnection(IconConnection object) {
+				return createIconConnectionAdapter();
 			}
 			@Override
 			public Adapter caseIcon(Icon object) {
@@ -243,6 +227,10 @@ public class KragsteinAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseCase(Case object) {
 				return createCaseAdapter();
+			}
+			@Override
+			public Adapter caseCaseConnection(CaseConnection object) {
+				return createCaseConnectionAdapter();
 			}
 			@Override
 			public Adapter caseHeadline(Headline object) {
@@ -287,14 +275,6 @@ public class KragsteinAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseEnd(End object) {
 				return createEndAdapter();
-			}
-			@Override
-			public Adapter caseInterfaceMethod(InterfaceMethod object) {
-				return createInterfaceMethodAdapter();
-			}
-			@Override
-			public Adapter caseInterfaceParameter(InterfaceParameter object) {
-				return createInterfaceParameterAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -369,20 +349,6 @@ public class KragsteinAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createGeneralizationAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link kragstein.ClassMultipleRelationships <em>Class Multiple Relationships</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see kragstein.ClassMultipleRelationships
-	 * @generated
-	 */
-	public Adapter createClassMultipleRelationshipsAdapter() {
 		return null;
 	}
 
@@ -481,34 +447,6 @@ public class KragsteinAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createCommentLinkAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link kragstein.Unit <em>Unit</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see kragstein.Unit
-	 * @generated
-	 */
-	public Adapter createUnitAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link kragstein.Interface <em>Interface</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see kragstein.Interface
-	 * @generated
-	 */
-	public Adapter createInterfaceAdapter() {
 		return null;
 	}
 
@@ -695,16 +633,16 @@ public class KragsteinAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link kragstein.Connection <em>Connection</em>}'.
+	 * Creates a new adapter for an object of class '{@link kragstein.IconConnection <em>Icon Connection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see kragstein.Connection
+	 * @see kragstein.IconConnection
 	 * @generated
 	 */
-	public Adapter createConnectionAdapter() {
+	public Adapter createIconConnectionAdapter() {
 		return null;
 	}
 
@@ -775,6 +713,20 @@ public class KragsteinAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createCaseAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link kragstein.CaseConnection <em>Case Connection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see kragstein.CaseConnection
+	 * @generated
+	 */
+	public Adapter createCaseConnectionAdapter() {
 		return null;
 	}
 
@@ -929,34 +881,6 @@ public class KragsteinAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createEndAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link kragstein.InterfaceMethod <em>Interface Method</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see kragstein.InterfaceMethod
-	 * @generated
-	 */
-	public Adapter createInterfaceMethodAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link kragstein.InterfaceParameter <em>Interface Parameter</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see kragstein.InterfaceParameter
-	 * @generated
-	 */
-	public Adapter createInterfaceParameterAdapter() {
 		return null;
 	}
 

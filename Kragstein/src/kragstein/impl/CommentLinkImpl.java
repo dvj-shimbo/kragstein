@@ -29,8 +29,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link kragstein.impl.CommentLinkImpl#getSourceConnection <em>Source Connection</em>}</li>
- *   <li>{@link kragstein.impl.CommentLinkImpl#getTargetConnection <em>Target Connection</em>}</li>
+ *   <li>{@link kragstein.impl.CommentLinkImpl#getSourceCommentLink <em>Source Comment Link</em>}</li>
+ *   <li>{@link kragstein.impl.CommentLinkImpl#getTargetCommentLink <em>Target Comment Link</em>}</li>
  *   <li>{@link kragstein.impl.CommentLinkImpl#getSource <em>Source</em>}</li>
  *   <li>{@link kragstein.impl.CommentLinkImpl#getTarget <em>Target</em>}</li>
  * </ul>
@@ -40,24 +40,24 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class CommentLinkImpl extends MinimalEObjectImpl.Container implements CommentLink {
 	/**
-	 * The cached value of the '{@link #getSourceConnection() <em>Source Connection</em>}' containment reference list.
+	 * The cached value of the '{@link #getSourceCommentLink() <em>Source Comment Link</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSourceConnection()
+	 * @see #getSourceCommentLink()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Comment> sourceConnection;
+	protected EList<Comment> sourceCommentLink;
 
 	/**
-	 * The cached value of the '{@link #getTargetConnection() <em>Target Connection</em>}' containment reference list.
+	 * The cached value of the '{@link #getTargetCommentLink() <em>Target Comment Link</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTargetConnection()
+	 * @see #getTargetCommentLink()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Comment> targetConnection;
+	protected EList<Comment> targetCommentLink;
 
 	/**
 	 * The cached value of the '{@link #getSource() <em>Source</em>}' reference.
@@ -103,11 +103,11 @@ public class CommentLinkImpl extends MinimalEObjectImpl.Container implements Com
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Comment> getSourceConnection() {
-		if (sourceConnection == null) {
-			sourceConnection = new EObjectContainmentEList<Comment>(Comment.class, this, KragsteinPackage.COMMENT_LINK__SOURCE_CONNECTION);
+	public EList<Comment> getSourceCommentLink() {
+		if (sourceCommentLink == null) {
+			sourceCommentLink = new EObjectContainmentEList<Comment>(Comment.class, this, KragsteinPackage.COMMENT_LINK__SOURCE_COMMENT_LINK);
 		}
-		return sourceConnection;
+		return sourceCommentLink;
 	}
 
 	/**
@@ -115,11 +115,11 @@ public class CommentLinkImpl extends MinimalEObjectImpl.Container implements Com
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Comment> getTargetConnection() {
-		if (targetConnection == null) {
-			targetConnection = new EObjectContainmentEList<Comment>(Comment.class, this, KragsteinPackage.COMMENT_LINK__TARGET_CONNECTION);
+	public EList<Comment> getTargetCommentLink() {
+		if (targetCommentLink == null) {
+			targetCommentLink = new EObjectContainmentEList<Comment>(Comment.class, this, KragsteinPackage.COMMENT_LINK__TARGET_COMMENT_LINK);
 		}
-		return targetConnection;
+		return targetCommentLink;
 	}
 
 	/**
@@ -206,10 +206,10 @@ public class CommentLinkImpl extends MinimalEObjectImpl.Container implements Com
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case KragsteinPackage.COMMENT_LINK__SOURCE_CONNECTION:
-				return ((InternalEList<?>)getSourceConnection()).basicRemove(otherEnd, msgs);
-			case KragsteinPackage.COMMENT_LINK__TARGET_CONNECTION:
-				return ((InternalEList<?>)getTargetConnection()).basicRemove(otherEnd, msgs);
+			case KragsteinPackage.COMMENT_LINK__SOURCE_COMMENT_LINK:
+				return ((InternalEList<?>)getSourceCommentLink()).basicRemove(otherEnd, msgs);
+			case KragsteinPackage.COMMENT_LINK__TARGET_COMMENT_LINK:
+				return ((InternalEList<?>)getTargetCommentLink()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -222,10 +222,10 @@ public class CommentLinkImpl extends MinimalEObjectImpl.Container implements Com
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case KragsteinPackage.COMMENT_LINK__SOURCE_CONNECTION:
-				return getSourceConnection();
-			case KragsteinPackage.COMMENT_LINK__TARGET_CONNECTION:
-				return getTargetConnection();
+			case KragsteinPackage.COMMENT_LINK__SOURCE_COMMENT_LINK:
+				return getSourceCommentLink();
+			case KragsteinPackage.COMMENT_LINK__TARGET_COMMENT_LINK:
+				return getTargetCommentLink();
 			case KragsteinPackage.COMMENT_LINK__SOURCE:
 				if (resolve) return getSource();
 				return basicGetSource();
@@ -245,13 +245,13 @@ public class CommentLinkImpl extends MinimalEObjectImpl.Container implements Com
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case KragsteinPackage.COMMENT_LINK__SOURCE_CONNECTION:
-				getSourceConnection().clear();
-				getSourceConnection().addAll((Collection<? extends Comment>)newValue);
+			case KragsteinPackage.COMMENT_LINK__SOURCE_COMMENT_LINK:
+				getSourceCommentLink().clear();
+				getSourceCommentLink().addAll((Collection<? extends Comment>)newValue);
 				return;
-			case KragsteinPackage.COMMENT_LINK__TARGET_CONNECTION:
-				getTargetConnection().clear();
-				getTargetConnection().addAll((Collection<? extends Comment>)newValue);
+			case KragsteinPackage.COMMENT_LINK__TARGET_COMMENT_LINK:
+				getTargetCommentLink().clear();
+				getTargetCommentLink().addAll((Collection<? extends Comment>)newValue);
 				return;
 			case KragsteinPackage.COMMENT_LINK__SOURCE:
 				setSource((Comment)newValue);
@@ -271,11 +271,11 @@ public class CommentLinkImpl extends MinimalEObjectImpl.Container implements Com
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case KragsteinPackage.COMMENT_LINK__SOURCE_CONNECTION:
-				getSourceConnection().clear();
+			case KragsteinPackage.COMMENT_LINK__SOURCE_COMMENT_LINK:
+				getSourceCommentLink().clear();
 				return;
-			case KragsteinPackage.COMMENT_LINK__TARGET_CONNECTION:
-				getTargetConnection().clear();
+			case KragsteinPackage.COMMENT_LINK__TARGET_COMMENT_LINK:
+				getTargetCommentLink().clear();
 				return;
 			case KragsteinPackage.COMMENT_LINK__SOURCE:
 				setSource((Comment)null);
@@ -295,10 +295,10 @@ public class CommentLinkImpl extends MinimalEObjectImpl.Container implements Com
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case KragsteinPackage.COMMENT_LINK__SOURCE_CONNECTION:
-				return sourceConnection != null && !sourceConnection.isEmpty();
-			case KragsteinPackage.COMMENT_LINK__TARGET_CONNECTION:
-				return targetConnection != null && !targetConnection.isEmpty();
+			case KragsteinPackage.COMMENT_LINK__SOURCE_COMMENT_LINK:
+				return sourceCommentLink != null && !sourceCommentLink.isEmpty();
+			case KragsteinPackage.COMMENT_LINK__TARGET_COMMENT_LINK:
+				return targetCommentLink != null && !targetCommentLink.isEmpty();
 			case KragsteinPackage.COMMENT_LINK__SOURCE:
 				return source != null;
 			case KragsteinPackage.COMMENT_LINK__TARGET:

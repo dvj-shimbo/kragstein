@@ -6,7 +6,6 @@ import java.util.Collection;
 
 import kragstein.KragsteinPackage;
 import kragstein.UMLDiagramm;
-import kragstein.Unit;
 import kragstein.importedPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -32,8 +31,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link kragstein.impl.UMLDiagrammImpl#getLang <em>Lang</em>}</li>
  *   <li>{@link kragstein.impl.UMLDiagrammImpl#getPackageName <em>Package Name</em>}</li>
- *   <li>{@link kragstein.impl.UMLDiagrammImpl#getUnits <em>Units</em>}</li>
- *   <li>{@link kragstein.impl.UMLDiagrammImpl#getPackages <em>Packages</em>}</li>
+ *   <li>{@link kragstein.impl.UMLDiagrammImpl#getClasses <em>Classes</em>}</li>
+ *   <li>{@link kragstein.impl.UMLDiagrammImpl#getImportedPackages <em>Imported Packages</em>}</li>
  * </ul>
  * </p>
  *
@@ -81,24 +80,24 @@ public class UMLDiagrammImpl extends MinimalEObjectImpl.Container implements UML
 	protected String packageName = PACKAGE_NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getUnits() <em>Units</em>}' containment reference list.
+	 * The cached value of the '{@link #getClasses() <em>Classes</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getUnits()
+	 * @see #getClasses()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Unit> units;
+	protected EList<kragstein.Class> classes;
 
 	/**
-	 * The cached value of the '{@link #getPackages() <em>Packages</em>}' containment reference list.
+	 * The cached value of the '{@link #getImportedPackages() <em>Imported Packages</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPackages()
+	 * @see #getImportedPackages()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<importedPackage> packages;
+	protected EList<importedPackage> importedPackages;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -166,11 +165,11 @@ public class UMLDiagrammImpl extends MinimalEObjectImpl.Container implements UML
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Unit> getUnits() {
-		if (units == null) {
-			units = new EObjectContainmentEList<Unit>(Unit.class, this, KragsteinPackage.UML_DIAGRAMM__UNITS);
+	public EList<kragstein.Class> getClasses() {
+		if (classes == null) {
+			classes = new EObjectContainmentEList<kragstein.Class>(kragstein.Class.class, this, KragsteinPackage.UML_DIAGRAMM__CLASSES);
 		}
-		return units;
+		return classes;
 	}
 
 	/**
@@ -178,11 +177,11 @@ public class UMLDiagrammImpl extends MinimalEObjectImpl.Container implements UML
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<importedPackage> getPackages() {
-		if (packages == null) {
-			packages = new EObjectContainmentEList<importedPackage>(importedPackage.class, this, KragsteinPackage.UML_DIAGRAMM__PACKAGES);
+	public EList<importedPackage> getImportedPackages() {
+		if (importedPackages == null) {
+			importedPackages = new EObjectContainmentEList<importedPackage>(importedPackage.class, this, KragsteinPackage.UML_DIAGRAMM__IMPORTED_PACKAGES);
 		}
-		return packages;
+		return importedPackages;
 	}
 
 	/**
@@ -193,10 +192,10 @@ public class UMLDiagrammImpl extends MinimalEObjectImpl.Container implements UML
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case KragsteinPackage.UML_DIAGRAMM__UNITS:
-				return ((InternalEList<?>)getUnits()).basicRemove(otherEnd, msgs);
-			case KragsteinPackage.UML_DIAGRAMM__PACKAGES:
-				return ((InternalEList<?>)getPackages()).basicRemove(otherEnd, msgs);
+			case KragsteinPackage.UML_DIAGRAMM__CLASSES:
+				return ((InternalEList<?>)getClasses()).basicRemove(otherEnd, msgs);
+			case KragsteinPackage.UML_DIAGRAMM__IMPORTED_PACKAGES:
+				return ((InternalEList<?>)getImportedPackages()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -213,10 +212,10 @@ public class UMLDiagrammImpl extends MinimalEObjectImpl.Container implements UML
 				return getLang();
 			case KragsteinPackage.UML_DIAGRAMM__PACKAGE_NAME:
 				return getPackageName();
-			case KragsteinPackage.UML_DIAGRAMM__UNITS:
-				return getUnits();
-			case KragsteinPackage.UML_DIAGRAMM__PACKAGES:
-				return getPackages();
+			case KragsteinPackage.UML_DIAGRAMM__CLASSES:
+				return getClasses();
+			case KragsteinPackage.UML_DIAGRAMM__IMPORTED_PACKAGES:
+				return getImportedPackages();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -236,13 +235,13 @@ public class UMLDiagrammImpl extends MinimalEObjectImpl.Container implements UML
 			case KragsteinPackage.UML_DIAGRAMM__PACKAGE_NAME:
 				setPackageName((String)newValue);
 				return;
-			case KragsteinPackage.UML_DIAGRAMM__UNITS:
-				getUnits().clear();
-				getUnits().addAll((Collection<? extends Unit>)newValue);
+			case KragsteinPackage.UML_DIAGRAMM__CLASSES:
+				getClasses().clear();
+				getClasses().addAll((Collection<? extends kragstein.Class>)newValue);
 				return;
-			case KragsteinPackage.UML_DIAGRAMM__PACKAGES:
-				getPackages().clear();
-				getPackages().addAll((Collection<? extends importedPackage>)newValue);
+			case KragsteinPackage.UML_DIAGRAMM__IMPORTED_PACKAGES:
+				getImportedPackages().clear();
+				getImportedPackages().addAll((Collection<? extends importedPackage>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -262,11 +261,11 @@ public class UMLDiagrammImpl extends MinimalEObjectImpl.Container implements UML
 			case KragsteinPackage.UML_DIAGRAMM__PACKAGE_NAME:
 				setPackageName(PACKAGE_NAME_EDEFAULT);
 				return;
-			case KragsteinPackage.UML_DIAGRAMM__UNITS:
-				getUnits().clear();
+			case KragsteinPackage.UML_DIAGRAMM__CLASSES:
+				getClasses().clear();
 				return;
-			case KragsteinPackage.UML_DIAGRAMM__PACKAGES:
-				getPackages().clear();
+			case KragsteinPackage.UML_DIAGRAMM__IMPORTED_PACKAGES:
+				getImportedPackages().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -284,10 +283,10 @@ public class UMLDiagrammImpl extends MinimalEObjectImpl.Container implements UML
 				return LANG_EDEFAULT == null ? lang != null : !LANG_EDEFAULT.equals(lang);
 			case KragsteinPackage.UML_DIAGRAMM__PACKAGE_NAME:
 				return PACKAGE_NAME_EDEFAULT == null ? packageName != null : !PACKAGE_NAME_EDEFAULT.equals(packageName);
-			case KragsteinPackage.UML_DIAGRAMM__UNITS:
-				return units != null && !units.isEmpty();
-			case KragsteinPackage.UML_DIAGRAMM__PACKAGES:
-				return packages != null && !packages.isEmpty();
+			case KragsteinPackage.UML_DIAGRAMM__CLASSES:
+				return classes != null && !classes.isEmpty();
+			case KragsteinPackage.UML_DIAGRAMM__IMPORTED_PACKAGES:
+				return importedPackages != null && !importedPackages.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

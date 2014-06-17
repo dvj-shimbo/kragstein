@@ -4,6 +4,7 @@
  */
 package kragstein.validation;
 
+import kragstein.CaseConnection;
 import kragstein.Route;
 
 /**
@@ -18,4 +19,6 @@ public interface CaseValidator {
 	boolean validateName(String value);
 	boolean validateValue(String value);
 	boolean validateRoute(Route value);
+	boolean validateSourceCaseConnection(CaseConnection value);
+	boolean validateTargetCaseConnection(CaseConnection value);
 }

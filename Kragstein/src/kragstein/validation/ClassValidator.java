@@ -5,8 +5,9 @@
 package kragstein.validation;
 
 import kragstein.Attribute;
-import kragstein.ClassMultipleRelationships;
+import kragstein.Comment;
 import kragstein.Method;
+import kragstein.Relationship;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -19,9 +20,13 @@ import org.eclipse.emf.common.util.EList;
 public interface ClassValidator {
 	boolean validate();
 
-	boolean validateTargetConnections(EList<ClassMultipleRelationships> value);
-	boolean validateSourceConnections(EList<ClassMultipleRelationships> value);
 	boolean validateAttributes(EList<Attribute> value);
 	boolean validateMethods(EList<Method> value);
+	boolean validateComments(Comment value);
+	boolean validateTargetRelationships(EList<Relationship> value);
+	boolean validateSourceRelationships(EList<Relationship> value);
+	boolean validateName(String value);
+	boolean validateVisibility(String value);
 	boolean validateIsSingletone(boolean value);
+	boolean validateIsInterface(boolean value);
 }

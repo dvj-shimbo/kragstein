@@ -4,7 +4,6 @@
  */
 package kragstein.validation;
 
-import kragstein.Unit;
 
 /**
  * A sample validator interface for {@link kragstein.Relationship}.
@@ -15,6 +14,9 @@ import kragstein.Unit;
 public interface RelationshipValidator {
 	boolean validate();
 
-	boolean validateTarget(Unit value);
-	boolean validateSource(Unit value);
+	boolean validateTarget(kragstein.Class value);
+	boolean validateSource(kragstein.Class value);
+	boolean validateName(String value);
+	boolean validateLowerBound(int value);
+	boolean validateUpperBound(int value);
 }

@@ -2,6 +2,8 @@
  */
 package kragstein.tests;
 
+import junit.framework.TestCase;
+
 import junit.textui.TestRunner;
 
 import kragstein.Association;
@@ -13,7 +15,15 @@ import kragstein.KragsteinFactory;
  * <!-- end-user-doc -->
  * @generated
  */
-public class AssociationTest extends ClassMultipleRelationshipsTest {
+public class AssociationTest extends TestCase {
+
+	/**
+	 * The fixture for this Association test case.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Association fixture = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -35,14 +45,23 @@ public class AssociationTest extends ClassMultipleRelationshipsTest {
 	}
 
 	/**
+	 * Sets the fixture for this Association test case.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void setFixture(Association fixture) {
+		this.fixture = fixture;
+	}
+
+	/**
 	 * Returns the fixture for this Association test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	protected Association getFixture() {
-		return (Association)fixture;
+		return fixture;
 	}
 
 	/**

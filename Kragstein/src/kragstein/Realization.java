@@ -13,5 +13,5 @@ package kragstein;
  * @model
  * @generated
  */
-public interface Realization extends ClassMultipleRelationships {
+public interface Realization extends Relationship {
 } // Realization

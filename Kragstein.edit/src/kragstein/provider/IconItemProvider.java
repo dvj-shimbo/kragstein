@@ -77,8 +77,8 @@ public class IconItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(KragsteinPackage.Literals.ICON__SOURCE_CONNECTION);
-			childrenFeatures.add(KragsteinPackage.Literals.ICON__TARGET_CONNECTION);
+			childrenFeatures.add(KragsteinPackage.Literals.ICON__SOURCE_ICON_CONNECTION);
+			childrenFeatures.add(KragsteinPackage.Literals.ICON__TARGET_ICON_CONNECTION);
 			childrenFeatures.add(KragsteinPackage.Literals.ICON__VALENCE_POINT);
 			childrenFeatures.add(KragsteinPackage.Literals.ICON__LEFT_COMMENT);
 			childrenFeatures.add(KragsteinPackage.Literals.ICON__RIGHT_COMMENT);
@@ -123,8 +123,8 @@ public class IconItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Icon.class)) {
-			case KragsteinPackage.ICON__SOURCE_CONNECTION:
-			case KragsteinPackage.ICON__TARGET_CONNECTION:
+			case KragsteinPackage.ICON__SOURCE_ICON_CONNECTION:
+			case KragsteinPackage.ICON__TARGET_ICON_CONNECTION:
 			case KragsteinPackage.ICON__VALENCE_POINT:
 			case KragsteinPackage.ICON__LEFT_COMMENT:
 			case KragsteinPackage.ICON__RIGHT_COMMENT:
@@ -147,13 +147,13 @@ public class IconItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(KragsteinPackage.Literals.ICON__SOURCE_CONNECTION,
-				 KragsteinFactory.eINSTANCE.createConnection()));
+				(KragsteinPackage.Literals.ICON__SOURCE_ICON_CONNECTION,
+				 KragsteinFactory.eINSTANCE.createIconConnection()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(KragsteinPackage.Literals.ICON__TARGET_CONNECTION,
-				 KragsteinFactory.eINSTANCE.createConnection()));
+				(KragsteinPackage.Literals.ICON__TARGET_ICON_CONNECTION,
+				 KragsteinFactory.eINSTANCE.createIconConnection()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -183,8 +183,8 @@ public class IconItemProvider
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == KragsteinPackage.Literals.ICON__SOURCE_CONNECTION ||
-			childFeature == KragsteinPackage.Literals.ICON__TARGET_CONNECTION;
+			childFeature == KragsteinPackage.Literals.ICON__SOURCE_ICON_CONNECTION ||
+			childFeature == KragsteinPackage.Literals.ICON__TARGET_ICON_CONNECTION;
 
 		if (qualify) {
 			return getString

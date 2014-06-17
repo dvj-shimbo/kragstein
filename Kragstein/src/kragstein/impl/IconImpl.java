@@ -2,8 +2,8 @@
  */
 package kragstein.impl;
 
-import kragstein.Connection;
 import kragstein.Icon;
+import kragstein.IconConnection;
 import kragstein.KragsteinPackage;
 import kragstein.LeftComment;
 import kragstein.RightComment;
@@ -25,8 +25,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link kragstein.impl.IconImpl#getSourceConnection <em>Source Connection</em>}</li>
- *   <li>{@link kragstein.impl.IconImpl#getTargetConnection <em>Target Connection</em>}</li>
+ *   <li>{@link kragstein.impl.IconImpl#getSourceIconConnection <em>Source Icon Connection</em>}</li>
+ *   <li>{@link kragstein.impl.IconImpl#getTargetIconConnection <em>Target Icon Connection</em>}</li>
  *   <li>{@link kragstein.impl.IconImpl#getValencePoint <em>Valence Point</em>}</li>
  *   <li>{@link kragstein.impl.IconImpl#getLeftComment <em>Left Comment</em>}</li>
  *   <li>{@link kragstein.impl.IconImpl#getRightComment <em>Right Comment</em>}</li>
@@ -37,24 +37,24 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  */
 public abstract class IconImpl extends MinimalEObjectImpl.Container implements Icon {
 	/**
-	 * The cached value of the '{@link #getSourceConnection() <em>Source Connection</em>}' containment reference.
+	 * The cached value of the '{@link #getSourceIconConnection() <em>Source Icon Connection</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSourceConnection()
+	 * @see #getSourceIconConnection()
 	 * @generated
 	 * @ordered
 	 */
-	protected Connection sourceConnection;
+	protected IconConnection sourceIconConnection;
 
 	/**
-	 * The cached value of the '{@link #getTargetConnection() <em>Target Connection</em>}' containment reference.
+	 * The cached value of the '{@link #getTargetIconConnection() <em>Target Icon Connection</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTargetConnection()
+	 * @see #getTargetIconConnection()
 	 * @generated
 	 * @ordered
 	 */
-	protected Connection targetConnection;
+	protected IconConnection targetIconConnection;
 
 	/**
 	 * The cached value of the '{@link #getValencePoint() <em>Valence Point</em>}' containment reference.
@@ -110,8 +110,8 @@ public abstract class IconImpl extends MinimalEObjectImpl.Container implements I
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Connection getSourceConnection() {
-		return sourceConnection;
+	public IconConnection getSourceIconConnection() {
+		return sourceIconConnection;
 	}
 
 	/**
@@ -119,11 +119,11 @@ public abstract class IconImpl extends MinimalEObjectImpl.Container implements I
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetSourceConnection(Connection newSourceConnection, NotificationChain msgs) {
-		Connection oldSourceConnection = sourceConnection;
-		sourceConnection = newSourceConnection;
+	public NotificationChain basicSetSourceIconConnection(IconConnection newSourceIconConnection, NotificationChain msgs) {
+		IconConnection oldSourceIconConnection = sourceIconConnection;
+		sourceIconConnection = newSourceIconConnection;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, KragsteinPackage.ICON__SOURCE_CONNECTION, oldSourceConnection, newSourceConnection);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, KragsteinPackage.ICON__SOURCE_ICON_CONNECTION, oldSourceIconConnection, newSourceIconConnection);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -134,18 +134,18 @@ public abstract class IconImpl extends MinimalEObjectImpl.Container implements I
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSourceConnection(Connection newSourceConnection) {
-		if (newSourceConnection != sourceConnection) {
+	public void setSourceIconConnection(IconConnection newSourceIconConnection) {
+		if (newSourceIconConnection != sourceIconConnection) {
 			NotificationChain msgs = null;
-			if (sourceConnection != null)
-				msgs = ((InternalEObject)sourceConnection).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - KragsteinPackage.ICON__SOURCE_CONNECTION, null, msgs);
-			if (newSourceConnection != null)
-				msgs = ((InternalEObject)newSourceConnection).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - KragsteinPackage.ICON__SOURCE_CONNECTION, null, msgs);
-			msgs = basicSetSourceConnection(newSourceConnection, msgs);
+			if (sourceIconConnection != null)
+				msgs = ((InternalEObject)sourceIconConnection).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - KragsteinPackage.ICON__SOURCE_ICON_CONNECTION, null, msgs);
+			if (newSourceIconConnection != null)
+				msgs = ((InternalEObject)newSourceIconConnection).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - KragsteinPackage.ICON__SOURCE_ICON_CONNECTION, null, msgs);
+			msgs = basicSetSourceIconConnection(newSourceIconConnection, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, KragsteinPackage.ICON__SOURCE_CONNECTION, newSourceConnection, newSourceConnection));
+			eNotify(new ENotificationImpl(this, Notification.SET, KragsteinPackage.ICON__SOURCE_ICON_CONNECTION, newSourceIconConnection, newSourceIconConnection));
 	}
 
 	/**
@@ -153,8 +153,8 @@ public abstract class IconImpl extends MinimalEObjectImpl.Container implements I
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Connection getTargetConnection() {
-		return targetConnection;
+	public IconConnection getTargetIconConnection() {
+		return targetIconConnection;
 	}
 
 	/**
@@ -162,11 +162,11 @@ public abstract class IconImpl extends MinimalEObjectImpl.Container implements I
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetTargetConnection(Connection newTargetConnection, NotificationChain msgs) {
-		Connection oldTargetConnection = targetConnection;
-		targetConnection = newTargetConnection;
+	public NotificationChain basicSetTargetIconConnection(IconConnection newTargetIconConnection, NotificationChain msgs) {
+		IconConnection oldTargetIconConnection = targetIconConnection;
+		targetIconConnection = newTargetIconConnection;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, KragsteinPackage.ICON__TARGET_CONNECTION, oldTargetConnection, newTargetConnection);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, KragsteinPackage.ICON__TARGET_ICON_CONNECTION, oldTargetIconConnection, newTargetIconConnection);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -177,18 +177,18 @@ public abstract class IconImpl extends MinimalEObjectImpl.Container implements I
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTargetConnection(Connection newTargetConnection) {
-		if (newTargetConnection != targetConnection) {
+	public void setTargetIconConnection(IconConnection newTargetIconConnection) {
+		if (newTargetIconConnection != targetIconConnection) {
 			NotificationChain msgs = null;
-			if (targetConnection != null)
-				msgs = ((InternalEObject)targetConnection).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - KragsteinPackage.ICON__TARGET_CONNECTION, null, msgs);
-			if (newTargetConnection != null)
-				msgs = ((InternalEObject)newTargetConnection).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - KragsteinPackage.ICON__TARGET_CONNECTION, null, msgs);
-			msgs = basicSetTargetConnection(newTargetConnection, msgs);
+			if (targetIconConnection != null)
+				msgs = ((InternalEObject)targetIconConnection).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - KragsteinPackage.ICON__TARGET_ICON_CONNECTION, null, msgs);
+			if (newTargetIconConnection != null)
+				msgs = ((InternalEObject)newTargetIconConnection).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - KragsteinPackage.ICON__TARGET_ICON_CONNECTION, null, msgs);
+			msgs = basicSetTargetIconConnection(newTargetIconConnection, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, KragsteinPackage.ICON__TARGET_CONNECTION, newTargetConnection, newTargetConnection));
+			eNotify(new ENotificationImpl(this, Notification.SET, KragsteinPackage.ICON__TARGET_ICON_CONNECTION, newTargetIconConnection, newTargetIconConnection));
 	}
 
 	/**
@@ -328,10 +328,10 @@ public abstract class IconImpl extends MinimalEObjectImpl.Container implements I
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case KragsteinPackage.ICON__SOURCE_CONNECTION:
-				return basicSetSourceConnection(null, msgs);
-			case KragsteinPackage.ICON__TARGET_CONNECTION:
-				return basicSetTargetConnection(null, msgs);
+			case KragsteinPackage.ICON__SOURCE_ICON_CONNECTION:
+				return basicSetSourceIconConnection(null, msgs);
+			case KragsteinPackage.ICON__TARGET_ICON_CONNECTION:
+				return basicSetTargetIconConnection(null, msgs);
 			case KragsteinPackage.ICON__VALENCE_POINT:
 				return basicSetValencePoint(null, msgs);
 			case KragsteinPackage.ICON__LEFT_COMMENT:
@@ -350,10 +350,10 @@ public abstract class IconImpl extends MinimalEObjectImpl.Container implements I
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case KragsteinPackage.ICON__SOURCE_CONNECTION:
-				return getSourceConnection();
-			case KragsteinPackage.ICON__TARGET_CONNECTION:
-				return getTargetConnection();
+			case KragsteinPackage.ICON__SOURCE_ICON_CONNECTION:
+				return getSourceIconConnection();
+			case KragsteinPackage.ICON__TARGET_ICON_CONNECTION:
+				return getTargetIconConnection();
 			case KragsteinPackage.ICON__VALENCE_POINT:
 				return getValencePoint();
 			case KragsteinPackage.ICON__LEFT_COMMENT:
@@ -372,11 +372,11 @@ public abstract class IconImpl extends MinimalEObjectImpl.Container implements I
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case KragsteinPackage.ICON__SOURCE_CONNECTION:
-				setSourceConnection((Connection)newValue);
+			case KragsteinPackage.ICON__SOURCE_ICON_CONNECTION:
+				setSourceIconConnection((IconConnection)newValue);
 				return;
-			case KragsteinPackage.ICON__TARGET_CONNECTION:
-				setTargetConnection((Connection)newValue);
+			case KragsteinPackage.ICON__TARGET_ICON_CONNECTION:
+				setTargetIconConnection((IconConnection)newValue);
 				return;
 			case KragsteinPackage.ICON__VALENCE_POINT:
 				setValencePoint((ValencePoint)newValue);
@@ -399,11 +399,11 @@ public abstract class IconImpl extends MinimalEObjectImpl.Container implements I
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case KragsteinPackage.ICON__SOURCE_CONNECTION:
-				setSourceConnection((Connection)null);
+			case KragsteinPackage.ICON__SOURCE_ICON_CONNECTION:
+				setSourceIconConnection((IconConnection)null);
 				return;
-			case KragsteinPackage.ICON__TARGET_CONNECTION:
-				setTargetConnection((Connection)null);
+			case KragsteinPackage.ICON__TARGET_ICON_CONNECTION:
+				setTargetIconConnection((IconConnection)null);
 				return;
 			case KragsteinPackage.ICON__VALENCE_POINT:
 				setValencePoint((ValencePoint)null);
@@ -426,10 +426,10 @@ public abstract class IconImpl extends MinimalEObjectImpl.Container implements I
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case KragsteinPackage.ICON__SOURCE_CONNECTION:
-				return sourceConnection != null;
-			case KragsteinPackage.ICON__TARGET_CONNECTION:
-				return targetConnection != null;
+			case KragsteinPackage.ICON__SOURCE_ICON_CONNECTION:
+				return sourceIconConnection != null;
+			case KragsteinPackage.ICON__TARGET_ICON_CONNECTION:
+				return targetIconConnection != null;
 			case KragsteinPackage.ICON__VALENCE_POINT:
 				return valencePoint != null;
 			case KragsteinPackage.ICON__LEFT_COMMENT:

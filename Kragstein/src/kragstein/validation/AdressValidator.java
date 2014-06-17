@@ -15,4 +15,5 @@ public interface AdressValidator {
 	boolean validate();
 
 	boolean validateName(String value);
+	boolean validateIsLoop(boolean value);
 }

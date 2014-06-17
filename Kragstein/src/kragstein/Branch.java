@@ -12,11 +12,10 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link kragstein.Branch#getSourceConnection <em>Source Connection</em>}</li>
- *   <li>{@link kragstein.Branch#getTargetConnection <em>Target Connection</em>}</li>
+ *   <li>{@link kragstein.Branch#getSourceBranchConnection <em>Source Branch Connection</em>}</li>
+ *   <li>{@link kragstein.Branch#getTargetBranchConnection <em>Target Branch Connection</em>}</li>
  *   <li>{@link kragstein.Branch#getRoute <em>Route</em>}</li>
  *   <li>{@link kragstein.Branch#getName <em>Name</em>}</li>
- *   <li>{@link kragstein.Branch#isIsLoop <em>Is Loop</em>}</li>
  * </ul>
  * </p>
  *
@@ -26,56 +25,56 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Branch extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Source Connection</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Source Branch Connection</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Source Connection</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Source Branch Connection</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Source Connection</em>' containment reference.
-	 * @see #setSourceConnection(BranchConnection)
-	 * @see kragstein.KragsteinPackage#getBranch_SourceConnection()
+	 * @return the value of the '<em>Source Branch Connection</em>' containment reference.
+	 * @see #setSourceBranchConnection(BranchConnection)
+	 * @see kragstein.KragsteinPackage#getBranch_SourceBranchConnection()
 	 * @model containment="true"
 	 * @generated
 	 */
-	BranchConnection getSourceConnection();
+	BranchConnection getSourceBranchConnection();
 
 	/**
-	 * Sets the value of the '{@link kragstein.Branch#getSourceConnection <em>Source Connection</em>}' containment reference.
+	 * Sets the value of the '{@link kragstein.Branch#getSourceBranchConnection <em>Source Branch Connection</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Source Connection</em>' containment reference.
-	 * @see #getSourceConnection()
+	 * @param value the new value of the '<em>Source Branch Connection</em>' containment reference.
+	 * @see #getSourceBranchConnection()
 	 * @generated
 	 */
-	void setSourceConnection(BranchConnection value);
+	void setSourceBranchConnection(BranchConnection value);
 
 	/**
-	 * Returns the value of the '<em><b>Target Connection</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Target Branch Connection</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Target Connection</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Target Branch Connection</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Target Connection</em>' containment reference.
-	 * @see #setTargetConnection(BranchConnection)
-	 * @see kragstein.KragsteinPackage#getBranch_TargetConnection()
+	 * @return the value of the '<em>Target Branch Connection</em>' containment reference.
+	 * @see #setTargetBranchConnection(BranchConnection)
+	 * @see kragstein.KragsteinPackage#getBranch_TargetBranchConnection()
 	 * @model containment="true"
 	 * @generated
 	 */
-	BranchConnection getTargetConnection();
+	BranchConnection getTargetBranchConnection();
 
 	/**
-	 * Sets the value of the '{@link kragstein.Branch#getTargetConnection <em>Target Connection</em>}' containment reference.
+	 * Sets the value of the '{@link kragstein.Branch#getTargetBranchConnection <em>Target Branch Connection</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Target Connection</em>' containment reference.
-	 * @see #getTargetConnection()
+	 * @param value the new value of the '<em>Target Branch Connection</em>' containment reference.
+	 * @see #getTargetBranchConnection()
 	 * @generated
 	 */
-	void setTargetConnection(BranchConnection value);
+	void setTargetBranchConnection(BranchConnection value);
 
 	/**
 	 * Returns the value of the '<em><b>Route</b></em>' containment reference.
@@ -128,31 +127,5 @@ public interface Branch extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Is Loop</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Is Loop</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Is Loop</em>' attribute.
-	 * @see #setIsLoop(boolean)
-	 * @see kragstein.KragsteinPackage#getBranch_IsLoop()
-	 * @model
-	 * @generated
-	 */
-	boolean isIsLoop();
-
-	/**
-	 * Sets the value of the '{@link kragstein.Branch#isIsLoop <em>Is Loop</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Is Loop</em>' attribute.
-	 * @see #isIsLoop()
-	 * @generated
-	 */
-	void setIsLoop(boolean value);
 
 } // Branch

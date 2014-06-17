@@ -111,6 +111,8 @@ public class CaseItemProvider extends IconItemProvider {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(KragsteinPackage.Literals.CASE__ROUTE);
+			childrenFeatures.add(KragsteinPackage.Literals.CASE__SOURCE_CASE_CONNECTION);
+			childrenFeatures.add(KragsteinPackage.Literals.CASE__TARGET_CASE_CONNECTION);
 		}
 		return childrenFeatures;
 	}
@@ -171,6 +173,8 @@ public class CaseItemProvider extends IconItemProvider {
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case KragsteinPackage.CASE__ROUTE:
+			case KragsteinPackage.CASE__SOURCE_CASE_CONNECTION:
+			case KragsteinPackage.CASE__TARGET_CASE_CONNECTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -192,6 +196,16 @@ public class CaseItemProvider extends IconItemProvider {
 			(createChildParameter
 				(KragsteinPackage.Literals.CASE__ROUTE,
 				 KragsteinFactory.eINSTANCE.createRoute()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(KragsteinPackage.Literals.CASE__SOURCE_CASE_CONNECTION,
+				 KragsteinFactory.eINSTANCE.createCaseConnection()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(KragsteinPackage.Literals.CASE__TARGET_CASE_CONNECTION,
+				 KragsteinFactory.eINSTANCE.createCaseConnection()));
 	}
 
 	/**
@@ -206,8 +220,10 @@ public class CaseItemProvider extends IconItemProvider {
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == KragsteinPackage.Literals.ICON__SOURCE_CONNECTION ||
-			childFeature == KragsteinPackage.Literals.ICON__TARGET_CONNECTION;
+			childFeature == KragsteinPackage.Literals.ICON__SOURCE_ICON_CONNECTION ||
+			childFeature == KragsteinPackage.Literals.ICON__TARGET_ICON_CONNECTION ||
+			childFeature == KragsteinPackage.Literals.CASE__SOURCE_CASE_CONNECTION ||
+			childFeature == KragsteinPackage.Literals.CASE__TARGET_CASE_CONNECTION;
 
 		if (qualify) {
 			return getString

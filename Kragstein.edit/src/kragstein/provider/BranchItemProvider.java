@@ -64,7 +64,6 @@ public class BranchItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
-			addIsLoopPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -92,28 +91,6 @@ public class BranchItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Is Loop feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addIsLoopPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Branch_isLoop_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Branch_isLoop_feature", "_UI_Branch_type"),
-				 KragsteinPackage.Literals.BRANCH__IS_LOOP,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -125,8 +102,8 @@ public class BranchItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(KragsteinPackage.Literals.BRANCH__SOURCE_CONNECTION);
-			childrenFeatures.add(KragsteinPackage.Literals.BRANCH__TARGET_CONNECTION);
+			childrenFeatures.add(KragsteinPackage.Literals.BRANCH__SOURCE_BRANCH_CONNECTION);
+			childrenFeatures.add(KragsteinPackage.Literals.BRANCH__TARGET_BRANCH_CONNECTION);
 			childrenFeatures.add(KragsteinPackage.Literals.BRANCH__ROUTE);
 		}
 		return childrenFeatures;
@@ -184,11 +161,10 @@ public class BranchItemProvider
 
 		switch (notification.getFeatureID(Branch.class)) {
 			case KragsteinPackage.BRANCH__NAME:
-			case KragsteinPackage.BRANCH__IS_LOOP:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case KragsteinPackage.BRANCH__SOURCE_CONNECTION:
-			case KragsteinPackage.BRANCH__TARGET_CONNECTION:
+			case KragsteinPackage.BRANCH__SOURCE_BRANCH_CONNECTION:
+			case KragsteinPackage.BRANCH__TARGET_BRANCH_CONNECTION:
 			case KragsteinPackage.BRANCH__ROUTE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -209,12 +185,12 @@ public class BranchItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(KragsteinPackage.Literals.BRANCH__SOURCE_CONNECTION,
+				(KragsteinPackage.Literals.BRANCH__SOURCE_BRANCH_CONNECTION,
 				 KragsteinFactory.eINSTANCE.createBranchConnection()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(KragsteinPackage.Literals.BRANCH__TARGET_CONNECTION,
+				(KragsteinPackage.Literals.BRANCH__TARGET_BRANCH_CONNECTION,
 				 KragsteinFactory.eINSTANCE.createBranchConnection()));
 
 		newChildDescriptors.add
@@ -235,8 +211,8 @@ public class BranchItemProvider
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == KragsteinPackage.Literals.BRANCH__SOURCE_CONNECTION ||
-			childFeature == KragsteinPackage.Literals.BRANCH__TARGET_CONNECTION;
+			childFeature == KragsteinPackage.Literals.BRANCH__SOURCE_BRANCH_CONNECTION ||
+			childFeature == KragsteinPackage.Literals.BRANCH__TARGET_BRANCH_CONNECTION;
 
 		if (qualify) {
 			return getString

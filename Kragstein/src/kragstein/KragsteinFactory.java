@@ -112,15 +112,6 @@ public interface KragsteinFactory extends EFactory {
 	CommentLink createCommentLink();
 
 	/**
-	 * Returns a new object of class '<em>Interface</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Interface</em>'.
-	 * @generated
-	 */
-	Interface createInterface();
-
-	/**
 	 * Returns a new object of class '<em>Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -238,13 +229,13 @@ public interface KragsteinFactory extends EFactory {
 	ValencePoint createValencePoint();
 
 	/**
-	 * Returns a new object of class '<em>Connection</em>'.
+	 * Returns a new object of class '<em>Icon Connection</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Connection</em>'.
+	 * @return a new object of class '<em>Icon Connection</em>'.
 	 * @generated
 	 */
-	Connection createConnection();
+	IconConnection createIconConnection();
 
 	/**
 	 * Returns a new object of class '<em>Action</em>'.
@@ -281,6 +272,15 @@ public interface KragsteinFactory extends EFactory {
 	 * @generated
 	 */
 	Case createCase();
+
+	/**
+	 * Returns a new object of class '<em>Case Connection</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Case Connection</em>'.
+	 * @generated
+	 */
+	CaseConnection createCaseConnection();
 
 	/**
 	 * Returns a new object of class '<em>Headline</em>'.
@@ -380,24 +380,6 @@ public interface KragsteinFactory extends EFactory {
 	 * @generated
 	 */
 	End createEnd();
-
-	/**
-	 * Returns a new object of class '<em>Interface Method</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Interface Method</em>'.
-	 * @generated
-	 */
-	InterfaceMethod createInterfaceMethod();
-
-	/**
-	 * Returns a new object of class '<em>Interface Parameter</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Interface Parameter</em>'.
-	 * @generated
-	 */
-	InterfaceParameter createInterfaceParameter();
 
 	/**
 	 * Returns the package supported by this factory.

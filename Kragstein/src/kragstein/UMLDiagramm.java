@@ -16,8 +16,8 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link kragstein.UMLDiagramm#getLang <em>Lang</em>}</li>
  *   <li>{@link kragstein.UMLDiagramm#getPackageName <em>Package Name</em>}</li>
- *   <li>{@link kragstein.UMLDiagramm#getUnits <em>Units</em>}</li>
- *   <li>{@link kragstein.UMLDiagramm#getPackages <em>Packages</em>}</li>
+ *   <li>{@link kragstein.UMLDiagramm#getClasses <em>Classes</em>}</li>
+ *   <li>{@link kragstein.UMLDiagramm#getImportedPackages <em>Imported Packages</em>}</li>
  * </ul>
  * </p>
  *
@@ -79,35 +79,35 @@ public interface UMLDiagramm extends EObject {
 	void setPackageName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Units</b></em>' containment reference list.
-	 * The list contents are of type {@link kragstein.Unit}.
+	 * Returns the value of the '<em><b>Classes</b></em>' containment reference list.
+	 * The list contents are of type {@link kragstein.Class}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Units</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Classes</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Units</em>' containment reference list.
-	 * @see kragstein.KragsteinPackage#getUMLDiagramm_Units()
+	 * @return the value of the '<em>Classes</em>' containment reference list.
+	 * @see kragstein.KragsteinPackage#getUMLDiagramm_Classes()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Unit> getUnits();
+	EList<kragstein.Class> getClasses();
 
 	/**
-	 * Returns the value of the '<em><b>Packages</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Imported Packages</b></em>' containment reference list.
 	 * The list contents are of type {@link kragstein.importedPackage}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Packages</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Imported Packages</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Packages</em>' containment reference list.
-	 * @see kragstein.KragsteinPackage#getUMLDiagramm_Packages()
+	 * @return the value of the '<em>Imported Packages</em>' containment reference list.
+	 * @see kragstein.KragsteinPackage#getUMLDiagramm_ImportedPackages()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<importedPackage> getPackages();
+	EList<importedPackage> getImportedPackages();
 
 } // UMLDiagramm

@@ -11,12 +11,11 @@ import kragstein.BeginLoop;
 import kragstein.Branch;
 import kragstein.BranchConnection;
 import kragstein.Case;
+import kragstein.CaseConnection;
 import kragstein.Choice;
-import kragstein.ClassMultipleRelationships;
 import kragstein.Comment;
 import kragstein.CommentLink;
 import kragstein.Composition;
-import kragstein.Connection;
 import kragstein.Dependency;
 import kragstein.DrakonDiagramm;
 import kragstein.EmptyConnector;
@@ -27,11 +26,9 @@ import kragstein.Generalization;
 import kragstein.Header;
 import kragstein.Headline;
 import kragstein.Icon;
+import kragstein.IconConnection;
 import kragstein.Input;
 import kragstein.Insertion;
-import kragstein.Interface;
-import kragstein.InterfaceMethod;
-import kragstein.InterfaceParameter;
 import kragstein.KragsteinPackage;
 import kragstein.LeftComment;
 import kragstein.LoopArrow;
@@ -45,7 +42,6 @@ import kragstein.RightComment;
 import kragstein.Route;
 import kragstein.Shelf;
 import kragstein.UMLDiagramm;
-import kragstein.Unit;
 import kragstein.ValencePoint;
 import kragstein.importedPackage;
 
@@ -136,17 +132,9 @@ public class KragsteinSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case KragsteinPackage.CLASS_MULTIPLE_RELATIONSHIPS: {
-				ClassMultipleRelationships classMultipleRelationships = (ClassMultipleRelationships)theEObject;
-				T result = caseClassMultipleRelationships(classMultipleRelationships);
-				if (result == null) result = caseRelationship(classMultipleRelationships);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case KragsteinPackage.REALIZATION: {
 				Realization realization = (Realization)theEObject;
 				T result = caseRealization(realization);
-				if (result == null) result = caseClassMultipleRelationships(realization);
 				if (result == null) result = caseRelationship(realization);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -154,7 +142,6 @@ public class KragsteinSwitch<T> extends Switch<T> {
 			case KragsteinPackage.ASSOCIATION: {
 				Association association = (Association)theEObject;
 				T result = caseAssociation(association);
-				if (result == null) result = caseClassMultipleRelationships(association);
 				if (result == null) result = caseRelationship(association);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -162,7 +149,6 @@ public class KragsteinSwitch<T> extends Switch<T> {
 			case KragsteinPackage.AGGREGATION: {
 				Aggregation aggregation = (Aggregation)theEObject;
 				T result = caseAggregation(aggregation);
-				if (result == null) result = caseClassMultipleRelationships(aggregation);
 				if (result == null) result = caseRelationship(aggregation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -170,7 +156,6 @@ public class KragsteinSwitch<T> extends Switch<T> {
 			case KragsteinPackage.COMPOSITION: {
 				Composition composition = (Composition)theEObject;
 				T result = caseComposition(composition);
-				if (result == null) result = caseClassMultipleRelationships(composition);
 				if (result == null) result = caseRelationship(composition);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -178,7 +163,6 @@ public class KragsteinSwitch<T> extends Switch<T> {
 			case KragsteinPackage.DEPENDENCY: {
 				Dependency dependency = (Dependency)theEObject;
 				T result = caseDependency(dependency);
-				if (result == null) result = caseClassMultipleRelationships(dependency);
 				if (result == null) result = caseRelationship(dependency);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -195,23 +179,9 @@ public class KragsteinSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case KragsteinPackage.UNIT: {
-				Unit unit = (Unit)theEObject;
-				T result = caseUnit(unit);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case KragsteinPackage.INTERFACE: {
-				Interface interface_ = (Interface)theEObject;
-				T result = caseInterface(interface_);
-				if (result == null) result = caseUnit(interface_);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case KragsteinPackage.CLASS: {
 				kragstein.Class class_ = (kragstein.Class)theEObject;
 				T result = caseClass(class_);
-				if (result == null) result = caseUnit(class_);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -287,9 +257,9 @@ public class KragsteinSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case KragsteinPackage.CONNECTION: {
-				Connection connection = (Connection)theEObject;
-				T result = caseConnection(connection);
+			case KragsteinPackage.ICON_CONNECTION: {
+				IconConnection iconConnection = (IconConnection)theEObject;
+				T result = caseIconConnection(iconConnection);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -324,6 +294,12 @@ public class KragsteinSwitch<T> extends Switch<T> {
 				Case case_ = (Case)theEObject;
 				T result = caseCase(case_);
 				if (result == null) result = caseIcon(case_);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case KragsteinPackage.CASE_CONNECTION: {
+				CaseConnection caseConnection = (CaseConnection)theEObject;
+				T result = caseCaseConnection(caseConnection);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -404,18 +380,6 @@ public class KragsteinSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case KragsteinPackage.INTERFACE_METHOD: {
-				InterfaceMethod interfaceMethod = (InterfaceMethod)theEObject;
-				T result = caseInterfaceMethod(interfaceMethod);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case KragsteinPackage.INTERFACE_PARAMETER: {
-				InterfaceParameter interfaceParameter = (InterfaceParameter)theEObject;
-				T result = caseInterfaceParameter(interfaceParameter);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -477,21 +441,6 @@ public class KragsteinSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseGeneralization(Generalization object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Class Multiple Relationships</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Class Multiple Relationships</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseClassMultipleRelationships(ClassMultipleRelationships object) {
 		return null;
 	}
 
@@ -597,36 +546,6 @@ public class KragsteinSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseCommentLink(CommentLink object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Unit</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Unit</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseUnit(Unit object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Interface</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Interface</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseInterface(Interface object) {
 		return null;
 	}
 
@@ -826,17 +745,17 @@ public class KragsteinSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Connection</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Icon Connection</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Connection</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Icon Connection</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseConnection(Connection object) {
+	public T caseIconConnection(IconConnection object) {
 		return null;
 	}
 
@@ -912,6 +831,21 @@ public class KragsteinSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseCase(Case object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Case Connection</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Case Connection</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCaseConnection(CaseConnection object) {
 		return null;
 	}
 
@@ -1077,36 +1011,6 @@ public class KragsteinSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseEnd(End object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Interface Method</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Interface Method</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseInterfaceMethod(InterfaceMethod object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Interface Parameter</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Interface Parameter</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseInterfaceParameter(InterfaceParameter object) {
 		return null;
 	}
 

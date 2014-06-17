@@ -16,9 +16,8 @@ import kragstein.Route;
 public interface BranchValidator {
 	boolean validate();
 
-	boolean validateSourceConnection(BranchConnection value);
-	boolean validateTargetConnection(BranchConnection value);
+	boolean validateSourceBranchConnection(BranchConnection value);
+	boolean validateTargetBranchConnection(BranchConnection value);
 	boolean validateRoute(Route value);
 	boolean validateName(String value);
-	boolean validateIsLoop(boolean value);
 }

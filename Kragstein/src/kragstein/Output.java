@@ -85,7 +85,7 @@ public interface Output extends Icon {
 	 * @return the value of the '<em>Method</em>' containment reference.
 	 * @see #setMethod(Method)
 	 * @see kragstein.KragsteinPackage#getOutput_Method()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	Method getMethod();

@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gmfgen:GenEditorGenerator
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:gmfgen="http://www.eclipse.org/gmf/2009/GenModel">
+  <diagram
+      visualID="1000"
+      editPartClassName="ProjectEditPart"
+      itemSemanticEditPolicyClassName="ProjectItemSemanticEditPolicy"
+      canonicalEditPolicyClassName="ProjectCanonicalEditPolicy"
+      iconProviderPriority="Low"
+      validationProviderPriority="Low">
+    <diagramRunTimeClass
+        href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Diagram"/>
+    <elementType
+        xsi:type="gmfgen:MetamodelType"
+        editHelperClassName="ProjectEditHelper"/>
+    <viewmap
+        xsi:type="gmfgen:FigureViewmap"
+        figureQualifiedClassName="org.eclipse.draw2d.FreeformLayer"/>
+    <domainDiagramElement
+        href="kragstein.genmodel#//kragstein/Project"/>
+    <topLevelNodes
+        visualID="2001"
+        editPartClassName="PackageEditPart"
+        itemSemanticEditPolicyClassName="PackageItemSemanticEditPolicy"
+        canonicalEditPolicyClassName="PackageCanonicalEditPolicy"
+        graphicalNodeEditPolicyClassName="PackageGraphicalNodeEditPolicy"
+        createCommandClassName="PackageCreateCommand">
+      <diagramRunTimeClass
+          href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType
+          xsi:type="gmfgen:MetamodelType"
+          editHelperClassName="PackageEditHelper"/>
+      <viewmap
+          xsi:type="gmfgen:InnerClassViewmap"
+          layoutType="FLOW_LAYOUT"
+          className="PackageFigure"
+          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class PackageFigure extends org.eclipse.draw2d.RectangleFigure {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigurePackageNameFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigurePackagePathFigure; &#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public PackageFigure() {&#xA;&#x9;&#x9;&#xA;&#x9;org.eclipse.draw2d.FlowLayout layoutThis = new org.eclipse.draw2d.FlowLayout();&#xA;&#x9;layoutThis.setStretchMinorAxis(false);&#xA;&#x9;layoutThis.setMinorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#xA;&#x9;layoutThis.setMajorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#x9;layoutThis.setMajorSpacing(5);&#xA;&#x9;layoutThis.setMinorSpacing(5);&#xA;&#x9;layoutThis.setHorizontal(true);&#xA;&#xA;&#x9;this.setLayoutManager(layoutThis);&#xA;&#xA;&#x9;&#x9;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigurePackageNameFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigurePackageNameFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigurePackageNameFigure);&#xA;&#xA;&#xA;&#xA;fFigurePackagePathFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigurePackagePathFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigurePackagePathFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigurePackageNameFigure() {&#xA;&#x9;&#x9;return fFigurePackageNameFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigurePackagePathFigure() {&#xA;&#x9;&#x9;return fFigurePackagePathFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+      <modelFacet>
+        <metaClass
+            href="kragstein.genmodel#//kragstein/Package"/>
+        <containmentMetaFeature
+            href="kragstein.genmodel#//kragstein/Project/package"/>
+        <childMetaFeature
+            href="kragstein.genmodel#//kragstein/Project/package"/>
+      </modelFacet>
+      <labels
+          visualID="5001"
+          editPartClassName="PackageNameEditPart"
+          itemSemanticEditPolicyClassName="PackageNameItemSemanticEditPolicy"
+          elementIcon="true">
+        <diagramRunTimeClass
+            href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap
+            xsi:type="gmfgen:ParentAssignedViewmap"
+            getterName="getFigurePackageNameFigure"
+            figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet
+            xsi:type="gmfgen:FeatureLabelModelFacet"
+            parser="//@labelParsers/@implementations.0">
+          <metaFeatures
+              href="kragstein.genmodel#//kragstein/Package/name"/>
+        </modelFacet>
+      </labels>
+    </topLevelNodes>
+    <palette>
+      <groups
+          title="kragstein">
+        <entries
+            xsi:type="gmfgen:ToolEntry"
+            title="Package"
+            description="Create new Package"
+            genNodes="//@diagram/@topLevelNodes.0"/>
+        <entries
+            xsi:type="gmfgen:ToolEntry"
+            title="Generalization"
+            description="Create new Generalization"/>
+        <entries
+            xsi:type="gmfgen:ToolEntry"
+            title="Realization"
+            description="Create new Realization"/>
+        <entries
+            xsi:type="gmfgen:ToolEntry"
+            title="Association"
+            description="Create new Association"/>
+        <entries
+            xsi:type="gmfgen:ToolEntry"
+            title="Aggregation"
+            description="Create new Aggregation"/>
+        <entries
+            xsi:type="gmfgen:ToolEntry"
+            title="Composition"
+            description="Create new Composition"/>
+        <entries
+            xsi:type="gmfgen:ToolEntry"
+            title="Dependency"
+            description="Create new Dependency"/>
+        <entries
+            xsi:type="gmfgen:ToolEntry"
+            title="Comment"
+            description="Create new Comment"/>
+        <entries
+            xsi:type="gmfgen:ToolEntry"
+            title="Class"
+            description="Create new Class"/>
+        <entries
+            xsi:type="gmfgen:ToolEntry"
+            title="ImportedPackage"
+            description="Create new ImportedPackage"/>
+        <entries
+            xsi:type="gmfgen:ToolEntry"
+            title="Attribute"
+            description="Create new Attribute"/>
+        <entries
+            xsi:type="gmfgen:ToolEntry"
+            title="Method"
+            description="Create new Method"/>
+        <entries
+            xsi:type="gmfgen:ToolEntry"
+            title="Parameter"
+            description="Create new Parameter"/>
+        <entries
+            xsi:type="gmfgen:ToolEntry"
+            title="Header"
+            description="Create new Header"/>
+        <entries
+            xsi:type="gmfgen:ToolEntry"
+            title="FormalParameters"
+            description="Create new FormalParameters"/>
+        <entries
+            xsi:type="gmfgen:ToolEntry"
+            title="Branch"
+            description="Create new Branch"/>
+        <entries
+            xsi:type="gmfgen:ToolEntry"
+            title="BranchConnection"
+            description="Create new BranchConnection"/>
+        <entries
+            xsi:type="gmfgen:ToolEntry"
+            title="Route"
+            description="Create new Route"/>
+        <entries
+            xsi:type="gmfgen:ToolEntry"
+            title="RightComment"
+            description="Create new RightComment"/>
+        <entries
+            xsi:type="gmfgen:ToolEntry"
+            title="LeftComment"
+            description="Create new LeftComment"/>
+        <entries
+            xsi:type="gmfgen:ToolEntry"
+            title="ValencePoint"
+            description="Create new ValencePoint"/>
+        <entries
+            xsi:type="gmfgen:ToolEntry"
+            title="IconConnection"
+            description="Create new IconConnection"/>
+        <entries
+            xsi:type="gmfgen:ToolEntry"
+            title="Action"
+            description="Create new Action"/>
+        <entries
+            xsi:type="gmfgen:ToolEntry"
+            title="Question"
+            description="Create new Question"/>
+        <entries
+            xsi:type="gmfgen:ToolEntry"
+            title="Choice"
+            description="Create new Choice"/>
+        <entries
+            xsi:type="gmfgen:ToolEntry"
+            title="Case"
+            description="Create new Case"/>
+        <entries
+            xsi:type="gmfgen:ToolEntry"
+            title="CaseConnection"
+            description="Create new CaseConnection"/>
+        <entries
+            xsi:type="gmfgen:ToolEntry"
+            title="Headline"
+            description="Create new Headline"/>
+        <entries
+            xsi:type="gmfgen:ToolEntry"
+            title="Adress"
+            description="Create new Adress"/>
+        <entries
+            xsi:type="gmfgen:ToolEntry"
+            title="Insertion"
+            description="Create new Insertion"/>
+        <entries
+            xsi:type="gmfgen:ToolEntry"
+            title="Shelf"
+            description="Create new Shelf"/>
+        <entries
+            xsi:type="gmfgen:ToolEntry"
+            title="BeginLoop"
+            description="Create new BeginLoop"/>
+        <entries
+            xsi:type="gmfgen:ToolEntry"
+            title="EndLoop"
+            description="Create new EndLoop"/>
+        <entries
+            xsi:type="gmfgen:ToolEntry"
+            title="Output"
+            description="Create new Output"/>
+        <entries
+            xsi:type="gmfgen:ToolEntry"
+            title="Input"
+            description="Create new Input"/>
+        <entries
+            xsi:type="gmfgen:ToolEntry"
+            title="LoopArrow"
+            description="Create new LoopArrow"/>
+        <entries
+            xsi:type="gmfgen:ToolEntry"
+            title="EmptyConnector"
+            description="Create new EmptyConnector"/>
+        <entries
+            xsi:type="gmfgen:ToolEntry"
+            title="End"
+            description="Create new End"/>
+      </groups>
+    </palette>
+    <preferencePages
+        xsi:type="gmfgen:GenStandardPreferencePage"
+        iD="Kragstein.diagram.general"
+        name="Kragstein Diagram">
+      <children
+          xsi:type="gmfgen:GenStandardPreferencePage"
+          iD="Kragstein.diagram.appearance"
+          name="Appearance"
+          kind="Appearance"/>
+      <children
+          xsi:type="gmfgen:GenStandardPreferencePage"
+          iD="Kragstein.diagram.connections"
+          name="Connections"
+          kind="Connections"/>
+      <children
+          xsi:type="gmfgen:GenStandardPreferencePage"
+          iD="Kragstein.diagram.printing"
+          name="Printing"
+          kind="Printing"/>
+      <children
+          xsi:type="gmfgen:GenStandardPreferencePage"
+          iD="Kragstein.diagram.rulersAndGrid"
+          name="Rulers And Grid"
+          kind="RulersAndGrid"/>
+    </preferencePages>
+  </diagram>
+  <plugin>
+    <requiredPlugins>org.eclipse.gmf.tooling.runtime</requiredPlugins>
+    <requiredPlugins>org.eclipse.draw2d</requiredPlugins>
+  </plugin>
+  <editor/>
+  <navigator>
+    <childReferences
+        child="//@diagram"/>
+    <childReferences
+        parent="//@diagram"
+        child="//@diagram/@topLevelNodes.0"/>
+  </navigator>
+  <diagramUpdater/>
+  <propertySheet>
+    <tabs
+        xsi:type="gmfgen:GenStandardPropertyTab"
+        iD="appearance"/>
+    <tabs
+        xsi:type="gmfgen:GenStandardPropertyTab"
+        iD="diagram"/>
+    <tabs
+        xsi:type="gmfgen:GenCustomPropertyTab"
+        iD="domain"
+        label="Core">
+      <filter
+          xsi:type="gmfgen:TypeTabFilter">
+        <types>org.eclipse.gmf.runtime.notation.View</types>
+        <types>org.eclipse.gef.EditPart</types>
+        <generatedTypes>abstractNavigatorItem</generatedTypes>
+      </filter>
+    </tabs>
+  </propertySheet>
+  <domainGenModel
+      href="kragstein.genmodel#/"/>
+  <labelParsers
+      extensibleViaService="true">
+    <implementations
+        xsi:type="gmfgen:PredefinedParser"
+        uses="//@diagram/@topLevelNodes.0/@labels.0/@modelFacet"/>
+  </labelParsers>
+  <contextMenus
+      context="//@diagram">
+    <items
+        xsi:type="gmfgen:LoadResourceAction"/>
+  </contextMenus>
+</gmfgen:GenEditorGenerator>

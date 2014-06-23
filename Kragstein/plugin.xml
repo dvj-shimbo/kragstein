@@ -14,4 +14,28 @@
             genModel="model/kragstein.genmodel"/>
    </extension>
 
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated method -->
+      <package
+            uri="http:///method.ecore"
+            class="method.MethodPackage"
+            genModel="model/method.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated package -->
+      <package
+            uri="package.ecore"
+            class="package_.PackagePackage"
+            genModel="model/package.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated project -->
+      <package
+            uri="http:///project.ecore"
+            class="project.ProjectPackage"
+            genModel="model/project.genmodel"/>
+   </extension>
+
 </plugin>

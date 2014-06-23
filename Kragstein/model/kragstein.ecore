@@ -9,8 +9,8 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Package">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="class" upperBound="-1"
-        eType="#//Class" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="unit" upperBound="-1" eType="#//Unit"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="path" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Relationship" abstract="true" interface="true">
@@ -27,16 +27,14 @@
   <eClassifiers xsi:type="ecore:EClass" name="Aggregation" eSuperTypes="#//Relationship"/>
   <eClassifiers xsi:type="ecore:EClass" name="Composition" eSuperTypes="#//Relationship"/>
   <eClassifiers xsi:type="ecore:EClass" name="Dependency" eSuperTypes="#//Relationship"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Comment">
+  <eClassifiers xsi:type="ecore:EClass" name="Comment" eSuperTypes="#//Unit">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Class">
+  <eClassifiers xsi:type="ecore:EClass" name="Class" eSuperTypes="#//Unit">
     <eStructuralFeatures xsi:type="ecore:EReference" name="attribute" upperBound="-1"
         eType="#//Attribute" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="method" upperBound="-1"
         eType="#//Method" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="comment" eType="#//Comment"
-        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="targetRelationship" upperBound="-1"
         eType="#//Relationship" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="sourceRelationship" upperBound="-1"
@@ -84,13 +82,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Header">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="formalParameters" lowerBound="1"
-        eType="#//FormalParameters" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FormalParameters">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="parameter" upperBound="-1"
-        eType="#//Parameter" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Branch">
     <eStructuralFeatures xsi:type="ecore:EReference" name="sourceBranchConnection"
@@ -213,4 +205,14 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="End" eSuperTypes="#//Icon"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Unit">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sourceLink" upperBound="-1"
+        eType="#//Link" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="targetLink" upperBound="-1"
+        eType="#//Link" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Link">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//Unit"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Unit"/>
+  </eClassifiers>
 </ecore:EPackage>

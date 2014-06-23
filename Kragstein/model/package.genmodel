@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/Kragstein/src" modelPluginID="Kragstein" modelName="Package"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="7.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>package.ecore</foreignModel>
+  <genPackages prefix="Package" disposableProviderFactory="true" ecorePackage="package.ecore#/">
+    <genClasses ecoreClass="package.ecore#//Package">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference package.ecore#//Package/class"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="package.ecore#//Relationship">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference package.ecore#//Relationship/target"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference package.ecore#//Relationship/source"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute package.ecore#//Relationship/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute package.ecore#//Relationship/lowerBound"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute package.ecore#//Relationship/upperBound"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute package.ecore#//Relationship/targetClass"/>
+    </genClasses>
+    <genClasses ecoreClass="package.ecore#//Generalization"/>
+    <genClasses ecoreClass="package.ecore#//Realization"/>
+    <genClasses ecoreClass="package.ecore#//Association"/>
+    <genClasses ecoreClass="package.ecore#//Aggregation"/>
+    <genClasses ecoreClass="package.ecore#//Composition"/>
+    <genClasses ecoreClass="package.ecore#//Dependency"/>
+    <genClasses ecoreClass="package.ecore#//Comment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute package.ecore#//Comment/value"/>
+    </genClasses>
+    <genClasses ecoreClass="package.ecore#//Class">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference package.ecore#//Class/attribute"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference package.ecore#//Class/method"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference package.ecore#//Class/comment"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference package.ecore#//Class/targetRelationship"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference package.ecore#//Class/sourceRelationship"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute package.ecore#//Class/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference package.ecore#//Class/importedPackage"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute package.ecore#//Class/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute package.ecore#//Class/visibility"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute package.ecore#//Class/isSingletone"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute package.ecore#//Class/isInterface"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute package.ecore#//Class/superClass"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute package.ecore#//Class/supplierElement"/>
+    </genClasses>
+    <genClasses ecoreClass="package.ecore#//ImportedPackage">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute package.ecore#//ImportedPackage/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute package.ecore#//ImportedPackage/isInternal"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute package.ecore#//ImportedPackage/path"/>
+    </genClasses>
+    <genClasses ecoreClass="package.ecore#//Attribute">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute package.ecore#//Attribute/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute package.ecore#//Attribute/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute package.ecore#//Attribute/visibility"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute package.ecore#//Attribute/isConst"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute package.ecore#//Attribute/isStatic"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute package.ecore#//Attribute/value"/>
+    </genClasses>
+    <genClasses ecoreClass="package.ecore#//Method">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference package.ecore#//Method/parameter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute package.ecore#//Method/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute package.ecore#//Method/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute package.ecore#//Method/visibility"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute package.ecore#//Method/isConst"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute package.ecore#//Method/isVirtual"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute package.ecore#//Method/isStatic"/>
+    </genClasses>
+    <genClasses ecoreClass="package.ecore#//Parameter">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute package.ecore#//Parameter/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute package.ecore#//Parameter/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute package.ecore#//Parameter/value"/>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="Project" disposableProviderFactory="true" ecorePackage="project.ecore#/">
+    <genClasses ecoreClass="project.ecore#//Project">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute project.ecore#//Project/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute project.ecore#//Project/lang"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference project.ecore#//Project/package"/>
+    </genClasses>
+    <genClasses ecoreClass="project.ecore#//Package">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute project.ecore#//Package/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute project.ecore#//Package/path"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

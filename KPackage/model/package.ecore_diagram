@@ -150,7 +150,7 @@
       <styles xmi:type="notation:SortingStyle" xmi:id="_3pN7Hf-pEeOMw-rfoVtnvA"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_3pN7Hv-pEeOMw-rfoVtnvA"/>
     </children>
-    <element xmi:type="ecore:EClass" href="package.ecore#//Comment"/>
+    <element xmi:type="ecore:EClass" href="package.ecore#//Note"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3pN7FP-pEeOMw-rfoVtnvA" x="459" y="222"/>
   </children>
   <children xmi:type="notation:Shape" xmi:id="_3pOiIP-pEeOMw-rfoVtnvA" type="2001" fontName="Segoe UI">

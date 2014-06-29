@@ -61,7 +61,7 @@
       <details key="target" value="target"/>
     </eAnnotations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Comment" eSuperTypes="#//Unit">
+  <eClassifiers xsi:type="ecore:EClass" name="Note" eSuperTypes="#//Unit">
     <eAnnotations source="gmf.node">
       <details key="label" value="name"/>
     </eAnnotations>

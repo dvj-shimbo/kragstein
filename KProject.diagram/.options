@@ -1,7 +1,0 @@
-# Tracing options for the KProject.diagram plug-in
-
-# Common issues
-KProject.diagram/debug=false
-
-# Visual IDs
-KProject.diagram/debug/visualID=false

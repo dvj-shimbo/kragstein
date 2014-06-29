@@ -1,0 +1,174 @@
+@namespace(uri="KragsteinMethod.ecore", prefix="KragsteinMethod")
+package KragsteinMethod;
+
+@gmf.diagram
+class Method {
+  val Header[1] header;
+  val Branch[+] branch;
+  attr String name;
+  attr String type;
+  attr String visibility;
+  attr boolean isConst;
+  attr boolean isVirtual;
+  attr boolean isStatic;
+}
+
+@gmf.node(label="name")
+class Header {
+  attr String name;
+}
+
+@gmf.node(label="name")
+class Branch {
+  val BranchConnection sourceBranchConnection;
+  val BranchConnection targetBranchConnection;
+
+  @gmf.compartment
+  val Route[+] route;
+  attr String name;
+}
+
+@gmf.link(source="source", target="target")
+class BranchConnection {
+  ref Branch source;
+  ref Branch target;
+  attr String targetBranch;
+}
+
+@gmf.node(label.placement="none")
+class Route {
+
+  @gmf.comparment
+  val Icon[*] icon;
+}
+
+@gmf.node(label.placement="none")
+class RightComment {
+  attr String value;
+}
+
+@gmf.node(label.placement="none")
+class LeftComment {
+  attr String value;
+}
+
+class ValencePoint {
+}
+
+@gmf.link(label.placement="none", source="source", target="target")
+class IconConnection {
+  ref Icon target;
+  ref Icon source;
+  attr String targetIcon;
+}
+
+@gmf.node(label.placement="none")
+abstract class Icon {
+  val IconConnection sourceIconConnection;
+  val IconConnection targetIconConnection;
+  val ValencePoint valencePoint;
+  val LeftComment leftComment;
+  val RightComment RightComment;
+}
+
+@gmf.node(label="name", "color "="0,255,0")
+class Action extends Icon {
+  attr String name;
+  attr String value;
+}
+
+@gmf.node(label="name")
+class Question extends Icon {
+  attr String name;
+  attr String value;
+  attr boolean yesBelow;
+}
+
+@gmf.node(label="name")
+class Choice extends Icon {
+  attr String name;
+  attr String value;
+  val Case[+] choice;
+}
+
+@gmf.node(label="name")
+class Case extends Icon {
+  attr String name;
+  attr String value;
+  val CaseConnection sourceCaseConnection;
+  val CaseConnection targetCaseConnection;
+}
+
+@gmf.link(label.placement="none", source="source", target="target")
+class CaseConnection {
+  ref Case source;
+  ref Case target;
+  attr String targetCase;
+}
+
+@gmf.node(label="name")
+class Headline extends Icon {
+  attr String name;
+  attr boolean isLoop;
+}
+
+@gmf.node(label="name")
+class Adress extends Icon {
+  attr String name;
+  attr boolean isLoop;
+}
+
+@gmf.node(label="name")
+class Insertion extends Icon {
+  attr String name;
+  attr String value;
+  val Method[1] method;
+}
+
+@gmf.node(label="name")
+class Shelf extends Icon {
+  attr String name;
+  attr String value;
+  val Method[1] method;
+}
+
+@gmf.node(label="name")
+class BeginLoop extends Icon {
+  attr String name;
+  attr String value;
+}
+
+@gmf.node(label="name")
+class EndLoop extends Icon {
+  attr String name;
+  attr String value;
+}
+
+@gmf.node(label="name")
+class Output extends Icon {
+  attr String name;
+  attr String value;
+  val Method[1] method;
+}
+
+@gmf.node(label="name")
+class Input extends Icon {
+  attr String name;
+  attr String value;
+  val Method[1] method;
+}
+
+@gmf.node(label="name")
+class LoopArrow extends Icon {
+  attr String name;
+}
+
+@gmf.node(label="name")
+class EmptyConnector extends Icon {
+  attr String name;
+}
+
+@gmf.node(label.placement="none")
+class End extends Icon {
+}
+

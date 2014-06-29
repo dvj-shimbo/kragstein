@@ -77,6 +77,28 @@
           figure="//@figures.0/@descriptors.1/@actualFigure/@children.3"/>
     </descriptors>
     <descriptors
+        name="ImportedPackageFigure">
+      <actualFigure
+          xsi:type="gmfgraph:RoundedRectangle"
+          name="ImportedPackageFigure">
+        <border
+            xsi:type="gmfgraph:MarginBorder">
+          <insets
+              top="5"
+              left="5"
+              bottom="5"
+              right="5"/>
+        </border>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="ImportedPackageLabelFigure"
+            text="ImportedPackage"/>
+      </actualFigure>
+      <accessors
+          accessor="getFigureImportedPackageLabelFigure"
+          figure="//@figures.0/@descriptors.2/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors
         name="AttributeFigure">
       <actualFigure
           xsi:type="gmfgraph:RoundedRectangle"
@@ -96,7 +118,7 @@
       </actualFigure>
       <accessors
           accessor="getFigureAttributeLabelFigure"
-          figure="//@figures.0/@descriptors.2/@actualFigure/@children.0"/>
+          figure="//@figures.0/@descriptors.3/@actualFigure/@children.0"/>
     </descriptors>
     <descriptors
         name="MethodFigure">
@@ -118,7 +140,7 @@
       </actualFigure>
       <accessors
           accessor="getFigureMethodLabelFigure"
-          figure="//@figures.0/@descriptors.3/@actualFigure/@children.0"/>
+          figure="//@figures.0/@descriptors.4/@actualFigure/@children.0"/>
     </descriptors>
     <descriptors
         name="GeneralizationFigure">
@@ -212,6 +234,9 @@
       name="Class"
       figure="ClassFigure"/>
   <nodes
+      name="ImportedPackage"
+      figure="ImportedPackageFigure"/>
+  <nodes
       name="Attribute"
       figure="AttributeFigure"/>
   <nodes
@@ -262,13 +287,17 @@
       figure="ClassFigure"
       accessor="//@figures.0/@descriptors.1/@accessors.0"/>
   <labels
+      name="ImportedPackageLabel"
+      figure="ImportedPackageFigure"
+      accessor="//@figures.0/@descriptors.2/@accessors.0"/>
+  <labels
       name="AttributeLabel"
       figure="AttributeFigure"
-      accessor="//@figures.0/@descriptors.2/@accessors.0"/>
+      accessor="//@figures.0/@descriptors.3/@accessors.0"/>
   <labels
       name="MethodLabel"
       figure="MethodFigure"
-      accessor="//@figures.0/@descriptors.3/@accessors.0"/>
+      accessor="//@figures.0/@descriptors.4/@accessors.0"/>
   <labels
       name="GeneralizationLabel"
       figure="GeneralizationLabelFigure"

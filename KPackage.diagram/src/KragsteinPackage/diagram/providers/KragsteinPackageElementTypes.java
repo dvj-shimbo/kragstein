@@ -68,6 +68,11 @@ public class KragsteinPackageElementTypes {
 	/**
 	 * @generated
 	 */
+	public static final IElementType ImportedPackage_3003 = getElementType("KPackage.diagram.ImportedPackage_3003"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
 	public static final IElementType Generalization_4001 = getElementType("KPackage.diagram.Generalization_4001"); //$NON-NLS-1$
 	/**
 	 * @generated
@@ -180,6 +185,10 @@ public class KragsteinPackageElementTypes {
 					KragsteinPackage.KragsteinPackagePackage.eINSTANCE
 							.getMethod());
 
+			elements.put(ImportedPackage_3003,
+					KragsteinPackage.KragsteinPackagePackage.eINSTANCE
+							.getImportedPackage());
+
 			elements.put(Generalization_4001,
 					KragsteinPackage.KragsteinPackagePackage.eINSTANCE
 							.getGeneralization());
@@ -257,6 +266,7 @@ public class KragsteinPackageElementTypes {
 			KNOWN_ELEMENT_TYPES.add(Class_2002);
 			KNOWN_ELEMENT_TYPES.add(Attribute_3001);
 			KNOWN_ELEMENT_TYPES.add(Method_3002);
+			KNOWN_ELEMENT_TYPES.add(ImportedPackage_3003);
 			KNOWN_ELEMENT_TYPES.add(Generalization_4001);
 			KNOWN_ELEMENT_TYPES.add(Generalization_4002);
 			KNOWN_ELEMENT_TYPES.add(Realization_4003);
@@ -290,6 +300,8 @@ public class KragsteinPackageElementTypes {
 			return Attribute_3001;
 		case KragsteinPackage.diagram.edit.parts.MethodEditPart.VISUAL_ID:
 			return Method_3002;
+		case KragsteinPackage.diagram.edit.parts.ImportedPackageEditPart.VISUAL_ID:
+			return ImportedPackage_3003;
 		case KragsteinPackage.diagram.edit.parts.GeneralizationEditPart.VISUAL_ID:
 			return Generalization_4001;
 		case KragsteinPackage.diagram.edit.parts.Generalization2EditPart.VISUAL_ID:

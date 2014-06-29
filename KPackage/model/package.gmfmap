@@ -82,9 +82,30 @@
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
-              href="package.gmftool#//@palette/@tools.0/@tools.3"/>
+              href="package.gmftool#//@palette/@tools.0/@tools.4"/>
           <diagramNode
               href="package.gmfgraph#Method"/>
+        </ownedChild>
+      </children>
+      <children
+          compartment="//@nodes.1/@ownedChild/@compartments.2">
+        <containmentFeature
+            href="package.ecore#//Class/importedPackage"/>
+        <ownedChild>
+          <domainMetaElement
+              href="package.ecore#//ImportedPackage"/>
+          <labelMappings
+              xsi:type="gmfmap:FeatureLabelMapping">
+            <diagramLabel
+                href="package.gmfgraph#ImportedPackageLabel"/>
+            <features
+                href="package.ecore#//ImportedPackage/name"/>
+          </labelMappings>
+          <tool
+              xsi:type="gmftool:CreationTool"
+              href="package.gmftool#//@palette/@tools.0/@tools.3"/>
+          <diagramNode
+              href="package.gmfgraph#ImportedPackage"/>
         </ownedChild>
       </children>
       <compartments
@@ -97,7 +118,8 @@
         <compartment
             href="package.gmfgraph#ClassMethodCompartment"/>
       </compartments>
-      <compartments>
+      <compartments
+          children="//@nodes.1/@ownedChild/@children.2">
         <compartment
             href="package.gmfgraph#ClassImportedPackageCompartment"/>
       </compartments>

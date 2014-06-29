@@ -299,6 +299,14 @@ public class PackageCanonicalEditPolicy extends CanonicalEditPolicy {
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
 		}
+		case KragsteinPackage.diagram.edit.parts.ImportedPackageEditPart.VISUAL_ID: {
+			if (!domain2NotationMap.containsKey(view.getElement())) {
+				result.addAll(KragsteinPackage.diagram.part.KragsteinPackageDiagramUpdater
+						.getImportedPackage_3003ContainedLinks(view));
+			}
+			domain2NotationMap.putView(view.getElement(), view);
+			break;
+		}
 		case KragsteinPackage.diagram.edit.parts.GeneralizationEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(KragsteinPackage.diagram.part.KragsteinPackageDiagramUpdater

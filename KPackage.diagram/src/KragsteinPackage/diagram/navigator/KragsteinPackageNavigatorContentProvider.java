@@ -403,6 +403,16 @@ public class KragsteinPackageNavigatorContentProvider implements
 							.getType(KragsteinPackage.diagram.edit.parts.MethodEditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement,
 					false));
+			connectedViews = getChildrenByType(
+					Collections.singleton(sv),
+					KragsteinPackage.diagram.part.KragsteinPackageVisualIDRegistry
+							.getType(KragsteinPackage.diagram.edit.parts.ClassClassImportedPackageCompartmentEditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(
+					connectedViews,
+					KragsteinPackage.diagram.part.KragsteinPackageVisualIDRegistry
+							.getType(KragsteinPackage.diagram.edit.parts.ImportedPackageEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
 			connectedViews = getIncomingLinksByType(
 					Collections.singleton(sv),
 					KragsteinPackage.diagram.part.KragsteinPackageVisualIDRegistry

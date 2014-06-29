@@ -1128,6 +1128,12 @@ public class KragsteinPackagePackageImpl extends EPackageImpl implements Kragste
 			 "label", "name"
 		   });	
 		addAnnotation
+		  (importedPackageEClass, 
+		   source, 
+		   new String[] {
+			 "label", "name"
+		   });	
+		addAnnotation
 		  (attributeEClass, 
 		   source, 
 		   new String[] {

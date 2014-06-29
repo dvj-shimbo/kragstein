@@ -60,6 +60,14 @@ public class KragsteinPackageEditPartFactory implements EditPartFactory {
 				return new KragsteinPackage.diagram.edit.parts.MethodNameEditPart(
 						view);
 
+			case KragsteinPackage.diagram.edit.parts.ImportedPackageEditPart.VISUAL_ID:
+				return new KragsteinPackage.diagram.edit.parts.ImportedPackageEditPart(
+						view);
+
+			case KragsteinPackage.diagram.edit.parts.ImportedPackageNameEditPart.VISUAL_ID:
+				return new KragsteinPackage.diagram.edit.parts.ImportedPackageNameEditPart(
+						view);
+
 			case KragsteinPackage.diagram.edit.parts.ClassClassAttributeCompartmentEditPart.VISUAL_ID:
 				return new KragsteinPackage.diagram.edit.parts.ClassClassAttributeCompartmentEditPart(
 						view);

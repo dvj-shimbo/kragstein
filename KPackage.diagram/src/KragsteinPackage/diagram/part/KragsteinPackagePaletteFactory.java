@@ -38,7 +38,8 @@ public class KragsteinPackagePaletteFactory {
 		paletteContainer.add(createAttribute1CreationTool());
 		paletteContainer.add(createClass2CreationTool());
 		paletteContainer.add(createComment3CreationTool());
-		paletteContainer.add(createMethod4CreationTool());
+		paletteContainer.add(createImportedPackage4CreationTool());
+		paletteContainer.add(createMethod5CreationTool());
 		return paletteContainer;
 	}
 
@@ -111,13 +112,29 @@ public class KragsteinPackagePaletteFactory {
 	/**
 	 * @generated
 	 */
-	private ToolEntry createMethod4CreationTool() {
+	private ToolEntry createImportedPackage4CreationTool() {
 		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
-				KragsteinPackage.diagram.part.Messages.Method4CreationTool_title,
-				KragsteinPackage.diagram.part.Messages.Method4CreationTool_desc,
+				KragsteinPackage.diagram.part.Messages.ImportedPackage4CreationTool_title,
+				KragsteinPackage.diagram.part.Messages.ImportedPackage4CreationTool_desc,
+				Collections
+						.singletonList(KragsteinPackage.diagram.providers.KragsteinPackageElementTypes.ImportedPackage_3003));
+		entry.setId("createImportedPackage4CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(KragsteinPackage.diagram.providers.KragsteinPackageElementTypes
+				.getImageDescriptor(KragsteinPackage.diagram.providers.KragsteinPackageElementTypes.ImportedPackage_3003));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createMethod5CreationTool() {
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
+				KragsteinPackage.diagram.part.Messages.Method5CreationTool_title,
+				KragsteinPackage.diagram.part.Messages.Method5CreationTool_desc,
 				Collections
 						.singletonList(KragsteinPackage.diagram.providers.KragsteinPackageElementTypes.Method_3002));
-		entry.setId("createMethod4CreationTool"); //$NON-NLS-1$
+		entry.setId("createMethod5CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(KragsteinPackage.diagram.providers.KragsteinPackageElementTypes
 				.getImageDescriptor(KragsteinPackage.diagram.providers.KragsteinPackageElementTypes.Method_3002));
 		entry.setLargeIcon(entry.getSmallIcon());

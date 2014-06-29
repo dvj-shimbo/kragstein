@@ -258,7 +258,7 @@
          </object>
          <context viewClass="org.eclipse.gmf.runtime.notation.Node" containerViews="referencing-diagrams"/>
          <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="KragsteinPackage"/>
-         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2001,2002,3001,3002"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2001,2002,3001,3002,3003"/>
          <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4001,4002,4003,4004,4005,4006,4007,4008,4009,4010,4011,4012,4013,4014"/>
       </viewProvider>
    </extension>
@@ -271,13 +271,13 @@
             <method name="getType()" value="KragsteinPackage"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-nodes">
-            <method name="getType()" value="2001,2002,3001,3002"/>
+            <method name="getType()" value="2001,2002,3001,3002,3003"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Edge" id="generated-links">
             <method name="getType()" value="4001,4002,4003,4004,4005,4006,4007,4008,4009,4010,4011,4012,4013,4014"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-labels">
-            <method name="getType()" value="5001,5004,5002,5003"/>
+            <method name="getType()" value="5001,5004,5002,5003,5005"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-compartments">
             <method name="getType()" value="7001,7002,7003"/>
@@ -313,6 +313,11 @@
          <Priority name="Lowest"/>
          <object class="KragsteinPackage.diagram.edit.parts.MethodEditPart" id="Method_3002"/>
          <context elements="Method_3002"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="KragsteinPackage.diagram.providers.assistants.KragsteinPackageModelingAssistantProviderOfImportedPackageEditPart">
+         <Priority name="Lowest"/>
+         <object class="KragsteinPackage.diagram.edit.parts.ImportedPackageEditPart" id="ImportedPackage_3003"/>
+         <context elements="ImportedPackage_3003"/>
       </modelingAssistantProvider>
       
    </extension>
@@ -393,6 +398,16 @@
                eclass="Method"
                edithelper="KragsteinPackage.diagram.edit.helpers.MethodEditHelper">
             <param name="semanticHint" value="3002"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="KragsteinPackage.ecore">
+         <metamodelType
+               id="KPackage.diagram.ImportedPackage_3003"
+               name="%metatype.name.ImportedPackage_3003"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="ImportedPackage"
+               edithelper="KragsteinPackage.diagram.edit.helpers.ImportedPackageEditHelper">
+            <param name="semanticHint" value="3003"/>
          </metamodelType>
       </metamodel>
       <metamodel nsURI="KragsteinPackage.ecore">
@@ -545,6 +560,7 @@
          <elementType ref="KPackage.diagram.Class_2002"/>
          <elementType ref="KPackage.diagram.Attribute_3001"/>
          <elementType ref="KPackage.diagram.Method_3002"/>
+         <elementType ref="KPackage.diagram.ImportedPackage_3003"/>
          <elementType ref="KPackage.diagram.Generalization_4001"/>
          <elementType ref="KPackage.diagram.Generalization_4002"/>
          <elementType ref="KPackage.diagram.Realization_4003"/>

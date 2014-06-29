@@ -39,6 +39,15 @@
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
+          title="ImportedPackage"
+          description="Create new ImportedPackage">
+        <smallIcon
+            xsi:type="gmftool:DefaultImage"/>
+        <largeIcon
+            xsi:type="gmftool:DefaultImage"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
           title="Method"
           description="Create new Method">
         <smallIcon

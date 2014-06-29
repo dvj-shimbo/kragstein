@@ -286,12 +286,22 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String Method4CreationTool_title;
+	public static String ImportedPackage4CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String Method4CreationTool_desc;
+	public static String ImportedPackage4CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String Method5CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String Method5CreationTool_desc;
 
 	/**
 	 * @generated

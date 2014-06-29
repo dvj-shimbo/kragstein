@@ -101,6 +101,25 @@ public class KragsteinPackageParserProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
+	private IParser importedPackageName_5005Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getImportedPackageName_5005Parser() {
+		if (importedPackageName_5005Parser == null) {
+			EAttribute[] features = new EAttribute[] { KragsteinPackage.KragsteinPackagePackage.eINSTANCE
+					.getImportedPackage_Name() };
+			KragsteinPackage.diagram.parsers.MessageFormatParser parser = new KragsteinPackage.diagram.parsers.MessageFormatParser(
+					features);
+			importedPackageName_5005Parser = parser;
+		}
+		return importedPackageName_5005Parser;
+	}
+
+	/**
+	 * @generated
+	 */
 	private IParser generalizationName_6001Parser;
 
 	/**
@@ -225,6 +244,8 @@ public class KragsteinPackageParserProvider extends AbstractProvider implements
 			return getAttributeName_5002Parser();
 		case KragsteinPackage.diagram.edit.parts.MethodNameEditPart.VISUAL_ID:
 			return getMethodName_5003Parser();
+		case KragsteinPackage.diagram.edit.parts.ImportedPackageNameEditPart.VISUAL_ID:
+			return getImportedPackageName_5005Parser();
 		case KragsteinPackage.diagram.edit.parts.GeneralizationNameEditPart.VISUAL_ID:
 			return getGeneralizationName_6001Parser();
 		case KragsteinPackage.diagram.edit.parts.RealizationNameEditPart.VISUAL_ID:

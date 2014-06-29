@@ -19,7 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  *
  * @see KragsteinPackage.KragsteinPackagePackage#getImportedPackage()
- * @model
+ * @model annotation="gmf.node label='name'"
  * @generated
  */
 public interface ImportedPackage extends EObject {

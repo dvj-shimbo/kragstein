@@ -115,6 +115,50 @@
         </modelFacet>
       </labels>
     </childNodes>
+    <childNodes
+        visualID="3003"
+        editPartClassName="ImportedPackageEditPart"
+        itemSemanticEditPolicyClassName="ImportedPackageItemSemanticEditPolicy"
+        canonicalEditPolicyClassName="ImportedPackageCanonicalEditPolicy"
+        graphicalNodeEditPolicyClassName="ImportedPackageGraphicalNodeEditPolicy"
+        createCommandClassName="ImportedPackageCreateCommand"
+        containers="//@diagram/@compartments.2">
+      <diagramRunTimeClass
+          href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType
+          xsi:type="gmfgen:MetamodelType"
+          editHelperClassName="ImportedPackageEditHelper"/>
+      <viewmap
+          xsi:type="gmfgen:InnerClassViewmap"
+          className="ImportedPackageFigure"
+          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class ImportedPackageFigure extends org.eclipse.draw2d.RoundedRectangle {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureImportedPackageLabelFigure; &#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public ImportedPackageFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setCornerDimensions(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(8)&#xA;, getMapMode().DPtoLP(8)&#xA;));&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureImportedPackageLabelFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureImportedPackageLabelFigure.setText(&quot;ImportedPackage&quot;);&#xA;&#xA;this.add(fFigureImportedPackageLabelFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureImportedPackageLabelFigure() {&#xA;&#x9;&#x9;return fFigureImportedPackageLabelFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+      <modelFacet>
+        <metaClass
+            href="package.genmodel#//KragsteinPackage/ImportedPackage"/>
+        <containmentMetaFeature
+            href="package.genmodel#//KragsteinPackage/Class/importedPackage"/>
+        <childMetaFeature
+            href="package.genmodel#//KragsteinPackage/Class/importedPackage"/>
+      </modelFacet>
+      <labels
+          visualID="5005"
+          editPartClassName="ImportedPackageNameEditPart"
+          itemSemanticEditPolicyClassName="ImportedPackageNameItemSemanticEditPolicy"
+          elementIcon="true">
+        <diagramRunTimeClass
+            href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap
+            xsi:type="gmfgen:ParentAssignedViewmap"
+            getterName="getFigureImportedPackageLabelFigure"
+            figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet
+            xsi:type="gmfgen:FeatureLabelModelFacet"
+            parser="//@labelParsers/@implementations.0">
+          <metaFeatures
+              href="package.genmodel#//KragsteinPackage/ImportedPackage/name"/>
+        </modelFacet>
+      </labels>
+    </childNodes>
     <topLevelNodes
         visualID="2001"
         editPartClassName="CommentEditPart"
@@ -761,6 +805,7 @@
         editPartClassName="ClassClassImportedPackageCompartmentEditPart"
         itemSemanticEditPolicyClassName="ClassClassImportedPackageCompartmentItemSemanticEditPolicy"
         canonicalEditPolicyClassName="ClassClassImportedPackageCompartmentCanonicalEditPolicy"
+        childNodes="//@diagram/@childNodes.2"
         title="ClassImportedPackageCompartment"
         needsTitle="false"
         node="//@diagram/@topLevelNodes.1"
@@ -791,6 +836,11 @@
             title="Comment"
             description="Create new Comment"
             genNodes="//@diagram/@topLevelNodes.0"/>
+        <entries
+            xsi:type="gmfgen:ToolEntry"
+            title="ImportedPackage"
+            description="Create new ImportedPackage"
+            genNodes="//@diagram/@childNodes.2"/>
         <entries
             xsi:type="gmfgen:ToolEntry"
             title="Method"
@@ -882,6 +932,9 @@
     <childReferences
         parent="//@diagram/@topLevelNodes.1"
         child="//@diagram/@childNodes.1"/>
+    <childReferences
+        parent="//@diagram/@topLevelNodes.1"
+        child="//@diagram/@childNodes.2"/>
     <childReferences
         parent="//@diagram"
         child="//@diagram/@topLevelNodes.1"/>
@@ -1366,7 +1419,7 @@
       extensibleViaService="true">
     <implementations
         xsi:type="gmfgen:PredefinedParser"
-        uses="//@diagram/@topLevelNodes.0/@labels.0/@modelFacet //@diagram/@childNodes.0/@labels.0/@modelFacet //@diagram/@childNodes.1/@labels.0/@modelFacet //@diagram/@topLevelNodes.1/@labels.0/@modelFacet //@diagram/@links.1/@labels.0/@modelFacet //@diagram/@links.3/@labels.0/@modelFacet //@diagram/@links.5/@labels.0/@modelFacet //@diagram/@links.7/@labels.0/@modelFacet //@diagram/@links.9/@labels.0/@modelFacet //@diagram/@links.11/@labels.0/@modelFacet"/>
+        uses="//@diagram/@topLevelNodes.0/@labels.0/@modelFacet //@diagram/@childNodes.0/@labels.0/@modelFacet //@diagram/@childNodes.1/@labels.0/@modelFacet //@diagram/@childNodes.2/@labels.0/@modelFacet //@diagram/@topLevelNodes.1/@labels.0/@modelFacet //@diagram/@links.1/@labels.0/@modelFacet //@diagram/@links.3/@labels.0/@modelFacet //@diagram/@links.5/@labels.0/@modelFacet //@diagram/@links.7/@labels.0/@modelFacet //@diagram/@links.9/@labels.0/@modelFacet //@diagram/@links.11/@labels.0/@modelFacet"/>
   </labelParsers>
   <contextMenus
       context="//@diagram">

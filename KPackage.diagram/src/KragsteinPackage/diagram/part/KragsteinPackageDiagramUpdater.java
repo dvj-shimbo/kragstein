@@ -42,6 +42,8 @@ public class KragsteinPackageDiagramUpdater {
 			return getClassClassAttributeCompartment_7001SemanticChildren(view);
 		case KragsteinPackage.diagram.edit.parts.ClassClassMethodCompartmentEditPart.VISUAL_ID:
 			return getClassClassMethodCompartment_7002SemanticChildren(view);
+		case KragsteinPackage.diagram.edit.parts.ClassClassImportedPackageCompartmentEditPart.VISUAL_ID:
+			return getClassClassImportedPackageCompartment_7003SemanticChildren(view);
 		}
 		return Collections.emptyList();
 	}
@@ -138,6 +140,36 @@ public class KragsteinPackageDiagramUpdater {
 	/**
 	 * @generated
 	 */
+	public static List<KragsteinPackage.diagram.part.KragsteinPackageNodeDescriptor> getClassClassImportedPackageCompartment_7003SemanticChildren(
+			View view) {
+		if (false == view.eContainer() instanceof View) {
+			return Collections.emptyList();
+		}
+		View containerView = (View) view.eContainer();
+		if (!containerView.isSetElement()) {
+			return Collections.emptyList();
+		}
+		KragsteinPackage.Class modelElement = (KragsteinPackage.Class) containerView
+				.getElement();
+		LinkedList<KragsteinPackage.diagram.part.KragsteinPackageNodeDescriptor> result = new LinkedList<KragsteinPackage.diagram.part.KragsteinPackageNodeDescriptor>();
+		for (Iterator<?> it = modelElement.getImportedPackage().iterator(); it
+				.hasNext();) {
+			KragsteinPackage.ImportedPackage childElement = (KragsteinPackage.ImportedPackage) it
+					.next();
+			int visualID = KragsteinPackage.diagram.part.KragsteinPackageVisualIDRegistry
+					.getNodeVisualID(view, childElement);
+			if (visualID == KragsteinPackage.diagram.edit.parts.ImportedPackageEditPart.VISUAL_ID) {
+				result.add(new KragsteinPackage.diagram.part.KragsteinPackageNodeDescriptor(
+						childElement, visualID));
+				continue;
+			}
+		}
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
 	public static List<KragsteinPackage.diagram.part.KragsteinPackageLinkDescriptor> getContainedLinks(
 			View view) {
 		switch (KragsteinPackage.diagram.part.KragsteinPackageVisualIDRegistry
@@ -152,6 +184,8 @@ public class KragsteinPackageDiagramUpdater {
 			return getAttribute_3001ContainedLinks(view);
 		case KragsteinPackage.diagram.edit.parts.MethodEditPart.VISUAL_ID:
 			return getMethod_3002ContainedLinks(view);
+		case KragsteinPackage.diagram.edit.parts.ImportedPackageEditPart.VISUAL_ID:
+			return getImportedPackage_3003ContainedLinks(view);
 		case KragsteinPackage.diagram.edit.parts.GeneralizationEditPart.VISUAL_ID:
 			return getGeneralization_4001ContainedLinks(view);
 		case KragsteinPackage.diagram.edit.parts.Generalization2EditPart.VISUAL_ID:
@@ -199,6 +233,8 @@ public class KragsteinPackageDiagramUpdater {
 			return getAttribute_3001IncomingLinks(view);
 		case KragsteinPackage.diagram.edit.parts.MethodEditPart.VISUAL_ID:
 			return getMethod_3002IncomingLinks(view);
+		case KragsteinPackage.diagram.edit.parts.ImportedPackageEditPart.VISUAL_ID:
+			return getImportedPackage_3003IncomingLinks(view);
 		case KragsteinPackage.diagram.edit.parts.GeneralizationEditPart.VISUAL_ID:
 			return getGeneralization_4001IncomingLinks(view);
 		case KragsteinPackage.diagram.edit.parts.Generalization2EditPart.VISUAL_ID:
@@ -246,6 +282,8 @@ public class KragsteinPackageDiagramUpdater {
 			return getAttribute_3001OutgoingLinks(view);
 		case KragsteinPackage.diagram.edit.parts.MethodEditPart.VISUAL_ID:
 			return getMethod_3002OutgoingLinks(view);
+		case KragsteinPackage.diagram.edit.parts.ImportedPackageEditPart.VISUAL_ID:
+			return getImportedPackage_3003OutgoingLinks(view);
 		case KragsteinPackage.diagram.edit.parts.GeneralizationEditPart.VISUAL_ID:
 			return getGeneralization_4001OutgoingLinks(view);
 		case KragsteinPackage.diagram.edit.parts.Generalization2EditPart.VISUAL_ID:
@@ -336,6 +374,14 @@ public class KragsteinPackageDiagramUpdater {
 	 * @generated
 	 */
 	public static List<KragsteinPackage.diagram.part.KragsteinPackageLinkDescriptor> getMethod_3002ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<KragsteinPackage.diagram.part.KragsteinPackageLinkDescriptor> getImportedPackage_3003ContainedLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -529,6 +575,14 @@ public class KragsteinPackageDiagramUpdater {
 	/**
 	 * @generated
 	 */
+	public static List<KragsteinPackage.diagram.part.KragsteinPackageLinkDescriptor> getImportedPackage_3003IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
 	public static List<KragsteinPackage.diagram.part.KragsteinPackageLinkDescriptor> getGeneralization_4001IncomingLinks(
 			View view) {
 		return Collections.emptyList();
@@ -688,6 +742,14 @@ public class KragsteinPackageDiagramUpdater {
 	 * @generated
 	 */
 	public static List<KragsteinPackage.diagram.part.KragsteinPackageLinkDescriptor> getMethod_3002OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<KragsteinPackage.diagram.part.KragsteinPackageLinkDescriptor> getImportedPackage_3003OutgoingLinks(
 			View view) {
 		return Collections.emptyList();
 	}

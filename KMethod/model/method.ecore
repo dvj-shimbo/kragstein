@@ -28,8 +28,12 @@
         eType="#//BranchConnection" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="targetBranchConnection"
         eType="#//BranchConnection" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="route" lowerBound="1" eType="#//Route"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="route" lowerBound="1" upperBound="-1"
+        eType="#//Route" containment="true">
+      <eAnnotations source="gmf.compartment">
+        <details key="layout" value="free"/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BranchConnection">
@@ -46,7 +50,11 @@
       <details key="label.placement" value="none"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="icon" upperBound="-1" eType="#//Icon"
-        containment="true"/>
+        containment="true">
+      <eAnnotations source="gmf.compartment">
+        <details key="layout" value="free"/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RightComment">
     <eAnnotations source="gmf.node">
@@ -72,6 +80,9 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="targetIcon" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Icon" abstract="true">
+    <eAnnotations source="gmf.node">
+      <details key="label.placement" value="none"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="sourceIconConnection" eType="#//IconConnection"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="targetIconConnection" eType="#//IconConnection"
@@ -86,7 +97,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="Action" eSuperTypes="#//Icon">
     <eAnnotations source="gmf.node">
       <details key="label" value="name"/>
-      <details key="figure " value="rectangle"/>
       <details key="color " value="0,255,0"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -97,8 +107,6 @@
       <details key="label" value="name"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="route" lowerBound="1" eType="#//Route"
-        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="yesBelow" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
@@ -117,8 +125,6 @@
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="route" eType="#//Route"
-        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="sourceCaseConnection" eType="#//CaseConnection"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="targetCaseConnection" eType="#//CaseConnection"

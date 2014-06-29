@@ -1,7 +1,0 @@
-# Tracing options for the Kragstein.diagram plug-in
-
-# Common issues
-Kragstein.diagram/debug=false
-
-# Visual IDs
-Kragstein.diagram/debug/visualID=false

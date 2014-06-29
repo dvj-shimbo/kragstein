@@ -1,4 +1,0 @@
-kragstein
-=========
-
-CASE editor

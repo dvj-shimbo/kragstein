@@ -64,7 +64,7 @@ Package KragsteinPackage <KragsteinPackage.ecore>
     Attribute value : EString
 
   Class Method
-    Reference parameter : Parameter<<0..*>>
+    Reference parameter : void<<0..*>>
     Attribute name : EString
     Attribute type : EString
     Attribute visibility : EString
@@ -72,11 +72,6 @@ Package KragsteinPackage <KragsteinPackage.ecore>
     Attribute isVirtual : EBoolean
     Attribute isStatic : EBoolean
     Reference unit : Unit<<0..*>>
-
-  Class Parameter
-    Attribute name : EString
-    Attribute type : EString
-    Attribute value : EString
 
   Class Unit
     Reference sourceLink : Link<<0..*>>

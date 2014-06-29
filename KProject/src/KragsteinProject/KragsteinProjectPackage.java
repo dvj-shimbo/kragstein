@@ -130,13 +130,22 @@ public interface KragsteinProjectPackage extends EPackage {
 	int PACKAGE__PATH = 1;
 
 	/**
+	 * The feature id for the '<em><b>Subpackage</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PACKAGE__SUBPACKAGE = 2;
+
+	/**
 	 * The number of structural features of the '<em>Package</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PACKAGE_FEATURE_COUNT = 2;
+	int PACKAGE_FEATURE_COUNT = 3;
 
 
 	/**
@@ -213,6 +222,17 @@ public interface KragsteinProjectPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getPackage_Path();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link KragsteinProject.Package#getSubpackage <em>Subpackage</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Subpackage</em>'.
+	 * @see KragsteinProject.Package#getSubpackage()
+	 * @see #getPackage()
+	 * @generated
+	 */
+	EReference getPackage_Subpackage();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -295,6 +315,14 @@ public interface KragsteinProjectPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute PACKAGE__PATH = eINSTANCE.getPackage_Path();
+
+		/**
+		 * The meta object literal for the '<em><b>Subpackage</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PACKAGE__SUBPACKAGE = eINSTANCE.getPackage_Subpackage();
 
 	}
 

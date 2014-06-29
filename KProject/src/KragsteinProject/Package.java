@@ -2,6 +2,7 @@
  */
 package KragsteinProject;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -14,6 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link KragsteinProject.Package#getName <em>Name</em>}</li>
  *   <li>{@link KragsteinProject.Package#getPath <em>Path</em>}</li>
+ *   <li>{@link KragsteinProject.Package#getSubpackage <em>Subpackage</em>}</li>
  * </ul>
  * </p>
  *
@@ -73,5 +75,21 @@ public interface Package extends EObject {
 	 * @generated
 	 */
 	void setPath(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Subpackage</b></em>' containment reference list.
+	 * The list contents are of type {@link KragsteinProject.Package}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Subpackage</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Subpackage</em>' containment reference list.
+	 * @see KragsteinProject.KragsteinProjectPackage#getPackage_Subpackage()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Package> getSubpackage();
 
 } // Package

@@ -2,6 +2,7 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="KragsteinMethod" nsURI="KragsteinMethod.ecore" nsPrefix="KragsteinMethod">
   <eClassifiers xsi:type="ecore:EClass" name="Method">
+    <eAnnotations source="gmf.diagram"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="header" lowerBound="1"
         eType="#//Header" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="branch" lowerBound="1"
@@ -14,9 +15,15 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isStatic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Header">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="name"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Branch">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="name"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="sourceBranchConnection"
         eType="#//BranchConnection" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="targetBranchConnection"
@@ -26,22 +33,40 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BranchConnection">
+    <eAnnotations source="gmf.link">
+      <details key="source" value="source"/>
+      <details key="target" value="target"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//Branch"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Branch"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="targetBranch" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Route">
+    <eAnnotations source="gmf.node">
+      <details key="label.placement" value="none"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="icon" upperBound="-1" eType="#//Icon"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RightComment">
+    <eAnnotations source="gmf.node">
+      <details key="label.placement" value="none"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LeftComment">
+    <eAnnotations source="gmf.node">
+      <details key="label.placement" value="none"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ValencePoint"/>
   <eClassifiers xsi:type="ecore:EClass" name="IconConnection">
+    <eAnnotations source="gmf.link">
+      <details key="label.placement" value="none"/>
+      <details key="source" value="source"/>
+      <details key="target" value="target"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Icon"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//Icon"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="targetIcon" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -59,10 +84,18 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Action" eSuperTypes="#//Icon">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="name"/>
+      <details key="figure " value="rectangle"/>
+      <details key="color " value="0,255,0"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Question" eSuperTypes="#//Icon">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="name"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="route" lowerBound="1" eType="#//Route"
         containment="true"/>
@@ -70,12 +103,18 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="yesBelow" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Choice" eSuperTypes="#//Icon">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="name"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="choice" lowerBound="1"
         upperBound="-1" eType="#//Case" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Case" eSuperTypes="#//Icon">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="name"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="route" eType="#//Route"
@@ -86,55 +125,94 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CaseConnection">
+    <eAnnotations source="gmf.link">
+      <details key="label.placement" value="none"/>
+      <details key="source" value="source"/>
+      <details key="target" value="target"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//Case"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Case"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="targetCase" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Headline" eSuperTypes="#//Icon">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="name"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isLoop" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Adress" eSuperTypes="#//Icon">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="name"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isLoop" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Insertion" eSuperTypes="#//Icon">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="name"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="method" lowerBound="1"
         eType="#//Method" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Shelf" eSuperTypes="#//Icon">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="name"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="method" lowerBound="1"
         eType="#//Method" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BeginLoop" eSuperTypes="#//Icon">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="name"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EndLoop" eSuperTypes="#//Icon">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="name"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Output" eSuperTypes="#//Icon">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="name"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="method" lowerBound="1"
         eType="#//Method" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Input" eSuperTypes="#//Icon">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="name"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="method" lowerBound="1"
         eType="#//Method" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LoopArrow" eSuperTypes="#//Icon">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="name"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EmptyConnector" eSuperTypes="#//Icon">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="name"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="End" eSuperTypes="#//Icon"/>
+  <eClassifiers xsi:type="ecore:EClass" name="End" eSuperTypes="#//Icon">
+    <eAnnotations source="gmf.node">
+      <details key="label.placement" value="none"/>
+    </eAnnotations>
+  </eClassifiers>
 </ecore:EPackage>

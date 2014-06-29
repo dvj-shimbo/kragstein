@@ -15,3 +15,4 @@ Package KragsteinProject <KragsteinProject.ecore>
   Class Package
     Attribute name : EString
     Attribute path : EString
+    Reference subpackage : Package<<0..*>>

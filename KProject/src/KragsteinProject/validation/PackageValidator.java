@@ -4,6 +4,8 @@
  */
 package KragsteinProject.validation;
 
+import org.eclipse.emf.common.util.EList;
+
 
 /**
  * A sample validator interface for {@link KragsteinProject.Package}.
@@ -16,4 +18,6 @@ public interface PackageValidator {
 
 	boolean validateName(String value);
 	boolean validatePath(String value);
+
+	boolean validateSubpackage(EList<KragsteinProject.Package> value);
 }

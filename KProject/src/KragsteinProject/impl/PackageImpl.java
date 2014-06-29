@@ -4,12 +4,18 @@ package KragsteinProject.impl;
 
 import KragsteinProject.KragsteinProjectPackage;
 
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,6 +26,7 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  * <ul>
  *   <li>{@link KragsteinProject.impl.PackageImpl#getName <em>Name</em>}</li>
  *   <li>{@link KragsteinProject.impl.PackageImpl#getPath <em>Path</em>}</li>
+ *   <li>{@link KragsteinProject.impl.PackageImpl#getSubpackage <em>Subpackage</em>}</li>
  * </ul>
  * </p>
  *
@@ -65,6 +72,16 @@ public class PackageImpl extends EObjectImpl implements KragsteinProject.Package
 	 * @ordered
 	 */
 	protected String path = PATH_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getSubpackage() <em>Subpackage</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSubpackage()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<KragsteinProject.Package> subpackage;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -132,6 +149,32 @@ public class PackageImpl extends EObjectImpl implements KragsteinProject.Package
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<KragsteinProject.Package> getSubpackage() {
+		if (subpackage == null) {
+			subpackage = new EObjectContainmentEList<KragsteinProject.Package>(KragsteinProject.Package.class, this, KragsteinProjectPackage.PACKAGE__SUBPACKAGE);
+		}
+		return subpackage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case KragsteinProjectPackage.PACKAGE__SUBPACKAGE:
+				return ((InternalEList<?>)getSubpackage()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -139,6 +182,8 @@ public class PackageImpl extends EObjectImpl implements KragsteinProject.Package
 				return getName();
 			case KragsteinProjectPackage.PACKAGE__PATH:
 				return getPath();
+			case KragsteinProjectPackage.PACKAGE__SUBPACKAGE:
+				return getSubpackage();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -148,6 +193,7 @@ public class PackageImpl extends EObjectImpl implements KragsteinProject.Package
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -156,6 +202,10 @@ public class PackageImpl extends EObjectImpl implements KragsteinProject.Package
 				return;
 			case KragsteinProjectPackage.PACKAGE__PATH:
 				setPath((String)newValue);
+				return;
+			case KragsteinProjectPackage.PACKAGE__SUBPACKAGE:
+				getSubpackage().clear();
+				getSubpackage().addAll((Collection<? extends KragsteinProject.Package>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -175,6 +225,9 @@ public class PackageImpl extends EObjectImpl implements KragsteinProject.Package
 			case KragsteinProjectPackage.PACKAGE__PATH:
 				setPath(PATH_EDEFAULT);
 				return;
+			case KragsteinProjectPackage.PACKAGE__SUBPACKAGE:
+				getSubpackage().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -191,6 +244,8 @@ public class PackageImpl extends EObjectImpl implements KragsteinProject.Package
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case KragsteinProjectPackage.PACKAGE__PATH:
 				return PATH_EDEFAULT == null ? path != null : !PATH_EDEFAULT.equals(path);
+			case KragsteinProjectPackage.PACKAGE__SUBPACKAGE:
+				return subpackage != null && !subpackage.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

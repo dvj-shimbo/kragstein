@@ -49,4 +49,17 @@
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Dhx0oP7SEeO9gKK5PiVvtA" id="(0.9818181818181818,0.5333333333333333)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Dhx0of7SEeO9gKK5PiVvtA" id="(0.5,0.0)"/>
   </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_TfjK8P-5EeOsoPo_noWNsw" type="4003" source="_DgCINv7SEeO9gKK5PiVvtA" target="_DgCINv7SEeO9gKK5PiVvtA">
+    <children xmi:type="notation:DecorationNode" xmi:id="_TfjK8_-5EeOsoPo_noWNsw" type="6002">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_TfjK9P-5EeOsoPo_noWNsw" y="40"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_TfjK9f-5EeOsoPo_noWNsw" type="6004">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_TfjK9v-5EeOsoPo_noWNsw" y="60"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_TfjK8f-5EeOsoPo_noWNsw" fontName="Segoe UI"/>
+    <element xmi:type="ecore:EReference" href="project.ecore#//Package/subpackage"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_TfjK8v-5EeOsoPo_noWNsw" points="[13, -1, 13, -1]$[13, -1, 13, -1]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_TfsU4P-5EeOsoPo_noWNsw" id="(0.8818181818181818,0.47560975609756095)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_TfsU4f-5EeOsoPo_noWNsw" id="(0.8818181818181818,0.47560975609756095)"/>
+  </edges>
 </notation:Diagram>

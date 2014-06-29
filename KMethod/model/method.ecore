@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="KragsteinMethod" nsURI="KragsteinMethod.ecore" nsPrefix="KragsteinMethod">
-  <eClassifiers xsi:type="ecore:EClass" name="Method" eSuperTypes="package.ecore#//Method">
+  <eClassifiers xsi:type="ecore:EClass" name="Method">
     <eStructuralFeatures xsi:type="ecore:EReference" name="header" lowerBound="1"
         eType="#//Header" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="branch" lowerBound="1"

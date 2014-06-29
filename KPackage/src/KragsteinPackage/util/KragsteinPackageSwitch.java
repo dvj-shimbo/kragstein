@@ -13,6 +13,7 @@ import KragsteinPackage.ImportedPackage;
 import KragsteinPackage.KragsteinPackagePackage;
 import KragsteinPackage.Link;
 import KragsteinPackage.Method;
+import KragsteinPackage.Note;
 import KragsteinPackage.Parameter;
 import KragsteinPackage.Realization;
 import KragsteinPackage.Relationship;
@@ -134,10 +135,10 @@ public class KragsteinPackageSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case KragsteinPackagePackage.COMMENT: {
-				Comment comment = (Comment)theEObject;
-				T result = caseComment(comment);
-				if (result == null) result = caseUnit(comment);
+			case KragsteinPackagePackage.NOTE: {
+				Note note = (Note)theEObject;
+				T result = caseNote(note);
+				if (result == null) result = caseUnit(note);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -309,17 +310,17 @@ public class KragsteinPackageSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Comment</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Note</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Comment</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Note</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseComment(Comment object) {
+	public T caseNote(Note object) {
 		return null;
 	}
 

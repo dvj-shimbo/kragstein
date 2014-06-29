@@ -32,7 +32,7 @@ Package KragsteinPackage <KragsteinPackage.ecore>
 
   Class Dependency -> Relationship
 
-  Class Comment -> Unit
+  Class Note -> Unit
     Attribute value : EString
     Attribute name : EString
 

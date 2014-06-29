@@ -14,6 +14,7 @@ import KragsteinPackage.KragsteinPackageFactory;
 import KragsteinPackage.KragsteinPackagePackage;
 import KragsteinPackage.Link;
 import KragsteinPackage.Method;
+import KragsteinPackage.Note;
 import KragsteinPackage.Parameter;
 import KragsteinPackage.Realization;
 import KragsteinPackage.Relationship;
@@ -94,7 +95,7 @@ public class KragsteinPackagePackageImpl extends EPackageImpl implements Kragste
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass commentEClass = null;
+	private EClass noteEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -364,8 +365,8 @@ public class KragsteinPackagePackageImpl extends EPackageImpl implements Kragste
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getComment() {
-		return commentEClass;
+	public EClass getNote() {
+		return noteEClass;
 	}
 
 	/**
@@ -373,8 +374,8 @@ public class KragsteinPackagePackageImpl extends EPackageImpl implements Kragste
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getComment_Value() {
-		return (EAttribute)commentEClass.getEStructuralFeatures().get(0);
+	public EAttribute getNote_Value() {
+		return (EAttribute)noteEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -382,8 +383,8 @@ public class KragsteinPackagePackageImpl extends EPackageImpl implements Kragste
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getComment_Name() {
-		return (EAttribute)commentEClass.getEStructuralFeatures().get(1);
+	public EAttribute getNote_Name() {
+		return (EAttribute)noteEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -835,9 +836,9 @@ public class KragsteinPackagePackageImpl extends EPackageImpl implements Kragste
 
 		dependencyEClass = createEClass(DEPENDENCY);
 
-		commentEClass = createEClass(COMMENT);
-		createEAttribute(commentEClass, COMMENT__VALUE);
-		createEAttribute(commentEClass, COMMENT__NAME);
+		noteEClass = createEClass(NOTE);
+		createEAttribute(noteEClass, NOTE__VALUE);
+		createEAttribute(noteEClass, NOTE__NAME);
 
 		classEClass = createEClass(CLASS);
 		createEReference(classEClass, CLASS__ATTRIBUTE);
@@ -925,7 +926,7 @@ public class KragsteinPackagePackageImpl extends EPackageImpl implements Kragste
 		aggregationEClass.getESuperTypes().add(this.getRelationship());
 		compositionEClass.getESuperTypes().add(this.getRelationship());
 		dependencyEClass.getESuperTypes().add(this.getRelationship());
-		commentEClass.getESuperTypes().add(this.getUnit());
+		noteEClass.getESuperTypes().add(this.getUnit());
 		classEClass.getESuperTypes().add(this.getUnit());
 
 		// Initialize classes and features; add operations and parameters
@@ -954,9 +955,9 @@ public class KragsteinPackagePackageImpl extends EPackageImpl implements Kragste
 
 		initEClass(dependencyEClass, Dependency.class, "Dependency", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(commentEClass, Comment.class, "Comment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getComment_Value(), ecorePackage.getEString(), "value", null, 0, 1, Comment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getComment_Name(), ecorePackage.getEString(), "name", null, 0, 1, Comment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(noteEClass, Note.class, "Note", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getNote_Value(), ecorePackage.getEString(), "value", null, 0, 1, Note.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getNote_Name(), ecorePackage.getEString(), "name", null, 0, 1, Note.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(classEClass, KragsteinPackage.Class.class, "Class", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getClass_Attribute(), this.getAttribute(), null, "attribute", null, 0, -1, KragsteinPackage.Class.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1116,7 +1117,7 @@ public class KragsteinPackagePackageImpl extends EPackageImpl implements Kragste
 	protected void createGmf_2Annotations() {
 		String source = "gmf.node";	
 		addAnnotation
-		  (commentEClass, 
+		  (noteEClass, 
 		   source, 
 		   new String[] {
 			 "label", "name"
@@ -1141,6 +1142,12 @@ public class KragsteinPackagePackageImpl extends EPackageImpl implements Kragste
 		   });	
 		addAnnotation
 		  (methodEClass, 
+		   source, 
+		   new String[] {
+			 "label", "name"
+		   });	
+		addAnnotation
+		  (parameterEClass, 
 		   source, 
 		   new String[] {
 			 "label", "name"

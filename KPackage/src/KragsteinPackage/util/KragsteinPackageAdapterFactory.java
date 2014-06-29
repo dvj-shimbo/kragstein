@@ -13,6 +13,7 @@ import KragsteinPackage.ImportedPackage;
 import KragsteinPackage.KragsteinPackagePackage;
 import KragsteinPackage.Link;
 import KragsteinPackage.Method;
+import KragsteinPackage.Note;
 import KragsteinPackage.Parameter;
 import KragsteinPackage.Realization;
 import KragsteinPackage.Relationship;
@@ -114,8 +115,8 @@ public class KragsteinPackageAdapterFactory extends AdapterFactoryImpl {
 				return createDependencyAdapter();
 			}
 			@Override
-			public Adapter caseComment(Comment object) {
-				return createCommentAdapter();
+			public Adapter caseNote(Note object) {
+				return createNoteAdapter();
 			}
 			@Override
 			public Adapter caseClass(KragsteinPackage.Class object) {
@@ -278,16 +279,16 @@ public class KragsteinPackageAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link KragsteinPackage.Comment <em>Comment</em>}'.
+	 * Creates a new adapter for an object of class '{@link KragsteinPackage.Note <em>Note</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see KragsteinPackage.Comment
+	 * @see KragsteinPackage.Note
 	 * @generated
 	 */
-	public Adapter createCommentAdapter() {
+	public Adapter createNoteAdapter() {
 		return null;
 	}
 

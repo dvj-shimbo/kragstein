@@ -650,14 +650,14 @@ public interface KragsteinPackagePackage extends EPackage {
 	int UNIT_FEATURE_COUNT = 2;
 
 	/**
-	 * The meta object id for the '{@link KragsteinPackage.impl.CommentImpl <em>Comment</em>}' class.
+	 * The meta object id for the '{@link KragsteinPackage.impl.NoteImpl <em>Note</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see KragsteinPackage.impl.CommentImpl
-	 * @see KragsteinPackage.impl.KragsteinPackagePackageImpl#getComment()
+	 * @see KragsteinPackage.impl.NoteImpl
+	 * @see KragsteinPackage.impl.KragsteinPackagePackageImpl#getNote()
 	 * @generated
 	 */
-	int COMMENT = 8;
+	int NOTE = 8;
 
 	/**
 	 * The feature id for the '<em><b>Source Link</b></em>' containment reference list.
@@ -666,7 +666,7 @@ public interface KragsteinPackagePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMMENT__SOURCE_LINK = UNIT__SOURCE_LINK;
+	int NOTE__SOURCE_LINK = UNIT__SOURCE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Target Link</b></em>' containment reference list.
@@ -675,7 +675,7 @@ public interface KragsteinPackagePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMMENT__TARGET_LINK = UNIT__TARGET_LINK;
+	int NOTE__TARGET_LINK = UNIT__TARGET_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -684,7 +684,7 @@ public interface KragsteinPackagePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMMENT__VALUE = UNIT_FEATURE_COUNT + 0;
+	int NOTE__VALUE = UNIT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -693,16 +693,16 @@ public interface KragsteinPackagePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMMENT__NAME = UNIT_FEATURE_COUNT + 1;
+	int NOTE__NAME = UNIT_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of structural features of the '<em>Comment</em>' class.
+	 * The number of structural features of the '<em>Note</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMMENT_FEATURE_COUNT = UNIT_FEATURE_COUNT + 2;
+	int NOTE_FEATURE_COUNT = UNIT_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link KragsteinPackage.impl.ClassImpl <em>Class</em>}' class.
@@ -1332,36 +1332,36 @@ public interface KragsteinPackagePackage extends EPackage {
 	EClass getDependency();
 
 	/**
-	 * Returns the meta object for class '{@link KragsteinPackage.Comment <em>Comment</em>}'.
+	 * Returns the meta object for class '{@link KragsteinPackage.Note <em>Note</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Comment</em>'.
-	 * @see KragsteinPackage.Comment
+	 * @return the meta object for class '<em>Note</em>'.
+	 * @see KragsteinPackage.Note
 	 * @generated
 	 */
-	EClass getComment();
+	EClass getNote();
 
 	/**
-	 * Returns the meta object for the attribute '{@link KragsteinPackage.Comment#getValue <em>Value</em>}'.
+	 * Returns the meta object for the attribute '{@link KragsteinPackage.Note#getValue <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see KragsteinPackage.Comment#getValue()
-	 * @see #getComment()
+	 * @see KragsteinPackage.Note#getValue()
+	 * @see #getNote()
 	 * @generated
 	 */
-	EAttribute getComment_Value();
+	EAttribute getNote_Value();
 
 	/**
-	 * Returns the meta object for the attribute '{@link KragsteinPackage.Comment#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link KragsteinPackage.Note#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see KragsteinPackage.Comment#getName()
-	 * @see #getComment()
+	 * @see KragsteinPackage.Note#getName()
+	 * @see #getNote()
 	 * @generated
 	 */
-	EAttribute getComment_Name();
+	EAttribute getNote_Name();
 
 	/**
 	 * Returns the meta object for class '{@link KragsteinPackage.Class <em>Class</em>}'.
@@ -2015,14 +2015,14 @@ public interface KragsteinPackagePackage extends EPackage {
 		EClass DEPENDENCY = eINSTANCE.getDependency();
 
 		/**
-		 * The meta object literal for the '{@link KragsteinPackage.impl.CommentImpl <em>Comment</em>}' class.
+		 * The meta object literal for the '{@link KragsteinPackage.impl.NoteImpl <em>Note</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see KragsteinPackage.impl.CommentImpl
-		 * @see KragsteinPackage.impl.KragsteinPackagePackageImpl#getComment()
+		 * @see KragsteinPackage.impl.NoteImpl
+		 * @see KragsteinPackage.impl.KragsteinPackagePackageImpl#getNote()
 		 * @generated
 		 */
-		EClass COMMENT = eINSTANCE.getComment();
+		EClass NOTE = eINSTANCE.getNote();
 
 		/**
 		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
@@ -2030,7 +2030,7 @@ public interface KragsteinPackagePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute COMMENT__VALUE = eINSTANCE.getComment_Value();
+		EAttribute NOTE__VALUE = eINSTANCE.getNote_Value();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -2038,7 +2038,7 @@ public interface KragsteinPackagePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute COMMENT__NAME = eINSTANCE.getComment_Name();
+		EAttribute NOTE__NAME = eINSTANCE.getNote_Name();
 
 		/**
 		 * The meta object literal for the '{@link KragsteinPackage.impl.ClassImpl <em>Class</em>}' class.

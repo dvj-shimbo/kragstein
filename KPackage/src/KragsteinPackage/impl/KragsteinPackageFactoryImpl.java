@@ -14,6 +14,7 @@ import KragsteinPackage.KragsteinPackageFactory;
 import KragsteinPackage.KragsteinPackagePackage;
 import KragsteinPackage.Link;
 import KragsteinPackage.Method;
+import KragsteinPackage.Note;
 import KragsteinPackage.Parameter;
 import KragsteinPackage.Realization;
 
@@ -76,7 +77,7 @@ public class KragsteinPackageFactoryImpl extends EFactoryImpl implements Kragste
 			case KragsteinPackagePackage.AGGREGATION: return createAggregation();
 			case KragsteinPackagePackage.COMPOSITION: return createComposition();
 			case KragsteinPackagePackage.DEPENDENCY: return createDependency();
-			case KragsteinPackagePackage.COMMENT: return createComment();
+			case KragsteinPackagePackage.NOTE: return createNote();
 			case KragsteinPackagePackage.CLASS: return createClass();
 			case KragsteinPackagePackage.IMPORTED_PACKAGE: return createImportedPackage();
 			case KragsteinPackagePackage.ATTRIBUTE: return createAttribute();
@@ -163,9 +164,9 @@ public class KragsteinPackageFactoryImpl extends EFactoryImpl implements Kragste
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Comment createComment() {
-		CommentImpl comment = new CommentImpl();
-		return comment;
+	public Note createNote() {
+		NoteImpl note = new NoteImpl();
+		return note;
 	}
 
 	/**

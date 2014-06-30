@@ -166,13 +166,67 @@ public interface KragsteinMethodPackage extends EPackage {
 	int HEADER__NAME = 0;
 
 	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HEADER__TYPE = 1;
+
+	/**
+	 * The feature id for the '<em><b>Visibility</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HEADER__VISIBILITY = 2;
+
+	/**
+	 * The feature id for the '<em><b>Is Const</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HEADER__IS_CONST = 3;
+
+	/**
+	 * The feature id for the '<em><b>Is Virtual</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HEADER__IS_VIRTUAL = 4;
+
+	/**
+	 * The feature id for the '<em><b>Is Static</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HEADER__IS_STATIC = 5;
+
+	/**
+	 * The feature id for the '<em><b>Parameter</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HEADER__PARAMETER = 6;
+
+	/**
 	 * The number of structural features of the '<em>Header</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int HEADER_FEATURE_COUNT = 1;
+	int HEADER_FEATURE_COUNT = 7;
 
 	/**
 	 * The meta object id for the '{@link KragsteinMethod.impl.BranchImpl <em>Branch</em>}' class.
@@ -1503,6 +1557,53 @@ public interface KragsteinMethodPackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link KragsteinMethod.impl.ParameterImpl <em>Parameter</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see KragsteinMethod.impl.ParameterImpl
+	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getParameter()
+	 * @generated
+	 */
+	int PARAMETER = 24;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER__TYPE = 1;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER__VALUE = 2;
+
+	/**
+	 * The number of structural features of the '<em>Parameter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER_FEATURE_COUNT = 3;
+
+
+	/**
 	 * Returns the meta object for class '{@link KragsteinMethod.Method <em>Method</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1620,6 +1721,72 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getHeader_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link KragsteinMethod.Header#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see KragsteinMethod.Header#getType()
+	 * @see #getHeader()
+	 * @generated
+	 */
+	EAttribute getHeader_Type();
+
+	/**
+	 * Returns the meta object for the attribute '{@link KragsteinMethod.Header#getVisibility <em>Visibility</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Visibility</em>'.
+	 * @see KragsteinMethod.Header#getVisibility()
+	 * @see #getHeader()
+	 * @generated
+	 */
+	EAttribute getHeader_Visibility();
+
+	/**
+	 * Returns the meta object for the attribute '{@link KragsteinMethod.Header#isIsConst <em>Is Const</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Is Const</em>'.
+	 * @see KragsteinMethod.Header#isIsConst()
+	 * @see #getHeader()
+	 * @generated
+	 */
+	EAttribute getHeader_IsConst();
+
+	/**
+	 * Returns the meta object for the attribute '{@link KragsteinMethod.Header#isIsVirtual <em>Is Virtual</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Is Virtual</em>'.
+	 * @see KragsteinMethod.Header#isIsVirtual()
+	 * @see #getHeader()
+	 * @generated
+	 */
+	EAttribute getHeader_IsVirtual();
+
+	/**
+	 * Returns the meta object for the attribute '{@link KragsteinMethod.Header#isIsStatic <em>Is Static</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Is Static</em>'.
+	 * @see KragsteinMethod.Header#isIsStatic()
+	 * @see #getHeader()
+	 * @generated
+	 */
+	EAttribute getHeader_IsStatic();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link KragsteinMethod.Header#getParameter <em>Parameter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Parameter</em>'.
+	 * @see KragsteinMethod.Header#getParameter()
+	 * @see #getHeader()
+	 * @generated
+	 */
+	EReference getHeader_Parameter();
 
 	/**
 	 * Returns the meta object for class '{@link KragsteinMethod.Branch <em>Branch</em>}'.
@@ -2425,6 +2592,49 @@ public interface KragsteinMethodPackage extends EPackage {
 	EClass getEnd();
 
 	/**
+	 * Returns the meta object for class '{@link KragsteinMethod.Parameter <em>Parameter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Parameter</em>'.
+	 * @see KragsteinMethod.Parameter
+	 * @generated
+	 */
+	EClass getParameter();
+
+	/**
+	 * Returns the meta object for the attribute '{@link KragsteinMethod.Parameter#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see KragsteinMethod.Parameter#getName()
+	 * @see #getParameter()
+	 * @generated
+	 */
+	EAttribute getParameter_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link KragsteinMethod.Parameter#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see KragsteinMethod.Parameter#getType()
+	 * @see #getParameter()
+	 * @generated
+	 */
+	EAttribute getParameter_Type();
+
+	/**
+	 * Returns the meta object for the attribute '{@link KragsteinMethod.Parameter#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see KragsteinMethod.Parameter#getValue()
+	 * @see #getParameter()
+	 * @generated
+	 */
+	EAttribute getParameter_Value();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2537,6 +2747,54 @@ public interface KragsteinMethodPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute HEADER__NAME = eINSTANCE.getHeader_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute HEADER__TYPE = eINSTANCE.getHeader_Type();
+
+		/**
+		 * The meta object literal for the '<em><b>Visibility</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute HEADER__VISIBILITY = eINSTANCE.getHeader_Visibility();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Const</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute HEADER__IS_CONST = eINSTANCE.getHeader_IsConst();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Virtual</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute HEADER__IS_VIRTUAL = eINSTANCE.getHeader_IsVirtual();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Static</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute HEADER__IS_STATIC = eINSTANCE.getHeader_IsStatic();
+
+		/**
+		 * The meta object literal for the '<em><b>Parameter</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference HEADER__PARAMETER = eINSTANCE.getHeader_Parameter();
 
 		/**
 		 * The meta object literal for the '{@link KragsteinMethod.impl.BranchImpl <em>Branch</em>}' class.
@@ -3181,6 +3439,40 @@ public interface KragsteinMethodPackage extends EPackage {
 		 * @generated
 		 */
 		EClass END = eINSTANCE.getEnd();
+
+		/**
+		 * The meta object literal for the '{@link KragsteinMethod.impl.ParameterImpl <em>Parameter</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see KragsteinMethod.impl.ParameterImpl
+		 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getParameter()
+		 * @generated
+		 */
+		EClass PARAMETER = eINSTANCE.getParameter();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PARAMETER__NAME = eINSTANCE.getParameter_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PARAMETER__TYPE = eINSTANCE.getParameter_Type();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PARAMETER__VALUE = eINSTANCE.getParameter_Value();
 
 	}
 

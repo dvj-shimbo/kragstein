@@ -815,22 +815,22 @@ public interface KragsteinPackagePackage extends EPackage {
 	int IMPORTED_PACKAGE__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Is Internal</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMPORTED_PACKAGE__IS_INTERNAL = 1;
-
-	/**
 	 * The feature id for the '<em><b>Path</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMPORTED_PACKAGE__PATH = 2;
+	int IMPORTED_PACKAGE__PATH = 1;
+
+	/**
+	 * The feature id for the '<em><b>Is Internal</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPORTED_PACKAGE__IS_INTERNAL = 2;
 
 	/**
 	 * The number of structural features of the '<em>Imported Package</em>' class.
@@ -979,13 +979,22 @@ public interface KragsteinPackagePackage extends EPackage {
 	int METHOD__IS_STATIC = 5;
 
 	/**
+	 * The feature id for the '<em><b>Parameter</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int METHOD__PARAMETER = 6;
+
+	/**
 	 * The number of structural features of the '<em>Method</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int METHOD_FEATURE_COUNT = 6;
+	int METHOD_FEATURE_COUNT = 7;
 
 	/**
 	 * The meta object id for the '{@link KragsteinPackage.impl.LinkImpl <em>Link</em>}' class.
@@ -1023,6 +1032,53 @@ public interface KragsteinPackagePackage extends EPackage {
 	 * @ordered
 	 */
 	int LINK_FEATURE_COUNT = 2;
+
+
+	/**
+	 * The meta object id for the '{@link KragsteinPackage.impl.ParameterImpl <em>Parameter</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see KragsteinPackage.impl.ParameterImpl
+	 * @see KragsteinPackage.impl.KragsteinPackagePackageImpl#getParameter()
+	 * @generated
+	 */
+	int PARAMETER = 15;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER__TYPE = 1;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER__VALUE = 2;
+
+	/**
+	 * The number of structural features of the '<em>Parameter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER_FEATURE_COUNT = 3;
 
 
 	/**
@@ -1574,6 +1630,17 @@ public interface KragsteinPackagePackage extends EPackage {
 	EAttribute getMethod_IsStatic();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link KragsteinPackage.Method#getParameter <em>Parameter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Parameter</em>'.
+	 * @see KragsteinPackage.Method#getParameter()
+	 * @see #getMethod()
+	 * @generated
+	 */
+	EReference getMethod_Parameter();
+
+	/**
 	 * Returns the meta object for class '{@link KragsteinPackage.Unit <em>Unit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1636,6 +1703,49 @@ public interface KragsteinPackagePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getLink_Target();
+
+	/**
+	 * Returns the meta object for class '{@link KragsteinPackage.Parameter <em>Parameter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Parameter</em>'.
+	 * @see KragsteinPackage.Parameter
+	 * @generated
+	 */
+	EClass getParameter();
+
+	/**
+	 * Returns the meta object for the attribute '{@link KragsteinPackage.Parameter#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see KragsteinPackage.Parameter#getName()
+	 * @see #getParameter()
+	 * @generated
+	 */
+	EAttribute getParameter_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link KragsteinPackage.Parameter#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see KragsteinPackage.Parameter#getType()
+	 * @see #getParameter()
+	 * @generated
+	 */
+	EAttribute getParameter_Type();
+
+	/**
+	 * Returns the meta object for the attribute '{@link KragsteinPackage.Parameter#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see KragsteinPackage.Parameter#getValue()
+	 * @see #getParameter()
+	 * @generated
+	 */
+	EAttribute getParameter_Value();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -2094,6 +2204,14 @@ public interface KragsteinPackagePackage extends EPackage {
 		EAttribute METHOD__IS_STATIC = eINSTANCE.getMethod_IsStatic();
 
 		/**
+		 * The meta object literal for the '<em><b>Parameter</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference METHOD__PARAMETER = eINSTANCE.getMethod_Parameter();
+
+		/**
 		 * The meta object literal for the '{@link KragsteinPackage.impl.UnitImpl <em>Unit</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2144,6 +2262,40 @@ public interface KragsteinPackagePackage extends EPackage {
 		 * @generated
 		 */
 		EReference LINK__TARGET = eINSTANCE.getLink_Target();
+
+		/**
+		 * The meta object literal for the '{@link KragsteinPackage.impl.ParameterImpl <em>Parameter</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see KragsteinPackage.impl.ParameterImpl
+		 * @see KragsteinPackage.impl.KragsteinPackagePackageImpl#getParameter()
+		 * @generated
+		 */
+		EClass PARAMETER = eINSTANCE.getParameter();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PARAMETER__NAME = eINSTANCE.getParameter_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PARAMETER__TYPE = eINSTANCE.getParameter_Type();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PARAMETER__VALUE = eINSTANCE.getParameter_Value();
 
 	}
 

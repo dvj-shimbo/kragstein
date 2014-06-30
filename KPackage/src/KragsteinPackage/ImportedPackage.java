@@ -13,8 +13,8 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link KragsteinPackage.ImportedPackage#getName <em>Name</em>}</li>
- *   <li>{@link KragsteinPackage.ImportedPackage#isIsInternal <em>Is Internal</em>}</li>
  *   <li>{@link KragsteinPackage.ImportedPackage#getPath <em>Path</em>}</li>
+ *   <li>{@link KragsteinPackage.ImportedPackage#isIsInternal <em>Is Internal</em>}</li>
  * </ul>
  * </p>
  *

@@ -4,6 +4,9 @@
  */
 package KragsteinPackage.validation;
 
+import KragsteinPackage.Parameter;
+import org.eclipse.emf.common.util.EList;
+
 
 /**
  * A sample validator interface for {@link KragsteinPackage.Method}.
@@ -20,4 +23,6 @@ public interface MethodValidator {
 	boolean validateIsConst(boolean value);
 	boolean validateIsVirtual(boolean value);
 	boolean validateIsStatic(boolean value);
+
+	boolean validateParameter(EList<Parameter> value);
 }

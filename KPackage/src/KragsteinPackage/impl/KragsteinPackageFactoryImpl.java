@@ -14,6 +14,7 @@ import KragsteinPackage.KragsteinPackagePackage;
 import KragsteinPackage.Link;
 import KragsteinPackage.Method;
 import KragsteinPackage.Note;
+import KragsteinPackage.Parameter;
 import KragsteinPackage.Realization;
 
 import org.eclipse.emf.ecore.EClass;
@@ -81,6 +82,7 @@ public class KragsteinPackageFactoryImpl extends EFactoryImpl implements Kragste
 			case KragsteinPackagePackage.ATTRIBUTE: return createAttribute();
 			case KragsteinPackagePackage.METHOD: return createMethod();
 			case KragsteinPackagePackage.LINK: return createLink();
+			case KragsteinPackagePackage.PARAMETER: return createParameter();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -214,6 +216,16 @@ public class KragsteinPackageFactoryImpl extends EFactoryImpl implements Kragste
 	public Link createLink() {
 		LinkImpl link = new LinkImpl();
 		return link;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Parameter createParameter() {
+		ParameterImpl parameter = new ParameterImpl();
+		return parameter;
 	}
 
 	/**

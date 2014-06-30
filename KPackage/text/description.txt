@@ -52,8 +52,8 @@ Package KragsteinPackage <KragsteinPackage.ecore>
 
   Class ImportedPackage
     Attribute name : EString
-    Attribute isInternal : EBoolean
     Attribute path : EString
+    Attribute isInternal : EBoolean
 
   Class Attribute
     Attribute name : EString
@@ -70,6 +70,7 @@ Package KragsteinPackage <KragsteinPackage.ecore>
     Attribute isConst : EBoolean
     Attribute isVirtual : EBoolean
     Attribute isStatic : EBoolean
+    Reference parameter : Parameter<<0..*>>
 
   Class Unit
     Reference sourceLink : Link<<0..*>>
@@ -78,3 +79,8 @@ Package KragsteinPackage <KragsteinPackage.ecore>
   Class Link
     Reference source : Unit
     Reference target : Unit
+
+  Class Parameter
+    Attribute name : EString
+    Attribute type : EString
+    Attribute value : EString

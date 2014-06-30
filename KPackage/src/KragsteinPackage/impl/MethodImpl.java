@@ -5,12 +5,19 @@ package KragsteinPackage.impl;
 import KragsteinPackage.KragsteinPackagePackage;
 import KragsteinPackage.Method;
 
+import KragsteinPackage.Parameter;
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,6 +32,7 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  *   <li>{@link KragsteinPackage.impl.MethodImpl#isIsConst <em>Is Const</em>}</li>
  *   <li>{@link KragsteinPackage.impl.MethodImpl#isIsVirtual <em>Is Virtual</em>}</li>
  *   <li>{@link KragsteinPackage.impl.MethodImpl#isIsStatic <em>Is Static</em>}</li>
+ *   <li>{@link KragsteinPackage.impl.MethodImpl#getParameter <em>Parameter</em>}</li>
  * </ul>
  * </p>
  *
@@ -150,6 +158,16 @@ public class MethodImpl extends EObjectImpl implements Method {
 	 * @ordered
 	 */
 	protected boolean isStatic = IS_STATIC_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getParameter() <em>Parameter</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getParameter()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Parameter> parameter;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -301,6 +319,32 @@ public class MethodImpl extends EObjectImpl implements Method {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Parameter> getParameter() {
+		if (parameter == null) {
+			parameter = new EObjectContainmentEList<Parameter>(Parameter.class, this, KragsteinPackagePackage.METHOD__PARAMETER);
+		}
+		return parameter;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case KragsteinPackagePackage.METHOD__PARAMETER:
+				return ((InternalEList<?>)getParameter()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -316,6 +360,8 @@ public class MethodImpl extends EObjectImpl implements Method {
 				return isIsVirtual();
 			case KragsteinPackagePackage.METHOD__IS_STATIC:
 				return isIsStatic();
+			case KragsteinPackagePackage.METHOD__PARAMETER:
+				return getParameter();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -325,6 +371,7 @@ public class MethodImpl extends EObjectImpl implements Method {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -345,6 +392,10 @@ public class MethodImpl extends EObjectImpl implements Method {
 				return;
 			case KragsteinPackagePackage.METHOD__IS_STATIC:
 				setIsStatic((Boolean)newValue);
+				return;
+			case KragsteinPackagePackage.METHOD__PARAMETER:
+				getParameter().clear();
+				getParameter().addAll((Collection<? extends Parameter>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -376,6 +427,9 @@ public class MethodImpl extends EObjectImpl implements Method {
 			case KragsteinPackagePackage.METHOD__IS_STATIC:
 				setIsStatic(IS_STATIC_EDEFAULT);
 				return;
+			case KragsteinPackagePackage.METHOD__PARAMETER:
+				getParameter().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -400,6 +454,8 @@ public class MethodImpl extends EObjectImpl implements Method {
 				return isVirtual != IS_VIRTUAL_EDEFAULT;
 			case KragsteinPackagePackage.METHOD__IS_STATIC:
 				return isStatic != IS_STATIC_EDEFAULT;
+			case KragsteinPackagePackage.METHOD__PARAMETER:
+				return parameter != null && !parameter.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

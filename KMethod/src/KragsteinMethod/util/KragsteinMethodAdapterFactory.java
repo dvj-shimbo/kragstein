@@ -164,6 +164,10 @@ public class KragsteinMethodAdapterFactory extends AdapterFactoryImpl {
 				return createEndAdapter();
 			}
 			@Override
+			public Adapter caseParameter(Parameter object) {
+				return createParameterAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -516,6 +520,20 @@ public class KragsteinMethodAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createEndAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link KragsteinMethod.Parameter <em>Parameter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see KragsteinMethod.Parameter
+	 * @generated
+	 */
+	public Adapter createParameterAdapter() {
 		return null;
 	}
 

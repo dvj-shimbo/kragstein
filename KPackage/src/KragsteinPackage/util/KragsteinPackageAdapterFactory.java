@@ -13,6 +13,7 @@ import KragsteinPackage.KragsteinPackagePackage;
 import KragsteinPackage.Link;
 import KragsteinPackage.Method;
 import KragsteinPackage.Note;
+import KragsteinPackage.Parameter;
 import KragsteinPackage.Realization;
 import KragsteinPackage.Relationship;
 import KragsteinPackage.Unit;
@@ -139,6 +140,10 @@ public class KragsteinPackageAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseLink(Link object) {
 				return createLinkAdapter();
+			}
+			@Override
+			public Adapter caseParameter(Parameter object) {
+				return createParameterAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -367,6 +372,20 @@ public class KragsteinPackageAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createLinkAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link KragsteinPackage.Parameter <em>Parameter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see KragsteinPackage.Parameter
+	 * @generated
+	 */
+	public Adapter createParameterAdapter() {
 		return null;
 	}
 

@@ -20,8 +20,8 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  * The following features are implemented:
  * <ul>
  *   <li>{@link KragsteinPackage.impl.ImportedPackageImpl#getName <em>Name</em>}</li>
- *   <li>{@link KragsteinPackage.impl.ImportedPackageImpl#isIsInternal <em>Is Internal</em>}</li>
  *   <li>{@link KragsteinPackage.impl.ImportedPackageImpl#getPath <em>Path</em>}</li>
+ *   <li>{@link KragsteinPackage.impl.ImportedPackageImpl#isIsInternal <em>Is Internal</em>}</li>
  * </ul>
  * </p>
  *
@@ -49,26 +49,6 @@ public class ImportedPackageImpl extends EObjectImpl implements ImportedPackage 
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #isIsInternal() <em>Is Internal</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isIsInternal()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean IS_INTERNAL_EDEFAULT = false;
-
-	/**
-	 * The cached value of the '{@link #isIsInternal() <em>Is Internal</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isIsInternal()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean isInternal = IS_INTERNAL_EDEFAULT;
-
-	/**
 	 * The default value of the '{@link #getPath() <em>Path</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -87,6 +67,26 @@ public class ImportedPackageImpl extends EObjectImpl implements ImportedPackage 
 	 * @ordered
 	 */
 	protected String path = PATH_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isIsInternal() <em>Is Internal</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isIsInternal()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean IS_INTERNAL_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isIsInternal() <em>Is Internal</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isIsInternal()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean isInternal = IS_INTERNAL_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -180,10 +180,10 @@ public class ImportedPackageImpl extends EObjectImpl implements ImportedPackage 
 		switch (featureID) {
 			case KragsteinPackagePackage.IMPORTED_PACKAGE__NAME:
 				return getName();
-			case KragsteinPackagePackage.IMPORTED_PACKAGE__IS_INTERNAL:
-				return isIsInternal();
 			case KragsteinPackagePackage.IMPORTED_PACKAGE__PATH:
 				return getPath();
+			case KragsteinPackagePackage.IMPORTED_PACKAGE__IS_INTERNAL:
+				return isIsInternal();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -199,11 +199,11 @@ public class ImportedPackageImpl extends EObjectImpl implements ImportedPackage 
 			case KragsteinPackagePackage.IMPORTED_PACKAGE__NAME:
 				setName((String)newValue);
 				return;
-			case KragsteinPackagePackage.IMPORTED_PACKAGE__IS_INTERNAL:
-				setIsInternal((Boolean)newValue);
-				return;
 			case KragsteinPackagePackage.IMPORTED_PACKAGE__PATH:
 				setPath((String)newValue);
+				return;
+			case KragsteinPackagePackage.IMPORTED_PACKAGE__IS_INTERNAL:
+				setIsInternal((Boolean)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -220,11 +220,11 @@ public class ImportedPackageImpl extends EObjectImpl implements ImportedPackage 
 			case KragsteinPackagePackage.IMPORTED_PACKAGE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case KragsteinPackagePackage.IMPORTED_PACKAGE__IS_INTERNAL:
-				setIsInternal(IS_INTERNAL_EDEFAULT);
-				return;
 			case KragsteinPackagePackage.IMPORTED_PACKAGE__PATH:
 				setPath(PATH_EDEFAULT);
+				return;
+			case KragsteinPackagePackage.IMPORTED_PACKAGE__IS_INTERNAL:
+				setIsInternal(IS_INTERNAL_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -240,10 +240,10 @@ public class ImportedPackageImpl extends EObjectImpl implements ImportedPackage 
 		switch (featureID) {
 			case KragsteinPackagePackage.IMPORTED_PACKAGE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case KragsteinPackagePackage.IMPORTED_PACKAGE__IS_INTERNAL:
-				return isInternal != IS_INTERNAL_EDEFAULT;
 			case KragsteinPackagePackage.IMPORTED_PACKAGE__PATH:
 				return PATH_EDEFAULT == null ? path != null : !PATH_EDEFAULT.equals(path);
+			case KragsteinPackagePackage.IMPORTED_PACKAGE__IS_INTERNAL:
+				return isInternal != IS_INTERNAL_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -260,10 +260,10 @@ public class ImportedPackageImpl extends EObjectImpl implements ImportedPackage 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (name: ");
 		result.append(name);
-		result.append(", isInternal: ");
-		result.append(isInternal);
 		result.append(", path: ");
 		result.append(path);
+		result.append(", isInternal: ");
+		result.append(isInternal);
 		result.append(')');
 		return result.toString();
 	}

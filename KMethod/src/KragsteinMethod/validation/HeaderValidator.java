@@ -4,6 +4,9 @@
  */
 package KragsteinMethod.validation;
 
+import KragsteinMethod.Parameter;
+import org.eclipse.emf.common.util.EList;
+
 
 /**
  * A sample validator interface for {@link KragsteinMethod.Header}.
@@ -15,4 +18,16 @@ public interface HeaderValidator {
 	boolean validate();
 
 	boolean validateName(String value);
+
+	boolean validateType(String value);
+
+	boolean validateVisibility(String value);
+
+	boolean validateIsConst(boolean value);
+
+	boolean validateIsVirtual(boolean value);
+
+	boolean validateIsStatic(boolean value);
+
+	boolean validateParameter(EList<Parameter> value);
 }

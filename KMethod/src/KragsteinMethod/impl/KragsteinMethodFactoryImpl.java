@@ -79,6 +79,7 @@ public class KragsteinMethodFactoryImpl extends EFactoryImpl implements Kragstei
 			case KragsteinMethodPackage.OUTPUT: return createOutput();
 			case KragsteinMethodPackage.INPUT: return createInput();
 			case KragsteinMethodPackage.END: return createEnd();
+			case KragsteinMethodPackage.PARAMETER: return createParameter();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -312,6 +313,16 @@ public class KragsteinMethodFactoryImpl extends EFactoryImpl implements Kragstei
 	public End createEnd() {
 		EndImpl end = new EndImpl();
 		return end;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Parameter createParameter() {
+		ParameterImpl parameter = new ParameterImpl();
+		return parameter;
 	}
 
 	/**

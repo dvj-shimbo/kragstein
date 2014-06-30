@@ -103,13 +103,13 @@ public interface KragsteinPackageFactory extends EFactory {
 	Class createClass();
 
 	/**
-	 * Returns a new object of class '<em>Imported Package</em>'.
+	 * Returns a new object of class '<em>Imported Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Imported Package</em>'.
+	 * @return a new object of class '<em>Imported Class</em>'.
 	 * @generated
 	 */
-	ImportedPackage createImportedPackage();
+	ImportedClass createImportedClass();
 
 	/**
 	 * Returns a new object of class '<em>Attribute</em>'.

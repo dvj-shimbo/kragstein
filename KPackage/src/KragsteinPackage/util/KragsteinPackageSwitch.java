@@ -8,6 +8,7 @@ import KragsteinPackage.Attribute;
 import KragsteinPackage.Composition;
 import KragsteinPackage.Dependency;
 import KragsteinPackage.Generalization;
+import KragsteinPackage.ImportedClass;
 import KragsteinPackage.ImportedPackage;
 import KragsteinPackage.KragsteinPackagePackage;
 import KragsteinPackage.Link;
@@ -148,9 +149,9 @@ public class KragsteinPackageSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case KragsteinPackagePackage.IMPORTED_PACKAGE: {
-				ImportedPackage importedPackage = (ImportedPackage)theEObject;
-				T result = caseImportedPackage(importedPackage);
+			case KragsteinPackagePackage.IMPORTED_CLASS: {
+				ImportedClass importedClass = (ImportedClass)theEObject;
+				T result = caseImportedClass(importedClass);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -339,17 +340,17 @@ public class KragsteinPackageSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Imported Package</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Imported Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Imported Package</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Imported Class</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseImportedPackage(ImportedPackage object) {
+	public T caseImportedClass(ImportedClass object) {
 		return null;
 	}
 

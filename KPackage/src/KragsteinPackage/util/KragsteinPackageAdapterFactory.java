@@ -8,6 +8,7 @@ import KragsteinPackage.Attribute;
 import KragsteinPackage.Composition;
 import KragsteinPackage.Dependency;
 import KragsteinPackage.Generalization;
+import KragsteinPackage.ImportedClass;
 import KragsteinPackage.ImportedPackage;
 import KragsteinPackage.KragsteinPackagePackage;
 import KragsteinPackage.Link;
@@ -122,8 +123,8 @@ public class KragsteinPackageAdapterFactory extends AdapterFactoryImpl {
 				return createClassAdapter();
 			}
 			@Override
-			public Adapter caseImportedPackage(ImportedPackage object) {
-				return createImportedPackageAdapter();
+			public Adapter caseImportedClass(ImportedClass object) {
+				return createImportedClassAdapter();
 			}
 			@Override
 			public Adapter caseAttribute(Attribute object) {
@@ -306,16 +307,16 @@ public class KragsteinPackageAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link KragsteinPackage.ImportedPackage <em>Imported Package</em>}'.
+	 * Creates a new adapter for an object of class '{@link KragsteinPackage.ImportedClass <em>Imported Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see KragsteinPackage.ImportedPackage
+	 * @see KragsteinPackage.ImportedClass
 	 * @generated
 	 */
-	public Adapter createImportedPackageAdapter() {
+	public Adapter createImportedClassAdapter() {
 		return null;
 	}
 

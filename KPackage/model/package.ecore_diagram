@@ -194,15 +194,15 @@
     <children xmi:type="notation:DecorationNode" xmi:id="_umPzGQB6EeSjP_fdSWkDsw" type="5001"/>
     <children xmi:type="notation:BasicCompartment" xmi:id="_umPzGgB6EeSjP_fdSWkDsw" type="7001">
       <children xmi:type="notation:Node" xmi:id="_uncFkgB6EeSjP_fdSWkDsw" type="3001">
-        <element xmi:type="ecore:EAttribute" href="package.ecore#//ImportedPackage/name"/>
+        <element xmi:type="ecore:EAttribute" href="package.ecore#//ImportedClass/name"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_uncFkwB6EeSjP_fdSWkDsw"/>
       </children>
       <children xmi:type="notation:Node" xmi:id="_uncFlgB6EeSjP_fdSWkDsw" type="3001">
-        <element xmi:type="ecore:EAttribute" href="package.ecore#//ImportedPackage/path"/>
+        <element xmi:type="ecore:EAttribute" href="package.ecore#//ImportedClass/path"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_uncFlwB6EeSjP_fdSWkDsw"/>
       </children>
       <children xmi:type="notation:Node" xmi:id="_uncFlAB6EeSjP_fdSWkDsw" type="3001">
-        <element xmi:type="ecore:EAttribute" href="package.ecore#//ImportedPackage/isInternal"/>
+        <element xmi:type="ecore:EAttribute" href="package.ecore#//ImportedClass/isInternal"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_uncFlQB6EeSjP_fdSWkDsw"/>
       </children>
       <styles xmi:type="notation:SortingStyle" xmi:id="_umPzGwB6EeSjP_fdSWkDsw"/>
@@ -216,7 +216,7 @@
       <styles xmi:type="notation:SortingStyle" xmi:id="_umPzIQB6EeSjP_fdSWkDsw"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_umPzIgB6EeSjP_fdSWkDsw"/>
     </children>
-    <element xmi:type="ecore:EClass" href="package.ecore#//ImportedPackage"/>
+    <element xmi:type="ecore:EClass" href="package.ecore#//ImportedClass"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_umPzGAB6EeSjP_fdSWkDsw" x="110" y="430"/>
   </children>
   <children xmi:type="notation:Shape" xmi:id="_umPzIwB6EeSjP_fdSWkDsw" type="2001" fontName="Segoe UI">
@@ -490,7 +490,7 @@
       <layoutConstraint xmi:type="notation:Location" xmi:id="_upOOTQB6EeSjP_fdSWkDsw" x="-3" y="-12"/>
     </children>
     <styles xmi:type="notation:FontStyle" xmi:id="_upOOSAB6EeSjP_fdSWkDsw" fontName="Segoe UI"/>
-    <element xmi:type="ecore:EReference" href="package.ecore#//Class/importedPackage"/>
+    <element xmi:type="ecore:EReference" href="package.ecore#//Class/importedClass"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_upOOSQB6EeSjP_fdSWkDsw" points="[0, 1, 133, -58]$[0, 39, 133, -20]$[-133, 39, 0, -20]$[-133, 59, 0, 0]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_urAW8gB6EeSjP_fdSWkDsw" id="(0.2046783625730994,0.9938271604938271)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_urAW8wB6EeSjP_fdSWkDsw" id="(0.4962962962962963,0.0)"/>

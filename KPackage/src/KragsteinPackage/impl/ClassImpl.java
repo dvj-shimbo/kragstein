@@ -3,6 +3,7 @@
 package KragsteinPackage.impl;
 
 import KragsteinPackage.Attribute;
+import KragsteinPackage.ImportedClass;
 import KragsteinPackage.ImportedPackage;
 import KragsteinPackage.KragsteinPackagePackage;
 import KragsteinPackage.Method;
@@ -35,7 +36,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link KragsteinPackage.impl.ClassImpl#getTargetRelationship <em>Target Relationship</em>}</li>
  *   <li>{@link KragsteinPackage.impl.ClassImpl#getSourceRelationship <em>Source Relationship</em>}</li>
  *   <li>{@link KragsteinPackage.impl.ClassImpl#getName <em>Name</em>}</li>
- *   <li>{@link KragsteinPackage.impl.ClassImpl#getImportedPackage <em>Imported Package</em>}</li>
+ *   <li>{@link KragsteinPackage.impl.ClassImpl#getImportedClass <em>Imported Class</em>}</li>
  *   <li>{@link KragsteinPackage.impl.ClassImpl#getType <em>Type</em>}</li>
  *   <li>{@link KragsteinPackage.impl.ClassImpl#getVisibility <em>Visibility</em>}</li>
  *   <li>{@link KragsteinPackage.impl.ClassImpl#isIsSingletone <em>Is Singletone</em>}</li>
@@ -109,14 +110,14 @@ public class ClassImpl extends UnitImpl implements KragsteinPackage.Class {
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getImportedPackage() <em>Imported Package</em>}' containment reference list.
+	 * The cached value of the '{@link #getImportedClass() <em>Imported Class</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getImportedPackage()
+	 * @see #getImportedClass()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ImportedPackage> importedPackage;
+	protected EList<ImportedClass> importedClass;
 
 	/**
 	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
@@ -331,11 +332,11 @@ public class ClassImpl extends UnitImpl implements KragsteinPackage.Class {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ImportedPackage> getImportedPackage() {
-		if (importedPackage == null) {
-			importedPackage = new EObjectContainmentEList<ImportedPackage>(ImportedPackage.class, this, KragsteinPackagePackage.CLASS__IMPORTED_PACKAGE);
+	public EList<ImportedClass> getImportedClass() {
+		if (importedClass == null) {
+			importedClass = new EObjectContainmentEList<ImportedClass>(ImportedClass.class, this, KragsteinPackagePackage.CLASS__IMPORTED_CLASS);
 		}
-		return importedPackage;
+		return importedClass;
 	}
 
 	/**
@@ -480,8 +481,8 @@ public class ClassImpl extends UnitImpl implements KragsteinPackage.Class {
 				return ((InternalEList<?>)getTargetRelationship()).basicRemove(otherEnd, msgs);
 			case KragsteinPackagePackage.CLASS__SOURCE_RELATIONSHIP:
 				return ((InternalEList<?>)getSourceRelationship()).basicRemove(otherEnd, msgs);
-			case KragsteinPackagePackage.CLASS__IMPORTED_PACKAGE:
-				return ((InternalEList<?>)getImportedPackage()).basicRemove(otherEnd, msgs);
+			case KragsteinPackagePackage.CLASS__IMPORTED_CLASS:
+				return ((InternalEList<?>)getImportedClass()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -504,8 +505,8 @@ public class ClassImpl extends UnitImpl implements KragsteinPackage.Class {
 				return getSourceRelationship();
 			case KragsteinPackagePackage.CLASS__NAME:
 				return getName();
-			case KragsteinPackagePackage.CLASS__IMPORTED_PACKAGE:
-				return getImportedPackage();
+			case KragsteinPackagePackage.CLASS__IMPORTED_CLASS:
+				return getImportedClass();
 			case KragsteinPackagePackage.CLASS__TYPE:
 				return getType();
 			case KragsteinPackagePackage.CLASS__VISIBILITY:
@@ -550,9 +551,9 @@ public class ClassImpl extends UnitImpl implements KragsteinPackage.Class {
 			case KragsteinPackagePackage.CLASS__NAME:
 				setName((String)newValue);
 				return;
-			case KragsteinPackagePackage.CLASS__IMPORTED_PACKAGE:
-				getImportedPackage().clear();
-				getImportedPackage().addAll((Collection<? extends ImportedPackage>)newValue);
+			case KragsteinPackagePackage.CLASS__IMPORTED_CLASS:
+				getImportedClass().clear();
+				getImportedClass().addAll((Collection<? extends ImportedClass>)newValue);
 				return;
 			case KragsteinPackagePackage.CLASS__TYPE:
 				setType((String)newValue);
@@ -599,8 +600,8 @@ public class ClassImpl extends UnitImpl implements KragsteinPackage.Class {
 			case KragsteinPackagePackage.CLASS__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case KragsteinPackagePackage.CLASS__IMPORTED_PACKAGE:
-				getImportedPackage().clear();
+			case KragsteinPackagePackage.CLASS__IMPORTED_CLASS:
+				getImportedClass().clear();
 				return;
 			case KragsteinPackagePackage.CLASS__TYPE:
 				setType(TYPE_EDEFAULT);
@@ -642,8 +643,8 @@ public class ClassImpl extends UnitImpl implements KragsteinPackage.Class {
 				return sourceRelationship != null && !sourceRelationship.isEmpty();
 			case KragsteinPackagePackage.CLASS__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case KragsteinPackagePackage.CLASS__IMPORTED_PACKAGE:
-				return importedPackage != null && !importedPackage.isEmpty();
+			case KragsteinPackagePackage.CLASS__IMPORTED_CLASS:
+				return importedClass != null && !importedClass.isEmpty();
 			case KragsteinPackagePackage.CLASS__TYPE:
 				return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
 			case KragsteinPackagePackage.CLASS__VISIBILITY:

@@ -41,10 +41,10 @@
         queryText="true"/>
   </childNodeTraces>
   <childNodeTraces
-      visualID="3003"
-      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'KragsteinPackage.ecore' and _eClass_.name = 'ImportedPackage') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'KragsteinPackage.ecore' and _eClass_.name = 'Class') and _containmentMF_.name = 'importedPackage')">
+      visualID="3004"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'KragsteinPackage.ecore' and _eClass_.name = 'ImportedClass') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'KragsteinPackage.ecore' and _eClass_.name = 'Class') and _containmentMF_.name = 'importedClass')">
     <nodeLabelTraces
-        visualID="5004"
+        visualID="5006"
         queryText="true"/>
   </childNodeTraces>
   <linkTraces

@@ -85,8 +85,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="sourceRelationship" upperBound="-1"
         eType="#//Relationship" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="importedPackage" upperBound="-1"
-        eType="#//ImportedPackage" containment="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="importedClass" upperBound="-1"
+        eType="#//ImportedClass" containment="true">
       <eAnnotations source="gmf.compartment"/>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -96,7 +96,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="superClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="supplierElement" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ImportedPackage">
+  <eClassifiers xsi:type="ecore:EClass" name="ImportedClass">
     <eAnnotations source="gmf.node">
       <details key="label" value="name"/>
     </eAnnotations>

@@ -17,7 +17,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link KragsteinPackage.Class#getTargetRelationship <em>Target Relationship</em>}</li>
  *   <li>{@link KragsteinPackage.Class#getSourceRelationship <em>Source Relationship</em>}</li>
  *   <li>{@link KragsteinPackage.Class#getName <em>Name</em>}</li>
- *   <li>{@link KragsteinPackage.Class#getImportedPackage <em>Imported Package</em>}</li>
+ *   <li>{@link KragsteinPackage.Class#getImportedClass <em>Imported Class</em>}</li>
  *   <li>{@link KragsteinPackage.Class#getType <em>Type</em>}</li>
  *   <li>{@link KragsteinPackage.Class#getVisibility <em>Visibility</em>}</li>
  *   <li>{@link KragsteinPackage.Class#isIsSingletone <em>Is Singletone</em>}</li>
@@ -123,20 +123,20 @@ public interface Class extends Unit {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Imported Package</b></em>' containment reference list.
-	 * The list contents are of type {@link KragsteinPackage.ImportedPackage}.
+	 * Returns the value of the '<em><b>Imported Class</b></em>' containment reference list.
+	 * The list contents are of type {@link KragsteinPackage.ImportedClass}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Imported Package</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Imported Class</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Imported Package</em>' containment reference list.
-	 * @see KragsteinPackage.KragsteinPackagePackage#getClass_ImportedPackage()
+	 * @return the value of the '<em>Imported Class</em>' containment reference list.
+	 * @see KragsteinPackage.KragsteinPackagePackage#getClass_ImportedClass()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<ImportedPackage> getImportedPackage();
+	EList<ImportedClass> getImportedClass();
 
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' attribute.

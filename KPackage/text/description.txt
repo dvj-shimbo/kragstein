@@ -42,7 +42,7 @@ Package KragsteinPackage <KragsteinPackage.ecore>
     Reference targetRelationship : Relationship<<0..*>>
     Reference sourceRelationship : Relationship<<0..*>>
     Attribute name : EString
-    Reference importedPackage : ImportedPackage<<0..*>>
+    Reference importedClass : ImportedClass<<0..*>>
     Attribute type : EString
     Attribute visibility : EString
     Attribute isSingletone : EBoolean
@@ -50,7 +50,7 @@ Package KragsteinPackage <KragsteinPackage.ecore>
     Attribute superClass : EString
     Attribute supplierElement : EString
 
-  Class ImportedPackage
+  Class ImportedClass
     Attribute name : EString
     Attribute path : EString
     Attribute isInternal : EBoolean

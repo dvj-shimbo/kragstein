@@ -724,13 +724,13 @@ public interface KragsteinPackagePackage extends EPackage {
 	int CLASS__NAME = UNIT_FEATURE_COUNT + 4;
 
 	/**
-	 * The feature id for the '<em><b>Imported Package</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Imported Class</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS__IMPORTED_PACKAGE = UNIT_FEATURE_COUNT + 5;
+	int CLASS__IMPORTED_CLASS = UNIT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -796,14 +796,14 @@ public interface KragsteinPackagePackage extends EPackage {
 	int CLASS_FEATURE_COUNT = UNIT_FEATURE_COUNT + 12;
 
 	/**
-	 * The meta object id for the '{@link KragsteinPackage.impl.ImportedPackageImpl <em>Imported Package</em>}' class.
+	 * The meta object id for the '{@link KragsteinPackage.impl.ImportedClassImpl <em>Imported Class</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see KragsteinPackage.impl.ImportedPackageImpl
-	 * @see KragsteinPackage.impl.KragsteinPackagePackageImpl#getImportedPackage()
+	 * @see KragsteinPackage.impl.ImportedClassImpl
+	 * @see KragsteinPackage.impl.KragsteinPackagePackageImpl#getImportedClass()
 	 * @generated
 	 */
-	int IMPORTED_PACKAGE = 10;
+	int IMPORTED_CLASS = 10;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -812,7 +812,7 @@ public interface KragsteinPackagePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMPORTED_PACKAGE__NAME = 0;
+	int IMPORTED_CLASS__NAME = 0;
 
 	/**
 	 * The feature id for the '<em><b>Path</b></em>' attribute.
@@ -821,7 +821,7 @@ public interface KragsteinPackagePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMPORTED_PACKAGE__PATH = 1;
+	int IMPORTED_CLASS__PATH = 1;
 
 	/**
 	 * The feature id for the '<em><b>Is Internal</b></em>' attribute.
@@ -830,16 +830,16 @@ public interface KragsteinPackagePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMPORTED_PACKAGE__IS_INTERNAL = 2;
+	int IMPORTED_CLASS__IS_INTERNAL = 2;
 
 	/**
-	 * The number of structural features of the '<em>Imported Package</em>' class.
+	 * The number of structural features of the '<em>Imported Class</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMPORTED_PACKAGE_FEATURE_COUNT = 3;
+	int IMPORTED_CLASS_FEATURE_COUNT = 3;
 
 	/**
 	 * The meta object id for the '{@link KragsteinPackage.impl.AttributeImpl <em>Attribute</em>}' class.
@@ -1358,15 +1358,15 @@ public interface KragsteinPackagePackage extends EPackage {
 	EAttribute getClass_Name();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link KragsteinPackage.Class#getImportedPackage <em>Imported Package</em>}'.
+	 * Returns the meta object for the containment reference list '{@link KragsteinPackage.Class#getImportedClass <em>Imported Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Imported Package</em>'.
-	 * @see KragsteinPackage.Class#getImportedPackage()
+	 * @return the meta object for the containment reference list '<em>Imported Class</em>'.
+	 * @see KragsteinPackage.Class#getImportedClass()
 	 * @see #getClass_()
 	 * @generated
 	 */
-	EReference getClass_ImportedPackage();
+	EReference getClass_ImportedClass();
 
 	/**
 	 * Returns the meta object for the attribute '{@link KragsteinPackage.Class#getType <em>Type</em>}'.
@@ -1435,47 +1435,47 @@ public interface KragsteinPackagePackage extends EPackage {
 	EAttribute getClass_SupplierElement();
 
 	/**
-	 * Returns the meta object for class '{@link KragsteinPackage.ImportedPackage <em>Imported Package</em>}'.
+	 * Returns the meta object for class '{@link KragsteinPackage.ImportedClass <em>Imported Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Imported Package</em>'.
-	 * @see KragsteinPackage.ImportedPackage
+	 * @return the meta object for class '<em>Imported Class</em>'.
+	 * @see KragsteinPackage.ImportedClass
 	 * @generated
 	 */
-	EClass getImportedPackage();
+	EClass getImportedClass();
 
 	/**
-	 * Returns the meta object for the attribute '{@link KragsteinPackage.ImportedPackage#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link KragsteinPackage.ImportedClass#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see KragsteinPackage.ImportedPackage#getName()
-	 * @see #getImportedPackage()
+	 * @see KragsteinPackage.ImportedClass#getName()
+	 * @see #getImportedClass()
 	 * @generated
 	 */
-	EAttribute getImportedPackage_Name();
+	EAttribute getImportedClass_Name();
 
 	/**
-	 * Returns the meta object for the attribute '{@link KragsteinPackage.ImportedPackage#isIsInternal <em>Is Internal</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Is Internal</em>'.
-	 * @see KragsteinPackage.ImportedPackage#isIsInternal()
-	 * @see #getImportedPackage()
-	 * @generated
-	 */
-	EAttribute getImportedPackage_IsInternal();
-
-	/**
-	 * Returns the meta object for the attribute '{@link KragsteinPackage.ImportedPackage#getPath <em>Path</em>}'.
+	 * Returns the meta object for the attribute '{@link KragsteinPackage.ImportedClass#getPath <em>Path</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Path</em>'.
-	 * @see KragsteinPackage.ImportedPackage#getPath()
-	 * @see #getImportedPackage()
+	 * @see KragsteinPackage.ImportedClass#getPath()
+	 * @see #getImportedClass()
 	 * @generated
 	 */
-	EAttribute getImportedPackage_Path();
+	EAttribute getImportedClass_Path();
+
+	/**
+	 * Returns the meta object for the attribute '{@link KragsteinPackage.ImportedClass#isIsInternal <em>Is Internal</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Is Internal</em>'.
+	 * @see KragsteinPackage.ImportedClass#isIsInternal()
+	 * @see #getImportedClass()
+	 * @generated
+	 */
+	EAttribute getImportedClass_IsInternal();
 
 	/**
 	 * Returns the meta object for class '{@link KragsteinPackage.Attribute <em>Attribute</em>}'.
@@ -1998,12 +1998,12 @@ public interface KragsteinPackagePackage extends EPackage {
 		EAttribute CLASS__NAME = eINSTANCE.getClass_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Imported Package</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Imported Class</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CLASS__IMPORTED_PACKAGE = eINSTANCE.getClass_ImportedPackage();
+		EReference CLASS__IMPORTED_CLASS = eINSTANCE.getClass_ImportedClass();
 
 		/**
 		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
@@ -2054,14 +2054,14 @@ public interface KragsteinPackagePackage extends EPackage {
 		EAttribute CLASS__SUPPLIER_ELEMENT = eINSTANCE.getClass_SupplierElement();
 
 		/**
-		 * The meta object literal for the '{@link KragsteinPackage.impl.ImportedPackageImpl <em>Imported Package</em>}' class.
+		 * The meta object literal for the '{@link KragsteinPackage.impl.ImportedClassImpl <em>Imported Class</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see KragsteinPackage.impl.ImportedPackageImpl
-		 * @see KragsteinPackage.impl.KragsteinPackagePackageImpl#getImportedPackage()
+		 * @see KragsteinPackage.impl.ImportedClassImpl
+		 * @see KragsteinPackage.impl.KragsteinPackagePackageImpl#getImportedClass()
 		 * @generated
 		 */
-		EClass IMPORTED_PACKAGE = eINSTANCE.getImportedPackage();
+		EClass IMPORTED_CLASS = eINSTANCE.getImportedClass();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -2069,15 +2069,7 @@ public interface KragsteinPackagePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute IMPORTED_PACKAGE__NAME = eINSTANCE.getImportedPackage_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Is Internal</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute IMPORTED_PACKAGE__IS_INTERNAL = eINSTANCE.getImportedPackage_IsInternal();
+		EAttribute IMPORTED_CLASS__NAME = eINSTANCE.getImportedClass_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Path</b></em>' attribute feature.
@@ -2085,7 +2077,15 @@ public interface KragsteinPackagePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute IMPORTED_PACKAGE__PATH = eINSTANCE.getImportedPackage_Path();
+		EAttribute IMPORTED_CLASS__PATH = eINSTANCE.getImportedClass_Path();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Internal</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute IMPORTED_CLASS__IS_INTERNAL = eINSTANCE.getImportedClass_IsInternal();
 
 		/**
 		 * The meta object literal for the '{@link KragsteinPackage.impl.AttributeImpl <em>Attribute</em>}' class.

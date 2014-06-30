@@ -5,6 +5,7 @@
 package KragsteinPackage.validation;
 
 import KragsteinPackage.Attribute;
+import KragsteinPackage.ImportedClass;
 import KragsteinPackage.ImportedPackage;
 import KragsteinPackage.Method;
 import KragsteinPackage.Relationship;
@@ -25,6 +26,8 @@ public interface ClassValidator {
 	boolean validateTargetRelationship(EList<Relationship> value);
 	boolean validateSourceRelationship(EList<Relationship> value);
 	boolean validateName(String value);
+	boolean validateImportedClass(EList<ImportedClass> value);
+
 	boolean validateImportedPackage(EList<ImportedPackage> value);
 	boolean validateType(String value);
 	boolean validateVisibility(String value);

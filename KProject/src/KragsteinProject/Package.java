@@ -3,6 +3,7 @@
 package KragsteinProject;
 
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -16,11 +17,12 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link KragsteinProject.Package#getName <em>Name</em>}</li>
  *   <li>{@link KragsteinProject.Package#getPath <em>Path</em>}</li>
  *   <li>{@link KragsteinProject.Package#getPackage <em>Package</em>}</li>
+ *   <li>{@link KragsteinProject.Package#getClass_ <em>Class</em>}</li>
  * </ul>
  * </p>
  *
  * @see KragsteinProject.KragsteinProjectPackage#getPackage()
- * @model annotation="gmf.node color='255,0,0' label='name' label.icon='true'"
+ * @model annotation="gmf.node color='230,230,230' label='name' label.icon='true'"
  * @generated
  */
 public interface Package extends EObject {
@@ -91,5 +93,21 @@ public interface Package extends EObject {
 	 * @generated
 	 */
 	EList<Package> getPackage();
+
+	/**
+	 * Returns the value of the '<em><b>Class</b></em>' containment reference list.
+	 * The list contents are of type {@link KragsteinProject.Class}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Class</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Class</em>' containment reference list.
+	 * @see KragsteinProject.KragsteinProjectPackage#getPackage_Class()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<KragsteinProject.Class> getClass_();
 
 } // Package

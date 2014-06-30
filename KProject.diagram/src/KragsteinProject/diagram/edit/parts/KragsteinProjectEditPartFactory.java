@@ -35,6 +35,38 @@ public class KragsteinProjectEditPartFactory implements EditPartFactory {
 			case KragsteinProject.diagram.edit.parts.PackageNameEditPart.VISUAL_ID:
 				return new KragsteinProject.diagram.edit.parts.PackageNameEditPart(
 						view);
+
+			case KragsteinProject.diagram.edit.parts.Package2EditPart.VISUAL_ID:
+				return new KragsteinProject.diagram.edit.parts.Package2EditPart(
+						view);
+
+			case KragsteinProject.diagram.edit.parts.PackageName2EditPart.VISUAL_ID:
+				return new KragsteinProject.diagram.edit.parts.PackageName2EditPart(
+						view);
+
+			case KragsteinProject.diagram.edit.parts.ClassEditPart.VISUAL_ID:
+				return new KragsteinProject.diagram.edit.parts.ClassEditPart(
+						view);
+
+			case KragsteinProject.diagram.edit.parts.ClassNameEditPart.VISUAL_ID:
+				return new KragsteinProject.diagram.edit.parts.ClassNameEditPart(
+						view);
+
+			case KragsteinProject.diagram.edit.parts.PackagePackagePackageCompartmentEditPart.VISUAL_ID:
+				return new KragsteinProject.diagram.edit.parts.PackagePackagePackageCompartmentEditPart(
+						view);
+
+			case KragsteinProject.diagram.edit.parts.PackagePackageClassCompartmentEditPart.VISUAL_ID:
+				return new KragsteinProject.diagram.edit.parts.PackagePackageClassCompartmentEditPart(
+						view);
+
+			case KragsteinProject.diagram.edit.parts.PackagePackagePackageCompartment2EditPart.VISUAL_ID:
+				return new KragsteinProject.diagram.edit.parts.PackagePackagePackageCompartment2EditPart(
+						view);
+
+			case KragsteinProject.diagram.edit.parts.PackagePackageClassCompartment2EditPart.VISUAL_ID:
+				return new KragsteinProject.diagram.edit.parts.PackagePackageClassCompartment2EditPart(
+						view);
 			}
 		}
 		return createUnrecognizedEditPart(context, model);

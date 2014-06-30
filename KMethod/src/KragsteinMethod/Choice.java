@@ -15,7 +15,8 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link KragsteinMethod.Choice#getName <em>Name</em>}</li>
  *   <li>{@link KragsteinMethod.Choice#getValue <em>Value</em>}</li>
  *   <li>{@link KragsteinMethod.Choice#getCase <em>Case</em>}</li>
- *   <li>{@link KragsteinMethod.Choice#getDefaultCaseValue <em>Default Case Value</em>}</li>
+ *   <li>{@link KragsteinMethod.Choice#getFirstCaseName <em>First Case Name</em>}</li>
+ *   <li>{@link KragsteinMethod.Choice#getFirstCaseValue <em>First Case Value</em>}</li>
  * </ul>
  * </p>
  *
@@ -93,29 +94,55 @@ public interface Choice extends Icon {
 	EList<Case> getCase();
 
 	/**
-	 * Returns the value of the '<em><b>Default Case Value</b></em>' attribute.
+	 * Returns the value of the '<em><b>First Case Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Default Case Value</em>' attribute isn't clear,
+	 * If the meaning of the '<em>First Case Name</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Default Case Value</em>' attribute.
-	 * @see #setDefaultCaseValue(String)
-	 * @see KragsteinMethod.KragsteinMethodPackage#getChoice_DefaultCaseValue()
+	 * @return the value of the '<em>First Case Name</em>' attribute.
+	 * @see #setFirstCaseName(String)
+	 * @see KragsteinMethod.KragsteinMethodPackage#getChoice_FirstCaseName()
 	 * @model
 	 * @generated
 	 */
-	String getDefaultCaseValue();
+	String getFirstCaseName();
 
 	/**
-	 * Sets the value of the '{@link KragsteinMethod.Choice#getDefaultCaseValue <em>Default Case Value</em>}' attribute.
+	 * Sets the value of the '{@link KragsteinMethod.Choice#getFirstCaseName <em>First Case Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Default Case Value</em>' attribute.
-	 * @see #getDefaultCaseValue()
+	 * @param value the new value of the '<em>First Case Name</em>' attribute.
+	 * @see #getFirstCaseName()
 	 * @generated
 	 */
-	void setDefaultCaseValue(String value);
+	void setFirstCaseName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>First Case Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>First Case Value</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>First Case Value</em>' attribute.
+	 * @see #setFirstCaseValue(String)
+	 * @see KragsteinMethod.KragsteinMethodPackage#getChoice_FirstCaseValue()
+	 * @model
+	 * @generated
+	 */
+	String getFirstCaseValue();
+
+	/**
+	 * Sets the value of the '{@link KragsteinMethod.Choice#getFirstCaseValue <em>First Case Value</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>First Case Value</em>' attribute.
+	 * @see #getFirstCaseValue()
+	 * @generated
+	 */
+	void setFirstCaseValue(String value);
 
 } // Choice

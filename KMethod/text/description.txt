@@ -48,7 +48,6 @@ Package KragsteinMethod <KragsteinMethod.ecore>
     Attribute targetIcon : EString
 
   Class Icon
-    Reference sourceIconConnection : IconConnection
     Reference targetIconConnection : IconConnection
     Reference valencePoint : ValencePoint
     Reference leftComment : LeftComment
@@ -68,7 +67,8 @@ Package KragsteinMethod <KragsteinMethod.ecore>
     Attribute name : EString
     Attribute value : EString
     Reference case : Case<<1..*>>
-    Attribute defaultCaseValue : EString
+    Attribute firstCaseName : EString
+    Attribute firstCaseValue : EString
 
   Class Case
     Attribute name : EString
@@ -87,7 +87,7 @@ Package KragsteinMethod <KragsteinMethod.ecore>
     Attribute isLoop : EBoolean
 
   Class Adress -> Icon
-    Attribute name : EString
+    Attribute target : EString
     Attribute isLoop : EBoolean
 
   Class Insertion -> Icon
@@ -119,9 +119,6 @@ Package KragsteinMethod <KragsteinMethod.ecore>
     Reference method : Method<<1..1>>
 
   Class LoopArrow -> Icon
-    Attribute name : EString
-
-  Class EmptyConnector -> Icon
     Attribute name : EString
 
   Class End -> Icon

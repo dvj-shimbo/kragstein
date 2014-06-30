@@ -5,6 +5,7 @@ package KragsteinProject.diagram.edit.parts;
 
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.MarginBorder;
+import org.eclipse.draw2d.RectangleFigure;
 import org.eclipse.draw2d.RoundedRectangle;
 import org.eclipse.draw2d.Shape;
 import org.eclipse.draw2d.StackLayout;
@@ -64,7 +65,9 @@ public class PackageEditPart extends ShapeNodeEditPart {
 				EditPolicyRoles.SEMANTIC_ROLE,
 				new KragsteinProject.diagram.edit.policies.PackageItemSemanticEditPolicy());
 		installEditPolicy(EditPolicy.LAYOUT_ROLE, createLayoutEditPolicy());
-		// XXX need an SCR to runtime to have another abstract superclass that would let children add reasonable editpolicies
+		installEditPolicy(
+				EditPolicyRoles.OPEN_ROLE,
+				new KragsteinProject.diagram.edit.policies.OpenDiagramEditPolicy()); // XXX need an SCR to runtime to have another abstract superclass that would let children add reasonable editpolicies
 		// removeEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.CONNECTION_HANDLES_ROLE);
 	}
 
@@ -117,6 +120,21 @@ public class PackageEditPart extends ShapeNodeEditPart {
 					.setLabel(getPrimaryShape().getFigurePackageLabelFigure());
 			return true;
 		}
+		if (childEditPart instanceof KragsteinProject.diagram.edit.parts.PackagePackagePackageCompartmentEditPart) {
+			IFigure pane = getPrimaryShape()
+					.getPackagePackageCompartmentFigure();
+			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
+			pane.add(((KragsteinProject.diagram.edit.parts.PackagePackagePackageCompartmentEditPart) childEditPart)
+					.getFigure());
+			return true;
+		}
+		if (childEditPart instanceof KragsteinProject.diagram.edit.parts.PackagePackageClassCompartmentEditPart) {
+			IFigure pane = getPrimaryShape().getPackageClassCompartmentFigure();
+			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
+			pane.add(((KragsteinProject.diagram.edit.parts.PackagePackageClassCompartmentEditPart) childEditPart)
+					.getFigure());
+			return true;
+		}
 		return false;
 	}
 
@@ -125,6 +143,19 @@ public class PackageEditPart extends ShapeNodeEditPart {
 	 */
 	protected boolean removeFixedChild(EditPart childEditPart) {
 		if (childEditPart instanceof KragsteinProject.diagram.edit.parts.PackageNameEditPart) {
+			return true;
+		}
+		if (childEditPart instanceof KragsteinProject.diagram.edit.parts.PackagePackagePackageCompartmentEditPart) {
+			IFigure pane = getPrimaryShape()
+					.getPackagePackageCompartmentFigure();
+			pane.remove(((KragsteinProject.diagram.edit.parts.PackagePackagePackageCompartmentEditPart) childEditPart)
+					.getFigure());
+			return true;
+		}
+		if (childEditPart instanceof KragsteinProject.diagram.edit.parts.PackagePackageClassCompartmentEditPart) {
+			IFigure pane = getPrimaryShape().getPackageClassCompartmentFigure();
+			pane.remove(((KragsteinProject.diagram.edit.parts.PackagePackageClassCompartmentEditPart) childEditPart)
+					.getFigure());
 			return true;
 		}
 		return false;
@@ -154,6 +185,12 @@ public class PackageEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected IFigure getContentPaneFor(IGraphicalEditPart editPart) {
+		if (editPart instanceof KragsteinProject.diagram.edit.parts.PackagePackagePackageCompartmentEditPart) {
+			return getPrimaryShape().getPackagePackageCompartmentFigure();
+		}
+		if (editPart instanceof KragsteinProject.diagram.edit.parts.PackagePackageClassCompartmentEditPart) {
+			return getPrimaryShape().getPackageClassCompartmentFigure();
+		}
 		return getContentPane();
 	}
 
@@ -273,6 +310,14 @@ public class PackageEditPart extends ShapeNodeEditPart {
 		 * @generated
 		 */
 		private WrappingLabel fFigurePackageLabelFigure;
+		/**
+		 * @generated
+		 */
+		private RectangleFigure fPackagePackageCompartmentFigure;
+		/**
+		 * @generated
+		 */
+		private RectangleFigure fPackageClassCompartmentFigure;
 
 		/**
 		 * @generated
@@ -295,8 +340,22 @@ public class PackageEditPart extends ShapeNodeEditPart {
 			fFigurePackageLabelFigure = new WrappingLabel();
 
 			fFigurePackageLabelFigure.setText("Package");
+			fFigurePackageLabelFigure.setMaximumSize(new Dimension(getMapMode()
+					.DPtoLP(10000), getMapMode().DPtoLP(50)));
 
 			this.add(fFigurePackageLabelFigure);
+
+			fPackagePackageCompartmentFigure = new RectangleFigure();
+
+			fPackagePackageCompartmentFigure.setOutline(false);
+
+			this.add(fPackagePackageCompartmentFigure);
+
+			fPackageClassCompartmentFigure = new RectangleFigure();
+
+			fPackageClassCompartmentFigure.setOutline(false);
+
+			this.add(fPackageClassCompartmentFigure);
 
 		}
 
@@ -307,11 +366,25 @@ public class PackageEditPart extends ShapeNodeEditPart {
 			return fFigurePackageLabelFigure;
 		}
 
+		/**
+		 * @generated
+		 */
+		public RectangleFigure getPackagePackageCompartmentFigure() {
+			return fPackagePackageCompartmentFigure;
+		}
+
+		/**
+		 * @generated
+		 */
+		public RectangleFigure getPackageClassCompartmentFigure() {
+			return fPackageClassCompartmentFigure;
+		}
+
 	}
 
 	/**
 	 * @generated
 	 */
-	static final Color THIS_BACK = new Color(null, 255, 0, 0);
+	static final Color THIS_BACK = new Color(null, 230, 230, 230);
 
 }

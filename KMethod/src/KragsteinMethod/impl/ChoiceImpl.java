@@ -31,7 +31,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link KragsteinMethod.impl.ChoiceImpl#getName <em>Name</em>}</li>
  *   <li>{@link KragsteinMethod.impl.ChoiceImpl#getValue <em>Value</em>}</li>
  *   <li>{@link KragsteinMethod.impl.ChoiceImpl#getCase <em>Case</em>}</li>
- *   <li>{@link KragsteinMethod.impl.ChoiceImpl#getDefaultCaseValue <em>Default Case Value</em>}</li>
+ *   <li>{@link KragsteinMethod.impl.ChoiceImpl#getFirstCaseName <em>First Case Name</em>}</li>
+ *   <li>{@link KragsteinMethod.impl.ChoiceImpl#getFirstCaseValue <em>First Case Value</em>}</li>
  * </ul>
  * </p>
  *
@@ -89,24 +90,44 @@ public class ChoiceImpl extends IconImpl implements Choice {
 	protected EList<Case> case_;
 
 	/**
-	 * The default value of the '{@link #getDefaultCaseValue() <em>Default Case Value</em>}' attribute.
+	 * The default value of the '{@link #getFirstCaseName() <em>First Case Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDefaultCaseValue()
+	 * @see #getFirstCaseName()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String DEFAULT_CASE_VALUE_EDEFAULT = null;
+	protected static final String FIRST_CASE_NAME_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getDefaultCaseValue() <em>Default Case Value</em>}' attribute.
+	 * The cached value of the '{@link #getFirstCaseName() <em>First Case Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDefaultCaseValue()
+	 * @see #getFirstCaseName()
 	 * @generated
 	 * @ordered
 	 */
-	protected String defaultCaseValue = DEFAULT_CASE_VALUE_EDEFAULT;
+	protected String firstCaseName = FIRST_CASE_NAME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getFirstCaseValue() <em>First Case Value</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFirstCaseValue()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String FIRST_CASE_VALUE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getFirstCaseValue() <em>First Case Value</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFirstCaseValue()
+	 * @generated
+	 * @ordered
+	 */
+	protected String firstCaseValue = FIRST_CASE_VALUE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -186,8 +207,8 @@ public class ChoiceImpl extends IconImpl implements Choice {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getDefaultCaseValue() {
-		return defaultCaseValue;
+	public String getFirstCaseName() {
+		return firstCaseName;
 	}
 
 	/**
@@ -195,11 +216,32 @@ public class ChoiceImpl extends IconImpl implements Choice {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDefaultCaseValue(String newDefaultCaseValue) {
-		String oldDefaultCaseValue = defaultCaseValue;
-		defaultCaseValue = newDefaultCaseValue;
+	public void setFirstCaseName(String newFirstCaseName) {
+		String oldFirstCaseName = firstCaseName;
+		firstCaseName = newFirstCaseName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, KragsteinMethodPackage.CHOICE__DEFAULT_CASE_VALUE, oldDefaultCaseValue, defaultCaseValue));
+			eNotify(new ENotificationImpl(this, Notification.SET, KragsteinMethodPackage.CHOICE__FIRST_CASE_NAME, oldFirstCaseName, firstCaseName));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getFirstCaseValue() {
+		return firstCaseValue;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setFirstCaseValue(String newFirstCaseValue) {
+		String oldFirstCaseValue = firstCaseValue;
+		firstCaseValue = newFirstCaseValue;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, KragsteinMethodPackage.CHOICE__FIRST_CASE_VALUE, oldFirstCaseValue, firstCaseValue));
 	}
 
 	/**
@@ -230,8 +272,10 @@ public class ChoiceImpl extends IconImpl implements Choice {
 				return getValue();
 			case KragsteinMethodPackage.CHOICE__CASE:
 				return getCase();
-			case KragsteinMethodPackage.CHOICE__DEFAULT_CASE_VALUE:
-				return getDefaultCaseValue();
+			case KragsteinMethodPackage.CHOICE__FIRST_CASE_NAME:
+				return getFirstCaseName();
+			case KragsteinMethodPackage.CHOICE__FIRST_CASE_VALUE:
+				return getFirstCaseValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -255,8 +299,11 @@ public class ChoiceImpl extends IconImpl implements Choice {
 				getCase().clear();
 				getCase().addAll((Collection<? extends Case>)newValue);
 				return;
-			case KragsteinMethodPackage.CHOICE__DEFAULT_CASE_VALUE:
-				setDefaultCaseValue((String)newValue);
+			case KragsteinMethodPackage.CHOICE__FIRST_CASE_NAME:
+				setFirstCaseName((String)newValue);
+				return;
+			case KragsteinMethodPackage.CHOICE__FIRST_CASE_VALUE:
+				setFirstCaseValue((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -279,8 +326,11 @@ public class ChoiceImpl extends IconImpl implements Choice {
 			case KragsteinMethodPackage.CHOICE__CASE:
 				getCase().clear();
 				return;
-			case KragsteinMethodPackage.CHOICE__DEFAULT_CASE_VALUE:
-				setDefaultCaseValue(DEFAULT_CASE_VALUE_EDEFAULT);
+			case KragsteinMethodPackage.CHOICE__FIRST_CASE_NAME:
+				setFirstCaseName(FIRST_CASE_NAME_EDEFAULT);
+				return;
+			case KragsteinMethodPackage.CHOICE__FIRST_CASE_VALUE:
+				setFirstCaseValue(FIRST_CASE_VALUE_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -300,8 +350,10 @@ public class ChoiceImpl extends IconImpl implements Choice {
 				return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
 			case KragsteinMethodPackage.CHOICE__CASE:
 				return case_ != null && !case_.isEmpty();
-			case KragsteinMethodPackage.CHOICE__DEFAULT_CASE_VALUE:
-				return DEFAULT_CASE_VALUE_EDEFAULT == null ? defaultCaseValue != null : !DEFAULT_CASE_VALUE_EDEFAULT.equals(defaultCaseValue);
+			case KragsteinMethodPackage.CHOICE__FIRST_CASE_NAME:
+				return FIRST_CASE_NAME_EDEFAULT == null ? firstCaseName != null : !FIRST_CASE_NAME_EDEFAULT.equals(firstCaseName);
+			case KragsteinMethodPackage.CHOICE__FIRST_CASE_VALUE:
+				return FIRST_CASE_VALUE_EDEFAULT == null ? firstCaseValue != null : !FIRST_CASE_VALUE_EDEFAULT.equals(firstCaseValue);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -320,8 +372,10 @@ public class ChoiceImpl extends IconImpl implements Choice {
 		result.append(name);
 		result.append(", value: ");
 		result.append(value);
-		result.append(", defaultCaseValue: ");
-		result.append(defaultCaseValue);
+		result.append(", firstCaseName: ");
+		result.append(firstCaseName);
+		result.append(", firstCaseValue: ");
+		result.append(firstCaseValue);
 		result.append(')');
 		return result.toString();
 	}

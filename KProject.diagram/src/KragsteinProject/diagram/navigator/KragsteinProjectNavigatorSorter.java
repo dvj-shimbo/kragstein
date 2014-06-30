@@ -13,12 +13,12 @@ public class KragsteinProjectNavigatorSorter extends ViewerSorter {
 	/**
 	 * @generated
 	 */
-	private static final int GROUP_CATEGORY = 2003;
+	private static final int GROUP_CATEGORY = 7006;
 
 	/**
 	 * @generated
 	 */
-	private static final int SHORTCUTS_CATEGORY = 2002;
+	private static final int SHORTCUTS_CATEGORY = 7005;
 
 	/**
 	 * @generated

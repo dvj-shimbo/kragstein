@@ -137,9 +137,6 @@ public class KragsteinMethodNavigatorLabelProvider extends LabelProvider
 		case KragsteinMethod.diagram.edit.parts.LoopArrowEditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?Node?KragsteinMethod.ecore?LoopArrow", KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.LoopArrow_3014); //$NON-NLS-1$
-		case KragsteinMethod.diagram.edit.parts.EmptyConnectorEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Node?KragsteinMethod.ecore?EmptyConnector", KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.EmptyConnector_3015); //$NON-NLS-1$
 		case KragsteinMethod.diagram.edit.parts.EndEditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?Node?KragsteinMethod.ecore?End", KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.End_3016); //$NON-NLS-1$
@@ -161,9 +158,6 @@ public class KragsteinMethodNavigatorLabelProvider extends LabelProvider
 		case KragsteinMethod.diagram.edit.parts.IconConnectionEditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?Link?KragsteinMethod.ecore?IconConnection", KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.IconConnection_4003); //$NON-NLS-1$
-		case KragsteinMethod.diagram.edit.parts.IconConnection2EditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Link?KragsteinMethod.ecore?IconConnection", KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.IconConnection_4004); //$NON-NLS-1$
 		case KragsteinMethod.diagram.edit.parts.CaseConnectionEditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?Link?KragsteinMethod.ecore?CaseConnection", KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.CaseConnection_4005); //$NON-NLS-1$
@@ -266,8 +260,6 @@ public class KragsteinMethodNavigatorLabelProvider extends LabelProvider
 			return getInput_3013Text(view);
 		case KragsteinMethod.diagram.edit.parts.LoopArrowEditPart.VISUAL_ID:
 			return getLoopArrow_3014Text(view);
-		case KragsteinMethod.diagram.edit.parts.EmptyConnectorEditPart.VISUAL_ID:
-			return getEmptyConnector_3015Text(view);
 		case KragsteinMethod.diagram.edit.parts.EndEditPart.VISUAL_ID:
 			return getEnd_3016Text(view);
 		case KragsteinMethod.diagram.edit.parts.Route2EditPart.VISUAL_ID:
@@ -282,8 +274,6 @@ public class KragsteinMethodNavigatorLabelProvider extends LabelProvider
 			return getBranchConnection_4002Text(view);
 		case KragsteinMethod.diagram.edit.parts.IconConnectionEditPart.VISUAL_ID:
 			return getIconConnection_4003Text(view);
-		case KragsteinMethod.diagram.edit.parts.IconConnection2EditPart.VISUAL_ID:
-			return getIconConnection_4004Text(view);
 		case KragsteinMethod.diagram.edit.parts.CaseConnectionEditPart.VISUAL_ID:
 			return getCaseConnection_4005Text(view);
 		case KragsteinMethod.diagram.edit.parts.CaseConnection2EditPart.VISUAL_ID:
@@ -435,7 +425,7 @@ public class KragsteinMethodNavigatorLabelProvider extends LabelProvider
 		KragsteinMethod.Adress domainModelElement = (KragsteinMethod.Adress) view
 				.getElement();
 		if (domainModelElement != null) {
-			return domainModelElement.getName();
+			return domainModelElement.getTarget();
 		} else {
 			KragsteinMethod.diagram.part.KragsteinMethodDiagramEditorPlugin
 					.getInstance()
@@ -567,23 +557,6 @@ public class KragsteinMethodNavigatorLabelProvider extends LabelProvider
 	/**
 	 * @generated
 	 */
-	private String getEmptyConnector_3015Text(View view) {
-		KragsteinMethod.EmptyConnector domainModelElement = (KragsteinMethod.EmptyConnector) view
-				.getElement();
-		if (domainModelElement != null) {
-			return domainModelElement.getName();
-		} else {
-			KragsteinMethod.diagram.part.KragsteinMethodDiagramEditorPlugin
-					.getInstance()
-					.logError(
-							"No domain element for view with visualID = " + 3015); //$NON-NLS-1$
-			return ""; //$NON-NLS-1$
-		}
-	}
-
-	/**
-	 * @generated
-	 */
 	private String getEnd_3016Text(View view) {
 		return ""; //$NON-NLS-1$
 	}
@@ -671,23 +644,6 @@ public class KragsteinMethodNavigatorLabelProvider extends LabelProvider
 					.getInstance()
 					.logError(
 							"No domain element for view with visualID = " + 4003); //$NON-NLS-1$
-			return ""; //$NON-NLS-1$
-		}
-	}
-
-	/**
-	 * @generated
-	 */
-	private String getIconConnection_4004Text(View view) {
-		KragsteinMethod.IconConnection domainModelElement = (KragsteinMethod.IconConnection) view
-				.getElement();
-		if (domainModelElement != null) {
-			return domainModelElement.getTargetIcon();
-		} else {
-			KragsteinMethod.diagram.part.KragsteinMethodDiagramEditorPlugin
-					.getInstance()
-					.logError(
-							"No domain element for view with visualID = " + 4004); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}

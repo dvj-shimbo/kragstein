@@ -21,6 +21,7 @@ import org.eclipse.emf.workspace.util.WorkspaceSynchronizer;
 import org.eclipse.gmf.runtime.emf.core.GMFEditingDomainFactory;
 import org.eclipse.gmf.runtime.notation.Diagram;
 import org.eclipse.gmf.runtime.notation.Edge;
+import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.jface.viewers.Viewer;
 import org.eclipse.ui.IMemento;
@@ -242,6 +243,60 @@ public class KragsteinProjectNavigatorContentProvider implements
 					Collections.singleton(sv),
 					KragsteinProject.diagram.part.KragsteinProjectVisualIDRegistry
 							.getType(KragsteinProject.diagram.edit.parts.PackageEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			return result.toArray();
+		}
+
+		case KragsteinProject.diagram.edit.parts.PackageEditPart.VISUAL_ID: {
+			LinkedList<KragsteinProject.diagram.navigator.KragsteinProjectAbstractNavigatorItem> result = new LinkedList<KragsteinProject.diagram.navigator.KragsteinProjectAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			Collection<View> connectedViews;
+			connectedViews = getChildrenByType(
+					Collections.singleton(sv),
+					KragsteinProject.diagram.part.KragsteinProjectVisualIDRegistry
+							.getType(KragsteinProject.diagram.edit.parts.PackagePackagePackageCompartmentEditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(
+					connectedViews,
+					KragsteinProject.diagram.part.KragsteinProjectVisualIDRegistry
+							.getType(KragsteinProject.diagram.edit.parts.Package2EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(
+					Collections.singleton(sv),
+					KragsteinProject.diagram.part.KragsteinProjectVisualIDRegistry
+							.getType(KragsteinProject.diagram.edit.parts.PackagePackageClassCompartmentEditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(
+					connectedViews,
+					KragsteinProject.diagram.part.KragsteinProjectVisualIDRegistry
+							.getType(KragsteinProject.diagram.edit.parts.ClassEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			return result.toArray();
+		}
+
+		case KragsteinProject.diagram.edit.parts.Package2EditPart.VISUAL_ID: {
+			LinkedList<KragsteinProject.diagram.navigator.KragsteinProjectAbstractNavigatorItem> result = new LinkedList<KragsteinProject.diagram.navigator.KragsteinProjectAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			Collection<View> connectedViews;
+			connectedViews = getChildrenByType(
+					Collections.singleton(sv),
+					KragsteinProject.diagram.part.KragsteinProjectVisualIDRegistry
+							.getType(KragsteinProject.diagram.edit.parts.PackagePackagePackageCompartment2EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(
+					connectedViews,
+					KragsteinProject.diagram.part.KragsteinProjectVisualIDRegistry
+							.getType(KragsteinProject.diagram.edit.parts.Package2EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(
+					Collections.singleton(sv),
+					KragsteinProject.diagram.part.KragsteinProjectVisualIDRegistry
+							.getType(KragsteinProject.diagram.edit.parts.PackagePackageClassCompartment2EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(
+					connectedViews,
+					KragsteinProject.diagram.part.KragsteinProjectVisualIDRegistry
+							.getType(KragsteinProject.diagram.edit.parts.ClassEditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement,
 					false));
 			return result.toArray();

@@ -8,7 +8,8 @@
   <nodes>
     <containmentFeature
         href="project.ecore#//Project/package"/>
-    <ownedChild>
+    <ownedChild
+        relatedDiagrams="//@diagram">
       <domainMetaElement
           href="project.ecore#//Package"/>
       <labelMappings
@@ -20,9 +21,46 @@
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
-          href="project.gmftool#//@palette/@tools.0/@tools.0"/>
+          href="project.gmftool#//@palette/@tools.0/@tools.1"/>
       <diagramNode
           href="project.gmfgraph#Package"/>
+      <children
+          compartment="//@nodes.0/@ownedChild/@compartments.0"
+          referencedChild="//@nodes.0/@ownedChild">
+        <containmentFeature
+            href="project.ecore#//Package/package"/>
+      </children>
+      <children
+          compartment="//@nodes.0/@ownedChild/@compartments.1">
+        <containmentFeature
+            href="project.ecore#//Package/class"/>
+        <ownedChild>
+          <domainMetaElement
+              href="project.ecore#//Class"/>
+          <labelMappings
+              xsi:type="gmfmap:FeatureLabelMapping">
+            <diagramLabel
+                href="project.gmfgraph#ClassLabel"/>
+            <features
+                href="project.ecore#//Class/name"/>
+          </labelMappings>
+          <tool
+              xsi:type="gmftool:CreationTool"
+              href="project.gmftool#//@palette/@tools.0/@tools.0"/>
+          <diagramNode
+              href="project.gmfgraph#Class"/>
+        </ownedChild>
+      </children>
+      <compartments
+          children="//@nodes.0/@ownedChild/@children.0">
+        <compartment
+            href="project.gmfgraph#PackagePackageCompartment"/>
+      </compartments>
+      <compartments
+          children="//@nodes.0/@ownedChild/@children.1">
+        <compartment
+            href="project.gmfgraph#PackageClassCompartment"/>
+      </compartments>
     </ownedChild>
   </nodes>
   <diagram>

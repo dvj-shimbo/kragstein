@@ -12,7 +12,6 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link KragsteinMethod.Icon#getSourceIconConnection <em>Source Icon Connection</em>}</li>
  *   <li>{@link KragsteinMethod.Icon#getTargetIconConnection <em>Target Icon Connection</em>}</li>
  *   <li>{@link KragsteinMethod.Icon#getValencePoint <em>Valence Point</em>}</li>
  *   <li>{@link KragsteinMethod.Icon#getLeftComment <em>Left Comment</em>}</li>
@@ -26,32 +25,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Icon extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Source Icon Connection</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Source Icon Connection</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Source Icon Connection</em>' containment reference.
-	 * @see #setSourceIconConnection(IconConnection)
-	 * @see KragsteinMethod.KragsteinMethodPackage#getIcon_SourceIconConnection()
-	 * @model containment="true"
-	 * @generated
-	 */
-	IconConnection getSourceIconConnection();
-
-	/**
-	 * Sets the value of the '{@link KragsteinMethod.Icon#getSourceIconConnection <em>Source Icon Connection</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Source Icon Connection</em>' containment reference.
-	 * @see #getSourceIconConnection()
-	 * @generated
-	 */
-	void setSourceIconConnection(IconConnection value);
-
 	/**
 	 * Returns the value of the '<em><b>Target Icon Connection</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

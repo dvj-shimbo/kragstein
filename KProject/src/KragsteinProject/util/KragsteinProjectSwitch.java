@@ -79,6 +79,12 @@ public class KragsteinProjectSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case KragsteinProjectPackage.CLASS: {
+				KragsteinProject.Class class_ = (KragsteinProject.Class)theEObject;
+				T result = caseClass(class_);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -110,6 +116,21 @@ public class KragsteinProjectSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T casePackage(KragsteinProject.Package object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseClass(KragsteinProject.Class object) {
 		return null;
 	}
 

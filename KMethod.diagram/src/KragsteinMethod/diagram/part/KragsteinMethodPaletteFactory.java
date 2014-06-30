@@ -41,20 +41,17 @@ public class KragsteinMethodPaletteFactory {
 		paletteContainer.add(createBranch4CreationTool());
 		paletteContainer.add(createCase5CreationTool());
 		paletteContainer.add(createChoice6CreationTool());
-		paletteContainer.add(createEmptyConnector7CreationTool());
-		paletteContainer.add(createEnd8CreationTool());
-		paletteContainer.add(createEndLoop9CreationTool());
-		paletteContainer.add(createHeader10CreationTool());
-		paletteContainer.add(createHeadline11CreationTool());
-		paletteContainer.add(createInput12CreationTool());
-		paletteContainer.add(createInsertion13CreationTool());
-		paletteContainer.add(createLeftComment14CreationTool());
-		paletteContainer.add(createLoopArrow15CreationTool());
-		paletteContainer.add(createOutput16CreationTool());
-		paletteContainer.add(createQuestion17CreationTool());
-		paletteContainer.add(createRightComment18CreationTool());
-		paletteContainer.add(createRoute19CreationTool());
-		paletteContainer.add(createShelf20CreationTool());
+		paletteContainer.add(createEnd7CreationTool());
+		paletteContainer.add(createEndLoop8CreationTool());
+		paletteContainer.add(createHeader9CreationTool());
+		paletteContainer.add(createHeadline10CreationTool());
+		paletteContainer.add(createInput11CreationTool());
+		paletteContainer.add(createInsertion12CreationTool());
+		paletteContainer.add(createLoopArrow13CreationTool());
+		paletteContainer.add(createOutput14CreationTool());
+		paletteContainer.add(createQuestion15CreationTool());
+		paletteContainer.add(createRoute16CreationTool());
+		paletteContainer.add(createShelf17CreationTool());
 		return paletteContainer;
 	}
 
@@ -171,29 +168,13 @@ public class KragsteinMethodPaletteFactory {
 	/**
 	 * @generated
 	 */
-	private ToolEntry createEmptyConnector7CreationTool() {
+	private ToolEntry createEnd7CreationTool() {
 		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
-				KragsteinMethod.diagram.part.Messages.EmptyConnector7CreationTool_title,
-				KragsteinMethod.diagram.part.Messages.EmptyConnector7CreationTool_desc,
-				Collections
-						.singletonList(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.EmptyConnector_3015));
-		entry.setId("createEmptyConnector7CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes
-				.getImageDescriptor(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.EmptyConnector_3015));
-		entry.setLargeIcon(entry.getSmallIcon());
-		return entry;
-	}
-
-	/**
-	 * @generated
-	 */
-	private ToolEntry createEnd8CreationTool() {
-		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
-				KragsteinMethod.diagram.part.Messages.End8CreationTool_title,
-				KragsteinMethod.diagram.part.Messages.End8CreationTool_desc,
+				KragsteinMethod.diagram.part.Messages.End7CreationTool_title,
+				KragsteinMethod.diagram.part.Messages.End7CreationTool_desc,
 				Collections
 						.singletonList(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.End_3016));
-		entry.setId("createEnd8CreationTool"); //$NON-NLS-1$
+		entry.setId("createEnd7CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes
 				.getImageDescriptor(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.End_3016));
 		entry.setLargeIcon(entry.getSmallIcon());
@@ -203,13 +184,13 @@ public class KragsteinMethodPaletteFactory {
 	/**
 	 * @generated
 	 */
-	private ToolEntry createEndLoop9CreationTool() {
+	private ToolEntry createEndLoop8CreationTool() {
 		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
-				KragsteinMethod.diagram.part.Messages.EndLoop9CreationTool_title,
-				KragsteinMethod.diagram.part.Messages.EndLoop9CreationTool_desc,
+				KragsteinMethod.diagram.part.Messages.EndLoop8CreationTool_title,
+				KragsteinMethod.diagram.part.Messages.EndLoop8CreationTool_desc,
 				Collections
 						.singletonList(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.EndLoop_3011));
-		entry.setId("createEndLoop9CreationTool"); //$NON-NLS-1$
+		entry.setId("createEndLoop8CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes
 				.getImageDescriptor(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.EndLoop_3011));
 		entry.setLargeIcon(entry.getSmallIcon());
@@ -219,13 +200,13 @@ public class KragsteinMethodPaletteFactory {
 	/**
 	 * @generated
 	 */
-	private ToolEntry createHeader10CreationTool() {
+	private ToolEntry createHeader9CreationTool() {
 		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
-				KragsteinMethod.diagram.part.Messages.Header10CreationTool_title,
-				KragsteinMethod.diagram.part.Messages.Header10CreationTool_desc,
+				KragsteinMethod.diagram.part.Messages.Header9CreationTool_title,
+				KragsteinMethod.diagram.part.Messages.Header9CreationTool_desc,
 				Collections
 						.singletonList(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Header_2001));
-		entry.setId("createHeader10CreationTool"); //$NON-NLS-1$
+		entry.setId("createHeader9CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes
 				.getImageDescriptor(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Header_2001));
 		entry.setLargeIcon(entry.getSmallIcon());
@@ -235,13 +216,13 @@ public class KragsteinMethodPaletteFactory {
 	/**
 	 * @generated
 	 */
-	private ToolEntry createHeadline11CreationTool() {
+	private ToolEntry createHeadline10CreationTool() {
 		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
-				KragsteinMethod.diagram.part.Messages.Headline11CreationTool_title,
-				KragsteinMethod.diagram.part.Messages.Headline11CreationTool_desc,
+				KragsteinMethod.diagram.part.Messages.Headline10CreationTool_title,
+				KragsteinMethod.diagram.part.Messages.Headline10CreationTool_desc,
 				Collections
 						.singletonList(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Headline_3006));
-		entry.setId("createHeadline11CreationTool"); //$NON-NLS-1$
+		entry.setId("createHeadline10CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes
 				.getImageDescriptor(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Headline_3006));
 		entry.setLargeIcon(entry.getSmallIcon());
@@ -251,13 +232,13 @@ public class KragsteinMethodPaletteFactory {
 	/**
 	 * @generated
 	 */
-	private ToolEntry createInput12CreationTool() {
+	private ToolEntry createInput11CreationTool() {
 		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
-				KragsteinMethod.diagram.part.Messages.Input12CreationTool_title,
-				KragsteinMethod.diagram.part.Messages.Input12CreationTool_desc,
+				KragsteinMethod.diagram.part.Messages.Input11CreationTool_title,
+				KragsteinMethod.diagram.part.Messages.Input11CreationTool_desc,
 				Collections
 						.singletonList(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Input_3013));
-		entry.setId("createInput12CreationTool"); //$NON-NLS-1$
+		entry.setId("createInput11CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes
 				.getImageDescriptor(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Input_3013));
 		entry.setLargeIcon(entry.getSmallIcon());
@@ -267,13 +248,13 @@ public class KragsteinMethodPaletteFactory {
 	/**
 	 * @generated
 	 */
-	private ToolEntry createInsertion13CreationTool() {
+	private ToolEntry createInsertion12CreationTool() {
 		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
-				KragsteinMethod.diagram.part.Messages.Insertion13CreationTool_title,
-				KragsteinMethod.diagram.part.Messages.Insertion13CreationTool_desc,
+				KragsteinMethod.diagram.part.Messages.Insertion12CreationTool_title,
+				KragsteinMethod.diagram.part.Messages.Insertion12CreationTool_desc,
 				Collections
 						.singletonList(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Insertion_3008));
-		entry.setId("createInsertion13CreationTool"); //$NON-NLS-1$
+		entry.setId("createInsertion12CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes
 				.getImageDescriptor(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Insertion_3008));
 		entry.setLargeIcon(entry.getSmallIcon());
@@ -283,26 +264,13 @@ public class KragsteinMethodPaletteFactory {
 	/**
 	 * @generated
 	 */
-	private ToolEntry createLeftComment14CreationTool() {
-		ToolEntry entry = new ToolEntry(
-				KragsteinMethod.diagram.part.Messages.LeftComment14CreationTool_title,
-				KragsteinMethod.diagram.part.Messages.LeftComment14CreationTool_desc,
-				null, null) {
-		};
-		entry.setId("createLeftComment14CreationTool"); //$NON-NLS-1$
-		return entry;
-	}
-
-	/**
-	 * @generated
-	 */
-	private ToolEntry createLoopArrow15CreationTool() {
+	private ToolEntry createLoopArrow13CreationTool() {
 		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
-				KragsteinMethod.diagram.part.Messages.LoopArrow15CreationTool_title,
-				KragsteinMethod.diagram.part.Messages.LoopArrow15CreationTool_desc,
+				KragsteinMethod.diagram.part.Messages.LoopArrow13CreationTool_title,
+				KragsteinMethod.diagram.part.Messages.LoopArrow13CreationTool_desc,
 				Collections
 						.singletonList(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.LoopArrow_3014));
-		entry.setId("createLoopArrow15CreationTool"); //$NON-NLS-1$
+		entry.setId("createLoopArrow13CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes
 				.getImageDescriptor(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.LoopArrow_3014));
 		entry.setLargeIcon(entry.getSmallIcon());
@@ -312,13 +280,13 @@ public class KragsteinMethodPaletteFactory {
 	/**
 	 * @generated
 	 */
-	private ToolEntry createOutput16CreationTool() {
+	private ToolEntry createOutput14CreationTool() {
 		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
-				KragsteinMethod.diagram.part.Messages.Output16CreationTool_title,
-				KragsteinMethod.diagram.part.Messages.Output16CreationTool_desc,
+				KragsteinMethod.diagram.part.Messages.Output14CreationTool_title,
+				KragsteinMethod.diagram.part.Messages.Output14CreationTool_desc,
 				Collections
 						.singletonList(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Output_3012));
-		entry.setId("createOutput16CreationTool"); //$NON-NLS-1$
+		entry.setId("createOutput14CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes
 				.getImageDescriptor(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Output_3012));
 		entry.setLargeIcon(entry.getSmallIcon());
@@ -328,13 +296,13 @@ public class KragsteinMethodPaletteFactory {
 	/**
 	 * @generated
 	 */
-	private ToolEntry createQuestion17CreationTool() {
+	private ToolEntry createQuestion15CreationTool() {
 		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
-				KragsteinMethod.diagram.part.Messages.Question17CreationTool_title,
-				KragsteinMethod.diagram.part.Messages.Question17CreationTool_desc,
+				KragsteinMethod.diagram.part.Messages.Question15CreationTool_title,
+				KragsteinMethod.diagram.part.Messages.Question15CreationTool_desc,
 				Collections
 						.singletonList(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Question_3003));
-		entry.setId("createQuestion17CreationTool"); //$NON-NLS-1$
+		entry.setId("createQuestion15CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes
 				.getImageDescriptor(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Question_3003));
 		entry.setLargeIcon(entry.getSmallIcon());
@@ -344,29 +312,16 @@ public class KragsteinMethodPaletteFactory {
 	/**
 	 * @generated
 	 */
-	private ToolEntry createRightComment18CreationTool() {
-		ToolEntry entry = new ToolEntry(
-				KragsteinMethod.diagram.part.Messages.RightComment18CreationTool_title,
-				KragsteinMethod.diagram.part.Messages.RightComment18CreationTool_desc,
-				null, null) {
-		};
-		entry.setId("createRightComment18CreationTool"); //$NON-NLS-1$
-		return entry;
-	}
-
-	/**
-	 * @generated
-	 */
-	private ToolEntry createRoute19CreationTool() {
+	private ToolEntry createRoute16CreationTool() {
 		ArrayList<IElementType> types = new ArrayList<IElementType>(3);
 		types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Route_3001);
 		types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Route_3017);
 		types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Route_3019);
 		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
-				KragsteinMethod.diagram.part.Messages.Route19CreationTool_title,
-				KragsteinMethod.diagram.part.Messages.Route19CreationTool_desc,
+				KragsteinMethod.diagram.part.Messages.Route16CreationTool_title,
+				KragsteinMethod.diagram.part.Messages.Route16CreationTool_desc,
 				types);
-		entry.setId("createRoute19CreationTool"); //$NON-NLS-1$
+		entry.setId("createRoute16CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes
 				.getImageDescriptor(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Route_3001));
 		entry.setLargeIcon(entry.getSmallIcon());
@@ -376,13 +331,13 @@ public class KragsteinMethodPaletteFactory {
 	/**
 	 * @generated
 	 */
-	private ToolEntry createShelf20CreationTool() {
+	private ToolEntry createShelf17CreationTool() {
 		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
-				KragsteinMethod.diagram.part.Messages.Shelf20CreationTool_title,
-				KragsteinMethod.diagram.part.Messages.Shelf20CreationTool_desc,
+				KragsteinMethod.diagram.part.Messages.Shelf17CreationTool_title,
+				KragsteinMethod.diagram.part.Messages.Shelf17CreationTool_desc,
 				Collections
 						.singletonList(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Shelf_3009));
-		entry.setId("createShelf20CreationTool"); //$NON-NLS-1$
+		entry.setId("createShelf17CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes
 				.getImageDescriptor(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Shelf_3009));
 		entry.setLargeIcon(entry.getSmallIcon());
@@ -429,13 +384,11 @@ public class KragsteinMethodPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createIconConnection3CreationTool() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
-		types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.IconConnection_4003);
-		types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.IconConnection_4004);
 		DefaultLinkToolEntry entry = new DefaultLinkToolEntry(
 				KragsteinMethod.diagram.part.Messages.IconConnection3CreationTool_title,
 				KragsteinMethod.diagram.part.Messages.IconConnection3CreationTool_desc,
-				types);
+				Collections
+						.singletonList(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.IconConnection_4003));
 		entry.setId("createIconConnection3CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes
 				.getImageDescriptor(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.IconConnection_4003));

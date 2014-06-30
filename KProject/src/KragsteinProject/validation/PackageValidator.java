@@ -6,7 +6,6 @@ package KragsteinProject.validation;
 
 import org.eclipse.emf.common.util.EList;
 
-
 /**
  * A sample validator interface for {@link KragsteinProject.Package}.
  * This doesn't really do anything, and it's not a real EMF artifact.
@@ -18,8 +17,6 @@ public interface PackageValidator {
 
 	boolean validateName(String value);
 	boolean validatePath(String value);
-
 	boolean validatePackage(EList<KragsteinProject.Package> value);
-
-	boolean validateSubpackage(EList<KragsteinProject.Package> value);
+	boolean validateClass(EList<KragsteinProject.Class> value);
 }

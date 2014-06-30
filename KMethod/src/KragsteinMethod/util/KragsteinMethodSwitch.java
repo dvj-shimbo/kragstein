@@ -222,13 +222,6 @@ public class KragsteinMethodSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case KragsteinMethodPackage.EMPTY_CONNECTOR: {
-				EmptyConnector emptyConnector = (EmptyConnector)theEObject;
-				T result = caseEmptyConnector(emptyConnector);
-				if (result == null) result = caseIcon(emptyConnector);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case KragsteinMethodPackage.END: {
 				End end = (End)theEObject;
 				T result = caseEnd(end);
@@ -597,21 +590,6 @@ public class KragsteinMethodSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseLoopArrow(LoopArrow object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Empty Connector</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Empty Connector</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseEmptyConnector(EmptyConnector object) {
 		return null;
 	}
 

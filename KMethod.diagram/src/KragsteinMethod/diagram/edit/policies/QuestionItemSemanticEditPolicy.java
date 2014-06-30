@@ -51,27 +51,11 @@ public class QuestionItemSemanticEditPolicy
 				cmd.add(new DeleteCommand(getEditingDomain(), incomingLink));
 				continue;
 			}
-			if (KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
-					.getVisualID(incomingLink) == KragsteinMethod.diagram.edit.parts.IconConnection2EditPart.VISUAL_ID) {
-				DestroyElementRequest r = new DestroyElementRequest(
-						incomingLink.getElement(), false);
-				cmd.add(new DestroyElementCommand(r));
-				cmd.add(new DeleteCommand(getEditingDomain(), incomingLink));
-				continue;
-			}
 		}
 		for (Iterator<?> it = view.getSourceEdges().iterator(); it.hasNext();) {
 			Edge outgoingLink = (Edge) it.next();
 			if (KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
 					.getVisualID(outgoingLink) == KragsteinMethod.diagram.edit.parts.IconConnectionEditPart.VISUAL_ID) {
-				DestroyElementRequest r = new DestroyElementRequest(
-						outgoingLink.getElement(), false);
-				cmd.add(new DestroyElementCommand(r));
-				cmd.add(new DeleteCommand(getEditingDomain(), outgoingLink));
-				continue;
-			}
-			if (KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
-					.getVisualID(outgoingLink) == KragsteinMethod.diagram.edit.parts.IconConnection2EditPart.VISUAL_ID) {
 				DestroyElementRequest r = new DestroyElementRequest(
 						outgoingLink.getElement(), false);
 				cmd.add(new DestroyElementCommand(r));
@@ -141,11 +125,6 @@ public class QuestionItemSemanticEditPolicy
 			return getGEFWrapper(new KragsteinMethod.diagram.edit.commands.IconConnectionCreateCommand(
 					req, req.getSource(), req.getTarget()));
 		}
-		if (KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.IconConnection_4004 == req
-				.getElementType()) {
-			return getGEFWrapper(new KragsteinMethod.diagram.edit.commands.IconConnection2CreateCommand(
-					req, req.getSource(), req.getTarget()));
-		}
 		return null;
 	}
 
@@ -157,11 +136,6 @@ public class QuestionItemSemanticEditPolicy
 		if (KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.IconConnection_4003 == req
 				.getElementType()) {
 			return getGEFWrapper(new KragsteinMethod.diagram.edit.commands.IconConnectionCreateCommand(
-					req, req.getSource(), req.getTarget()));
-		}
-		if (KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.IconConnection_4004 == req
-				.getElementType()) {
-			return getGEFWrapper(new KragsteinMethod.diagram.edit.commands.IconConnection2CreateCommand(
 					req, req.getSource(), req.getTarget()));
 		}
 		return null;
@@ -178,9 +152,6 @@ public class QuestionItemSemanticEditPolicy
 		switch (getVisualID(req)) {
 		case KragsteinMethod.diagram.edit.parts.IconConnectionEditPart.VISUAL_ID:
 			return getGEFWrapper(new KragsteinMethod.diagram.edit.commands.IconConnectionReorientCommand(
-					req));
-		case KragsteinMethod.diagram.edit.parts.IconConnection2EditPart.VISUAL_ID:
-			return getGEFWrapper(new KragsteinMethod.diagram.edit.commands.IconConnection2ReorientCommand(
 					req));
 		}
 		return super.getReorientRelationshipCommand(req);

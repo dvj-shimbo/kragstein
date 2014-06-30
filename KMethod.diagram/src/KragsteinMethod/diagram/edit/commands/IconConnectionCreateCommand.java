@@ -83,7 +83,7 @@ public class IconConnectionCreateCommand extends EditElementCommand {
 
 		KragsteinMethod.IconConnection newElement = KragsteinMethod.KragsteinMethodFactory.eINSTANCE
 				.createIconConnection();
-		getContainer().setSourceIconConnection(newElement);
+		getContainer().setTargetIconConnection(newElement);
 		newElement.setSource(getSource());
 		newElement.setTarget(getTarget());
 		doConfigure(newElement, monitor, info);

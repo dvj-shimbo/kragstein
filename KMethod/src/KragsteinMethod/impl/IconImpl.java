@@ -25,7 +25,6 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link KragsteinMethod.impl.IconImpl#getSourceIconConnection <em>Source Icon Connection</em>}</li>
  *   <li>{@link KragsteinMethod.impl.IconImpl#getTargetIconConnection <em>Target Icon Connection</em>}</li>
  *   <li>{@link KragsteinMethod.impl.IconImpl#getValencePoint <em>Valence Point</em>}</li>
  *   <li>{@link KragsteinMethod.impl.IconImpl#getLeftComment <em>Left Comment</em>}</li>
@@ -36,16 +35,6 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  * @generated
  */
 public abstract class IconImpl extends EObjectImpl implements Icon {
-	/**
-	 * The cached value of the '{@link #getSourceIconConnection() <em>Source Icon Connection</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSourceIconConnection()
-	 * @generated
-	 * @ordered
-	 */
-	protected IconConnection sourceIconConnection;
-
 	/**
 	 * The cached value of the '{@link #getTargetIconConnection() <em>Target Icon Connection</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -103,49 +92,6 @@ public abstract class IconImpl extends EObjectImpl implements Icon {
 	@Override
 	protected EClass eStaticClass() {
 		return KragsteinMethodPackage.Literals.ICON;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public IconConnection getSourceIconConnection() {
-		return sourceIconConnection;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetSourceIconConnection(IconConnection newSourceIconConnection, NotificationChain msgs) {
-		IconConnection oldSourceIconConnection = sourceIconConnection;
-		sourceIconConnection = newSourceIconConnection;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, KragsteinMethodPackage.ICON__SOURCE_ICON_CONNECTION, oldSourceIconConnection, newSourceIconConnection);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setSourceIconConnection(IconConnection newSourceIconConnection) {
-		if (newSourceIconConnection != sourceIconConnection) {
-			NotificationChain msgs = null;
-			if (sourceIconConnection != null)
-				msgs = ((InternalEObject)sourceIconConnection).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - KragsteinMethodPackage.ICON__SOURCE_ICON_CONNECTION, null, msgs);
-			if (newSourceIconConnection != null)
-				msgs = ((InternalEObject)newSourceIconConnection).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - KragsteinMethodPackage.ICON__SOURCE_ICON_CONNECTION, null, msgs);
-			msgs = basicSetSourceIconConnection(newSourceIconConnection, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, KragsteinMethodPackage.ICON__SOURCE_ICON_CONNECTION, newSourceIconConnection, newSourceIconConnection));
 	}
 
 	/**
@@ -328,8 +274,6 @@ public abstract class IconImpl extends EObjectImpl implements Icon {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case KragsteinMethodPackage.ICON__SOURCE_ICON_CONNECTION:
-				return basicSetSourceIconConnection(null, msgs);
 			case KragsteinMethodPackage.ICON__TARGET_ICON_CONNECTION:
 				return basicSetTargetIconConnection(null, msgs);
 			case KragsteinMethodPackage.ICON__VALENCE_POINT:
@@ -350,8 +294,6 @@ public abstract class IconImpl extends EObjectImpl implements Icon {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case KragsteinMethodPackage.ICON__SOURCE_ICON_CONNECTION:
-				return getSourceIconConnection();
 			case KragsteinMethodPackage.ICON__TARGET_ICON_CONNECTION:
 				return getTargetIconConnection();
 			case KragsteinMethodPackage.ICON__VALENCE_POINT:
@@ -372,9 +314,6 @@ public abstract class IconImpl extends EObjectImpl implements Icon {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case KragsteinMethodPackage.ICON__SOURCE_ICON_CONNECTION:
-				setSourceIconConnection((IconConnection)newValue);
-				return;
 			case KragsteinMethodPackage.ICON__TARGET_ICON_CONNECTION:
 				setTargetIconConnection((IconConnection)newValue);
 				return;
@@ -399,9 +338,6 @@ public abstract class IconImpl extends EObjectImpl implements Icon {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case KragsteinMethodPackage.ICON__SOURCE_ICON_CONNECTION:
-				setSourceIconConnection((IconConnection)null);
-				return;
 			case KragsteinMethodPackage.ICON__TARGET_ICON_CONNECTION:
 				setTargetIconConnection((IconConnection)null);
 				return;
@@ -426,8 +362,6 @@ public abstract class IconImpl extends EObjectImpl implements Icon {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case KragsteinMethodPackage.ICON__SOURCE_ICON_CONNECTION:
-				return sourceIconConnection != null;
 			case KragsteinMethodPackage.ICON__TARGET_ICON_CONNECTION:
 				return targetIconConnection != null;
 			case KragsteinMethodPackage.ICON__VALENCE_POINT:

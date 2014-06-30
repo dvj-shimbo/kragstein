@@ -258,7 +258,7 @@
          </object>
          <context viewClass="org.eclipse.gmf.runtime.notation.Node" containerViews="referencing-diagrams"/>
          <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="KragsteinProject"/>
-         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2001"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2001,3001,3002"/>
       </viewProvider>
    </extension>
 
@@ -270,16 +270,16 @@
             <method name="getType()" value="KragsteinProject"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-nodes">
-            <method name="getType()" value="2001"/>
+            <method name="getType()" value="2001,3001,3002"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Edge" id="generated-links">
             <method name="getType()" value=""/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-labels">
-            <method name="getType()" value="5001"/>
+            <method name="getType()" value="5001,5002,5003"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-compartments">
-            <method name="getType()" value=""/>
+            <method name="getType()" value="7001,7003,7002,7004"/>
          </object>
          <context views="generated-diagram,generated-nodes,generated-links,generated-labels,generated-compartments"/>
       </editpartProvider>
@@ -297,6 +297,16 @@
          <Priority name="Lowest"/>
          <object class="KragsteinProject.diagram.edit.parts.PackageEditPart" id="Package_2001"/>
          <context elements="Package_2001"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="KragsteinProject.diagram.providers.assistants.KragsteinProjectModelingAssistantProviderOfPackage2EditPart">
+         <Priority name="Lowest"/>
+         <object class="KragsteinProject.diagram.edit.parts.Package2EditPart" id="Package_3001"/>
+         <context elements="Package_3001"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="KragsteinProject.diagram.providers.assistants.KragsteinProjectModelingAssistantProviderOfClassEditPart">
+         <Priority name="Lowest"/>
+         <object class="KragsteinProject.diagram.edit.parts.ClassEditPart" id="Class_3002"/>
+         <context elements="Class_3002"/>
       </modelingAssistantProvider>
       
    </extension>
@@ -349,6 +359,25 @@
             <param name="semanticHint" value="2001"/>
          </metamodelType>
       </metamodel>
+      <metamodel nsURI="KragsteinProject.ecore">
+         <specializationType
+               id="KProject.diagram.Package_3001"
+               name="%metatype.name.Package_3001"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="KProject.diagram.Package_2001"/>
+            <param name="semanticHint" value="3001"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="KragsteinProject.ecore">
+         <metamodelType
+               id="KProject.diagram.Class_3002"
+               name="%metatype.name.Class_3002"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Class"
+               edithelper="KragsteinProject.diagram.edit.helpers.ClassEditHelper">
+            <param name="semanticHint" value="3002"/>
+         </metamodelType>
+      </metamodel>
    </extension>
 
    <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypeBindings" id="element-types-bindings">
@@ -363,6 +392,8 @@
       <binding context="KProject.diagram.TypeContext">
          <elementType ref="KProject.diagram.Project_1000"/>
          <elementType ref="KProject.diagram.Package_2001"/>
+         <elementType ref="KProject.diagram.Package_3001"/>
+         <elementType ref="KProject.diagram.Class_3002"/>
          <advice ref="org.eclipse.gmf.runtime.diagram.core.advice.notationDepdendents"/>
       </binding>
    </extension>

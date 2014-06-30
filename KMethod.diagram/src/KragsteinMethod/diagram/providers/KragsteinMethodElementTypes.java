@@ -81,12 +81,10 @@ public class KragsteinMethodElementTypes {
 	 * @generated
 	 */
 	public static final IElementType Case_3018 = getElementType("KMethod.diagram.Case_3018"); //$NON-NLS-1$
-
 	/**
 	 * @generated
 	 */
 	public static final IElementType Route_3019 = getElementType("KMethod.diagram.Route_3019"); //$NON-NLS-1$
-
 	/**
 	 * @generated
 	 */
@@ -126,10 +124,6 @@ public class KragsteinMethodElementTypes {
 	/**
 	 * @generated
 	 */
-	public static final IElementType EmptyConnector_3015 = getElementType("KMethod.diagram.EmptyConnector_3015"); //$NON-NLS-1$
-	/**
-	 * @generated
-	 */
 	public static final IElementType End_3016 = getElementType("KMethod.diagram.End_3016"); //$NON-NLS-1$
 	/**
 	 * @generated
@@ -143,10 +137,6 @@ public class KragsteinMethodElementTypes {
 	 * @generated
 	 */
 	public static final IElementType IconConnection_4003 = getElementType("KMethod.diagram.IconConnection_4003"); //$NON-NLS-1$
-	/**
-	 * @generated
-	 */
-	public static final IElementType IconConnection_4004 = getElementType("KMethod.diagram.IconConnection_4004"); //$NON-NLS-1$
 	/**
 	 * @generated
 	 */
@@ -264,10 +254,6 @@ public class KragsteinMethodElementTypes {
 					KragsteinMethod.KragsteinMethodPackage.eINSTANCE
 							.getLoopArrow());
 
-			elements.put(EmptyConnector_3015,
-					KragsteinMethod.KragsteinMethodPackage.eINSTANCE
-							.getEmptyConnector());
-
 			elements.put(End_3016,
 					KragsteinMethod.KragsteinMethodPackage.eINSTANCE.getEnd());
 
@@ -280,10 +266,6 @@ public class KragsteinMethodElementTypes {
 							.getBranchConnection());
 
 			elements.put(IconConnection_4003,
-					KragsteinMethod.KragsteinMethodPackage.eINSTANCE
-							.getIconConnection());
-
-			elements.put(IconConnection_4004,
 					KragsteinMethod.KragsteinMethodPackage.eINSTANCE
 							.getIconConnection());
 
@@ -330,12 +312,10 @@ public class KragsteinMethodElementTypes {
 			KNOWN_ELEMENT_TYPES.add(Output_3012);
 			KNOWN_ELEMENT_TYPES.add(Input_3013);
 			KNOWN_ELEMENT_TYPES.add(LoopArrow_3014);
-			KNOWN_ELEMENT_TYPES.add(EmptyConnector_3015);
 			KNOWN_ELEMENT_TYPES.add(End_3016);
 			KNOWN_ELEMENT_TYPES.add(BranchConnection_4001);
 			KNOWN_ELEMENT_TYPES.add(BranchConnection_4002);
 			KNOWN_ELEMENT_TYPES.add(IconConnection_4003);
-			KNOWN_ELEMENT_TYPES.add(IconConnection_4004);
 			KNOWN_ELEMENT_TYPES.add(CaseConnection_4005);
 			KNOWN_ELEMENT_TYPES.add(CaseConnection_4006);
 		}
@@ -385,8 +365,6 @@ public class KragsteinMethodElementTypes {
 			return Input_3013;
 		case KragsteinMethod.diagram.edit.parts.LoopArrowEditPart.VISUAL_ID:
 			return LoopArrow_3014;
-		case KragsteinMethod.diagram.edit.parts.EmptyConnectorEditPart.VISUAL_ID:
-			return EmptyConnector_3015;
 		case KragsteinMethod.diagram.edit.parts.EndEditPart.VISUAL_ID:
 			return End_3016;
 		case KragsteinMethod.diagram.edit.parts.BranchConnectionEditPart.VISUAL_ID:
@@ -395,8 +373,6 @@ public class KragsteinMethodElementTypes {
 			return BranchConnection_4002;
 		case KragsteinMethod.diagram.edit.parts.IconConnectionEditPart.VISUAL_ID:
 			return IconConnection_4003;
-		case KragsteinMethod.diagram.edit.parts.IconConnection2EditPart.VISUAL_ID:
-			return IconConnection_4004;
 		case KragsteinMethod.diagram.edit.parts.CaseConnectionEditPart.VISUAL_ID:
 			return CaseConnection_4005;
 		case KragsteinMethod.diagram.edit.parts.CaseConnection2EditPart.VISUAL_ID:

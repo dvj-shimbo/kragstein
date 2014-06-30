@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  *
  * @see KragsteinMethod.KragsteinMethodPackage#getLeftComment()
- * @model annotation="gmf.node label.placement='none'"
+ * @model
  * @generated
  */
 public interface LeftComment extends EObject {

@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link KragsteinMethod.impl.AdressImpl#getName <em>Name</em>}</li>
+ *   <li>{@link KragsteinMethod.impl.AdressImpl#getTarget <em>Target</em>}</li>
  *   <li>{@link KragsteinMethod.impl.AdressImpl#isIsLoop <em>Is Loop</em>}</li>
  * </ul>
  * </p>
@@ -27,24 +27,24 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class AdressImpl extends IconImpl implements Adress {
 	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * The default value of the '{@link #getTarget() <em>Target</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getName()
+	 * @see #getTarget()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NAME_EDEFAULT = null;
+	protected static final String TARGET_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * The cached value of the '{@link #getTarget() <em>Target</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getName()
+	 * @see #getTarget()
 	 * @generated
 	 * @ordered
 	 */
-	protected String name = NAME_EDEFAULT;
+	protected String target = TARGET_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #isIsLoop() <em>Is Loop</em>}' attribute.
@@ -90,8 +90,8 @@ public class AdressImpl extends IconImpl implements Adress {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
-		return name;
+	public String getTarget() {
+		return target;
 	}
 
 	/**
@@ -99,11 +99,11 @@ public class AdressImpl extends IconImpl implements Adress {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
+	public void setTarget(String newTarget) {
+		String oldTarget = target;
+		target = newTarget;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, KragsteinMethodPackage.ADRESS__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, KragsteinMethodPackage.ADRESS__TARGET, oldTarget, target));
 	}
 
 	/**
@@ -135,8 +135,8 @@ public class AdressImpl extends IconImpl implements Adress {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case KragsteinMethodPackage.ADRESS__NAME:
-				return getName();
+			case KragsteinMethodPackage.ADRESS__TARGET:
+				return getTarget();
 			case KragsteinMethodPackage.ADRESS__IS_LOOP:
 				return isIsLoop();
 		}
@@ -151,8 +151,8 @@ public class AdressImpl extends IconImpl implements Adress {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case KragsteinMethodPackage.ADRESS__NAME:
-				setName((String)newValue);
+			case KragsteinMethodPackage.ADRESS__TARGET:
+				setTarget((String)newValue);
 				return;
 			case KragsteinMethodPackage.ADRESS__IS_LOOP:
 				setIsLoop((Boolean)newValue);
@@ -169,8 +169,8 @@ public class AdressImpl extends IconImpl implements Adress {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case KragsteinMethodPackage.ADRESS__NAME:
-				setName(NAME_EDEFAULT);
+			case KragsteinMethodPackage.ADRESS__TARGET:
+				setTarget(TARGET_EDEFAULT);
 				return;
 			case KragsteinMethodPackage.ADRESS__IS_LOOP:
 				setIsLoop(IS_LOOP_EDEFAULT);
@@ -187,8 +187,8 @@ public class AdressImpl extends IconImpl implements Adress {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case KragsteinMethodPackage.ADRESS__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case KragsteinMethodPackage.ADRESS__TARGET:
+				return TARGET_EDEFAULT == null ? target != null : !TARGET_EDEFAULT.equals(target);
 			case KragsteinMethodPackage.ADRESS__IS_LOOP:
 				return isLoop != IS_LOOP_EDEFAULT;
 		}
@@ -205,8 +205,8 @@ public class AdressImpl extends IconImpl implements Adress {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
+		result.append(" (target: ");
+		result.append(target);
 		result.append(", isLoop: ");
 		result.append(isLoop);
 		result.append(')');

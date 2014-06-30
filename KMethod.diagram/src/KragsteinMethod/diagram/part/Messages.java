@@ -316,142 +316,112 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String EmptyConnector7CreationTool_title;
+	public static String End7CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String EmptyConnector7CreationTool_desc;
+	public static String End7CreationTool_desc;
 
 	/**
 	 * @generated
 	 */
-	public static String End8CreationTool_title;
+	public static String EndLoop8CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String End8CreationTool_desc;
+	public static String EndLoop8CreationTool_desc;
 
 	/**
 	 * @generated
 	 */
-	public static String EndLoop9CreationTool_title;
+	public static String Header9CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String EndLoop9CreationTool_desc;
+	public static String Header9CreationTool_desc;
 
 	/**
 	 * @generated
 	 */
-	public static String Header10CreationTool_title;
+	public static String Headline10CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String Header10CreationTool_desc;
+	public static String Headline10CreationTool_desc;
 
 	/**
 	 * @generated
 	 */
-	public static String Headline11CreationTool_title;
+	public static String Input11CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String Headline11CreationTool_desc;
+	public static String Input11CreationTool_desc;
 
 	/**
 	 * @generated
 	 */
-	public static String Input12CreationTool_title;
+	public static String Insertion12CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String Input12CreationTool_desc;
+	public static String Insertion12CreationTool_desc;
 
 	/**
 	 * @generated
 	 */
-	public static String Insertion13CreationTool_title;
+	public static String LoopArrow13CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String Insertion13CreationTool_desc;
+	public static String LoopArrow13CreationTool_desc;
 
 	/**
 	 * @generated
 	 */
-	public static String LeftComment14CreationTool_title;
+	public static String Output14CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String LeftComment14CreationTool_desc;
+	public static String Output14CreationTool_desc;
 
 	/**
 	 * @generated
 	 */
-	public static String LoopArrow15CreationTool_title;
+	public static String Question15CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String LoopArrow15CreationTool_desc;
+	public static String Question15CreationTool_desc;
 
 	/**
 	 * @generated
 	 */
-	public static String Output16CreationTool_title;
+	public static String Route16CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String Output16CreationTool_desc;
+	public static String Route16CreationTool_desc;
 
 	/**
 	 * @generated
 	 */
-	public static String Question17CreationTool_title;
+	public static String Shelf17CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String Question17CreationTool_desc;
-
-	/**
-	 * @generated
-	 */
-	public static String RightComment18CreationTool_title;
-
-	/**
-	 * @generated
-	 */
-	public static String RightComment18CreationTool_desc;
-
-	/**
-	 * @generated
-	 */
-	public static String Route19CreationTool_title;
-
-	/**
-	 * @generated
-	 */
-	public static String Route19CreationTool_desc;
-
-	/**
-	 * @generated
-	 */
-	public static String Shelf20CreationTool_title;
-
-	/**
-	 * @generated
-	 */
-	public static String Shelf20CreationTool_desc;
+	public static String Shelf17CreationTool_desc;
 
 	/**
 	 * @generated
@@ -661,16 +631,6 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_EmptyConnector_3015_incominglinks;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_EmptyConnector_3015_outgoinglinks;
-
-	/**
-	 * @generated
-	 */
 	public static String NavigatorGroupName_End_3016_incominglinks;
 
 	/**
@@ -717,16 +677,6 @@ public class Messages extends NLS {
 	 * @generated
 	 */
 	public static String NavigatorGroupName_IconConnection_4003_source;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_IconConnection_4004_target;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_IconConnection_4004_source;
 
 	/**
 	 * @generated

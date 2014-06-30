@@ -229,15 +229,6 @@ public interface KragsteinMethodFactory extends EFactory {
 	LoopArrow createLoopArrow();
 
 	/**
-	 * Returns a new object of class '<em>Empty Connector</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Empty Connector</em>'.
-	 * @generated
-	 */
-	EmptyConnector createEmptyConnector();
-
-	/**
 	 * Returns a new object of class '<em>End</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

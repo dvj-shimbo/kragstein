@@ -53,6 +53,14 @@ public class KragsteinProjectElementTypes {
 	 * @generated
 	 */
 	public static final IElementType Package_2001 = getElementType("KProject.diagram.Package_2001"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType Package_3001 = getElementType("KProject.diagram.Package_3001"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType Class_3002 = getElementType("KProject.diagram.Class_3002"); //$NON-NLS-1$
 
 	/**
 	 * @generated
@@ -99,6 +107,14 @@ public class KragsteinProjectElementTypes {
 			elements.put(Package_2001,
 					KragsteinProject.KragsteinProjectPackage.eINSTANCE
 							.getPackage());
+
+			elements.put(Package_3001,
+					KragsteinProject.KragsteinProjectPackage.eINSTANCE
+							.getPackage());
+
+			elements.put(Class_3002,
+					KragsteinProject.KragsteinProjectPackage.eINSTANCE
+							.getClass_());
 		}
 		return (ENamedElement) elements.get(type);
 	}
@@ -118,6 +134,8 @@ public class KragsteinProjectElementTypes {
 			KNOWN_ELEMENT_TYPES = new HashSet<IElementType>();
 			KNOWN_ELEMENT_TYPES.add(Project_1000);
 			KNOWN_ELEMENT_TYPES.add(Package_2001);
+			KNOWN_ELEMENT_TYPES.add(Package_3001);
+			KNOWN_ELEMENT_TYPES.add(Class_3002);
 		}
 		return KNOWN_ELEMENT_TYPES.contains(elementType);
 	}
@@ -131,6 +149,10 @@ public class KragsteinProjectElementTypes {
 			return Project_1000;
 		case KragsteinProject.diagram.edit.parts.PackageEditPart.VISUAL_ID:
 			return Package_2001;
+		case KragsteinProject.diagram.edit.parts.Package2EditPart.VISUAL_ID:
+			return Package_3001;
+		case KragsteinProject.diagram.edit.parts.ClassEditPart.VISUAL_ID:
+			return Class_3002;
 		}
 		return null;
 	}

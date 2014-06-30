@@ -128,6 +128,30 @@ public class KragsteinProjectVisualIDRegistry {
 				return KragsteinProject.diagram.edit.parts.PackageEditPart.VISUAL_ID;
 			}
 			break;
+		case KragsteinProject.diagram.edit.parts.PackagePackagePackageCompartmentEditPart.VISUAL_ID:
+			if (KragsteinProject.KragsteinProjectPackage.eINSTANCE.getPackage()
+					.isSuperTypeOf(domainElement.eClass())) {
+				return KragsteinProject.diagram.edit.parts.Package2EditPart.VISUAL_ID;
+			}
+			break;
+		case KragsteinProject.diagram.edit.parts.PackagePackageClassCompartmentEditPart.VISUAL_ID:
+			if (KragsteinProject.KragsteinProjectPackage.eINSTANCE.getClass_()
+					.isSuperTypeOf(domainElement.eClass())) {
+				return KragsteinProject.diagram.edit.parts.ClassEditPart.VISUAL_ID;
+			}
+			break;
+		case KragsteinProject.diagram.edit.parts.PackagePackagePackageCompartment2EditPart.VISUAL_ID:
+			if (KragsteinProject.KragsteinProjectPackage.eINSTANCE.getPackage()
+					.isSuperTypeOf(domainElement.eClass())) {
+				return KragsteinProject.diagram.edit.parts.Package2EditPart.VISUAL_ID;
+			}
+			break;
+		case KragsteinProject.diagram.edit.parts.PackagePackageClassCompartment2EditPart.VISUAL_ID:
+			if (KragsteinProject.KragsteinProjectPackage.eINSTANCE.getClass_()
+					.isSuperTypeOf(domainElement.eClass())) {
+				return KragsteinProject.diagram.edit.parts.ClassEditPart.VISUAL_ID;
+			}
+			break;
 		}
 		return -1;
 	}
@@ -163,6 +187,48 @@ public class KragsteinProjectVisualIDRegistry {
 			break;
 		case KragsteinProject.diagram.edit.parts.PackageEditPart.VISUAL_ID:
 			if (KragsteinProject.diagram.edit.parts.PackageNameEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (KragsteinProject.diagram.edit.parts.PackagePackagePackageCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (KragsteinProject.diagram.edit.parts.PackagePackageClassCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case KragsteinProject.diagram.edit.parts.Package2EditPart.VISUAL_ID:
+			if (KragsteinProject.diagram.edit.parts.PackageName2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (KragsteinProject.diagram.edit.parts.PackagePackagePackageCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (KragsteinProject.diagram.edit.parts.PackagePackageClassCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case KragsteinProject.diagram.edit.parts.ClassEditPart.VISUAL_ID:
+			if (KragsteinProject.diagram.edit.parts.ClassNameEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case KragsteinProject.diagram.edit.parts.PackagePackagePackageCompartmentEditPart.VISUAL_ID:
+			if (KragsteinProject.diagram.edit.parts.Package2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case KragsteinProject.diagram.edit.parts.PackagePackageClassCompartmentEditPart.VISUAL_ID:
+			if (KragsteinProject.diagram.edit.parts.ClassEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case KragsteinProject.diagram.edit.parts.PackagePackagePackageCompartment2EditPart.VISUAL_ID:
+			if (KragsteinProject.diagram.edit.parts.Package2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case KragsteinProject.diagram.edit.parts.PackagePackageClassCompartment2EditPart.VISUAL_ID:
+			if (KragsteinProject.diagram.edit.parts.ClassEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -207,6 +273,15 @@ public class KragsteinProjectVisualIDRegistry {
 	 * @generated
 	 */
 	public static boolean isCompartmentVisualID(int visualID) {
+		switch (visualID) {
+		case KragsteinProject.diagram.edit.parts.PackagePackagePackageCompartmentEditPart.VISUAL_ID:
+		case KragsteinProject.diagram.edit.parts.PackagePackageClassCompartmentEditPart.VISUAL_ID:
+		case KragsteinProject.diagram.edit.parts.PackagePackagePackageCompartment2EditPart.VISUAL_ID:
+		case KragsteinProject.diagram.edit.parts.PackagePackageClassCompartment2EditPart.VISUAL_ID:
+			return true;
+		default:
+			break;
+		}
 		return false;
 	}
 
@@ -217,7 +292,7 @@ public class KragsteinProjectVisualIDRegistry {
 		switch (visualID) {
 		case KragsteinProject.diagram.edit.parts.ProjectEditPart.VISUAL_ID:
 			return false;
-		case KragsteinProject.diagram.edit.parts.PackageEditPart.VISUAL_ID:
+		case KragsteinProject.diagram.edit.parts.ClassEditPart.VISUAL_ID:
 			return true;
 		default:
 			break;

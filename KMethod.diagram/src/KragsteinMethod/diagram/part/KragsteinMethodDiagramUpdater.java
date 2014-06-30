@@ -197,11 +197,6 @@ public class KragsteinMethodDiagramUpdater {
 						childElement, visualID));
 				continue;
 			}
-			if (visualID == KragsteinMethod.diagram.edit.parts.EmptyConnectorEditPart.VISUAL_ID) {
-				result.add(new KragsteinMethod.diagram.part.KragsteinMethodNodeDescriptor(
-						childElement, visualID));
-				continue;
-			}
 			if (visualID == KragsteinMethod.diagram.edit.parts.EndEditPart.VISUAL_ID) {
 				result.add(new KragsteinMethod.diagram.part.KragsteinMethodNodeDescriptor(
 						childElement, visualID));
@@ -314,11 +309,6 @@ public class KragsteinMethodDiagramUpdater {
 				continue;
 			}
 			if (visualID == KragsteinMethod.diagram.edit.parts.LoopArrowEditPart.VISUAL_ID) {
-				result.add(new KragsteinMethod.diagram.part.KragsteinMethodNodeDescriptor(
-						childElement, visualID));
-				continue;
-			}
-			if (visualID == KragsteinMethod.diagram.edit.parts.EmptyConnectorEditPart.VISUAL_ID) {
 				result.add(new KragsteinMethod.diagram.part.KragsteinMethodNodeDescriptor(
 						childElement, visualID));
 				continue;
@@ -468,11 +458,6 @@ public class KragsteinMethodDiagramUpdater {
 						childElement, visualID));
 				continue;
 			}
-			if (visualID == KragsteinMethod.diagram.edit.parts.EmptyConnectorEditPart.VISUAL_ID) {
-				result.add(new KragsteinMethod.diagram.part.KragsteinMethodNodeDescriptor(
-						childElement, visualID));
-				continue;
-			}
 			if (visualID == KragsteinMethod.diagram.edit.parts.EndEditPart.VISUAL_ID) {
 				result.add(new KragsteinMethod.diagram.part.KragsteinMethodNodeDescriptor(
 						childElement, visualID));
@@ -527,8 +512,6 @@ public class KragsteinMethodDiagramUpdater {
 			return getInput_3013ContainedLinks(view);
 		case KragsteinMethod.diagram.edit.parts.LoopArrowEditPart.VISUAL_ID:
 			return getLoopArrow_3014ContainedLinks(view);
-		case KragsteinMethod.diagram.edit.parts.EmptyConnectorEditPart.VISUAL_ID:
-			return getEmptyConnector_3015ContainedLinks(view);
 		case KragsteinMethod.diagram.edit.parts.EndEditPart.VISUAL_ID:
 			return getEnd_3016ContainedLinks(view);
 		case KragsteinMethod.diagram.edit.parts.BranchConnectionEditPart.VISUAL_ID:
@@ -537,8 +520,6 @@ public class KragsteinMethodDiagramUpdater {
 			return getBranchConnection_4002ContainedLinks(view);
 		case KragsteinMethod.diagram.edit.parts.IconConnectionEditPart.VISUAL_ID:
 			return getIconConnection_4003ContainedLinks(view);
-		case KragsteinMethod.diagram.edit.parts.IconConnection2EditPart.VISUAL_ID:
-			return getIconConnection_4004ContainedLinks(view);
 		case KragsteinMethod.diagram.edit.parts.CaseConnectionEditPart.VISUAL_ID:
 			return getCaseConnection_4005ContainedLinks(view);
 		case KragsteinMethod.diagram.edit.parts.CaseConnection2EditPart.VISUAL_ID:
@@ -590,8 +571,6 @@ public class KragsteinMethodDiagramUpdater {
 			return getInput_3013IncomingLinks(view);
 		case KragsteinMethod.diagram.edit.parts.LoopArrowEditPart.VISUAL_ID:
 			return getLoopArrow_3014IncomingLinks(view);
-		case KragsteinMethod.diagram.edit.parts.EmptyConnectorEditPart.VISUAL_ID:
-			return getEmptyConnector_3015IncomingLinks(view);
 		case KragsteinMethod.diagram.edit.parts.EndEditPart.VISUAL_ID:
 			return getEnd_3016IncomingLinks(view);
 		case KragsteinMethod.diagram.edit.parts.BranchConnectionEditPart.VISUAL_ID:
@@ -600,8 +579,6 @@ public class KragsteinMethodDiagramUpdater {
 			return getBranchConnection_4002IncomingLinks(view);
 		case KragsteinMethod.diagram.edit.parts.IconConnectionEditPart.VISUAL_ID:
 			return getIconConnection_4003IncomingLinks(view);
-		case KragsteinMethod.diagram.edit.parts.IconConnection2EditPart.VISUAL_ID:
-			return getIconConnection_4004IncomingLinks(view);
 		case KragsteinMethod.diagram.edit.parts.CaseConnectionEditPart.VISUAL_ID:
 			return getCaseConnection_4005IncomingLinks(view);
 		case KragsteinMethod.diagram.edit.parts.CaseConnection2EditPart.VISUAL_ID:
@@ -653,8 +630,6 @@ public class KragsteinMethodDiagramUpdater {
 			return getInput_3013OutgoingLinks(view);
 		case KragsteinMethod.diagram.edit.parts.LoopArrowEditPart.VISUAL_ID:
 			return getLoopArrow_3014OutgoingLinks(view);
-		case KragsteinMethod.diagram.edit.parts.EmptyConnectorEditPart.VISUAL_ID:
-			return getEmptyConnector_3015OutgoingLinks(view);
 		case KragsteinMethod.diagram.edit.parts.EndEditPart.VISUAL_ID:
 			return getEnd_3016OutgoingLinks(view);
 		case KragsteinMethod.diagram.edit.parts.BranchConnectionEditPart.VISUAL_ID:
@@ -663,8 +638,6 @@ public class KragsteinMethodDiagramUpdater {
 			return getBranchConnection_4002OutgoingLinks(view);
 		case KragsteinMethod.diagram.edit.parts.IconConnectionEditPart.VISUAL_ID:
 			return getIconConnection_4003OutgoingLinks(view);
-		case KragsteinMethod.diagram.edit.parts.IconConnection2EditPart.VISUAL_ID:
-			return getIconConnection_4004OutgoingLinks(view);
 		case KragsteinMethod.diagram.edit.parts.CaseConnectionEditPart.VISUAL_ID:
 			return getCaseConnection_4005OutgoingLinks(view);
 		case KragsteinMethod.diagram.edit.parts.CaseConnection2EditPart.VISUAL_ID:
@@ -719,7 +692,6 @@ public class KragsteinMethodDiagramUpdater {
 				.getElement();
 		LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> result = new LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor>();
 		result.addAll(getContainedTypeModelFacetLinks_IconConnection_4003(modelElement));
-		result.addAll(getContainedTypeModelFacetLinks_IconConnection_4004(modelElement));
 		return result;
 	}
 
@@ -732,7 +704,6 @@ public class KragsteinMethodDiagramUpdater {
 				.getElement();
 		LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> result = new LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor>();
 		result.addAll(getContainedTypeModelFacetLinks_IconConnection_4003(modelElement));
-		result.addAll(getContainedTypeModelFacetLinks_IconConnection_4004(modelElement));
 		return result;
 	}
 
@@ -753,7 +724,6 @@ public class KragsteinMethodDiagramUpdater {
 				.getElement();
 		LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> result = new LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor>();
 		result.addAll(getContainedTypeModelFacetLinks_IconConnection_4003(modelElement));
-		result.addAll(getContainedTypeModelFacetLinks_IconConnection_4004(modelElement));
 		return result;
 	}
 
@@ -787,7 +757,6 @@ public class KragsteinMethodDiagramUpdater {
 				.getElement();
 		LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> result = new LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor>();
 		result.addAll(getContainedTypeModelFacetLinks_IconConnection_4003(modelElement));
-		result.addAll(getContainedTypeModelFacetLinks_IconConnection_4004(modelElement));
 		return result;
 	}
 
@@ -800,7 +769,6 @@ public class KragsteinMethodDiagramUpdater {
 				.getElement();
 		LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> result = new LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor>();
 		result.addAll(getContainedTypeModelFacetLinks_IconConnection_4003(modelElement));
-		result.addAll(getContainedTypeModelFacetLinks_IconConnection_4004(modelElement));
 		return result;
 	}
 
@@ -813,7 +781,6 @@ public class KragsteinMethodDiagramUpdater {
 				.getElement();
 		LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> result = new LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor>();
 		result.addAll(getContainedTypeModelFacetLinks_IconConnection_4003(modelElement));
-		result.addAll(getContainedTypeModelFacetLinks_IconConnection_4004(modelElement));
 		return result;
 	}
 
@@ -826,7 +793,6 @@ public class KragsteinMethodDiagramUpdater {
 				.getElement();
 		LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> result = new LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor>();
 		result.addAll(getContainedTypeModelFacetLinks_IconConnection_4003(modelElement));
-		result.addAll(getContainedTypeModelFacetLinks_IconConnection_4004(modelElement));
 		return result;
 	}
 
@@ -839,7 +805,6 @@ public class KragsteinMethodDiagramUpdater {
 				.getElement();
 		LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> result = new LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor>();
 		result.addAll(getContainedTypeModelFacetLinks_IconConnection_4003(modelElement));
-		result.addAll(getContainedTypeModelFacetLinks_IconConnection_4004(modelElement));
 		return result;
 	}
 
@@ -852,7 +817,6 @@ public class KragsteinMethodDiagramUpdater {
 				.getElement();
 		LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> result = new LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor>();
 		result.addAll(getContainedTypeModelFacetLinks_IconConnection_4003(modelElement));
-		result.addAll(getContainedTypeModelFacetLinks_IconConnection_4004(modelElement));
 		return result;
 	}
 
@@ -865,7 +829,6 @@ public class KragsteinMethodDiagramUpdater {
 				.getElement();
 		LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> result = new LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor>();
 		result.addAll(getContainedTypeModelFacetLinks_IconConnection_4003(modelElement));
-		result.addAll(getContainedTypeModelFacetLinks_IconConnection_4004(modelElement));
 		return result;
 	}
 
@@ -878,7 +841,6 @@ public class KragsteinMethodDiagramUpdater {
 				.getElement();
 		LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> result = new LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor>();
 		result.addAll(getContainedTypeModelFacetLinks_IconConnection_4003(modelElement));
-		result.addAll(getContainedTypeModelFacetLinks_IconConnection_4004(modelElement));
 		return result;
 	}
 
@@ -891,20 +853,6 @@ public class KragsteinMethodDiagramUpdater {
 				.getElement();
 		LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> result = new LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor>();
 		result.addAll(getContainedTypeModelFacetLinks_IconConnection_4003(modelElement));
-		result.addAll(getContainedTypeModelFacetLinks_IconConnection_4004(modelElement));
-		return result;
-	}
-
-	/**
-	 * @generated
-	 */
-	public static List<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> getEmptyConnector_3015ContainedLinks(
-			View view) {
-		KragsteinMethod.EmptyConnector modelElement = (KragsteinMethod.EmptyConnector) view
-				.getElement();
-		LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> result = new LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor>();
-		result.addAll(getContainedTypeModelFacetLinks_IconConnection_4003(modelElement));
-		result.addAll(getContainedTypeModelFacetLinks_IconConnection_4004(modelElement));
 		return result;
 	}
 
@@ -917,7 +865,6 @@ public class KragsteinMethodDiagramUpdater {
 				.getElement();
 		LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> result = new LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor>();
 		result.addAll(getContainedTypeModelFacetLinks_IconConnection_4003(modelElement));
-		result.addAll(getContainedTypeModelFacetLinks_IconConnection_4004(modelElement));
 		return result;
 	}
 
@@ -941,14 +888,6 @@ public class KragsteinMethodDiagramUpdater {
 	 * @generated
 	 */
 	public static List<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> getIconConnection_4003ContainedLinks(
-			View view) {
-		return Collections.emptyList();
-	}
-
-	/**
-	 * @generated
-	 */
-	public static List<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> getIconConnection_4004ContainedLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -1014,8 +953,6 @@ public class KragsteinMethodDiagramUpdater {
 		LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> result = new LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor>();
 		result.addAll(getIncomingTypeModelFacetLinks_IconConnection_4003(
 				modelElement, crossReferences));
-		result.addAll(getIncomingTypeModelFacetLinks_IconConnection_4004(
-				modelElement, crossReferences));
 		return result;
 	}
 
@@ -1030,8 +967,6 @@ public class KragsteinMethodDiagramUpdater {
 				.find(view.eResource().getResourceSet().getResources());
 		LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> result = new LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor>();
 		result.addAll(getIncomingTypeModelFacetLinks_IconConnection_4003(
-				modelElement, crossReferences));
-		result.addAll(getIncomingTypeModelFacetLinks_IconConnection_4004(
 				modelElement, crossReferences));
 		return result;
 	}
@@ -1055,8 +990,6 @@ public class KragsteinMethodDiagramUpdater {
 				.find(view.eResource().getResourceSet().getResources());
 		LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> result = new LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor>();
 		result.addAll(getIncomingTypeModelFacetLinks_IconConnection_4003(
-				modelElement, crossReferences));
-		result.addAll(getIncomingTypeModelFacetLinks_IconConnection_4004(
 				modelElement, crossReferences));
 		return result;
 	}
@@ -1098,8 +1031,6 @@ public class KragsteinMethodDiagramUpdater {
 		LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> result = new LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor>();
 		result.addAll(getIncomingTypeModelFacetLinks_IconConnection_4003(
 				modelElement, crossReferences));
-		result.addAll(getIncomingTypeModelFacetLinks_IconConnection_4004(
-				modelElement, crossReferences));
 		return result;
 	}
 
@@ -1114,8 +1045,6 @@ public class KragsteinMethodDiagramUpdater {
 				.find(view.eResource().getResourceSet().getResources());
 		LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> result = new LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor>();
 		result.addAll(getIncomingTypeModelFacetLinks_IconConnection_4003(
-				modelElement, crossReferences));
-		result.addAll(getIncomingTypeModelFacetLinks_IconConnection_4004(
 				modelElement, crossReferences));
 		return result;
 	}
@@ -1132,8 +1061,6 @@ public class KragsteinMethodDiagramUpdater {
 		LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> result = new LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor>();
 		result.addAll(getIncomingTypeModelFacetLinks_IconConnection_4003(
 				modelElement, crossReferences));
-		result.addAll(getIncomingTypeModelFacetLinks_IconConnection_4004(
-				modelElement, crossReferences));
 		return result;
 	}
 
@@ -1148,8 +1075,6 @@ public class KragsteinMethodDiagramUpdater {
 				.find(view.eResource().getResourceSet().getResources());
 		LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> result = new LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor>();
 		result.addAll(getIncomingTypeModelFacetLinks_IconConnection_4003(
-				modelElement, crossReferences));
-		result.addAll(getIncomingTypeModelFacetLinks_IconConnection_4004(
 				modelElement, crossReferences));
 		return result;
 	}
@@ -1166,8 +1091,6 @@ public class KragsteinMethodDiagramUpdater {
 		LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> result = new LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor>();
 		result.addAll(getIncomingTypeModelFacetLinks_IconConnection_4003(
 				modelElement, crossReferences));
-		result.addAll(getIncomingTypeModelFacetLinks_IconConnection_4004(
-				modelElement, crossReferences));
 		return result;
 	}
 
@@ -1182,8 +1105,6 @@ public class KragsteinMethodDiagramUpdater {
 				.find(view.eResource().getResourceSet().getResources());
 		LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> result = new LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor>();
 		result.addAll(getIncomingTypeModelFacetLinks_IconConnection_4003(
-				modelElement, crossReferences));
-		result.addAll(getIncomingTypeModelFacetLinks_IconConnection_4004(
 				modelElement, crossReferences));
 		return result;
 	}
@@ -1200,8 +1121,6 @@ public class KragsteinMethodDiagramUpdater {
 		LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> result = new LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor>();
 		result.addAll(getIncomingTypeModelFacetLinks_IconConnection_4003(
 				modelElement, crossReferences));
-		result.addAll(getIncomingTypeModelFacetLinks_IconConnection_4004(
-				modelElement, crossReferences));
 		return result;
 	}
 
@@ -1216,8 +1135,6 @@ public class KragsteinMethodDiagramUpdater {
 				.find(view.eResource().getResourceSet().getResources());
 		LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> result = new LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor>();
 		result.addAll(getIncomingTypeModelFacetLinks_IconConnection_4003(
-				modelElement, crossReferences));
-		result.addAll(getIncomingTypeModelFacetLinks_IconConnection_4004(
 				modelElement, crossReferences));
 		return result;
 	}
@@ -1234,25 +1151,6 @@ public class KragsteinMethodDiagramUpdater {
 		LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> result = new LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor>();
 		result.addAll(getIncomingTypeModelFacetLinks_IconConnection_4003(
 				modelElement, crossReferences));
-		result.addAll(getIncomingTypeModelFacetLinks_IconConnection_4004(
-				modelElement, crossReferences));
-		return result;
-	}
-
-	/**
-	 * @generated
-	 */
-	public static List<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> getEmptyConnector_3015IncomingLinks(
-			View view) {
-		KragsteinMethod.EmptyConnector modelElement = (KragsteinMethod.EmptyConnector) view
-				.getElement();
-		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
-				.find(view.eResource().getResourceSet().getResources());
-		LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> result = new LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor>();
-		result.addAll(getIncomingTypeModelFacetLinks_IconConnection_4003(
-				modelElement, crossReferences));
-		result.addAll(getIncomingTypeModelFacetLinks_IconConnection_4004(
-				modelElement, crossReferences));
 		return result;
 	}
 
@@ -1267,8 +1165,6 @@ public class KragsteinMethodDiagramUpdater {
 				.find(view.eResource().getResourceSet().getResources());
 		LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> result = new LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor>();
 		result.addAll(getIncomingTypeModelFacetLinks_IconConnection_4003(
-				modelElement, crossReferences));
-		result.addAll(getIncomingTypeModelFacetLinks_IconConnection_4004(
 				modelElement, crossReferences));
 		return result;
 	}
@@ -1293,14 +1189,6 @@ public class KragsteinMethodDiagramUpdater {
 	 * @generated
 	 */
 	public static List<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> getIconConnection_4003IncomingLinks(
-			View view) {
-		return Collections.emptyList();
-	}
-
-	/**
-	 * @generated
-	 */
-	public static List<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> getIconConnection_4004IncomingLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -1359,7 +1247,6 @@ public class KragsteinMethodDiagramUpdater {
 				.getElement();
 		LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> result = new LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor>();
 		result.addAll(getOutgoingTypeModelFacetLinks_IconConnection_4003(modelElement));
-		result.addAll(getOutgoingTypeModelFacetLinks_IconConnection_4004(modelElement));
 		return result;
 	}
 
@@ -1372,7 +1259,6 @@ public class KragsteinMethodDiagramUpdater {
 				.getElement();
 		LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> result = new LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor>();
 		result.addAll(getOutgoingTypeModelFacetLinks_IconConnection_4003(modelElement));
-		result.addAll(getOutgoingTypeModelFacetLinks_IconConnection_4004(modelElement));
 		return result;
 	}
 
@@ -1393,7 +1279,6 @@ public class KragsteinMethodDiagramUpdater {
 				.getElement();
 		LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> result = new LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor>();
 		result.addAll(getOutgoingTypeModelFacetLinks_IconConnection_4003(modelElement));
-		result.addAll(getOutgoingTypeModelFacetLinks_IconConnection_4004(modelElement));
 		return result;
 	}
 
@@ -1427,7 +1312,6 @@ public class KragsteinMethodDiagramUpdater {
 				.getElement();
 		LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> result = new LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor>();
 		result.addAll(getOutgoingTypeModelFacetLinks_IconConnection_4003(modelElement));
-		result.addAll(getOutgoingTypeModelFacetLinks_IconConnection_4004(modelElement));
 		return result;
 	}
 
@@ -1440,7 +1324,6 @@ public class KragsteinMethodDiagramUpdater {
 				.getElement();
 		LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> result = new LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor>();
 		result.addAll(getOutgoingTypeModelFacetLinks_IconConnection_4003(modelElement));
-		result.addAll(getOutgoingTypeModelFacetLinks_IconConnection_4004(modelElement));
 		return result;
 	}
 
@@ -1453,7 +1336,6 @@ public class KragsteinMethodDiagramUpdater {
 				.getElement();
 		LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> result = new LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor>();
 		result.addAll(getOutgoingTypeModelFacetLinks_IconConnection_4003(modelElement));
-		result.addAll(getOutgoingTypeModelFacetLinks_IconConnection_4004(modelElement));
 		return result;
 	}
 
@@ -1466,7 +1348,6 @@ public class KragsteinMethodDiagramUpdater {
 				.getElement();
 		LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> result = new LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor>();
 		result.addAll(getOutgoingTypeModelFacetLinks_IconConnection_4003(modelElement));
-		result.addAll(getOutgoingTypeModelFacetLinks_IconConnection_4004(modelElement));
 		return result;
 	}
 
@@ -1479,7 +1360,6 @@ public class KragsteinMethodDiagramUpdater {
 				.getElement();
 		LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> result = new LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor>();
 		result.addAll(getOutgoingTypeModelFacetLinks_IconConnection_4003(modelElement));
-		result.addAll(getOutgoingTypeModelFacetLinks_IconConnection_4004(modelElement));
 		return result;
 	}
 
@@ -1492,7 +1372,6 @@ public class KragsteinMethodDiagramUpdater {
 				.getElement();
 		LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> result = new LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor>();
 		result.addAll(getOutgoingTypeModelFacetLinks_IconConnection_4003(modelElement));
-		result.addAll(getOutgoingTypeModelFacetLinks_IconConnection_4004(modelElement));
 		return result;
 	}
 
@@ -1505,7 +1384,6 @@ public class KragsteinMethodDiagramUpdater {
 				.getElement();
 		LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> result = new LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor>();
 		result.addAll(getOutgoingTypeModelFacetLinks_IconConnection_4003(modelElement));
-		result.addAll(getOutgoingTypeModelFacetLinks_IconConnection_4004(modelElement));
 		return result;
 	}
 
@@ -1518,7 +1396,6 @@ public class KragsteinMethodDiagramUpdater {
 				.getElement();
 		LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> result = new LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor>();
 		result.addAll(getOutgoingTypeModelFacetLinks_IconConnection_4003(modelElement));
-		result.addAll(getOutgoingTypeModelFacetLinks_IconConnection_4004(modelElement));
 		return result;
 	}
 
@@ -1531,20 +1408,6 @@ public class KragsteinMethodDiagramUpdater {
 				.getElement();
 		LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> result = new LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor>();
 		result.addAll(getOutgoingTypeModelFacetLinks_IconConnection_4003(modelElement));
-		result.addAll(getOutgoingTypeModelFacetLinks_IconConnection_4004(modelElement));
-		return result;
-	}
-
-	/**
-	 * @generated
-	 */
-	public static List<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> getEmptyConnector_3015OutgoingLinks(
-			View view) {
-		KragsteinMethod.EmptyConnector modelElement = (KragsteinMethod.EmptyConnector) view
-				.getElement();
-		LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> result = new LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor>();
-		result.addAll(getOutgoingTypeModelFacetLinks_IconConnection_4003(modelElement));
-		result.addAll(getOutgoingTypeModelFacetLinks_IconConnection_4004(modelElement));
 		return result;
 	}
 
@@ -1557,7 +1420,6 @@ public class KragsteinMethodDiagramUpdater {
 				.getElement();
 		LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> result = new LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor>();
 		result.addAll(getOutgoingTypeModelFacetLinks_IconConnection_4003(modelElement));
-		result.addAll(getOutgoingTypeModelFacetLinks_IconConnection_4004(modelElement));
 		return result;
 	}
 
@@ -1581,14 +1443,6 @@ public class KragsteinMethodDiagramUpdater {
 	 * @generated
 	 */
 	public static List<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> getIconConnection_4003OutgoingLinks(
-			View view) {
-		return Collections.emptyList();
-	}
-
-	/**
-	 * @generated
-	 */
-	public static List<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> getIconConnection_4004OutgoingLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -1662,7 +1516,7 @@ public class KragsteinMethodDiagramUpdater {
 			KragsteinMethod.Icon container) {
 		LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> result = new LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor>();
 		KragsteinMethod.IconConnection link = container
-				.getSourceIconConnection();
+				.getTargetIconConnection();
 		if (KragsteinMethod.diagram.edit.parts.IconConnectionEditPart.VISUAL_ID != KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
 				.getLinkWithClassVisualID(link)) {
 			return result;
@@ -1675,29 +1529,6 @@ public class KragsteinMethodDiagramUpdater {
 				link,
 				KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.IconConnection_4003,
 				KragsteinMethod.diagram.edit.parts.IconConnectionEditPart.VISUAL_ID));
-		return result;
-	}
-
-	/**
-	 * @generated
-	 */
-	private static Collection<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> getContainedTypeModelFacetLinks_IconConnection_4004(
-			KragsteinMethod.Icon container) {
-		LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> result = new LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor>();
-		KragsteinMethod.IconConnection link = container
-				.getTargetIconConnection();
-		if (KragsteinMethod.diagram.edit.parts.IconConnection2EditPart.VISUAL_ID != KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
-				.getLinkWithClassVisualID(link)) {
-			return result;
-		}
-		KragsteinMethod.Icon dst = link.getTarget();
-		KragsteinMethod.Icon src = link.getSource();
-		result.add(new KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor(
-				src,
-				dst,
-				link,
-				KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.IconConnection_4004,
-				KragsteinMethod.diagram.edit.parts.IconConnection2EditPart.VISUAL_ID));
 		return result;
 	}
 
@@ -1839,38 +1670,6 @@ public class KragsteinMethodDiagramUpdater {
 					link,
 					KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.IconConnection_4003,
 					KragsteinMethod.diagram.edit.parts.IconConnectionEditPart.VISUAL_ID));
-		}
-		return result;
-	}
-
-	/**
-	 * @generated
-	 */
-	private static Collection<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> getIncomingTypeModelFacetLinks_IconConnection_4004(
-			KragsteinMethod.Icon target,
-			Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences) {
-		LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> result = new LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor>();
-		Collection<EStructuralFeature.Setting> settings = crossReferences
-				.get(target);
-		for (EStructuralFeature.Setting setting : settings) {
-			if (setting.getEStructuralFeature() != KragsteinMethod.KragsteinMethodPackage.eINSTANCE
-					.getIconConnection_Target()
-					|| false == setting.getEObject() instanceof KragsteinMethod.IconConnection) {
-				continue;
-			}
-			KragsteinMethod.IconConnection link = (KragsteinMethod.IconConnection) setting
-					.getEObject();
-			if (KragsteinMethod.diagram.edit.parts.IconConnection2EditPart.VISUAL_ID != KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
-					.getLinkWithClassVisualID(link)) {
-				continue;
-			}
-			KragsteinMethod.Icon src = link.getSource();
-			result.add(new KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor(
-					src,
-					target,
-					link,
-					KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.IconConnection_4004,
-					KragsteinMethod.diagram.edit.parts.IconConnection2EditPart.VISUAL_ID));
 		}
 		return result;
 	}
@@ -2037,7 +1836,7 @@ public class KragsteinMethodDiagramUpdater {
 		}
 		LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> result = new LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor>();
 		KragsteinMethod.IconConnection link = container
-				.getSourceIconConnection();
+				.getTargetIconConnection();
 		if (KragsteinMethod.diagram.edit.parts.IconConnectionEditPart.VISUAL_ID != KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
 				.getLinkWithClassVisualID(link)) {
 			return result;
@@ -2053,45 +1852,6 @@ public class KragsteinMethodDiagramUpdater {
 				link,
 				KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.IconConnection_4003,
 				KragsteinMethod.diagram.edit.parts.IconConnectionEditPart.VISUAL_ID));
-		return result;
-	}
-
-	/**
-	 * @generated
-	 */
-	private static Collection<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> getOutgoingTypeModelFacetLinks_IconConnection_4004(
-			KragsteinMethod.Icon source) {
-		KragsteinMethod.Icon container = null;
-		// Find container element for the link.
-		// Climb up by containment hierarchy starting from the source
-		// and return the first element that is instance of the container class.
-		for (EObject element = source; element != null && container == null; element = element
-				.eContainer()) {
-			if (element instanceof KragsteinMethod.Icon) {
-				container = (KragsteinMethod.Icon) element;
-			}
-		}
-		if (container == null) {
-			return Collections.emptyList();
-		}
-		LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> result = new LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor>();
-		KragsteinMethod.IconConnection link = container
-				.getTargetIconConnection();
-		if (KragsteinMethod.diagram.edit.parts.IconConnection2EditPart.VISUAL_ID != KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
-				.getLinkWithClassVisualID(link)) {
-			return result;
-		}
-		KragsteinMethod.Icon dst = link.getTarget();
-		KragsteinMethod.Icon src = link.getSource();
-		if (src != source) {
-			return result;
-		}
-		result.add(new KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor(
-				src,
-				dst,
-				link,
-				KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.IconConnection_4004,
-				KragsteinMethod.diagram.edit.parts.IconConnection2EditPart.VISUAL_ID));
 		return result;
 	}
 

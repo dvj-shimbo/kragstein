@@ -187,10 +187,6 @@ public class KragsteinMethodVisualIDRegistry {
 					.isSuperTypeOf(domainElement.eClass())) {
 				return KragsteinMethod.diagram.edit.parts.LoopArrowEditPart.VISUAL_ID;
 			}
-			if (KragsteinMethod.KragsteinMethodPackage.eINSTANCE
-					.getEmptyConnector().isSuperTypeOf(domainElement.eClass())) {
-				return KragsteinMethod.diagram.edit.parts.EmptyConnectorEditPart.VISUAL_ID;
-			}
 			if (KragsteinMethod.KragsteinMethodPackage.eINSTANCE.getEnd()
 					.isSuperTypeOf(domainElement.eClass())) {
 				return KragsteinMethod.diagram.edit.parts.EndEditPart.VISUAL_ID;
@@ -250,10 +246,6 @@ public class KragsteinMethodVisualIDRegistry {
 			if (KragsteinMethod.KragsteinMethodPackage.eINSTANCE.getLoopArrow()
 					.isSuperTypeOf(domainElement.eClass())) {
 				return KragsteinMethod.diagram.edit.parts.LoopArrowEditPart.VISUAL_ID;
-			}
-			if (KragsteinMethod.KragsteinMethodPackage.eINSTANCE
-					.getEmptyConnector().isSuperTypeOf(domainElement.eClass())) {
-				return KragsteinMethod.diagram.edit.parts.EmptyConnectorEditPart.VISUAL_ID;
 			}
 			if (KragsteinMethod.KragsteinMethodPackage.eINSTANCE.getEnd()
 					.isSuperTypeOf(domainElement.eClass())) {
@@ -320,10 +312,6 @@ public class KragsteinMethodVisualIDRegistry {
 			if (KragsteinMethod.KragsteinMethodPackage.eINSTANCE.getLoopArrow()
 					.isSuperTypeOf(domainElement.eClass())) {
 				return KragsteinMethod.diagram.edit.parts.LoopArrowEditPart.VISUAL_ID;
-			}
-			if (KragsteinMethod.KragsteinMethodPackage.eINSTANCE
-					.getEmptyConnector().isSuperTypeOf(domainElement.eClass())) {
-				return KragsteinMethod.diagram.edit.parts.EmptyConnectorEditPart.VISUAL_ID;
 			}
 			if (KragsteinMethod.KragsteinMethodPackage.eINSTANCE.getEnd()
 					.isSuperTypeOf(domainElement.eClass())) {
@@ -454,9 +442,6 @@ public class KragsteinMethodVisualIDRegistry {
 			if (KragsteinMethod.diagram.edit.parts.LoopArrowEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (KragsteinMethod.diagram.edit.parts.EmptyConnectorEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
 			if (KragsteinMethod.diagram.edit.parts.EndEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
@@ -501,9 +486,6 @@ public class KragsteinMethodVisualIDRegistry {
 				return true;
 			}
 			if (KragsteinMethod.diagram.edit.parts.LoopArrowEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (KragsteinMethod.diagram.edit.parts.EmptyConnectorEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			if (KragsteinMethod.diagram.edit.parts.EndEditPart.VISUAL_ID == nodeVisualID) {
@@ -557,9 +539,6 @@ public class KragsteinMethodVisualIDRegistry {
 			if (KragsteinMethod.diagram.edit.parts.LoopArrowEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (KragsteinMethod.diagram.edit.parts.EmptyConnectorEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
 			if (KragsteinMethod.diagram.edit.parts.EndEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
@@ -586,10 +565,6 @@ public class KragsteinMethodVisualIDRegistry {
 		if (KragsteinMethod.KragsteinMethodPackage.eINSTANCE
 				.getIconConnection().isSuperTypeOf(domainElement.eClass())) {
 			return KragsteinMethod.diagram.edit.parts.IconConnectionEditPart.VISUAL_ID;
-		}
-		if (KragsteinMethod.KragsteinMethodPackage.eINSTANCE
-				.getIconConnection().isSuperTypeOf(domainElement.eClass())) {
-			return KragsteinMethod.diagram.edit.parts.IconConnection2EditPart.VISUAL_ID;
 		}
 		if (KragsteinMethod.KragsteinMethodPackage.eINSTANCE
 				.getCaseConnection().isSuperTypeOf(domainElement.eClass())) {
@@ -662,7 +637,6 @@ public class KragsteinMethodVisualIDRegistry {
 		case KragsteinMethod.diagram.edit.parts.OutputEditPart.VISUAL_ID:
 		case KragsteinMethod.diagram.edit.parts.InputEditPart.VISUAL_ID:
 		case KragsteinMethod.diagram.edit.parts.LoopArrowEditPart.VISUAL_ID:
-		case KragsteinMethod.diagram.edit.parts.EmptyConnectorEditPart.VISUAL_ID:
 		case KragsteinMethod.diagram.edit.parts.EndEditPart.VISUAL_ID:
 			return true;
 		default:

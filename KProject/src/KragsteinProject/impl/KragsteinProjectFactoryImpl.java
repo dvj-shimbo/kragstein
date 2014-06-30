@@ -60,6 +60,7 @@ public class KragsteinProjectFactoryImpl extends EFactoryImpl implements Kragste
 		switch (eClass.getClassifierID()) {
 			case KragsteinProjectPackage.PROJECT: return createProject();
 			case KragsteinProjectPackage.PACKAGE: return createPackage();
+			case KragsteinProjectPackage.CLASS: return createClass();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -83,6 +84,16 @@ public class KragsteinProjectFactoryImpl extends EFactoryImpl implements Kragste
 	public KragsteinProject.Package createPackage() {
 		PackageImpl package_ = new PackageImpl();
 		return package_;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public KragsteinProject.Class createClass() {
+		ClassImpl class_ = new ClassImpl();
+		return class_;
 	}
 
 	/**

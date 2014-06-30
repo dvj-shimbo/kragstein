@@ -85,11 +85,6 @@ public class RouteRouteIconCompartmentItemSemanticEditPolicy
 			return getGEFWrapper(new KragsteinMethod.diagram.edit.commands.LoopArrowCreateCommand(
 					req));
 		}
-		if (KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.EmptyConnector_3015 == req
-				.getElementType()) {
-			return getGEFWrapper(new KragsteinMethod.diagram.edit.commands.EmptyConnectorCreateCommand(
-					req));
-		}
 		if (KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.End_3016 == req
 				.getElementType()) {
 			return getGEFWrapper(new KragsteinMethod.diagram.edit.commands.EndCreateCommand(

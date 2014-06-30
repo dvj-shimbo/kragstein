@@ -14,6 +14,16 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute project.ecore#//Package/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute project.ecore#//Package/path"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference project.ecore#//Package/package"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference project.ecore#//Package/class"/>
+    </genClasses>
+    <genClasses ecoreClass="project.ecore#//Class">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute project.ecore#//Class/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute project.ecore#//Class/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute project.ecore#//Class/visibility"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute project.ecore#//Class/isSingletone"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute project.ecore#//Class/isInterface"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute project.ecore#//Class/superClass"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute project.ecore#//Class/supplierElement"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

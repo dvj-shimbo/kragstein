@@ -79,7 +79,6 @@ public class KragsteinMethodFactoryImpl extends EFactoryImpl implements Kragstei
 			case KragsteinMethodPackage.OUTPUT: return createOutput();
 			case KragsteinMethodPackage.INPUT: return createInput();
 			case KragsteinMethodPackage.LOOP_ARROW: return createLoopArrow();
-			case KragsteinMethodPackage.EMPTY_CONNECTOR: return createEmptyConnector();
 			case KragsteinMethodPackage.END: return createEnd();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -314,16 +313,6 @@ public class KragsteinMethodFactoryImpl extends EFactoryImpl implements Kragstei
 	public LoopArrow createLoopArrow() {
 		LoopArrowImpl loopArrow = new LoopArrowImpl();
 		return loopArrow;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EmptyConnector createEmptyConnector() {
-		EmptyConnectorImpl emptyConnector = new EmptyConnectorImpl();
-		return emptyConnector;
 	}
 
 	/**

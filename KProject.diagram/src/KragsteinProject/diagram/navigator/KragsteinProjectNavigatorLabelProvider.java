@@ -95,6 +95,12 @@ public class KragsteinProjectNavigatorLabelProvider extends LabelProvider
 		case KragsteinProject.diagram.edit.parts.PackageEditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?TopLevelNode?KragsteinProject.ecore?Package", KragsteinProject.diagram.providers.KragsteinProjectElementTypes.Package_2001); //$NON-NLS-1$
+		case KragsteinProject.diagram.edit.parts.Package2EditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?KragsteinProject.ecore?Package", KragsteinProject.diagram.providers.KragsteinProjectElementTypes.Package_3001); //$NON-NLS-1$
+		case KragsteinProject.diagram.edit.parts.ClassEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?KragsteinProject.ecore?Class", KragsteinProject.diagram.providers.KragsteinProjectElementTypes.Class_3002); //$NON-NLS-1$
 		}
 		return getImage("Navigator?UnknownElement", null); //$NON-NLS-1$
 	}
@@ -163,6 +169,10 @@ public class KragsteinProjectNavigatorLabelProvider extends LabelProvider
 			return getProject_1000Text(view);
 		case KragsteinProject.diagram.edit.parts.PackageEditPart.VISUAL_ID:
 			return getPackage_2001Text(view);
+		case KragsteinProject.diagram.edit.parts.Package2EditPart.VISUAL_ID:
+			return getPackage_3001Text(view);
+		case KragsteinProject.diagram.edit.parts.ClassEditPart.VISUAL_ID:
+			return getClass_3002Text(view);
 		}
 		return getUnknownElementText(view);
 	}
@@ -202,6 +212,50 @@ public class KragsteinProjectNavigatorLabelProvider extends LabelProvider
 			KragsteinProject.diagram.part.KragsteinProjectDiagramEditorPlugin
 					.getInstance().logError(
 							"Parser was not found for label " + 5001); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getPackage_3001Text(View view) {
+		IParser parser = KragsteinProject.diagram.providers.KragsteinProjectParserProvider
+				.getParser(
+						KragsteinProject.diagram.providers.KragsteinProjectElementTypes.Package_3001,
+						view.getElement() != null ? view.getElement() : view,
+						KragsteinProject.diagram.part.KragsteinProjectVisualIDRegistry
+								.getType(KragsteinProject.diagram.edit.parts.PackageName2EditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			KragsteinProject.diagram.part.KragsteinProjectDiagramEditorPlugin
+					.getInstance().logError(
+							"Parser was not found for label " + 5002); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getClass_3002Text(View view) {
+		IParser parser = KragsteinProject.diagram.providers.KragsteinProjectParserProvider
+				.getParser(
+						KragsteinProject.diagram.providers.KragsteinProjectElementTypes.Class_3002,
+						view.getElement() != null ? view.getElement() : view,
+						KragsteinProject.diagram.part.KragsteinProjectVisualIDRegistry
+								.getType(KragsteinProject.diagram.edit.parts.ClassNameEditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			KragsteinProject.diagram.part.KragsteinProjectDiagramEditorPlugin
+					.getInstance().logError(
+							"Parser was not found for label " + 5003); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}

@@ -35,6 +35,13 @@ public class KragsteinProjectPackageImpl extends EPackageImpl implements Kragste
 	private EClass packageEClass = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass classEClass = null;
+
+	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
@@ -172,6 +179,87 @@ public class KragsteinProjectPackageImpl extends EPackageImpl implements Kragste
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getPackage_Class() {
+		return (EReference)packageEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getClass_() {
+		return classEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getClass_Name() {
+		return (EAttribute)classEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getClass_Type() {
+		return (EAttribute)classEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getClass_Visibility() {
+		return (EAttribute)classEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getClass_IsSingletone() {
+		return (EAttribute)classEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getClass_IsInterface() {
+		return (EAttribute)classEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getClass_SuperClass() {
+		return (EAttribute)classEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getClass_SupplierElement() {
+		return (EAttribute)classEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public KragsteinProjectFactory getKragsteinProjectFactory() {
 		return (KragsteinProjectFactory)getEFactoryInstance();
 	}
@@ -204,6 +292,16 @@ public class KragsteinProjectPackageImpl extends EPackageImpl implements Kragste
 		createEAttribute(packageEClass, PACKAGE__NAME);
 		createEAttribute(packageEClass, PACKAGE__PATH);
 		createEReference(packageEClass, PACKAGE__PACKAGE);
+		createEReference(packageEClass, PACKAGE__CLASS);
+
+		classEClass = createEClass(CLASS);
+		createEAttribute(classEClass, CLASS__NAME);
+		createEAttribute(classEClass, CLASS__TYPE);
+		createEAttribute(classEClass, CLASS__VISIBILITY);
+		createEAttribute(classEClass, CLASS__IS_SINGLETONE);
+		createEAttribute(classEClass, CLASS__IS_INTERFACE);
+		createEAttribute(classEClass, CLASS__SUPER_CLASS);
+		createEAttribute(classEClass, CLASS__SUPPLIER_ELEMENT);
 	}
 
 	/**
@@ -245,6 +343,16 @@ public class KragsteinProjectPackageImpl extends EPackageImpl implements Kragste
 		initEAttribute(getPackage_Name(), ecorePackage.getEString(), "name", null, 0, 1, KragsteinProject.Package.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPackage_Path(), ecorePackage.getEString(), "path", null, 0, 1, KragsteinProject.Package.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPackage_Package(), this.getPackage(), null, "package", null, 0, -1, KragsteinProject.Package.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPackage_Class(), this.getClass_(), null, "class", null, 0, -1, KragsteinProject.Package.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(classEClass, KragsteinProject.Class.class, "Class", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getClass_Name(), ecorePackage.getEString(), "name", null, 0, 1, KragsteinProject.Class.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getClass_Type(), ecorePackage.getEString(), "type", null, 0, 1, KragsteinProject.Class.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getClass_Visibility(), ecorePackage.getEString(), "visibility", null, 0, 1, KragsteinProject.Class.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getClass_IsSingletone(), ecorePackage.getEBoolean(), "isSingletone", null, 0, 1, KragsteinProject.Class.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getClass_IsInterface(), ecorePackage.getEBoolean(), "isInterface", null, 0, 1, KragsteinProject.Class.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getClass_SuperClass(), ecorePackage.getEString(), "superClass", null, 0, 1, KragsteinProject.Class.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getClass_SupplierElement(), ecorePackage.getEString(), "supplierElement", null, 0, 1, KragsteinProject.Class.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);
@@ -254,6 +362,8 @@ public class KragsteinProjectPackageImpl extends EPackageImpl implements Kragste
 		createGmfAnnotations();
 		// gmf.node
 		createGmf_1Annotations();
+		// gmf.compartment
+		createGmf_2Annotations();
 	}
 
 	/**
@@ -283,9 +393,36 @@ public class KragsteinProjectPackageImpl extends EPackageImpl implements Kragste
 		  (packageEClass, 
 		   source, 
 		   new String[] {
-			 "color", "255,0,0",
+			 "color", "230,230,230",
 			 "label", "name",
 			 "label.icon", "true"
+		   });	
+		addAnnotation
+		  (classEClass, 
+		   source, 
+		   new String[] {
+			 "label", "name",
+			 "label.icon", "true"
+		   });
+	}
+
+	/**
+	 * Initializes the annotations for <b>gmf.compartment</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createGmf_2Annotations() {
+		String source = "gmf.compartment";	
+		addAnnotation
+		  (getPackage_Package(), 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (getPackage_Class(), 
+		   source, 
+		   new String[] {
 		   });
 	}
 

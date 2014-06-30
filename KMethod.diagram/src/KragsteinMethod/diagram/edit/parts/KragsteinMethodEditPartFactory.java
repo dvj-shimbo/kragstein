@@ -111,10 +111,6 @@ public class KragsteinMethodEditPartFactory implements EditPartFactory {
 				return new KragsteinMethod.diagram.edit.parts.LoopArrowEditPart(
 						view);
 
-			case KragsteinMethod.diagram.edit.parts.EmptyConnectorEditPart.VISUAL_ID:
-				return new KragsteinMethod.diagram.edit.parts.EmptyConnectorEditPart(
-						view);
-
 			case KragsteinMethod.diagram.edit.parts.EndEditPart.VISUAL_ID:
 				return new KragsteinMethod.diagram.edit.parts.EndEditPart(view);
 
@@ -156,10 +152,6 @@ public class KragsteinMethodEditPartFactory implements EditPartFactory {
 
 			case KragsteinMethod.diagram.edit.parts.IconConnectionEditPart.VISUAL_ID:
 				return new KragsteinMethod.diagram.edit.parts.IconConnectionEditPart(
-						view);
-
-			case KragsteinMethod.diagram.edit.parts.IconConnection2EditPart.VISUAL_ID:
-				return new KragsteinMethod.diagram.edit.parts.IconConnection2EditPart(
 						view);
 
 			case KragsteinMethod.diagram.edit.parts.CaseConnectionEditPart.VISUAL_ID:

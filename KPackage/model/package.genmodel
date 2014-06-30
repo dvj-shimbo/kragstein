@@ -6,7 +6,6 @@
   <foreignModel>package.ecore</foreignModel>
   <genPackages prefix="KragsteinPackage" disposableProviderFactory="true" ecorePackage="package.ecore#/">
     <genClasses ecoreClass="package.ecore#//Package">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute package.ecore#//Package/lang"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute package.ecore#//Package/path"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference package.ecore#//Package/unit"/>
     </genClasses>
@@ -63,7 +62,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute package.ecore#//Method/isConst"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute package.ecore#//Method/isVirtual"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute package.ecore#//Method/isStatic"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference package.ecore#//Method/unit"/>
     </genClasses>
     <genClasses image="false" ecoreClass="package.ecore#//Unit">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference package.ecore#//Unit/sourceLink"/>

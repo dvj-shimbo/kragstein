@@ -31,6 +31,8 @@ import org.eclipse.gmf.runtime.notation.MeasurementUnit;
 import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.NotationFactory;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
+import org.eclipse.gmf.runtime.notation.Shape;
+import org.eclipse.gmf.runtime.notation.TitleStyle;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.jface.preference.PreferenceConverter;
@@ -133,6 +135,8 @@ public class KragsteinProjectViewProvider extends AbstractProvider implements
 				}
 				switch (visualID) {
 				case KragsteinProject.diagram.edit.parts.PackageEditPart.VISUAL_ID:
+				case KragsteinProject.diagram.edit.parts.ClassEditPart.VISUAL_ID:
+				case KragsteinProject.diagram.edit.parts.Package2EditPart.VISUAL_ID:
 					if (domainElement == null
 							|| visualID != KragsteinProject.diagram.part.KragsteinProjectVisualIDRegistry
 									.getNodeVisualID(op.getContainerView(),
@@ -145,7 +149,9 @@ public class KragsteinProjectViewProvider extends AbstractProvider implements
 				}
 			}
 		}
-		return KragsteinProject.diagram.edit.parts.PackageEditPart.VISUAL_ID == visualID;
+		return KragsteinProject.diagram.edit.parts.PackageEditPart.VISUAL_ID == visualID
+				|| KragsteinProject.diagram.edit.parts.Package2EditPart.VISUAL_ID == visualID
+				|| KragsteinProject.diagram.edit.parts.ClassEditPart.VISUAL_ID == visualID;
 	}
 
 	/**
@@ -208,6 +214,12 @@ public class KragsteinProjectViewProvider extends AbstractProvider implements
 		case KragsteinProject.diagram.edit.parts.PackageEditPart.VISUAL_ID:
 			return createPackage_2001(domainElement, containerView, index,
 					persisted, preferencesHint);
+		case KragsteinProject.diagram.edit.parts.Package2EditPart.VISUAL_ID:
+			return createPackage_3001(domainElement, containerView, index,
+					persisted, preferencesHint);
+		case KragsteinProject.diagram.edit.parts.ClassEditPart.VISUAL_ID:
+			return createClass_3002(domainElement, containerView, index,
+					persisted, preferencesHint);
 		}
 		// can't happen, provided #provides(CreateNodeViewOperation) is correct
 		return null;
@@ -238,6 +250,8 @@ public class KragsteinProjectViewProvider extends AbstractProvider implements
 				.add(NotationFactory.eINSTANCE.createDescriptionStyle());
 		node.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
 		node.getStyles().add(NotationFactory.eINSTANCE.createLineStyle());
+		node.getStyles().add(
+				NotationFactory.eINSTANCE.createHintedDiagramLinkStyle());
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
 		node.setType(KragsteinProject.diagram.part.KragsteinProjectVisualIDRegistry
 				.getType(KragsteinProject.diagram.edit.parts.PackageEditPart.VISUAL_ID));
@@ -271,6 +285,119 @@ public class KragsteinProjectViewProvider extends AbstractProvider implements
 				node,
 				KragsteinProject.diagram.part.KragsteinProjectVisualIDRegistry
 						.getType(KragsteinProject.diagram.edit.parts.PackageNameEditPart.VISUAL_ID));
+		createCompartment(
+				node,
+				KragsteinProject.diagram.part.KragsteinProjectVisualIDRegistry
+						.getType(KragsteinProject.diagram.edit.parts.PackagePackagePackageCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				KragsteinProject.diagram.part.KragsteinProjectVisualIDRegistry
+						.getType(KragsteinProject.diagram.edit.parts.PackagePackageClassCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		return node;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Node createPackage_3001(EObject domainElement, View containerView,
+			int index, boolean persisted, PreferencesHint preferencesHint) {
+		Node node = NotationFactory.eINSTANCE.createNode();
+		node.getStyles()
+				.add(NotationFactory.eINSTANCE.createDescriptionStyle());
+		node.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
+		node.getStyles().add(NotationFactory.eINSTANCE.createLineStyle());
+		node.getStyles().add(
+				NotationFactory.eINSTANCE.createHintedDiagramLinkStyle());
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(KragsteinProject.diagram.part.KragsteinProjectVisualIDRegistry
+				.getType(KragsteinProject.diagram.edit.parts.Package2EditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		Node label5002 = createLabel(
+				node,
+				KragsteinProject.diagram.part.KragsteinProjectVisualIDRegistry
+						.getType(KragsteinProject.diagram.edit.parts.PackageName2EditPart.VISUAL_ID));
+		createCompartment(
+				node,
+				KragsteinProject.diagram.part.KragsteinProjectVisualIDRegistry
+						.getType(KragsteinProject.diagram.edit.parts.PackagePackagePackageCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		createCompartment(
+				node,
+				KragsteinProject.diagram.part.KragsteinProjectVisualIDRegistry
+						.getType(KragsteinProject.diagram.edit.parts.PackagePackageClassCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
+		return node;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Node createClass_3002(EObject domainElement, View containerView,
+			int index, boolean persisted, PreferencesHint preferencesHint) {
+		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(KragsteinProject.diagram.part.KragsteinProjectVisualIDRegistry
+				.getType(KragsteinProject.diagram.edit.parts.ClassEditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
+				FigureUtilities.RGBToInteger(fillRGB));
+		Node label5003 = createLabel(
+				node,
+				KragsteinProject.diagram.part.KragsteinProjectVisualIDRegistry
+						.getType(KragsteinProject.diagram.edit.parts.ClassNameEditPart.VISUAL_ID));
 		return node;
 	}
 
@@ -296,6 +423,38 @@ public class KragsteinProjectViewProvider extends AbstractProvider implements
 	 */
 	private Node createLabel(View owner, String hint) {
 		DecorationNode rv = NotationFactory.eINSTANCE.createDecorationNode();
+		rv.setType(hint);
+		ViewUtil.insertChildView(owner, rv, ViewUtil.APPEND, true);
+		return rv;
+	}
+
+	/**
+	 * @generated
+	 */
+	private Node createCompartment(View owner, String hint,
+			boolean canCollapse, boolean hasTitle, boolean canSort,
+			boolean canFilter) {
+		//SemanticListCompartment rv = NotationFactory.eINSTANCE.createSemanticListCompartment();
+		//rv.setShowTitle(showTitle);
+		//rv.setCollapsed(isCollapsed);
+		Node rv;
+		if (canCollapse) {
+			rv = NotationFactory.eINSTANCE.createBasicCompartment();
+		} else {
+			rv = NotationFactory.eINSTANCE.createDecorationNode();
+		}
+		if (hasTitle) {
+			TitleStyle ts = NotationFactory.eINSTANCE.createTitleStyle();
+			ts.setShowTitle(true);
+			rv.getStyles().add(ts);
+		}
+		if (canSort) {
+			rv.getStyles().add(NotationFactory.eINSTANCE.createSortingStyle());
+		}
+		if (canFilter) {
+			rv.getStyles()
+					.add(NotationFactory.eINSTANCE.createFilteringStyle());
+		}
 		rv.setType(hint);
 		ViewUtil.insertChildView(owner, rv, ViewUtil.APPEND, true);
 		return rv;

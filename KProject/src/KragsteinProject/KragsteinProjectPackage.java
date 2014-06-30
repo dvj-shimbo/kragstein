@@ -139,13 +139,104 @@ public interface KragsteinProjectPackage extends EPackage {
 	int PACKAGE__PACKAGE = 2;
 
 	/**
+	 * The feature id for the '<em><b>Class</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PACKAGE__CLASS = 3;
+
+	/**
 	 * The number of structural features of the '<em>Package</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PACKAGE_FEATURE_COUNT = 3;
+	int PACKAGE_FEATURE_COUNT = 4;
+
+	/**
+	 * The meta object id for the '{@link KragsteinProject.impl.ClassImpl <em>Class</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see KragsteinProject.impl.ClassImpl
+	 * @see KragsteinProject.impl.KragsteinProjectPackageImpl#getClass_()
+	 * @generated
+	 */
+	int CLASS = 2;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASS__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASS__TYPE = 1;
+
+	/**
+	 * The feature id for the '<em><b>Visibility</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASS__VISIBILITY = 2;
+
+	/**
+	 * The feature id for the '<em><b>Is Singletone</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASS__IS_SINGLETONE = 3;
+
+	/**
+	 * The feature id for the '<em><b>Is Interface</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASS__IS_INTERFACE = 4;
+
+	/**
+	 * The feature id for the '<em><b>Super Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASS__SUPER_CLASS = 5;
+
+	/**
+	 * The feature id for the '<em><b>Supplier Element</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASS__SUPPLIER_ELEMENT = 6;
+
+	/**
+	 * The number of structural features of the '<em>Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASS_FEATURE_COUNT = 7;
 
 
 	/**
@@ -233,6 +324,104 @@ public interface KragsteinProjectPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getPackage_Package();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link KragsteinProject.Package#getClass_ <em>Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Class</em>'.
+	 * @see KragsteinProject.Package#getClass_()
+	 * @see #getPackage()
+	 * @generated
+	 */
+	EReference getPackage_Class();
+
+	/**
+	 * Returns the meta object for class '{@link KragsteinProject.Class <em>Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Class</em>'.
+	 * @see KragsteinProject.Class
+	 * @generated
+	 */
+	EClass getClass_();
+
+	/**
+	 * Returns the meta object for the attribute '{@link KragsteinProject.Class#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see KragsteinProject.Class#getName()
+	 * @see #getClass_()
+	 * @generated
+	 */
+	EAttribute getClass_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link KragsteinProject.Class#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see KragsteinProject.Class#getType()
+	 * @see #getClass_()
+	 * @generated
+	 */
+	EAttribute getClass_Type();
+
+	/**
+	 * Returns the meta object for the attribute '{@link KragsteinProject.Class#getVisibility <em>Visibility</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Visibility</em>'.
+	 * @see KragsteinProject.Class#getVisibility()
+	 * @see #getClass_()
+	 * @generated
+	 */
+	EAttribute getClass_Visibility();
+
+	/**
+	 * Returns the meta object for the attribute '{@link KragsteinProject.Class#isIsSingletone <em>Is Singletone</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Is Singletone</em>'.
+	 * @see KragsteinProject.Class#isIsSingletone()
+	 * @see #getClass_()
+	 * @generated
+	 */
+	EAttribute getClass_IsSingletone();
+
+	/**
+	 * Returns the meta object for the attribute '{@link KragsteinProject.Class#isIsInterface <em>Is Interface</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Is Interface</em>'.
+	 * @see KragsteinProject.Class#isIsInterface()
+	 * @see #getClass_()
+	 * @generated
+	 */
+	EAttribute getClass_IsInterface();
+
+	/**
+	 * Returns the meta object for the attribute '{@link KragsteinProject.Class#getSuperClass <em>Super Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Super Class</em>'.
+	 * @see KragsteinProject.Class#getSuperClass()
+	 * @see #getClass_()
+	 * @generated
+	 */
+	EAttribute getClass_SuperClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link KragsteinProject.Class#getSupplierElement <em>Supplier Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Supplier Element</em>'.
+	 * @see KragsteinProject.Class#getSupplierElement()
+	 * @see #getClass_()
+	 * @generated
+	 */
+	EAttribute getClass_SupplierElement();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -323,6 +512,80 @@ public interface KragsteinProjectPackage extends EPackage {
 		 * @generated
 		 */
 		EReference PACKAGE__PACKAGE = eINSTANCE.getPackage_Package();
+
+		/**
+		 * The meta object literal for the '<em><b>Class</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PACKAGE__CLASS = eINSTANCE.getPackage_Class();
+
+		/**
+		 * The meta object literal for the '{@link KragsteinProject.impl.ClassImpl <em>Class</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see KragsteinProject.impl.ClassImpl
+		 * @see KragsteinProject.impl.KragsteinProjectPackageImpl#getClass_()
+		 * @generated
+		 */
+		EClass CLASS = eINSTANCE.getClass_();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CLASS__NAME = eINSTANCE.getClass_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CLASS__TYPE = eINSTANCE.getClass_Type();
+
+		/**
+		 * The meta object literal for the '<em><b>Visibility</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CLASS__VISIBILITY = eINSTANCE.getClass_Visibility();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Singletone</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CLASS__IS_SINGLETONE = eINSTANCE.getClass_IsSingletone();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Interface</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CLASS__IS_INTERFACE = eINSTANCE.getClass_IsInterface();
+
+		/**
+		 * The meta object literal for the '<em><b>Super Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CLASS__SUPER_CLASS = eINSTANCE.getClass_SuperClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Supplier Element</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CLASS__SUPPLIER_ELEMENT = eINSTANCE.getClass_SupplierElement();
 
 	}
 

@@ -21,6 +21,10 @@ public interface ChoiceValidator {
 	boolean validateValue(String value);
 	boolean validateCase(EList<Case> value);
 
+	boolean validateFirstCaseName(String value);
+
+	boolean validateFirstCaseValue(String value);
+
 	boolean validateDefaultCaseValue(String value);
 
 	boolean validateChoice(EList<Case> value);

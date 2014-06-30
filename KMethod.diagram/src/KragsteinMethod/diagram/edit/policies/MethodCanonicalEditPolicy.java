@@ -426,14 +426,6 @@ public class MethodCanonicalEditPolicy extends CanonicalEditPolicy {
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
 		}
-		case KragsteinMethod.diagram.edit.parts.EmptyConnectorEditPart.VISUAL_ID: {
-			if (!domain2NotationMap.containsKey(view.getElement())) {
-				result.addAll(KragsteinMethod.diagram.part.KragsteinMethodDiagramUpdater
-						.getEmptyConnector_3015ContainedLinks(view));
-			}
-			domain2NotationMap.putView(view.getElement(), view);
-			break;
-		}
 		case KragsteinMethod.diagram.edit.parts.EndEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(KragsteinMethod.diagram.part.KragsteinMethodDiagramUpdater
@@ -462,14 +454,6 @@ public class MethodCanonicalEditPolicy extends CanonicalEditPolicy {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(KragsteinMethod.diagram.part.KragsteinMethodDiagramUpdater
 						.getIconConnection_4003ContainedLinks(view));
-			}
-			domain2NotationMap.putView(view.getElement(), view);
-			break;
-		}
-		case KragsteinMethod.diagram.edit.parts.IconConnection2EditPart.VISUAL_ID: {
-			if (!domain2NotationMap.containsKey(view.getElement())) {
-				result.addAll(KragsteinMethod.diagram.part.KragsteinMethodDiagramUpdater
-						.getIconConnection_4004ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;

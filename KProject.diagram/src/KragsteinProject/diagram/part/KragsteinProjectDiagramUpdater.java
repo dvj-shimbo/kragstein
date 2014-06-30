@@ -33,6 +33,14 @@ public class KragsteinProjectDiagramUpdater {
 				.getVisualID(view)) {
 		case KragsteinProject.diagram.edit.parts.ProjectEditPart.VISUAL_ID:
 			return getProject_1000SemanticChildren(view);
+		case KragsteinProject.diagram.edit.parts.PackagePackagePackageCompartmentEditPart.VISUAL_ID:
+			return getPackagePackagePackageCompartment_7001SemanticChildren(view);
+		case KragsteinProject.diagram.edit.parts.PackagePackageClassCompartmentEditPart.VISUAL_ID:
+			return getPackagePackageClassCompartment_7003SemanticChildren(view);
+		case KragsteinProject.diagram.edit.parts.PackagePackagePackageCompartment2EditPart.VISUAL_ID:
+			return getPackagePackagePackageCompartment_7002SemanticChildren(view);
+		case KragsteinProject.diagram.edit.parts.PackagePackageClassCompartment2EditPart.VISUAL_ID:
+			return getPackagePackageClassCompartment_7004SemanticChildren(view);
 		}
 		return Collections.emptyList();
 	}
@@ -66,6 +74,124 @@ public class KragsteinProjectDiagramUpdater {
 	/**
 	 * @generated
 	 */
+	public static List<KragsteinProject.diagram.part.KragsteinProjectNodeDescriptor> getPackagePackagePackageCompartment_7001SemanticChildren(
+			View view) {
+		if (false == view.eContainer() instanceof View) {
+			return Collections.emptyList();
+		}
+		View containerView = (View) view.eContainer();
+		if (!containerView.isSetElement()) {
+			return Collections.emptyList();
+		}
+		KragsteinProject.Package modelElement = (KragsteinProject.Package) containerView
+				.getElement();
+		LinkedList<KragsteinProject.diagram.part.KragsteinProjectNodeDescriptor> result = new LinkedList<KragsteinProject.diagram.part.KragsteinProjectNodeDescriptor>();
+		for (Iterator<?> it = modelElement.getPackage().iterator(); it
+				.hasNext();) {
+			KragsteinProject.Package childElement = (KragsteinProject.Package) it
+					.next();
+			int visualID = KragsteinProject.diagram.part.KragsteinProjectVisualIDRegistry
+					.getNodeVisualID(view, childElement);
+			if (visualID == KragsteinProject.diagram.edit.parts.Package2EditPart.VISUAL_ID) {
+				result.add(new KragsteinProject.diagram.part.KragsteinProjectNodeDescriptor(
+						childElement, visualID));
+				continue;
+			}
+		}
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<KragsteinProject.diagram.part.KragsteinProjectNodeDescriptor> getPackagePackageClassCompartment_7003SemanticChildren(
+			View view) {
+		if (false == view.eContainer() instanceof View) {
+			return Collections.emptyList();
+		}
+		View containerView = (View) view.eContainer();
+		if (!containerView.isSetElement()) {
+			return Collections.emptyList();
+		}
+		KragsteinProject.Package modelElement = (KragsteinProject.Package) containerView
+				.getElement();
+		LinkedList<KragsteinProject.diagram.part.KragsteinProjectNodeDescriptor> result = new LinkedList<KragsteinProject.diagram.part.KragsteinProjectNodeDescriptor>();
+		for (Iterator<?> it = modelElement.getClass_().iterator(); it.hasNext();) {
+			KragsteinProject.Class childElement = (KragsteinProject.Class) it
+					.next();
+			int visualID = KragsteinProject.diagram.part.KragsteinProjectVisualIDRegistry
+					.getNodeVisualID(view, childElement);
+			if (visualID == KragsteinProject.diagram.edit.parts.ClassEditPart.VISUAL_ID) {
+				result.add(new KragsteinProject.diagram.part.KragsteinProjectNodeDescriptor(
+						childElement, visualID));
+				continue;
+			}
+		}
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<KragsteinProject.diagram.part.KragsteinProjectNodeDescriptor> getPackagePackagePackageCompartment_7002SemanticChildren(
+			View view) {
+		if (false == view.eContainer() instanceof View) {
+			return Collections.emptyList();
+		}
+		View containerView = (View) view.eContainer();
+		if (!containerView.isSetElement()) {
+			return Collections.emptyList();
+		}
+		KragsteinProject.Package modelElement = (KragsteinProject.Package) containerView
+				.getElement();
+		LinkedList<KragsteinProject.diagram.part.KragsteinProjectNodeDescriptor> result = new LinkedList<KragsteinProject.diagram.part.KragsteinProjectNodeDescriptor>();
+		for (Iterator<?> it = modelElement.getPackage().iterator(); it
+				.hasNext();) {
+			KragsteinProject.Package childElement = (KragsteinProject.Package) it
+					.next();
+			int visualID = KragsteinProject.diagram.part.KragsteinProjectVisualIDRegistry
+					.getNodeVisualID(view, childElement);
+			if (visualID == KragsteinProject.diagram.edit.parts.Package2EditPart.VISUAL_ID) {
+				result.add(new KragsteinProject.diagram.part.KragsteinProjectNodeDescriptor(
+						childElement, visualID));
+				continue;
+			}
+		}
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<KragsteinProject.diagram.part.KragsteinProjectNodeDescriptor> getPackagePackageClassCompartment_7004SemanticChildren(
+			View view) {
+		if (false == view.eContainer() instanceof View) {
+			return Collections.emptyList();
+		}
+		View containerView = (View) view.eContainer();
+		if (!containerView.isSetElement()) {
+			return Collections.emptyList();
+		}
+		KragsteinProject.Package modelElement = (KragsteinProject.Package) containerView
+				.getElement();
+		LinkedList<KragsteinProject.diagram.part.KragsteinProjectNodeDescriptor> result = new LinkedList<KragsteinProject.diagram.part.KragsteinProjectNodeDescriptor>();
+		for (Iterator<?> it = modelElement.getClass_().iterator(); it.hasNext();) {
+			KragsteinProject.Class childElement = (KragsteinProject.Class) it
+					.next();
+			int visualID = KragsteinProject.diagram.part.KragsteinProjectVisualIDRegistry
+					.getNodeVisualID(view, childElement);
+			if (visualID == KragsteinProject.diagram.edit.parts.ClassEditPart.VISUAL_ID) {
+				result.add(new KragsteinProject.diagram.part.KragsteinProjectNodeDescriptor(
+						childElement, visualID));
+				continue;
+			}
+		}
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
 	public static List<KragsteinProject.diagram.part.KragsteinProjectLinkDescriptor> getContainedLinks(
 			View view) {
 		switch (KragsteinProject.diagram.part.KragsteinProjectVisualIDRegistry
@@ -74,6 +200,10 @@ public class KragsteinProjectDiagramUpdater {
 			return getProject_1000ContainedLinks(view);
 		case KragsteinProject.diagram.edit.parts.PackageEditPart.VISUAL_ID:
 			return getPackage_2001ContainedLinks(view);
+		case KragsteinProject.diagram.edit.parts.Package2EditPart.VISUAL_ID:
+			return getPackage_3001ContainedLinks(view);
+		case KragsteinProject.diagram.edit.parts.ClassEditPart.VISUAL_ID:
+			return getClass_3002ContainedLinks(view);
 		}
 		return Collections.emptyList();
 	}
@@ -87,6 +217,10 @@ public class KragsteinProjectDiagramUpdater {
 				.getVisualID(view)) {
 		case KragsteinProject.diagram.edit.parts.PackageEditPart.VISUAL_ID:
 			return getPackage_2001IncomingLinks(view);
+		case KragsteinProject.diagram.edit.parts.Package2EditPart.VISUAL_ID:
+			return getPackage_3001IncomingLinks(view);
+		case KragsteinProject.diagram.edit.parts.ClassEditPart.VISUAL_ID:
+			return getClass_3002IncomingLinks(view);
 		}
 		return Collections.emptyList();
 	}
@@ -100,6 +234,10 @@ public class KragsteinProjectDiagramUpdater {
 				.getVisualID(view)) {
 		case KragsteinProject.diagram.edit.parts.PackageEditPart.VISUAL_ID:
 			return getPackage_2001OutgoingLinks(view);
+		case KragsteinProject.diagram.edit.parts.Package2EditPart.VISUAL_ID:
+			return getPackage_3001OutgoingLinks(view);
+		case KragsteinProject.diagram.edit.parts.ClassEditPart.VISUAL_ID:
+			return getClass_3002OutgoingLinks(view);
 		}
 		return Collections.emptyList();
 	}
@@ -123,6 +261,22 @@ public class KragsteinProjectDiagramUpdater {
 	/**
 	 * @generated
 	 */
+	public static List<KragsteinProject.diagram.part.KragsteinProjectLinkDescriptor> getPackage_3001ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<KragsteinProject.diagram.part.KragsteinProjectLinkDescriptor> getClass_3002ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
 	public static List<KragsteinProject.diagram.part.KragsteinProjectLinkDescriptor> getPackage_2001IncomingLinks(
 			View view) {
 		return Collections.emptyList();
@@ -131,7 +285,39 @@ public class KragsteinProjectDiagramUpdater {
 	/**
 	 * @generated
 	 */
+	public static List<KragsteinProject.diagram.part.KragsteinProjectLinkDescriptor> getPackage_3001IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<KragsteinProject.diagram.part.KragsteinProjectLinkDescriptor> getClass_3002IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
 	public static List<KragsteinProject.diagram.part.KragsteinProjectLinkDescriptor> getPackage_2001OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<KragsteinProject.diagram.part.KragsteinProjectLinkDescriptor> getPackage_3001OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<KragsteinProject.diagram.part.KragsteinProjectLinkDescriptor> getClass_3002OutgoingLinks(
 			View view) {
 		return Collections.emptyList();
 	}

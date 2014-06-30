@@ -5,15 +5,18 @@ package KragsteinProject.impl;
 import KragsteinProject.KragsteinProjectPackage;
 
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -27,6 +30,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link KragsteinProject.impl.PackageImpl#getName <em>Name</em>}</li>
  *   <li>{@link KragsteinProject.impl.PackageImpl#getPath <em>Path</em>}</li>
  *   <li>{@link KragsteinProject.impl.PackageImpl#getPackage <em>Package</em>}</li>
+ *   <li>{@link KragsteinProject.impl.PackageImpl#getClass_ <em>Class</em>}</li>
  * </ul>
  * </p>
  *
@@ -82,6 +86,16 @@ public class PackageImpl extends EObjectImpl implements KragsteinProject.Package
 	 * @ordered
 	 */
 	protected EList<KragsteinProject.Package> package_;
+
+	/**
+	 * The cached value of the '{@link #getClass_() <em>Class</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getClass_()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<KragsteinProject.Class> class_;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -161,11 +175,25 @@ public class PackageImpl extends EObjectImpl implements KragsteinProject.Package
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<KragsteinProject.Class> getClass_() {
+		if (class_ == null) {
+			class_ = new EObjectContainmentEList<KragsteinProject.Class>(KragsteinProject.Class.class, this, KragsteinProjectPackage.PACKAGE__CLASS);
+		}
+		return class_;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case KragsteinProjectPackage.PACKAGE__PACKAGE:
 				return ((InternalEList<?>)getPackage()).basicRemove(otherEnd, msgs);
+			case KragsteinProjectPackage.PACKAGE__CLASS:
+				return ((InternalEList<?>)getClass_()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -184,6 +212,8 @@ public class PackageImpl extends EObjectImpl implements KragsteinProject.Package
 				return getPath();
 			case KragsteinProjectPackage.PACKAGE__PACKAGE:
 				return getPackage();
+			case KragsteinProjectPackage.PACKAGE__CLASS:
+				return getClass_();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -207,6 +237,10 @@ public class PackageImpl extends EObjectImpl implements KragsteinProject.Package
 				getPackage().clear();
 				getPackage().addAll((Collection<? extends KragsteinProject.Package>)newValue);
 				return;
+			case KragsteinProjectPackage.PACKAGE__CLASS:
+				getClass_().clear();
+				getClass_().addAll((Collection<? extends KragsteinProject.Class>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -228,6 +262,9 @@ public class PackageImpl extends EObjectImpl implements KragsteinProject.Package
 			case KragsteinProjectPackage.PACKAGE__PACKAGE:
 				getPackage().clear();
 				return;
+			case KragsteinProjectPackage.PACKAGE__CLASS:
+				getClass_().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -246,6 +283,8 @@ public class PackageImpl extends EObjectImpl implements KragsteinProject.Package
 				return PATH_EDEFAULT == null ? path != null : !PATH_EDEFAULT.equals(path);
 			case KragsteinProjectPackage.PACKAGE__PACKAGE:
 				return package_ != null && !package_.isEmpty();
+			case KragsteinProjectPackage.PACKAGE__CLASS:
+				return class_ != null && !class_.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

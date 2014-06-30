@@ -28,7 +28,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link KragsteinPackage.impl.PackageImpl#getLang <em>Lang</em>}</li>
  *   <li>{@link KragsteinPackage.impl.PackageImpl#getPath <em>Path</em>}</li>
  *   <li>{@link KragsteinPackage.impl.PackageImpl#getUnit <em>Unit</em>}</li>
  * </ul>
@@ -37,26 +36,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * @generated
  */
 public class PackageImpl extends EObjectImpl implements KragsteinPackage.Package {
-	/**
-	 * The default value of the '{@link #getLang() <em>Lang</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLang()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String LANG_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getLang() <em>Lang</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLang()
-	 * @generated
-	 * @ordered
-	 */
-	protected String lang = LANG_EDEFAULT;
-
 	/**
 	 * The default value of the '{@link #getPath() <em>Path</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -104,27 +83,6 @@ public class PackageImpl extends EObjectImpl implements KragsteinPackage.Package
 	@Override
 	protected EClass eStaticClass() {
 		return KragsteinPackagePackage.Literals.PACKAGE;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getLang() {
-		return lang;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setLang(String newLang) {
-		String oldLang = lang;
-		lang = newLang;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, KragsteinPackagePackage.PACKAGE__LANG, oldLang, lang));
 	}
 
 	/**
@@ -182,8 +140,6 @@ public class PackageImpl extends EObjectImpl implements KragsteinPackage.Package
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case KragsteinPackagePackage.PACKAGE__LANG:
-				return getLang();
 			case KragsteinPackagePackage.PACKAGE__PATH:
 				return getPath();
 			case KragsteinPackagePackage.PACKAGE__UNIT:
@@ -201,9 +157,6 @@ public class PackageImpl extends EObjectImpl implements KragsteinPackage.Package
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case KragsteinPackagePackage.PACKAGE__LANG:
-				setLang((String)newValue);
-				return;
 			case KragsteinPackagePackage.PACKAGE__PATH:
 				setPath((String)newValue);
 				return;
@@ -223,9 +176,6 @@ public class PackageImpl extends EObjectImpl implements KragsteinPackage.Package
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case KragsteinPackagePackage.PACKAGE__LANG:
-				setLang(LANG_EDEFAULT);
-				return;
 			case KragsteinPackagePackage.PACKAGE__PATH:
 				setPath(PATH_EDEFAULT);
 				return;
@@ -244,8 +194,6 @@ public class PackageImpl extends EObjectImpl implements KragsteinPackage.Package
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case KragsteinPackagePackage.PACKAGE__LANG:
-				return LANG_EDEFAULT == null ? lang != null : !LANG_EDEFAULT.equals(lang);
 			case KragsteinPackagePackage.PACKAGE__PATH:
 				return PATH_EDEFAULT == null ? path != null : !PATH_EDEFAULT.equals(path);
 			case KragsteinPackagePackage.PACKAGE__UNIT:
@@ -264,9 +212,7 @@ public class PackageImpl extends EObjectImpl implements KragsteinPackage.Package
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (lang: ");
-		result.append(lang);
-		result.append(", path: ");
+		result.append(" (path: ");
 		result.append(path);
 		result.append(')');
 		return result.toString();

@@ -92,7 +92,6 @@ public class RouteRouteIconCompartmentCanonicalEditPolicy extends
 		case KragsteinMethod.diagram.edit.parts.OutputEditPart.VISUAL_ID:
 		case KragsteinMethod.diagram.edit.parts.InputEditPart.VISUAL_ID:
 		case KragsteinMethod.diagram.edit.parts.LoopArrowEditPart.VISUAL_ID:
-		case KragsteinMethod.diagram.edit.parts.EmptyConnectorEditPart.VISUAL_ID:
 		case KragsteinMethod.diagram.edit.parts.EndEditPart.VISUAL_ID:
 			return true;
 		}

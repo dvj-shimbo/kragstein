@@ -164,10 +164,6 @@ public class KragsteinMethodAdapterFactory extends AdapterFactoryImpl {
 				return createLoopArrowAdapter();
 			}
 			@Override
-			public Adapter caseEmptyConnector(EmptyConnector object) {
-				return createEmptyConnectorAdapter();
-			}
-			@Override
 			public Adapter caseEnd(End object) {
 				return createEndAdapter();
 			}
@@ -524,20 +520,6 @@ public class KragsteinMethodAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createLoopArrowAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link KragsteinMethod.EmptyConnector <em>Empty Connector</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see KragsteinMethod.EmptyConnector
-	 * @generated
-	 */
-	public Adapter createEmptyConnectorAdapter() {
 		return null;
 	}
 

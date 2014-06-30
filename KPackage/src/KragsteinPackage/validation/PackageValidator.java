@@ -17,6 +17,10 @@ import org.eclipse.emf.common.util.EList;
 public interface PackageValidator {
 	boolean validate();
 
+	boolean validateNameA(String value);
+
+	boolean validateName(String value);
+
 	boolean validateLang(String value);
 	boolean validatePath(String value);
 	boolean validateUnit(EList<Unit> value);

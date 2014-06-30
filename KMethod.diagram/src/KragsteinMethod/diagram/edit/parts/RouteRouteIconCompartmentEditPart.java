@@ -131,9 +131,6 @@ public class RouteRouteIconCompartmentEditPart extends ShapeCompartmentEditPart 
 			if (type == KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.LoopArrow_3014) {
 				return this;
 			}
-			if (type == KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.EmptyConnector_3015) {
-				return this;
-			}
 			if (type == KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.End_3016) {
 				return this;
 			}
@@ -146,9 +143,7 @@ public class RouteRouteIconCompartmentEditPart extends ShapeCompartmentEditPart 
 					if (type instanceof IElementType) {
 						IElementType elementType = (IElementType) type;
 						if (elementType
-								.equals(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.IconConnection_4003)
-								|| elementType
-										.equals(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.IconConnection_4004))
+								.equals(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.IconConnection_4003))
 							return super.getTargetEditPart(request);
 					}
 				}

@@ -14,6 +14,8 @@ package KragsteinMethod.validation;
 public interface AdressValidator {
 	boolean validate();
 
+	boolean validateTarget(String value);
+
 	boolean validateName(String value);
 	boolean validateIsLoop(boolean value);
 }

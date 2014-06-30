@@ -1,7 +1,7 @@
 /*
  * 
  */
-package KragsteinMethod.diagram.edit.commands;
+package KragsteinProject.diagram.edit.commands;
 
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.runtime.IAdaptable;
@@ -18,12 +18,12 @@ import org.eclipse.gmf.runtime.notation.View;
 /**
  * @generated
  */
-public class EmptyConnectorCreateCommand extends EditElementCommand {
+public class Package2CreateCommand extends EditElementCommand {
 
 	/**
 	 * @generated
 	 */
-	public EmptyConnectorCreateCommand(CreateElementRequest req) {
+	public Package2CreateCommand(CreateElementRequest req) {
 		super(req.getLabel(), null, req);
 	}
 
@@ -53,11 +53,11 @@ public class EmptyConnectorCreateCommand extends EditElementCommand {
 	 */
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor,
 			IAdaptable info) throws ExecutionException {
-		KragsteinMethod.EmptyConnector newElement = KragsteinMethod.KragsteinMethodFactory.eINSTANCE
-				.createEmptyConnector();
+		KragsteinProject.Package newElement = KragsteinProject.KragsteinProjectFactory.eINSTANCE
+				.createPackage();
 
-		KragsteinMethod.Route owner = (KragsteinMethod.Route) getElementToEdit();
-		owner.getIcon().add(newElement);
+		KragsteinProject.Package owner = (KragsteinProject.Package) getElementToEdit();
+		owner.getPackage().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 
@@ -68,7 +68,7 @@ public class EmptyConnectorCreateCommand extends EditElementCommand {
 	/**
 	 * @generated
 	 */
-	protected void doConfigure(KragsteinMethod.EmptyConnector newElement,
+	protected void doConfigure(KragsteinProject.Package newElement,
 			IProgressMonitor monitor, IAdaptable info)
 			throws ExecutionException {
 		IElementType elementType = ((CreateElementRequest) getRequest())

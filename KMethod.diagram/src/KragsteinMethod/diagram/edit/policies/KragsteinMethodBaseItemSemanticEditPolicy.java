@@ -358,25 +358,11 @@ public class KragsteinMethodBaseItemSemanticEditPolicy extends
 				KragsteinMethod.Icon container, KragsteinMethod.Icon source,
 				KragsteinMethod.Icon target) {
 			if (container != null) {
-				if (container.getSourceIconConnection() != null) {
-					return false;
-				}
-			}
-			return canExistIconConnection_4003(container, null, source, target);
-		}
-
-		/**
-		 * @generated
-		 */
-		public boolean canCreateIconConnection_4004(
-				KragsteinMethod.Icon container, KragsteinMethod.Icon source,
-				KragsteinMethod.Icon target) {
-			if (container != null) {
 				if (container.getTargetIconConnection() != null) {
 					return false;
 				}
 			}
-			return canExistIconConnection_4004(container, null, source, target);
+			return canExistIconConnection_4003(container, null, source, target);
 		}
 
 		/**
@@ -431,16 +417,6 @@ public class KragsteinMethodBaseItemSemanticEditPolicy extends
 		 * @generated
 		 */
 		public boolean canExistIconConnection_4003(
-				KragsteinMethod.Icon container,
-				KragsteinMethod.IconConnection linkInstance,
-				KragsteinMethod.Icon source, KragsteinMethod.Icon target) {
-			return true;
-		}
-
-		/**
-		 * @generated
-		 */
-		public boolean canExistIconConnection_4004(
 				KragsteinMethod.Icon container,
 				KragsteinMethod.IconConnection linkInstance,
 				KragsteinMethod.Icon source, KragsteinMethod.Icon target) {

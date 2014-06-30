@@ -8,9 +8,9 @@ This can be disabled with -vmargs -Dorg.eclipse.emf.examples.generator.validator
 Package KragsteinPackage <KragsteinPackage.ecore>
 
   Class Package
-    Attribute path : EString
     Reference unit : Unit<<0..*>>
     Attribute name : EString
+    Attribute path : EString
 
   Class Relationship
     Reference target : Class
@@ -32,8 +32,8 @@ Package KragsteinPackage <KragsteinPackage.ecore>
   Class Dependency -> Relationship
 
   Class Note -> Unit
-    Attribute value : EString
     Attribute name : EString
+    Attribute text : EString
 
   Class Class -> Unit
     Reference attribute : Attribute<<0..*>>

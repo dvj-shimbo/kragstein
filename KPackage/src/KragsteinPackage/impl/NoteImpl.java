@@ -18,34 +18,14 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link KragsteinPackage.impl.NoteImpl#getValue <em>Value</em>}</li>
  *   <li>{@link KragsteinPackage.impl.NoteImpl#getName <em>Name</em>}</li>
+ *   <li>{@link KragsteinPackage.impl.NoteImpl#getText <em>Text</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
 public class NoteImpl extends UnitImpl implements Note {
-	/**
-	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getValue()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String VALUE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getValue()
-	 * @generated
-	 * @ordered
-	 */
-	protected String value = VALUE_EDEFAULT;
-
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -67,6 +47,26 @@ public class NoteImpl extends UnitImpl implements Note {
 	protected String name = NAME_EDEFAULT;
 
 	/**
+	 * The default value of the '{@link #getText() <em>Text</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getText()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String TEXT_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getText() <em>Text</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getText()
+	 * @generated
+	 * @ordered
+	 */
+	protected String text = TEXT_EDEFAULT;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -83,27 +83,6 @@ public class NoteImpl extends UnitImpl implements Note {
 	@Override
 	protected EClass eStaticClass() {
 		return KragsteinPackagePackage.Literals.NOTE;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getValue() {
-		return value;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setValue(String newValue) {
-		String oldValue = value;
-		value = newValue;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, KragsteinPackagePackage.NOTE__VALUE, oldValue, value));
 	}
 
 	/**
@@ -132,13 +111,34 @@ public class NoteImpl extends UnitImpl implements Note {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getText() {
+		return text;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setText(String newText) {
+		String oldText = text;
+		text = newText;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, KragsteinPackagePackage.NOTE__TEXT, oldText, text));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case KragsteinPackagePackage.NOTE__VALUE:
-				return getValue();
 			case KragsteinPackagePackage.NOTE__NAME:
 				return getName();
+			case KragsteinPackagePackage.NOTE__TEXT:
+				return getText();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -151,11 +151,11 @@ public class NoteImpl extends UnitImpl implements Note {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case KragsteinPackagePackage.NOTE__VALUE:
-				setValue((String)newValue);
-				return;
 			case KragsteinPackagePackage.NOTE__NAME:
 				setName((String)newValue);
+				return;
+			case KragsteinPackagePackage.NOTE__TEXT:
+				setText((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -169,11 +169,11 @@ public class NoteImpl extends UnitImpl implements Note {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case KragsteinPackagePackage.NOTE__VALUE:
-				setValue(VALUE_EDEFAULT);
-				return;
 			case KragsteinPackagePackage.NOTE__NAME:
 				setName(NAME_EDEFAULT);
+				return;
+			case KragsteinPackagePackage.NOTE__TEXT:
+				setText(TEXT_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -187,10 +187,10 @@ public class NoteImpl extends UnitImpl implements Note {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case KragsteinPackagePackage.NOTE__VALUE:
-				return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
 			case KragsteinPackagePackage.NOTE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case KragsteinPackagePackage.NOTE__TEXT:
+				return TEXT_EDEFAULT == null ? text != null : !TEXT_EDEFAULT.equals(text);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -205,10 +205,10 @@ public class NoteImpl extends UnitImpl implements Note {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (value: ");
-		result.append(value);
-		result.append(", name: ");
+		result.append(" (name: ");
 		result.append(name);
+		result.append(", text: ");
+		result.append(text);
 		result.append(')');
 		return result.toString();
 	}

@@ -66,22 +66,13 @@ public interface KragsteinPackagePackage extends EPackage {
 	int PACKAGE = 0;
 
 	/**
-	 * The feature id for the '<em><b>Path</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PACKAGE__PATH = 0;
-
-	/**
 	 * The feature id for the '<em><b>Unit</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PACKAGE__UNIT = 1;
+	int PACKAGE__UNIT = 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -90,7 +81,16 @@ public interface KragsteinPackagePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PACKAGE__NAME = 2;
+	int PACKAGE__NAME = 1;
+
+	/**
+	 * The feature id for the '<em><b>Path</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PACKAGE__PATH = 2;
 
 	/**
 	 * The number of structural features of the '<em>Package</em>' class.
@@ -615,22 +615,22 @@ public interface KragsteinPackagePackage extends EPackage {
 	int NOTE__TARGET_LINK = UNIT__TARGET_LINK;
 
 	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NOTE__VALUE = UNIT_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NOTE__NAME = UNIT_FEATURE_COUNT + 1;
+	int NOTE__NAME = UNIT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Text</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NOTE__TEXT = UNIT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Note</em>' class.
@@ -1195,17 +1195,6 @@ public interface KragsteinPackagePackage extends EPackage {
 	EClass getNote();
 
 	/**
-	 * Returns the meta object for the attribute '{@link KragsteinPackage.Note#getValue <em>Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see KragsteinPackage.Note#getValue()
-	 * @see #getNote()
-	 * @generated
-	 */
-	EAttribute getNote_Value();
-
-	/**
 	 * Returns the meta object for the attribute '{@link KragsteinPackage.Note#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1215,6 +1204,17 @@ public interface KragsteinPackagePackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getNote_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link KragsteinPackage.Note#getText <em>Text</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Text</em>'.
+	 * @see KragsteinPackage.Note#getText()
+	 * @see #getNote()
+	 * @generated
+	 */
+	EAttribute getNote_Text();
 
 	/**
 	 * Returns the meta object for class '{@link KragsteinPackage.Class <em>Class</em>}'.
@@ -1794,20 +1794,20 @@ public interface KragsteinPackagePackage extends EPackage {
 		EClass NOTE = eINSTANCE.getNote();
 
 		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute NOTE__VALUE = eINSTANCE.getNote_Value();
-
-		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute NOTE__NAME = eINSTANCE.getNote_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Text</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute NOTE__TEXT = eINSTANCE.getNote_Text();
 
 		/**
 		 * The meta object literal for the '{@link KragsteinPackage.impl.ClassImpl <em>Class</em>}' class.

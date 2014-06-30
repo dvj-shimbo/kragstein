@@ -28,35 +28,15 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link KragsteinPackage.impl.PackageImpl#getPath <em>Path</em>}</li>
  *   <li>{@link KragsteinPackage.impl.PackageImpl#getUnit <em>Unit</em>}</li>
  *   <li>{@link KragsteinPackage.impl.PackageImpl#getName <em>Name</em>}</li>
+ *   <li>{@link KragsteinPackage.impl.PackageImpl#getPath <em>Path</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
 public class PackageImpl extends EObjectImpl implements KragsteinPackage.Package {
-	/**
-	 * The default value of the '{@link #getPath() <em>Path</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPath()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String PATH_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getPath() <em>Path</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPath()
-	 * @generated
-	 * @ordered
-	 */
-	protected String path = PATH_EDEFAULT;
-
 	/**
 	 * The cached value of the '{@link #getUnit() <em>Unit</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -86,6 +66,26 @@ public class PackageImpl extends EObjectImpl implements KragsteinPackage.Package
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getPath() <em>Path</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPath()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String PATH_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getPath() <em>Path</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPath()
+	 * @generated
+	 * @ordered
+	 */
+	protected String path = PATH_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -182,12 +182,12 @@ public class PackageImpl extends EObjectImpl implements KragsteinPackage.Package
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case KragsteinPackagePackage.PACKAGE__PATH:
-				return getPath();
 			case KragsteinPackagePackage.PACKAGE__UNIT:
 				return getUnit();
 			case KragsteinPackagePackage.PACKAGE__NAME:
 				return getName();
+			case KragsteinPackagePackage.PACKAGE__PATH:
+				return getPath();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -201,15 +201,15 @@ public class PackageImpl extends EObjectImpl implements KragsteinPackage.Package
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case KragsteinPackagePackage.PACKAGE__PATH:
-				setPath((String)newValue);
-				return;
 			case KragsteinPackagePackage.PACKAGE__UNIT:
 				getUnit().clear();
 				getUnit().addAll((Collection<? extends Unit>)newValue);
 				return;
 			case KragsteinPackagePackage.PACKAGE__NAME:
 				setName((String)newValue);
+				return;
+			case KragsteinPackagePackage.PACKAGE__PATH:
+				setPath((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -223,14 +223,14 @@ public class PackageImpl extends EObjectImpl implements KragsteinPackage.Package
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case KragsteinPackagePackage.PACKAGE__PATH:
-				setPath(PATH_EDEFAULT);
-				return;
 			case KragsteinPackagePackage.PACKAGE__UNIT:
 				getUnit().clear();
 				return;
 			case KragsteinPackagePackage.PACKAGE__NAME:
 				setName(NAME_EDEFAULT);
+				return;
+			case KragsteinPackagePackage.PACKAGE__PATH:
+				setPath(PATH_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -244,12 +244,12 @@ public class PackageImpl extends EObjectImpl implements KragsteinPackage.Package
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case KragsteinPackagePackage.PACKAGE__PATH:
-				return PATH_EDEFAULT == null ? path != null : !PATH_EDEFAULT.equals(path);
 			case KragsteinPackagePackage.PACKAGE__UNIT:
 				return unit != null && !unit.isEmpty();
 			case KragsteinPackagePackage.PACKAGE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case KragsteinPackagePackage.PACKAGE__PATH:
+				return PATH_EDEFAULT == null ? path != null : !PATH_EDEFAULT.equals(path);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -264,10 +264,10 @@ public class PackageImpl extends EObjectImpl implements KragsteinPackage.Package
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (path: ");
-		result.append(path);
-		result.append(", name: ");
+		result.append(" (name: ");
 		result.append(name);
+		result.append(", path: ");
+		result.append(path);
 		result.append(')');
 		return result.toString();
 	}

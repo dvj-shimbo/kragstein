@@ -14,9 +14,9 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link KragsteinPackage.Package#getPath <em>Path</em>}</li>
  *   <li>{@link KragsteinPackage.Package#getUnit <em>Unit</em>}</li>
  *   <li>{@link KragsteinPackage.Package#getName <em>Name</em>}</li>
+ *   <li>{@link KragsteinPackage.Package#getPath <em>Path</em>}</li>
  * </ul>
  * </p>
  *

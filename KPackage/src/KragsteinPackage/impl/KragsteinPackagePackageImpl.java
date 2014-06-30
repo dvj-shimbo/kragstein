@@ -213,7 +213,7 @@ public class KragsteinPackagePackageImpl extends EPackageImpl implements Kragste
 	 * @generated
 	 */
 	public EAttribute getPackage_Path() {
-		return (EAttribute)packageEClass.getEStructuralFeatures().get(0);
+		return (EAttribute)packageEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -222,7 +222,7 @@ public class KragsteinPackagePackageImpl extends EPackageImpl implements Kragste
 	 * @generated
 	 */
 	public EReference getPackage_Unit() {
-		return (EReference)packageEClass.getEStructuralFeatures().get(1);
+		return (EReference)packageEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -231,7 +231,7 @@ public class KragsteinPackagePackageImpl extends EPackageImpl implements Kragste
 	 * @generated
 	 */
 	public EAttribute getPackage_Name() {
-		return (EAttribute)packageEClass.getEStructuralFeatures().get(2);
+		return (EAttribute)packageEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -356,7 +356,7 @@ public class KragsteinPackagePackageImpl extends EPackageImpl implements Kragste
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getNote_Value() {
+	public EAttribute getNote_Name() {
 		return (EAttribute)noteEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -365,7 +365,7 @@ public class KragsteinPackagePackageImpl extends EPackageImpl implements Kragste
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getNote_Name() {
+	public EAttribute getNote_Text() {
 		return (EAttribute)noteEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -731,9 +731,9 @@ public class KragsteinPackagePackageImpl extends EPackageImpl implements Kragste
 
 		// Create classes and their features
 		packageEClass = createEClass(PACKAGE);
-		createEAttribute(packageEClass, PACKAGE__PATH);
 		createEReference(packageEClass, PACKAGE__UNIT);
 		createEAttribute(packageEClass, PACKAGE__NAME);
+		createEAttribute(packageEClass, PACKAGE__PATH);
 
 		relationshipEClass = createEClass(RELATIONSHIP);
 		createEReference(relationshipEClass, RELATIONSHIP__TARGET);
@@ -755,8 +755,8 @@ public class KragsteinPackagePackageImpl extends EPackageImpl implements Kragste
 		dependencyEClass = createEClass(DEPENDENCY);
 
 		noteEClass = createEClass(NOTE);
-		createEAttribute(noteEClass, NOTE__VALUE);
 		createEAttribute(noteEClass, NOTE__NAME);
+		createEAttribute(noteEClass, NOTE__TEXT);
 
 		classEClass = createEClass(CLASS);
 		createEReference(classEClass, CLASS__ATTRIBUTE);
@@ -841,9 +841,9 @@ public class KragsteinPackagePackageImpl extends EPackageImpl implements Kragste
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(packageEClass, KragsteinPackage.Package.class, "Package", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getPackage_Path(), ecorePackage.getEString(), "path", null, 0, 1, KragsteinPackage.Package.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPackage_Unit(), this.getUnit(), null, "unit", null, 0, -1, KragsteinPackage.Package.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPackage_Name(), ecorePackage.getEString(), "name", null, 0, 1, KragsteinPackage.Package.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPackage_Path(), ecorePackage.getEString(), "path", null, 0, 1, KragsteinPackage.Package.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(relationshipEClass, Relationship.class, "Relationship", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRelationship_Target(), this.getClass_(), null, "target", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -865,8 +865,8 @@ public class KragsteinPackagePackageImpl extends EPackageImpl implements Kragste
 		initEClass(dependencyEClass, Dependency.class, "Dependency", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(noteEClass, Note.class, "Note", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getNote_Value(), ecorePackage.getEString(), "value", null, 0, 1, Note.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getNote_Name(), ecorePackage.getEString(), "name", null, 0, 1, Note.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getNote_Text(), ecorePackage.getEString(), "text", null, 0, 1, Note.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(classEClass, KragsteinPackage.Class.class, "Class", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getClass_Attribute(), this.getAttribute(), null, "attribute", null, 0, -1, KragsteinPackage.Class.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

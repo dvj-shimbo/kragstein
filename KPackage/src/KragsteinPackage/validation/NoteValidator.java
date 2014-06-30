@@ -16,4 +16,6 @@ public interface NoteValidator {
 
 	boolean validateValue(String value);
 	boolean validateName(String value);
+
+	boolean validateText(String value);
 }

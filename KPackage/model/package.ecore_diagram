@@ -3,6 +3,14 @@
   <children xmi:type="notation:Shape" xmi:id="_umGo0gB6EeSjP_fdSWkDsw" type="2001" fontName="Segoe UI">
     <children xmi:type="notation:DecorationNode" xmi:id="_umGo1AB6EeSjP_fdSWkDsw" type="5001"/>
     <children xmi:type="notation:BasicCompartment" xmi:id="_umGo1QB6EeSjP_fdSWkDsw" type="7001">
+      <children xmi:type="notation:Node" xmi:id="_YeVxYACDEeSjP_fdSWkDsw" type="3001">
+        <element xmi:type="ecore:EAttribute" href="package.ecore#//Package/name"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_YeVxYQCDEeSjP_fdSWkDsw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_umZjwAB6EeSjP_fdSWkDsw" type="3001">
+        <element xmi:type="ecore:EAttribute" href="package.ecore#//Package/path"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_umZjwQB6EeSjP_fdSWkDsw"/>
+      </children>
       <styles xmi:type="notation:SortingStyle" xmi:id="_umGo1gB6EeSjP_fdSWkDsw"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_umGo1wB6EeSjP_fdSWkDsw"/>
     </children>
@@ -139,6 +147,14 @@
   <children xmi:type="notation:Shape" xmi:id="_umPy_wB6EeSjP_fdSWkDsw" type="2001" fontName="Segoe UI">
     <children xmi:type="notation:DecorationNode" xmi:id="_umPzAQB6EeSjP_fdSWkDsw" type="5001"/>
     <children xmi:type="notation:BasicCompartment" xmi:id="_umPzAgB6EeSjP_fdSWkDsw" type="7001">
+      <children xmi:type="notation:Node" xmi:id="_um_ZpAB6EeSjP_fdSWkDsw" type="3001">
+        <element xmi:type="ecore:EAttribute" href="package.ecore#//Note/name"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_um_ZpQB6EeSjP_fdSWkDsw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_um_ZogB6EeSjP_fdSWkDsw" type="3001">
+        <element xmi:type="ecore:EAttribute" href="package.ecore#//Note/text"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_um_ZowB6EeSjP_fdSWkDsw"/>
+      </children>
       <styles xmi:type="notation:SortingStyle" xmi:id="_umPzAwB6EeSjP_fdSWkDsw"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_umPzBAB6EeSjP_fdSWkDsw"/>
     </children>

@@ -82,8 +82,6 @@
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="targetRelationship" upperBound="-1"
         eType="#//Relationship" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="sourceRelationship" upperBound="-1"
-        eType="#//Relationship" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="importedClass" upperBound="-1"
         eType="#//ImportedClass" containment="true">
@@ -129,8 +127,6 @@
         eType="#//Parameter" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Unit" abstract="true">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="sourceLink" upperBound="-1"
-        eType="#//Link" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="targetLink" upperBound="-1"
         eType="#//Link" containment="true"/>
   </eClassifiers>

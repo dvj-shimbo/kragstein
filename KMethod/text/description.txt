@@ -27,7 +27,6 @@ Package KragsteinMethod <KragsteinMethod.ecore>
     Reference parameter : Parameter<<0..*>>
 
   Class Branch
-    Reference sourceBranchConnection : BranchConnection
     Reference targetBranchConnection : BranchConnection
     Reference route : Route<<1..1>>
     Attribute name : EString
@@ -77,7 +76,6 @@ Package KragsteinMethod <KragsteinMethod.ecore>
   Class Case
     Attribute name : EString
     Attribute value : EString
-    Reference sourceCaseConnection : CaseConnection
     Reference targetCaseConnection : CaseConnection
     Reference route : Route<<1..1>>
 

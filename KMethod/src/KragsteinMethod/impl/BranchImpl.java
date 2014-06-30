@@ -27,7 +27,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link KragsteinMethod.impl.BranchImpl#getSourceBranchConnection <em>Source Branch Connection</em>}</li>
  *   <li>{@link KragsteinMethod.impl.BranchImpl#getTargetBranchConnection <em>Target Branch Connection</em>}</li>
  *   <li>{@link KragsteinMethod.impl.BranchImpl#getRoute <em>Route</em>}</li>
  *   <li>{@link KragsteinMethod.impl.BranchImpl#getName <em>Name</em>}</li>
@@ -37,16 +36,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * @generated
  */
 public class BranchImpl extends EObjectImpl implements Branch {
-	/**
-	 * The cached value of the '{@link #getSourceBranchConnection() <em>Source Branch Connection</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSourceBranchConnection()
-	 * @generated
-	 * @ordered
-	 */
-	protected BranchConnection sourceBranchConnection;
-
 	/**
 	 * The cached value of the '{@link #getTargetBranchConnection() <em>Target Branch Connection</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -104,49 +93,6 @@ public class BranchImpl extends EObjectImpl implements Branch {
 	@Override
 	protected EClass eStaticClass() {
 		return KragsteinMethodPackage.Literals.BRANCH;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public BranchConnection getSourceBranchConnection() {
-		return sourceBranchConnection;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetSourceBranchConnection(BranchConnection newSourceBranchConnection, NotificationChain msgs) {
-		BranchConnection oldSourceBranchConnection = sourceBranchConnection;
-		sourceBranchConnection = newSourceBranchConnection;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, KragsteinMethodPackage.BRANCH__SOURCE_BRANCH_CONNECTION, oldSourceBranchConnection, newSourceBranchConnection);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setSourceBranchConnection(BranchConnection newSourceBranchConnection) {
-		if (newSourceBranchConnection != sourceBranchConnection) {
-			NotificationChain msgs = null;
-			if (sourceBranchConnection != null)
-				msgs = ((InternalEObject)sourceBranchConnection).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - KragsteinMethodPackage.BRANCH__SOURCE_BRANCH_CONNECTION, null, msgs);
-			if (newSourceBranchConnection != null)
-				msgs = ((InternalEObject)newSourceBranchConnection).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - KragsteinMethodPackage.BRANCH__SOURCE_BRANCH_CONNECTION, null, msgs);
-			msgs = basicSetSourceBranchConnection(newSourceBranchConnection, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, KragsteinMethodPackage.BRANCH__SOURCE_BRANCH_CONNECTION, newSourceBranchConnection, newSourceBranchConnection));
 	}
 
 	/**
@@ -264,8 +210,6 @@ public class BranchImpl extends EObjectImpl implements Branch {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case KragsteinMethodPackage.BRANCH__SOURCE_BRANCH_CONNECTION:
-				return basicSetSourceBranchConnection(null, msgs);
 			case KragsteinMethodPackage.BRANCH__TARGET_BRANCH_CONNECTION:
 				return basicSetTargetBranchConnection(null, msgs);
 			case KragsteinMethodPackage.BRANCH__ROUTE:
@@ -282,8 +226,6 @@ public class BranchImpl extends EObjectImpl implements Branch {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case KragsteinMethodPackage.BRANCH__SOURCE_BRANCH_CONNECTION:
-				return getSourceBranchConnection();
 			case KragsteinMethodPackage.BRANCH__TARGET_BRANCH_CONNECTION:
 				return getTargetBranchConnection();
 			case KragsteinMethodPackage.BRANCH__ROUTE:
@@ -303,9 +245,6 @@ public class BranchImpl extends EObjectImpl implements Branch {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case KragsteinMethodPackage.BRANCH__SOURCE_BRANCH_CONNECTION:
-				setSourceBranchConnection((BranchConnection)newValue);
-				return;
 			case KragsteinMethodPackage.BRANCH__TARGET_BRANCH_CONNECTION:
 				setTargetBranchConnection((BranchConnection)newValue);
 				return;
@@ -327,9 +266,6 @@ public class BranchImpl extends EObjectImpl implements Branch {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case KragsteinMethodPackage.BRANCH__SOURCE_BRANCH_CONNECTION:
-				setSourceBranchConnection((BranchConnection)null);
-				return;
 			case KragsteinMethodPackage.BRANCH__TARGET_BRANCH_CONNECTION:
 				setTargetBranchConnection((BranchConnection)null);
 				return;
@@ -351,8 +287,6 @@ public class BranchImpl extends EObjectImpl implements Branch {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case KragsteinMethodPackage.BRANCH__SOURCE_BRANCH_CONNECTION:
-				return sourceBranchConnection != null;
 			case KragsteinMethodPackage.BRANCH__TARGET_BRANCH_CONNECTION:
 				return targetBranchConnection != null;
 			case KragsteinMethodPackage.BRANCH__ROUTE:

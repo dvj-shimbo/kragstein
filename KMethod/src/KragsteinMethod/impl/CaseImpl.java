@@ -25,7 +25,6 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  * <ul>
  *   <li>{@link KragsteinMethod.impl.CaseImpl#getName <em>Name</em>}</li>
  *   <li>{@link KragsteinMethod.impl.CaseImpl#getValue <em>Value</em>}</li>
- *   <li>{@link KragsteinMethod.impl.CaseImpl#getSourceCaseConnection <em>Source Case Connection</em>}</li>
  *   <li>{@link KragsteinMethod.impl.CaseImpl#getTargetCaseConnection <em>Target Case Connection</em>}</li>
  *   <li>{@link KragsteinMethod.impl.CaseImpl#getRoute <em>Route</em>}</li>
  * </ul>
@@ -73,16 +72,6 @@ public class CaseImpl extends EObjectImpl implements Case {
 	 * @ordered
 	 */
 	protected String value = VALUE_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getSourceCaseConnection() <em>Source Case Connection</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSourceCaseConnection()
-	 * @generated
-	 * @ordered
-	 */
-	protected CaseConnection sourceCaseConnection;
 
 	/**
 	 * The cached value of the '{@link #getTargetCaseConnection() <em>Target Case Connection</em>}' containment reference.
@@ -163,49 +152,6 @@ public class CaseImpl extends EObjectImpl implements Case {
 		value = newValue;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, KragsteinMethodPackage.CASE__VALUE, oldValue, value));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public CaseConnection getSourceCaseConnection() {
-		return sourceCaseConnection;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetSourceCaseConnection(CaseConnection newSourceCaseConnection, NotificationChain msgs) {
-		CaseConnection oldSourceCaseConnection = sourceCaseConnection;
-		sourceCaseConnection = newSourceCaseConnection;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, KragsteinMethodPackage.CASE__SOURCE_CASE_CONNECTION, oldSourceCaseConnection, newSourceCaseConnection);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setSourceCaseConnection(CaseConnection newSourceCaseConnection) {
-		if (newSourceCaseConnection != sourceCaseConnection) {
-			NotificationChain msgs = null;
-			if (sourceCaseConnection != null)
-				msgs = ((InternalEObject)sourceCaseConnection).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - KragsteinMethodPackage.CASE__SOURCE_CASE_CONNECTION, null, msgs);
-			if (newSourceCaseConnection != null)
-				msgs = ((InternalEObject)newSourceCaseConnection).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - KragsteinMethodPackage.CASE__SOURCE_CASE_CONNECTION, null, msgs);
-			msgs = basicSetSourceCaseConnection(newSourceCaseConnection, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, KragsteinMethodPackage.CASE__SOURCE_CASE_CONNECTION, newSourceCaseConnection, newSourceCaseConnection));
 	}
 
 	/**
@@ -302,8 +248,6 @@ public class CaseImpl extends EObjectImpl implements Case {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case KragsteinMethodPackage.CASE__SOURCE_CASE_CONNECTION:
-				return basicSetSourceCaseConnection(null, msgs);
 			case KragsteinMethodPackage.CASE__TARGET_CASE_CONNECTION:
 				return basicSetTargetCaseConnection(null, msgs);
 			case KragsteinMethodPackage.CASE__ROUTE:
@@ -324,8 +268,6 @@ public class CaseImpl extends EObjectImpl implements Case {
 				return getName();
 			case KragsteinMethodPackage.CASE__VALUE:
 				return getValue();
-			case KragsteinMethodPackage.CASE__SOURCE_CASE_CONNECTION:
-				return getSourceCaseConnection();
 			case KragsteinMethodPackage.CASE__TARGET_CASE_CONNECTION:
 				return getTargetCaseConnection();
 			case KragsteinMethodPackage.CASE__ROUTE:
@@ -347,9 +289,6 @@ public class CaseImpl extends EObjectImpl implements Case {
 				return;
 			case KragsteinMethodPackage.CASE__VALUE:
 				setValue((String)newValue);
-				return;
-			case KragsteinMethodPackage.CASE__SOURCE_CASE_CONNECTION:
-				setSourceCaseConnection((CaseConnection)newValue);
 				return;
 			case KragsteinMethodPackage.CASE__TARGET_CASE_CONNECTION:
 				setTargetCaseConnection((CaseConnection)newValue);
@@ -375,9 +314,6 @@ public class CaseImpl extends EObjectImpl implements Case {
 			case KragsteinMethodPackage.CASE__VALUE:
 				setValue(VALUE_EDEFAULT);
 				return;
-			case KragsteinMethodPackage.CASE__SOURCE_CASE_CONNECTION:
-				setSourceCaseConnection((CaseConnection)null);
-				return;
 			case KragsteinMethodPackage.CASE__TARGET_CASE_CONNECTION:
 				setTargetCaseConnection((CaseConnection)null);
 				return;
@@ -400,8 +336,6 @@ public class CaseImpl extends EObjectImpl implements Case {
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case KragsteinMethodPackage.CASE__VALUE:
 				return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
-			case KragsteinMethodPackage.CASE__SOURCE_CASE_CONNECTION:
-				return sourceCaseConnection != null;
 			case KragsteinMethodPackage.CASE__TARGET_CASE_CONNECTION:
 				return targetCaseConnection != null;
 			case KragsteinMethodPackage.CASE__ROUTE:

@@ -15,7 +15,6 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link KragsteinMethod.Case#getName <em>Name</em>}</li>
  *   <li>{@link KragsteinMethod.Case#getValue <em>Value</em>}</li>
- *   <li>{@link KragsteinMethod.Case#getSourceCaseConnection <em>Source Case Connection</em>}</li>
  *   <li>{@link KragsteinMethod.Case#getTargetCaseConnection <em>Target Case Connection</em>}</li>
  *   <li>{@link KragsteinMethod.Case#getRoute <em>Route</em>}</li>
  * </ul>
@@ -77,32 +76,6 @@ public interface Case extends EObject {
 	 * @generated
 	 */
 	void setValue(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Source Case Connection</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Source Case Connection</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Source Case Connection</em>' containment reference.
-	 * @see #setSourceCaseConnection(CaseConnection)
-	 * @see KragsteinMethod.KragsteinMethodPackage#getCase_SourceCaseConnection()
-	 * @model containment="true"
-	 * @generated
-	 */
-	CaseConnection getSourceCaseConnection();
-
-	/**
-	 * Sets the value of the '{@link KragsteinMethod.Case#getSourceCaseConnection <em>Source Case Connection</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Source Case Connection</em>' containment reference.
-	 * @see #getSourceCaseConnection()
-	 * @generated
-	 */
-	void setSourceCaseConnection(CaseConnection value);
 
 	/**
 	 * Returns the value of the '<em><b>Target Case Connection</b></em>' containment reference.

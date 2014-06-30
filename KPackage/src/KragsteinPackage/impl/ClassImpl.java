@@ -34,7 +34,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link KragsteinPackage.impl.ClassImpl#getAttribute <em>Attribute</em>}</li>
  *   <li>{@link KragsteinPackage.impl.ClassImpl#getMethod <em>Method</em>}</li>
  *   <li>{@link KragsteinPackage.impl.ClassImpl#getTargetRelationship <em>Target Relationship</em>}</li>
- *   <li>{@link KragsteinPackage.impl.ClassImpl#getSourceRelationship <em>Source Relationship</em>}</li>
  *   <li>{@link KragsteinPackage.impl.ClassImpl#getName <em>Name</em>}</li>
  *   <li>{@link KragsteinPackage.impl.ClassImpl#getImportedClass <em>Imported Class</em>}</li>
  *   <li>{@link KragsteinPackage.impl.ClassImpl#getType <em>Type</em>}</li>
@@ -78,16 +77,6 @@ public class ClassImpl extends UnitImpl implements KragsteinPackage.Class {
 	 * @ordered
 	 */
 	protected EList<Relationship> targetRelationship;
-
-	/**
-	 * The cached value of the '{@link #getSourceRelationship() <em>Source Relationship</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSourceRelationship()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Relationship> sourceRelationship;
 
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -299,18 +288,6 @@ public class ClassImpl extends UnitImpl implements KragsteinPackage.Class {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Relationship> getSourceRelationship() {
-		if (sourceRelationship == null) {
-			sourceRelationship = new EObjectContainmentEList<Relationship>(Relationship.class, this, KragsteinPackagePackage.CLASS__SOURCE_RELATIONSHIP);
-		}
-		return sourceRelationship;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getName() {
 		return name;
 	}
@@ -479,8 +456,6 @@ public class ClassImpl extends UnitImpl implements KragsteinPackage.Class {
 				return ((InternalEList<?>)getMethod()).basicRemove(otherEnd, msgs);
 			case KragsteinPackagePackage.CLASS__TARGET_RELATIONSHIP:
 				return ((InternalEList<?>)getTargetRelationship()).basicRemove(otherEnd, msgs);
-			case KragsteinPackagePackage.CLASS__SOURCE_RELATIONSHIP:
-				return ((InternalEList<?>)getSourceRelationship()).basicRemove(otherEnd, msgs);
 			case KragsteinPackagePackage.CLASS__IMPORTED_CLASS:
 				return ((InternalEList<?>)getImportedClass()).basicRemove(otherEnd, msgs);
 		}
@@ -501,8 +476,6 @@ public class ClassImpl extends UnitImpl implements KragsteinPackage.Class {
 				return getMethod();
 			case KragsteinPackagePackage.CLASS__TARGET_RELATIONSHIP:
 				return getTargetRelationship();
-			case KragsteinPackagePackage.CLASS__SOURCE_RELATIONSHIP:
-				return getSourceRelationship();
 			case KragsteinPackagePackage.CLASS__NAME:
 				return getName();
 			case KragsteinPackagePackage.CLASS__IMPORTED_CLASS:
@@ -543,10 +516,6 @@ public class ClassImpl extends UnitImpl implements KragsteinPackage.Class {
 			case KragsteinPackagePackage.CLASS__TARGET_RELATIONSHIP:
 				getTargetRelationship().clear();
 				getTargetRelationship().addAll((Collection<? extends Relationship>)newValue);
-				return;
-			case KragsteinPackagePackage.CLASS__SOURCE_RELATIONSHIP:
-				getSourceRelationship().clear();
-				getSourceRelationship().addAll((Collection<? extends Relationship>)newValue);
 				return;
 			case KragsteinPackagePackage.CLASS__NAME:
 				setName((String)newValue);
@@ -594,9 +563,6 @@ public class ClassImpl extends UnitImpl implements KragsteinPackage.Class {
 			case KragsteinPackagePackage.CLASS__TARGET_RELATIONSHIP:
 				getTargetRelationship().clear();
 				return;
-			case KragsteinPackagePackage.CLASS__SOURCE_RELATIONSHIP:
-				getSourceRelationship().clear();
-				return;
 			case KragsteinPackagePackage.CLASS__NAME:
 				setName(NAME_EDEFAULT);
 				return;
@@ -639,8 +605,6 @@ public class ClassImpl extends UnitImpl implements KragsteinPackage.Class {
 				return method != null && !method.isEmpty();
 			case KragsteinPackagePackage.CLASS__TARGET_RELATIONSHIP:
 				return targetRelationship != null && !targetRelationship.isEmpty();
-			case KragsteinPackagePackage.CLASS__SOURCE_RELATIONSHIP:
-				return sourceRelationship != null && !sourceRelationship.isEmpty();
 			case KragsteinPackagePackage.CLASS__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case KragsteinPackagePackage.CLASS__IMPORTED_CLASS:

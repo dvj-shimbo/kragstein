@@ -40,7 +40,6 @@ Package KragsteinPackage <KragsteinPackage.ecore>
     Reference attribute : Attribute<<0..*>>
     Reference method : Method<<0..*>>
     Reference targetRelationship : Relationship<<0..*>>
-    Reference sourceRelationship : Relationship<<0..*>>
     Attribute name : EString
     Reference importedClass : ImportedClass<<0..*>>
     Attribute type : EString
@@ -73,7 +72,6 @@ Package KragsteinPackage <KragsteinPackage.ecore>
     Reference parameter : Parameter<<0..*>>
 
   Class Unit
-    Reference sourceLink : Link<<0..*>>
     Reference targetLink : Link<<0..*>>
 
   Class Link

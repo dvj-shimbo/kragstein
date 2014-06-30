@@ -239,22 +239,13 @@ public interface KragsteinMethodPackage extends EPackage {
 	int BRANCH = 2;
 
 	/**
-	 * The feature id for the '<em><b>Source Branch Connection</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BRANCH__SOURCE_BRANCH_CONNECTION = 0;
-
-	/**
 	 * The feature id for the '<em><b>Target Branch Connection</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BRANCH__TARGET_BRANCH_CONNECTION = 1;
+	int BRANCH__TARGET_BRANCH_CONNECTION = 0;
 
 	/**
 	 * The feature id for the '<em><b>Route</b></em>' containment reference.
@@ -263,7 +254,7 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BRANCH__ROUTE = 2;
+	int BRANCH__ROUTE = 1;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -272,7 +263,7 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BRANCH__NAME = 3;
+	int BRANCH__NAME = 2;
 
 	/**
 	 * The number of structural features of the '<em>Branch</em>' class.
@@ -281,7 +272,7 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BRANCH_FEATURE_COUNT = 4;
+	int BRANCH_FEATURE_COUNT = 3;
 
 	/**
 	 * The meta object id for the '{@link KragsteinMethod.impl.BranchConnectionImpl <em>Branch Connection</em>}' class.
@@ -808,22 +799,13 @@ public interface KragsteinMethodPackage extends EPackage {
 	int CASE__VALUE = 1;
 
 	/**
-	 * The feature id for the '<em><b>Source Case Connection</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CASE__SOURCE_CASE_CONNECTION = 2;
-
-	/**
 	 * The feature id for the '<em><b>Target Case Connection</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CASE__TARGET_CASE_CONNECTION = 3;
+	int CASE__TARGET_CASE_CONNECTION = 2;
 
 	/**
 	 * The feature id for the '<em><b>Route</b></em>' containment reference.
@@ -832,7 +814,7 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CASE__ROUTE = 4;
+	int CASE__ROUTE = 3;
 
 	/**
 	 * The number of structural features of the '<em>Case</em>' class.
@@ -841,7 +823,7 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CASE_FEATURE_COUNT = 5;
+	int CASE_FEATURE_COUNT = 4;
 
 	/**
 	 * The meta object id for the '{@link KragsteinMethod.impl.CaseConnectionImpl <em>Case Connection</em>}' class.
@@ -1799,17 +1781,6 @@ public interface KragsteinMethodPackage extends EPackage {
 	EClass getBranch();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link KragsteinMethod.Branch#getSourceBranchConnection <em>Source Branch Connection</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Source Branch Connection</em>'.
-	 * @see KragsteinMethod.Branch#getSourceBranchConnection()
-	 * @see #getBranch()
-	 * @generated
-	 */
-	EReference getBranch_SourceBranchConnection();
-
-	/**
 	 * Returns the meta object for the containment reference '{@link KragsteinMethod.Branch#getTargetBranchConnection <em>Target Branch Connection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2215,17 +2186,6 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getCase_Value();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link KragsteinMethod.Case#getSourceCaseConnection <em>Source Case Connection</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Source Case Connection</em>'.
-	 * @see KragsteinMethod.Case#getSourceCaseConnection()
-	 * @see #getCase()
-	 * @generated
-	 */
-	EReference getCase_SourceCaseConnection();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link KragsteinMethod.Case#getTargetCaseConnection <em>Target Case Connection</em>}'.
@@ -2807,14 +2767,6 @@ public interface KragsteinMethodPackage extends EPackage {
 		EClass BRANCH = eINSTANCE.getBranch();
 
 		/**
-		 * The meta object literal for the '<em><b>Source Branch Connection</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference BRANCH__SOURCE_BRANCH_CONNECTION = eINSTANCE.getBranch_SourceBranchConnection();
-
-		/**
 		 * The meta object literal for the '<em><b>Target Branch Connection</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3139,14 +3091,6 @@ public interface KragsteinMethodPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute CASE__VALUE = eINSTANCE.getCase_Value();
-
-		/**
-		 * The meta object literal for the '<em><b>Source Case Connection</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CASE__SOURCE_CASE_CONNECTION = eINSTANCE.getCase_SourceCaseConnection();
 
 		/**
 		 * The meta object literal for the '<em><b>Target Case Connection</b></em>' containment reference feature.

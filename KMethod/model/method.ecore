@@ -31,8 +31,6 @@
     <eAnnotations source="gmf.node">
       <details key="label" value="name"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="sourceBranchConnection"
-        eType="#//BranchConnection" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="targetBranchConnection"
         eType="#//BranchConnection" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="route" lowerBound="1" eType="#//Route"
@@ -130,8 +128,6 @@
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="sourceCaseConnection" eType="#//CaseConnection"
-        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="targetCaseConnection" eType="#//CaseConnection"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="route" lowerBound="1" eType="#//Route"

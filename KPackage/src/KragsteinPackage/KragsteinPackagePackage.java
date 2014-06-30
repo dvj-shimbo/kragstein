@@ -569,22 +569,13 @@ public interface KragsteinPackagePackage extends EPackage {
 	int UNIT = 13;
 
 	/**
-	 * The feature id for the '<em><b>Source Link</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNIT__SOURCE_LINK = 0;
-
-	/**
 	 * The feature id for the '<em><b>Target Link</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT__TARGET_LINK = 1;
+	int UNIT__TARGET_LINK = 0;
 
 	/**
 	 * The number of structural features of the '<em>Unit</em>' class.
@@ -593,7 +584,7 @@ public interface KragsteinPackagePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE_COUNT = 2;
+	int UNIT_FEATURE_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link KragsteinPackage.impl.NoteImpl <em>Note</em>}' class.
@@ -604,15 +595,6 @@ public interface KragsteinPackagePackage extends EPackage {
 	 * @generated
 	 */
 	int NOTE = 8;
-
-	/**
-	 * The feature id for the '<em><b>Source Link</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NOTE__SOURCE_LINK = UNIT__SOURCE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Target Link</b></em>' containment reference list.
@@ -661,15 +643,6 @@ public interface KragsteinPackagePackage extends EPackage {
 	int CLASS = 9;
 
 	/**
-	 * The feature id for the '<em><b>Source Link</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CLASS__SOURCE_LINK = UNIT__SOURCE_LINK;
-
-	/**
 	 * The feature id for the '<em><b>Target Link</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -706,22 +679,13 @@ public interface KragsteinPackagePackage extends EPackage {
 	int CLASS__TARGET_RELATIONSHIP = UNIT_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Source Relationship</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CLASS__SOURCE_RELATIONSHIP = UNIT_FEATURE_COUNT + 3;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS__NAME = UNIT_FEATURE_COUNT + 4;
+	int CLASS__NAME = UNIT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Imported Class</b></em>' containment reference list.
@@ -730,7 +694,7 @@ public interface KragsteinPackagePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS__IMPORTED_CLASS = UNIT_FEATURE_COUNT + 5;
+	int CLASS__IMPORTED_CLASS = UNIT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -739,7 +703,7 @@ public interface KragsteinPackagePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS__TYPE = UNIT_FEATURE_COUNT + 6;
+	int CLASS__TYPE = UNIT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Visibility</b></em>' attribute.
@@ -748,7 +712,7 @@ public interface KragsteinPackagePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS__VISIBILITY = UNIT_FEATURE_COUNT + 7;
+	int CLASS__VISIBILITY = UNIT_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Is Singletone</b></em>' attribute.
@@ -757,7 +721,7 @@ public interface KragsteinPackagePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS__IS_SINGLETONE = UNIT_FEATURE_COUNT + 8;
+	int CLASS__IS_SINGLETONE = UNIT_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Is Interface</b></em>' attribute.
@@ -766,7 +730,7 @@ public interface KragsteinPackagePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS__IS_INTERFACE = UNIT_FEATURE_COUNT + 9;
+	int CLASS__IS_INTERFACE = UNIT_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Super Class</b></em>' attribute.
@@ -775,7 +739,7 @@ public interface KragsteinPackagePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS__SUPER_CLASS = UNIT_FEATURE_COUNT + 10;
+	int CLASS__SUPER_CLASS = UNIT_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Supplier Element</b></em>' attribute.
@@ -784,7 +748,7 @@ public interface KragsteinPackagePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS__SUPPLIER_ELEMENT = UNIT_FEATURE_COUNT + 11;
+	int CLASS__SUPPLIER_ELEMENT = UNIT_FEATURE_COUNT + 10;
 
 	/**
 	 * The number of structural features of the '<em>Class</em>' class.
@@ -793,7 +757,7 @@ public interface KragsteinPackagePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS_FEATURE_COUNT = UNIT_FEATURE_COUNT + 12;
+	int CLASS_FEATURE_COUNT = UNIT_FEATURE_COUNT + 11;
 
 	/**
 	 * The meta object id for the '{@link KragsteinPackage.impl.ImportedClassImpl <em>Imported Class</em>}' class.
@@ -1336,17 +1300,6 @@ public interface KragsteinPackagePackage extends EPackage {
 	EReference getClass_TargetRelationship();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link KragsteinPackage.Class#getSourceRelationship <em>Source Relationship</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Source Relationship</em>'.
-	 * @see KragsteinPackage.Class#getSourceRelationship()
-	 * @see #getClass_()
-	 * @generated
-	 */
-	EReference getClass_SourceRelationship();
-
-	/**
 	 * Returns the meta object for the attribute '{@link KragsteinPackage.Class#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1649,17 +1602,6 @@ public interface KragsteinPackagePackage extends EPackage {
 	 * @generated
 	 */
 	EClass getUnit();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link KragsteinPackage.Unit#getSourceLink <em>Source Link</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Source Link</em>'.
-	 * @see KragsteinPackage.Unit#getSourceLink()
-	 * @see #getUnit()
-	 * @generated
-	 */
-	EReference getUnit_SourceLink();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link KragsteinPackage.Unit#getTargetLink <em>Target Link</em>}'.
@@ -1982,14 +1924,6 @@ public interface KragsteinPackagePackage extends EPackage {
 		EReference CLASS__TARGET_RELATIONSHIP = eINSTANCE.getClass_TargetRelationship();
 
 		/**
-		 * The meta object literal for the '<em><b>Source Relationship</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CLASS__SOURCE_RELATIONSHIP = eINSTANCE.getClass_SourceRelationship();
-
-		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2220,14 +2154,6 @@ public interface KragsteinPackagePackage extends EPackage {
 		 * @generated
 		 */
 		EClass UNIT = eINSTANCE.getUnit();
-
-		/**
-		 * The meta object literal for the '<em><b>Source Link</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference UNIT__SOURCE_LINK = eINSTANCE.getUnit_SourceLink();
 
 		/**
 		 * The meta object literal for the '<em><b>Target Link</b></em>' containment reference list feature.

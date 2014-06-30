@@ -15,7 +15,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link KragsteinPackage.Class#getAttribute <em>Attribute</em>}</li>
  *   <li>{@link KragsteinPackage.Class#getMethod <em>Method</em>}</li>
  *   <li>{@link KragsteinPackage.Class#getTargetRelationship <em>Target Relationship</em>}</li>
- *   <li>{@link KragsteinPackage.Class#getSourceRelationship <em>Source Relationship</em>}</li>
  *   <li>{@link KragsteinPackage.Class#getName <em>Name</em>}</li>
  *   <li>{@link KragsteinPackage.Class#getImportedClass <em>Imported Class</em>}</li>
  *   <li>{@link KragsteinPackage.Class#getType <em>Type</em>}</li>
@@ -79,22 +78,6 @@ public interface Class extends Unit {
 	 * @generated
 	 */
 	EList<Relationship> getTargetRelationship();
-
-	/**
-	 * Returns the value of the '<em><b>Source Relationship</b></em>' containment reference list.
-	 * The list contents are of type {@link KragsteinPackage.Relationship}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Source Relationship</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Source Relationship</em>' containment reference list.
-	 * @see KragsteinPackage.KragsteinPackagePackage#getClass_SourceRelationship()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<Relationship> getSourceRelationship();
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.

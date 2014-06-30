@@ -61,82 +61,76 @@ public class KragsteinMethodElementTypes {
 	 * @generated
 	 */
 	public static final IElementType Route_3001 = getElementType("KMethod.diagram.Route_3001"); //$NON-NLS-1$
-
 	/**
 	 * @generated
 	 */
 	public static final IElementType Action_3002 = getElementType("KMethod.diagram.Action_3002"); //$NON-NLS-1$
-
 	/**
 	 * @generated
 	 */
 	public static final IElementType Question_3003 = getElementType("KMethod.diagram.Question_3003"); //$NON-NLS-1$
-
+	/**
+	 * @generated
+	 */
+	public static final IElementType Route_3017 = getElementType("KMethod.diagram.Route_3017"); //$NON-NLS-1$
 	/**
 	 * @generated
 	 */
 	public static final IElementType Choice_3004 = getElementType("KMethod.diagram.Choice_3004"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType Case_3018 = getElementType("KMethod.diagram.Case_3018"); //$NON-NLS-1$
 
 	/**
 	 * @generated
 	 */
-	public static final IElementType Case_3005 = getElementType("KMethod.diagram.Case_3005"); //$NON-NLS-1$
+	public static final IElementType Route_3019 = getElementType("KMethod.diagram.Route_3019"); //$NON-NLS-1$
 
 	/**
 	 * @generated
 	 */
 	public static final IElementType Headline_3006 = getElementType("KMethod.diagram.Headline_3006"); //$NON-NLS-1$
-
 	/**
 	 * @generated
 	 */
 	public static final IElementType Adress_3007 = getElementType("KMethod.diagram.Adress_3007"); //$NON-NLS-1$
-
 	/**
 	 * @generated
 	 */
 	public static final IElementType Insertion_3008 = getElementType("KMethod.diagram.Insertion_3008"); //$NON-NLS-1$
-
 	/**
 	 * @generated
 	 */
 	public static final IElementType Shelf_3009 = getElementType("KMethod.diagram.Shelf_3009"); //$NON-NLS-1$
-
 	/**
 	 * @generated
 	 */
 	public static final IElementType BeginLoop_3010 = getElementType("KMethod.diagram.BeginLoop_3010"); //$NON-NLS-1$
-
 	/**
 	 * @generated
 	 */
 	public static final IElementType EndLoop_3011 = getElementType("KMethod.diagram.EndLoop_3011"); //$NON-NLS-1$
-
 	/**
 	 * @generated
 	 */
 	public static final IElementType Output_3012 = getElementType("KMethod.diagram.Output_3012"); //$NON-NLS-1$
-
 	/**
 	 * @generated
 	 */
 	public static final IElementType Input_3013 = getElementType("KMethod.diagram.Input_3013"); //$NON-NLS-1$
-
 	/**
 	 * @generated
 	 */
 	public static final IElementType LoopArrow_3014 = getElementType("KMethod.diagram.LoopArrow_3014"); //$NON-NLS-1$
-
 	/**
 	 * @generated
 	 */
 	public static final IElementType EmptyConnector_3015 = getElementType("KMethod.diagram.EmptyConnector_3015"); //$NON-NLS-1$
-
 	/**
 	 * @generated
 	 */
 	public static final IElementType End_3016 = getElementType("KMethod.diagram.End_3016"); //$NON-NLS-1$
-
 	/**
 	 * @generated
 	 */
@@ -223,12 +217,18 @@ public class KragsteinMethodElementTypes {
 					KragsteinMethod.KragsteinMethodPackage.eINSTANCE
 							.getQuestion());
 
+			elements.put(Route_3017,
+					KragsteinMethod.KragsteinMethodPackage.eINSTANCE.getRoute());
+
 			elements.put(Choice_3004,
 					KragsteinMethod.KragsteinMethodPackage.eINSTANCE
 							.getChoice());
 
-			elements.put(Case_3005,
+			elements.put(Case_3018,
 					KragsteinMethod.KragsteinMethodPackage.eINSTANCE.getCase());
+
+			elements.put(Route_3019,
+					KragsteinMethod.KragsteinMethodPackage.eINSTANCE.getRoute());
 
 			elements.put(Headline_3006,
 					KragsteinMethod.KragsteinMethodPackage.eINSTANCE
@@ -317,8 +317,10 @@ public class KragsteinMethodElementTypes {
 			KNOWN_ELEMENT_TYPES.add(Route_3001);
 			KNOWN_ELEMENT_TYPES.add(Action_3002);
 			KNOWN_ELEMENT_TYPES.add(Question_3003);
+			KNOWN_ELEMENT_TYPES.add(Route_3017);
 			KNOWN_ELEMENT_TYPES.add(Choice_3004);
-			KNOWN_ELEMENT_TYPES.add(Case_3005);
+			KNOWN_ELEMENT_TYPES.add(Case_3018);
+			KNOWN_ELEMENT_TYPES.add(Route_3019);
 			KNOWN_ELEMENT_TYPES.add(Headline_3006);
 			KNOWN_ELEMENT_TYPES.add(Adress_3007);
 			KNOWN_ELEMENT_TYPES.add(Insertion_3008);
@@ -357,10 +359,14 @@ public class KragsteinMethodElementTypes {
 			return Action_3002;
 		case KragsteinMethod.diagram.edit.parts.QuestionEditPart.VISUAL_ID:
 			return Question_3003;
+		case KragsteinMethod.diagram.edit.parts.Route2EditPart.VISUAL_ID:
+			return Route_3017;
 		case KragsteinMethod.diagram.edit.parts.ChoiceEditPart.VISUAL_ID:
 			return Choice_3004;
 		case KragsteinMethod.diagram.edit.parts.CaseEditPart.VISUAL_ID:
-			return Case_3005;
+			return Case_3018;
+		case KragsteinMethod.diagram.edit.parts.Route3EditPart.VISUAL_ID:
+			return Route_3019;
 		case KragsteinMethod.diagram.edit.parts.HeadlineEditPart.VISUAL_ID:
 			return Headline_3006;
 		case KragsteinMethod.diagram.edit.parts.AdressEditPart.VISUAL_ID:

@@ -78,21 +78,31 @@ public interface Branch extends EObject {
 	void setTargetBranchConnection(BranchConnection value);
 
 	/**
-	 * Returns the value of the '<em><b>Route</b></em>' containment reference list.
-	 * The list contents are of type {@link KragsteinMethod.Route}.
+	 * Returns the value of the '<em><b>Route</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Route</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Route</em>' containment reference list.
+	 * @return the value of the '<em>Route</em>' containment reference.
+	 * @see #setRoute(Route)
 	 * @see KragsteinMethod.KragsteinMethodPackage#getBranch_Route()
 	 * @model containment="true" required="true"
 	 *        annotation="gmf.compartment layout='free'"
 	 * @generated
 	 */
-	EList<Route> getRoute();
+	Route getRoute();
+
+	/**
+	 * Sets the value of the '{@link KragsteinMethod.Branch#getRoute <em>Route</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Route</em>' containment reference.
+	 * @see #getRoute()
+	 * @generated
+	 */
+	void setRoute(Route value);
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.

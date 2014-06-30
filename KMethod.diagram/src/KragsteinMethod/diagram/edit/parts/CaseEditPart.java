@@ -5,6 +5,7 @@ package KragsteinMethod.diagram.edit.parts;
 
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.MarginBorder;
+import org.eclipse.draw2d.RectangleFigure;
 import org.eclipse.draw2d.RoundedRectangle;
 import org.eclipse.draw2d.Shape;
 import org.eclipse.draw2d.StackLayout;
@@ -16,8 +17,11 @@ import org.eclipse.gef.commands.Command;
 import org.eclipse.gef.editpolicies.LayoutEditPolicy;
 import org.eclipse.gef.editpolicies.NonResizableEditPolicy;
 import org.eclipse.gef.requests.CreateRequest;
+import org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ShapeNodeEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
+import org.eclipse.gmf.runtime.draw2d.ui.figures.ConstrainedToolbarLayout;
+import org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel;
 import org.eclipse.gmf.runtime.gef.ui.figures.DefaultSizeNodeFigure;
 import org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure;
 import org.eclipse.gmf.runtime.notation.View;
@@ -31,7 +35,7 @@ public class CaseEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 3005;
+	public static final int VISUAL_ID = 3018;
 
 	/**
 	 * @generated
@@ -59,7 +63,9 @@ public class CaseEditPart extends ShapeNodeEditPart {
 				EditPolicyRoles.SEMANTIC_ROLE,
 				new KragsteinMethod.diagram.edit.policies.CaseItemSemanticEditPolicy());
 		installEditPolicy(EditPolicy.LAYOUT_ROLE, createLayoutEditPolicy());
-		// XXX need an SCR to runtime to have another abstract superclass that would let children add reasonable editpolicies
+		installEditPolicy(
+				EditPolicyRoles.OPEN_ROLE,
+				new KragsteinMethod.diagram.edit.policies.OpenDiagramEditPolicy()); // XXX need an SCR to runtime to have another abstract superclass that would let children add reasonable editpolicies
 		// removeEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.CONNECTION_HANDLES_ROLE);
 	}
 
@@ -106,6 +112,71 @@ public class CaseEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
+	protected boolean addFixedChild(EditPart childEditPart) {
+		if (childEditPart instanceof KragsteinMethod.diagram.edit.parts.CaseNameEditPart) {
+			((KragsteinMethod.diagram.edit.parts.CaseNameEditPart) childEditPart)
+					.setLabel(getPrimaryShape().getFigureCaseLabelFigure());
+			return true;
+		}
+		if (childEditPart instanceof KragsteinMethod.diagram.edit.parts.CaseCaseRouteCompartmentEditPart) {
+			IFigure pane = getPrimaryShape().getCaseRouteCompartmentFigure();
+			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
+			pane.add(((KragsteinMethod.diagram.edit.parts.CaseCaseRouteCompartmentEditPart) childEditPart)
+					.getFigure());
+			return true;
+		}
+		return false;
+	}
+
+	/**
+	 * @generated
+	 */
+	protected boolean removeFixedChild(EditPart childEditPart) {
+		if (childEditPart instanceof KragsteinMethod.diagram.edit.parts.CaseNameEditPart) {
+			return true;
+		}
+		if (childEditPart instanceof KragsteinMethod.diagram.edit.parts.CaseCaseRouteCompartmentEditPart) {
+			IFigure pane = getPrimaryShape().getCaseRouteCompartmentFigure();
+			pane.remove(((KragsteinMethod.diagram.edit.parts.CaseCaseRouteCompartmentEditPart) childEditPart)
+					.getFigure());
+			return true;
+		}
+		return false;
+	}
+
+	/**
+	 * @generated
+	 */
+	protected void addChildVisual(EditPart childEditPart, int index) {
+		if (addFixedChild(childEditPart)) {
+			return;
+		}
+		super.addChildVisual(childEditPart, -1);
+	}
+
+	/**
+	 * @generated
+	 */
+	protected void removeChildVisual(EditPart childEditPart) {
+		if (removeFixedChild(childEditPart)) {
+			return;
+		}
+		super.removeChildVisual(childEditPart);
+	}
+
+	/**
+	 * @generated
+	 */
+	protected IFigure getContentPaneFor(IGraphicalEditPart editPart) {
+		if (editPart instanceof KragsteinMethod.diagram.edit.parts.CaseCaseRouteCompartmentEditPart) {
+			return getPrimaryShape().getCaseRouteCompartmentFigure();
+		}
+		return getContentPane();
+	}
+
+	/**
+	 * @generated
+	 */
 	protected NodeFigure createNodePlate() {
 		DefaultSizeNodeFigure result = new DefaultSizeNodeFigure(40, 40);
 		return result;
@@ -135,6 +206,11 @@ public class CaseEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected IFigure setupContentPane(IFigure nodeShape) {
+		if (nodeShape.getLayoutManager() == null) {
+			ConstrainedToolbarLayout layout = new ConstrainedToolbarLayout();
+			layout.setSpacing(5);
+			nodeShape.setLayoutManager(layout);
+		}
 		return nodeShape; // use nodeShape itself as contentPane
 	}
 
@@ -187,7 +263,24 @@ public class CaseEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
+	public EditPart getPrimaryChildEditPart() {
+		return getChildBySemanticHint(KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+				.getType(KragsteinMethod.diagram.edit.parts.CaseNameEditPart.VISUAL_ID));
+	}
+
+	/**
+	 * @generated
+	 */
 	public class CaseFigure extends RoundedRectangle {
+
+		/**
+		 * @generated
+		 */
+		private WrappingLabel fFigureCaseLabelFigure;
+		/**
+		 * @generated
+		 */
+		private RectangleFigure fCaseRouteCompartmentFigure;
 
 		/**
 		 * @generated
@@ -198,6 +291,42 @@ public class CaseEditPart extends ShapeNodeEditPart {
 			this.setBorder(new MarginBorder(getMapMode().DPtoLP(5),
 					getMapMode().DPtoLP(5), getMapMode().DPtoLP(5),
 					getMapMode().DPtoLP(5)));
+			createContents();
+		}
+
+		/**
+		 * @generated
+		 */
+		private void createContents() {
+
+			fFigureCaseLabelFigure = new WrappingLabel();
+
+			fFigureCaseLabelFigure.setText("Case");
+			fFigureCaseLabelFigure.setMaximumSize(new Dimension(getMapMode()
+					.DPtoLP(10000), getMapMode().DPtoLP(50)));
+
+			this.add(fFigureCaseLabelFigure);
+
+			fCaseRouteCompartmentFigure = new RectangleFigure();
+
+			fCaseRouteCompartmentFigure.setOutline(false);
+
+			this.add(fCaseRouteCompartmentFigure);
+
+		}
+
+		/**
+		 * @generated
+		 */
+		public WrappingLabel getFigureCaseLabelFigure() {
+			return fFigureCaseLabelFigure;
+		}
+
+		/**
+		 * @generated
+		 */
+		public RectangleFigure getCaseRouteCompartmentFigure() {
+			return fCaseRouteCompartmentFigure;
 		}
 
 	}

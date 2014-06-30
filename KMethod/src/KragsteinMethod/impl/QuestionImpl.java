@@ -6,13 +6,17 @@ import KragsteinMethod.KragsteinMethodPackage;
 import KragsteinMethod.Question;
 import KragsteinMethod.Route;
 
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,6 +28,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link KragsteinMethod.impl.QuestionImpl#getName <em>Name</em>}</li>
  *   <li>{@link KragsteinMethod.impl.QuestionImpl#getValue <em>Value</em>}</li>
  *   <li>{@link KragsteinMethod.impl.QuestionImpl#isYesBelow <em>Yes Below</em>}</li>
+ *   <li>{@link KragsteinMethod.impl.QuestionImpl#getRoute <em>Route</em>}</li>
  * </ul>
  * </p>
  *
@@ -89,6 +94,16 @@ public class QuestionImpl extends IconImpl implements Question {
 	 * @ordered
 	 */
 	protected boolean yesBelow = YES_BELOW_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getRoute() <em>Route</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRoute()
+	 * @generated
+	 * @ordered
+	 */
+	protected Route route;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -177,6 +192,63 @@ public class QuestionImpl extends IconImpl implements Question {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Route getRoute() {
+		return route;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetRoute(Route newRoute, NotificationChain msgs) {
+		Route oldRoute = route;
+		route = newRoute;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, KragsteinMethodPackage.QUESTION__ROUTE, oldRoute, newRoute);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setRoute(Route newRoute) {
+		if (newRoute != route) {
+			NotificationChain msgs = null;
+			if (route != null)
+				msgs = ((InternalEObject)route).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - KragsteinMethodPackage.QUESTION__ROUTE, null, msgs);
+			if (newRoute != null)
+				msgs = ((InternalEObject)newRoute).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - KragsteinMethodPackage.QUESTION__ROUTE, null, msgs);
+			msgs = basicSetRoute(newRoute, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, KragsteinMethodPackage.QUESTION__ROUTE, newRoute, newRoute));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case KragsteinMethodPackage.QUESTION__ROUTE:
+				return basicSetRoute(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -186,6 +258,8 @@ public class QuestionImpl extends IconImpl implements Question {
 				return getValue();
 			case KragsteinMethodPackage.QUESTION__YES_BELOW:
 				return isYesBelow();
+			case KragsteinMethodPackage.QUESTION__ROUTE:
+				return getRoute();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -195,6 +269,7 @@ public class QuestionImpl extends IconImpl implements Question {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -206,6 +281,9 @@ public class QuestionImpl extends IconImpl implements Question {
 				return;
 			case KragsteinMethodPackage.QUESTION__YES_BELOW:
 				setYesBelow((Boolean)newValue);
+				return;
+			case KragsteinMethodPackage.QUESTION__ROUTE:
+				setRoute((Route)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -228,6 +306,9 @@ public class QuestionImpl extends IconImpl implements Question {
 			case KragsteinMethodPackage.QUESTION__YES_BELOW:
 				setYesBelow(YES_BELOW_EDEFAULT);
 				return;
+			case KragsteinMethodPackage.QUESTION__ROUTE:
+				setRoute((Route)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -246,6 +327,8 @@ public class QuestionImpl extends IconImpl implements Question {
 				return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
 			case KragsteinMethodPackage.QUESTION__YES_BELOW:
 				return yesBelow != YES_BELOW_EDEFAULT;
+			case KragsteinMethodPackage.QUESTION__ROUTE:
+				return route != null;
 		}
 		return super.eIsSet(featureID);
 	}

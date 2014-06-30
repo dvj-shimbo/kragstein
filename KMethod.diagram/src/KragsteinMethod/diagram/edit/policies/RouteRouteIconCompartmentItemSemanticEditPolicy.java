@@ -40,11 +40,6 @@ public class RouteRouteIconCompartmentItemSemanticEditPolicy
 			return getGEFWrapper(new KragsteinMethod.diagram.edit.commands.ChoiceCreateCommand(
 					req));
 		}
-		if (KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Case_3005 == req
-				.getElementType()) {
-			return getGEFWrapper(new KragsteinMethod.diagram.edit.commands.CaseCreateCommand(
-					req));
-		}
 		if (KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Headline_3006 == req
 				.getElementType()) {
 			return getGEFWrapper(new KragsteinMethod.diagram.edit.commands.HeadlineCreateCommand(

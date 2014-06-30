@@ -30,7 +30,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link KragsteinMethod.impl.ChoiceImpl#getName <em>Name</em>}</li>
  *   <li>{@link KragsteinMethod.impl.ChoiceImpl#getValue <em>Value</em>}</li>
- *   <li>{@link KragsteinMethod.impl.ChoiceImpl#getChoice <em>Choice</em>}</li>
+ *   <li>{@link KragsteinMethod.impl.ChoiceImpl#getCase <em>Case</em>}</li>
+ *   <li>{@link KragsteinMethod.impl.ChoiceImpl#getDefaultCaseValue <em>Default Case Value</em>}</li>
  * </ul>
  * </p>
  *
@@ -78,14 +79,34 @@ public class ChoiceImpl extends IconImpl implements Choice {
 	protected String value = VALUE_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getChoice() <em>Choice</em>}' containment reference list.
+	 * The cached value of the '{@link #getCase() <em>Case</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getChoice()
+	 * @see #getCase()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Case> choice;
+	protected EList<Case> case_;
+
+	/**
+	 * The default value of the '{@link #getDefaultCaseValue() <em>Default Case Value</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultCaseValue()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DEFAULT_CASE_VALUE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getDefaultCaseValue() <em>Default Case Value</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultCaseValue()
+	 * @generated
+	 * @ordered
+	 */
+	protected String defaultCaseValue = DEFAULT_CASE_VALUE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -153,11 +174,32 @@ public class ChoiceImpl extends IconImpl implements Choice {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Case> getChoice() {
-		if (choice == null) {
-			choice = new EObjectContainmentEList<Case>(Case.class, this, KragsteinMethodPackage.CHOICE__CHOICE);
+	public EList<Case> getCase() {
+		if (case_ == null) {
+			case_ = new EObjectContainmentEList<Case>(Case.class, this, KragsteinMethodPackage.CHOICE__CASE);
 		}
-		return choice;
+		return case_;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getDefaultCaseValue() {
+		return defaultCaseValue;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDefaultCaseValue(String newDefaultCaseValue) {
+		String oldDefaultCaseValue = defaultCaseValue;
+		defaultCaseValue = newDefaultCaseValue;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, KragsteinMethodPackage.CHOICE__DEFAULT_CASE_VALUE, oldDefaultCaseValue, defaultCaseValue));
 	}
 
 	/**
@@ -168,8 +210,8 @@ public class ChoiceImpl extends IconImpl implements Choice {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case KragsteinMethodPackage.CHOICE__CHOICE:
-				return ((InternalEList<?>)getChoice()).basicRemove(otherEnd, msgs);
+			case KragsteinMethodPackage.CHOICE__CASE:
+				return ((InternalEList<?>)getCase()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -186,8 +228,10 @@ public class ChoiceImpl extends IconImpl implements Choice {
 				return getName();
 			case KragsteinMethodPackage.CHOICE__VALUE:
 				return getValue();
-			case KragsteinMethodPackage.CHOICE__CHOICE:
-				return getChoice();
+			case KragsteinMethodPackage.CHOICE__CASE:
+				return getCase();
+			case KragsteinMethodPackage.CHOICE__DEFAULT_CASE_VALUE:
+				return getDefaultCaseValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -207,9 +251,12 @@ public class ChoiceImpl extends IconImpl implements Choice {
 			case KragsteinMethodPackage.CHOICE__VALUE:
 				setValue((String)newValue);
 				return;
-			case KragsteinMethodPackage.CHOICE__CHOICE:
-				getChoice().clear();
-				getChoice().addAll((Collection<? extends Case>)newValue);
+			case KragsteinMethodPackage.CHOICE__CASE:
+				getCase().clear();
+				getCase().addAll((Collection<? extends Case>)newValue);
+				return;
+			case KragsteinMethodPackage.CHOICE__DEFAULT_CASE_VALUE:
+				setDefaultCaseValue((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -229,8 +276,11 @@ public class ChoiceImpl extends IconImpl implements Choice {
 			case KragsteinMethodPackage.CHOICE__VALUE:
 				setValue(VALUE_EDEFAULT);
 				return;
-			case KragsteinMethodPackage.CHOICE__CHOICE:
-				getChoice().clear();
+			case KragsteinMethodPackage.CHOICE__CASE:
+				getCase().clear();
+				return;
+			case KragsteinMethodPackage.CHOICE__DEFAULT_CASE_VALUE:
+				setDefaultCaseValue(DEFAULT_CASE_VALUE_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -248,8 +298,10 @@ public class ChoiceImpl extends IconImpl implements Choice {
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case KragsteinMethodPackage.CHOICE__VALUE:
 				return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
-			case KragsteinMethodPackage.CHOICE__CHOICE:
-				return choice != null && !choice.isEmpty();
+			case KragsteinMethodPackage.CHOICE__CASE:
+				return case_ != null && !case_.isEmpty();
+			case KragsteinMethodPackage.CHOICE__DEFAULT_CASE_VALUE:
+				return DEFAULT_CASE_VALUE_EDEFAULT == null ? defaultCaseValue != null : !DEFAULT_CASE_VALUE_EDEFAULT.equals(defaultCaseValue);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -268,6 +320,8 @@ public class ChoiceImpl extends IconImpl implements Choice {
 		result.append(name);
 		result.append(", value: ");
 		result.append(value);
+		result.append(", defaultCaseValue: ");
+		result.append(defaultCaseValue);
 		result.append(')');
 		return result.toString();
 	}

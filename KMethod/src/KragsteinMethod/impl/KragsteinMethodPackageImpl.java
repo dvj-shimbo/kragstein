@@ -689,6 +689,15 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getQuestion_Route() {
+		return (EReference)questionEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getChoice() {
 		return choiceEClass;
 	}
@@ -716,8 +725,17 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getChoice_Choice() {
+	public EReference getChoice_Case() {
 		return (EReference)choiceEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getChoice_DefaultCaseValue() {
+		return (EAttribute)choiceEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -763,6 +781,15 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 	 */
 	public EReference getCase_TargetCaseConnection() {
 		return (EReference)caseEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCase_Route() {
+		return (EReference)caseEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -1181,17 +1208,20 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 		createEAttribute(questionEClass, QUESTION__NAME);
 		createEAttribute(questionEClass, QUESTION__VALUE);
 		createEAttribute(questionEClass, QUESTION__YES_BELOW);
+		createEReference(questionEClass, QUESTION__ROUTE);
 
 		choiceEClass = createEClass(CHOICE);
 		createEAttribute(choiceEClass, CHOICE__NAME);
 		createEAttribute(choiceEClass, CHOICE__VALUE);
-		createEReference(choiceEClass, CHOICE__CHOICE);
+		createEReference(choiceEClass, CHOICE__CASE);
+		createEAttribute(choiceEClass, CHOICE__DEFAULT_CASE_VALUE);
 
 		caseEClass = createEClass(CASE);
 		createEAttribute(caseEClass, CASE__NAME);
 		createEAttribute(caseEClass, CASE__VALUE);
 		createEReference(caseEClass, CASE__SOURCE_CASE_CONNECTION);
 		createEReference(caseEClass, CASE__TARGET_CASE_CONNECTION);
+		createEReference(caseEClass, CASE__ROUTE);
 
 		caseConnectionEClass = createEClass(CASE_CONNECTION);
 		createEReference(caseConnectionEClass, CASE_CONNECTION__SOURCE);
@@ -1274,7 +1304,6 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 		actionEClass.getESuperTypes().add(this.getIcon());
 		questionEClass.getESuperTypes().add(this.getIcon());
 		choiceEClass.getESuperTypes().add(this.getIcon());
-		caseEClass.getESuperTypes().add(this.getIcon());
 		headlineEClass.getESuperTypes().add(this.getIcon());
 		adressEClass.getESuperTypes().add(this.getIcon());
 		insertionEClass.getESuperTypes().add(this.getIcon());
@@ -1304,7 +1333,7 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 		initEClass(branchEClass, Branch.class, "Branch", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getBranch_SourceBranchConnection(), this.getBranchConnection(), null, "sourceBranchConnection", null, 0, 1, Branch.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getBranch_TargetBranchConnection(), this.getBranchConnection(), null, "targetBranchConnection", null, 0, 1, Branch.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getBranch_Route(), this.getRoute(), null, "route", null, 1, -1, Branch.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBranch_Route(), this.getRoute(), null, "route", null, 1, 1, Branch.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getBranch_Name(), ecorePackage.getEString(), "name", null, 0, 1, Branch.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(branchConnectionEClass, BranchConnection.class, "BranchConnection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1343,17 +1372,20 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 		initEAttribute(getQuestion_Name(), ecorePackage.getEString(), "name", null, 0, 1, Question.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getQuestion_Value(), ecorePackage.getEString(), "value", null, 0, 1, Question.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getQuestion_YesBelow(), ecorePackage.getEBoolean(), "yesBelow", null, 0, 1, Question.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getQuestion_Route(), this.getRoute(), null, "route", null, 1, 1, Question.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(choiceEClass, Choice.class, "Choice", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getChoice_Name(), ecorePackage.getEString(), "name", null, 0, 1, Choice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getChoice_Value(), ecorePackage.getEString(), "value", null, 0, 1, Choice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getChoice_Choice(), this.getCase(), null, "choice", null, 1, -1, Choice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getChoice_Case(), this.getCase(), null, "case", null, 1, -1, Choice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getChoice_DefaultCaseValue(), ecorePackage.getEString(), "defaultCaseValue", null, 0, 1, Choice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(caseEClass, Case.class, "Case", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCase_Name(), ecorePackage.getEString(), "name", null, 0, 1, Case.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCase_Value(), ecorePackage.getEString(), "value", null, 0, 1, Case.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCase_SourceCaseConnection(), this.getCaseConnection(), null, "sourceCaseConnection", null, 0, 1, Case.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCase_TargetCaseConnection(), this.getCaseConnection(), null, "targetCaseConnection", null, 0, 1, Case.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCase_Route(), this.getRoute(), null, "route", null, 1, 1, Case.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(caseConnectionEClass, CaseConnection.class, "CaseConnection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCaseConnection_Source(), this.getCase(), null, "source", null, 0, 1, CaseConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1589,6 +1621,21 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 		   source, 
 		   new String[] {
 			 "layout", "free"
+		   });	
+		addAnnotation
+		  (getQuestion_Route(), 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (getChoice_Case(), 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (getCase_Route(), 
+		   source, 
+		   new String[] {
 		   });
 	}
 

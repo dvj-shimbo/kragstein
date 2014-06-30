@@ -23,7 +23,7 @@ Package KragsteinMethod <KragsteinMethod.ecore>
   Class Branch
     Reference sourceBranchConnection : BranchConnection
     Reference targetBranchConnection : BranchConnection
-    Reference route : Route<<1..*>>
+    Reference route : Route<<1..1>>
     Attribute name : EString
 
   Class BranchConnection
@@ -62,17 +62,20 @@ Package KragsteinMethod <KragsteinMethod.ecore>
     Attribute name : EString
     Attribute value : EString
     Attribute yesBelow : EBoolean
+    Reference route : Route<<1..1>>
 
   Class Choice -> Icon
     Attribute name : EString
     Attribute value : EString
-    Reference choice : Case<<1..*>>
+    Reference case : Case<<1..*>>
+    Attribute defaultCaseValue : EString
 
-  Class Case -> Icon
+  Class Case
     Attribute name : EString
     Attribute value : EString
     Reference sourceCaseConnection : CaseConnection
     Reference targetCaseConnection : CaseConnection
+    Reference route : Route<<1..1>>
 
   Class CaseConnection
     Reference source : Case

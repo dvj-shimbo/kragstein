@@ -203,7 +203,7 @@ public interface KragsteinMethodPackage extends EPackage {
 	int BRANCH__TARGET_BRANCH_CONNECTION = 1;
 
 	/**
-	 * The feature id for the '<em><b>Route</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Route</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -653,13 +653,22 @@ public interface KragsteinMethodPackage extends EPackage {
 	int QUESTION__YES_BELOW = ICON_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>Route</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUESTION__ROUTE = ICON_FEATURE_COUNT + 3;
+
+	/**
 	 * The number of structural features of the '<em>Question</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int QUESTION_FEATURE_COUNT = ICON_FEATURE_COUNT + 3;
+	int QUESTION_FEATURE_COUNT = ICON_FEATURE_COUNT + 4;
 
 	/**
 	 * The meta object id for the '{@link KragsteinMethod.impl.ChoiceImpl <em>Choice</em>}' class.
@@ -735,13 +744,22 @@ public interface KragsteinMethodPackage extends EPackage {
 	int CHOICE__VALUE = ICON_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Choice</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Case</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CHOICE__CHOICE = ICON_FEATURE_COUNT + 2;
+	int CHOICE__CASE = ICON_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Default Case Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHOICE__DEFAULT_CASE_VALUE = ICON_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Choice</em>' class.
@@ -750,7 +768,7 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CHOICE_FEATURE_COUNT = ICON_FEATURE_COUNT + 3;
+	int CHOICE_FEATURE_COUNT = ICON_FEATURE_COUNT + 4;
 
 	/**
 	 * The meta object id for the '{@link KragsteinMethod.impl.CaseImpl <em>Case</em>}' class.
@@ -763,58 +781,13 @@ public interface KragsteinMethodPackage extends EPackage {
 	int CASE = 13;
 
 	/**
-	 * The feature id for the '<em><b>Source Icon Connection</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CASE__SOURCE_ICON_CONNECTION = ICON__SOURCE_ICON_CONNECTION;
-
-	/**
-	 * The feature id for the '<em><b>Target Icon Connection</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CASE__TARGET_ICON_CONNECTION = ICON__TARGET_ICON_CONNECTION;
-
-	/**
-	 * The feature id for the '<em><b>Valence Point</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CASE__VALENCE_POINT = ICON__VALENCE_POINT;
-
-	/**
-	 * The feature id for the '<em><b>Left Comment</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CASE__LEFT_COMMENT = ICON__LEFT_COMMENT;
-
-	/**
-	 * The feature id for the '<em><b>Right Comment</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CASE__RIGHT_COMMENT = ICON__RIGHT_COMMENT;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CASE__NAME = ICON_FEATURE_COUNT + 0;
+	int CASE__NAME = 0;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -823,7 +796,7 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CASE__VALUE = ICON_FEATURE_COUNT + 1;
+	int CASE__VALUE = 1;
 
 	/**
 	 * The feature id for the '<em><b>Source Case Connection</b></em>' containment reference.
@@ -832,7 +805,7 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CASE__SOURCE_CASE_CONNECTION = ICON_FEATURE_COUNT + 2;
+	int CASE__SOURCE_CASE_CONNECTION = 2;
 
 	/**
 	 * The feature id for the '<em><b>Target Case Connection</b></em>' containment reference.
@@ -841,7 +814,16 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CASE__TARGET_CASE_CONNECTION = ICON_FEATURE_COUNT + 3;
+	int CASE__TARGET_CASE_CONNECTION = 3;
+
+	/**
+	 * The feature id for the '<em><b>Route</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CASE__ROUTE = 4;
 
 	/**
 	 * The number of structural features of the '<em>Case</em>' class.
@@ -850,7 +832,7 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CASE_FEATURE_COUNT = ICON_FEATURE_COUNT + 4;
+	int CASE_FEATURE_COUNT = 5;
 
 	/**
 	 * The meta object id for the '{@link KragsteinMethod.impl.CaseConnectionImpl <em>Case Connection</em>}' class.
@@ -1953,10 +1935,10 @@ public interface KragsteinMethodPackage extends EPackage {
 	EReference getBranch_TargetBranchConnection();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link KragsteinMethod.Branch#getRoute <em>Route</em>}'.
+	 * Returns the meta object for the containment reference '{@link KragsteinMethod.Branch#getRoute <em>Route</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Route</em>'.
+	 * @return the meta object for the containment reference '<em>Route</em>'.
 	 * @see KragsteinMethod.Branch#getRoute()
 	 * @see #getBranch()
 	 * @generated
@@ -2274,6 +2256,17 @@ public interface KragsteinMethodPackage extends EPackage {
 	EAttribute getQuestion_YesBelow();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link KragsteinMethod.Question#getRoute <em>Route</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Route</em>'.
+	 * @see KragsteinMethod.Question#getRoute()
+	 * @see #getQuestion()
+	 * @generated
+	 */
+	EReference getQuestion_Route();
+
+	/**
 	 * Returns the meta object for class '{@link KragsteinMethod.Choice <em>Choice</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2306,15 +2299,26 @@ public interface KragsteinMethodPackage extends EPackage {
 	EAttribute getChoice_Value();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link KragsteinMethod.Choice#getChoice <em>Choice</em>}'.
+	 * Returns the meta object for the containment reference list '{@link KragsteinMethod.Choice#getCase <em>Case</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Choice</em>'.
-	 * @see KragsteinMethod.Choice#getChoice()
+	 * @return the meta object for the containment reference list '<em>Case</em>'.
+	 * @see KragsteinMethod.Choice#getCase()
 	 * @see #getChoice()
 	 * @generated
 	 */
-	EReference getChoice_Choice();
+	EReference getChoice_Case();
+
+	/**
+	 * Returns the meta object for the attribute '{@link KragsteinMethod.Choice#getDefaultCaseValue <em>Default Case Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Default Case Value</em>'.
+	 * @see KragsteinMethod.Choice#getDefaultCaseValue()
+	 * @see #getChoice()
+	 * @generated
+	 */
+	EAttribute getChoice_DefaultCaseValue();
 
 	/**
 	 * Returns the meta object for class '{@link KragsteinMethod.Case <em>Case</em>}'.
@@ -2369,6 +2373,17 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getCase_TargetCaseConnection();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link KragsteinMethod.Case#getRoute <em>Route</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Route</em>'.
+	 * @see KragsteinMethod.Case#getRoute()
+	 * @see #getCase()
+	 * @generated
+	 */
+	EReference getCase_Route();
 
 	/**
 	 * Returns the meta object for class '{@link KragsteinMethod.CaseConnection <em>Case Connection</em>}'.
@@ -2906,7 +2921,7 @@ public interface KragsteinMethodPackage extends EPackage {
 		EReference BRANCH__TARGET_BRANCH_CONNECTION = eINSTANCE.getBranch_TargetBranchConnection();
 
 		/**
-		 * The meta object literal for the '<em><b>Route</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Route</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -3164,6 +3179,14 @@ public interface KragsteinMethodPackage extends EPackage {
 		EAttribute QUESTION__YES_BELOW = eINSTANCE.getQuestion_YesBelow();
 
 		/**
+		 * The meta object literal for the '<em><b>Route</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference QUESTION__ROUTE = eINSTANCE.getQuestion_Route();
+
+		/**
 		 * The meta object literal for the '{@link KragsteinMethod.impl.ChoiceImpl <em>Choice</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3190,12 +3213,20 @@ public interface KragsteinMethodPackage extends EPackage {
 		EAttribute CHOICE__VALUE = eINSTANCE.getChoice_Value();
 
 		/**
-		 * The meta object literal for the '<em><b>Choice</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Case</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CHOICE__CHOICE = eINSTANCE.getChoice_Choice();
+		EReference CHOICE__CASE = eINSTANCE.getChoice_Case();
+
+		/**
+		 * The meta object literal for the '<em><b>Default Case Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CHOICE__DEFAULT_CASE_VALUE = eINSTANCE.getChoice_DefaultCaseValue();
 
 		/**
 		 * The meta object literal for the '{@link KragsteinMethod.impl.CaseImpl <em>Case</em>}' class.
@@ -3238,6 +3269,14 @@ public interface KragsteinMethodPackage extends EPackage {
 		 * @generated
 		 */
 		EReference CASE__TARGET_CASE_CONNECTION = eINSTANCE.getCase_TargetCaseConnection();
+
+		/**
+		 * The meta object literal for the '<em><b>Route</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CASE__ROUTE = eINSTANCE.getCase_Route();
 
 		/**
 		 * The meta object literal for the '{@link KragsteinMethod.impl.CaseConnectionImpl <em>Case Connection</em>}' class.

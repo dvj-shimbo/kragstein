@@ -258,7 +258,7 @@
          </object>
          <context viewClass="org.eclipse.gmf.runtime.notation.Node" containerViews="referencing-diagrams"/>
          <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="KragsteinMethod"/>
-         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2001,2002,3001,3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2001,2002,3001,3002,3003,3017,3004,3018,3019,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016"/>
          <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4001,4002,4003,4004,4005,4006"/>
       </viewProvider>
    </extension>
@@ -271,16 +271,16 @@
             <method name="getType()" value="KragsteinMethod"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-nodes">
-            <method name="getType()" value="2001,2002,3001,3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016"/>
+            <method name="getType()" value="2001,2002,3001,3002,3003,3017,3004,3018,3019,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Edge" id="generated-links">
             <method name="getType()" value="4001,4002,4003,4004,4005,4006"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-labels">
-            <method name="getType()" value="5001,5002"/>
+            <method name="getType()" value="5001,5002,5003"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-compartments">
-            <method name="getType()" value="7001,7002"/>
+            <method name="getType()" value="7001,7002,7003,7004,7005,7006,7007"/>
          </object>
          <context views="generated-diagram,generated-nodes,generated-links,generated-labels,generated-compartments"/>
       </editpartProvider>
@@ -319,6 +319,11 @@
          <object class="KragsteinMethod.diagram.edit.parts.QuestionEditPart" id="Question_3003"/>
          <context elements="Question_3003"/>
       </modelingAssistantProvider>
+            <modelingAssistantProvider class="KragsteinMethod.diagram.providers.assistants.KragsteinMethodModelingAssistantProviderOfRoute2EditPart">
+         <Priority name="Lowest"/>
+         <object class="KragsteinMethod.diagram.edit.parts.Route2EditPart" id="Route_3017"/>
+         <context elements="Route_3017"/>
+      </modelingAssistantProvider>
             <modelingAssistantProvider class="KragsteinMethod.diagram.providers.assistants.KragsteinMethodModelingAssistantProviderOfChoiceEditPart">
          <Priority name="Lowest"/>
          <object class="KragsteinMethod.diagram.edit.parts.ChoiceEditPart" id="Choice_3004"/>
@@ -326,8 +331,13 @@
       </modelingAssistantProvider>
             <modelingAssistantProvider class="KragsteinMethod.diagram.providers.assistants.KragsteinMethodModelingAssistantProviderOfCaseEditPart">
          <Priority name="Lowest"/>
-         <object class="KragsteinMethod.diagram.edit.parts.CaseEditPart" id="Case_3005"/>
-         <context elements="Case_3005"/>
+         <object class="KragsteinMethod.diagram.edit.parts.CaseEditPart" id="Case_3018"/>
+         <context elements="Case_3018"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="KragsteinMethod.diagram.providers.assistants.KragsteinMethodModelingAssistantProviderOfRoute3EditPart">
+         <Priority name="Lowest"/>
+         <object class="KragsteinMethod.diagram.edit.parts.Route3EditPart" id="Route_3019"/>
+         <context elements="Route_3019"/>
       </modelingAssistantProvider>
             <modelingAssistantProvider class="KragsteinMethod.diagram.providers.assistants.KragsteinMethodModelingAssistantProviderOfHeadlineEditPart">
          <Priority name="Lowest"/>
@@ -476,6 +486,15 @@
          </metamodelType>
       </metamodel>
       <metamodel nsURI="KragsteinMethod.ecore">
+         <specializationType
+               id="KMethod.diagram.Route_3017"
+               name="%metatype.name.Route_3017"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="KMethod.diagram.Route_3001"/>
+            <param name="semanticHint" value="3017"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="KragsteinMethod.ecore">
          <metamodelType
                id="KMethod.diagram.Choice_3004"
                name="%metatype.name.Choice_3004"
@@ -487,13 +506,22 @@
       </metamodel>
       <metamodel nsURI="KragsteinMethod.ecore">
          <metamodelType
-               id="KMethod.diagram.Case_3005"
-               name="%metatype.name.Case_3005"
+               id="KMethod.diagram.Case_3018"
+               name="%metatype.name.Case_3018"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="Case"
                edithelper="KragsteinMethod.diagram.edit.helpers.CaseEditHelper">
-            <param name="semanticHint" value="3005"/>
+            <param name="semanticHint" value="3018"/>
          </metamodelType>
+      </metamodel>
+      <metamodel nsURI="KragsteinMethod.ecore">
+         <specializationType
+               id="KMethod.diagram.Route_3019"
+               name="%metatype.name.Route_3019"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="KMethod.diagram.Route_3001"/>
+            <param name="semanticHint" value="3019"/>
+         </specializationType>
       </metamodel>
       <metamodel nsURI="KragsteinMethod.ecore">
          <metamodelType
@@ -680,8 +708,10 @@
          <elementType ref="KMethod.diagram.Route_3001"/>
          <elementType ref="KMethod.diagram.Action_3002"/>
          <elementType ref="KMethod.diagram.Question_3003"/>
+         <elementType ref="KMethod.diagram.Route_3017"/>
          <elementType ref="KMethod.diagram.Choice_3004"/>
-         <elementType ref="KMethod.diagram.Case_3005"/>
+         <elementType ref="KMethod.diagram.Case_3018"/>
+         <elementType ref="KMethod.diagram.Route_3019"/>
          <elementType ref="KMethod.diagram.Headline_3006"/>
          <elementType ref="KMethod.diagram.Adress_3007"/>
          <elementType ref="KMethod.diagram.Insertion_3008"/>

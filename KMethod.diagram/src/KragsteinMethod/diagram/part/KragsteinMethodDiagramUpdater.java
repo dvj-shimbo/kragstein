@@ -42,6 +42,16 @@ public class KragsteinMethodDiagramUpdater {
 			return getBranchBranchRouteCompartment_7001SemanticChildren(view);
 		case KragsteinMethod.diagram.edit.parts.RouteRouteIconCompartmentEditPart.VISUAL_ID:
 			return getRouteRouteIconCompartment_7002SemanticChildren(view);
+		case KragsteinMethod.diagram.edit.parts.QuestionQuestionRouteCompartmentEditPart.VISUAL_ID:
+			return getQuestionQuestionRouteCompartment_7003SemanticChildren(view);
+		case KragsteinMethod.diagram.edit.parts.RouteRouteIconCompartment2EditPart.VISUAL_ID:
+			return getRouteRouteIconCompartment_7004SemanticChildren(view);
+		case KragsteinMethod.diagram.edit.parts.ChoiceChoiceCaseCompartmentEditPart.VISUAL_ID:
+			return getChoiceChoiceCaseCompartment_7005SemanticChildren(view);
+		case KragsteinMethod.diagram.edit.parts.CaseCaseRouteCompartmentEditPart.VISUAL_ID:
+			return getCaseCaseRouteCompartment_7006SemanticChildren(view);
+		case KragsteinMethod.diagram.edit.parts.RouteRouteIconCompartment3EditPart.VISUAL_ID:
+			return getRouteRouteIconCompartment_7007SemanticChildren(view);
 		}
 		return Collections.emptyList();
 	}
@@ -95,15 +105,13 @@ public class KragsteinMethodDiagramUpdater {
 		KragsteinMethod.Branch modelElement = (KragsteinMethod.Branch) containerView
 				.getElement();
 		LinkedList<KragsteinMethod.diagram.part.KragsteinMethodNodeDescriptor> result = new LinkedList<KragsteinMethod.diagram.part.KragsteinMethodNodeDescriptor>();
-		for (Iterator<?> it = modelElement.getRoute().iterator(); it.hasNext();) {
-			KragsteinMethod.Route childElement = (KragsteinMethod.Route) it
-					.next();
+		{
+			KragsteinMethod.Route childElement = modelElement.getRoute();
 			int visualID = KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
 					.getNodeVisualID(view, childElement);
 			if (visualID == KragsteinMethod.diagram.edit.parts.RouteEditPart.VISUAL_ID) {
 				result.add(new KragsteinMethod.diagram.part.KragsteinMethodNodeDescriptor(
 						childElement, visualID));
-				continue;
 			}
 		}
 		return result;
@@ -144,7 +152,273 @@ public class KragsteinMethodDiagramUpdater {
 						childElement, visualID));
 				continue;
 			}
+			if (visualID == KragsteinMethod.diagram.edit.parts.HeadlineEditPart.VISUAL_ID) {
+				result.add(new KragsteinMethod.diagram.part.KragsteinMethodNodeDescriptor(
+						childElement, visualID));
+				continue;
+			}
+			if (visualID == KragsteinMethod.diagram.edit.parts.AdressEditPart.VISUAL_ID) {
+				result.add(new KragsteinMethod.diagram.part.KragsteinMethodNodeDescriptor(
+						childElement, visualID));
+				continue;
+			}
+			if (visualID == KragsteinMethod.diagram.edit.parts.InsertionEditPart.VISUAL_ID) {
+				result.add(new KragsteinMethod.diagram.part.KragsteinMethodNodeDescriptor(
+						childElement, visualID));
+				continue;
+			}
+			if (visualID == KragsteinMethod.diagram.edit.parts.ShelfEditPart.VISUAL_ID) {
+				result.add(new KragsteinMethod.diagram.part.KragsteinMethodNodeDescriptor(
+						childElement, visualID));
+				continue;
+			}
+			if (visualID == KragsteinMethod.diagram.edit.parts.BeginLoopEditPart.VISUAL_ID) {
+				result.add(new KragsteinMethod.diagram.part.KragsteinMethodNodeDescriptor(
+						childElement, visualID));
+				continue;
+			}
+			if (visualID == KragsteinMethod.diagram.edit.parts.EndLoopEditPart.VISUAL_ID) {
+				result.add(new KragsteinMethod.diagram.part.KragsteinMethodNodeDescriptor(
+						childElement, visualID));
+				continue;
+			}
+			if (visualID == KragsteinMethod.diagram.edit.parts.OutputEditPart.VISUAL_ID) {
+				result.add(new KragsteinMethod.diagram.part.KragsteinMethodNodeDescriptor(
+						childElement, visualID));
+				continue;
+			}
+			if (visualID == KragsteinMethod.diagram.edit.parts.InputEditPart.VISUAL_ID) {
+				result.add(new KragsteinMethod.diagram.part.KragsteinMethodNodeDescriptor(
+						childElement, visualID));
+				continue;
+			}
+			if (visualID == KragsteinMethod.diagram.edit.parts.LoopArrowEditPart.VISUAL_ID) {
+				result.add(new KragsteinMethod.diagram.part.KragsteinMethodNodeDescriptor(
+						childElement, visualID));
+				continue;
+			}
+			if (visualID == KragsteinMethod.diagram.edit.parts.EmptyConnectorEditPart.VISUAL_ID) {
+				result.add(new KragsteinMethod.diagram.part.KragsteinMethodNodeDescriptor(
+						childElement, visualID));
+				continue;
+			}
+			if (visualID == KragsteinMethod.diagram.edit.parts.EndEditPart.VISUAL_ID) {
+				result.add(new KragsteinMethod.diagram.part.KragsteinMethodNodeDescriptor(
+						childElement, visualID));
+				continue;
+			}
+		}
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<KragsteinMethod.diagram.part.KragsteinMethodNodeDescriptor> getQuestionQuestionRouteCompartment_7003SemanticChildren(
+			View view) {
+		if (false == view.eContainer() instanceof View) {
+			return Collections.emptyList();
+		}
+		View containerView = (View) view.eContainer();
+		if (!containerView.isSetElement()) {
+			return Collections.emptyList();
+		}
+		KragsteinMethod.Question modelElement = (KragsteinMethod.Question) containerView
+				.getElement();
+		LinkedList<KragsteinMethod.diagram.part.KragsteinMethodNodeDescriptor> result = new LinkedList<KragsteinMethod.diagram.part.KragsteinMethodNodeDescriptor>();
+		{
+			KragsteinMethod.Route childElement = modelElement.getRoute();
+			int visualID = KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+					.getNodeVisualID(view, childElement);
+			if (visualID == KragsteinMethod.diagram.edit.parts.Route2EditPart.VISUAL_ID) {
+				result.add(new KragsteinMethod.diagram.part.KragsteinMethodNodeDescriptor(
+						childElement, visualID));
+			}
+		}
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<KragsteinMethod.diagram.part.KragsteinMethodNodeDescriptor> getRouteRouteIconCompartment_7004SemanticChildren(
+			View view) {
+		if (false == view.eContainer() instanceof View) {
+			return Collections.emptyList();
+		}
+		View containerView = (View) view.eContainer();
+		if (!containerView.isSetElement()) {
+			return Collections.emptyList();
+		}
+		KragsteinMethod.Route modelElement = (KragsteinMethod.Route) containerView
+				.getElement();
+		LinkedList<KragsteinMethod.diagram.part.KragsteinMethodNodeDescriptor> result = new LinkedList<KragsteinMethod.diagram.part.KragsteinMethodNodeDescriptor>();
+		for (Iterator<?> it = modelElement.getIcon().iterator(); it.hasNext();) {
+			KragsteinMethod.Icon childElement = (KragsteinMethod.Icon) it
+					.next();
+			int visualID = KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+					.getNodeVisualID(view, childElement);
+			if (visualID == KragsteinMethod.diagram.edit.parts.ActionEditPart.VISUAL_ID) {
+				result.add(new KragsteinMethod.diagram.part.KragsteinMethodNodeDescriptor(
+						childElement, visualID));
+				continue;
+			}
+			if (visualID == KragsteinMethod.diagram.edit.parts.QuestionEditPart.VISUAL_ID) {
+				result.add(new KragsteinMethod.diagram.part.KragsteinMethodNodeDescriptor(
+						childElement, visualID));
+				continue;
+			}
+			if (visualID == KragsteinMethod.diagram.edit.parts.ChoiceEditPart.VISUAL_ID) {
+				result.add(new KragsteinMethod.diagram.part.KragsteinMethodNodeDescriptor(
+						childElement, visualID));
+				continue;
+			}
+			if (visualID == KragsteinMethod.diagram.edit.parts.HeadlineEditPart.VISUAL_ID) {
+				result.add(new KragsteinMethod.diagram.part.KragsteinMethodNodeDescriptor(
+						childElement, visualID));
+				continue;
+			}
+			if (visualID == KragsteinMethod.diagram.edit.parts.AdressEditPart.VISUAL_ID) {
+				result.add(new KragsteinMethod.diagram.part.KragsteinMethodNodeDescriptor(
+						childElement, visualID));
+				continue;
+			}
+			if (visualID == KragsteinMethod.diagram.edit.parts.InsertionEditPart.VISUAL_ID) {
+				result.add(new KragsteinMethod.diagram.part.KragsteinMethodNodeDescriptor(
+						childElement, visualID));
+				continue;
+			}
+			if (visualID == KragsteinMethod.diagram.edit.parts.ShelfEditPart.VISUAL_ID) {
+				result.add(new KragsteinMethod.diagram.part.KragsteinMethodNodeDescriptor(
+						childElement, visualID));
+				continue;
+			}
+			if (visualID == KragsteinMethod.diagram.edit.parts.BeginLoopEditPart.VISUAL_ID) {
+				result.add(new KragsteinMethod.diagram.part.KragsteinMethodNodeDescriptor(
+						childElement, visualID));
+				continue;
+			}
+			if (visualID == KragsteinMethod.diagram.edit.parts.EndLoopEditPart.VISUAL_ID) {
+				result.add(new KragsteinMethod.diagram.part.KragsteinMethodNodeDescriptor(
+						childElement, visualID));
+				continue;
+			}
+			if (visualID == KragsteinMethod.diagram.edit.parts.OutputEditPart.VISUAL_ID) {
+				result.add(new KragsteinMethod.diagram.part.KragsteinMethodNodeDescriptor(
+						childElement, visualID));
+				continue;
+			}
+			if (visualID == KragsteinMethod.diagram.edit.parts.InputEditPart.VISUAL_ID) {
+				result.add(new KragsteinMethod.diagram.part.KragsteinMethodNodeDescriptor(
+						childElement, visualID));
+				continue;
+			}
+			if (visualID == KragsteinMethod.diagram.edit.parts.LoopArrowEditPart.VISUAL_ID) {
+				result.add(new KragsteinMethod.diagram.part.KragsteinMethodNodeDescriptor(
+						childElement, visualID));
+				continue;
+			}
+			if (visualID == KragsteinMethod.diagram.edit.parts.EmptyConnectorEditPart.VISUAL_ID) {
+				result.add(new KragsteinMethod.diagram.part.KragsteinMethodNodeDescriptor(
+						childElement, visualID));
+				continue;
+			}
+			if (visualID == KragsteinMethod.diagram.edit.parts.EndEditPart.VISUAL_ID) {
+				result.add(new KragsteinMethod.diagram.part.KragsteinMethodNodeDescriptor(
+						childElement, visualID));
+				continue;
+			}
+		}
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<KragsteinMethod.diagram.part.KragsteinMethodNodeDescriptor> getChoiceChoiceCaseCompartment_7005SemanticChildren(
+			View view) {
+		if (false == view.eContainer() instanceof View) {
+			return Collections.emptyList();
+		}
+		View containerView = (View) view.eContainer();
+		if (!containerView.isSetElement()) {
+			return Collections.emptyList();
+		}
+		KragsteinMethod.Choice modelElement = (KragsteinMethod.Choice) containerView
+				.getElement();
+		LinkedList<KragsteinMethod.diagram.part.KragsteinMethodNodeDescriptor> result = new LinkedList<KragsteinMethod.diagram.part.KragsteinMethodNodeDescriptor>();
+		for (Iterator<?> it = modelElement.getCase().iterator(); it.hasNext();) {
+			KragsteinMethod.Case childElement = (KragsteinMethod.Case) it
+					.next();
+			int visualID = KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+					.getNodeVisualID(view, childElement);
 			if (visualID == KragsteinMethod.diagram.edit.parts.CaseEditPart.VISUAL_ID) {
+				result.add(new KragsteinMethod.diagram.part.KragsteinMethodNodeDescriptor(
+						childElement, visualID));
+				continue;
+			}
+		}
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<KragsteinMethod.diagram.part.KragsteinMethodNodeDescriptor> getCaseCaseRouteCompartment_7006SemanticChildren(
+			View view) {
+		if (false == view.eContainer() instanceof View) {
+			return Collections.emptyList();
+		}
+		View containerView = (View) view.eContainer();
+		if (!containerView.isSetElement()) {
+			return Collections.emptyList();
+		}
+		KragsteinMethod.Case modelElement = (KragsteinMethod.Case) containerView
+				.getElement();
+		LinkedList<KragsteinMethod.diagram.part.KragsteinMethodNodeDescriptor> result = new LinkedList<KragsteinMethod.diagram.part.KragsteinMethodNodeDescriptor>();
+		{
+			KragsteinMethod.Route childElement = modelElement.getRoute();
+			int visualID = KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+					.getNodeVisualID(view, childElement);
+			if (visualID == KragsteinMethod.diagram.edit.parts.Route3EditPart.VISUAL_ID) {
+				result.add(new KragsteinMethod.diagram.part.KragsteinMethodNodeDescriptor(
+						childElement, visualID));
+			}
+		}
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<KragsteinMethod.diagram.part.KragsteinMethodNodeDescriptor> getRouteRouteIconCompartment_7007SemanticChildren(
+			View view) {
+		if (false == view.eContainer() instanceof View) {
+			return Collections.emptyList();
+		}
+		View containerView = (View) view.eContainer();
+		if (!containerView.isSetElement()) {
+			return Collections.emptyList();
+		}
+		KragsteinMethod.Route modelElement = (KragsteinMethod.Route) containerView
+				.getElement();
+		LinkedList<KragsteinMethod.diagram.part.KragsteinMethodNodeDescriptor> result = new LinkedList<KragsteinMethod.diagram.part.KragsteinMethodNodeDescriptor>();
+		for (Iterator<?> it = modelElement.getIcon().iterator(); it.hasNext();) {
+			KragsteinMethod.Icon childElement = (KragsteinMethod.Icon) it
+					.next();
+			int visualID = KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+					.getNodeVisualID(view, childElement);
+			if (visualID == KragsteinMethod.diagram.edit.parts.ActionEditPart.VISUAL_ID) {
+				result.add(new KragsteinMethod.diagram.part.KragsteinMethodNodeDescriptor(
+						childElement, visualID));
+				continue;
+			}
+			if (visualID == KragsteinMethod.diagram.edit.parts.QuestionEditPart.VISUAL_ID) {
+				result.add(new KragsteinMethod.diagram.part.KragsteinMethodNodeDescriptor(
+						childElement, visualID));
+				continue;
+			}
+			if (visualID == KragsteinMethod.diagram.edit.parts.ChoiceEditPart.VISUAL_ID) {
 				result.add(new KragsteinMethod.diagram.part.KragsteinMethodNodeDescriptor(
 						childElement, visualID));
 				continue;
@@ -227,10 +501,14 @@ public class KragsteinMethodDiagramUpdater {
 			return getAction_3002ContainedLinks(view);
 		case KragsteinMethod.diagram.edit.parts.QuestionEditPart.VISUAL_ID:
 			return getQuestion_3003ContainedLinks(view);
+		case KragsteinMethod.diagram.edit.parts.Route2EditPart.VISUAL_ID:
+			return getRoute_3017ContainedLinks(view);
 		case KragsteinMethod.diagram.edit.parts.ChoiceEditPart.VISUAL_ID:
 			return getChoice_3004ContainedLinks(view);
 		case KragsteinMethod.diagram.edit.parts.CaseEditPart.VISUAL_ID:
-			return getCase_3005ContainedLinks(view);
+			return getCase_3018ContainedLinks(view);
+		case KragsteinMethod.diagram.edit.parts.Route3EditPart.VISUAL_ID:
+			return getRoute_3019ContainedLinks(view);
 		case KragsteinMethod.diagram.edit.parts.HeadlineEditPart.VISUAL_ID:
 			return getHeadline_3006ContainedLinks(view);
 		case KragsteinMethod.diagram.edit.parts.AdressEditPart.VISUAL_ID:
@@ -286,10 +564,14 @@ public class KragsteinMethodDiagramUpdater {
 			return getAction_3002IncomingLinks(view);
 		case KragsteinMethod.diagram.edit.parts.QuestionEditPart.VISUAL_ID:
 			return getQuestion_3003IncomingLinks(view);
+		case KragsteinMethod.diagram.edit.parts.Route2EditPart.VISUAL_ID:
+			return getRoute_3017IncomingLinks(view);
 		case KragsteinMethod.diagram.edit.parts.ChoiceEditPart.VISUAL_ID:
 			return getChoice_3004IncomingLinks(view);
 		case KragsteinMethod.diagram.edit.parts.CaseEditPart.VISUAL_ID:
-			return getCase_3005IncomingLinks(view);
+			return getCase_3018IncomingLinks(view);
+		case KragsteinMethod.diagram.edit.parts.Route3EditPart.VISUAL_ID:
+			return getRoute_3019IncomingLinks(view);
 		case KragsteinMethod.diagram.edit.parts.HeadlineEditPart.VISUAL_ID:
 			return getHeadline_3006IncomingLinks(view);
 		case KragsteinMethod.diagram.edit.parts.AdressEditPart.VISUAL_ID:
@@ -345,10 +627,14 @@ public class KragsteinMethodDiagramUpdater {
 			return getAction_3002OutgoingLinks(view);
 		case KragsteinMethod.diagram.edit.parts.QuestionEditPart.VISUAL_ID:
 			return getQuestion_3003OutgoingLinks(view);
+		case KragsteinMethod.diagram.edit.parts.Route2EditPart.VISUAL_ID:
+			return getRoute_3017OutgoingLinks(view);
 		case KragsteinMethod.diagram.edit.parts.ChoiceEditPart.VISUAL_ID:
 			return getChoice_3004OutgoingLinks(view);
 		case KragsteinMethod.diagram.edit.parts.CaseEditPart.VISUAL_ID:
-			return getCase_3005OutgoingLinks(view);
+			return getCase_3018OutgoingLinks(view);
+		case KragsteinMethod.diagram.edit.parts.Route3EditPart.VISUAL_ID:
+			return getRoute_3019OutgoingLinks(view);
 		case KragsteinMethod.diagram.edit.parts.HeadlineEditPart.VISUAL_ID:
 			return getHeadline_3006OutgoingLinks(view);
 		case KragsteinMethod.diagram.edit.parts.AdressEditPart.VISUAL_ID:
@@ -453,6 +739,14 @@ public class KragsteinMethodDiagramUpdater {
 	/**
 	 * @generated
 	 */
+	public static List<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> getRoute_3017ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
 	public static List<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> getChoice_3004ContainedLinks(
 			View view) {
 		KragsteinMethod.Choice modelElement = (KragsteinMethod.Choice) view
@@ -466,16 +760,22 @@ public class KragsteinMethodDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> getCase_3005ContainedLinks(
+	public static List<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> getCase_3018ContainedLinks(
 			View view) {
 		KragsteinMethod.Case modelElement = (KragsteinMethod.Case) view
 				.getElement();
 		LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> result = new LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor>();
-		result.addAll(getContainedTypeModelFacetLinks_IconConnection_4003(modelElement));
-		result.addAll(getContainedTypeModelFacetLinks_IconConnection_4004(modelElement));
 		result.addAll(getContainedTypeModelFacetLinks_CaseConnection_4005(modelElement));
 		result.addAll(getContainedTypeModelFacetLinks_CaseConnection_4006(modelElement));
 		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> getRoute_3019ContainedLinks(
+			View view) {
+		return Collections.emptyList();
 	}
 
 	/**
@@ -739,6 +1039,14 @@ public class KragsteinMethodDiagramUpdater {
 	/**
 	 * @generated
 	 */
+	public static List<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> getRoute_3017IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
 	public static List<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> getChoice_3004IncomingLinks(
 			View view) {
 		KragsteinMethod.Choice modelElement = (KragsteinMethod.Choice) view
@@ -756,22 +1064,26 @@ public class KragsteinMethodDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> getCase_3005IncomingLinks(
+	public static List<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> getCase_3018IncomingLinks(
 			View view) {
 		KragsteinMethod.Case modelElement = (KragsteinMethod.Case) view
 				.getElement();
 		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
 				.find(view.eResource().getResourceSet().getResources());
 		LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> result = new LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor>();
-		result.addAll(getIncomingTypeModelFacetLinks_IconConnection_4003(
-				modelElement, crossReferences));
-		result.addAll(getIncomingTypeModelFacetLinks_IconConnection_4004(
-				modelElement, crossReferences));
 		result.addAll(getIncomingTypeModelFacetLinks_CaseConnection_4005(
 				modelElement, crossReferences));
 		result.addAll(getIncomingTypeModelFacetLinks_CaseConnection_4006(
 				modelElement, crossReferences));
 		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> getRoute_3019IncomingLinks(
+			View view) {
+		return Collections.emptyList();
 	}
 
 	/**
@@ -1067,6 +1379,14 @@ public class KragsteinMethodDiagramUpdater {
 	/**
 	 * @generated
 	 */
+	public static List<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> getRoute_3017OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
 	public static List<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> getChoice_3004OutgoingLinks(
 			View view) {
 		KragsteinMethod.Choice modelElement = (KragsteinMethod.Choice) view
@@ -1080,16 +1400,22 @@ public class KragsteinMethodDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> getCase_3005OutgoingLinks(
+	public static List<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> getCase_3018OutgoingLinks(
 			View view) {
 		KragsteinMethod.Case modelElement = (KragsteinMethod.Case) view
 				.getElement();
 		LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> result = new LinkedList<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor>();
-		result.addAll(getOutgoingTypeModelFacetLinks_IconConnection_4003(modelElement));
-		result.addAll(getOutgoingTypeModelFacetLinks_IconConnection_4004(modelElement));
 		result.addAll(getOutgoingTypeModelFacetLinks_CaseConnection_4005(modelElement));
 		result.addAll(getOutgoingTypeModelFacetLinks_CaseConnection_4006(modelElement));
 		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<KragsteinMethod.diagram.part.KragsteinMethodLinkDescriptor> getRoute_3019OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
 	}
 
 	/**

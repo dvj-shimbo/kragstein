@@ -63,12 +63,33 @@ public class KragsteinMethodParserProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
+	private IParser caseName_5003Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getCaseName_5003Parser() {
+		if (caseName_5003Parser == null) {
+			EAttribute[] features = new EAttribute[] { KragsteinMethod.KragsteinMethodPackage.eINSTANCE
+					.getCase_Name() };
+			KragsteinMethod.diagram.parsers.MessageFormatParser parser = new KragsteinMethod.diagram.parsers.MessageFormatParser(
+					features);
+			caseName_5003Parser = parser;
+		}
+		return caseName_5003Parser;
+	}
+
+	/**
+	 * @generated
+	 */
 	protected IParser getParser(int visualID) {
 		switch (visualID) {
 		case KragsteinMethod.diagram.edit.parts.HeaderNameEditPart.VISUAL_ID:
 			return getHeaderName_5001Parser();
 		case KragsteinMethod.diagram.edit.parts.BranchNameEditPart.VISUAL_ID:
 			return getBranchName_5002Parser();
+		case KragsteinMethod.diagram.edit.parts.CaseNameEditPart.VISUAL_ID:
+			return getCaseName_5003Parser();
 		}
 		return null;
 	}

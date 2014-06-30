@@ -5,6 +5,7 @@
 package KragsteinMethod.validation;
 
 import KragsteinMethod.Route;
+import org.eclipse.emf.common.util.EList;
 
 /**
  * A sample validator interface for {@link KragsteinMethod.Question}.
@@ -19,4 +20,6 @@ public interface QuestionValidator {
 	boolean validateRoute(Route value);
 	boolean validateValue(String value);
 	boolean validateYesBelow(boolean value);
+
+	boolean validateRoute(EList<Route> value);
 }

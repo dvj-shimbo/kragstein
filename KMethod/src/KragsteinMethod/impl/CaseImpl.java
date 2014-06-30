@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,12 +27,13 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link KragsteinMethod.impl.CaseImpl#getValue <em>Value</em>}</li>
  *   <li>{@link KragsteinMethod.impl.CaseImpl#getSourceCaseConnection <em>Source Case Connection</em>}</li>
  *   <li>{@link KragsteinMethod.impl.CaseImpl#getTargetCaseConnection <em>Target Case Connection</em>}</li>
+ *   <li>{@link KragsteinMethod.impl.CaseImpl#getRoute <em>Route</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class CaseImpl extends IconImpl implements Case {
+public class CaseImpl extends EObjectImpl implements Case {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -91,6 +93,16 @@ public class CaseImpl extends IconImpl implements Case {
 	 * @ordered
 	 */
 	protected CaseConnection targetCaseConnection;
+
+	/**
+	 * The cached value of the '{@link #getRoute() <em>Route</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRoute()
+	 * @generated
+	 * @ordered
+	 */
+	protected Route route;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -244,6 +256,49 @@ public class CaseImpl extends IconImpl implements Case {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Route getRoute() {
+		return route;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetRoute(Route newRoute, NotificationChain msgs) {
+		Route oldRoute = route;
+		route = newRoute;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, KragsteinMethodPackage.CASE__ROUTE, oldRoute, newRoute);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setRoute(Route newRoute) {
+		if (newRoute != route) {
+			NotificationChain msgs = null;
+			if (route != null)
+				msgs = ((InternalEObject)route).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - KragsteinMethodPackage.CASE__ROUTE, null, msgs);
+			if (newRoute != null)
+				msgs = ((InternalEObject)newRoute).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - KragsteinMethodPackage.CASE__ROUTE, null, msgs);
+			msgs = basicSetRoute(newRoute, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, KragsteinMethodPackage.CASE__ROUTE, newRoute, newRoute));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -251,6 +306,8 @@ public class CaseImpl extends IconImpl implements Case {
 				return basicSetSourceCaseConnection(null, msgs);
 			case KragsteinMethodPackage.CASE__TARGET_CASE_CONNECTION:
 				return basicSetTargetCaseConnection(null, msgs);
+			case KragsteinMethodPackage.CASE__ROUTE:
+				return basicSetRoute(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -271,6 +328,8 @@ public class CaseImpl extends IconImpl implements Case {
 				return getSourceCaseConnection();
 			case KragsteinMethodPackage.CASE__TARGET_CASE_CONNECTION:
 				return getTargetCaseConnection();
+			case KragsteinMethodPackage.CASE__ROUTE:
+				return getRoute();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -294,6 +353,9 @@ public class CaseImpl extends IconImpl implements Case {
 				return;
 			case KragsteinMethodPackage.CASE__TARGET_CASE_CONNECTION:
 				setTargetCaseConnection((CaseConnection)newValue);
+				return;
+			case KragsteinMethodPackage.CASE__ROUTE:
+				setRoute((Route)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -319,6 +381,9 @@ public class CaseImpl extends IconImpl implements Case {
 			case KragsteinMethodPackage.CASE__TARGET_CASE_CONNECTION:
 				setTargetCaseConnection((CaseConnection)null);
 				return;
+			case KragsteinMethodPackage.CASE__ROUTE:
+				setRoute((Route)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -339,6 +404,8 @@ public class CaseImpl extends IconImpl implements Case {
 				return sourceCaseConnection != null;
 			case KragsteinMethodPackage.CASE__TARGET_CASE_CONNECTION:
 				return targetCaseConnection != null;
+			case KragsteinMethodPackage.CASE__ROUTE:
+				return route != null;
 		}
 		return super.eIsSet(featureID);
 	}

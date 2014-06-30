@@ -384,16 +384,6 @@ public class KragsteinMethodNavigatorContentProvider implements
 			connectedViews = getChildrenByType(
 					connectedViews,
 					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
-							.getType(KragsteinMethod.diagram.edit.parts.CaseEditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			connectedViews = getChildrenByType(
-					Collections.singleton(sv),
-					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
-							.getType(KragsteinMethod.diagram.edit.parts.RouteRouteIconCompartmentEditPart.VISUAL_ID));
-			connectedViews = getChildrenByType(
-					connectedViews,
-					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
 							.getType(KragsteinMethod.diagram.edit.parts.HeadlineEditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement,
 					false));
@@ -553,6 +543,16 @@ public class KragsteinMethodNavigatorContentProvider implements
 					KragsteinMethod.diagram.part.Messages.NavigatorGroupName_Question_3003_outgoinglinks,
 					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
+			connectedViews = getChildrenByType(
+					Collections.singleton(sv),
+					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+							.getType(KragsteinMethod.diagram.edit.parts.QuestionQuestionRouteCompartmentEditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(
+					connectedViews,
+					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+							.getType(KragsteinMethod.diagram.edit.parts.Route2EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
 			connectedViews = getIncomingLinksByType(
 					Collections.singleton(sv),
 					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
@@ -596,6 +596,16 @@ public class KragsteinMethodNavigatorContentProvider implements
 					KragsteinMethod.diagram.part.Messages.NavigatorGroupName_Choice_3004_outgoinglinks,
 					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
+			connectedViews = getChildrenByType(
+					Collections.singleton(sv),
+					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+							.getType(KragsteinMethod.diagram.edit.parts.ChoiceChoiceCaseCompartmentEditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(
+					connectedViews,
+					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+							.getType(KragsteinMethod.diagram.edit.parts.CaseEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
 			connectedViews = getIncomingLinksByType(
 					Collections.singleton(sv),
 					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
@@ -618,73 +628,6 @@ public class KragsteinMethodNavigatorContentProvider implements
 					Collections.singleton(sv),
 					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
 							.getType(KragsteinMethod.diagram.edit.parts.IconConnection2EditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			if (!incominglinks.isEmpty()) {
-				result.add(incominglinks);
-			}
-			if (!outgoinglinks.isEmpty()) {
-				result.add(outgoinglinks);
-			}
-			return result.toArray();
-		}
-
-		case KragsteinMethod.diagram.edit.parts.CaseEditPart.VISUAL_ID: {
-			LinkedList<KragsteinMethod.diagram.navigator.KragsteinMethodAbstractNavigatorItem> result = new LinkedList<KragsteinMethod.diagram.navigator.KragsteinMethodAbstractNavigatorItem>();
-			Node sv = (Node) view;
-			KragsteinMethod.diagram.navigator.KragsteinMethodNavigatorGroup incominglinks = new KragsteinMethod.diagram.navigator.KragsteinMethodNavigatorGroup(
-					KragsteinMethod.diagram.part.Messages.NavigatorGroupName_Case_3005_incominglinks,
-					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			KragsteinMethod.diagram.navigator.KragsteinMethodNavigatorGroup outgoinglinks = new KragsteinMethod.diagram.navigator.KragsteinMethodNavigatorGroup(
-					KragsteinMethod.diagram.part.Messages.NavigatorGroupName_Case_3005_outgoinglinks,
-					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			Collection<View> connectedViews;
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
-							.getType(KragsteinMethod.diagram.edit.parts.IconConnectionEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getOutgoingLinksByType(
-					Collections.singleton(sv),
-					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
-							.getType(KragsteinMethod.diagram.edit.parts.IconConnectionEditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
-							.getType(KragsteinMethod.diagram.edit.parts.IconConnection2EditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getOutgoingLinksByType(
-					Collections.singleton(sv),
-					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
-							.getType(KragsteinMethod.diagram.edit.parts.IconConnection2EditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
-							.getType(KragsteinMethod.diagram.edit.parts.CaseConnectionEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getOutgoingLinksByType(
-					Collections.singleton(sv),
-					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
-							.getType(KragsteinMethod.diagram.edit.parts.CaseConnectionEditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
-							.getType(KragsteinMethod.diagram.edit.parts.CaseConnection2EditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getOutgoingLinksByType(
-					Collections.singleton(sv),
-					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
-							.getType(KragsteinMethod.diagram.edit.parts.CaseConnection2EditPart.VISUAL_ID));
 			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
 					outgoinglinks, true));
 			if (!incominglinks.isEmpty()) {
@@ -1169,6 +1112,353 @@ public class KragsteinMethodNavigatorContentProvider implements
 			return result.toArray();
 		}
 
+		case KragsteinMethod.diagram.edit.parts.Route2EditPart.VISUAL_ID: {
+			LinkedList<KragsteinMethod.diagram.navigator.KragsteinMethodAbstractNavigatorItem> result = new LinkedList<KragsteinMethod.diagram.navigator.KragsteinMethodAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			Collection<View> connectedViews;
+			connectedViews = getChildrenByType(
+					Collections.singleton(sv),
+					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+							.getType(KragsteinMethod.diagram.edit.parts.RouteRouteIconCompartment2EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(
+					connectedViews,
+					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+							.getType(KragsteinMethod.diagram.edit.parts.ActionEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(
+					Collections.singleton(sv),
+					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+							.getType(KragsteinMethod.diagram.edit.parts.RouteRouteIconCompartment2EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(
+					connectedViews,
+					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+							.getType(KragsteinMethod.diagram.edit.parts.QuestionEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(
+					Collections.singleton(sv),
+					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+							.getType(KragsteinMethod.diagram.edit.parts.RouteRouteIconCompartment2EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(
+					connectedViews,
+					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+							.getType(KragsteinMethod.diagram.edit.parts.ChoiceEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(
+					Collections.singleton(sv),
+					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+							.getType(KragsteinMethod.diagram.edit.parts.RouteRouteIconCompartment2EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(
+					connectedViews,
+					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+							.getType(KragsteinMethod.diagram.edit.parts.HeadlineEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(
+					Collections.singleton(sv),
+					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+							.getType(KragsteinMethod.diagram.edit.parts.RouteRouteIconCompartment2EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(
+					connectedViews,
+					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+							.getType(KragsteinMethod.diagram.edit.parts.AdressEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(
+					Collections.singleton(sv),
+					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+							.getType(KragsteinMethod.diagram.edit.parts.RouteRouteIconCompartment2EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(
+					connectedViews,
+					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+							.getType(KragsteinMethod.diagram.edit.parts.InsertionEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(
+					Collections.singleton(sv),
+					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+							.getType(KragsteinMethod.diagram.edit.parts.RouteRouteIconCompartment2EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(
+					connectedViews,
+					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+							.getType(KragsteinMethod.diagram.edit.parts.ShelfEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(
+					Collections.singleton(sv),
+					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+							.getType(KragsteinMethod.diagram.edit.parts.RouteRouteIconCompartment2EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(
+					connectedViews,
+					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+							.getType(KragsteinMethod.diagram.edit.parts.BeginLoopEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(
+					Collections.singleton(sv),
+					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+							.getType(KragsteinMethod.diagram.edit.parts.RouteRouteIconCompartment2EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(
+					connectedViews,
+					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+							.getType(KragsteinMethod.diagram.edit.parts.EndLoopEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(
+					Collections.singleton(sv),
+					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+							.getType(KragsteinMethod.diagram.edit.parts.RouteRouteIconCompartment2EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(
+					connectedViews,
+					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+							.getType(KragsteinMethod.diagram.edit.parts.OutputEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(
+					Collections.singleton(sv),
+					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+							.getType(KragsteinMethod.diagram.edit.parts.RouteRouteIconCompartment2EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(
+					connectedViews,
+					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+							.getType(KragsteinMethod.diagram.edit.parts.InputEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(
+					Collections.singleton(sv),
+					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+							.getType(KragsteinMethod.diagram.edit.parts.RouteRouteIconCompartment2EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(
+					connectedViews,
+					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+							.getType(KragsteinMethod.diagram.edit.parts.LoopArrowEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(
+					Collections.singleton(sv),
+					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+							.getType(KragsteinMethod.diagram.edit.parts.RouteRouteIconCompartment2EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(
+					connectedViews,
+					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+							.getType(KragsteinMethod.diagram.edit.parts.EmptyConnectorEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(
+					Collections.singleton(sv),
+					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+							.getType(KragsteinMethod.diagram.edit.parts.RouteRouteIconCompartment2EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(
+					connectedViews,
+					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+							.getType(KragsteinMethod.diagram.edit.parts.EndEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			return result.toArray();
+		}
+
+		case KragsteinMethod.diagram.edit.parts.CaseEditPart.VISUAL_ID: {
+			LinkedList<KragsteinMethod.diagram.navigator.KragsteinMethodAbstractNavigatorItem> result = new LinkedList<KragsteinMethod.diagram.navigator.KragsteinMethodAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			KragsteinMethod.diagram.navigator.KragsteinMethodNavigatorGroup incominglinks = new KragsteinMethod.diagram.navigator.KragsteinMethodNavigatorGroup(
+					KragsteinMethod.diagram.part.Messages.NavigatorGroupName_Case_3018_incominglinks,
+					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			KragsteinMethod.diagram.navigator.KragsteinMethodNavigatorGroup outgoinglinks = new KragsteinMethod.diagram.navigator.KragsteinMethodNavigatorGroup(
+					KragsteinMethod.diagram.part.Messages.NavigatorGroupName_Case_3018_outgoinglinks,
+					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Collection<View> connectedViews;
+			connectedViews = getChildrenByType(
+					Collections.singleton(sv),
+					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+							.getType(KragsteinMethod.diagram.edit.parts.CaseCaseRouteCompartmentEditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(
+					connectedViews,
+					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+							.getType(KragsteinMethod.diagram.edit.parts.Route3EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getIncomingLinksByType(
+					Collections.singleton(sv),
+					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+							.getType(KragsteinMethod.diagram.edit.parts.CaseConnectionEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews,
+					incominglinks, true));
+			connectedViews = getOutgoingLinksByType(
+					Collections.singleton(sv),
+					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+							.getType(KragsteinMethod.diagram.edit.parts.CaseConnectionEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			connectedViews = getIncomingLinksByType(
+					Collections.singleton(sv),
+					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+							.getType(KragsteinMethod.diagram.edit.parts.CaseConnection2EditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews,
+					incominglinks, true));
+			connectedViews = getOutgoingLinksByType(
+					Collections.singleton(sv),
+					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+							.getType(KragsteinMethod.diagram.edit.parts.CaseConnection2EditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			if (!incominglinks.isEmpty()) {
+				result.add(incominglinks);
+			}
+			if (!outgoinglinks.isEmpty()) {
+				result.add(outgoinglinks);
+			}
+			return result.toArray();
+		}
+
+		case KragsteinMethod.diagram.edit.parts.Route3EditPart.VISUAL_ID: {
+			LinkedList<KragsteinMethod.diagram.navigator.KragsteinMethodAbstractNavigatorItem> result = new LinkedList<KragsteinMethod.diagram.navigator.KragsteinMethodAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			Collection<View> connectedViews;
+			connectedViews = getChildrenByType(
+					Collections.singleton(sv),
+					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+							.getType(KragsteinMethod.diagram.edit.parts.RouteRouteIconCompartment3EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(
+					connectedViews,
+					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+							.getType(KragsteinMethod.diagram.edit.parts.ActionEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(
+					Collections.singleton(sv),
+					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+							.getType(KragsteinMethod.diagram.edit.parts.RouteRouteIconCompartment3EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(
+					connectedViews,
+					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+							.getType(KragsteinMethod.diagram.edit.parts.QuestionEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(
+					Collections.singleton(sv),
+					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+							.getType(KragsteinMethod.diagram.edit.parts.RouteRouteIconCompartment3EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(
+					connectedViews,
+					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+							.getType(KragsteinMethod.diagram.edit.parts.ChoiceEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(
+					Collections.singleton(sv),
+					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+							.getType(KragsteinMethod.diagram.edit.parts.RouteRouteIconCompartment3EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(
+					connectedViews,
+					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+							.getType(KragsteinMethod.diagram.edit.parts.HeadlineEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(
+					Collections.singleton(sv),
+					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+							.getType(KragsteinMethod.diagram.edit.parts.RouteRouteIconCompartment3EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(
+					connectedViews,
+					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+							.getType(KragsteinMethod.diagram.edit.parts.AdressEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(
+					Collections.singleton(sv),
+					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+							.getType(KragsteinMethod.diagram.edit.parts.RouteRouteIconCompartment3EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(
+					connectedViews,
+					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+							.getType(KragsteinMethod.diagram.edit.parts.InsertionEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(
+					Collections.singleton(sv),
+					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+							.getType(KragsteinMethod.diagram.edit.parts.RouteRouteIconCompartment3EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(
+					connectedViews,
+					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+							.getType(KragsteinMethod.diagram.edit.parts.ShelfEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(
+					Collections.singleton(sv),
+					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+							.getType(KragsteinMethod.diagram.edit.parts.RouteRouteIconCompartment3EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(
+					connectedViews,
+					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+							.getType(KragsteinMethod.diagram.edit.parts.BeginLoopEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(
+					Collections.singleton(sv),
+					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+							.getType(KragsteinMethod.diagram.edit.parts.RouteRouteIconCompartment3EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(
+					connectedViews,
+					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+							.getType(KragsteinMethod.diagram.edit.parts.EndLoopEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(
+					Collections.singleton(sv),
+					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+							.getType(KragsteinMethod.diagram.edit.parts.RouteRouteIconCompartment3EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(
+					connectedViews,
+					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+							.getType(KragsteinMethod.diagram.edit.parts.OutputEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(
+					Collections.singleton(sv),
+					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+							.getType(KragsteinMethod.diagram.edit.parts.RouteRouteIconCompartment3EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(
+					connectedViews,
+					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+							.getType(KragsteinMethod.diagram.edit.parts.InputEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(
+					Collections.singleton(sv),
+					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+							.getType(KragsteinMethod.diagram.edit.parts.RouteRouteIconCompartment3EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(
+					connectedViews,
+					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+							.getType(KragsteinMethod.diagram.edit.parts.LoopArrowEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(
+					Collections.singleton(sv),
+					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+							.getType(KragsteinMethod.diagram.edit.parts.RouteRouteIconCompartment3EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(
+					connectedViews,
+					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+							.getType(KragsteinMethod.diagram.edit.parts.EmptyConnectorEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(
+					Collections.singleton(sv),
+					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+							.getType(KragsteinMethod.diagram.edit.parts.RouteRouteIconCompartment3EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(
+					connectedViews,
+					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+							.getType(KragsteinMethod.diagram.edit.parts.EndEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			return result.toArray();
+		}
+
 		case KragsteinMethod.diagram.edit.parts.BranchConnectionEditPart.VISUAL_ID: {
 			LinkedList<KragsteinMethod.diagram.navigator.KragsteinMethodAbstractNavigatorItem> result = new LinkedList<KragsteinMethod.diagram.navigator.KragsteinMethodAbstractNavigatorItem>();
 			Edge sv = (Edge) view;
@@ -1262,12 +1552,6 @@ public class KragsteinMethodNavigatorContentProvider implements
 			connectedViews = getLinksTargetByType(
 					Collections.singleton(sv),
 					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
-							.getType(KragsteinMethod.diagram.edit.parts.CaseEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
 							.getType(KragsteinMethod.diagram.edit.parts.HeadlineEditPart.VISUAL_ID));
 			target.addChildren(createNavigatorItems(connectedViews, target,
 					true));
@@ -1347,12 +1631,6 @@ public class KragsteinMethodNavigatorContentProvider implements
 					Collections.singleton(sv),
 					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
 							.getType(KragsteinMethod.diagram.edit.parts.ChoiceEditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source,
-					true));
-			connectedViews = getLinksSourceByType(
-					Collections.singleton(sv),
-					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
-							.getType(KragsteinMethod.diagram.edit.parts.CaseEditPart.VISUAL_ID));
 			source.addChildren(createNavigatorItems(connectedViews, source,
 					true));
 			connectedViews = getLinksSourceByType(
@@ -1461,12 +1739,6 @@ public class KragsteinMethodNavigatorContentProvider implements
 			connectedViews = getLinksTargetByType(
 					Collections.singleton(sv),
 					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
-							.getType(KragsteinMethod.diagram.edit.parts.CaseEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
 							.getType(KragsteinMethod.diagram.edit.parts.HeadlineEditPart.VISUAL_ID));
 			target.addChildren(createNavigatorItems(connectedViews, target,
 					true));
@@ -1546,12 +1818,6 @@ public class KragsteinMethodNavigatorContentProvider implements
 					Collections.singleton(sv),
 					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
 							.getType(KragsteinMethod.diagram.edit.parts.ChoiceEditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source,
-					true));
-			connectedViews = getLinksSourceByType(
-					Collections.singleton(sv),
-					KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
-							.getType(KragsteinMethod.diagram.edit.parts.CaseEditPart.VISUAL_ID));
 			source.addChildren(createNavigatorItems(connectedViews, source,
 					true));
 			connectedViews = getLinksSourceByType(

@@ -150,7 +150,6 @@ public class KragsteinMethodSwitch<T> extends Switch<T> {
 			case KragsteinMethodPackage.CASE: {
 				Case case_ = (Case)theEObject;
 				T result = caseCase(case_);
-				if (result == null) result = caseIcon(case_);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

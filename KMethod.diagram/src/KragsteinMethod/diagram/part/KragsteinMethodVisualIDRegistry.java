@@ -151,9 +151,139 @@ public class KragsteinMethodVisualIDRegistry {
 					.isSuperTypeOf(domainElement.eClass())) {
 				return KragsteinMethod.diagram.edit.parts.ChoiceEditPart.VISUAL_ID;
 			}
+			if (KragsteinMethod.KragsteinMethodPackage.eINSTANCE.getHeadline()
+					.isSuperTypeOf(domainElement.eClass())) {
+				return KragsteinMethod.diagram.edit.parts.HeadlineEditPart.VISUAL_ID;
+			}
+			if (KragsteinMethod.KragsteinMethodPackage.eINSTANCE.getAdress()
+					.isSuperTypeOf(domainElement.eClass())) {
+				return KragsteinMethod.diagram.edit.parts.AdressEditPart.VISUAL_ID;
+			}
+			if (KragsteinMethod.KragsteinMethodPackage.eINSTANCE.getInsertion()
+					.isSuperTypeOf(domainElement.eClass())) {
+				return KragsteinMethod.diagram.edit.parts.InsertionEditPart.VISUAL_ID;
+			}
+			if (KragsteinMethod.KragsteinMethodPackage.eINSTANCE.getShelf()
+					.isSuperTypeOf(domainElement.eClass())) {
+				return KragsteinMethod.diagram.edit.parts.ShelfEditPart.VISUAL_ID;
+			}
+			if (KragsteinMethod.KragsteinMethodPackage.eINSTANCE.getBeginLoop()
+					.isSuperTypeOf(domainElement.eClass())) {
+				return KragsteinMethod.diagram.edit.parts.BeginLoopEditPart.VISUAL_ID;
+			}
+			if (KragsteinMethod.KragsteinMethodPackage.eINSTANCE.getEndLoop()
+					.isSuperTypeOf(domainElement.eClass())) {
+				return KragsteinMethod.diagram.edit.parts.EndLoopEditPart.VISUAL_ID;
+			}
+			if (KragsteinMethod.KragsteinMethodPackage.eINSTANCE.getOutput()
+					.isSuperTypeOf(domainElement.eClass())) {
+				return KragsteinMethod.diagram.edit.parts.OutputEditPart.VISUAL_ID;
+			}
+			if (KragsteinMethod.KragsteinMethodPackage.eINSTANCE.getInput()
+					.isSuperTypeOf(domainElement.eClass())) {
+				return KragsteinMethod.diagram.edit.parts.InputEditPart.VISUAL_ID;
+			}
+			if (KragsteinMethod.KragsteinMethodPackage.eINSTANCE.getLoopArrow()
+					.isSuperTypeOf(domainElement.eClass())) {
+				return KragsteinMethod.diagram.edit.parts.LoopArrowEditPart.VISUAL_ID;
+			}
+			if (KragsteinMethod.KragsteinMethodPackage.eINSTANCE
+					.getEmptyConnector().isSuperTypeOf(domainElement.eClass())) {
+				return KragsteinMethod.diagram.edit.parts.EmptyConnectorEditPart.VISUAL_ID;
+			}
+			if (KragsteinMethod.KragsteinMethodPackage.eINSTANCE.getEnd()
+					.isSuperTypeOf(domainElement.eClass())) {
+				return KragsteinMethod.diagram.edit.parts.EndEditPart.VISUAL_ID;
+			}
+			break;
+		case KragsteinMethod.diagram.edit.parts.QuestionQuestionRouteCompartmentEditPart.VISUAL_ID:
+			if (KragsteinMethod.KragsteinMethodPackage.eINSTANCE.getRoute()
+					.isSuperTypeOf(domainElement.eClass())) {
+				return KragsteinMethod.diagram.edit.parts.Route2EditPart.VISUAL_ID;
+			}
+			break;
+		case KragsteinMethod.diagram.edit.parts.RouteRouteIconCompartment2EditPart.VISUAL_ID:
+			if (KragsteinMethod.KragsteinMethodPackage.eINSTANCE.getAction()
+					.isSuperTypeOf(domainElement.eClass())) {
+				return KragsteinMethod.diagram.edit.parts.ActionEditPart.VISUAL_ID;
+			}
+			if (KragsteinMethod.KragsteinMethodPackage.eINSTANCE.getQuestion()
+					.isSuperTypeOf(domainElement.eClass())) {
+				return KragsteinMethod.diagram.edit.parts.QuestionEditPart.VISUAL_ID;
+			}
+			if (KragsteinMethod.KragsteinMethodPackage.eINSTANCE.getChoice()
+					.isSuperTypeOf(domainElement.eClass())) {
+				return KragsteinMethod.diagram.edit.parts.ChoiceEditPart.VISUAL_ID;
+			}
+			if (KragsteinMethod.KragsteinMethodPackage.eINSTANCE.getHeadline()
+					.isSuperTypeOf(domainElement.eClass())) {
+				return KragsteinMethod.diagram.edit.parts.HeadlineEditPart.VISUAL_ID;
+			}
+			if (KragsteinMethod.KragsteinMethodPackage.eINSTANCE.getAdress()
+					.isSuperTypeOf(domainElement.eClass())) {
+				return KragsteinMethod.diagram.edit.parts.AdressEditPart.VISUAL_ID;
+			}
+			if (KragsteinMethod.KragsteinMethodPackage.eINSTANCE.getInsertion()
+					.isSuperTypeOf(domainElement.eClass())) {
+				return KragsteinMethod.diagram.edit.parts.InsertionEditPart.VISUAL_ID;
+			}
+			if (KragsteinMethod.KragsteinMethodPackage.eINSTANCE.getShelf()
+					.isSuperTypeOf(domainElement.eClass())) {
+				return KragsteinMethod.diagram.edit.parts.ShelfEditPart.VISUAL_ID;
+			}
+			if (KragsteinMethod.KragsteinMethodPackage.eINSTANCE.getBeginLoop()
+					.isSuperTypeOf(domainElement.eClass())) {
+				return KragsteinMethod.diagram.edit.parts.BeginLoopEditPart.VISUAL_ID;
+			}
+			if (KragsteinMethod.KragsteinMethodPackage.eINSTANCE.getEndLoop()
+					.isSuperTypeOf(domainElement.eClass())) {
+				return KragsteinMethod.diagram.edit.parts.EndLoopEditPart.VISUAL_ID;
+			}
+			if (KragsteinMethod.KragsteinMethodPackage.eINSTANCE.getOutput()
+					.isSuperTypeOf(domainElement.eClass())) {
+				return KragsteinMethod.diagram.edit.parts.OutputEditPart.VISUAL_ID;
+			}
+			if (KragsteinMethod.KragsteinMethodPackage.eINSTANCE.getInput()
+					.isSuperTypeOf(domainElement.eClass())) {
+				return KragsteinMethod.diagram.edit.parts.InputEditPart.VISUAL_ID;
+			}
+			if (KragsteinMethod.KragsteinMethodPackage.eINSTANCE.getLoopArrow()
+					.isSuperTypeOf(domainElement.eClass())) {
+				return KragsteinMethod.diagram.edit.parts.LoopArrowEditPart.VISUAL_ID;
+			}
+			if (KragsteinMethod.KragsteinMethodPackage.eINSTANCE
+					.getEmptyConnector().isSuperTypeOf(domainElement.eClass())) {
+				return KragsteinMethod.diagram.edit.parts.EmptyConnectorEditPart.VISUAL_ID;
+			}
+			if (KragsteinMethod.KragsteinMethodPackage.eINSTANCE.getEnd()
+					.isSuperTypeOf(domainElement.eClass())) {
+				return KragsteinMethod.diagram.edit.parts.EndEditPart.VISUAL_ID;
+			}
+			break;
+		case KragsteinMethod.diagram.edit.parts.ChoiceChoiceCaseCompartmentEditPart.VISUAL_ID:
 			if (KragsteinMethod.KragsteinMethodPackage.eINSTANCE.getCase()
 					.isSuperTypeOf(domainElement.eClass())) {
 				return KragsteinMethod.diagram.edit.parts.CaseEditPart.VISUAL_ID;
+			}
+			break;
+		case KragsteinMethod.diagram.edit.parts.CaseCaseRouteCompartmentEditPart.VISUAL_ID:
+			if (KragsteinMethod.KragsteinMethodPackage.eINSTANCE.getRoute()
+					.isSuperTypeOf(domainElement.eClass())) {
+				return KragsteinMethod.diagram.edit.parts.Route3EditPart.VISUAL_ID;
+			}
+			break;
+		case KragsteinMethod.diagram.edit.parts.RouteRouteIconCompartment3EditPart.VISUAL_ID:
+			if (KragsteinMethod.KragsteinMethodPackage.eINSTANCE.getAction()
+					.isSuperTypeOf(domainElement.eClass())) {
+				return KragsteinMethod.diagram.edit.parts.ActionEditPart.VISUAL_ID;
+			}
+			if (KragsteinMethod.KragsteinMethodPackage.eINSTANCE.getQuestion()
+					.isSuperTypeOf(domainElement.eClass())) {
+				return KragsteinMethod.diagram.edit.parts.QuestionEditPart.VISUAL_ID;
+			}
+			if (KragsteinMethod.KragsteinMethodPackage.eINSTANCE.getChoice()
+					.isSuperTypeOf(domainElement.eClass())) {
+				return KragsteinMethod.diagram.edit.parts.ChoiceEditPart.VISUAL_ID;
 			}
 			if (KragsteinMethod.KragsteinMethodPackage.eINSTANCE.getHeadline()
 					.isSuperTypeOf(domainElement.eClass())) {
@@ -254,6 +384,34 @@ public class KragsteinMethodVisualIDRegistry {
 				return true;
 			}
 			break;
+		case KragsteinMethod.diagram.edit.parts.QuestionEditPart.VISUAL_ID:
+			if (KragsteinMethod.diagram.edit.parts.QuestionQuestionRouteCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case KragsteinMethod.diagram.edit.parts.Route2EditPart.VISUAL_ID:
+			if (KragsteinMethod.diagram.edit.parts.RouteRouteIconCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case KragsteinMethod.diagram.edit.parts.ChoiceEditPart.VISUAL_ID:
+			if (KragsteinMethod.diagram.edit.parts.ChoiceChoiceCaseCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case KragsteinMethod.diagram.edit.parts.CaseEditPart.VISUAL_ID:
+			if (KragsteinMethod.diagram.edit.parts.CaseNameEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (KragsteinMethod.diagram.edit.parts.CaseCaseRouteCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case KragsteinMethod.diagram.edit.parts.Route3EditPart.VISUAL_ID:
+			if (KragsteinMethod.diagram.edit.parts.RouteRouteIconCompartment3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
 		case KragsteinMethod.diagram.edit.parts.BranchBranchRouteCompartmentEditPart.VISUAL_ID:
 			if (KragsteinMethod.diagram.edit.parts.RouteEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
@@ -269,7 +427,107 @@ public class KragsteinMethodVisualIDRegistry {
 			if (KragsteinMethod.diagram.edit.parts.ChoiceEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
+			if (KragsteinMethod.diagram.edit.parts.HeadlineEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (KragsteinMethod.diagram.edit.parts.AdressEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (KragsteinMethod.diagram.edit.parts.InsertionEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (KragsteinMethod.diagram.edit.parts.ShelfEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (KragsteinMethod.diagram.edit.parts.BeginLoopEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (KragsteinMethod.diagram.edit.parts.EndLoopEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (KragsteinMethod.diagram.edit.parts.OutputEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (KragsteinMethod.diagram.edit.parts.InputEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (KragsteinMethod.diagram.edit.parts.LoopArrowEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (KragsteinMethod.diagram.edit.parts.EmptyConnectorEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (KragsteinMethod.diagram.edit.parts.EndEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case KragsteinMethod.diagram.edit.parts.QuestionQuestionRouteCompartmentEditPart.VISUAL_ID:
+			if (KragsteinMethod.diagram.edit.parts.Route2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case KragsteinMethod.diagram.edit.parts.RouteRouteIconCompartment2EditPart.VISUAL_ID:
+			if (KragsteinMethod.diagram.edit.parts.ActionEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (KragsteinMethod.diagram.edit.parts.QuestionEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (KragsteinMethod.diagram.edit.parts.ChoiceEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (KragsteinMethod.diagram.edit.parts.HeadlineEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (KragsteinMethod.diagram.edit.parts.AdressEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (KragsteinMethod.diagram.edit.parts.InsertionEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (KragsteinMethod.diagram.edit.parts.ShelfEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (KragsteinMethod.diagram.edit.parts.BeginLoopEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (KragsteinMethod.diagram.edit.parts.EndLoopEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (KragsteinMethod.diagram.edit.parts.OutputEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (KragsteinMethod.diagram.edit.parts.InputEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (KragsteinMethod.diagram.edit.parts.LoopArrowEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (KragsteinMethod.diagram.edit.parts.EmptyConnectorEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (KragsteinMethod.diagram.edit.parts.EndEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case KragsteinMethod.diagram.edit.parts.ChoiceChoiceCaseCompartmentEditPart.VISUAL_ID:
 			if (KragsteinMethod.diagram.edit.parts.CaseEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case KragsteinMethod.diagram.edit.parts.CaseCaseRouteCompartmentEditPart.VISUAL_ID:
+			if (KragsteinMethod.diagram.edit.parts.Route3EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case KragsteinMethod.diagram.edit.parts.RouteRouteIconCompartment3EditPart.VISUAL_ID:
+			if (KragsteinMethod.diagram.edit.parts.ActionEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (KragsteinMethod.diagram.edit.parts.QuestionEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (KragsteinMethod.diagram.edit.parts.ChoiceEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			if (KragsteinMethod.diagram.edit.parts.HeadlineEditPart.VISUAL_ID == nodeVisualID) {
@@ -374,6 +632,11 @@ public class KragsteinMethodVisualIDRegistry {
 		switch (visualID) {
 		case KragsteinMethod.diagram.edit.parts.BranchBranchRouteCompartmentEditPart.VISUAL_ID:
 		case KragsteinMethod.diagram.edit.parts.RouteRouteIconCompartmentEditPart.VISUAL_ID:
+		case KragsteinMethod.diagram.edit.parts.QuestionQuestionRouteCompartmentEditPart.VISUAL_ID:
+		case KragsteinMethod.diagram.edit.parts.RouteRouteIconCompartment2EditPart.VISUAL_ID:
+		case KragsteinMethod.diagram.edit.parts.ChoiceChoiceCaseCompartmentEditPart.VISUAL_ID:
+		case KragsteinMethod.diagram.edit.parts.CaseCaseRouteCompartmentEditPart.VISUAL_ID:
+		case KragsteinMethod.diagram.edit.parts.RouteRouteIconCompartment3EditPart.VISUAL_ID:
 			return true;
 		default:
 			break;
@@ -390,9 +653,6 @@ public class KragsteinMethodVisualIDRegistry {
 			return false;
 		case KragsteinMethod.diagram.edit.parts.HeaderEditPart.VISUAL_ID:
 		case KragsteinMethod.diagram.edit.parts.ActionEditPart.VISUAL_ID:
-		case KragsteinMethod.diagram.edit.parts.QuestionEditPart.VISUAL_ID:
-		case KragsteinMethod.diagram.edit.parts.ChoiceEditPart.VISUAL_ID:
-		case KragsteinMethod.diagram.edit.parts.CaseEditPart.VISUAL_ID:
 		case KragsteinMethod.diagram.edit.parts.HeadlineEditPart.VISUAL_ID:
 		case KragsteinMethod.diagram.edit.parts.AdressEditPart.VISUAL_ID:
 		case KragsteinMethod.diagram.edit.parts.InsertionEditPart.VISUAL_ID:

@@ -2,6 +2,8 @@
  */
 package KragsteinMethod;
 
+import org.eclipse.emf.ecore.EObject;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -15,6 +17,7 @@ package KragsteinMethod;
  *   <li>{@link KragsteinMethod.Case#getValue <em>Value</em>}</li>
  *   <li>{@link KragsteinMethod.Case#getSourceCaseConnection <em>Source Case Connection</em>}</li>
  *   <li>{@link KragsteinMethod.Case#getTargetCaseConnection <em>Target Case Connection</em>}</li>
+ *   <li>{@link KragsteinMethod.Case#getRoute <em>Route</em>}</li>
  * </ul>
  * </p>
  *
@@ -22,7 +25,7 @@ package KragsteinMethod;
  * @model annotation="gmf.node label='name'"
  * @generated
  */
-public interface Case extends Icon {
+public interface Case extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -126,5 +129,31 @@ public interface Case extends Icon {
 	 * @generated
 	 */
 	void setTargetCaseConnection(CaseConnection value);
+
+	/**
+	 * Returns the value of the '<em><b>Route</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Route</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Route</em>' containment reference.
+	 * @see #setRoute(Route)
+	 * @see KragsteinMethod.KragsteinMethodPackage#getCase_Route()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	Route getRoute();
+
+	/**
+	 * Sets the value of the '{@link KragsteinMethod.Case#getRoute <em>Route</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Route</em>' containment reference.
+	 * @see #getRoute()
+	 * @generated
+	 */
+	void setRoute(Route value);
 
 } // Case

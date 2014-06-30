@@ -33,9 +33,7 @@ public class KragsteinMethodModelingAssistantProviderOfCaseEditPart
 	 */
 	public List<IElementType> doGetRelTypesOnSource(
 			KragsteinMethod.diagram.edit.parts.CaseEditPart source) {
-		List<IElementType> types = new ArrayList<IElementType>(4);
-		types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.IconConnection_4003);
-		types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.IconConnection_4004);
+		List<IElementType> types = new ArrayList<IElementType>(2);
 		types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.CaseConnection_4005);
 		types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.CaseConnection_4006);
 		return types;
@@ -63,96 +61,6 @@ public class KragsteinMethodModelingAssistantProviderOfCaseEditPart
 			KragsteinMethod.diagram.edit.parts.CaseEditPart source,
 			IGraphicalEditPart targetEditPart) {
 		List<IElementType> types = new LinkedList<IElementType>();
-		if (targetEditPart instanceof KragsteinMethod.diagram.edit.parts.ActionEditPart) {
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.IconConnection_4003);
-		}
-		if (targetEditPart instanceof KragsteinMethod.diagram.edit.parts.QuestionEditPart) {
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.IconConnection_4003);
-		}
-		if (targetEditPart instanceof KragsteinMethod.diagram.edit.parts.ChoiceEditPart) {
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.IconConnection_4003);
-		}
-		if (targetEditPart instanceof KragsteinMethod.diagram.edit.parts.CaseEditPart) {
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.IconConnection_4003);
-		}
-		if (targetEditPart instanceof KragsteinMethod.diagram.edit.parts.HeadlineEditPart) {
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.IconConnection_4003);
-		}
-		if (targetEditPart instanceof KragsteinMethod.diagram.edit.parts.AdressEditPart) {
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.IconConnection_4003);
-		}
-		if (targetEditPart instanceof KragsteinMethod.diagram.edit.parts.InsertionEditPart) {
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.IconConnection_4003);
-		}
-		if (targetEditPart instanceof KragsteinMethod.diagram.edit.parts.ShelfEditPart) {
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.IconConnection_4003);
-		}
-		if (targetEditPart instanceof KragsteinMethod.diagram.edit.parts.BeginLoopEditPart) {
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.IconConnection_4003);
-		}
-		if (targetEditPart instanceof KragsteinMethod.diagram.edit.parts.EndLoopEditPart) {
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.IconConnection_4003);
-		}
-		if (targetEditPart instanceof KragsteinMethod.diagram.edit.parts.OutputEditPart) {
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.IconConnection_4003);
-		}
-		if (targetEditPart instanceof KragsteinMethod.diagram.edit.parts.InputEditPart) {
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.IconConnection_4003);
-		}
-		if (targetEditPart instanceof KragsteinMethod.diagram.edit.parts.LoopArrowEditPart) {
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.IconConnection_4003);
-		}
-		if (targetEditPart instanceof KragsteinMethod.diagram.edit.parts.EmptyConnectorEditPart) {
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.IconConnection_4003);
-		}
-		if (targetEditPart instanceof KragsteinMethod.diagram.edit.parts.EndEditPart) {
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.IconConnection_4003);
-		}
-		if (targetEditPart instanceof KragsteinMethod.diagram.edit.parts.ActionEditPart) {
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.IconConnection_4004);
-		}
-		if (targetEditPart instanceof KragsteinMethod.diagram.edit.parts.QuestionEditPart) {
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.IconConnection_4004);
-		}
-		if (targetEditPart instanceof KragsteinMethod.diagram.edit.parts.ChoiceEditPart) {
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.IconConnection_4004);
-		}
-		if (targetEditPart instanceof KragsteinMethod.diagram.edit.parts.CaseEditPart) {
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.IconConnection_4004);
-		}
-		if (targetEditPart instanceof KragsteinMethod.diagram.edit.parts.HeadlineEditPart) {
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.IconConnection_4004);
-		}
-		if (targetEditPart instanceof KragsteinMethod.diagram.edit.parts.AdressEditPart) {
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.IconConnection_4004);
-		}
-		if (targetEditPart instanceof KragsteinMethod.diagram.edit.parts.InsertionEditPart) {
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.IconConnection_4004);
-		}
-		if (targetEditPart instanceof KragsteinMethod.diagram.edit.parts.ShelfEditPart) {
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.IconConnection_4004);
-		}
-		if (targetEditPart instanceof KragsteinMethod.diagram.edit.parts.BeginLoopEditPart) {
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.IconConnection_4004);
-		}
-		if (targetEditPart instanceof KragsteinMethod.diagram.edit.parts.EndLoopEditPart) {
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.IconConnection_4004);
-		}
-		if (targetEditPart instanceof KragsteinMethod.diagram.edit.parts.OutputEditPart) {
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.IconConnection_4004);
-		}
-		if (targetEditPart instanceof KragsteinMethod.diagram.edit.parts.InputEditPart) {
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.IconConnection_4004);
-		}
-		if (targetEditPart instanceof KragsteinMethod.diagram.edit.parts.LoopArrowEditPart) {
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.IconConnection_4004);
-		}
-		if (targetEditPart instanceof KragsteinMethod.diagram.edit.parts.EmptyConnectorEditPart) {
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.IconConnection_4004);
-		}
-		if (targetEditPart instanceof KragsteinMethod.diagram.edit.parts.EndEditPart) {
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.IconConnection_4004);
-		}
 		if (targetEditPart instanceof KragsteinMethod.diagram.edit.parts.CaseEditPart) {
 			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.CaseConnection_4005);
 		}
@@ -182,42 +90,10 @@ public class KragsteinMethodModelingAssistantProviderOfCaseEditPart
 			KragsteinMethod.diagram.edit.parts.CaseEditPart source,
 			IElementType relationshipType) {
 		List<IElementType> types = new ArrayList<IElementType>();
-		if (relationshipType == KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.IconConnection_4003) {
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Action_3002);
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Question_3003);
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Choice_3004);
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Case_3005);
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Headline_3006);
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Adress_3007);
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Insertion_3008);
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Shelf_3009);
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.BeginLoop_3010);
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.EndLoop_3011);
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Output_3012);
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Input_3013);
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.LoopArrow_3014);
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.EmptyConnector_3015);
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.End_3016);
-		} else if (relationshipType == KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.IconConnection_4004) {
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Action_3002);
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Question_3003);
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Choice_3004);
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Case_3005);
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Headline_3006);
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Adress_3007);
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Insertion_3008);
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Shelf_3009);
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.BeginLoop_3010);
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.EndLoop_3011);
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Output_3012);
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Input_3013);
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.LoopArrow_3014);
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.EmptyConnector_3015);
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.End_3016);
-		} else if (relationshipType == KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.CaseConnection_4005) {
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Case_3005);
+		if (relationshipType == KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.CaseConnection_4005) {
+			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Case_3018);
 		} else if (relationshipType == KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.CaseConnection_4006) {
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Case_3005);
+			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Case_3018);
 		}
 		return types;
 	}
@@ -237,9 +113,7 @@ public class KragsteinMethodModelingAssistantProviderOfCaseEditPart
 	 */
 	public List<IElementType> doGetRelTypesOnTarget(
 			KragsteinMethod.diagram.edit.parts.CaseEditPart target) {
-		List<IElementType> types = new ArrayList<IElementType>(4);
-		types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.IconConnection_4003);
-		types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.IconConnection_4004);
+		List<IElementType> types = new ArrayList<IElementType>(2);
 		types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.CaseConnection_4005);
 		types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.CaseConnection_4006);
 		return types;
@@ -265,42 +139,10 @@ public class KragsteinMethodModelingAssistantProviderOfCaseEditPart
 			KragsteinMethod.diagram.edit.parts.CaseEditPart target,
 			IElementType relationshipType) {
 		List<IElementType> types = new ArrayList<IElementType>();
-		if (relationshipType == KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.IconConnection_4003) {
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Action_3002);
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Question_3003);
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Choice_3004);
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Case_3005);
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Headline_3006);
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Adress_3007);
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Insertion_3008);
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Shelf_3009);
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.BeginLoop_3010);
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.EndLoop_3011);
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Output_3012);
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Input_3013);
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.LoopArrow_3014);
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.EmptyConnector_3015);
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.End_3016);
-		} else if (relationshipType == KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.IconConnection_4004) {
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Action_3002);
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Question_3003);
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Choice_3004);
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Case_3005);
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Headline_3006);
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Adress_3007);
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Insertion_3008);
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Shelf_3009);
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.BeginLoop_3010);
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.EndLoop_3011);
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Output_3012);
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Input_3013);
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.LoopArrow_3014);
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.EmptyConnector_3015);
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.End_3016);
-		} else if (relationshipType == KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.CaseConnection_4005) {
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Case_3005);
+		if (relationshipType == KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.CaseConnection_4005) {
+			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Case_3018);
 		} else if (relationshipType == KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.CaseConnection_4006) {
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Case_3005);
+			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Case_3018);
 		}
 		return types;
 	}

@@ -292,7 +292,6 @@ public class BranchEditPart extends ShapeNodeEditPart {
 		 * @generated
 		 */
 		private WrappingLabel fFigureBranchLabelFigure;
-
 		/**
 		 * @generated
 		 */

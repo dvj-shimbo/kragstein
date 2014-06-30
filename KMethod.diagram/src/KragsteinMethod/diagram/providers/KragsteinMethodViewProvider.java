@@ -158,6 +158,8 @@ public class KragsteinMethodViewProvider extends AbstractProvider implements
 				case KragsteinMethod.diagram.edit.parts.LoopArrowEditPart.VISUAL_ID:
 				case KragsteinMethod.diagram.edit.parts.EmptyConnectorEditPart.VISUAL_ID:
 				case KragsteinMethod.diagram.edit.parts.EndEditPart.VISUAL_ID:
+				case KragsteinMethod.diagram.edit.parts.Route2EditPart.VISUAL_ID:
+				case KragsteinMethod.diagram.edit.parts.Route3EditPart.VISUAL_ID:
 					if (domainElement == null
 							|| visualID != KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
 									.getNodeVisualID(op.getContainerView(),
@@ -175,8 +177,10 @@ public class KragsteinMethodViewProvider extends AbstractProvider implements
 				|| KragsteinMethod.diagram.edit.parts.RouteEditPart.VISUAL_ID == visualID
 				|| KragsteinMethod.diagram.edit.parts.ActionEditPart.VISUAL_ID == visualID
 				|| KragsteinMethod.diagram.edit.parts.QuestionEditPart.VISUAL_ID == visualID
+				|| KragsteinMethod.diagram.edit.parts.Route2EditPart.VISUAL_ID == visualID
 				|| KragsteinMethod.diagram.edit.parts.ChoiceEditPart.VISUAL_ID == visualID
 				|| KragsteinMethod.diagram.edit.parts.CaseEditPart.VISUAL_ID == visualID
+				|| KragsteinMethod.diagram.edit.parts.Route3EditPart.VISUAL_ID == visualID
 				|| KragsteinMethod.diagram.edit.parts.HeadlineEditPart.VISUAL_ID == visualID
 				|| KragsteinMethod.diagram.edit.parts.AdressEditPart.VISUAL_ID == visualID
 				|| KragsteinMethod.diagram.edit.parts.InsertionEditPart.VISUAL_ID == visualID
@@ -262,11 +266,17 @@ public class KragsteinMethodViewProvider extends AbstractProvider implements
 		case KragsteinMethod.diagram.edit.parts.QuestionEditPart.VISUAL_ID:
 			return createQuestion_3003(domainElement, containerView, index,
 					persisted, preferencesHint);
+		case KragsteinMethod.diagram.edit.parts.Route2EditPart.VISUAL_ID:
+			return createRoute_3017(domainElement, containerView, index,
+					persisted, preferencesHint);
 		case KragsteinMethod.diagram.edit.parts.ChoiceEditPart.VISUAL_ID:
 			return createChoice_3004(domainElement, containerView, index,
 					persisted, preferencesHint);
 		case KragsteinMethod.diagram.edit.parts.CaseEditPart.VISUAL_ID:
-			return createCase_3005(domainElement, containerView, index,
+			return createCase_3018(domainElement, containerView, index,
+					persisted, preferencesHint);
+		case KragsteinMethod.diagram.edit.parts.Route3EditPart.VISUAL_ID:
+			return createRoute_3019(domainElement, containerView, index,
 					persisted, preferencesHint);
 		case KragsteinMethod.diagram.edit.parts.HeadlineEditPart.VISUAL_ID:
 			return createHeadline_3006(domainElement, containerView, index,
@@ -543,6 +553,8 @@ public class KragsteinMethodViewProvider extends AbstractProvider implements
 	public Node createQuestion_3003(EObject domainElement, View containerView,
 			int index, boolean persisted, PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.getStyles().add(
+				NotationFactory.eINSTANCE.createHintedDiagramLinkStyle());
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
 		node.setType(KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
 				.getType(KragsteinMethod.diagram.edit.parts.QuestionEditPart.VISUAL_ID));
@@ -576,6 +588,60 @@ public class KragsteinMethodViewProvider extends AbstractProvider implements
 		ViewUtil.setStructuralFeatureValue(node,
 				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
 				FigureUtilities.RGBToInteger(fillRGB));
+		createCompartment(
+				node,
+				KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+						.getType(KragsteinMethod.diagram.edit.parts.QuestionQuestionRouteCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		return node;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Node createRoute_3017(EObject domainElement, View containerView,
+			int index, boolean persisted, PreferencesHint preferencesHint) {
+		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.getStyles().add(
+				NotationFactory.eINSTANCE.createHintedDiagramLinkStyle());
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+				.getType(KragsteinMethod.diagram.edit.parts.Route2EditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
+				FigureUtilities.RGBToInteger(fillRGB));
+		createCompartment(
+				node,
+				KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+						.getType(KragsteinMethod.diagram.edit.parts.RouteRouteIconCompartment2EditPart.VISUAL_ID),
+				true, false, false, false);
 		return node;
 	}
 
@@ -585,6 +651,8 @@ public class KragsteinMethodViewProvider extends AbstractProvider implements
 	public Node createChoice_3004(EObject domainElement, View containerView,
 			int index, boolean persisted, PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.getStyles().add(
+				NotationFactory.eINSTANCE.createHintedDiagramLinkStyle());
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
 		node.setType(KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
 				.getType(KragsteinMethod.diagram.edit.parts.ChoiceEditPart.VISUAL_ID));
@@ -618,15 +686,22 @@ public class KragsteinMethodViewProvider extends AbstractProvider implements
 		ViewUtil.setStructuralFeatureValue(node,
 				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
 				FigureUtilities.RGBToInteger(fillRGB));
+		createCompartment(
+				node,
+				KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+						.getType(KragsteinMethod.diagram.edit.parts.ChoiceChoiceCaseCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
 		return node;
 	}
 
 	/**
 	 * @generated
 	 */
-	public Node createCase_3005(EObject domainElement, View containerView,
+	public Node createCase_3018(EObject domainElement, View containerView,
 			int index, boolean persisted, PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.getStyles().add(
+				NotationFactory.eINSTANCE.createHintedDiagramLinkStyle());
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
 		node.setType(KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
 				.getType(KragsteinMethod.diagram.edit.parts.CaseEditPart.VISUAL_ID));
@@ -660,6 +735,64 @@ public class KragsteinMethodViewProvider extends AbstractProvider implements
 		ViewUtil.setStructuralFeatureValue(node,
 				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
 				FigureUtilities.RGBToInteger(fillRGB));
+		Node label5003 = createLabel(
+				node,
+				KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+						.getType(KragsteinMethod.diagram.edit.parts.CaseNameEditPart.VISUAL_ID));
+		createCompartment(
+				node,
+				KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+						.getType(KragsteinMethod.diagram.edit.parts.CaseCaseRouteCompartmentEditPart.VISUAL_ID),
+				true, false, false, false);
+		return node;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Node createRoute_3019(EObject domainElement, View containerView,
+			int index, boolean persisted, PreferencesHint preferencesHint) {
+		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.getStyles().add(
+				NotationFactory.eINSTANCE.createHintedDiagramLinkStyle());
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+				.getType(KragsteinMethod.diagram.edit.parts.Route3EditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
+				FigureUtilities.RGBToInteger(fillRGB));
+		createCompartment(
+				node,
+				KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+						.getType(KragsteinMethod.diagram.edit.parts.RouteRouteIconCompartment3EditPart.VISUAL_ID),
+				true, false, false, false);
 		return node;
 	}
 

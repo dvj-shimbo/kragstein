@@ -28,8 +28,8 @@
         eType="#//BranchConnection" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="targetBranchConnection"
         eType="#//BranchConnection" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="route" lowerBound="1" upperBound="-1"
-        eType="#//Route" containment="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="route" lowerBound="1" eType="#//Route"
+        containment="true">
       <eAnnotations source="gmf.compartment">
         <details key="layout" value="free"/>
       </eAnnotations>
@@ -109,6 +109,10 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="yesBelow" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="route" lowerBound="1" eType="#//Route"
+        containment="true">
+      <eAnnotations source="gmf.compartment"/>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Choice" eSuperTypes="#//Icon">
     <eAnnotations source="gmf.node">
@@ -116,10 +120,13 @@
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="choice" lowerBound="1"
-        upperBound="-1" eType="#//Case" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="case" lowerBound="1" upperBound="-1"
+        eType="#//Case" containment="true">
+      <eAnnotations source="gmf.compartment"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultCaseValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Case" eSuperTypes="#//Icon">
+  <eClassifiers xsi:type="ecore:EClass" name="Case">
     <eAnnotations source="gmf.node">
       <details key="label" value="name"/>
     </eAnnotations>
@@ -129,6 +136,10 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="targetCaseConnection" eType="#//CaseConnection"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="route" lowerBound="1" eType="#//Route"
+        containment="true">
+      <eAnnotations source="gmf.compartment"/>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CaseConnection">
     <eAnnotations source="gmf.link">

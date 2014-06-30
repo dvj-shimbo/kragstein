@@ -44,6 +44,10 @@ public class RouteCreateCommand extends EditElementCommand {
 	 * @generated
 	 */
 	public boolean canExecute() {
+		KragsteinMethod.Branch container = (KragsteinMethod.Branch) getElementToEdit();
+		if (container.getRoute() != null) {
+			return false;
+		}
 		return true;
 
 	}
@@ -57,7 +61,7 @@ public class RouteCreateCommand extends EditElementCommand {
 				.createRoute();
 
 		KragsteinMethod.Branch owner = (KragsteinMethod.Branch) getElementToEdit();
-		owner.getRoute().add(newElement);
+		owner.setRoute(newElement);
 
 		doConfigure(newElement, monitor, info);
 

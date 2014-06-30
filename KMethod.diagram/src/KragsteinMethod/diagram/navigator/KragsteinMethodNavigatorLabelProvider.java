@@ -110,9 +110,6 @@ public class KragsteinMethodNavigatorLabelProvider extends LabelProvider
 		case KragsteinMethod.diagram.edit.parts.ChoiceEditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?Node?KragsteinMethod.ecore?Choice", KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Choice_3004); //$NON-NLS-1$
-		case KragsteinMethod.diagram.edit.parts.CaseEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Node?KragsteinMethod.ecore?Case", KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Case_3005); //$NON-NLS-1$
 		case KragsteinMethod.diagram.edit.parts.HeadlineEditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?Node?KragsteinMethod.ecore?Headline", KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Headline_3006); //$NON-NLS-1$
@@ -146,6 +143,15 @@ public class KragsteinMethodNavigatorLabelProvider extends LabelProvider
 		case KragsteinMethod.diagram.edit.parts.EndEditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?Node?KragsteinMethod.ecore?End", KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.End_3016); //$NON-NLS-1$
+		case KragsteinMethod.diagram.edit.parts.Route2EditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?KragsteinMethod.ecore?Route", KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Route_3017); //$NON-NLS-1$
+		case KragsteinMethod.diagram.edit.parts.CaseEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?KragsteinMethod.ecore?Case", KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Case_3018); //$NON-NLS-1$
+		case KragsteinMethod.diagram.edit.parts.Route3EditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?KragsteinMethod.ecore?Route", KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Route_3019); //$NON-NLS-1$
 		case KragsteinMethod.diagram.edit.parts.BranchConnectionEditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?Link?KragsteinMethod.ecore?BranchConnection", KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.BranchConnection_4001); //$NON-NLS-1$
@@ -242,8 +248,6 @@ public class KragsteinMethodNavigatorLabelProvider extends LabelProvider
 			return getQuestion_3003Text(view);
 		case KragsteinMethod.diagram.edit.parts.ChoiceEditPart.VISUAL_ID:
 			return getChoice_3004Text(view);
-		case KragsteinMethod.diagram.edit.parts.CaseEditPart.VISUAL_ID:
-			return getCase_3005Text(view);
 		case KragsteinMethod.diagram.edit.parts.HeadlineEditPart.VISUAL_ID:
 			return getHeadline_3006Text(view);
 		case KragsteinMethod.diagram.edit.parts.AdressEditPart.VISUAL_ID:
@@ -266,6 +270,12 @@ public class KragsteinMethodNavigatorLabelProvider extends LabelProvider
 			return getEmptyConnector_3015Text(view);
 		case KragsteinMethod.diagram.edit.parts.EndEditPart.VISUAL_ID:
 			return getEnd_3016Text(view);
+		case KragsteinMethod.diagram.edit.parts.Route2EditPart.VISUAL_ID:
+			return getRoute_3017Text(view);
+		case KragsteinMethod.diagram.edit.parts.CaseEditPart.VISUAL_ID:
+			return getCase_3018Text(view);
+		case KragsteinMethod.diagram.edit.parts.Route3EditPart.VISUAL_ID:
+			return getRoute_3019Text(view);
 		case KragsteinMethod.diagram.edit.parts.BranchConnectionEditPart.VISUAL_ID:
 			return getBranchConnection_4001Text(view);
 		case KragsteinMethod.diagram.edit.parts.BranchConnection2EditPart.VISUAL_ID:
@@ -397,23 +407,6 @@ public class KragsteinMethodNavigatorLabelProvider extends LabelProvider
 					.getInstance()
 					.logError(
 							"No domain element for view with visualID = " + 3004); //$NON-NLS-1$
-			return ""; //$NON-NLS-1$
-		}
-	}
-
-	/**
-	 * @generated
-	 */
-	private String getCase_3005Text(View view) {
-		KragsteinMethod.Case domainModelElement = (KragsteinMethod.Case) view
-				.getElement();
-		if (domainModelElement != null) {
-			return domainModelElement.getName();
-		} else {
-			KragsteinMethod.diagram.part.KragsteinMethodDiagramEditorPlugin
-					.getInstance()
-					.logError(
-							"No domain element for view with visualID = " + 3005); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}
@@ -592,6 +585,42 @@ public class KragsteinMethodNavigatorLabelProvider extends LabelProvider
 	 * @generated
 	 */
 	private String getEnd_3016Text(View view) {
+		return ""; //$NON-NLS-1$
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getRoute_3017Text(View view) {
+		return ""; //$NON-NLS-1$
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getCase_3018Text(View view) {
+		IParser parser = KragsteinMethod.diagram.providers.KragsteinMethodParserProvider
+				.getParser(
+						KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Case_3018,
+						view.getElement() != null ? view.getElement() : view,
+						KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
+								.getType(KragsteinMethod.diagram.edit.parts.CaseNameEditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			KragsteinMethod.diagram.part.KragsteinMethodDiagramEditorPlugin
+					.getInstance().logError(
+							"Parser was not found for label " + 5003); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getRoute_3019Text(View view) {
 		return ""; //$NON-NLS-1$
 	}
 

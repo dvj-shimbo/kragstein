@@ -163,7 +163,7 @@ public class KragsteinProjectPackageImpl extends EPackageImpl implements Kragste
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPackage_Subpackage() {
+	public EReference getPackage_Package() {
 		return (EReference)packageEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -203,7 +203,7 @@ public class KragsteinProjectPackageImpl extends EPackageImpl implements Kragste
 		packageEClass = createEClass(PACKAGE);
 		createEAttribute(packageEClass, PACKAGE__NAME);
 		createEAttribute(packageEClass, PACKAGE__PATH);
-		createEReference(packageEClass, PACKAGE__SUBPACKAGE);
+		createEReference(packageEClass, PACKAGE__PACKAGE);
 	}
 
 	/**
@@ -244,7 +244,7 @@ public class KragsteinProjectPackageImpl extends EPackageImpl implements Kragste
 		initEClass(packageEClass, KragsteinProject.Package.class, "Package", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPackage_Name(), ecorePackage.getEString(), "name", null, 0, 1, KragsteinProject.Package.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPackage_Path(), ecorePackage.getEString(), "path", null, 0, 1, KragsteinProject.Package.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPackage_Subpackage(), this.getPackage(), null, "subpackage", null, 0, -1, KragsteinProject.Package.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPackage_Package(), this.getPackage(), null, "package", null, 0, -1, KragsteinProject.Package.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

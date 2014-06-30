@@ -4,6 +4,7 @@
 package KragsteinMethod.diagram.edit.policies;
 
 import java.util.Iterator;
+
 import org.eclipse.emf.ecore.EAnnotation;
 import org.eclipse.gef.commands.Command;
 import org.eclipse.gmf.runtime.common.core.command.ICompositeCommand;
@@ -205,93 +206,6 @@ public class RouteItemSemanticEditPolicy
 							}
 							if (KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
 									.getVisualID(outgoingLink) == KragsteinMethod.diagram.edit.parts.IconConnection2EditPart.VISUAL_ID) {
-								DestroyElementRequest r = new DestroyElementRequest(
-										outgoingLink.getElement(), false);
-								cmd.add(new DestroyElementCommand(r));
-								cmd.add(new DeleteCommand(getEditingDomain(),
-										outgoingLink));
-								continue;
-							}
-						}
-						cmd.add(new DestroyElementCommand(
-								new DestroyElementRequest(getEditingDomain(),
-										cnode.getElement(), false))); // directlyOwned: true
-						// don't need explicit deletion of cnode as parent's view deletion would clean child views as well 
-						// cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), cnode));
-						break;
-					case KragsteinMethod.diagram.edit.parts.CaseEditPart.VISUAL_ID:
-						for (Iterator<?> it = cnode.getTargetEdges().iterator(); it
-								.hasNext();) {
-							Edge incomingLink = (Edge) it.next();
-							if (KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
-									.getVisualID(incomingLink) == KragsteinMethod.diagram.edit.parts.IconConnectionEditPart.VISUAL_ID) {
-								DestroyElementRequest r = new DestroyElementRequest(
-										incomingLink.getElement(), false);
-								cmd.add(new DestroyElementCommand(r));
-								cmd.add(new DeleteCommand(getEditingDomain(),
-										incomingLink));
-								continue;
-							}
-							if (KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
-									.getVisualID(incomingLink) == KragsteinMethod.diagram.edit.parts.IconConnection2EditPart.VISUAL_ID) {
-								DestroyElementRequest r = new DestroyElementRequest(
-										incomingLink.getElement(), false);
-								cmd.add(new DestroyElementCommand(r));
-								cmd.add(new DeleteCommand(getEditingDomain(),
-										incomingLink));
-								continue;
-							}
-							if (KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
-									.getVisualID(incomingLink) == KragsteinMethod.diagram.edit.parts.CaseConnectionEditPart.VISUAL_ID) {
-								DestroyElementRequest r = new DestroyElementRequest(
-										incomingLink.getElement(), false);
-								cmd.add(new DestroyElementCommand(r));
-								cmd.add(new DeleteCommand(getEditingDomain(),
-										incomingLink));
-								continue;
-							}
-							if (KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
-									.getVisualID(incomingLink) == KragsteinMethod.diagram.edit.parts.CaseConnection2EditPart.VISUAL_ID) {
-								DestroyElementRequest r = new DestroyElementRequest(
-										incomingLink.getElement(), false);
-								cmd.add(new DestroyElementCommand(r));
-								cmd.add(new DeleteCommand(getEditingDomain(),
-										incomingLink));
-								continue;
-							}
-						}
-						for (Iterator<?> it = cnode.getSourceEdges().iterator(); it
-								.hasNext();) {
-							Edge outgoingLink = (Edge) it.next();
-							if (KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
-									.getVisualID(outgoingLink) == KragsteinMethod.diagram.edit.parts.IconConnectionEditPart.VISUAL_ID) {
-								DestroyElementRequest r = new DestroyElementRequest(
-										outgoingLink.getElement(), false);
-								cmd.add(new DestroyElementCommand(r));
-								cmd.add(new DeleteCommand(getEditingDomain(),
-										outgoingLink));
-								continue;
-							}
-							if (KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
-									.getVisualID(outgoingLink) == KragsteinMethod.diagram.edit.parts.IconConnection2EditPart.VISUAL_ID) {
-								DestroyElementRequest r = new DestroyElementRequest(
-										outgoingLink.getElement(), false);
-								cmd.add(new DestroyElementCommand(r));
-								cmd.add(new DeleteCommand(getEditingDomain(),
-										outgoingLink));
-								continue;
-							}
-							if (KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
-									.getVisualID(outgoingLink) == KragsteinMethod.diagram.edit.parts.CaseConnectionEditPart.VISUAL_ID) {
-								DestroyElementRequest r = new DestroyElementRequest(
-										outgoingLink.getElement(), false);
-								cmd.add(new DestroyElementCommand(r));
-								cmd.add(new DeleteCommand(getEditingDomain(),
-										outgoingLink));
-								continue;
-							}
-							if (KragsteinMethod.diagram.part.KragsteinMethodVisualIDRegistry
-									.getVisualID(outgoingLink) == KragsteinMethod.diagram.edit.parts.CaseConnection2EditPart.VISUAL_ID) {
 								DestroyElementRequest r = new DestroyElementRequest(
 										outgoingLink.getElement(), false);
 								cmd.add(new DestroyElementCommand(r));

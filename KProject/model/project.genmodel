@@ -13,7 +13,7 @@
     <genClasses ecoreClass="project.ecore#//Package">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute project.ecore#//Package/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute project.ecore#//Package/path"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference project.ecore#//Package/subpackage"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference project.ecore#//Package/package"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

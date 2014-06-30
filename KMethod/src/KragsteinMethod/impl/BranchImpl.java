@@ -58,14 +58,14 @@ public class BranchImpl extends EObjectImpl implements Branch {
 	protected BranchConnection targetBranchConnection;
 
 	/**
-	 * The cached value of the '{@link #getRoute() <em>Route</em>}' containment reference list.
+	 * The cached value of the '{@link #getRoute() <em>Route</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRoute()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Route> route;
+	protected Route route;
 
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -197,11 +197,42 @@ public class BranchImpl extends EObjectImpl implements Branch {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Route> getRoute() {
-		if (route == null) {
-			route = new EObjectContainmentEList<Route>(Route.class, this, KragsteinMethodPackage.BRANCH__ROUTE);
-		}
+	public Route getRoute() {
 		return route;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetRoute(Route newRoute, NotificationChain msgs) {
+		Route oldRoute = route;
+		route = newRoute;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, KragsteinMethodPackage.BRANCH__ROUTE, oldRoute, newRoute);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setRoute(Route newRoute) {
+		if (newRoute != route) {
+			NotificationChain msgs = null;
+			if (route != null)
+				msgs = ((InternalEObject)route).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - KragsteinMethodPackage.BRANCH__ROUTE, null, msgs);
+			if (newRoute != null)
+				msgs = ((InternalEObject)newRoute).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - KragsteinMethodPackage.BRANCH__ROUTE, null, msgs);
+			msgs = basicSetRoute(newRoute, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, KragsteinMethodPackage.BRANCH__ROUTE, newRoute, newRoute));
 	}
 
 	/**
@@ -238,7 +269,7 @@ public class BranchImpl extends EObjectImpl implements Branch {
 			case KragsteinMethodPackage.BRANCH__TARGET_BRANCH_CONNECTION:
 				return basicSetTargetBranchConnection(null, msgs);
 			case KragsteinMethodPackage.BRANCH__ROUTE:
-				return ((InternalEList<?>)getRoute()).basicRemove(otherEnd, msgs);
+				return basicSetRoute(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -279,8 +310,7 @@ public class BranchImpl extends EObjectImpl implements Branch {
 				setTargetBranchConnection((BranchConnection)newValue);
 				return;
 			case KragsteinMethodPackage.BRANCH__ROUTE:
-				getRoute().clear();
-				getRoute().addAll((Collection<? extends Route>)newValue);
+				setRoute((Route)newValue);
 				return;
 			case KragsteinMethodPackage.BRANCH__NAME:
 				setName((String)newValue);
@@ -304,7 +334,7 @@ public class BranchImpl extends EObjectImpl implements Branch {
 				setTargetBranchConnection((BranchConnection)null);
 				return;
 			case KragsteinMethodPackage.BRANCH__ROUTE:
-				getRoute().clear();
+				setRoute((Route)null);
 				return;
 			case KragsteinMethodPackage.BRANCH__NAME:
 				setName(NAME_EDEFAULT);
@@ -326,7 +356,7 @@ public class BranchImpl extends EObjectImpl implements Branch {
 			case KragsteinMethodPackage.BRANCH__TARGET_BRANCH_CONNECTION:
 				return targetBranchConnection != null;
 			case KragsteinMethodPackage.BRANCH__ROUTE:
-				return route != null && !route.isEmpty();
+				return route != null;
 			case KragsteinMethodPackage.BRANCH__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}

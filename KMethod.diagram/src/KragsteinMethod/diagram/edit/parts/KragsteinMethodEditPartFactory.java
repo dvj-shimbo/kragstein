@@ -56,12 +56,24 @@ public class KragsteinMethodEditPartFactory implements EditPartFactory {
 				return new KragsteinMethod.diagram.edit.parts.QuestionEditPart(
 						view);
 
+			case KragsteinMethod.diagram.edit.parts.Route2EditPart.VISUAL_ID:
+				return new KragsteinMethod.diagram.edit.parts.Route2EditPart(
+						view);
+
 			case KragsteinMethod.diagram.edit.parts.ChoiceEditPart.VISUAL_ID:
 				return new KragsteinMethod.diagram.edit.parts.ChoiceEditPart(
 						view);
 
 			case KragsteinMethod.diagram.edit.parts.CaseEditPart.VISUAL_ID:
 				return new KragsteinMethod.diagram.edit.parts.CaseEditPart(view);
+
+			case KragsteinMethod.diagram.edit.parts.CaseNameEditPart.VISUAL_ID:
+				return new KragsteinMethod.diagram.edit.parts.CaseNameEditPart(
+						view);
+
+			case KragsteinMethod.diagram.edit.parts.Route3EditPart.VISUAL_ID:
+				return new KragsteinMethod.diagram.edit.parts.Route3EditPart(
+						view);
 
 			case KragsteinMethod.diagram.edit.parts.HeadlineEditPart.VISUAL_ID:
 				return new KragsteinMethod.diagram.edit.parts.HeadlineEditPart(
@@ -112,6 +124,26 @@ public class KragsteinMethodEditPartFactory implements EditPartFactory {
 
 			case KragsteinMethod.diagram.edit.parts.RouteRouteIconCompartmentEditPart.VISUAL_ID:
 				return new KragsteinMethod.diagram.edit.parts.RouteRouteIconCompartmentEditPart(
+						view);
+
+			case KragsteinMethod.diagram.edit.parts.QuestionQuestionRouteCompartmentEditPart.VISUAL_ID:
+				return new KragsteinMethod.diagram.edit.parts.QuestionQuestionRouteCompartmentEditPart(
+						view);
+
+			case KragsteinMethod.diagram.edit.parts.RouteRouteIconCompartment2EditPart.VISUAL_ID:
+				return new KragsteinMethod.diagram.edit.parts.RouteRouteIconCompartment2EditPart(
+						view);
+
+			case KragsteinMethod.diagram.edit.parts.ChoiceChoiceCaseCompartmentEditPart.VISUAL_ID:
+				return new KragsteinMethod.diagram.edit.parts.ChoiceChoiceCaseCompartmentEditPart(
+						view);
+
+			case KragsteinMethod.diagram.edit.parts.CaseCaseRouteCompartmentEditPart.VISUAL_ID:
+				return new KragsteinMethod.diagram.edit.parts.CaseCaseRouteCompartmentEditPart(
+						view);
+
+			case KragsteinMethod.diagram.edit.parts.RouteRouteIconCompartment3EditPart.VISUAL_ID:
+				return new KragsteinMethod.diagram.edit.parts.RouteRouteIconCompartment3EditPart(
 						view);
 
 			case KragsteinMethod.diagram.edit.parts.BranchConnectionEditPart.VISUAL_ID:

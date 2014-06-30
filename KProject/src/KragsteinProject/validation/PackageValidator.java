@@ -19,5 +19,7 @@ public interface PackageValidator {
 	boolean validateName(String value);
 	boolean validatePath(String value);
 
+	boolean validatePackage(EList<KragsteinProject.Package> value);
+
 	boolean validateSubpackage(EList<KragsteinProject.Package> value);
 }

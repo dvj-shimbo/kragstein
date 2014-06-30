@@ -322,6 +322,14 @@ public class MethodCanonicalEditPolicy extends CanonicalEditPolicy {
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
 		}
+		case KragsteinMethod.diagram.edit.parts.Route2EditPart.VISUAL_ID: {
+			if (!domain2NotationMap.containsKey(view.getElement())) {
+				result.addAll(KragsteinMethod.diagram.part.KragsteinMethodDiagramUpdater
+						.getRoute_3017ContainedLinks(view));
+			}
+			domain2NotationMap.putView(view.getElement(), view);
+			break;
+		}
 		case KragsteinMethod.diagram.edit.parts.ChoiceEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(KragsteinMethod.diagram.part.KragsteinMethodDiagramUpdater
@@ -333,7 +341,15 @@ public class MethodCanonicalEditPolicy extends CanonicalEditPolicy {
 		case KragsteinMethod.diagram.edit.parts.CaseEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(KragsteinMethod.diagram.part.KragsteinMethodDiagramUpdater
-						.getCase_3005ContainedLinks(view));
+						.getCase_3018ContainedLinks(view));
+			}
+			domain2NotationMap.putView(view.getElement(), view);
+			break;
+		}
+		case KragsteinMethod.diagram.edit.parts.Route3EditPart.VISUAL_ID: {
+			if (!domain2NotationMap.containsKey(view.getElement())) {
+				result.addAll(KragsteinMethod.diagram.part.KragsteinMethodDiagramUpdater
+						.getRoute_3019ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;

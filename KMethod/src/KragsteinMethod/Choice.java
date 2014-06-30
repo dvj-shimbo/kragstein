@@ -14,7 +14,8 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link KragsteinMethod.Choice#getName <em>Name</em>}</li>
  *   <li>{@link KragsteinMethod.Choice#getValue <em>Value</em>}</li>
- *   <li>{@link KragsteinMethod.Choice#getChoice <em>Choice</em>}</li>
+ *   <li>{@link KragsteinMethod.Choice#getCase <em>Case</em>}</li>
+ *   <li>{@link KragsteinMethod.Choice#getDefaultCaseValue <em>Default Case Value</em>}</li>
  * </ul>
  * </p>
  *
@@ -76,19 +77,45 @@ public interface Choice extends Icon {
 	void setValue(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Choice</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Case</b></em>' containment reference list.
 	 * The list contents are of type {@link KragsteinMethod.Case}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Choice</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Case</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Choice</em>' containment reference list.
-	 * @see KragsteinMethod.KragsteinMethodPackage#getChoice_Choice()
+	 * @return the value of the '<em>Case</em>' containment reference list.
+	 * @see KragsteinMethod.KragsteinMethodPackage#getChoice_Case()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<Case> getChoice();
+	EList<Case> getCase();
+
+	/**
+	 * Returns the value of the '<em><b>Default Case Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Default Case Value</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Default Case Value</em>' attribute.
+	 * @see #setDefaultCaseValue(String)
+	 * @see KragsteinMethod.KragsteinMethodPackage#getChoice_DefaultCaseValue()
+	 * @model
+	 * @generated
+	 */
+	String getDefaultCaseValue();
+
+	/**
+	 * Sets the value of the '{@link KragsteinMethod.Choice#getDefaultCaseValue <em>Default Case Value</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Default Case Value</em>' attribute.
+	 * @see #getDefaultCaseValue()
+	 * @generated
+	 */
+	void setDefaultCaseValue(String value);
 
 } // Choice

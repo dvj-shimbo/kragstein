@@ -7,7 +7,7 @@ Bundle-ClassPath: .
 Bundle-Activator: KragsteinProject.diagram.part.KragsteinProjectDiagramEditorPlugin
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Export-Package: KragsteinProject.diagram.edit.parts, 
+Export-Package: KragsteinProject.diagram.edit.parts,
  KragsteinProject.diagram.part,
  KragsteinProject.diagram.providers
 Require-Bundle: org.eclipse.core.runtime,

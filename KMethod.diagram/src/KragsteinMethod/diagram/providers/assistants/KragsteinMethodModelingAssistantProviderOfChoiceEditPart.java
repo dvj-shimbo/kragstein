@@ -70,9 +70,6 @@ public class KragsteinMethodModelingAssistantProviderOfChoiceEditPart
 		if (targetEditPart instanceof KragsteinMethod.diagram.edit.parts.ChoiceEditPart) {
 			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.IconConnection_4003);
 		}
-		if (targetEditPart instanceof KragsteinMethod.diagram.edit.parts.CaseEditPart) {
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.IconConnection_4003);
-		}
 		if (targetEditPart instanceof KragsteinMethod.diagram.edit.parts.HeadlineEditPart) {
 			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.IconConnection_4003);
 		}
@@ -113,9 +110,6 @@ public class KragsteinMethodModelingAssistantProviderOfChoiceEditPart
 			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.IconConnection_4004);
 		}
 		if (targetEditPart instanceof KragsteinMethod.diagram.edit.parts.ChoiceEditPart) {
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.IconConnection_4004);
-		}
-		if (targetEditPart instanceof KragsteinMethod.diagram.edit.parts.CaseEditPart) {
 			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.IconConnection_4004);
 		}
 		if (targetEditPart instanceof KragsteinMethod.diagram.edit.parts.HeadlineEditPart) {
@@ -178,7 +172,6 @@ public class KragsteinMethodModelingAssistantProviderOfChoiceEditPart
 			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Action_3002);
 			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Question_3003);
 			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Choice_3004);
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Case_3005);
 			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Headline_3006);
 			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Adress_3007);
 			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Insertion_3008);
@@ -194,7 +187,6 @@ public class KragsteinMethodModelingAssistantProviderOfChoiceEditPart
 			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Action_3002);
 			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Question_3003);
 			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Choice_3004);
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Case_3005);
 			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Headline_3006);
 			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Adress_3007);
 			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Insertion_3008);
@@ -255,7 +247,6 @@ public class KragsteinMethodModelingAssistantProviderOfChoiceEditPart
 			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Action_3002);
 			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Question_3003);
 			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Choice_3004);
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Case_3005);
 			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Headline_3006);
 			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Adress_3007);
 			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Insertion_3008);
@@ -271,7 +262,6 @@ public class KragsteinMethodModelingAssistantProviderOfChoiceEditPart
 			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Action_3002);
 			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Question_3003);
 			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Choice_3004);
-			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Case_3005);
 			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Headline_3006);
 			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Adress_3007);
 			types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Insertion_3008);

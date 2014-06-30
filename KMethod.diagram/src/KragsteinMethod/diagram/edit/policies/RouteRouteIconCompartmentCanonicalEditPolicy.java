@@ -83,7 +83,6 @@ public class RouteRouteIconCompartmentCanonicalEditPolicy extends
 		case KragsteinMethod.diagram.edit.parts.ActionEditPart.VISUAL_ID:
 		case KragsteinMethod.diagram.edit.parts.QuestionEditPart.VISUAL_ID:
 		case KragsteinMethod.diagram.edit.parts.ChoiceEditPart.VISUAL_ID:
-		case KragsteinMethod.diagram.edit.parts.CaseEditPart.VISUAL_ID:
 		case KragsteinMethod.diagram.edit.parts.HeadlineEditPart.VISUAL_ID:
 		case KragsteinMethod.diagram.edit.parts.AdressEditPart.VISUAL_ID:
 		case KragsteinMethod.diagram.edit.parts.InsertionEditPart.VISUAL_ID:

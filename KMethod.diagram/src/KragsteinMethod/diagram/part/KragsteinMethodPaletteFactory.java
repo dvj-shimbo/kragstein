@@ -144,10 +144,10 @@ public class KragsteinMethodPaletteFactory {
 				KragsteinMethod.diagram.part.Messages.Case5CreationTool_title,
 				KragsteinMethod.diagram.part.Messages.Case5CreationTool_desc,
 				Collections
-						.singletonList(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Case_3005));
+						.singletonList(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Case_3018));
 		entry.setId("createCase5CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes
-				.getImageDescriptor(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Case_3005));
+				.getImageDescriptor(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Case_3018));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -358,11 +358,14 @@ public class KragsteinMethodPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createRoute19CreationTool() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(3);
+		types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Route_3001);
+		types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Route_3017);
+		types.add(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Route_3019);
 		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
 				KragsteinMethod.diagram.part.Messages.Route19CreationTool_title,
 				KragsteinMethod.diagram.part.Messages.Route19CreationTool_desc,
-				Collections
-						.singletonList(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Route_3001));
+				types);
 		entry.setId("createRoute19CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes
 				.getImageDescriptor(KragsteinMethod.diagram.providers.KragsteinMethodElementTypes.Route_3001));

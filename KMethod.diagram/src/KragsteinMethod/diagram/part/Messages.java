@@ -496,6 +496,31 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
+	public static String QuestionQuestionRouteCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String RouteRouteIconCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ChoiceChoiceCaseCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String CaseCaseRouteCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String RouteRouteIconCompartment3EditPart_title;
+
+	/**
+	 * @generated
+	 */
 	public static String CommandName_OpenDiagram;
 
 	/**
@@ -542,16 +567,6 @@ public class Messages extends NLS {
 	 * @generated
 	 */
 	public static String NavigatorGroupName_Choice_3004_outgoinglinks;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_Case_3005_incominglinks;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_Case_3005_outgoinglinks;
 
 	/**
 	 * @generated
@@ -662,6 +677,16 @@ public class Messages extends NLS {
 	 * @generated
 	 */
 	public static String NavigatorGroupName_End_3016_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Case_3018_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Case_3018_outgoinglinks;
 
 	/**
 	 * @generated

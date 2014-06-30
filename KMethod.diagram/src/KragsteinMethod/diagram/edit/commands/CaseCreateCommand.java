@@ -56,8 +56,8 @@ public class CaseCreateCommand extends EditElementCommand {
 		KragsteinMethod.Case newElement = KragsteinMethod.KragsteinMethodFactory.eINSTANCE
 				.createCase();
 
-		KragsteinMethod.Route owner = (KragsteinMethod.Route) getElementToEdit();
-		owner.getIcon().add(newElement);
+		KragsteinMethod.Choice owner = (KragsteinMethod.Choice) getElementToEdit();
+		owner.getCase().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

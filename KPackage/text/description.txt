@@ -20,6 +20,7 @@ Package KragsteinPackage <KragsteinPackage.ecore>
     Attribute upperBound : EInt
 
   Class Generalization -> Relationship
+    Attribute type : EString
 
   Class Realization -> Relationship
 

@@ -25,6 +25,7 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  *   <li>{@link KragsteinPackage.impl.GeneralizationImpl#getName <em>Name</em>}</li>
  *   <li>{@link KragsteinPackage.impl.GeneralizationImpl#getLowerBound <em>Lower Bound</em>}</li>
  *   <li>{@link KragsteinPackage.impl.GeneralizationImpl#getUpperBound <em>Upper Bound</em>}</li>
+ *   <li>{@link KragsteinPackage.impl.GeneralizationImpl#getType <em>Type</em>}</li>
  * </ul>
  * </p>
  *
@@ -110,6 +111,26 @@ public class GeneralizationImpl extends EObjectImpl implements Generalization {
 	 * @ordered
 	 */
 	protected int upperBound = UPPER_BOUND_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getType()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String TYPE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getType()
+	 * @generated
+	 * @ordered
+	 */
+	protected String type = TYPE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -274,6 +295,27 @@ public class GeneralizationImpl extends EObjectImpl implements Generalization {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getType() {
+		return type;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setType(String newType) {
+		String oldType = type;
+		type = newType;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, KragsteinPackagePackage.GENERALIZATION__TYPE, oldType, type));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -289,6 +331,8 @@ public class GeneralizationImpl extends EObjectImpl implements Generalization {
 				return getLowerBound();
 			case KragsteinPackagePackage.GENERALIZATION__UPPER_BOUND:
 				return getUpperBound();
+			case KragsteinPackagePackage.GENERALIZATION__TYPE:
+				return getType();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -315,6 +359,9 @@ public class GeneralizationImpl extends EObjectImpl implements Generalization {
 				return;
 			case KragsteinPackagePackage.GENERALIZATION__UPPER_BOUND:
 				setUpperBound((Integer)newValue);
+				return;
+			case KragsteinPackagePackage.GENERALIZATION__TYPE:
+				setType((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -343,6 +390,9 @@ public class GeneralizationImpl extends EObjectImpl implements Generalization {
 			case KragsteinPackagePackage.GENERALIZATION__UPPER_BOUND:
 				setUpperBound(UPPER_BOUND_EDEFAULT);
 				return;
+			case KragsteinPackagePackage.GENERALIZATION__TYPE:
+				setType(TYPE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -365,6 +415,8 @@ public class GeneralizationImpl extends EObjectImpl implements Generalization {
 				return lowerBound != LOWER_BOUND_EDEFAULT;
 			case KragsteinPackagePackage.GENERALIZATION__UPPER_BOUND:
 				return upperBound != UPPER_BOUND_EDEFAULT;
+			case KragsteinPackagePackage.GENERALIZATION__TYPE:
+				return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -385,6 +437,8 @@ public class GeneralizationImpl extends EObjectImpl implements Generalization {
 		result.append(lowerBound);
 		result.append(", upperBound: ");
 		result.append(upperBound);
+		result.append(", type: ");
+		result.append(type);
 		result.append(')');
 		return result.toString();
 	}

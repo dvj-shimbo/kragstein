@@ -302,6 +302,15 @@ public class KragsteinPackagePackageImpl extends EPackageImpl implements Kragste
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getGeneralization_Type() {
+		return (EAttribute)generalizationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getRealization() {
 		return realizationEClass;
 	}
@@ -743,6 +752,7 @@ public class KragsteinPackagePackageImpl extends EPackageImpl implements Kragste
 		createEAttribute(relationshipEClass, RELATIONSHIP__UPPER_BOUND);
 
 		generalizationEClass = createEClass(GENERALIZATION);
+		createEAttribute(generalizationEClass, GENERALIZATION__TYPE);
 
 		realizationEClass = createEClass(REALIZATION);
 
@@ -853,6 +863,7 @@ public class KragsteinPackagePackageImpl extends EPackageImpl implements Kragste
 		initEAttribute(getRelationship_UpperBound(), ecorePackage.getEInt(), "upperBound", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(generalizationEClass, Generalization.class, "Generalization", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getGeneralization_Type(), ecorePackage.getEString(), "type", null, 0, 1, Generalization.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(realizationEClass, Realization.class, "Realization", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

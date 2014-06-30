@@ -221,13 +221,22 @@ public interface KragsteinPackagePackage extends EPackage {
 	int GENERALIZATION__UPPER_BOUND = RELATIONSHIP__UPPER_BOUND;
 
 	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENERALIZATION__TYPE = RELATIONSHIP_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Generalization</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GENERALIZATION_FEATURE_COUNT = RELATIONSHIP_FEATURE_COUNT + 0;
+	int GENERALIZATION_FEATURE_COUNT = RELATIONSHIP_FEATURE_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link KragsteinPackage.impl.RealizationImpl <em>Realization</em>}' class.
@@ -1135,6 +1144,17 @@ public interface KragsteinPackagePackage extends EPackage {
 	EClass getGeneralization();
 
 	/**
+	 * Returns the meta object for the attribute '{@link KragsteinPackage.Generalization#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see KragsteinPackage.Generalization#getType()
+	 * @see #getGeneralization()
+	 * @generated
+	 */
+	EAttribute getGeneralization_Type();
+
+	/**
 	 * Returns the meta object for class '{@link KragsteinPackage.Realization <em>Realization</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1732,6 +1752,14 @@ public interface KragsteinPackagePackage extends EPackage {
 		 * @generated
 		 */
 		EClass GENERALIZATION = eINSTANCE.getGeneralization();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GENERALIZATION__TYPE = eINSTANCE.getGeneralization_Type();
 
 		/**
 		 * The meta object literal for the '{@link KragsteinPackage.impl.RealizationImpl <em>Realization</em>}' class.

@@ -14,4 +14,6 @@ package KragsteinPackage.validation;
 public interface GeneralizationValidator {
 	boolean validate();
 
+	boolean validateType(String value);
+
 }

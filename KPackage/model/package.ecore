@@ -21,6 +21,7 @@
       <details key="source" value="source"/>
       <details key="target" value="target"/>
     </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Realization" eSuperTypes="#//Relationship">
     <eAnnotations source="gmf.link">

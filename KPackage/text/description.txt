@@ -10,6 +10,7 @@ Package KragsteinPackage <KragsteinPackage.ecore>
   Class Package
     Attribute path : EString
     Reference unit : Unit<<0..*>>
+    Attribute name : EString
 
   Class Relationship
     Reference target : Class
@@ -63,7 +64,6 @@ Package KragsteinPackage <KragsteinPackage.ecore>
     Attribute value : EString
 
   Class Method
-    Reference parameter : void<<0..*>>
     Attribute name : EString
     Attribute type : EString
     Attribute visibility : EString

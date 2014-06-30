@@ -264,7 +264,7 @@ public class KragsteinPackageNavigatorLabelProvider extends LabelProvider
 		KragsteinPackage.Package domainModelElement = (KragsteinPackage.Package) view
 				.getElement();
 		if (domainModelElement != null) {
-			return domainModelElement.getPath();
+			return domainModelElement.getName();
 		} else {
 			KragsteinPackage.diagram.part.KragsteinPackageDiagramEditorPlugin
 					.getInstance()

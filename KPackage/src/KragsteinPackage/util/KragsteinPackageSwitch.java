@@ -5,7 +5,6 @@ package KragsteinPackage.util;
 import KragsteinPackage.Aggregation;
 import KragsteinPackage.Association;
 import KragsteinPackage.Attribute;
-import KragsteinPackage.Comment;
 import KragsteinPackage.Composition;
 import KragsteinPackage.Dependency;
 import KragsteinPackage.Generalization;
@@ -14,7 +13,6 @@ import KragsteinPackage.KragsteinPackagePackage;
 import KragsteinPackage.Link;
 import KragsteinPackage.Method;
 import KragsteinPackage.Note;
-import KragsteinPackage.Parameter;
 import KragsteinPackage.Realization;
 import KragsteinPackage.Relationship;
 import KragsteinPackage.Unit;
@@ -164,12 +162,6 @@ public class KragsteinPackageSwitch<T> extends Switch<T> {
 			case KragsteinPackagePackage.METHOD: {
 				Method method = (Method)theEObject;
 				T result = caseMethod(method);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case KragsteinPackagePackage.PARAMETER: {
-				Parameter parameter = (Parameter)theEObject;
-				T result = caseParameter(parameter);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -381,21 +373,6 @@ public class KragsteinPackageSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseMethod(Method object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Parameter</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Parameter</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseParameter(Parameter object) {
 		return null;
 	}
 

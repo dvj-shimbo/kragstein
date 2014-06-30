@@ -30,6 +30,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link KragsteinPackage.impl.PackageImpl#getPath <em>Path</em>}</li>
  *   <li>{@link KragsteinPackage.impl.PackageImpl#getUnit <em>Unit</em>}</li>
+ *   <li>{@link KragsteinPackage.impl.PackageImpl#getName <em>Name</em>}</li>
  * </ul>
  * </p>
  *
@@ -65,6 +66,26 @@ public class PackageImpl extends EObjectImpl implements KragsteinPackage.Package
 	 * @ordered
 	 */
 	protected EList<Unit> unit;
+
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -123,6 +144,27 @@ public class PackageImpl extends EObjectImpl implements KragsteinPackage.Package
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, KragsteinPackagePackage.PACKAGE__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -144,6 +186,8 @@ public class PackageImpl extends EObjectImpl implements KragsteinPackage.Package
 				return getPath();
 			case KragsteinPackagePackage.PACKAGE__UNIT:
 				return getUnit();
+			case KragsteinPackagePackage.PACKAGE__NAME:
+				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -164,6 +208,9 @@ public class PackageImpl extends EObjectImpl implements KragsteinPackage.Package
 				getUnit().clear();
 				getUnit().addAll((Collection<? extends Unit>)newValue);
 				return;
+			case KragsteinPackagePackage.PACKAGE__NAME:
+				setName((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -182,6 +229,9 @@ public class PackageImpl extends EObjectImpl implements KragsteinPackage.Package
 			case KragsteinPackagePackage.PACKAGE__UNIT:
 				getUnit().clear();
 				return;
+			case KragsteinPackagePackage.PACKAGE__NAME:
+				setName(NAME_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -198,6 +248,8 @@ public class PackageImpl extends EObjectImpl implements KragsteinPackage.Package
 				return PATH_EDEFAULT == null ? path != null : !PATH_EDEFAULT.equals(path);
 			case KragsteinPackagePackage.PACKAGE__UNIT:
 				return unit != null && !unit.isEmpty();
+			case KragsteinPackagePackage.PACKAGE__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -214,6 +266,8 @@ public class PackageImpl extends EObjectImpl implements KragsteinPackage.Package
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (path: ");
 		result.append(path);
+		result.append(", name: ");
+		result.append(name);
 		result.append(')');
 		return result.toString();
 	}

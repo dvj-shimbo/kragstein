@@ -2,8 +2,6 @@
  */
 package KragsteinPackage;
 
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -14,14 +12,12 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link KragsteinPackage.Method#getParameter <em>Parameter</em>}</li>
  *   <li>{@link KragsteinPackage.Method#getName <em>Name</em>}</li>
  *   <li>{@link KragsteinPackage.Method#getType <em>Type</em>}</li>
  *   <li>{@link KragsteinPackage.Method#getVisibility <em>Visibility</em>}</li>
  *   <li>{@link KragsteinPackage.Method#isIsConst <em>Is Const</em>}</li>
  *   <li>{@link KragsteinPackage.Method#isIsVirtual <em>Is Virtual</em>}</li>
  *   <li>{@link KragsteinPackage.Method#isIsStatic <em>Is Static</em>}</li>
- *   <li>{@link KragsteinPackage.Method#getUnit <em>Unit</em>}</li>
  * </ul>
  * </p>
  *
@@ -30,22 +26,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Method extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Parameter</b></em>' containment reference list.
-	 * The list contents are of type {@link KragsteinPackage.Parameter}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Parameter</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Parameter</em>' containment reference list.
-	 * @see KragsteinPackage.KragsteinPackagePackage#getMethod_Parameter()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<Parameter> getParameter();
-
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -201,21 +181,5 @@ public interface Method extends EObject {
 	 * @generated
 	 */
 	void setIsStatic(boolean value);
-
-	/**
-	 * Returns the value of the '<em><b>Unit</b></em>' containment reference list.
-	 * The list contents are of type {@link KragsteinPackage.Unit}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Unit</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Unit</em>' containment reference list.
-	 * @see KragsteinPackage.KragsteinPackagePackage#getMethod_Unit()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<Unit> getUnit();
 
 } // Method

@@ -130,15 +130,6 @@ public interface KragsteinPackageFactory extends EFactory {
 	Method createMethod();
 
 	/**
-	 * Returns a new object of class '<em>Parameter</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Parameter</em>'.
-	 * @generated
-	 */
-	Parameter createParameter();
-
-	/**
 	 * Returns a new object of class '<em>Link</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

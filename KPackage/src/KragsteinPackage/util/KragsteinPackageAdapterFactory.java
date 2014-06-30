@@ -5,7 +5,6 @@ package KragsteinPackage.util;
 import KragsteinPackage.Aggregation;
 import KragsteinPackage.Association;
 import KragsteinPackage.Attribute;
-import KragsteinPackage.Comment;
 import KragsteinPackage.Composition;
 import KragsteinPackage.Dependency;
 import KragsteinPackage.Generalization;
@@ -14,7 +13,6 @@ import KragsteinPackage.KragsteinPackagePackage;
 import KragsteinPackage.Link;
 import KragsteinPackage.Method;
 import KragsteinPackage.Note;
-import KragsteinPackage.Parameter;
 import KragsteinPackage.Realization;
 import KragsteinPackage.Relationship;
 import KragsteinPackage.Unit;
@@ -133,10 +131,6 @@ public class KragsteinPackageAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseMethod(Method object) {
 				return createMethodAdapter();
-			}
-			@Override
-			public Adapter caseParameter(Parameter object) {
-				return createParameterAdapter();
 			}
 			@Override
 			public Adapter caseUnit(Unit object) {
@@ -345,20 +339,6 @@ public class KragsteinPackageAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createMethodAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link KragsteinPackage.Parameter <em>Parameter</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see KragsteinPackage.Parameter
-	 * @generated
-	 */
-	public Adapter createParameterAdapter() {
 		return null;
 	}
 

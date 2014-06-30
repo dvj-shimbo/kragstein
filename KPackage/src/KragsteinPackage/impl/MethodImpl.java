@@ -4,24 +4,13 @@ package KragsteinPackage.impl;
 
 import KragsteinPackage.KragsteinPackagePackage;
 import KragsteinPackage.Method;
-import KragsteinPackage.Parameter;
-import KragsteinPackage.Unit;
-
-import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,30 +19,18 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link KragsteinPackage.impl.MethodImpl#getParameter <em>Parameter</em>}</li>
  *   <li>{@link KragsteinPackage.impl.MethodImpl#getName <em>Name</em>}</li>
  *   <li>{@link KragsteinPackage.impl.MethodImpl#getType <em>Type</em>}</li>
  *   <li>{@link KragsteinPackage.impl.MethodImpl#getVisibility <em>Visibility</em>}</li>
  *   <li>{@link KragsteinPackage.impl.MethodImpl#isIsConst <em>Is Const</em>}</li>
  *   <li>{@link KragsteinPackage.impl.MethodImpl#isIsVirtual <em>Is Virtual</em>}</li>
  *   <li>{@link KragsteinPackage.impl.MethodImpl#isIsStatic <em>Is Static</em>}</li>
- *   <li>{@link KragsteinPackage.impl.MethodImpl#getUnit <em>Unit</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
 public class MethodImpl extends EObjectImpl implements Method {
-	/**
-	 * The cached value of the '{@link #getParameter() <em>Parameter</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getParameter()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Parameter> parameter;
-
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -175,16 +152,6 @@ public class MethodImpl extends EObjectImpl implements Method {
 	protected boolean isStatic = IS_STATIC_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getUnit() <em>Unit</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getUnit()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Unit> unit;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -201,18 +168,6 @@ public class MethodImpl extends EObjectImpl implements Method {
 	@Override
 	protected EClass eStaticClass() {
 		return KragsteinPackagePackage.Literals.METHOD;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Parameter> getParameter() {
-		if (parameter == null) {
-			parameter = new EObjectContainmentEList<Parameter>(Parameter.class, this, KragsteinPackagePackage.METHOD__PARAMETER);
-		}
-		return parameter;
 	}
 
 	/**
@@ -346,39 +301,9 @@ public class MethodImpl extends EObjectImpl implements Method {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Unit> getUnit() {
-		if (unit == null) {
-			unit = new EObjectContainmentEList<Unit>(Unit.class, this, KragsteinPackagePackage.METHOD__UNIT);
-		}
-		return unit;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case KragsteinPackagePackage.METHOD__PARAMETER:
-				return ((InternalEList<?>)getParameter()).basicRemove(otherEnd, msgs);
-			case KragsteinPackagePackage.METHOD__UNIT:
-				return ((InternalEList<?>)getUnit()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case KragsteinPackagePackage.METHOD__PARAMETER:
-				return getParameter();
 			case KragsteinPackagePackage.METHOD__NAME:
 				return getName();
 			case KragsteinPackagePackage.METHOD__TYPE:
@@ -391,8 +316,6 @@ public class MethodImpl extends EObjectImpl implements Method {
 				return isIsVirtual();
 			case KragsteinPackagePackage.METHOD__IS_STATIC:
 				return isIsStatic();
-			case KragsteinPackagePackage.METHOD__UNIT:
-				return getUnit();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -402,14 +325,9 @@ public class MethodImpl extends EObjectImpl implements Method {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case KragsteinPackagePackage.METHOD__PARAMETER:
-				getParameter().clear();
-				getParameter().addAll((Collection<? extends Parameter>)newValue);
-				return;
 			case KragsteinPackagePackage.METHOD__NAME:
 				setName((String)newValue);
 				return;
@@ -428,10 +346,6 @@ public class MethodImpl extends EObjectImpl implements Method {
 			case KragsteinPackagePackage.METHOD__IS_STATIC:
 				setIsStatic((Boolean)newValue);
 				return;
-			case KragsteinPackagePackage.METHOD__UNIT:
-				getUnit().clear();
-				getUnit().addAll((Collection<? extends Unit>)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -444,9 +358,6 @@ public class MethodImpl extends EObjectImpl implements Method {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case KragsteinPackagePackage.METHOD__PARAMETER:
-				getParameter().clear();
-				return;
 			case KragsteinPackagePackage.METHOD__NAME:
 				setName(NAME_EDEFAULT);
 				return;
@@ -465,9 +376,6 @@ public class MethodImpl extends EObjectImpl implements Method {
 			case KragsteinPackagePackage.METHOD__IS_STATIC:
 				setIsStatic(IS_STATIC_EDEFAULT);
 				return;
-			case KragsteinPackagePackage.METHOD__UNIT:
-				getUnit().clear();
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -480,8 +388,6 @@ public class MethodImpl extends EObjectImpl implements Method {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case KragsteinPackagePackage.METHOD__PARAMETER:
-				return parameter != null && !parameter.isEmpty();
 			case KragsteinPackagePackage.METHOD__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case KragsteinPackagePackage.METHOD__TYPE:
@@ -494,8 +400,6 @@ public class MethodImpl extends EObjectImpl implements Method {
 				return isVirtual != IS_VIRTUAL_EDEFAULT;
 			case KragsteinPackagePackage.METHOD__IS_STATIC:
 				return isStatic != IS_STATIC_EDEFAULT;
-			case KragsteinPackagePackage.METHOD__UNIT:
-				return unit != null && !unit.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

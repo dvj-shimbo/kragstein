@@ -258,22 +258,13 @@ public interface KragsteinMethodPackage extends EPackage {
 	int BRANCH_CONNECTION__TARGET = 1;
 
 	/**
-	 * The feature id for the '<em><b>Target Branch</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BRANCH_CONNECTION__TARGET_BRANCH = 2;
-
-	/**
 	 * The number of structural features of the '<em>Branch Connection</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BRANCH_CONNECTION_FEATURE_COUNT = 3;
+	int BRANCH_CONNECTION_FEATURE_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link KragsteinMethod.impl.RouteImpl <em>Route</em>}' class.
@@ -407,22 +398,13 @@ public interface KragsteinMethodPackage extends EPackage {
 	int ICON_CONNECTION__SOURCE = 1;
 
 	/**
-	 * The feature id for the '<em><b>Target Icon</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ICON_CONNECTION__TARGET_ICON = 2;
-
-	/**
 	 * The number of structural features of the '<em>Icon Connection</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ICON_CONNECTION_FEATURE_COUNT = 3;
+	int ICON_CONNECTION_FEATURE_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link KragsteinMethod.impl.IconImpl <em>Icon</em>}' class.
@@ -836,22 +818,13 @@ public interface KragsteinMethodPackage extends EPackage {
 	int CASE_CONNECTION__TARGET = 1;
 
 	/**
-	 * The feature id for the '<em><b>Target Case</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CASE_CONNECTION__TARGET_CASE = 2;
-
-	/**
 	 * The number of structural features of the '<em>Case Connection</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CASE_CONNECTION_FEATURE_COUNT = 3;
+	int CASE_CONNECTION_FEATURE_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link KragsteinMethod.impl.HeadlineImpl <em>Headline</em>}' class.
@@ -1474,70 +1447,6 @@ public interface KragsteinMethodPackage extends EPackage {
 	int INPUT_FEATURE_COUNT = ICON_FEATURE_COUNT + 3;
 
 	/**
-	 * The meta object id for the '{@link KragsteinMethod.impl.LoopArrowImpl <em>Loop Arrow</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see KragsteinMethod.impl.LoopArrowImpl
-	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getLoopArrow()
-	 * @generated
-	 */
-	int LOOP_ARROW = 23;
-
-	/**
-	 * The feature id for the '<em><b>Target Icon Connection</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOOP_ARROW__TARGET_ICON_CONNECTION = ICON__TARGET_ICON_CONNECTION;
-
-	/**
-	 * The feature id for the '<em><b>Valence Point</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOOP_ARROW__VALENCE_POINT = ICON__VALENCE_POINT;
-
-	/**
-	 * The feature id for the '<em><b>Left Comment</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOOP_ARROW__LEFT_COMMENT = ICON__LEFT_COMMENT;
-
-	/**
-	 * The feature id for the '<em><b>Right Comment</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOOP_ARROW__RIGHT_COMMENT = ICON__RIGHT_COMMENT;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOOP_ARROW__NAME = ICON_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Loop Arrow</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOOP_ARROW_FEATURE_COUNT = ICON_FEATURE_COUNT + 1;
-
-	/**
 	 * The meta object id for the '{@link KragsteinMethod.impl.EndImpl <em>End</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1545,7 +1454,7 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getEnd()
 	 * @generated
 	 */
-	int END = 24;
+	int END = 23;
 
 	/**
 	 * The feature id for the '<em><b>Target Icon Connection</b></em>' containment reference.
@@ -1799,17 +1708,6 @@ public interface KragsteinMethodPackage extends EPackage {
 	EReference getBranchConnection_Target();
 
 	/**
-	 * Returns the meta object for the attribute '{@link KragsteinMethod.BranchConnection#getTargetBranch <em>Target Branch</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Target Branch</em>'.
-	 * @see KragsteinMethod.BranchConnection#getTargetBranch()
-	 * @see #getBranchConnection()
-	 * @generated
-	 */
-	EAttribute getBranchConnection_TargetBranch();
-
-	/**
 	 * Returns the meta object for class '{@link KragsteinMethod.Route <em>Route</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1913,17 +1811,6 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getIconConnection_Source();
-
-	/**
-	 * Returns the meta object for the attribute '{@link KragsteinMethod.IconConnection#getTargetIcon <em>Target Icon</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Target Icon</em>'.
-	 * @see KragsteinMethod.IconConnection#getTargetIcon()
-	 * @see #getIconConnection()
-	 * @generated
-	 */
-	EAttribute getIconConnection_TargetIcon();
 
 	/**
 	 * Returns the meta object for class '{@link KragsteinMethod.Icon <em>Icon</em>}'.
@@ -2228,17 +2115,6 @@ public interface KragsteinMethodPackage extends EPackage {
 	EReference getCaseConnection_Target();
 
 	/**
-	 * Returns the meta object for the attribute '{@link KragsteinMethod.CaseConnection#getTargetCase <em>Target Case</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Target Case</em>'.
-	 * @see KragsteinMethod.CaseConnection#getTargetCase()
-	 * @see #getCaseConnection()
-	 * @generated
-	 */
-	EAttribute getCaseConnection_TargetCase();
-
-	/**
 	 * Returns the meta object for class '{@link KragsteinMethod.Headline <em>Headline</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2539,27 +2415,6 @@ public interface KragsteinMethodPackage extends EPackage {
 	EReference getInput_Method();
 
 	/**
-	 * Returns the meta object for class '{@link KragsteinMethod.LoopArrow <em>Loop Arrow</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Loop Arrow</em>'.
-	 * @see KragsteinMethod.LoopArrow
-	 * @generated
-	 */
-	EClass getLoopArrow();
-
-	/**
-	 * Returns the meta object for the attribute '{@link KragsteinMethod.LoopArrow#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see KragsteinMethod.LoopArrow#getName()
-	 * @see #getLoopArrow()
-	 * @generated
-	 */
-	EAttribute getLoopArrow_Name();
-
-	/**
 	 * Returns the meta object for class '{@link KragsteinMethod.End <em>End</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2752,14 +2607,6 @@ public interface KragsteinMethodPackage extends EPackage {
 		EReference BRANCH_CONNECTION__TARGET = eINSTANCE.getBranchConnection_Target();
 
 		/**
-		 * The meta object literal for the '<em><b>Target Branch</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute BRANCH_CONNECTION__TARGET_BRANCH = eINSTANCE.getBranchConnection_TargetBranch();
-
-		/**
 		 * The meta object literal for the '{@link KragsteinMethod.impl.RouteImpl <em>Route</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2848,14 +2695,6 @@ public interface KragsteinMethodPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ICON_CONNECTION__SOURCE = eINSTANCE.getIconConnection_Source();
-
-		/**
-		 * The meta object literal for the '<em><b>Target Icon</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ICON_CONNECTION__TARGET_ICON = eINSTANCE.getIconConnection_TargetIcon();
 
 		/**
 		 * The meta object literal for the '{@link KragsteinMethod.impl.IconImpl <em>Icon</em>}' class.
@@ -3092,14 +2931,6 @@ public interface KragsteinMethodPackage extends EPackage {
 		 * @generated
 		 */
 		EReference CASE_CONNECTION__TARGET = eINSTANCE.getCaseConnection_Target();
-
-		/**
-		 * The meta object literal for the '<em><b>Target Case</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CASE_CONNECTION__TARGET_CASE = eINSTANCE.getCaseConnection_TargetCase();
 
 		/**
 		 * The meta object literal for the '{@link KragsteinMethod.impl.HeadlineImpl <em>Headline</em>}' class.
@@ -3340,24 +3171,6 @@ public interface KragsteinMethodPackage extends EPackage {
 		 * @generated
 		 */
 		EReference INPUT__METHOD = eINSTANCE.getInput_Method();
-
-		/**
-		 * The meta object literal for the '{@link KragsteinMethod.impl.LoopArrowImpl <em>Loop Arrow</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see KragsteinMethod.impl.LoopArrowImpl
-		 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getLoopArrow()
-		 * @generated
-		 */
-		EClass LOOP_ARROW = eINSTANCE.getLoopArrow();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute LOOP_ARROW__NAME = eINSTANCE.getLoopArrow_Name();
 
 		/**
 		 * The meta object literal for the '{@link KragsteinMethod.impl.EndImpl <em>End</em>}' class.

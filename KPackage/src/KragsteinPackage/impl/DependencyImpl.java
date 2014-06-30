@@ -25,7 +25,6 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  *   <li>{@link KragsteinPackage.impl.DependencyImpl#getName <em>Name</em>}</li>
  *   <li>{@link KragsteinPackage.impl.DependencyImpl#getLowerBound <em>Lower Bound</em>}</li>
  *   <li>{@link KragsteinPackage.impl.DependencyImpl#getUpperBound <em>Upper Bound</em>}</li>
- *   <li>{@link KragsteinPackage.impl.DependencyImpl#getTargetClass <em>Target Class</em>}</li>
  * </ul>
  * </p>
  *
@@ -111,26 +110,6 @@ public class DependencyImpl extends EObjectImpl implements Dependency {
 	 * @ordered
 	 */
 	protected int upperBound = UPPER_BOUND_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getTargetClass() <em>Target Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTargetClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String TARGET_CLASS_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getTargetClass() <em>Target Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTargetClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected String targetClass = TARGET_CLASS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -295,27 +274,6 @@ public class DependencyImpl extends EObjectImpl implements Dependency {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getTargetClass() {
-		return targetClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTargetClass(String newTargetClass) {
-		String oldTargetClass = targetClass;
-		targetClass = newTargetClass;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, KragsteinPackagePackage.DEPENDENCY__TARGET_CLASS, oldTargetClass, targetClass));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -331,8 +289,6 @@ public class DependencyImpl extends EObjectImpl implements Dependency {
 				return getLowerBound();
 			case KragsteinPackagePackage.DEPENDENCY__UPPER_BOUND:
 				return getUpperBound();
-			case KragsteinPackagePackage.DEPENDENCY__TARGET_CLASS:
-				return getTargetClass();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -359,9 +315,6 @@ public class DependencyImpl extends EObjectImpl implements Dependency {
 				return;
 			case KragsteinPackagePackage.DEPENDENCY__UPPER_BOUND:
 				setUpperBound((Integer)newValue);
-				return;
-			case KragsteinPackagePackage.DEPENDENCY__TARGET_CLASS:
-				setTargetClass((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -390,9 +343,6 @@ public class DependencyImpl extends EObjectImpl implements Dependency {
 			case KragsteinPackagePackage.DEPENDENCY__UPPER_BOUND:
 				setUpperBound(UPPER_BOUND_EDEFAULT);
 				return;
-			case KragsteinPackagePackage.DEPENDENCY__TARGET_CLASS:
-				setTargetClass(TARGET_CLASS_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -415,8 +365,6 @@ public class DependencyImpl extends EObjectImpl implements Dependency {
 				return lowerBound != LOWER_BOUND_EDEFAULT;
 			case KragsteinPackagePackage.DEPENDENCY__UPPER_BOUND:
 				return upperBound != UPPER_BOUND_EDEFAULT;
-			case KragsteinPackagePackage.DEPENDENCY__TARGET_CLASS:
-				return TARGET_CLASS_EDEFAULT == null ? targetClass != null : !TARGET_CLASS_EDEFAULT.equals(targetClass);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -437,8 +385,6 @@ public class DependencyImpl extends EObjectImpl implements Dependency {
 		result.append(lowerBound);
 		result.append(", upperBound: ");
 		result.append(upperBound);
-		result.append(", targetClass: ");
-		result.append(targetClass);
 		result.append(')');
 		return result.toString();
 	}

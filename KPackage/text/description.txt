@@ -18,7 +18,6 @@ Package KragsteinPackage <KragsteinPackage.ecore>
     Attribute name : EString
     Attribute lowerBound : EInt
     Attribute upperBound : EInt
-    Attribute targetClass : EString
 
   Class Generalization -> Relationship
 
@@ -78,4 +77,3 @@ Package KragsteinPackage <KragsteinPackage.ecore>
   Class Link
     Reference source : Unit
     Reference target : Unit
-    Attribute targetClass : EString

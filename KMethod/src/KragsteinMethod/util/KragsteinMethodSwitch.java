@@ -215,13 +215,6 @@ public class KragsteinMethodSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case KragsteinMethodPackage.LOOP_ARROW: {
-				LoopArrow loopArrow = (LoopArrow)theEObject;
-				T result = caseLoopArrow(loopArrow);
-				if (result == null) result = caseIcon(loopArrow);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case KragsteinMethodPackage.END: {
 				End end = (End)theEObject;
 				T result = caseEnd(end);
@@ -575,21 +568,6 @@ public class KragsteinMethodSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseInput(Input object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Loop Arrow</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Loop Arrow</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseLoopArrow(LoopArrow object) {
 		return null;
 	}
 

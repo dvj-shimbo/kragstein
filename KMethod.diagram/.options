@@ -1,7 +1,0 @@
-# Tracing options for the KMethod.diagram plug-in
-
-# Common issues
-KMethod.diagram/debug=false
-
-# Visual IDs
-KMethod.diagram/debug/visualID=false

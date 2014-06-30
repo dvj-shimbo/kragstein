@@ -293,15 +293,6 @@ public class KragsteinPackagePackageImpl extends EPackageImpl implements Kragste
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getRelationship_TargetClass() {
-		return (EAttribute)relationshipEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getGeneralization() {
 		return generalizationEClass;
 	}
@@ -716,15 +707,6 @@ public class KragsteinPackagePackageImpl extends EPackageImpl implements Kragste
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getLink_TargetClass() {
-		return (EAttribute)linkEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public KragsteinPackageFactory getKragsteinPackageFactory() {
 		return (KragsteinPackageFactory)getEFactoryInstance();
 	}
@@ -759,7 +741,6 @@ public class KragsteinPackagePackageImpl extends EPackageImpl implements Kragste
 		createEAttribute(relationshipEClass, RELATIONSHIP__NAME);
 		createEAttribute(relationshipEClass, RELATIONSHIP__LOWER_BOUND);
 		createEAttribute(relationshipEClass, RELATIONSHIP__UPPER_BOUND);
-		createEAttribute(relationshipEClass, RELATIONSHIP__TARGET_CLASS);
 
 		generalizationEClass = createEClass(GENERALIZATION);
 
@@ -819,7 +800,6 @@ public class KragsteinPackagePackageImpl extends EPackageImpl implements Kragste
 		linkEClass = createEClass(LINK);
 		createEReference(linkEClass, LINK__SOURCE);
 		createEReference(linkEClass, LINK__TARGET);
-		createEAttribute(linkEClass, LINK__TARGET_CLASS);
 	}
 
 	/**
@@ -871,7 +851,6 @@ public class KragsteinPackagePackageImpl extends EPackageImpl implements Kragste
 		initEAttribute(getRelationship_Name(), ecorePackage.getEString(), "name", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRelationship_LowerBound(), ecorePackage.getEInt(), "lowerBound", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRelationship_UpperBound(), ecorePackage.getEInt(), "upperBound", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getRelationship_TargetClass(), ecorePackage.getEString(), "targetClass", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(generalizationEClass, Generalization.class, "Generalization", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -931,7 +910,6 @@ public class KragsteinPackagePackageImpl extends EPackageImpl implements Kragste
 		initEClass(linkEClass, Link.class, "Link", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getLink_Source(), this.getUnit(), null, "source", null, 0, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLink_Target(), this.getUnit(), null, "target", null, 0, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLink_TargetClass(), ecorePackage.getEString(), "targetClass", null, 0, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

@@ -23,7 +23,6 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  * <ul>
  *   <li>{@link KragsteinMethod.impl.BranchConnectionImpl#getSource <em>Source</em>}</li>
  *   <li>{@link KragsteinMethod.impl.BranchConnectionImpl#getTarget <em>Target</em>}</li>
- *   <li>{@link KragsteinMethod.impl.BranchConnectionImpl#getTargetBranch <em>Target Branch</em>}</li>
  * </ul>
  * </p>
  *
@@ -49,26 +48,6 @@ public class BranchConnectionImpl extends EObjectImpl implements BranchConnectio
 	 * @ordered
 	 */
 	protected Branch target;
-
-	/**
-	 * The default value of the '{@link #getTargetBranch() <em>Target Branch</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTargetBranch()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String TARGET_BRANCH_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getTargetBranch() <em>Target Branch</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTargetBranch()
-	 * @generated
-	 * @ordered
-	 */
-	protected String targetBranch = TARGET_BRANCH_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -170,27 +149,6 @@ public class BranchConnectionImpl extends EObjectImpl implements BranchConnectio
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getTargetBranch() {
-		return targetBranch;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTargetBranch(String newTargetBranch) {
-		String oldTargetBranch = targetBranch;
-		targetBranch = newTargetBranch;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, KragsteinMethodPackage.BRANCH_CONNECTION__TARGET_BRANCH, oldTargetBranch, targetBranch));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -200,8 +158,6 @@ public class BranchConnectionImpl extends EObjectImpl implements BranchConnectio
 			case KragsteinMethodPackage.BRANCH_CONNECTION__TARGET:
 				if (resolve) return getTarget();
 				return basicGetTarget();
-			case KragsteinMethodPackage.BRANCH_CONNECTION__TARGET_BRANCH:
-				return getTargetBranch();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -219,9 +175,6 @@ public class BranchConnectionImpl extends EObjectImpl implements BranchConnectio
 				return;
 			case KragsteinMethodPackage.BRANCH_CONNECTION__TARGET:
 				setTarget((Branch)newValue);
-				return;
-			case KragsteinMethodPackage.BRANCH_CONNECTION__TARGET_BRANCH:
-				setTargetBranch((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -241,9 +194,6 @@ public class BranchConnectionImpl extends EObjectImpl implements BranchConnectio
 			case KragsteinMethodPackage.BRANCH_CONNECTION__TARGET:
 				setTarget((Branch)null);
 				return;
-			case KragsteinMethodPackage.BRANCH_CONNECTION__TARGET_BRANCH:
-				setTargetBranch(TARGET_BRANCH_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -260,26 +210,8 @@ public class BranchConnectionImpl extends EObjectImpl implements BranchConnectio
 				return source != null;
 			case KragsteinMethodPackage.BRANCH_CONNECTION__TARGET:
 				return target != null;
-			case KragsteinMethodPackage.BRANCH_CONNECTION__TARGET_BRANCH:
-				return TARGET_BRANCH_EDEFAULT == null ? targetBranch != null : !TARGET_BRANCH_EDEFAULT.equals(targetBranch);
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (targetBranch: ");
-		result.append(targetBranch);
-		result.append(')');
-		return result.toString();
 	}
 
 } //BranchConnectionImpl

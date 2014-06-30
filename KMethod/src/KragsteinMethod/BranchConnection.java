@@ -14,7 +14,6 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link KragsteinMethod.BranchConnection#getSource <em>Source</em>}</li>
  *   <li>{@link KragsteinMethod.BranchConnection#getTarget <em>Target</em>}</li>
- *   <li>{@link KragsteinMethod.BranchConnection#getTargetBranch <em>Target Branch</em>}</li>
  * </ul>
  * </p>
  *
@@ -74,31 +73,5 @@ public interface BranchConnection extends EObject {
 	 * @generated
 	 */
 	void setTarget(Branch value);
-
-	/**
-	 * Returns the value of the '<em><b>Target Branch</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Target Branch</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Target Branch</em>' attribute.
-	 * @see #setTargetBranch(String)
-	 * @see KragsteinMethod.KragsteinMethodPackage#getBranchConnection_TargetBranch()
-	 * @model
-	 * @generated
-	 */
-	String getTargetBranch();
-
-	/**
-	 * Sets the value of the '{@link KragsteinMethod.BranchConnection#getTargetBranch <em>Target Branch</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Target Branch</em>' attribute.
-	 * @see #getTargetBranch()
-	 * @generated
-	 */
-	void setTargetBranch(String value);
 
 } // BranchConnection

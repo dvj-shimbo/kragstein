@@ -23,7 +23,6 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  * <ul>
  *   <li>{@link KragsteinPackage.impl.LinkImpl#getSource <em>Source</em>}</li>
  *   <li>{@link KragsteinPackage.impl.LinkImpl#getTarget <em>Target</em>}</li>
- *   <li>{@link KragsteinPackage.impl.LinkImpl#getTargetClass <em>Target Class</em>}</li>
  * </ul>
  * </p>
  *
@@ -49,26 +48,6 @@ public class LinkImpl extends EObjectImpl implements Link {
 	 * @ordered
 	 */
 	protected Unit target;
-
-	/**
-	 * The default value of the '{@link #getTargetClass() <em>Target Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTargetClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String TARGET_CLASS_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getTargetClass() <em>Target Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTargetClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected String targetClass = TARGET_CLASS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -170,27 +149,6 @@ public class LinkImpl extends EObjectImpl implements Link {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getTargetClass() {
-		return targetClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTargetClass(String newTargetClass) {
-		String oldTargetClass = targetClass;
-		targetClass = newTargetClass;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, KragsteinPackagePackage.LINK__TARGET_CLASS, oldTargetClass, targetClass));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -200,8 +158,6 @@ public class LinkImpl extends EObjectImpl implements Link {
 			case KragsteinPackagePackage.LINK__TARGET:
 				if (resolve) return getTarget();
 				return basicGetTarget();
-			case KragsteinPackagePackage.LINK__TARGET_CLASS:
-				return getTargetClass();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -219,9 +175,6 @@ public class LinkImpl extends EObjectImpl implements Link {
 				return;
 			case KragsteinPackagePackage.LINK__TARGET:
 				setTarget((Unit)newValue);
-				return;
-			case KragsteinPackagePackage.LINK__TARGET_CLASS:
-				setTargetClass((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -241,9 +194,6 @@ public class LinkImpl extends EObjectImpl implements Link {
 			case KragsteinPackagePackage.LINK__TARGET:
 				setTarget((Unit)null);
 				return;
-			case KragsteinPackagePackage.LINK__TARGET_CLASS:
-				setTargetClass(TARGET_CLASS_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -260,26 +210,8 @@ public class LinkImpl extends EObjectImpl implements Link {
 				return source != null;
 			case KragsteinPackagePackage.LINK__TARGET:
 				return target != null;
-			case KragsteinPackagePackage.LINK__TARGET_CLASS:
-				return TARGET_CLASS_EDEFAULT == null ? targetClass != null : !TARGET_CLASS_EDEFAULT.equals(targetClass);
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (targetClass: ");
-		result.append(targetClass);
-		result.append(')');
-		return result.toString();
 	}
 
 } //LinkImpl

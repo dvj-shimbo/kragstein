@@ -43,7 +43,6 @@
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//Branch"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Branch"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="targetBranch" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Route">
     <eAnnotations source="gmf.node">
@@ -71,7 +70,6 @@
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Icon"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//Icon"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="targetIcon" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Icon" abstract="true">
     <eAnnotations source="gmf.node">
@@ -142,7 +140,6 @@
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//Case"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Case"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="targetCase" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Headline" eSuperTypes="#//Icon">
     <eAnnotations source="gmf.node">
@@ -207,12 +204,6 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="method" lowerBound="1"
         eType="#//Method" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="LoopArrow" eSuperTypes="#//Icon">
-    <eAnnotations source="gmf.node">
-      <details key="label" value="name"/>
-    </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="End" eSuperTypes="#//Icon">
     <eAnnotations source="gmf.node">

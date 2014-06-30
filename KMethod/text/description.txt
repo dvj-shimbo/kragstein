@@ -29,7 +29,6 @@ Package KragsteinMethod <KragsteinMethod.ecore>
   Class BranchConnection
     Reference source : Branch
     Reference target : Branch
-    Attribute targetBranch : EString
 
   Class Route
     Reference icon : Icon<<0..*>>
@@ -45,7 +44,6 @@ Package KragsteinMethod <KragsteinMethod.ecore>
   Class IconConnection
     Reference target : Icon
     Reference source : Icon
-    Attribute targetIcon : EString
 
   Class Icon
     Reference targetIconConnection : IconConnection
@@ -80,7 +78,6 @@ Package KragsteinMethod <KragsteinMethod.ecore>
   Class CaseConnection
     Reference source : Case
     Reference target : Case
-    Attribute targetCase : EString
 
   Class Headline -> Icon
     Attribute name : EString
@@ -117,8 +114,5 @@ Package KragsteinMethod <KragsteinMethod.ecore>
     Attribute name : EString
     Attribute value : EString
     Reference method : Method<<1..1>>
-
-  Class LoopArrow -> Icon
-    Attribute name : EString
 
   Class End -> Icon

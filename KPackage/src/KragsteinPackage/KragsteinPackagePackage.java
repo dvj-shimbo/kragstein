@@ -157,22 +157,13 @@ public interface KragsteinPackagePackage extends EPackage {
 	int RELATIONSHIP__UPPER_BOUND = 4;
 
 	/**
-	 * The feature id for the '<em><b>Target Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RELATIONSHIP__TARGET_CLASS = 5;
-
-	/**
 	 * The number of structural features of the '<em>Relationship</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP_FEATURE_COUNT = 6;
+	int RELATIONSHIP_FEATURE_COUNT = 5;
 
 	/**
 	 * The meta object id for the '{@link KragsteinPackage.impl.GeneralizationImpl <em>Generalization</em>}' class.
@@ -228,15 +219,6 @@ public interface KragsteinPackagePackage extends EPackage {
 	 * @ordered
 	 */
 	int GENERALIZATION__UPPER_BOUND = RELATIONSHIP__UPPER_BOUND;
-
-	/**
-	 * The feature id for the '<em><b>Target Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GENERALIZATION__TARGET_CLASS = RELATIONSHIP__TARGET_CLASS;
 
 	/**
 	 * The number of structural features of the '<em>Generalization</em>' class.
@@ -303,15 +285,6 @@ public interface KragsteinPackagePackage extends EPackage {
 	int REALIZATION__UPPER_BOUND = RELATIONSHIP__UPPER_BOUND;
 
 	/**
-	 * The feature id for the '<em><b>Target Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REALIZATION__TARGET_CLASS = RELATIONSHIP__TARGET_CLASS;
-
-	/**
 	 * The number of structural features of the '<em>Realization</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -374,15 +347,6 @@ public interface KragsteinPackagePackage extends EPackage {
 	 * @ordered
 	 */
 	int ASSOCIATION__UPPER_BOUND = RELATIONSHIP__UPPER_BOUND;
-
-	/**
-	 * The feature id for the '<em><b>Target Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSOCIATION__TARGET_CLASS = RELATIONSHIP__TARGET_CLASS;
 
 	/**
 	 * The number of structural features of the '<em>Association</em>' class.
@@ -449,15 +413,6 @@ public interface KragsteinPackagePackage extends EPackage {
 	int AGGREGATION__UPPER_BOUND = RELATIONSHIP__UPPER_BOUND;
 
 	/**
-	 * The feature id for the '<em><b>Target Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int AGGREGATION__TARGET_CLASS = RELATIONSHIP__TARGET_CLASS;
-
-	/**
 	 * The number of structural features of the '<em>Aggregation</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -522,15 +477,6 @@ public interface KragsteinPackagePackage extends EPackage {
 	int COMPOSITION__UPPER_BOUND = RELATIONSHIP__UPPER_BOUND;
 
 	/**
-	 * The feature id for the '<em><b>Target Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPOSITION__TARGET_CLASS = RELATIONSHIP__TARGET_CLASS;
-
-	/**
 	 * The number of structural features of the '<em>Composition</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -593,15 +539,6 @@ public interface KragsteinPackagePackage extends EPackage {
 	 * @ordered
 	 */
 	int DEPENDENCY__UPPER_BOUND = RELATIONSHIP__UPPER_BOUND;
-
-	/**
-	 * The feature id for the '<em><b>Target Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DEPENDENCY__TARGET_CLASS = RELATIONSHIP__TARGET_CLASS;
 
 	/**
 	 * The number of structural features of the '<em>Dependency</em>' class.
@@ -1070,22 +1007,13 @@ public interface KragsteinPackagePackage extends EPackage {
 	int LINK__TARGET = 1;
 
 	/**
-	 * The feature id for the '<em><b>Target Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LINK__TARGET_CLASS = 2;
-
-	/**
 	 * The number of structural features of the '<em>Link</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LINK_FEATURE_COUNT = 3;
+	int LINK_FEATURE_COUNT = 2;
 
 
 	/**
@@ -1195,17 +1123,6 @@ public interface KragsteinPackagePackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getRelationship_UpperBound();
-
-	/**
-	 * Returns the meta object for the attribute '{@link KragsteinPackage.Relationship#getTargetClass <em>Target Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Target Class</em>'.
-	 * @see KragsteinPackage.Relationship#getTargetClass()
-	 * @see #getRelationship()
-	 * @generated
-	 */
-	EAttribute getRelationship_TargetClass();
 
 	/**
 	 * Returns the meta object for class '{@link KragsteinPackage.Generalization <em>Generalization</em>}'.
@@ -1701,17 +1618,6 @@ public interface KragsteinPackagePackage extends EPackage {
 	EReference getLink_Target();
 
 	/**
-	 * Returns the meta object for the attribute '{@link KragsteinPackage.Link#getTargetClass <em>Target Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Target Class</em>'.
-	 * @see KragsteinPackage.Link#getTargetClass()
-	 * @see #getLink()
-	 * @generated
-	 */
-	EAttribute getLink_TargetClass();
-
-	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1816,14 +1722,6 @@ public interface KragsteinPackagePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute RELATIONSHIP__UPPER_BOUND = eINSTANCE.getRelationship_UpperBound();
-
-		/**
-		 * The meta object literal for the '<em><b>Target Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute RELATIONSHIP__TARGET_CLASS = eINSTANCE.getRelationship_TargetClass();
 
 		/**
 		 * The meta object literal for the '{@link KragsteinPackage.impl.GeneralizationImpl <em>Generalization</em>}' class.
@@ -2218,14 +2116,6 @@ public interface KragsteinPackagePackage extends EPackage {
 		 * @generated
 		 */
 		EReference LINK__TARGET = eINSTANCE.getLink_Target();
-
-		/**
-		 * The meta object literal for the '<em><b>Target Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute LINK__TARGET_CLASS = eINSTANCE.getLink_TargetClass();
 
 	}
 

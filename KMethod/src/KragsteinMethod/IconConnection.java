@@ -14,7 +14,6 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link KragsteinMethod.IconConnection#getTarget <em>Target</em>}</li>
  *   <li>{@link KragsteinMethod.IconConnection#getSource <em>Source</em>}</li>
- *   <li>{@link KragsteinMethod.IconConnection#getTargetIcon <em>Target Icon</em>}</li>
  * </ul>
  * </p>
  *
@@ -74,31 +73,5 @@ public interface IconConnection extends EObject {
 	 * @generated
 	 */
 	void setSource(Icon value);
-
-	/**
-	 * Returns the value of the '<em><b>Target Icon</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Target Icon</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Target Icon</em>' attribute.
-	 * @see #setTargetIcon(String)
-	 * @see KragsteinMethod.KragsteinMethodPackage#getIconConnection_TargetIcon()
-	 * @model
-	 * @generated
-	 */
-	String getTargetIcon();
-
-	/**
-	 * Sets the value of the '{@link KragsteinMethod.IconConnection#getTargetIcon <em>Target Icon</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Target Icon</em>' attribute.
-	 * @see #getTargetIcon()
-	 * @generated
-	 */
-	void setTargetIcon(String value);
 
 } // IconConnection

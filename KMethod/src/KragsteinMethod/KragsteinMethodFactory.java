@@ -220,15 +220,6 @@ public interface KragsteinMethodFactory extends EFactory {
 	Input createInput();
 
 	/**
-	 * Returns a new object of class '<em>Loop Arrow</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Loop Arrow</em>'.
-	 * @generated
-	 */
-	LoopArrow createLoopArrow();
-
-	/**
 	 * Returns a new object of class '<em>End</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -23,7 +23,6 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  * <ul>
  *   <li>{@link KragsteinMethod.impl.CaseConnectionImpl#getSource <em>Source</em>}</li>
  *   <li>{@link KragsteinMethod.impl.CaseConnectionImpl#getTarget <em>Target</em>}</li>
- *   <li>{@link KragsteinMethod.impl.CaseConnectionImpl#getTargetCase <em>Target Case</em>}</li>
  * </ul>
  * </p>
  *
@@ -49,26 +48,6 @@ public class CaseConnectionImpl extends EObjectImpl implements CaseConnection {
 	 * @ordered
 	 */
 	protected Case target;
-
-	/**
-	 * The default value of the '{@link #getTargetCase() <em>Target Case</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTargetCase()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String TARGET_CASE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getTargetCase() <em>Target Case</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTargetCase()
-	 * @generated
-	 * @ordered
-	 */
-	protected String targetCase = TARGET_CASE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -170,27 +149,6 @@ public class CaseConnectionImpl extends EObjectImpl implements CaseConnection {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getTargetCase() {
-		return targetCase;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTargetCase(String newTargetCase) {
-		String oldTargetCase = targetCase;
-		targetCase = newTargetCase;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, KragsteinMethodPackage.CASE_CONNECTION__TARGET_CASE, oldTargetCase, targetCase));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -200,8 +158,6 @@ public class CaseConnectionImpl extends EObjectImpl implements CaseConnection {
 			case KragsteinMethodPackage.CASE_CONNECTION__TARGET:
 				if (resolve) return getTarget();
 				return basicGetTarget();
-			case KragsteinMethodPackage.CASE_CONNECTION__TARGET_CASE:
-				return getTargetCase();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -219,9 +175,6 @@ public class CaseConnectionImpl extends EObjectImpl implements CaseConnection {
 				return;
 			case KragsteinMethodPackage.CASE_CONNECTION__TARGET:
 				setTarget((Case)newValue);
-				return;
-			case KragsteinMethodPackage.CASE_CONNECTION__TARGET_CASE:
-				setTargetCase((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -241,9 +194,6 @@ public class CaseConnectionImpl extends EObjectImpl implements CaseConnection {
 			case KragsteinMethodPackage.CASE_CONNECTION__TARGET:
 				setTarget((Case)null);
 				return;
-			case KragsteinMethodPackage.CASE_CONNECTION__TARGET_CASE:
-				setTargetCase(TARGET_CASE_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -260,26 +210,8 @@ public class CaseConnectionImpl extends EObjectImpl implements CaseConnection {
 				return source != null;
 			case KragsteinMethodPackage.CASE_CONNECTION__TARGET:
 				return target != null;
-			case KragsteinMethodPackage.CASE_CONNECTION__TARGET_CASE:
-				return TARGET_CASE_EDEFAULT == null ? targetCase != null : !TARGET_CASE_EDEFAULT.equals(targetCase);
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (targetCase: ");
-		result.append(targetCase);
-		result.append(')');
-		return result.toString();
 	}
 
 } //CaseConnectionImpl

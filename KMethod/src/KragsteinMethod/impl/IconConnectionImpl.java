@@ -23,7 +23,6 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  * <ul>
  *   <li>{@link KragsteinMethod.impl.IconConnectionImpl#getTarget <em>Target</em>}</li>
  *   <li>{@link KragsteinMethod.impl.IconConnectionImpl#getSource <em>Source</em>}</li>
- *   <li>{@link KragsteinMethod.impl.IconConnectionImpl#getTargetIcon <em>Target Icon</em>}</li>
  * </ul>
  * </p>
  *
@@ -49,26 +48,6 @@ public class IconConnectionImpl extends EObjectImpl implements IconConnection {
 	 * @ordered
 	 */
 	protected Icon source;
-
-	/**
-	 * The default value of the '{@link #getTargetIcon() <em>Target Icon</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTargetIcon()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String TARGET_ICON_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getTargetIcon() <em>Target Icon</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTargetIcon()
-	 * @generated
-	 * @ordered
-	 */
-	protected String targetIcon = TARGET_ICON_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -170,27 +149,6 @@ public class IconConnectionImpl extends EObjectImpl implements IconConnection {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getTargetIcon() {
-		return targetIcon;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTargetIcon(String newTargetIcon) {
-		String oldTargetIcon = targetIcon;
-		targetIcon = newTargetIcon;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, KragsteinMethodPackage.ICON_CONNECTION__TARGET_ICON, oldTargetIcon, targetIcon));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -200,8 +158,6 @@ public class IconConnectionImpl extends EObjectImpl implements IconConnection {
 			case KragsteinMethodPackage.ICON_CONNECTION__SOURCE:
 				if (resolve) return getSource();
 				return basicGetSource();
-			case KragsteinMethodPackage.ICON_CONNECTION__TARGET_ICON:
-				return getTargetIcon();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -219,9 +175,6 @@ public class IconConnectionImpl extends EObjectImpl implements IconConnection {
 				return;
 			case KragsteinMethodPackage.ICON_CONNECTION__SOURCE:
 				setSource((Icon)newValue);
-				return;
-			case KragsteinMethodPackage.ICON_CONNECTION__TARGET_ICON:
-				setTargetIcon((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -241,9 +194,6 @@ public class IconConnectionImpl extends EObjectImpl implements IconConnection {
 			case KragsteinMethodPackage.ICON_CONNECTION__SOURCE:
 				setSource((Icon)null);
 				return;
-			case KragsteinMethodPackage.ICON_CONNECTION__TARGET_ICON:
-				setTargetIcon(TARGET_ICON_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -260,26 +210,8 @@ public class IconConnectionImpl extends EObjectImpl implements IconConnection {
 				return target != null;
 			case KragsteinMethodPackage.ICON_CONNECTION__SOURCE:
 				return source != null;
-			case KragsteinMethodPackage.ICON_CONNECTION__TARGET_ICON:
-				return TARGET_ICON_EDEFAULT == null ? targetIcon != null : !TARGET_ICON_EDEFAULT.equals(targetIcon);
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (targetIcon: ");
-		result.append(targetIcon);
-		result.append(')');
-		return result.toString();
 	}
 
 } //IconConnectionImpl

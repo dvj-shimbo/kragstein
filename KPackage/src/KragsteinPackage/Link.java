@@ -14,7 +14,6 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link KragsteinPackage.Link#getSource <em>Source</em>}</li>
  *   <li>{@link KragsteinPackage.Link#getTarget <em>Target</em>}</li>
- *   <li>{@link KragsteinPackage.Link#getTargetClass <em>Target Class</em>}</li>
  * </ul>
  * </p>
  *
@@ -74,31 +73,5 @@ public interface Link extends EObject {
 	 * @generated
 	 */
 	void setTarget(Unit value);
-
-	/**
-	 * Returns the value of the '<em><b>Target Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Target Class</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Target Class</em>' attribute.
-	 * @see #setTargetClass(String)
-	 * @see KragsteinPackage.KragsteinPackagePackage#getLink_TargetClass()
-	 * @model
-	 * @generated
-	 */
-	String getTargetClass();
-
-	/**
-	 * Sets the value of the '{@link KragsteinPackage.Link#getTargetClass <em>Target Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Target Class</em>' attribute.
-	 * @see #getTargetClass()
-	 * @generated
-	 */
-	void setTargetClass(String value);
 
 } // Link

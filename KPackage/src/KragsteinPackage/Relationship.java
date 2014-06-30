@@ -17,7 +17,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link KragsteinPackage.Relationship#getName <em>Name</em>}</li>
  *   <li>{@link KragsteinPackage.Relationship#getLowerBound <em>Lower Bound</em>}</li>
  *   <li>{@link KragsteinPackage.Relationship#getUpperBound <em>Upper Bound</em>}</li>
- *   <li>{@link KragsteinPackage.Relationship#getTargetClass <em>Target Class</em>}</li>
  * </ul>
  * </p>
  *
@@ -155,31 +154,5 @@ public interface Relationship extends EObject {
 	 * @generated
 	 */
 	void setUpperBound(int value);
-
-	/**
-	 * Returns the value of the '<em><b>Target Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Target Class</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Target Class</em>' attribute.
-	 * @see #setTargetClass(String)
-	 * @see KragsteinPackage.KragsteinPackagePackage#getRelationship_TargetClass()
-	 * @model
-	 * @generated
-	 */
-	String getTargetClass();
-
-	/**
-	 * Sets the value of the '{@link KragsteinPackage.Relationship#getTargetClass <em>Target Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Target Class</em>' attribute.
-	 * @see #getTargetClass()
-	 * @generated
-	 */
-	void setTargetClass(String value);
 
 } // Relationship

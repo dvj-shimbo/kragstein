@@ -1,7 +1,0 @@
-# Tracing options for the KPackage.diagram plug-in
-
-# Common issues
-KPackage.diagram/debug=false
-
-# Visual IDs
-KPackage.diagram/debug/visualID=false

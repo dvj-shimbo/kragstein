@@ -160,10 +160,6 @@ public class KragsteinMethodAdapterFactory extends AdapterFactoryImpl {
 				return createInputAdapter();
 			}
 			@Override
-			public Adapter caseLoopArrow(LoopArrow object) {
-				return createLoopArrowAdapter();
-			}
-			@Override
 			public Adapter caseEnd(End object) {
 				return createEndAdapter();
 			}
@@ -506,20 +502,6 @@ public class KragsteinMethodAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createInputAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link KragsteinMethod.LoopArrow <em>Loop Arrow</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see KragsteinMethod.LoopArrow
-	 * @generated
-	 */
-	public Adapter createLoopArrowAdapter() {
 		return null;
 	}
 

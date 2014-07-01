@@ -16,7 +16,7 @@ package KragsteinPackage;
  * </p>
  *
  * @see KragsteinPackage.KragsteinPackagePackage#getGeneralization()
- * @model annotation="gmf.link label='name' source='source' target='target'"
+ * @model annotation="gmf.link source='source' target='target' target.decoration='closedarrow'"
  * @generated
  */
 public interface Generalization extends Relationship {

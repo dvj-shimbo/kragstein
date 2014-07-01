@@ -10,7 +10,7 @@ package KragsteinPackage;
  *
  *
  * @see KragsteinPackage.KragsteinPackagePackage#getRealization()
- * @model annotation="gmf.link label='name' target.decoration\040='arrow' source='source' target='target'"
+ * @model annotation="gmf.link style='dash' source='source' target='target' target.decoration='closedarrow'"
  * @generated
  */
 public interface Realization extends Relationship {

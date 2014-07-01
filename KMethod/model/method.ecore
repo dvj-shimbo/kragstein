@@ -45,6 +45,7 @@
     <eAnnotations source="gmf.link">
       <details key="source" value="source"/>
       <details key="target" value="target"/>
+      <details key="target.decoration" value="arrow"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//Branch"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Branch"/>
@@ -69,9 +70,9 @@
   <eClassifiers xsi:type="ecore:EClass" name="ValencePoint"/>
   <eClassifiers xsi:type="ecore:EClass" name="IconConnection">
     <eAnnotations source="gmf.link">
-      <details key="label.placement" value="none"/>
       <details key="source" value="source"/>
       <details key="target" value="target"/>
+      <details key="target.decoration" value="arrow"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Icon"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//Icon"/>
@@ -137,9 +138,9 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CaseConnection">
     <eAnnotations source="gmf.link">
-      <details key="label.placement" value="none"/>
       <details key="source" value="source"/>
       <details key="target" value="target"/>
+      <details key="target.decoration" value="arrow"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//Case"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Case"/>

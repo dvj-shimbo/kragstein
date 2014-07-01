@@ -10,7 +10,7 @@ package KragsteinPackage;
  *
  *
  * @see KragsteinPackage.KragsteinPackagePackage#getDependency()
- * @model annotation="gmf.link label='name' source='source' target='target'"
+ * @model annotation="gmf.link style='dash' label='name' source='source' target='target' target.decoration='arrow'"
  * @generated
  */
 public interface Dependency extends Relationship {

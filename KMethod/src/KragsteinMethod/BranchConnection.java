@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  *
  * @see KragsteinMethod.KragsteinMethodPackage#getBranchConnection()
- * @model annotation="gmf.link source='source' target='target'"
+ * @model annotation="gmf.link source='source' target='target' target.decoration='arrow'"
  * @generated
  */
 public interface BranchConnection extends EObject {

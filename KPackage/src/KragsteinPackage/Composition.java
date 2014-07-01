@@ -10,7 +10,7 @@ package KragsteinPackage;
  *
  *
  * @see KragsteinPackage.KragsteinPackagePackage#getComposition()
- * @model annotation="gmf.link label='name' source='source' target='target'"
+ * @model annotation="gmf.link label='name' source='source' target='target' source.decoration='filledrhomb'"
  * @generated
  */
 public interface Composition extends Relationship {

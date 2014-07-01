@@ -1007,27 +1007,27 @@ public class KragsteinPackagePackageImpl extends EPackageImpl implements Kragste
 		  (generalizationEClass, 
 		   source, 
 		   new String[] {
-			 "label", "name",
 			 "source", "source",
-			 "target", "target"
+			 "target", "target",
+			 "target.decoration", "closedarrow"
 		   });	
 		addAnnotation
 		  (realizationEClass, 
 		   source, 
 		   new String[] {
-			 "label", "name",
-			 "target.decoration ", "arrow",
+			 "style", "dash",
 			 "source", "source",
-			 "target", "target"
+			 "target", "target",
+			 "target.decoration", "closedarrow"
 		   });	
 		addAnnotation
 		  (associationEClass, 
 		   source, 
 		   new String[] {
 			 "label", "name",
-			 "target.decoration ", "arrow",
 			 "source", "source",
-			 "target", "target"
+			 "target", "target",
+			 "target.decoration", "arrow"
 		   });	
 		addAnnotation
 		  (aggregationEClass, 
@@ -1036,7 +1036,7 @@ public class KragsteinPackagePackageImpl extends EPackageImpl implements Kragste
 			 "label", "name",
 			 "source", "source",
 			 "target", "target",
-			 "target", "target"
+			 "source.decoration", "rhomb"
 		   });	
 		addAnnotation
 		  (compositionEClass, 
@@ -1044,15 +1044,18 @@ public class KragsteinPackagePackageImpl extends EPackageImpl implements Kragste
 		   new String[] {
 			 "label", "name",
 			 "source", "source",
-			 "target", "target"
+			 "target", "target",
+			 "source.decoration", "filledrhomb"
 		   });	
 		addAnnotation
 		  (dependencyEClass, 
 		   source, 
 		   new String[] {
+			 "style", "dash",
 			 "label", "name",
 			 "source", "source",
-			 "target", "target"
+			 "target", "target",
+			 "target.decoration", "arrow"
 		   });	
 		addAnnotation
 		  (linkEClass, 

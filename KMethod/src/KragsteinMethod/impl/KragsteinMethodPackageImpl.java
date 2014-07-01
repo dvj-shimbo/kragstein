@@ -1629,23 +1629,24 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 		   source, 
 		   new String[] {
 			 "source", "source",
-			 "target", "target"
+			 "target", "target",
+			 "target.decoration", "arrow"
 		   });	
 		addAnnotation
 		  (iconConnectionEClass, 
 		   source, 
 		   new String[] {
-			 "label.placement", "none",
 			 "source", "source",
-			 "target", "target"
+			 "target", "target",
+			 "target.decoration", "arrow"
 		   });	
 		addAnnotation
 		  (caseConnectionEClass, 
 		   source, 
 		   new String[] {
-			 "label.placement", "none",
 			 "source", "source",
-			 "target", "target"
+			 "target", "target",
+			 "target.decoration", "arrow"
 		   });
 	}
 

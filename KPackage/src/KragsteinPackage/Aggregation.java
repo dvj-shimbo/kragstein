@@ -10,7 +10,7 @@ package KragsteinPackage;
  *
  *
  * @see KragsteinPackage.KragsteinPackagePackage#getAggregation()
- * @model annotation="gmf.link label='name' source='source' target='target' target='target'"
+ * @model annotation="gmf.link label='name' source='source' target='target' source.decoration='rhomb'"
  * @generated
  */
 public interface Aggregation extends Relationship {

@@ -10,7 +10,7 @@ package KragsteinPackage;
  *
  *
  * @see KragsteinPackage.KragsteinPackagePackage#getAssociation()
- * @model annotation="gmf.link label='name' target.decoration\040='arrow' source='source' target='target'"
+ * @model annotation="gmf.link label='name' source='source' target='target' target.decoration='arrow'"
  * @generated
  */
 public interface Association extends Relationship {

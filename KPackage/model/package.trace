@@ -49,18 +49,10 @@
   </childNodeTraces>
   <linkTraces
       visualID="4001"
-      queryText="modelFacet.oclIsKindOf(gmfgen::TypeLinkModelFacet) and (let _eClass_:ecore::EClass = modelFacet.oclAsType(gmfgen::TypeLinkModelFacet).metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'KragsteinPackage.ecore' and _eClass_.name = 'Generalization')">
-    <linkLabelTraces
-        visualID="6007"
-        queryText="true"/>
-  </linkTraces>
+      queryText="modelFacet.oclIsKindOf(gmfgen::TypeLinkModelFacet) and (let _eClass_:ecore::EClass = modelFacet.oclAsType(gmfgen::TypeLinkModelFacet).metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'KragsteinPackage.ecore' and _eClass_.name = 'Generalization')"/>
   <linkTraces
       visualID="4003"
-      queryText="modelFacet.oclIsKindOf(gmfgen::TypeLinkModelFacet) and (let _eClass_:ecore::EClass = modelFacet.oclAsType(gmfgen::TypeLinkModelFacet).metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'KragsteinPackage.ecore' and _eClass_.name = 'Realization')">
-    <linkLabelTraces
-        visualID="6008"
-        queryText="true"/>
-  </linkTraces>
+      queryText="modelFacet.oclIsKindOf(gmfgen::TypeLinkModelFacet) and (let _eClass_:ecore::EClass = modelFacet.oclAsType(gmfgen::TypeLinkModelFacet).metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'KragsteinPackage.ecore' and _eClass_.name = 'Realization')"/>
   <linkTraces
       visualID="4005"
       queryText="modelFacet.oclIsKindOf(gmfgen::TypeLinkModelFacet) and (let _eClass_:ecore::EClass = modelFacet.oclAsType(gmfgen::TypeLinkModelFacet).metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'KragsteinPackage.ecore' and _eClass_.name = 'Association')">

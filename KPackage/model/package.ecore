@@ -17,26 +17,26 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Generalization" eSuperTypes="#//Relationship">
     <eAnnotations source="gmf.link">
-      <details key="label" value="name"/>
       <details key="source" value="source"/>
       <details key="target" value="target"/>
+      <details key="target.decoration" value="closedarrow"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Realization" eSuperTypes="#//Relationship">
     <eAnnotations source="gmf.link">
-      <details key="label" value="name"/>
-      <details key="target.decoration " value="arrow"/>
+      <details key="style" value="dash"/>
       <details key="source" value="source"/>
       <details key="target" value="target"/>
+      <details key="target.decoration" value="closedarrow"/>
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Association" eSuperTypes="#//Relationship">
     <eAnnotations source="gmf.link">
       <details key="label" value="name"/>
-      <details key="target.decoration " value="arrow"/>
       <details key="source" value="source"/>
       <details key="target" value="target"/>
+      <details key="target.decoration" value="arrow"/>
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Aggregation" eSuperTypes="#//Relationship">
@@ -44,7 +44,7 @@
       <details key="label" value="name"/>
       <details key="source" value="source"/>
       <details key="target" value="target"/>
-      <details key="target" value="target"/>
+      <details key="source.decoration" value="rhomb"/>
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Composition" eSuperTypes="#//Relationship">
@@ -52,13 +52,16 @@
       <details key="label" value="name"/>
       <details key="source" value="source"/>
       <details key="target" value="target"/>
+      <details key="source.decoration" value="filledrhomb"/>
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Dependency" eSuperTypes="#//Relationship">
     <eAnnotations source="gmf.link">
+      <details key="style" value="dash"/>
       <details key="label" value="name"/>
       <details key="source" value="source"/>
       <details key="target" value="target"/>
+      <details key="target.decoration" value="arrow"/>
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Note" eSuperTypes="#//Unit">

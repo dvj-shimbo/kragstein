@@ -10,12 +10,6 @@ Package KragsteinMethod <KragsteinMethod.ecore>
   Class Method
     Reference header : Header<<1..1>>
     Reference branch : Branch<<1..*>>
-    Attribute name : EString
-    Attribute type : EString
-    Attribute visibility : EString
-    Attribute isConst : EBoolean
-    Attribute isVirtual : EBoolean
-    Attribute isStatic : EBoolean
 
   Class Header
     Attribute name : EString
@@ -29,7 +23,6 @@ Package KragsteinMethod <KragsteinMethod.ecore>
   Class Branch
     Reference targetBranchConnection : BranchConnection
     Reference route : Route<<1..1>>
-    Attribute name : EString
 
   Class BranchConnection
     Reference source : Branch

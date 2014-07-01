@@ -19,7 +19,6 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  * The following features are implemented:
  * <ul>
  *   <li>{@link KragsteinProject.impl.ClassImpl#getName <em>Name</em>}</li>
- *   <li>{@link KragsteinProject.impl.ClassImpl#getType <em>Type</em>}</li>
  *   <li>{@link KragsteinProject.impl.ClassImpl#getVisibility <em>Visibility</em>}</li>
  *   <li>{@link KragsteinProject.impl.ClassImpl#isIsSingletone <em>Is Singletone</em>}</li>
  *   <li>{@link KragsteinProject.impl.ClassImpl#isIsInterface <em>Is Interface</em>}</li>
@@ -50,26 +49,6 @@ public class ClassImpl extends EObjectImpl implements KragsteinProject.Class {
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getType()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String TYPE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getType()
-	 * @generated
-	 * @ordered
-	 */
-	protected String type = TYPE_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getVisibility() <em>Visibility</em>}' attribute.
@@ -216,27 +195,6 @@ public class ClassImpl extends EObjectImpl implements KragsteinProject.Class {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getType() {
-		return type;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setType(String newType) {
-		String oldType = type;
-		type = newType;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, KragsteinProjectPackage.CLASS__TYPE, oldType, type));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getVisibility() {
 		return visibility;
 	}
@@ -347,8 +305,6 @@ public class ClassImpl extends EObjectImpl implements KragsteinProject.Class {
 		switch (featureID) {
 			case KragsteinProjectPackage.CLASS__NAME:
 				return getName();
-			case KragsteinProjectPackage.CLASS__TYPE:
-				return getType();
 			case KragsteinProjectPackage.CLASS__VISIBILITY:
 				return getVisibility();
 			case KragsteinProjectPackage.CLASS__IS_SINGLETONE:
@@ -373,9 +329,6 @@ public class ClassImpl extends EObjectImpl implements KragsteinProject.Class {
 		switch (featureID) {
 			case KragsteinProjectPackage.CLASS__NAME:
 				setName((String)newValue);
-				return;
-			case KragsteinProjectPackage.CLASS__TYPE:
-				setType((String)newValue);
 				return;
 			case KragsteinProjectPackage.CLASS__VISIBILITY:
 				setVisibility((String)newValue);
@@ -407,9 +360,6 @@ public class ClassImpl extends EObjectImpl implements KragsteinProject.Class {
 			case KragsteinProjectPackage.CLASS__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case KragsteinProjectPackage.CLASS__TYPE:
-				setType(TYPE_EDEFAULT);
-				return;
 			case KragsteinProjectPackage.CLASS__VISIBILITY:
 				setVisibility(VISIBILITY_EDEFAULT);
 				return;
@@ -439,8 +389,6 @@ public class ClassImpl extends EObjectImpl implements KragsteinProject.Class {
 		switch (featureID) {
 			case KragsteinProjectPackage.CLASS__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case KragsteinProjectPackage.CLASS__TYPE:
-				return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
 			case KragsteinProjectPackage.CLASS__VISIBILITY:
 				return VISIBILITY_EDEFAULT == null ? visibility != null : !VISIBILITY_EDEFAULT.equals(visibility);
 			case KragsteinProjectPackage.CLASS__IS_SINGLETONE:
@@ -467,8 +415,6 @@ public class ClassImpl extends EObjectImpl implements KragsteinProject.Class {
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (name: ");
 		result.append(name);
-		result.append(", type: ");
-		result.append(type);
 		result.append(", visibility: ");
 		result.append(visibility);
 		result.append(", isSingletone: ");

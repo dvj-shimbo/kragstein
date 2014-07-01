@@ -697,22 +697,13 @@ public interface KragsteinPackagePackage extends EPackage {
 	int CLASS__IMPORTED_CLASS = UNIT_FEATURE_COUNT + 4;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CLASS__TYPE = UNIT_FEATURE_COUNT + 5;
-
-	/**
 	 * The feature id for the '<em><b>Visibility</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS__VISIBILITY = UNIT_FEATURE_COUNT + 6;
+	int CLASS__VISIBILITY = UNIT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Is Singletone</b></em>' attribute.
@@ -721,7 +712,7 @@ public interface KragsteinPackagePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS__IS_SINGLETONE = UNIT_FEATURE_COUNT + 7;
+	int CLASS__IS_SINGLETONE = UNIT_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Is Interface</b></em>' attribute.
@@ -730,7 +721,7 @@ public interface KragsteinPackagePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS__IS_INTERFACE = UNIT_FEATURE_COUNT + 8;
+	int CLASS__IS_INTERFACE = UNIT_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Super Class</b></em>' attribute.
@@ -739,7 +730,7 @@ public interface KragsteinPackagePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS__SUPER_CLASS = UNIT_FEATURE_COUNT + 9;
+	int CLASS__SUPER_CLASS = UNIT_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Supplier Element</b></em>' attribute.
@@ -748,7 +739,7 @@ public interface KragsteinPackagePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS__SUPPLIER_ELEMENT = UNIT_FEATURE_COUNT + 10;
+	int CLASS__SUPPLIER_ELEMENT = UNIT_FEATURE_COUNT + 9;
 
 	/**
 	 * The number of structural features of the '<em>Class</em>' class.
@@ -757,7 +748,7 @@ public interface KragsteinPackagePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS_FEATURE_COUNT = UNIT_FEATURE_COUNT + 11;
+	int CLASS_FEATURE_COUNT = UNIT_FEATURE_COUNT + 10;
 
 	/**
 	 * The meta object id for the '{@link KragsteinPackage.impl.ImportedClassImpl <em>Imported Class</em>}' class.
@@ -1320,17 +1311,6 @@ public interface KragsteinPackagePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getClass_ImportedClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link KragsteinPackage.Class#getType <em>Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Type</em>'.
-	 * @see KragsteinPackage.Class#getType()
-	 * @see #getClass_()
-	 * @generated
-	 */
-	EAttribute getClass_Type();
 
 	/**
 	 * Returns the meta object for the attribute '{@link KragsteinPackage.Class#getVisibility <em>Visibility</em>}'.
@@ -1938,14 +1918,6 @@ public interface KragsteinPackagePackage extends EPackage {
 		 * @generated
 		 */
 		EReference CLASS__IMPORTED_CLASS = eINSTANCE.getClass_ImportedClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CLASS__TYPE = eINSTANCE.getClass_Type();
 
 		/**
 		 * The meta object literal for the '<em><b>Visibility</b></em>' attribute feature.

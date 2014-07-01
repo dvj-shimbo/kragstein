@@ -8,7 +8,6 @@ This can be disabled with -vmargs -Dorg.eclipse.emf.examples.generator.validator
 Package KragsteinProject <KragsteinProject.ecore>
 
   Class Project
-    Attribute name : EString
     Attribute lang : EString
     Reference package : Package<<0..*>>
 
@@ -20,7 +19,6 @@ Package KragsteinProject <KragsteinProject.ecore>
 
   Class Class
     Attribute name : EString
-    Attribute type : EString
     Attribute visibility : EString
     Attribute isSingletone : EBoolean
     Attribute isInterface : EBoolean

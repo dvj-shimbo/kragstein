@@ -28,7 +28,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link KragsteinProject.impl.ProjectImpl#getName <em>Name</em>}</li>
  *   <li>{@link KragsteinProject.impl.ProjectImpl#getLang <em>Lang</em>}</li>
  *   <li>{@link KragsteinProject.impl.ProjectImpl#getPackage <em>Package</em>}</li>
  * </ul>
@@ -37,26 +36,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * @generated
  */
 public class ProjectImpl extends EObjectImpl implements Project {
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
-
 	/**
 	 * The default value of the '{@link #getLang() <em>Lang</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -104,27 +83,6 @@ public class ProjectImpl extends EObjectImpl implements Project {
 	@Override
 	protected EClass eStaticClass() {
 		return KragsteinProjectPackage.Literals.PROJECT;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, KragsteinProjectPackage.PROJECT__NAME, oldName, name));
 	}
 
 	/**
@@ -182,8 +140,6 @@ public class ProjectImpl extends EObjectImpl implements Project {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case KragsteinProjectPackage.PROJECT__NAME:
-				return getName();
 			case KragsteinProjectPackage.PROJECT__LANG:
 				return getLang();
 			case KragsteinProjectPackage.PROJECT__PACKAGE:
@@ -201,9 +157,6 @@ public class ProjectImpl extends EObjectImpl implements Project {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case KragsteinProjectPackage.PROJECT__NAME:
-				setName((String)newValue);
-				return;
 			case KragsteinProjectPackage.PROJECT__LANG:
 				setLang((String)newValue);
 				return;
@@ -223,9 +176,6 @@ public class ProjectImpl extends EObjectImpl implements Project {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case KragsteinProjectPackage.PROJECT__NAME:
-				setName(NAME_EDEFAULT);
-				return;
 			case KragsteinProjectPackage.PROJECT__LANG:
 				setLang(LANG_EDEFAULT);
 				return;
@@ -244,8 +194,6 @@ public class ProjectImpl extends EObjectImpl implements Project {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case KragsteinProjectPackage.PROJECT__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case KragsteinProjectPackage.PROJECT__LANG:
 				return LANG_EDEFAULT == null ? lang != null : !LANG_EDEFAULT.equals(lang);
 			case KragsteinProjectPackage.PROJECT__PACKAGE:
@@ -264,9 +212,7 @@ public class ProjectImpl extends EObjectImpl implements Project {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(", lang: ");
+		result.append(" (lang: ");
 		result.append(lang);
 		result.append(')');
 		return result.toString();

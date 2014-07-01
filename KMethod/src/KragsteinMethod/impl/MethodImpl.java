@@ -32,12 +32,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link KragsteinMethod.impl.MethodImpl#getHeader <em>Header</em>}</li>
  *   <li>{@link KragsteinMethod.impl.MethodImpl#getBranch <em>Branch</em>}</li>
- *   <li>{@link KragsteinMethod.impl.MethodImpl#getName <em>Name</em>}</li>
- *   <li>{@link KragsteinMethod.impl.MethodImpl#getType <em>Type</em>}</li>
- *   <li>{@link KragsteinMethod.impl.MethodImpl#getVisibility <em>Visibility</em>}</li>
- *   <li>{@link KragsteinMethod.impl.MethodImpl#isIsConst <em>Is Const</em>}</li>
- *   <li>{@link KragsteinMethod.impl.MethodImpl#isIsVirtual <em>Is Virtual</em>}</li>
- *   <li>{@link KragsteinMethod.impl.MethodImpl#isIsStatic <em>Is Static</em>}</li>
  * </ul>
  * </p>
  *
@@ -63,126 +57,6 @@ public class MethodImpl extends EObjectImpl implements Method {
 	 * @ordered
 	 */
 	protected EList<Branch> branch;
-
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getType()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String TYPE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getType()
-	 * @generated
-	 * @ordered
-	 */
-	protected String type = TYPE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getVisibility() <em>Visibility</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getVisibility()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String VISIBILITY_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getVisibility() <em>Visibility</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getVisibility()
-	 * @generated
-	 * @ordered
-	 */
-	protected String visibility = VISIBILITY_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #isIsConst() <em>Is Const</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isIsConst()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean IS_CONST_EDEFAULT = false;
-
-	/**
-	 * The cached value of the '{@link #isIsConst() <em>Is Const</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isIsConst()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean isConst = IS_CONST_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #isIsVirtual() <em>Is Virtual</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isIsVirtual()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean IS_VIRTUAL_EDEFAULT = false;
-
-	/**
-	 * The cached value of the '{@link #isIsVirtual() <em>Is Virtual</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isIsVirtual()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean isVirtual = IS_VIRTUAL_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #isIsStatic() <em>Is Static</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isIsStatic()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean IS_STATIC_EDEFAULT = false;
-
-	/**
-	 * The cached value of the '{@link #isIsStatic() <em>Is Static</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isIsStatic()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean isStatic = IS_STATIC_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -263,132 +137,6 @@ public class MethodImpl extends EObjectImpl implements Method {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, KragsteinMethodPackage.METHOD__NAME, oldName, name));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getType() {
-		return type;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setType(String newType) {
-		String oldType = type;
-		type = newType;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, KragsteinMethodPackage.METHOD__TYPE, oldType, type));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getVisibility() {
-		return visibility;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setVisibility(String newVisibility) {
-		String oldVisibility = visibility;
-		visibility = newVisibility;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, KragsteinMethodPackage.METHOD__VISIBILITY, oldVisibility, visibility));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isIsConst() {
-		return isConst;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setIsConst(boolean newIsConst) {
-		boolean oldIsConst = isConst;
-		isConst = newIsConst;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, KragsteinMethodPackage.METHOD__IS_CONST, oldIsConst, isConst));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isIsVirtual() {
-		return isVirtual;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setIsVirtual(boolean newIsVirtual) {
-		boolean oldIsVirtual = isVirtual;
-		isVirtual = newIsVirtual;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, KragsteinMethodPackage.METHOD__IS_VIRTUAL, oldIsVirtual, isVirtual));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isIsStatic() {
-		return isStatic;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setIsStatic(boolean newIsStatic) {
-		boolean oldIsStatic = isStatic;
-		isStatic = newIsStatic;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, KragsteinMethodPackage.METHOD__IS_STATIC, oldIsStatic, isStatic));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -412,18 +160,6 @@ public class MethodImpl extends EObjectImpl implements Method {
 				return getHeader();
 			case KragsteinMethodPackage.METHOD__BRANCH:
 				return getBranch();
-			case KragsteinMethodPackage.METHOD__NAME:
-				return getName();
-			case KragsteinMethodPackage.METHOD__TYPE:
-				return getType();
-			case KragsteinMethodPackage.METHOD__VISIBILITY:
-				return getVisibility();
-			case KragsteinMethodPackage.METHOD__IS_CONST:
-				return isIsConst();
-			case KragsteinMethodPackage.METHOD__IS_VIRTUAL:
-				return isIsVirtual();
-			case KragsteinMethodPackage.METHOD__IS_STATIC:
-				return isIsStatic();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -444,24 +180,6 @@ public class MethodImpl extends EObjectImpl implements Method {
 				getBranch().clear();
 				getBranch().addAll((Collection<? extends Branch>)newValue);
 				return;
-			case KragsteinMethodPackage.METHOD__NAME:
-				setName((String)newValue);
-				return;
-			case KragsteinMethodPackage.METHOD__TYPE:
-				setType((String)newValue);
-				return;
-			case KragsteinMethodPackage.METHOD__VISIBILITY:
-				setVisibility((String)newValue);
-				return;
-			case KragsteinMethodPackage.METHOD__IS_CONST:
-				setIsConst((Boolean)newValue);
-				return;
-			case KragsteinMethodPackage.METHOD__IS_VIRTUAL:
-				setIsVirtual((Boolean)newValue);
-				return;
-			case KragsteinMethodPackage.METHOD__IS_STATIC:
-				setIsStatic((Boolean)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -480,24 +198,6 @@ public class MethodImpl extends EObjectImpl implements Method {
 			case KragsteinMethodPackage.METHOD__BRANCH:
 				getBranch().clear();
 				return;
-			case KragsteinMethodPackage.METHOD__NAME:
-				setName(NAME_EDEFAULT);
-				return;
-			case KragsteinMethodPackage.METHOD__TYPE:
-				setType(TYPE_EDEFAULT);
-				return;
-			case KragsteinMethodPackage.METHOD__VISIBILITY:
-				setVisibility(VISIBILITY_EDEFAULT);
-				return;
-			case KragsteinMethodPackage.METHOD__IS_CONST:
-				setIsConst(IS_CONST_EDEFAULT);
-				return;
-			case KragsteinMethodPackage.METHOD__IS_VIRTUAL:
-				setIsVirtual(IS_VIRTUAL_EDEFAULT);
-				return;
-			case KragsteinMethodPackage.METHOD__IS_STATIC:
-				setIsStatic(IS_STATIC_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -514,46 +214,8 @@ public class MethodImpl extends EObjectImpl implements Method {
 				return header != null;
 			case KragsteinMethodPackage.METHOD__BRANCH:
 				return branch != null && !branch.isEmpty();
-			case KragsteinMethodPackage.METHOD__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case KragsteinMethodPackage.METHOD__TYPE:
-				return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
-			case KragsteinMethodPackage.METHOD__VISIBILITY:
-				return VISIBILITY_EDEFAULT == null ? visibility != null : !VISIBILITY_EDEFAULT.equals(visibility);
-			case KragsteinMethodPackage.METHOD__IS_CONST:
-				return isConst != IS_CONST_EDEFAULT;
-			case KragsteinMethodPackage.METHOD__IS_VIRTUAL:
-				return isVirtual != IS_VIRTUAL_EDEFAULT;
-			case KragsteinMethodPackage.METHOD__IS_STATIC:
-				return isStatic != IS_STATIC_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(", type: ");
-		result.append(type);
-		result.append(", visibility: ");
-		result.append(visibility);
-		result.append(", isConst: ");
-		result.append(isConst);
-		result.append(", isVirtual: ");
-		result.append(isVirtual);
-		result.append(", isStatic: ");
-		result.append(isStatic);
-		result.append(')');
-		return result.toString();
 	}
 
 } //MethodImpl

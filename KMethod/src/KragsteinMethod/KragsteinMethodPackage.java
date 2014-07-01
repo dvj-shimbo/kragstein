@@ -84,67 +84,13 @@ public interface KragsteinMethodPackage extends EPackage {
 	int METHOD__BRANCH = 1;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int METHOD__NAME = 2;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int METHOD__TYPE = 3;
-
-	/**
-	 * The feature id for the '<em><b>Visibility</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int METHOD__VISIBILITY = 4;
-
-	/**
-	 * The feature id for the '<em><b>Is Const</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int METHOD__IS_CONST = 5;
-
-	/**
-	 * The feature id for the '<em><b>Is Virtual</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int METHOD__IS_VIRTUAL = 6;
-
-	/**
-	 * The feature id for the '<em><b>Is Static</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int METHOD__IS_STATIC = 7;
-
-	/**
 	 * The number of structural features of the '<em>Method</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int METHOD_FEATURE_COUNT = 8;
+	int METHOD_FEATURE_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link KragsteinMethod.impl.HeaderImpl <em>Header</em>}' class.
@@ -257,22 +203,13 @@ public interface KragsteinMethodPackage extends EPackage {
 	int BRANCH__ROUTE = 1;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BRANCH__NAME = 2;
-
-	/**
 	 * The number of structural features of the '<em>Branch</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BRANCH_FEATURE_COUNT = 3;
+	int BRANCH_FEATURE_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link KragsteinMethod.impl.BranchConnectionImpl <em>Branch Connection</em>}' class.
@@ -1618,72 +1555,6 @@ public interface KragsteinMethodPackage extends EPackage {
 	EReference getMethod_Branch();
 
 	/**
-	 * Returns the meta object for the attribute '{@link KragsteinMethod.Method#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see KragsteinMethod.Method#getName()
-	 * @see #getMethod()
-	 * @generated
-	 */
-	EAttribute getMethod_Name();
-
-	/**
-	 * Returns the meta object for the attribute '{@link KragsteinMethod.Method#getType <em>Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Type</em>'.
-	 * @see KragsteinMethod.Method#getType()
-	 * @see #getMethod()
-	 * @generated
-	 */
-	EAttribute getMethod_Type();
-
-	/**
-	 * Returns the meta object for the attribute '{@link KragsteinMethod.Method#getVisibility <em>Visibility</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Visibility</em>'.
-	 * @see KragsteinMethod.Method#getVisibility()
-	 * @see #getMethod()
-	 * @generated
-	 */
-	EAttribute getMethod_Visibility();
-
-	/**
-	 * Returns the meta object for the attribute '{@link KragsteinMethod.Method#isIsConst <em>Is Const</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Is Const</em>'.
-	 * @see KragsteinMethod.Method#isIsConst()
-	 * @see #getMethod()
-	 * @generated
-	 */
-	EAttribute getMethod_IsConst();
-
-	/**
-	 * Returns the meta object for the attribute '{@link KragsteinMethod.Method#isIsVirtual <em>Is Virtual</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Is Virtual</em>'.
-	 * @see KragsteinMethod.Method#isIsVirtual()
-	 * @see #getMethod()
-	 * @generated
-	 */
-	EAttribute getMethod_IsVirtual();
-
-	/**
-	 * Returns the meta object for the attribute '{@link KragsteinMethod.Method#isIsStatic <em>Is Static</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Is Static</em>'.
-	 * @see KragsteinMethod.Method#isIsStatic()
-	 * @see #getMethod()
-	 * @generated
-	 */
-	EAttribute getMethod_IsStatic();
-
-	/**
 	 * Returns the meta object for class '{@link KragsteinMethod.Header <em>Header</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1801,17 +1672,6 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getBranch_Route();
-
-	/**
-	 * Returns the meta object for the attribute '{@link KragsteinMethod.Branch#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see KragsteinMethod.Branch#getName()
-	 * @see #getBranch()
-	 * @generated
-	 */
-	EAttribute getBranch_Name();
 
 	/**
 	 * Returns the meta object for class '{@link KragsteinMethod.BranchConnection <em>Branch Connection</em>}'.
@@ -2643,54 +2503,6 @@ public interface KragsteinMethodPackage extends EPackage {
 		EReference METHOD__BRANCH = eINSTANCE.getMethod_Branch();
 
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute METHOD__NAME = eINSTANCE.getMethod_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute METHOD__TYPE = eINSTANCE.getMethod_Type();
-
-		/**
-		 * The meta object literal for the '<em><b>Visibility</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute METHOD__VISIBILITY = eINSTANCE.getMethod_Visibility();
-
-		/**
-		 * The meta object literal for the '<em><b>Is Const</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute METHOD__IS_CONST = eINSTANCE.getMethod_IsConst();
-
-		/**
-		 * The meta object literal for the '<em><b>Is Virtual</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute METHOD__IS_VIRTUAL = eINSTANCE.getMethod_IsVirtual();
-
-		/**
-		 * The meta object literal for the '<em><b>Is Static</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute METHOD__IS_STATIC = eINSTANCE.getMethod_IsStatic();
-
-		/**
 		 * The meta object literal for the '{@link KragsteinMethod.impl.HeaderImpl <em>Header</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2781,14 +2593,6 @@ public interface KragsteinMethodPackage extends EPackage {
 		 * @generated
 		 */
 		EReference BRANCH__ROUTE = eINSTANCE.getBranch_Route();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute BRANCH__NAME = eINSTANCE.getBranch_Name();
 
 		/**
 		 * The meta object literal for the '{@link KragsteinMethod.impl.BranchConnectionImpl <em>Branch Connection</em>}' class.

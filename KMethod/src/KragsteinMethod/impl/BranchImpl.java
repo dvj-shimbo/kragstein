@@ -29,7 +29,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link KragsteinMethod.impl.BranchImpl#getTargetBranchConnection <em>Target Branch Connection</em>}</li>
  *   <li>{@link KragsteinMethod.impl.BranchImpl#getRoute <em>Route</em>}</li>
- *   <li>{@link KragsteinMethod.impl.BranchImpl#getName <em>Name</em>}</li>
  * </ul>
  * </p>
  *
@@ -55,26 +54,6 @@ public class BranchImpl extends EObjectImpl implements Branch {
 	 * @ordered
 	 */
 	protected Route route;
-
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -186,27 +165,6 @@ public class BranchImpl extends EObjectImpl implements Branch {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, KragsteinMethodPackage.BRANCH__NAME, oldName, name));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -230,8 +188,6 @@ public class BranchImpl extends EObjectImpl implements Branch {
 				return getTargetBranchConnection();
 			case KragsteinMethodPackage.BRANCH__ROUTE:
 				return getRoute();
-			case KragsteinMethodPackage.BRANCH__NAME:
-				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -251,9 +207,6 @@ public class BranchImpl extends EObjectImpl implements Branch {
 			case KragsteinMethodPackage.BRANCH__ROUTE:
 				setRoute((Route)newValue);
 				return;
-			case KragsteinMethodPackage.BRANCH__NAME:
-				setName((String)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -272,9 +225,6 @@ public class BranchImpl extends EObjectImpl implements Branch {
 			case KragsteinMethodPackage.BRANCH__ROUTE:
 				setRoute((Route)null);
 				return;
-			case KragsteinMethodPackage.BRANCH__NAME:
-				setName(NAME_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -291,26 +241,8 @@ public class BranchImpl extends EObjectImpl implements Branch {
 				return targetBranchConnection != null;
 			case KragsteinMethodPackage.BRANCH__ROUTE:
 				return route != null;
-			case KragsteinMethodPackage.BRANCH__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(')');
-		return result.toString();
 	}
 
 } //BranchImpl

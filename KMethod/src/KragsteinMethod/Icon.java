@@ -21,7 +21,6 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see KragsteinMethod.KragsteinMethodPackage#getIcon()
  * @model abstract="true"
- *        annotation="gmf.node label.placement='none'"
  * @generated
  */
 public interface Icon extends EObject {

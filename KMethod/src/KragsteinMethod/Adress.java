@@ -17,7 +17,7 @@ package KragsteinMethod;
  * </p>
  *
  * @see KragsteinMethod.KragsteinMethodPackage#getAdress()
- * @model annotation="gmf.node label='name'"
+ * @model annotation="gmf.node label='target'"
  * @generated
  */
 public interface Adress extends Icon {

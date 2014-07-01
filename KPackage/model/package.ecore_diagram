@@ -435,11 +435,11 @@
       <layoutConstraint xmi:type="notation:Location" xmi:id="_uo7TXQB6EeSjP_fdSWkDsw" x="4" y="-7"/>
     </children>
     <children xmi:type="notation:DecorationNode" xmi:id="_uo7TXgB6EeSjP_fdSWkDsw" type="6004">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_uo7TXwB6EeSjP_fdSWkDsw" x="10" y="-11"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_uo7TXwB6EeSjP_fdSWkDsw" x="13" y="-17"/>
     </children>
     <styles xmi:type="notation:FontStyle" xmi:id="_uo7TWgB6EeSjP_fdSWkDsw"/>
     <element xmi:type="ecore:EReference" href="package.ecore#//Class/attribute"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_uo7TWwB6EeSjP_fdSWkDsw" points="[0, 0, -62, -58]$[0, 38, -62, -20]$[62, 38, 0, -20]$[62, 58, 0, 0]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_uo7TWwB6EeSjP_fdSWkDsw" points="[0, 0, -63, -74]$[0, 43, -63, -31]$[63, 43, 0, -31]$[63, 74, 0, 0]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_urAW-AB6EeSjP_fdSWkDsw" id="(0.8260869565217391,1.0)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_urKH8AB6EeSjP_fdSWkDsw" id="(0.5,0.0)"/>
   </edges>
@@ -452,7 +452,7 @@
     </children>
     <styles xmi:type="notation:FontStyle" xmi:id="_upFEUQB6EeSjP_fdSWkDsw"/>
     <element xmi:type="ecore:EReference" href="package.ecore#//Class/method"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_upFEUgB6EeSjP_fdSWkDsw" points="[0, 1, 62, -58]$[0, 39, 62, -20]$[-60, 39, 2, -20]$[-60, 59, 2, 0]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_upFEUgB6EeSjP_fdSWkDsw" points="[0, 1, 61, -74]$[0, 44, 61, -31]$[-61, 44, 0, -31]$[-61, 75, 0, 0]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_urAW9AB6EeSjP_fdSWkDsw" id="(0.6783625730994152,0.9938271604938271)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_urAW9QB6EeSjP_fdSWkDsw" id="(0.49612403100775193,0.0)"/>
   </edges>
@@ -466,7 +466,7 @@
     <styles xmi:type="notation:FontStyle" xmi:id="_upFEWAB6EeSjP_fdSWkDsw"/>
     <element xmi:type="ecore:EReference" href="package.ecore#//Class/targetRelationship"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_upFEWQB6EeSjP_fdSWkDsw" points="[0, 0, 228, -60]$[-228, 60, 0, 0]"/>
-    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_urAW9gB6EeSjP_fdSWkDsw" id="(0.9883040935672515,0.5864197530864198)"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_urAW9gB6EeSjP_fdSWkDsw" id="(0.9824561403508771,0.6232876712328768)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_urAW9wB6EeSjP_fdSWkDsw" id="(0.01195219123505976,0.9)"/>
   </edges>
   <edges xmi:type="notation:Connector" xmi:id="_upOORwB6EeSjP_fdSWkDsw" type="4003" source="_umPzCwB6EeSjP_fdSWkDsw" target="_umPzFwB6EeSjP_fdSWkDsw">
@@ -474,11 +474,11 @@
       <layoutConstraint xmi:type="notation:Location" xmi:id="_upOOSwB6EeSjP_fdSWkDsw" x="-5" y="8"/>
     </children>
     <children xmi:type="notation:DecorationNode" xmi:id="_upOOTAB6EeSjP_fdSWkDsw" type="6004">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_upOOTQB6EeSjP_fdSWkDsw" x="-3" y="-12"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_upOOTQB6EeSjP_fdSWkDsw" x="-17" y="-23"/>
     </children>
     <styles xmi:type="notation:FontStyle" xmi:id="_upOOSAB6EeSjP_fdSWkDsw"/>
     <element xmi:type="ecore:EReference" href="package.ecore#//Class/importedClass"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_upOOSQB6EeSjP_fdSWkDsw" points="[0, 1, 133, -58]$[0, 39, 133, -20]$[-133, 39, 0, -20]$[-133, 59, 0, 0]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_upOOSQB6EeSjP_fdSWkDsw" points="[0, 1, 131, -74]$[0, 44, 131, -31]$[-131, 44, 0, -31]$[-131, 75, 0, 0]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_urAW8gB6EeSjP_fdSWkDsw" id="(0.2046783625730994,0.9938271604938271)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_urAW8wB6EeSjP_fdSWkDsw" id="(0.4962962962962963,0.0)"/>
   </edges>

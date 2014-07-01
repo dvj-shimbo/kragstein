@@ -66,22 +66,13 @@ public interface KragsteinProjectPackage extends EPackage {
 	int PROJECT = 0;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROJECT__NAME = 0;
-
-	/**
 	 * The feature id for the '<em><b>Lang</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROJECT__LANG = 1;
+	int PROJECT__LANG = 0;
 
 	/**
 	 * The feature id for the '<em><b>Package</b></em>' containment reference list.
@@ -90,7 +81,7 @@ public interface KragsteinProjectPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROJECT__PACKAGE = 2;
+	int PROJECT__PACKAGE = 1;
 
 	/**
 	 * The number of structural features of the '<em>Project</em>' class.
@@ -99,7 +90,7 @@ public interface KragsteinProjectPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROJECT_FEATURE_COUNT = 3;
+	int PROJECT_FEATURE_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link KragsteinProject.impl.PackageImpl <em>Package</em>}' class.
@@ -176,22 +167,13 @@ public interface KragsteinProjectPackage extends EPackage {
 	int CLASS__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CLASS__TYPE = 1;
-
-	/**
 	 * The feature id for the '<em><b>Visibility</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS__VISIBILITY = 2;
+	int CLASS__VISIBILITY = 1;
 
 	/**
 	 * The feature id for the '<em><b>Is Singletone</b></em>' attribute.
@@ -200,7 +182,7 @@ public interface KragsteinProjectPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS__IS_SINGLETONE = 3;
+	int CLASS__IS_SINGLETONE = 2;
 
 	/**
 	 * The feature id for the '<em><b>Is Interface</b></em>' attribute.
@@ -209,7 +191,7 @@ public interface KragsteinProjectPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS__IS_INTERFACE = 4;
+	int CLASS__IS_INTERFACE = 3;
 
 	/**
 	 * The feature id for the '<em><b>Super Class</b></em>' attribute.
@@ -218,7 +200,7 @@ public interface KragsteinProjectPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS__SUPER_CLASS = 5;
+	int CLASS__SUPER_CLASS = 4;
 
 	/**
 	 * The feature id for the '<em><b>Supplier Element</b></em>' attribute.
@@ -227,7 +209,7 @@ public interface KragsteinProjectPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS__SUPPLIER_ELEMENT = 6;
+	int CLASS__SUPPLIER_ELEMENT = 5;
 
 	/**
 	 * The number of structural features of the '<em>Class</em>' class.
@@ -236,7 +218,7 @@ public interface KragsteinProjectPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS_FEATURE_COUNT = 7;
+	int CLASS_FEATURE_COUNT = 6;
 
 
 	/**
@@ -248,17 +230,6 @@ public interface KragsteinProjectPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getProject();
-
-	/**
-	 * Returns the meta object for the attribute '{@link KragsteinProject.Project#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see KragsteinProject.Project#getName()
-	 * @see #getProject()
-	 * @generated
-	 */
-	EAttribute getProject_Name();
 
 	/**
 	 * Returns the meta object for the attribute '{@link KragsteinProject.Project#getLang <em>Lang</em>}'.
@@ -358,17 +329,6 @@ public interface KragsteinProjectPackage extends EPackage {
 	EAttribute getClass_Name();
 
 	/**
-	 * Returns the meta object for the attribute '{@link KragsteinProject.Class#getType <em>Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Type</em>'.
-	 * @see KragsteinProject.Class#getType()
-	 * @see #getClass_()
-	 * @generated
-	 */
-	EAttribute getClass_Type();
-
-	/**
 	 * Returns the meta object for the attribute '{@link KragsteinProject.Class#getVisibility <em>Visibility</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -456,14 +416,6 @@ public interface KragsteinProjectPackage extends EPackage {
 		EClass PROJECT = eINSTANCE.getProject();
 
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PROJECT__NAME = eINSTANCE.getProject_Name();
-
-		/**
 		 * The meta object literal for the '<em><b>Lang</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -538,14 +490,6 @@ public interface KragsteinProjectPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute CLASS__NAME = eINSTANCE.getClass_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CLASS__TYPE = eINSTANCE.getClass_Type();
 
 		/**
 		 * The meta object literal for the '<em><b>Visibility</b></em>' attribute feature.

@@ -314,60 +314,6 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMethod_Name() {
-		return (EAttribute)methodEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getMethod_Type() {
-		return (EAttribute)methodEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getMethod_Visibility() {
-		return (EAttribute)methodEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getMethod_IsConst() {
-		return (EAttribute)methodEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getMethod_IsVirtual() {
-		return (EAttribute)methodEClass.getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getMethod_IsStatic() {
-		return (EAttribute)methodEClass.getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getHeader() {
 		return headerEClass;
 	}
@@ -460,15 +406,6 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 	 */
 	public EReference getBranch_Route() {
 		return (EReference)branchEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getBranch_Name() {
-		return (EAttribute)branchEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -1159,12 +1096,6 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 		methodEClass = createEClass(METHOD);
 		createEReference(methodEClass, METHOD__HEADER);
 		createEReference(methodEClass, METHOD__BRANCH);
-		createEAttribute(methodEClass, METHOD__NAME);
-		createEAttribute(methodEClass, METHOD__TYPE);
-		createEAttribute(methodEClass, METHOD__VISIBILITY);
-		createEAttribute(methodEClass, METHOD__IS_CONST);
-		createEAttribute(methodEClass, METHOD__IS_VIRTUAL);
-		createEAttribute(methodEClass, METHOD__IS_STATIC);
 
 		headerEClass = createEClass(HEADER);
 		createEAttribute(headerEClass, HEADER__NAME);
@@ -1178,7 +1109,6 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 		branchEClass = createEClass(BRANCH);
 		createEReference(branchEClass, BRANCH__TARGET_BRANCH_CONNECTION);
 		createEReference(branchEClass, BRANCH__ROUTE);
-		createEAttribute(branchEClass, BRANCH__NAME);
 
 		branchConnectionEClass = createEClass(BRANCH_CONNECTION);
 		createEReference(branchConnectionEClass, BRANCH_CONNECTION__SOURCE);
@@ -1321,12 +1251,6 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 		initEClass(methodEClass, Method.class, "Method", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMethod_Header(), this.getHeader(), null, "header", null, 1, 1, Method.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMethod_Branch(), this.getBranch(), null, "branch", null, 1, -1, Method.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMethod_Name(), ecorePackage.getEString(), "name", null, 0, 1, Method.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMethod_Type(), ecorePackage.getEString(), "type", null, 0, 1, Method.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMethod_Visibility(), ecorePackage.getEString(), "visibility", null, 0, 1, Method.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMethod_IsConst(), ecorePackage.getEBoolean(), "isConst", null, 0, 1, Method.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMethod_IsVirtual(), ecorePackage.getEBoolean(), "isVirtual", null, 0, 1, Method.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMethod_IsStatic(), ecorePackage.getEBoolean(), "isStatic", null, 0, 1, Method.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(headerEClass, Header.class, "Header", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getHeader_Name(), ecorePackage.getEString(), "name", null, 0, 1, Header.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1340,7 +1264,6 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 		initEClass(branchEClass, Branch.class, "Branch", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getBranch_TargetBranchConnection(), this.getBranchConnection(), null, "targetBranchConnection", null, 0, 1, Branch.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getBranch_Route(), this.getRoute(), null, "route", null, 1, 1, Branch.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getBranch_Name(), ecorePackage.getEString(), "name", null, 0, 1, Branch.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(branchConnectionEClass, BranchConnection.class, "BranchConnection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getBranchConnection_Source(), this.getBranch(), null, "source", null, 0, 1, BranchConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1484,16 +1407,10 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 		  (branchEClass, 
 		   source, 
 		   new String[] {
-			 "label", "name"
-		   });	
-		addAnnotation
-		  (routeEClass, 
-		   source, 
-		   new String[] {
 			 "label.placement", "none"
 		   });	
 		addAnnotation
-		  (iconEClass, 
+		  (routeEClass, 
 		   source, 
 		   new String[] {
 			 "label.placement", "none"
@@ -1533,7 +1450,7 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 		  (adressEClass, 
 		   source, 
 		   new String[] {
-			 "label", "name"
+			 "label", "target"
 		   });	
 		addAnnotation
 		  (insertionEClass, 

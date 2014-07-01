@@ -3,30 +3,6 @@
   <children xmi:type="notation:Shape" xmi:id="_8EOrUPmqEeOq8IBCc3umsA" type="2001">
     <children xmi:type="notation:DecorationNode" xmi:id="_8EOrUvmqEeOq8IBCc3umsA" type="5001"/>
     <children xmi:type="notation:BasicCompartment" xmi:id="_8EOrU_mqEeOq8IBCc3umsA" type="7001">
-      <children xmi:type="notation:Node" xmi:id="_3jcQ8P-uEeOx1-awXn6SEg" type="3001">
-        <element xmi:type="ecore:EAttribute" href="method.ecore#//Method/name"/>
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_3jcQ8f-uEeOx1-awXn6SEg"/>
-      </children>
-      <children xmi:type="notation:Node" xmi:id="_8OylwP-uEeOx1-awXn6SEg" type="3001">
-        <element xmi:type="ecore:EAttribute" href="method.ecore#//Method/type"/>
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_8Oylwf-uEeOx1-awXn6SEg"/>
-      </children>
-      <children xmi:type="notation:Node" xmi:id="_PDASsP-vEeOx1-awXn6SEg" type="3001">
-        <element xmi:type="ecore:EAttribute" href="method.ecore#//Method/visibility"/>
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_PDASsf-vEeOx1-awXn6SEg"/>
-      </children>
-      <children xmi:type="notation:Node" xmi:id="_TLM3IP-vEeOx1-awXn6SEg" type="3001">
-        <element xmi:type="ecore:EAttribute" href="method.ecore#//Method/isConst"/>
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_TLM3If-vEeOx1-awXn6SEg"/>
-      </children>
-      <children xmi:type="notation:Node" xmi:id="_XZJeQP-vEeOx1-awXn6SEg" type="3001">
-        <element xmi:type="ecore:EAttribute" href="method.ecore#//Method/isVirtual"/>
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_XZJeQf-vEeOx1-awXn6SEg"/>
-      </children>
-      <children xmi:type="notation:Node" xmi:id="_bgfuIP-vEeOx1-awXn6SEg" type="3001">
-        <element xmi:type="ecore:EAttribute" href="method.ecore#//Method/isStatic"/>
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_bgfuIf-vEeOx1-awXn6SEg"/>
-      </children>
       <styles xmi:type="notation:SortingStyle" xmi:id="_8EOrVPmqEeOq8IBCc3umsA"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_8EOrVfmqEeOq8IBCc3umsA"/>
     </children>

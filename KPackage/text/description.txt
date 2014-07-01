@@ -42,7 +42,6 @@ Package KragsteinPackage <KragsteinPackage.ecore>
     Reference targetRelationship : Relationship<<0..*>>
     Attribute name : EString
     Reference importedClass : ImportedClass<<0..*>>
-    Attribute type : EString
     Attribute visibility : EString
     Attribute isSingletone : EBoolean
     Attribute isInterface : EBoolean

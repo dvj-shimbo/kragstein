@@ -6,7 +6,6 @@
   <foreignModel>project.ecore</foreignModel>
   <genPackages prefix="KragsteinProject" disposableProviderFactory="true" ecorePackage="project.ecore#/">
     <genClasses ecoreClass="project.ecore#//Project">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute project.ecore#//Project/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute project.ecore#//Project/lang"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference project.ecore#//Project/package"/>
     </genClasses>
@@ -18,7 +17,6 @@
     </genClasses>
     <genClasses ecoreClass="project.ecore#//Class">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute project.ecore#//Class/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute project.ecore#//Class/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute project.ecore#//Class/visibility"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute project.ecore#//Class/isSingletone"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute project.ecore#//Class/isInterface"/>

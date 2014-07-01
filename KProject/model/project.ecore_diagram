@@ -41,10 +41,6 @@
         <element xmi:type="ecore:EAttribute" href="project.ecore#//Class/name"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_461L8QABEeSpOf8BGo6cRw"/>
       </children>
-      <children xmi:type="notation:Node" xmi:id="_9sHJoAABEeSpOf8BGo6cRw" type="3001">
-        <element xmi:type="ecore:EAttribute" href="project.ecore#//Class/type"/>
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_9sHJoQABEeSpOf8BGo6cRw"/>
-      </children>
       <children xmi:type="notation:Node" xmi:id="_DB0qEAACEeSpOf8BGo6cRw" type="3001">
         <element xmi:type="ecore:EAttribute" href="project.ecore#//Class/visibility"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_DB0qEQACEeSpOf8BGo6cRw"/>

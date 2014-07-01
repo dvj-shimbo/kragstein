@@ -36,7 +36,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link KragsteinPackage.impl.ClassImpl#getTargetRelationship <em>Target Relationship</em>}</li>
  *   <li>{@link KragsteinPackage.impl.ClassImpl#getName <em>Name</em>}</li>
  *   <li>{@link KragsteinPackage.impl.ClassImpl#getImportedClass <em>Imported Class</em>}</li>
- *   <li>{@link KragsteinPackage.impl.ClassImpl#getType <em>Type</em>}</li>
  *   <li>{@link KragsteinPackage.impl.ClassImpl#getVisibility <em>Visibility</em>}</li>
  *   <li>{@link KragsteinPackage.impl.ClassImpl#isIsSingletone <em>Is Singletone</em>}</li>
  *   <li>{@link KragsteinPackage.impl.ClassImpl#isIsInterface <em>Is Interface</em>}</li>
@@ -107,26 +106,6 @@ public class ClassImpl extends UnitImpl implements KragsteinPackage.Class {
 	 * @ordered
 	 */
 	protected EList<ImportedClass> importedClass;
-
-	/**
-	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getType()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String TYPE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getType()
-	 * @generated
-	 * @ordered
-	 */
-	protected String type = TYPE_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getVisibility() <em>Visibility</em>}' attribute.
@@ -321,27 +300,6 @@ public class ClassImpl extends UnitImpl implements KragsteinPackage.Class {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getType() {
-		return type;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setType(String newType) {
-		String oldType = type;
-		type = newType;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, KragsteinPackagePackage.CLASS__TYPE, oldType, type));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getVisibility() {
 		return visibility;
 	}
@@ -480,8 +438,6 @@ public class ClassImpl extends UnitImpl implements KragsteinPackage.Class {
 				return getName();
 			case KragsteinPackagePackage.CLASS__IMPORTED_CLASS:
 				return getImportedClass();
-			case KragsteinPackagePackage.CLASS__TYPE:
-				return getType();
 			case KragsteinPackagePackage.CLASS__VISIBILITY:
 				return getVisibility();
 			case KragsteinPackagePackage.CLASS__IS_SINGLETONE:
@@ -523,9 +479,6 @@ public class ClassImpl extends UnitImpl implements KragsteinPackage.Class {
 			case KragsteinPackagePackage.CLASS__IMPORTED_CLASS:
 				getImportedClass().clear();
 				getImportedClass().addAll((Collection<? extends ImportedClass>)newValue);
-				return;
-			case KragsteinPackagePackage.CLASS__TYPE:
-				setType((String)newValue);
 				return;
 			case KragsteinPackagePackage.CLASS__VISIBILITY:
 				setVisibility((String)newValue);
@@ -569,9 +522,6 @@ public class ClassImpl extends UnitImpl implements KragsteinPackage.Class {
 			case KragsteinPackagePackage.CLASS__IMPORTED_CLASS:
 				getImportedClass().clear();
 				return;
-			case KragsteinPackagePackage.CLASS__TYPE:
-				setType(TYPE_EDEFAULT);
-				return;
 			case KragsteinPackagePackage.CLASS__VISIBILITY:
 				setVisibility(VISIBILITY_EDEFAULT);
 				return;
@@ -609,8 +559,6 @@ public class ClassImpl extends UnitImpl implements KragsteinPackage.Class {
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case KragsteinPackagePackage.CLASS__IMPORTED_CLASS:
 				return importedClass != null && !importedClass.isEmpty();
-			case KragsteinPackagePackage.CLASS__TYPE:
-				return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
 			case KragsteinPackagePackage.CLASS__VISIBILITY:
 				return VISIBILITY_EDEFAULT == null ? visibility != null : !VISIBILITY_EDEFAULT.equals(visibility);
 			case KragsteinPackagePackage.CLASS__IS_SINGLETONE:
@@ -637,8 +585,6 @@ public class ClassImpl extends UnitImpl implements KragsteinPackage.Class {
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (name: ");
 		result.append(name);
-		result.append(", type: ");
-		result.append(type);
 		result.append(", visibility: ");
 		result.append(visibility);
 		result.append(", isSingletone: ");

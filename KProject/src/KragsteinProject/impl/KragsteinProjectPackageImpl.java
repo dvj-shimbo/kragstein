@@ -116,7 +116,7 @@ public class KragsteinProjectPackageImpl extends EPackageImpl implements Kragste
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getProject_Name() {
+	public EAttribute getProject_Lang() {
 		return (EAttribute)projectEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -125,17 +125,8 @@ public class KragsteinProjectPackageImpl extends EPackageImpl implements Kragste
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getProject_Lang() {
-		return (EAttribute)projectEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getProject_Package() {
-		return (EReference)projectEClass.getEStructuralFeatures().get(2);
+		return (EReference)projectEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -206,7 +197,7 @@ public class KragsteinProjectPackageImpl extends EPackageImpl implements Kragste
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getClass_Type() {
+	public EAttribute getClass_Visibility() {
 		return (EAttribute)classEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -215,7 +206,7 @@ public class KragsteinProjectPackageImpl extends EPackageImpl implements Kragste
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getClass_Visibility() {
+	public EAttribute getClass_IsSingletone() {
 		return (EAttribute)classEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -224,7 +215,7 @@ public class KragsteinProjectPackageImpl extends EPackageImpl implements Kragste
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getClass_IsSingletone() {
+	public EAttribute getClass_IsInterface() {
 		return (EAttribute)classEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -233,7 +224,7 @@ public class KragsteinProjectPackageImpl extends EPackageImpl implements Kragste
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getClass_IsInterface() {
+	public EAttribute getClass_SuperClass() {
 		return (EAttribute)classEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -242,17 +233,8 @@ public class KragsteinProjectPackageImpl extends EPackageImpl implements Kragste
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getClass_SuperClass() {
-		return (EAttribute)classEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getClass_SupplierElement() {
-		return (EAttribute)classEClass.getEStructuralFeatures().get(6);
+		return (EAttribute)classEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -284,7 +266,6 @@ public class KragsteinProjectPackageImpl extends EPackageImpl implements Kragste
 
 		// Create classes and their features
 		projectEClass = createEClass(PROJECT);
-		createEAttribute(projectEClass, PROJECT__NAME);
 		createEAttribute(projectEClass, PROJECT__LANG);
 		createEReference(projectEClass, PROJECT__PACKAGE);
 
@@ -296,7 +277,6 @@ public class KragsteinProjectPackageImpl extends EPackageImpl implements Kragste
 
 		classEClass = createEClass(CLASS);
 		createEAttribute(classEClass, CLASS__NAME);
-		createEAttribute(classEClass, CLASS__TYPE);
 		createEAttribute(classEClass, CLASS__VISIBILITY);
 		createEAttribute(classEClass, CLASS__IS_SINGLETONE);
 		createEAttribute(classEClass, CLASS__IS_INTERFACE);
@@ -335,7 +315,6 @@ public class KragsteinProjectPackageImpl extends EPackageImpl implements Kragste
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(projectEClass, Project.class, "Project", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getProject_Name(), ecorePackage.getEString(), "name", null, 0, 1, Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getProject_Lang(), ecorePackage.getEString(), "lang", null, 0, 1, Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getProject_Package(), this.getPackage(), null, "package", null, 0, -1, Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -347,7 +326,6 @@ public class KragsteinProjectPackageImpl extends EPackageImpl implements Kragste
 
 		initEClass(classEClass, KragsteinProject.Class.class, "Class", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getClass_Name(), ecorePackage.getEString(), "name", null, 0, 1, KragsteinProject.Class.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getClass_Type(), ecorePackage.getEString(), "type", null, 0, 1, KragsteinProject.Class.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getClass_Visibility(), ecorePackage.getEString(), "visibility", null, 0, 1, KragsteinProject.Class.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getClass_IsSingletone(), ecorePackage.getEBoolean(), "isSingletone", null, 0, 1, KragsteinProject.Class.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getClass_IsInterface(), ecorePackage.getEBoolean(), "isInterface", null, 0, 1, KragsteinProject.Class.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -49,15 +49,6 @@ public interface KragsteinMethodFactory extends EFactory {
 	Branch createBranch();
 
 	/**
-	 * Returns a new object of class '<em>Branch Connection</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Branch Connection</em>'.
-	 * @generated
-	 */
-	BranchConnection createBranchConnection();
-
-	/**
 	 * Returns a new object of class '<em>Route</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -94,15 +85,6 @@ public interface KragsteinMethodFactory extends EFactory {
 	ValencePoint createValencePoint();
 
 	/**
-	 * Returns a new object of class '<em>Icon Connection</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Icon Connection</em>'.
-	 * @generated
-	 */
-	IconConnection createIconConnection();
-
-	/**
 	 * Returns a new object of class '<em>Action</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -137,15 +119,6 @@ public interface KragsteinMethodFactory extends EFactory {
 	 * @generated
 	 */
 	Case createCase();
-
-	/**
-	 * Returns a new object of class '<em>Case Connection</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Case Connection</em>'.
-	 * @generated
-	 */
-	CaseConnection createCaseConnection();
 
 	/**
 	 * Returns a new object of class '<em>Headline</em>'.

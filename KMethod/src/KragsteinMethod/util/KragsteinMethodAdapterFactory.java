@@ -80,10 +80,6 @@ public class KragsteinMethodAdapterFactory extends AdapterFactoryImpl {
 				return createBranchAdapter();
 			}
 			@Override
-			public Adapter caseBranchConnection(BranchConnection object) {
-				return createBranchConnectionAdapter();
-			}
-			@Override
 			public Adapter caseRoute(Route object) {
 				return createRouteAdapter();
 			}
@@ -98,10 +94,6 @@ public class KragsteinMethodAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseValencePoint(ValencePoint object) {
 				return createValencePointAdapter();
-			}
-			@Override
-			public Adapter caseIconConnection(IconConnection object) {
-				return createIconConnectionAdapter();
 			}
 			@Override
 			public Adapter caseIcon(Icon object) {
@@ -122,10 +114,6 @@ public class KragsteinMethodAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseCase(Case object) {
 				return createCaseAdapter();
-			}
-			@Override
-			public Adapter caseCaseConnection(CaseConnection object) {
-				return createCaseConnectionAdapter();
 			}
 			@Override
 			public Adapter caseHeadline(Headline object) {
@@ -230,20 +218,6 @@ public class KragsteinMethodAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link KragsteinMethod.BranchConnection <em>Branch Connection</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see KragsteinMethod.BranchConnection
-	 * @generated
-	 */
-	public Adapter createBranchConnectionAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link KragsteinMethod.Route <em>Route</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -296,20 +270,6 @@ public class KragsteinMethodAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createValencePointAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link KragsteinMethod.IconConnection <em>Icon Connection</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see KragsteinMethod.IconConnection
-	 * @generated
-	 */
-	public Adapter createIconConnectionAdapter() {
 		return null;
 	}
 
@@ -380,20 +340,6 @@ public class KragsteinMethodAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createCaseAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link KragsteinMethod.CaseConnection <em>Case Connection</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see KragsteinMethod.CaseConnection
-	 * @generated
-	 */
-	public Adapter createCaseConnectionAdapter() {
 		return null;
 	}
 

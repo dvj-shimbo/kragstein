@@ -84,12 +84,6 @@ public class KragsteinMethodSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case KragsteinMethodPackage.BRANCH_CONNECTION: {
-				BranchConnection branchConnection = (BranchConnection)theEObject;
-				T result = caseBranchConnection(branchConnection);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case KragsteinMethodPackage.ROUTE: {
 				Route route = (Route)theEObject;
 				T result = caseRoute(route);
@@ -111,12 +105,6 @@ public class KragsteinMethodSwitch<T> extends Switch<T> {
 			case KragsteinMethodPackage.VALENCE_POINT: {
 				ValencePoint valencePoint = (ValencePoint)theEObject;
 				T result = caseValencePoint(valencePoint);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case KragsteinMethodPackage.ICON_CONNECTION: {
-				IconConnection iconConnection = (IconConnection)theEObject;
-				T result = caseIconConnection(iconConnection);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -150,12 +138,6 @@ public class KragsteinMethodSwitch<T> extends Switch<T> {
 			case KragsteinMethodPackage.CASE: {
 				Case case_ = (Case)theEObject;
 				T result = caseCase(case_);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case KragsteinMethodPackage.CASE_CONNECTION: {
-				CaseConnection caseConnection = (CaseConnection)theEObject;
-				T result = caseCaseConnection(caseConnection);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -278,21 +260,6 @@ public class KragsteinMethodSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Branch Connection</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Branch Connection</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseBranchConnection(BranchConnection object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Route</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -349,21 +316,6 @@ public class KragsteinMethodSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseValencePoint(ValencePoint object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Icon Connection</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Icon Connection</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseIconConnection(IconConnection object) {
 		return null;
 	}
 
@@ -439,21 +391,6 @@ public class KragsteinMethodSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseCase(Case object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Case Connection</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Case Connection</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseCaseConnection(CaseConnection object) {
 		return null;
 	}
 

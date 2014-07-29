@@ -59,17 +59,14 @@ public class KragsteinMethodFactoryImpl extends EFactoryImpl implements Kragstei
 			case KragsteinMethodPackage.METHOD: return createMethod();
 			case KragsteinMethodPackage.HEADER: return createHeader();
 			case KragsteinMethodPackage.BRANCH: return createBranch();
-			case KragsteinMethodPackage.BRANCH_CONNECTION: return createBranchConnection();
 			case KragsteinMethodPackage.ROUTE: return createRoute();
 			case KragsteinMethodPackage.RIGHT_COMMENT: return createRightComment();
 			case KragsteinMethodPackage.LEFT_COMMENT: return createLeftComment();
 			case KragsteinMethodPackage.VALENCE_POINT: return createValencePoint();
-			case KragsteinMethodPackage.ICON_CONNECTION: return createIconConnection();
 			case KragsteinMethodPackage.ACTION: return createAction();
 			case KragsteinMethodPackage.QUESTION: return createQuestion();
 			case KragsteinMethodPackage.CHOICE: return createChoice();
 			case KragsteinMethodPackage.CASE: return createCase();
-			case KragsteinMethodPackage.CASE_CONNECTION: return createCaseConnection();
 			case KragsteinMethodPackage.HEADLINE: return createHeadline();
 			case KragsteinMethodPackage.ADRESS: return createAdress();
 			case KragsteinMethodPackage.INSERTION: return createInsertion();
@@ -120,16 +117,6 @@ public class KragsteinMethodFactoryImpl extends EFactoryImpl implements Kragstei
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public BranchConnection createBranchConnection() {
-		BranchConnectionImpl branchConnection = new BranchConnectionImpl();
-		return branchConnection;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Route createRoute() {
 		RouteImpl route = new RouteImpl();
 		return route;
@@ -170,16 +157,6 @@ public class KragsteinMethodFactoryImpl extends EFactoryImpl implements Kragstei
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IconConnection createIconConnection() {
-		IconConnectionImpl iconConnection = new IconConnectionImpl();
-		return iconConnection;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Action createAction() {
 		ActionImpl action = new ActionImpl();
 		return action;
@@ -213,16 +190,6 @@ public class KragsteinMethodFactoryImpl extends EFactoryImpl implements Kragstei
 	public Case createCase() {
 		CaseImpl case_ = new CaseImpl();
 		return case_;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public CaseConnection createCaseConnection() {
-		CaseConnectionImpl caseConnection = new CaseConnectionImpl();
-		return caseConnection;
 	}
 
 	/**

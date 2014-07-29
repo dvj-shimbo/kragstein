@@ -2,7 +2,6 @@
  */
 package KragsteinMethod;
 
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -13,8 +12,9 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link KragsteinMethod.Branch#getTargetBranchConnection <em>Target Branch Connection</em>}</li>
  *   <li>{@link KragsteinMethod.Branch#getRoute <em>Route</em>}</li>
+ *   <li>{@link KragsteinMethod.Branch#getNextBranch <em>Next Branch</em>}</li>
+ *   <li>{@link KragsteinMethod.Branch#getName <em>Name</em>}</li>
  * </ul>
  * </p>
  *
@@ -23,32 +23,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Branch extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Target Branch Connection</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Target Branch Connection</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Target Branch Connection</em>' containment reference.
-	 * @see #setTargetBranchConnection(BranchConnection)
-	 * @see KragsteinMethod.KragsteinMethodPackage#getBranch_TargetBranchConnection()
-	 * @model containment="true"
-	 * @generated
-	 */
-	BranchConnection getTargetBranchConnection();
-
-	/**
-	 * Sets the value of the '{@link KragsteinMethod.Branch#getTargetBranchConnection <em>Target Branch Connection</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Target Branch Connection</em>' containment reference.
-	 * @see #getTargetBranchConnection()
-	 * @generated
-	 */
-	void setTargetBranchConnection(BranchConnection value);
-
 	/**
 	 * Returns the value of the '<em><b>Route</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
@@ -75,5 +49,57 @@ public interface Branch extends EObject {
 	 * @generated
 	 */
 	void setRoute(Route value);
+
+	/**
+	 * Returns the value of the '<em><b>Next Branch</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Next Branch</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Next Branch</em>' reference.
+	 * @see #setNextBranch(Branch)
+	 * @see KragsteinMethod.KragsteinMethodPackage#getBranch_NextBranch()
+	 * @model
+	 * @generated
+	 */
+	Branch getNextBranch();
+
+	/**
+	 * Sets the value of the '{@link KragsteinMethod.Branch#getNextBranch <em>Next Branch</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Next Branch</em>' reference.
+	 * @see #getNextBranch()
+	 * @generated
+	 */
+	void setNextBranch(Branch value);
+
+	/**
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see KragsteinMethod.KragsteinMethodPackage#getBranch_Name()
+	 * @model
+	 * @generated
+	 */
+	String getName();
+
+	/**
+	 * Sets the value of the '{@link KragsteinMethod.Branch#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(String value);
 
 } // Branch

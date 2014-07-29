@@ -185,22 +185,31 @@ public interface KragsteinMethodPackage extends EPackage {
 	int BRANCH = 2;
 
 	/**
-	 * The feature id for the '<em><b>Target Branch Connection</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BRANCH__TARGET_BRANCH_CONNECTION = 0;
-
-	/**
 	 * The feature id for the '<em><b>Route</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BRANCH__ROUTE = 1;
+	int BRANCH__ROUTE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Next Branch</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BRANCH__NEXT_BRANCH = 1;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BRANCH__NAME = 2;
 
 	/**
 	 * The number of structural features of the '<em>Branch</em>' class.
@@ -209,44 +218,7 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BRANCH_FEATURE_COUNT = 2;
-
-	/**
-	 * The meta object id for the '{@link KragsteinMethod.impl.BranchConnectionImpl <em>Branch Connection</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see KragsteinMethod.impl.BranchConnectionImpl
-	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getBranchConnection()
-	 * @generated
-	 */
-	int BRANCH_CONNECTION = 3;
-
-	/**
-	 * The feature id for the '<em><b>Source</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BRANCH_CONNECTION__SOURCE = 0;
-
-	/**
-	 * The feature id for the '<em><b>Target</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BRANCH_CONNECTION__TARGET = 1;
-
-	/**
-	 * The number of structural features of the '<em>Branch Connection</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BRANCH_CONNECTION_FEATURE_COUNT = 2;
+	int BRANCH_FEATURE_COUNT = 3;
 
 	/**
 	 * The meta object id for the '{@link KragsteinMethod.impl.RouteImpl <em>Route</em>}' class.
@@ -256,7 +228,7 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getRoute()
 	 * @generated
 	 */
-	int ROUTE = 4;
+	int ROUTE = 3;
 
 	/**
 	 * The feature id for the '<em><b>Icon</b></em>' containment reference list.
@@ -284,7 +256,7 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getRightComment()
 	 * @generated
 	 */
-	int RIGHT_COMMENT = 5;
+	int RIGHT_COMMENT = 4;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -312,7 +284,7 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getLeftComment()
 	 * @generated
 	 */
-	int LEFT_COMMENT = 6;
+	int LEFT_COMMENT = 5;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -340,7 +312,7 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getValencePoint()
 	 * @generated
 	 */
-	int VALENCE_POINT = 7;
+	int VALENCE_POINT = 6;
 
 	/**
 	 * The number of structural features of the '<em>Valence Point</em>' class.
@@ -352,43 +324,6 @@ public interface KragsteinMethodPackage extends EPackage {
 	int VALENCE_POINT_FEATURE_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link KragsteinMethod.impl.IconConnectionImpl <em>Icon Connection</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see KragsteinMethod.impl.IconConnectionImpl
-	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getIconConnection()
-	 * @generated
-	 */
-	int ICON_CONNECTION = 8;
-
-	/**
-	 * The feature id for the '<em><b>Target</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ICON_CONNECTION__TARGET = 0;
-
-	/**
-	 * The feature id for the '<em><b>Source</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ICON_CONNECTION__SOURCE = 1;
-
-	/**
-	 * The number of structural features of the '<em>Icon Connection</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ICON_CONNECTION_FEATURE_COUNT = 2;
-
-	/**
 	 * The meta object id for the '{@link KragsteinMethod.impl.IconImpl <em>Icon</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -396,16 +331,7 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getIcon()
 	 * @generated
 	 */
-	int ICON = 9;
-
-	/**
-	 * The feature id for the '<em><b>Target Icon Connection</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ICON__TARGET_ICON_CONNECTION = 0;
+	int ICON = 7;
 
 	/**
 	 * The feature id for the '<em><b>Valence Point</b></em>' containment reference.
@@ -414,7 +340,7 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ICON__VALENCE_POINT = 1;
+	int ICON__VALENCE_POINT = 0;
 
 	/**
 	 * The feature id for the '<em><b>Left Comment</b></em>' containment reference.
@@ -423,7 +349,7 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ICON__LEFT_COMMENT = 2;
+	int ICON__LEFT_COMMENT = 1;
 
 	/**
 	 * The feature id for the '<em><b>Right Comment</b></em>' containment reference.
@@ -432,7 +358,16 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ICON__RIGHT_COMMENT = 3;
+	int ICON__RIGHT_COMMENT = 2;
+
+	/**
+	 * The feature id for the '<em><b>Next Icon</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ICON__NEXT_ICON = 3;
 
 	/**
 	 * The number of structural features of the '<em>Icon</em>' class.
@@ -451,16 +386,7 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getAction()
 	 * @generated
 	 */
-	int ACTION = 10;
-
-	/**
-	 * The feature id for the '<em><b>Target Icon Connection</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTION__TARGET_ICON_CONNECTION = ICON__TARGET_ICON_CONNECTION;
+	int ACTION = 8;
 
 	/**
 	 * The feature id for the '<em><b>Valence Point</b></em>' containment reference.
@@ -488,6 +414,15 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @ordered
 	 */
 	int ACTION__RIGHT_COMMENT = ICON__RIGHT_COMMENT;
+
+	/**
+	 * The feature id for the '<em><b>Next Icon</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTION__NEXT_ICON = ICON__NEXT_ICON;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -524,16 +459,7 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getQuestion()
 	 * @generated
 	 */
-	int QUESTION = 11;
-
-	/**
-	 * The feature id for the '<em><b>Target Icon Connection</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QUESTION__TARGET_ICON_CONNECTION = ICON__TARGET_ICON_CONNECTION;
+	int QUESTION = 9;
 
 	/**
 	 * The feature id for the '<em><b>Valence Point</b></em>' containment reference.
@@ -561,6 +487,15 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @ordered
 	 */
 	int QUESTION__RIGHT_COMMENT = ICON__RIGHT_COMMENT;
+
+	/**
+	 * The feature id for the '<em><b>Next Icon</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUESTION__NEXT_ICON = ICON__NEXT_ICON;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -615,16 +550,7 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getChoice()
 	 * @generated
 	 */
-	int CHOICE = 12;
-
-	/**
-	 * The feature id for the '<em><b>Target Icon Connection</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CHOICE__TARGET_ICON_CONNECTION = ICON__TARGET_ICON_CONNECTION;
+	int CHOICE = 10;
 
 	/**
 	 * The feature id for the '<em><b>Valence Point</b></em>' containment reference.
@@ -652,6 +578,15 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @ordered
 	 */
 	int CHOICE__RIGHT_COMMENT = ICON__RIGHT_COMMENT;
+
+	/**
+	 * The feature id for the '<em><b>Next Icon</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHOICE__NEXT_ICON = ICON__NEXT_ICON;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -715,7 +650,7 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getCase()
 	 * @generated
 	 */
-	int CASE = 13;
+	int CASE = 11;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -736,22 +671,22 @@ public interface KragsteinMethodPackage extends EPackage {
 	int CASE__VALUE = 1;
 
 	/**
-	 * The feature id for the '<em><b>Target Case Connection</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CASE__TARGET_CASE_CONNECTION = 2;
-
-	/**
 	 * The feature id for the '<em><b>Route</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CASE__ROUTE = 3;
+	int CASE__ROUTE = 2;
+
+	/**
+	 * The feature id for the '<em><b>Next Case</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CASE__NEXT_CASE = 3;
 
 	/**
 	 * The number of structural features of the '<em>Case</em>' class.
@@ -763,43 +698,6 @@ public interface KragsteinMethodPackage extends EPackage {
 	int CASE_FEATURE_COUNT = 4;
 
 	/**
-	 * The meta object id for the '{@link KragsteinMethod.impl.CaseConnectionImpl <em>Case Connection</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see KragsteinMethod.impl.CaseConnectionImpl
-	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getCaseConnection()
-	 * @generated
-	 */
-	int CASE_CONNECTION = 14;
-
-	/**
-	 * The feature id for the '<em><b>Source</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CASE_CONNECTION__SOURCE = 0;
-
-	/**
-	 * The feature id for the '<em><b>Target</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CASE_CONNECTION__TARGET = 1;
-
-	/**
-	 * The number of structural features of the '<em>Case Connection</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CASE_CONNECTION_FEATURE_COUNT = 2;
-
-	/**
 	 * The meta object id for the '{@link KragsteinMethod.impl.HeadlineImpl <em>Headline</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -807,16 +705,7 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getHeadline()
 	 * @generated
 	 */
-	int HEADLINE = 15;
-
-	/**
-	 * The feature id for the '<em><b>Target Icon Connection</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HEADLINE__TARGET_ICON_CONNECTION = ICON__TARGET_ICON_CONNECTION;
+	int HEADLINE = 12;
 
 	/**
 	 * The feature id for the '<em><b>Valence Point</b></em>' containment reference.
@@ -844,6 +733,15 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @ordered
 	 */
 	int HEADLINE__RIGHT_COMMENT = ICON__RIGHT_COMMENT;
+
+	/**
+	 * The feature id for the '<em><b>Next Icon</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HEADLINE__NEXT_ICON = ICON__NEXT_ICON;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -880,16 +778,7 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getAdress()
 	 * @generated
 	 */
-	int ADRESS = 16;
-
-	/**
-	 * The feature id for the '<em><b>Target Icon Connection</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADRESS__TARGET_ICON_CONNECTION = ICON__TARGET_ICON_CONNECTION;
+	int ADRESS = 13;
 
 	/**
 	 * The feature id for the '<em><b>Valence Point</b></em>' containment reference.
@@ -917,6 +806,15 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @ordered
 	 */
 	int ADRESS__RIGHT_COMMENT = ICON__RIGHT_COMMENT;
+
+	/**
+	 * The feature id for the '<em><b>Next Icon</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADRESS__NEXT_ICON = ICON__NEXT_ICON;
 
 	/**
 	 * The feature id for the '<em><b>Target</b></em>' attribute.
@@ -953,16 +851,7 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getInsertion()
 	 * @generated
 	 */
-	int INSERTION = 17;
-
-	/**
-	 * The feature id for the '<em><b>Target Icon Connection</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INSERTION__TARGET_ICON_CONNECTION = ICON__TARGET_ICON_CONNECTION;
+	int INSERTION = 14;
 
 	/**
 	 * The feature id for the '<em><b>Valence Point</b></em>' containment reference.
@@ -990,6 +879,15 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @ordered
 	 */
 	int INSERTION__RIGHT_COMMENT = ICON__RIGHT_COMMENT;
+
+	/**
+	 * The feature id for the '<em><b>Next Icon</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSERTION__NEXT_ICON = ICON__NEXT_ICON;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1035,16 +933,7 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getShelf()
 	 * @generated
 	 */
-	int SHELF = 18;
-
-	/**
-	 * The feature id for the '<em><b>Target Icon Connection</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SHELF__TARGET_ICON_CONNECTION = ICON__TARGET_ICON_CONNECTION;
+	int SHELF = 15;
 
 	/**
 	 * The feature id for the '<em><b>Valence Point</b></em>' containment reference.
@@ -1072,6 +961,15 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @ordered
 	 */
 	int SHELF__RIGHT_COMMENT = ICON__RIGHT_COMMENT;
+
+	/**
+	 * The feature id for the '<em><b>Next Icon</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SHELF__NEXT_ICON = ICON__NEXT_ICON;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1117,16 +1015,7 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getBeginLoop()
 	 * @generated
 	 */
-	int BEGIN_LOOP = 19;
-
-	/**
-	 * The feature id for the '<em><b>Target Icon Connection</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BEGIN_LOOP__TARGET_ICON_CONNECTION = ICON__TARGET_ICON_CONNECTION;
+	int BEGIN_LOOP = 16;
 
 	/**
 	 * The feature id for the '<em><b>Valence Point</b></em>' containment reference.
@@ -1154,6 +1043,15 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @ordered
 	 */
 	int BEGIN_LOOP__RIGHT_COMMENT = ICON__RIGHT_COMMENT;
+
+	/**
+	 * The feature id for the '<em><b>Next Icon</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BEGIN_LOOP__NEXT_ICON = ICON__NEXT_ICON;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1190,16 +1088,7 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getEndLoop()
 	 * @generated
 	 */
-	int END_LOOP = 20;
-
-	/**
-	 * The feature id for the '<em><b>Target Icon Connection</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int END_LOOP__TARGET_ICON_CONNECTION = ICON__TARGET_ICON_CONNECTION;
+	int END_LOOP = 17;
 
 	/**
 	 * The feature id for the '<em><b>Valence Point</b></em>' containment reference.
@@ -1227,6 +1116,15 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @ordered
 	 */
 	int END_LOOP__RIGHT_COMMENT = ICON__RIGHT_COMMENT;
+
+	/**
+	 * The feature id for the '<em><b>Next Icon</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int END_LOOP__NEXT_ICON = ICON__NEXT_ICON;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1263,16 +1161,7 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getOutput()
 	 * @generated
 	 */
-	int OUTPUT = 21;
-
-	/**
-	 * The feature id for the '<em><b>Target Icon Connection</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OUTPUT__TARGET_ICON_CONNECTION = ICON__TARGET_ICON_CONNECTION;
+	int OUTPUT = 18;
 
 	/**
 	 * The feature id for the '<em><b>Valence Point</b></em>' containment reference.
@@ -1300,6 +1189,15 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @ordered
 	 */
 	int OUTPUT__RIGHT_COMMENT = ICON__RIGHT_COMMENT;
+
+	/**
+	 * The feature id for the '<em><b>Next Icon</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT__NEXT_ICON = ICON__NEXT_ICON;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1345,16 +1243,7 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getInput()
 	 * @generated
 	 */
-	int INPUT = 22;
-
-	/**
-	 * The feature id for the '<em><b>Target Icon Connection</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT__TARGET_ICON_CONNECTION = ICON__TARGET_ICON_CONNECTION;
+	int INPUT = 19;
 
 	/**
 	 * The feature id for the '<em><b>Valence Point</b></em>' containment reference.
@@ -1382,6 +1271,15 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @ordered
 	 */
 	int INPUT__RIGHT_COMMENT = ICON__RIGHT_COMMENT;
+
+	/**
+	 * The feature id for the '<em><b>Next Icon</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT__NEXT_ICON = ICON__NEXT_ICON;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1427,16 +1325,7 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getEnd()
 	 * @generated
 	 */
-	int END = 23;
-
-	/**
-	 * The feature id for the '<em><b>Target Icon Connection</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int END__TARGET_ICON_CONNECTION = ICON__TARGET_ICON_CONNECTION;
+	int END = 20;
 
 	/**
 	 * The feature id for the '<em><b>Valence Point</b></em>' containment reference.
@@ -1466,6 +1355,15 @@ public interface KragsteinMethodPackage extends EPackage {
 	int END__RIGHT_COMMENT = ICON__RIGHT_COMMENT;
 
 	/**
+	 * The feature id for the '<em><b>Next Icon</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int END__NEXT_ICON = ICON__NEXT_ICON;
+
+	/**
 	 * The number of structural features of the '<em>End</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1473,7 +1371,6 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @ordered
 	 */
 	int END_FEATURE_COUNT = ICON_FEATURE_COUNT + 0;
-
 
 	/**
 	 * The meta object id for the '{@link KragsteinMethod.impl.ParameterImpl <em>Parameter</em>}' class.
@@ -1483,7 +1380,7 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getParameter()
 	 * @generated
 	 */
-	int PARAMETER = 24;
+	int PARAMETER = 21;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1652,17 +1549,6 @@ public interface KragsteinMethodPackage extends EPackage {
 	EClass getBranch();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link KragsteinMethod.Branch#getTargetBranchConnection <em>Target Branch Connection</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Target Branch Connection</em>'.
-	 * @see KragsteinMethod.Branch#getTargetBranchConnection()
-	 * @see #getBranch()
-	 * @generated
-	 */
-	EReference getBranch_TargetBranchConnection();
-
-	/**
 	 * Returns the meta object for the containment reference '{@link KragsteinMethod.Branch#getRoute <em>Route</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1674,36 +1560,26 @@ public interface KragsteinMethodPackage extends EPackage {
 	EReference getBranch_Route();
 
 	/**
-	 * Returns the meta object for class '{@link KragsteinMethod.BranchConnection <em>Branch Connection</em>}'.
+	 * Returns the meta object for the reference '{@link KragsteinMethod.Branch#getNextBranch <em>Next Branch</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Branch Connection</em>'.
-	 * @see KragsteinMethod.BranchConnection
+	 * @return the meta object for the reference '<em>Next Branch</em>'.
+	 * @see KragsteinMethod.Branch#getNextBranch()
+	 * @see #getBranch()
 	 * @generated
 	 */
-	EClass getBranchConnection();
+	EReference getBranch_NextBranch();
 
 	/**
-	 * Returns the meta object for the reference '{@link KragsteinMethod.BranchConnection#getSource <em>Source</em>}'.
+	 * Returns the meta object for the attribute '{@link KragsteinMethod.Branch#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Source</em>'.
-	 * @see KragsteinMethod.BranchConnection#getSource()
-	 * @see #getBranchConnection()
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see KragsteinMethod.Branch#getName()
+	 * @see #getBranch()
 	 * @generated
 	 */
-	EReference getBranchConnection_Source();
-
-	/**
-	 * Returns the meta object for the reference '{@link KragsteinMethod.BranchConnection#getTarget <em>Target</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Target</em>'.
-	 * @see KragsteinMethod.BranchConnection#getTarget()
-	 * @see #getBranchConnection()
-	 * @generated
-	 */
-	EReference getBranchConnection_Target();
+	EAttribute getBranch_Name();
 
 	/**
 	 * Returns the meta object for class '{@link KragsteinMethod.Route <em>Route</em>}'.
@@ -1779,38 +1655,6 @@ public interface KragsteinMethodPackage extends EPackage {
 	EClass getValencePoint();
 
 	/**
-	 * Returns the meta object for class '{@link KragsteinMethod.IconConnection <em>Icon Connection</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Icon Connection</em>'.
-	 * @see KragsteinMethod.IconConnection
-	 * @generated
-	 */
-	EClass getIconConnection();
-
-	/**
-	 * Returns the meta object for the reference '{@link KragsteinMethod.IconConnection#getTarget <em>Target</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Target</em>'.
-	 * @see KragsteinMethod.IconConnection#getTarget()
-	 * @see #getIconConnection()
-	 * @generated
-	 */
-	EReference getIconConnection_Target();
-
-	/**
-	 * Returns the meta object for the reference '{@link KragsteinMethod.IconConnection#getSource <em>Source</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Source</em>'.
-	 * @see KragsteinMethod.IconConnection#getSource()
-	 * @see #getIconConnection()
-	 * @generated
-	 */
-	EReference getIconConnection_Source();
-
-	/**
 	 * Returns the meta object for class '{@link KragsteinMethod.Icon <em>Icon</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1819,17 +1663,6 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getIcon();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link KragsteinMethod.Icon#getTargetIconConnection <em>Target Icon Connection</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Target Icon Connection</em>'.
-	 * @see KragsteinMethod.Icon#getTargetIconConnection()
-	 * @see #getIcon()
-	 * @generated
-	 */
-	EReference getIcon_TargetIconConnection();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link KragsteinMethod.Icon#getValencePoint <em>Valence Point</em>}'.
@@ -1863,6 +1696,17 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getIcon_RightComment();
+
+	/**
+	 * Returns the meta object for the reference '{@link KragsteinMethod.Icon#getNextIcon <em>Next Icon</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Next Icon</em>'.
+	 * @see KragsteinMethod.Icon#getNextIcon()
+	 * @see #getIcon()
+	 * @generated
+	 */
+	EReference getIcon_NextIcon();
 
 	/**
 	 * Returns the meta object for class '{@link KragsteinMethod.Action <em>Action</em>}'.
@@ -2048,17 +1892,6 @@ public interface KragsteinMethodPackage extends EPackage {
 	EAttribute getCase_Value();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link KragsteinMethod.Case#getTargetCaseConnection <em>Target Case Connection</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Target Case Connection</em>'.
-	 * @see KragsteinMethod.Case#getTargetCaseConnection()
-	 * @see #getCase()
-	 * @generated
-	 */
-	EReference getCase_TargetCaseConnection();
-
-	/**
 	 * Returns the meta object for the containment reference '{@link KragsteinMethod.Case#getRoute <em>Route</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2070,36 +1903,15 @@ public interface KragsteinMethodPackage extends EPackage {
 	EReference getCase_Route();
 
 	/**
-	 * Returns the meta object for class '{@link KragsteinMethod.CaseConnection <em>Case Connection</em>}'.
+	 * Returns the meta object for the reference '{@link KragsteinMethod.Case#getNextCase <em>Next Case</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Case Connection</em>'.
-	 * @see KragsteinMethod.CaseConnection
+	 * @return the meta object for the reference '<em>Next Case</em>'.
+	 * @see KragsteinMethod.Case#getNextCase()
+	 * @see #getCase()
 	 * @generated
 	 */
-	EClass getCaseConnection();
-
-	/**
-	 * Returns the meta object for the reference '{@link KragsteinMethod.CaseConnection#getSource <em>Source</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Source</em>'.
-	 * @see KragsteinMethod.CaseConnection#getSource()
-	 * @see #getCaseConnection()
-	 * @generated
-	 */
-	EReference getCaseConnection_Source();
-
-	/**
-	 * Returns the meta object for the reference '{@link KragsteinMethod.CaseConnection#getTarget <em>Target</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Target</em>'.
-	 * @see KragsteinMethod.CaseConnection#getTarget()
-	 * @see #getCaseConnection()
-	 * @generated
-	 */
-	EReference getCaseConnection_Target();
+	EReference getCase_NextCase();
 
 	/**
 	 * Returns the meta object for class '{@link KragsteinMethod.Headline <em>Headline</em>}'.
@@ -2579,14 +2391,6 @@ public interface KragsteinMethodPackage extends EPackage {
 		EClass BRANCH = eINSTANCE.getBranch();
 
 		/**
-		 * The meta object literal for the '<em><b>Target Branch Connection</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference BRANCH__TARGET_BRANCH_CONNECTION = eINSTANCE.getBranch_TargetBranchConnection();
-
-		/**
 		 * The meta object literal for the '<em><b>Route</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2595,30 +2399,20 @@ public interface KragsteinMethodPackage extends EPackage {
 		EReference BRANCH__ROUTE = eINSTANCE.getBranch_Route();
 
 		/**
-		 * The meta object literal for the '{@link KragsteinMethod.impl.BranchConnectionImpl <em>Branch Connection</em>}' class.
+		 * The meta object literal for the '<em><b>Next Branch</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see KragsteinMethod.impl.BranchConnectionImpl
-		 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getBranchConnection()
 		 * @generated
 		 */
-		EClass BRANCH_CONNECTION = eINSTANCE.getBranchConnection();
+		EReference BRANCH__NEXT_BRANCH = eINSTANCE.getBranch_NextBranch();
 
 		/**
-		 * The meta object literal for the '<em><b>Source</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference BRANCH_CONNECTION__SOURCE = eINSTANCE.getBranchConnection_Source();
-
-		/**
-		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference BRANCH_CONNECTION__TARGET = eINSTANCE.getBranchConnection_Target();
+		EAttribute BRANCH__NAME = eINSTANCE.getBranch_Name();
 
 		/**
 		 * The meta object literal for the '{@link KragsteinMethod.impl.RouteImpl <em>Route</em>}' class.
@@ -2685,32 +2479,6 @@ public interface KragsteinMethodPackage extends EPackage {
 		EClass VALENCE_POINT = eINSTANCE.getValencePoint();
 
 		/**
-		 * The meta object literal for the '{@link KragsteinMethod.impl.IconConnectionImpl <em>Icon Connection</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see KragsteinMethod.impl.IconConnectionImpl
-		 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getIconConnection()
-		 * @generated
-		 */
-		EClass ICON_CONNECTION = eINSTANCE.getIconConnection();
-
-		/**
-		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ICON_CONNECTION__TARGET = eINSTANCE.getIconConnection_Target();
-
-		/**
-		 * The meta object literal for the '<em><b>Source</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ICON_CONNECTION__SOURCE = eINSTANCE.getIconConnection_Source();
-
-		/**
 		 * The meta object literal for the '{@link KragsteinMethod.impl.IconImpl <em>Icon</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2719,14 +2487,6 @@ public interface KragsteinMethodPackage extends EPackage {
 		 * @generated
 		 */
 		EClass ICON = eINSTANCE.getIcon();
-
-		/**
-		 * The meta object literal for the '<em><b>Target Icon Connection</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ICON__TARGET_ICON_CONNECTION = eINSTANCE.getIcon_TargetIconConnection();
 
 		/**
 		 * The meta object literal for the '<em><b>Valence Point</b></em>' containment reference feature.
@@ -2751,6 +2511,14 @@ public interface KragsteinMethodPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ICON__RIGHT_COMMENT = eINSTANCE.getIcon_RightComment();
+
+		/**
+		 * The meta object literal for the '<em><b>Next Icon</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ICON__NEXT_ICON = eINSTANCE.getIcon_NextIcon();
 
 		/**
 		 * The meta object literal for the '{@link KragsteinMethod.impl.ActionImpl <em>Action</em>}' class.
@@ -2897,14 +2665,6 @@ public interface KragsteinMethodPackage extends EPackage {
 		EAttribute CASE__VALUE = eINSTANCE.getCase_Value();
 
 		/**
-		 * The meta object literal for the '<em><b>Target Case Connection</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CASE__TARGET_CASE_CONNECTION = eINSTANCE.getCase_TargetCaseConnection();
-
-		/**
 		 * The meta object literal for the '<em><b>Route</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2913,30 +2673,12 @@ public interface KragsteinMethodPackage extends EPackage {
 		EReference CASE__ROUTE = eINSTANCE.getCase_Route();
 
 		/**
-		 * The meta object literal for the '{@link KragsteinMethod.impl.CaseConnectionImpl <em>Case Connection</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see KragsteinMethod.impl.CaseConnectionImpl
-		 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getCaseConnection()
-		 * @generated
-		 */
-		EClass CASE_CONNECTION = eINSTANCE.getCaseConnection();
-
-		/**
-		 * The meta object literal for the '<em><b>Source</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Next Case</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CASE_CONNECTION__SOURCE = eINSTANCE.getCaseConnection_Source();
-
-		/**
-		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CASE_CONNECTION__TARGET = eINSTANCE.getCaseConnection_Target();
+		EReference CASE__NEXT_CASE = eINSTANCE.getCase_NextCase();
 
 		/**
 		 * The meta object literal for the '{@link KragsteinMethod.impl.HeadlineImpl <em>Headline</em>}' class.

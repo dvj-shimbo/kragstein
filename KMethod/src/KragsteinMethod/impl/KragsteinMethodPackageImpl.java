@@ -6,23 +6,18 @@ import KragsteinMethod.Action;
 import KragsteinMethod.Adress;
 import KragsteinMethod.BeginLoop;
 import KragsteinMethod.Branch;
-import KragsteinMethod.BranchConnection;
 import KragsteinMethod.Case;
-import KragsteinMethod.CaseConnection;
 import KragsteinMethod.Choice;
-import KragsteinMethod.EmptyConnector;
 import KragsteinMethod.End;
 import KragsteinMethod.EndLoop;
 import KragsteinMethod.Header;
 import KragsteinMethod.Headline;
 import KragsteinMethod.Icon;
-import KragsteinMethod.IconConnection;
 import KragsteinMethod.Input;
 import KragsteinMethod.Insertion;
 import KragsteinMethod.KragsteinMethodFactory;
 import KragsteinMethod.KragsteinMethodPackage;
 import KragsteinMethod.LeftComment;
-import KragsteinMethod.LoopArrow;
 import KragsteinMethod.Method;
 import KragsteinMethod.Output;
 import KragsteinMethod.Parameter;
@@ -72,13 +67,6 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass branchConnectionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass routeEClass = null;
 
 	/**
@@ -101,13 +89,6 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 	 * @generated
 	 */
 	private EClass valencePointEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass iconConnectionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -143,13 +124,6 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 	 * @generated
 	 */
 	private EClass caseEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass caseConnectionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -395,7 +369,7 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getBranch_TargetBranchConnection() {
+	public EReference getBranch_Route() {
 		return (EReference)branchEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -404,7 +378,7 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getBranch_Route() {
+	public EReference getBranch_NextBranch() {
 		return (EReference)branchEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -413,26 +387,8 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getBranchConnection() {
-		return branchConnectionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getBranchConnection_Source() {
-		return (EReference)branchConnectionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getBranchConnection_Target() {
-		return (EReference)branchConnectionEClass.getEStructuralFeatures().get(1);
+	public EAttribute getBranch_Name() {
+		return (EAttribute)branchEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -503,33 +459,6 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getIconConnection() {
-		return iconConnectionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getIconConnection_Target() {
-		return (EReference)iconConnectionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getIconConnection_Source() {
-		return (EReference)iconConnectionEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getIcon() {
 		return iconEClass;
 	}
@@ -539,7 +468,7 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getIcon_TargetIconConnection() {
+	public EReference getIcon_ValencePoint() {
 		return (EReference)iconEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -548,7 +477,7 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getIcon_ValencePoint() {
+	public EReference getIcon_LeftComment() {
 		return (EReference)iconEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -557,7 +486,7 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getIcon_LeftComment() {
+	public EReference getIcon_RightComment() {
 		return (EReference)iconEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -566,7 +495,7 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getIcon_RightComment() {
+	public EReference getIcon_NextIcon() {
 		return (EReference)iconEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -728,7 +657,7 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCase_TargetCaseConnection() {
+	public EReference getCase_Route() {
 		return (EReference)caseEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -737,35 +666,8 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCase_Route() {
+	public EReference getCase_NextCase() {
 		return (EReference)caseEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getCaseConnection() {
-		return caseConnectionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getCaseConnection_Source() {
-		return (EReference)caseConnectionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getCaseConnection_Target() {
-		return (EReference)caseConnectionEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1107,12 +1009,9 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 		createEReference(headerEClass, HEADER__PARAMETER);
 
 		branchEClass = createEClass(BRANCH);
-		createEReference(branchEClass, BRANCH__TARGET_BRANCH_CONNECTION);
 		createEReference(branchEClass, BRANCH__ROUTE);
-
-		branchConnectionEClass = createEClass(BRANCH_CONNECTION);
-		createEReference(branchConnectionEClass, BRANCH_CONNECTION__SOURCE);
-		createEReference(branchConnectionEClass, BRANCH_CONNECTION__TARGET);
+		createEReference(branchEClass, BRANCH__NEXT_BRANCH);
+		createEAttribute(branchEClass, BRANCH__NAME);
 
 		routeEClass = createEClass(ROUTE);
 		createEReference(routeEClass, ROUTE__ICON);
@@ -1125,15 +1024,11 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 
 		valencePointEClass = createEClass(VALENCE_POINT);
 
-		iconConnectionEClass = createEClass(ICON_CONNECTION);
-		createEReference(iconConnectionEClass, ICON_CONNECTION__TARGET);
-		createEReference(iconConnectionEClass, ICON_CONNECTION__SOURCE);
-
 		iconEClass = createEClass(ICON);
-		createEReference(iconEClass, ICON__TARGET_ICON_CONNECTION);
 		createEReference(iconEClass, ICON__VALENCE_POINT);
 		createEReference(iconEClass, ICON__LEFT_COMMENT);
 		createEReference(iconEClass, ICON__RIGHT_COMMENT);
+		createEReference(iconEClass, ICON__NEXT_ICON);
 
 		actionEClass = createEClass(ACTION);
 		createEAttribute(actionEClass, ACTION__NAME);
@@ -1155,12 +1050,8 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 		caseEClass = createEClass(CASE);
 		createEAttribute(caseEClass, CASE__NAME);
 		createEAttribute(caseEClass, CASE__VALUE);
-		createEReference(caseEClass, CASE__TARGET_CASE_CONNECTION);
 		createEReference(caseEClass, CASE__ROUTE);
-
-		caseConnectionEClass = createEClass(CASE_CONNECTION);
-		createEReference(caseConnectionEClass, CASE_CONNECTION__SOURCE);
-		createEReference(caseConnectionEClass, CASE_CONNECTION__TARGET);
+		createEReference(caseEClass, CASE__NEXT_CASE);
 
 		headlineEClass = createEClass(HEADLINE);
 		createEAttribute(headlineEClass, HEADLINE__NAME);
@@ -1262,12 +1153,9 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 		initEReference(getHeader_Parameter(), this.getParameter(), null, "parameter", null, 0, -1, Header.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(branchEClass, Branch.class, "Branch", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getBranch_TargetBranchConnection(), this.getBranchConnection(), null, "targetBranchConnection", null, 0, 1, Branch.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getBranch_Route(), this.getRoute(), null, "route", null, 1, 1, Branch.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(branchConnectionEClass, BranchConnection.class, "BranchConnection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getBranchConnection_Source(), this.getBranch(), null, "source", null, 0, 1, BranchConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getBranchConnection_Target(), this.getBranch(), null, "target", null, 0, 1, BranchConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBranch_NextBranch(), this.getBranch(), null, "nextBranch", null, 0, 1, Branch.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getBranch_Name(), ecorePackage.getEString(), "name", null, 0, 1, Branch.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(routeEClass, Route.class, "Route", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRoute_Icon(), this.getIcon(), null, "icon", null, 0, -1, Route.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1280,15 +1168,11 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 
 		initEClass(valencePointEClass, ValencePoint.class, "ValencePoint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(iconConnectionEClass, IconConnection.class, "IconConnection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getIconConnection_Target(), this.getIcon(), null, "target", null, 0, 1, IconConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getIconConnection_Source(), this.getIcon(), null, "source", null, 0, 1, IconConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEClass(iconEClass, Icon.class, "Icon", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getIcon_TargetIconConnection(), this.getIconConnection(), null, "targetIconConnection", null, 0, 1, Icon.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getIcon_ValencePoint(), this.getValencePoint(), null, "valencePoint", null, 0, 1, Icon.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getIcon_LeftComment(), this.getLeftComment(), null, "leftComment", null, 0, 1, Icon.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getIcon_RightComment(), this.getRightComment(), null, "RightComment", null, 0, 1, Icon.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getIcon_NextIcon(), this.getIcon(), null, "nextIcon", null, 0, 1, Icon.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(actionEClass, Action.class, "Action", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAction_Name(), ecorePackage.getEString(), "name", null, 0, 1, Action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1310,12 +1194,8 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 		initEClass(caseEClass, Case.class, "Case", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCase_Name(), ecorePackage.getEString(), "name", null, 0, 1, Case.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCase_Value(), ecorePackage.getEString(), "value", null, 0, 1, Case.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCase_TargetCaseConnection(), this.getCaseConnection(), null, "targetCaseConnection", null, 0, 1, Case.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCase_Route(), this.getRoute(), null, "route", null, 1, 1, Case.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(caseConnectionEClass, CaseConnection.class, "CaseConnection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getCaseConnection_Source(), this.getCase(), null, "source", null, 0, 1, CaseConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCaseConnection_Target(), this.getCase(), null, "target", null, 0, 1, CaseConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCase_NextCase(), this.getCase(), null, "nextCase", null, 0, 1, Case.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(headlineEClass, Headline.class, "Headline", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getHeadline_Name(), ecorePackage.getEString(), "name", null, 0, 1, Headline.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1370,8 +1250,6 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 		createGmf_1Annotations();
 		// gmf.compartment
 		createGmf_2Annotations();
-		// gmf.link
-		createGmf_3Annotations();
 	}
 
 	/**
@@ -1530,40 +1408,6 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 		  (getCase_Route(), 
 		   source, 
 		   new String[] {
-		   });
-	}
-
-	/**
-	 * Initializes the annotations for <b>gmf.link</b>.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void createGmf_3Annotations() {
-		String source = "gmf.link";	
-		addAnnotation
-		  (branchConnectionEClass, 
-		   source, 
-		   new String[] {
-			 "source", "source",
-			 "target", "target",
-			 "target.decoration", "arrow"
-		   });	
-		addAnnotation
-		  (iconConnectionEClass, 
-		   source, 
-		   new String[] {
-			 "source", "source",
-			 "target", "target",
-			 "target.decoration", "arrow"
-		   });	
-		addAnnotation
-		  (caseConnectionEClass, 
-		   source, 
-		   new String[] {
-			 "source", "source",
-			 "target", "target",
-			 "target.decoration", "arrow"
 		   });
 	}
 

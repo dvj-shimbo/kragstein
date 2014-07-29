@@ -25,23 +25,14 @@
     <eAnnotations source="gmf.node">
       <details key="label.placement" value="none"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="targetBranchConnection"
-        eType="#//BranchConnection" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="route" lowerBound="1" eType="#//Route"
         containment="true">
       <eAnnotations source="gmf.compartment">
         <details key="layout" value="free"/>
       </eAnnotations>
     </eStructuralFeatures>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="BranchConnection">
-    <eAnnotations source="gmf.link">
-      <details key="source" value="source"/>
-      <details key="target" value="target"/>
-      <details key="target.decoration" value="arrow"/>
-    </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//Branch"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Branch"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nextBranch" eType="#//Branch"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Route">
     <eAnnotations source="gmf.node">
@@ -61,24 +52,14 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ValencePoint"/>
-  <eClassifiers xsi:type="ecore:EClass" name="IconConnection">
-    <eAnnotations source="gmf.link">
-      <details key="source" value="source"/>
-      <details key="target" value="target"/>
-      <details key="target.decoration" value="arrow"/>
-    </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Icon"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//Icon"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Icon" abstract="true">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="targetIconConnection" eType="#//IconConnection"
-        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="valencePoint" eType="#//ValencePoint"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="leftComment" eType="#//LeftComment"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="RightComment" eType="#//RightComment"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nextIcon" eType="#//Icon"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Action" eSuperTypes="#//Icon">
     <eAnnotations source="gmf.node">
@@ -119,21 +100,11 @@
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="targetCaseConnection" eType="#//CaseConnection"
-        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="route" lowerBound="1" eType="#//Route"
         containment="true">
       <eAnnotations source="gmf.compartment"/>
     </eStructuralFeatures>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CaseConnection">
-    <eAnnotations source="gmf.link">
-      <details key="source" value="source"/>
-      <details key="target" value="target"/>
-      <details key="target.decoration" value="arrow"/>
-    </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//Case"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Case"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nextCase" eType="#//Case"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Headline" eSuperTypes="#//Icon">
     <eAnnotations source="gmf.node">

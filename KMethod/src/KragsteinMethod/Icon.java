@@ -12,10 +12,10 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link KragsteinMethod.Icon#getTargetIconConnection <em>Target Icon Connection</em>}</li>
  *   <li>{@link KragsteinMethod.Icon#getValencePoint <em>Valence Point</em>}</li>
  *   <li>{@link KragsteinMethod.Icon#getLeftComment <em>Left Comment</em>}</li>
  *   <li>{@link KragsteinMethod.Icon#getRightComment <em>Right Comment</em>}</li>
+ *   <li>{@link KragsteinMethod.Icon#getNextIcon <em>Next Icon</em>}</li>
  * </ul>
  * </p>
  *
@@ -24,32 +24,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Icon extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Target Icon Connection</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Target Icon Connection</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Target Icon Connection</em>' containment reference.
-	 * @see #setTargetIconConnection(IconConnection)
-	 * @see KragsteinMethod.KragsteinMethodPackage#getIcon_TargetIconConnection()
-	 * @model containment="true"
-	 * @generated
-	 */
-	IconConnection getTargetIconConnection();
-
-	/**
-	 * Sets the value of the '{@link KragsteinMethod.Icon#getTargetIconConnection <em>Target Icon Connection</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Target Icon Connection</em>' containment reference.
-	 * @see #getTargetIconConnection()
-	 * @generated
-	 */
-	void setTargetIconConnection(IconConnection value);
-
 	/**
 	 * Returns the value of the '<em><b>Valence Point</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
@@ -127,5 +101,31 @@ public interface Icon extends EObject {
 	 * @generated
 	 */
 	void setRightComment(RightComment value);
+
+	/**
+	 * Returns the value of the '<em><b>Next Icon</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Next Icon</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Next Icon</em>' reference.
+	 * @see #setNextIcon(Icon)
+	 * @see KragsteinMethod.KragsteinMethodPackage#getIcon_NextIcon()
+	 * @model
+	 * @generated
+	 */
+	Icon getNextIcon();
+
+	/**
+	 * Sets the value of the '{@link KragsteinMethod.Icon#getNextIcon <em>Next Icon</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Next Icon</em>' reference.
+	 * @see #getNextIcon()
+	 * @generated
+	 */
+	void setNextIcon(Icon value);
 
 } // Icon

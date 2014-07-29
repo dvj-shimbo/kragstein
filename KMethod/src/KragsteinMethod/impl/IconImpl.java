@@ -3,7 +3,6 @@
 package KragsteinMethod.impl;
 
 import KragsteinMethod.Icon;
-import KragsteinMethod.IconConnection;
 import KragsteinMethod.KragsteinMethodPackage;
 import KragsteinMethod.LeftComment;
 import KragsteinMethod.RightComment;
@@ -25,26 +24,16 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link KragsteinMethod.impl.IconImpl#getTargetIconConnection <em>Target Icon Connection</em>}</li>
  *   <li>{@link KragsteinMethod.impl.IconImpl#getValencePoint <em>Valence Point</em>}</li>
  *   <li>{@link KragsteinMethod.impl.IconImpl#getLeftComment <em>Left Comment</em>}</li>
  *   <li>{@link KragsteinMethod.impl.IconImpl#getRightComment <em>Right Comment</em>}</li>
+ *   <li>{@link KragsteinMethod.impl.IconImpl#getNextIcon <em>Next Icon</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
 public abstract class IconImpl extends EObjectImpl implements Icon {
-	/**
-	 * The cached value of the '{@link #getTargetIconConnection() <em>Target Icon Connection</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTargetIconConnection()
-	 * @generated
-	 * @ordered
-	 */
-	protected IconConnection targetIconConnection;
-
 	/**
 	 * The cached value of the '{@link #getValencePoint() <em>Valence Point</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -76,6 +65,16 @@ public abstract class IconImpl extends EObjectImpl implements Icon {
 	protected RightComment rightComment;
 
 	/**
+	 * The cached value of the '{@link #getNextIcon() <em>Next Icon</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNextIcon()
+	 * @generated
+	 * @ordered
+	 */
+	protected Icon nextIcon;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -92,49 +91,6 @@ public abstract class IconImpl extends EObjectImpl implements Icon {
 	@Override
 	protected EClass eStaticClass() {
 		return KragsteinMethodPackage.Literals.ICON;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public IconConnection getTargetIconConnection() {
-		return targetIconConnection;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetTargetIconConnection(IconConnection newTargetIconConnection, NotificationChain msgs) {
-		IconConnection oldTargetIconConnection = targetIconConnection;
-		targetIconConnection = newTargetIconConnection;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, KragsteinMethodPackage.ICON__TARGET_ICON_CONNECTION, oldTargetIconConnection, newTargetIconConnection);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTargetIconConnection(IconConnection newTargetIconConnection) {
-		if (newTargetIconConnection != targetIconConnection) {
-			NotificationChain msgs = null;
-			if (targetIconConnection != null)
-				msgs = ((InternalEObject)targetIconConnection).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - KragsteinMethodPackage.ICON__TARGET_ICON_CONNECTION, null, msgs);
-			if (newTargetIconConnection != null)
-				msgs = ((InternalEObject)newTargetIconConnection).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - KragsteinMethodPackage.ICON__TARGET_ICON_CONNECTION, null, msgs);
-			msgs = basicSetTargetIconConnection(newTargetIconConnection, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, KragsteinMethodPackage.ICON__TARGET_ICON_CONNECTION, newTargetIconConnection, newTargetIconConnection));
 	}
 
 	/**
@@ -271,11 +227,47 @@ public abstract class IconImpl extends EObjectImpl implements Icon {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Icon getNextIcon() {
+		if (nextIcon != null && nextIcon.eIsProxy()) {
+			InternalEObject oldNextIcon = (InternalEObject)nextIcon;
+			nextIcon = (Icon)eResolveProxy(oldNextIcon);
+			if (nextIcon != oldNextIcon) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, KragsteinMethodPackage.ICON__NEXT_ICON, oldNextIcon, nextIcon));
+			}
+		}
+		return nextIcon;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Icon basicGetNextIcon() {
+		return nextIcon;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNextIcon(Icon newNextIcon) {
+		Icon oldNextIcon = nextIcon;
+		nextIcon = newNextIcon;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, KragsteinMethodPackage.ICON__NEXT_ICON, oldNextIcon, nextIcon));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case KragsteinMethodPackage.ICON__TARGET_ICON_CONNECTION:
-				return basicSetTargetIconConnection(null, msgs);
 			case KragsteinMethodPackage.ICON__VALENCE_POINT:
 				return basicSetValencePoint(null, msgs);
 			case KragsteinMethodPackage.ICON__LEFT_COMMENT:
@@ -294,14 +286,15 @@ public abstract class IconImpl extends EObjectImpl implements Icon {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case KragsteinMethodPackage.ICON__TARGET_ICON_CONNECTION:
-				return getTargetIconConnection();
 			case KragsteinMethodPackage.ICON__VALENCE_POINT:
 				return getValencePoint();
 			case KragsteinMethodPackage.ICON__LEFT_COMMENT:
 				return getLeftComment();
 			case KragsteinMethodPackage.ICON__RIGHT_COMMENT:
 				return getRightComment();
+			case KragsteinMethodPackage.ICON__NEXT_ICON:
+				if (resolve) return getNextIcon();
+				return basicGetNextIcon();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -314,9 +307,6 @@ public abstract class IconImpl extends EObjectImpl implements Icon {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case KragsteinMethodPackage.ICON__TARGET_ICON_CONNECTION:
-				setTargetIconConnection((IconConnection)newValue);
-				return;
 			case KragsteinMethodPackage.ICON__VALENCE_POINT:
 				setValencePoint((ValencePoint)newValue);
 				return;
@@ -325,6 +315,9 @@ public abstract class IconImpl extends EObjectImpl implements Icon {
 				return;
 			case KragsteinMethodPackage.ICON__RIGHT_COMMENT:
 				setRightComment((RightComment)newValue);
+				return;
+			case KragsteinMethodPackage.ICON__NEXT_ICON:
+				setNextIcon((Icon)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -338,9 +331,6 @@ public abstract class IconImpl extends EObjectImpl implements Icon {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case KragsteinMethodPackage.ICON__TARGET_ICON_CONNECTION:
-				setTargetIconConnection((IconConnection)null);
-				return;
 			case KragsteinMethodPackage.ICON__VALENCE_POINT:
 				setValencePoint((ValencePoint)null);
 				return;
@@ -349,6 +339,9 @@ public abstract class IconImpl extends EObjectImpl implements Icon {
 				return;
 			case KragsteinMethodPackage.ICON__RIGHT_COMMENT:
 				setRightComment((RightComment)null);
+				return;
+			case KragsteinMethodPackage.ICON__NEXT_ICON:
+				setNextIcon((Icon)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -362,14 +355,14 @@ public abstract class IconImpl extends EObjectImpl implements Icon {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case KragsteinMethodPackage.ICON__TARGET_ICON_CONNECTION:
-				return targetIconConnection != null;
 			case KragsteinMethodPackage.ICON__VALENCE_POINT:
 				return valencePoint != null;
 			case KragsteinMethodPackage.ICON__LEFT_COMMENT:
 				return leftComment != null;
 			case KragsteinMethodPackage.ICON__RIGHT_COMMENT:
 				return rightComment != null;
+			case KragsteinMethodPackage.ICON__NEXT_ICON:
+				return nextIcon != null;
 		}
 		return super.eIsSet(featureID);
 	}

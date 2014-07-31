@@ -57,8 +57,10 @@ public class KragsteinMethodFactoryImpl extends EFactoryImpl implements Kragstei
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case KragsteinMethodPackage.METHOD: return createMethod();
+			case KragsteinMethodPackage.DRAKON_DIAGRAM: return createDrakonDiagram();
 			case KragsteinMethodPackage.HEADER: return createHeader();
 			case KragsteinMethodPackage.PARAMETER: return createParameter();
+			case KragsteinMethodPackage.BRANCHES: return createBranches();
 			case KragsteinMethodPackage.BRANCH: return createBranch();
 			case KragsteinMethodPackage.ROUTE: return createRoute();
 			case KragsteinMethodPackage.VALENCE_POINT: return createValencePoint();
@@ -102,9 +104,39 @@ public class KragsteinMethodFactoryImpl extends EFactoryImpl implements Kragstei
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public DrakonDiagram createDrakonDiagram() {
+		DrakonDiagramImpl drakonDiagram = new DrakonDiagramImpl();
+		return drakonDiagram;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Header createHeader() {
 		HeaderImpl header = new HeaderImpl();
 		return header;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Parameter createParameter() {
+		ParameterImpl parameter = new ParameterImpl();
+		return parameter;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Branches createBranches() {
+		BranchesImpl branches = new BranchesImpl();
+		return branches;
 	}
 
 	/**
@@ -125,6 +157,16 @@ public class KragsteinMethodFactoryImpl extends EFactoryImpl implements Kragstei
 	public Route createRoute() {
 		RouteImpl route = new RouteImpl();
 		return route;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ValencePoint createValencePoint() {
+		ValencePointImpl valencePoint = new ValencePointImpl();
+		return valencePoint;
 	}
 
 	/**
@@ -155,16 +197,6 @@ public class KragsteinMethodFactoryImpl extends EFactoryImpl implements Kragstei
 	public LeftComment createLeftComment() {
 		LeftCommentImpl leftComment = new LeftCommentImpl();
 		return leftComment;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ValencePoint createValencePoint() {
-		ValencePointImpl valencePoint = new ValencePointImpl();
-		return valencePoint;
 	}
 
 	/**
@@ -335,16 +367,6 @@ public class KragsteinMethodFactoryImpl extends EFactoryImpl implements Kragstei
 	public Period createPeriod() {
 		PeriodImpl period = new PeriodImpl();
 		return period;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Parameter createParameter() {
-		ParameterImpl parameter = new ParameterImpl();
-		return parameter;
 	}
 
 	/**

@@ -31,6 +31,15 @@ public interface KragsteinMethodFactory extends EFactory {
 	Method createMethod();
 
 	/**
+	 * Returns a new object of class '<em>Drakon Diagram</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Drakon Diagram</em>'.
+	 * @generated
+	 */
+	DrakonDiagram createDrakonDiagram();
+
+	/**
 	 * Returns a new object of class '<em>Header</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -38,6 +47,24 @@ public interface KragsteinMethodFactory extends EFactory {
 	 * @generated
 	 */
 	Header createHeader();
+
+	/**
+	 * Returns a new object of class '<em>Parameter</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Parameter</em>'.
+	 * @generated
+	 */
+	Parameter createParameter();
+
+	/**
+	 * Returns a new object of class '<em>Branches</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Branches</em>'.
+	 * @generated
+	 */
+	Branches createBranches();
 
 	/**
 	 * Returns a new object of class '<em>Branch</em>'.
@@ -56,6 +83,15 @@ public interface KragsteinMethodFactory extends EFactory {
 	 * @generated
 	 */
 	Route createRoute();
+
+	/**
+	 * Returns a new object of class '<em>Valence Point</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Valence Point</em>'.
+	 * @generated
+	 */
+	ValencePoint createValencePoint();
 
 	/**
 	 * Returns a new object of class '<em>Synchronizer</em>'.
@@ -83,15 +119,6 @@ public interface KragsteinMethodFactory extends EFactory {
 	 * @generated
 	 */
 	LeftComment createLeftComment();
-
-	/**
-	 * Returns a new object of class '<em>Valence Point</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Valence Point</em>'.
-	 * @generated
-	 */
-	ValencePoint createValencePoint();
 
 	/**
 	 * Returns a new object of class '<em>Action</em>'.
@@ -245,15 +272,6 @@ public interface KragsteinMethodFactory extends EFactory {
 	 * @generated
 	 */
 	Period createPeriod();
-
-	/**
-	 * Returns a new object of class '<em>Parameter</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Parameter</em>'.
-	 * @generated
-	 */
-	Parameter createParameter();
 
 	/**
 	 * Returns the package supported by this factory.

@@ -72,12 +72,20 @@ public class KragsteinMethodAdapterFactory extends AdapterFactoryImpl {
 				return createMethodAdapter();
 			}
 			@Override
+			public Adapter caseDrakonDiagram(DrakonDiagram object) {
+				return createDrakonDiagramAdapter();
+			}
+			@Override
 			public Adapter caseHeader(Header object) {
 				return createHeaderAdapter();
 			}
 			@Override
 			public Adapter caseParameter(Parameter object) {
 				return createParameterAdapter();
+			}
+			@Override
+			public Adapter caseBranches(Branches object) {
+				return createBranchesAdapter();
 			}
 			@Override
 			public Adapter caseBranch(Branch object) {
@@ -210,6 +218,20 @@ public class KragsteinMethodAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link KragsteinMethod.DrakonDiagram <em>Drakon Diagram</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see KragsteinMethod.DrakonDiagram
+	 * @generated
+	 */
+	public Adapter createDrakonDiagramAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link KragsteinMethod.Header <em>Header</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -220,6 +242,34 @@ public class KragsteinMethodAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createHeaderAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link KragsteinMethod.Parameter <em>Parameter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see KragsteinMethod.Parameter
+	 * @generated
+	 */
+	public Adapter createParameterAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link KragsteinMethod.Branches <em>Branches</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see KragsteinMethod.Branches
+	 * @generated
+	 */
+	public Adapter createBranchesAdapter() {
 		return null;
 	}
 
@@ -248,6 +298,20 @@ public class KragsteinMethodAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createRouteAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link KragsteinMethod.ValencePoint <em>Valence Point</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see KragsteinMethod.ValencePoint
+	 * @generated
+	 */
+	public Adapter createValencePointAdapter() {
 		return null;
 	}
 
@@ -290,20 +354,6 @@ public class KragsteinMethodAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createLeftCommentAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link KragsteinMethod.ValencePoint <em>Valence Point</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see KragsteinMethod.ValencePoint
-	 * @generated
-	 */
-	public Adapter createValencePointAdapter() {
 		return null;
 	}
 
@@ -556,20 +606,6 @@ public class KragsteinMethodAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createPeriodAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link KragsteinMethod.Parameter <em>Parameter</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see KragsteinMethod.Parameter
-	 * @generated
-	 */
-	public Adapter createParameterAdapter() {
 		return null;
 	}
 

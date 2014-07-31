@@ -66,22 +66,22 @@ public interface KragsteinMethodPackage extends EPackage {
 	int METHOD = 0;
 
 	/**
-	 * The feature id for the '<em><b>Header</b></em>' containment reference.
+	 * The feature id for the '<em><b>Drakon Diagram</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int METHOD__HEADER = 0;
+	int METHOD__DRAKON_DIAGRAM = 0;
 
 	/**
-	 * The feature id for the '<em><b>Branch</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int METHOD__BRANCH = 1;
+	int METHOD__NAME = 1;
 
 	/**
 	 * The number of structural features of the '<em>Method</em>' class.
@@ -93,6 +93,52 @@ public interface KragsteinMethodPackage extends EPackage {
 	int METHOD_FEATURE_COUNT = 2;
 
 	/**
+	 * The meta object id for the '{@link KragsteinMethod.impl.DrakonDiagramImpl <em>Drakon Diagram</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see KragsteinMethod.impl.DrakonDiagramImpl
+	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getDrakonDiagram()
+	 * @generated
+	 */
+	int DRAKON_DIAGRAM = 1;
+
+	/**
+	 * The feature id for the '<em><b>Header</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DRAKON_DIAGRAM__HEADER = 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DRAKON_DIAGRAM__NAME = 1;
+
+	/**
+	 * The feature id for the '<em><b>Branches</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DRAKON_DIAGRAM__BRANCHES = 2;
+
+	/**
+	 * The number of structural features of the '<em>Drakon Diagram</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DRAKON_DIAGRAM_FEATURE_COUNT = 3;
+
+	/**
 	 * The meta object id for the '{@link KragsteinMethod.impl.HeaderImpl <em>Header</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -100,7 +146,7 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getHeader()
 	 * @generated
 	 */
-	int HEADER = 1;
+	int HEADER = 2;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -175,246 +221,6 @@ public interface KragsteinMethodPackage extends EPackage {
 	int HEADER_FEATURE_COUNT = 7;
 
 	/**
-	 * The meta object id for the '{@link KragsteinMethod.impl.BranchImpl <em>Branch</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see KragsteinMethod.impl.BranchImpl
-	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getBranch()
-	 * @generated
-	 */
-	int BRANCH = 3;
-
-	/**
-	 * The meta object id for the '{@link KragsteinMethod.impl.RouteImpl <em>Route</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see KragsteinMethod.impl.RouteImpl
-	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getRoute()
-	 * @generated
-	 */
-	int ROUTE = 4;
-
-	/**
-	 * The meta object id for the '{@link KragsteinMethod.impl.SynchronizerImpl <em>Synchronizer</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see KragsteinMethod.impl.SynchronizerImpl
-	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getSynchronizer()
-	 * @generated
-	 */
-	int SYNCHRONIZER = 6;
-
-	/**
-	 * The meta object id for the '{@link KragsteinMethod.impl.RightCommentImpl <em>Right Comment</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see KragsteinMethod.impl.RightCommentImpl
-	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getRightComment()
-	 * @generated
-	 */
-	int RIGHT_COMMENT = 7;
-
-	/**
-	 * The meta object id for the '{@link KragsteinMethod.impl.LeftCommentImpl <em>Left Comment</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see KragsteinMethod.impl.LeftCommentImpl
-	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getLeftComment()
-	 * @generated
-	 */
-	int LEFT_COMMENT = 8;
-
-	/**
-	 * The meta object id for the '{@link KragsteinMethod.impl.ValencePointImpl <em>Valence Point</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see KragsteinMethod.impl.ValencePointImpl
-	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getValencePoint()
-	 * @generated
-	 */
-	int VALENCE_POINT = 5;
-
-	/**
-	 * The meta object id for the '{@link KragsteinMethod.impl.IconImpl <em>Icon</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see KragsteinMethod.impl.IconImpl
-	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getIcon()
-	 * @generated
-	 */
-	int ICON = 9;
-
-	/**
-	 * The meta object id for the '{@link KragsteinMethod.impl.ActionImpl <em>Action</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see KragsteinMethod.impl.ActionImpl
-	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getAction()
-	 * @generated
-	 */
-	int ACTION = 10;
-
-	/**
-	 * The meta object id for the '{@link KragsteinMethod.impl.QuestionImpl <em>Question</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see KragsteinMethod.impl.QuestionImpl
-	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getQuestion()
-	 * @generated
-	 */
-	int QUESTION = 11;
-
-	/**
-	 * The meta object id for the '{@link KragsteinMethod.impl.ChoiceImpl <em>Choice</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see KragsteinMethod.impl.ChoiceImpl
-	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getChoice()
-	 * @generated
-	 */
-	int CHOICE = 12;
-
-	/**
-	 * The meta object id for the '{@link KragsteinMethod.impl.CaseImpl <em>Case</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see KragsteinMethod.impl.CaseImpl
-	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getCase()
-	 * @generated
-	 */
-	int CASE = 13;
-
-	/**
-	 * The meta object id for the '{@link KragsteinMethod.impl.HeadlineImpl <em>Headline</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see KragsteinMethod.impl.HeadlineImpl
-	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getHeadline()
-	 * @generated
-	 */
-	int HEADLINE = 14;
-
-	/**
-	 * The meta object id for the '{@link KragsteinMethod.impl.AdressImpl <em>Adress</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see KragsteinMethod.impl.AdressImpl
-	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getAdress()
-	 * @generated
-	 */
-	int ADRESS = 15;
-
-	/**
-	 * The meta object id for the '{@link KragsteinMethod.impl.InsertionImpl <em>Insertion</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see KragsteinMethod.impl.InsertionImpl
-	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getInsertion()
-	 * @generated
-	 */
-	int INSERTION = 16;
-
-	/**
-	 * The meta object id for the '{@link KragsteinMethod.impl.ShelfImpl <em>Shelf</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see KragsteinMethod.impl.ShelfImpl
-	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getShelf()
-	 * @generated
-	 */
-	int SHELF = 17;
-
-	/**
-	 * The meta object id for the '{@link KragsteinMethod.impl.BeginLoopImpl <em>Begin Loop</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see KragsteinMethod.impl.BeginLoopImpl
-	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getBeginLoop()
-	 * @generated
-	 */
-	int BEGIN_LOOP = 18;
-
-	/**
-	 * The meta object id for the '{@link KragsteinMethod.impl.EndLoopImpl <em>End Loop</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see KragsteinMethod.impl.EndLoopImpl
-	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getEndLoop()
-	 * @generated
-	 */
-	int END_LOOP = 19;
-
-	/**
-	 * The meta object id for the '{@link KragsteinMethod.impl.OutputImpl <em>Output</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see KragsteinMethod.impl.OutputImpl
-	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getOutput()
-	 * @generated
-	 */
-	int OUTPUT = 20;
-
-	/**
-	 * The meta object id for the '{@link KragsteinMethod.impl.PauseImpl <em>Pause</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see KragsteinMethod.impl.PauseImpl
-	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getPause()
-	 * @generated
-	 */
-	int PAUSE = 21;
-
-	/**
-	 * The meta object id for the '{@link KragsteinMethod.impl.StartTimerImpl <em>Start Timer</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see KragsteinMethod.impl.StartTimerImpl
-	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getStartTimer()
-	 * @generated
-	 */
-	int START_TIMER = 22;
-
-	/**
-	 * The meta object id for the '{@link KragsteinMethod.impl.InputImpl <em>Input</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see KragsteinMethod.impl.InputImpl
-	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getInput()
-	 * @generated
-	 */
-	int INPUT = 23;
-
-	/**
-	 * The meta object id for the '{@link KragsteinMethod.impl.EndImpl <em>End</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see KragsteinMethod.impl.EndImpl
-	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getEnd()
-	 * @generated
-	 */
-	int END = 24;
-
-	/**
-	 * The meta object id for the '{@link KragsteinMethod.impl.LoopArrowImpl <em>Loop Arrow</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see KragsteinMethod.impl.LoopArrowImpl
-	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getLoopArrow()
-	 * @generated
-	 */
-	int LOOP_ARROW = 25;
-
-	/**
-	 * The meta object id for the '{@link KragsteinMethod.impl.PeriodImpl <em>Period</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see KragsteinMethod.impl.PeriodImpl
-	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getPeriod()
-	 * @generated
-	 */
-	int PERIOD = 26;
-
-	/**
 	 * The meta object id for the '{@link KragsteinMethod.impl.ParameterImpl <em>Parameter</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -422,7 +228,7 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getParameter()
 	 * @generated
 	 */
-	int PARAMETER = 2;
+	int PARAMETER = 3;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -461,6 +267,53 @@ public interface KragsteinMethodPackage extends EPackage {
 	int PARAMETER_FEATURE_COUNT = 3;
 
 	/**
+	 * The meta object id for the '{@link KragsteinMethod.impl.BranchesImpl <em>Branches</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see KragsteinMethod.impl.BranchesImpl
+	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getBranches()
+	 * @generated
+	 */
+	int BRANCHES = 4;
+
+	/**
+	 * The feature id for the '<em><b>Branch</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BRANCHES__BRANCH = 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BRANCHES__NAME = 1;
+
+	/**
+	 * The number of structural features of the '<em>Branches</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BRANCHES_FEATURE_COUNT = 2;
+
+	/**
+	 * The meta object id for the '{@link KragsteinMethod.impl.BranchImpl <em>Branch</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see KragsteinMethod.impl.BranchImpl
+	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getBranch()
+	 * @generated
+	 */
+	int BRANCH = 5;
+
+	/**
 	 * The feature id for the '<em><b>Route</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -497,6 +350,16 @@ public interface KragsteinMethodPackage extends EPackage {
 	int BRANCH_FEATURE_COUNT = 3;
 
 	/**
+	 * The meta object id for the '{@link KragsteinMethod.impl.RouteImpl <em>Route</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see KragsteinMethod.impl.RouteImpl
+	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getRoute()
+	 * @generated
+	 */
+	int ROUTE = 6;
+
+	/**
 	 * The feature id for the '<em><b>Icon</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -515,6 +378,16 @@ public interface KragsteinMethodPackage extends EPackage {
 	int ROUTE_FEATURE_COUNT = 1;
 
 	/**
+	 * The meta object id for the '{@link KragsteinMethod.impl.ValencePointImpl <em>Valence Point</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see KragsteinMethod.impl.ValencePointImpl
+	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getValencePoint()
+	 * @generated
+	 */
+	int VALENCE_POINT = 7;
+
+	/**
 	 * The number of structural features of the '<em>Valence Point</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -522,6 +395,16 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @ordered
 	 */
 	int VALENCE_POINT_FEATURE_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link KragsteinMethod.impl.SynchronizerImpl <em>Synchronizer</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see KragsteinMethod.impl.SynchronizerImpl
+	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getSynchronizer()
+	 * @generated
+	 */
+	int SYNCHRONIZER = 8;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -551,6 +434,16 @@ public interface KragsteinMethodPackage extends EPackage {
 	int SYNCHRONIZER_FEATURE_COUNT = 2;
 
 	/**
+	 * The meta object id for the '{@link KragsteinMethod.impl.RightCommentImpl <em>Right Comment</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see KragsteinMethod.impl.RightCommentImpl
+	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getRightComment()
+	 * @generated
+	 */
+	int RIGHT_COMMENT = 9;
+
+	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -569,6 +462,16 @@ public interface KragsteinMethodPackage extends EPackage {
 	int RIGHT_COMMENT_FEATURE_COUNT = 1;
 
 	/**
+	 * The meta object id for the '{@link KragsteinMethod.impl.LeftCommentImpl <em>Left Comment</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see KragsteinMethod.impl.LeftCommentImpl
+	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getLeftComment()
+	 * @generated
+	 */
+	int LEFT_COMMENT = 10;
+
+	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -585,6 +488,16 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @ordered
 	 */
 	int LEFT_COMMENT_FEATURE_COUNT = 1;
+
+	/**
+	 * The meta object id for the '{@link KragsteinMethod.impl.IconImpl <em>Icon</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see KragsteinMethod.impl.IconImpl
+	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getIcon()
+	 * @generated
+	 */
+	int ICON = 11;
 
 	/**
 	 * The feature id for the '<em><b>Valence Point</b></em>' containment reference.
@@ -639,6 +552,16 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @ordered
 	 */
 	int ICON_FEATURE_COUNT = 5;
+
+	/**
+	 * The meta object id for the '{@link KragsteinMethod.impl.ActionImpl <em>Action</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see KragsteinMethod.impl.ActionImpl
+	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getAction()
+	 * @generated
+	 */
+	int ACTION = 12;
 
 	/**
 	 * The feature id for the '<em><b>Valence Point</b></em>' containment reference.
@@ -711,6 +634,16 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @ordered
 	 */
 	int ACTION_FEATURE_COUNT = ICON_FEATURE_COUNT + 2;
+
+	/**
+	 * The meta object id for the '{@link KragsteinMethod.impl.QuestionImpl <em>Question</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see KragsteinMethod.impl.QuestionImpl
+	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getQuestion()
+	 * @generated
+	 */
+	int QUESTION = 13;
 
 	/**
 	 * The feature id for the '<em><b>Valence Point</b></em>' containment reference.
@@ -801,6 +734,16 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @ordered
 	 */
 	int QUESTION_FEATURE_COUNT = ICON_FEATURE_COUNT + 4;
+
+	/**
+	 * The meta object id for the '{@link KragsteinMethod.impl.ChoiceImpl <em>Choice</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see KragsteinMethod.impl.ChoiceImpl
+	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getChoice()
+	 * @generated
+	 */
+	int CHOICE = 14;
 
 	/**
 	 * The feature id for the '<em><b>Valence Point</b></em>' containment reference.
@@ -902,6 +845,16 @@ public interface KragsteinMethodPackage extends EPackage {
 	int CHOICE_FEATURE_COUNT = ICON_FEATURE_COUNT + 5;
 
 	/**
+	 * The meta object id for the '{@link KragsteinMethod.impl.CaseImpl <em>Case</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see KragsteinMethod.impl.CaseImpl
+	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getCase()
+	 * @generated
+	 */
+	int CASE = 15;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -945,6 +898,16 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @ordered
 	 */
 	int CASE_FEATURE_COUNT = 4;
+
+	/**
+	 * The meta object id for the '{@link KragsteinMethod.impl.HeadlineImpl <em>Headline</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see KragsteinMethod.impl.HeadlineImpl
+	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getHeadline()
+	 * @generated
+	 */
+	int HEADLINE = 16;
 
 	/**
 	 * The feature id for the '<em><b>Valence Point</b></em>' containment reference.
@@ -1019,6 +982,16 @@ public interface KragsteinMethodPackage extends EPackage {
 	int HEADLINE_FEATURE_COUNT = ICON_FEATURE_COUNT + 2;
 
 	/**
+	 * The meta object id for the '{@link KragsteinMethod.impl.AdressImpl <em>Adress</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see KragsteinMethod.impl.AdressImpl
+	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getAdress()
+	 * @generated
+	 */
+	int ADRESS = 17;
+
+	/**
 	 * The feature id for the '<em><b>Valence Point</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1089,6 +1062,16 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @ordered
 	 */
 	int ADRESS_FEATURE_COUNT = ICON_FEATURE_COUNT + 2;
+
+	/**
+	 * The meta object id for the '{@link KragsteinMethod.impl.InsertionImpl <em>Insertion</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see KragsteinMethod.impl.InsertionImpl
+	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getInsertion()
+	 * @generated
+	 */
+	int INSERTION = 18;
 
 	/**
 	 * The feature id for the '<em><b>Valence Point</b></em>' containment reference.
@@ -1172,6 +1155,16 @@ public interface KragsteinMethodPackage extends EPackage {
 	int INSERTION_FEATURE_COUNT = ICON_FEATURE_COUNT + 3;
 
 	/**
+	 * The meta object id for the '{@link KragsteinMethod.impl.ShelfImpl <em>Shelf</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see KragsteinMethod.impl.ShelfImpl
+	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getShelf()
+	 * @generated
+	 */
+	int SHELF = 19;
+
+	/**
 	 * The feature id for the '<em><b>Valence Point</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1253,6 +1246,16 @@ public interface KragsteinMethodPackage extends EPackage {
 	int SHELF_FEATURE_COUNT = ICON_FEATURE_COUNT + 3;
 
 	/**
+	 * The meta object id for the '{@link KragsteinMethod.impl.BeginLoopImpl <em>Begin Loop</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see KragsteinMethod.impl.BeginLoopImpl
+	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getBeginLoop()
+	 * @generated
+	 */
+	int BEGIN_LOOP = 20;
+
+	/**
 	 * The feature id for the '<em><b>Valence Point</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1325,6 +1328,16 @@ public interface KragsteinMethodPackage extends EPackage {
 	int BEGIN_LOOP_FEATURE_COUNT = ICON_FEATURE_COUNT + 2;
 
 	/**
+	 * The meta object id for the '{@link KragsteinMethod.impl.EndLoopImpl <em>End Loop</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see KragsteinMethod.impl.EndLoopImpl
+	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getEndLoop()
+	 * @generated
+	 */
+	int END_LOOP = 21;
+
+	/**
 	 * The feature id for the '<em><b>Valence Point</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1395,6 +1408,16 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @ordered
 	 */
 	int END_LOOP_FEATURE_COUNT = ICON_FEATURE_COUNT + 2;
+
+	/**
+	 * The meta object id for the '{@link KragsteinMethod.impl.OutputImpl <em>Output</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see KragsteinMethod.impl.OutputImpl
+	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getOutput()
+	 * @generated
+	 */
+	int OUTPUT = 22;
 
 	/**
 	 * The feature id for the '<em><b>Valence Point</b></em>' containment reference.
@@ -1478,6 +1501,16 @@ public interface KragsteinMethodPackage extends EPackage {
 	int OUTPUT_FEATURE_COUNT = ICON_FEATURE_COUNT + 3;
 
 	/**
+	 * The meta object id for the '{@link KragsteinMethod.impl.PauseImpl <em>Pause</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see KragsteinMethod.impl.PauseImpl
+	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getPause()
+	 * @generated
+	 */
+	int PAUSE = 23;
+
+	/**
 	 * The feature id for the '<em><b>Valence Point</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1539,6 +1572,16 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @ordered
 	 */
 	int PAUSE_FEATURE_COUNT = ICON_FEATURE_COUNT + 1;
+
+	/**
+	 * The meta object id for the '{@link KragsteinMethod.impl.StartTimerImpl <em>Start Timer</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see KragsteinMethod.impl.StartTimerImpl
+	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getStartTimer()
+	 * @generated
+	 */
+	int START_TIMER = 24;
 
 	/**
 	 * The feature id for the '<em><b>Valence Point</b></em>' containment reference.
@@ -1611,6 +1654,16 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @ordered
 	 */
 	int START_TIMER_FEATURE_COUNT = ICON_FEATURE_COUNT + 2;
+
+	/**
+	 * The meta object id for the '{@link KragsteinMethod.impl.InputImpl <em>Input</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see KragsteinMethod.impl.InputImpl
+	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getInput()
+	 * @generated
+	 */
+	int INPUT = 25;
 
 	/**
 	 * The feature id for the '<em><b>Valence Point</b></em>' containment reference.
@@ -1694,6 +1747,16 @@ public interface KragsteinMethodPackage extends EPackage {
 	int INPUT_FEATURE_COUNT = ICON_FEATURE_COUNT + 3;
 
 	/**
+	 * The meta object id for the '{@link KragsteinMethod.impl.EndImpl <em>End</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see KragsteinMethod.impl.EndImpl
+	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getEnd()
+	 * @generated
+	 */
+	int END = 26;
+
+	/**
 	 * The feature id for the '<em><b>Valence Point</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1746,6 +1809,16 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @ordered
 	 */
 	int END_FEATURE_COUNT = ICON_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link KragsteinMethod.impl.LoopArrowImpl <em>Loop Arrow</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see KragsteinMethod.impl.LoopArrowImpl
+	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getLoopArrow()
+	 * @generated
+	 */
+	int LOOP_ARROW = 27;
 
 	/**
 	 * The feature id for the '<em><b>Valence Point</b></em>' containment reference.
@@ -1811,6 +1884,16 @@ public interface KragsteinMethodPackage extends EPackage {
 	int LOOP_ARROW_FEATURE_COUNT = ICON_FEATURE_COUNT + 1;
 
 	/**
+	 * The meta object id for the '{@link KragsteinMethod.impl.PeriodImpl <em>Period</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see KragsteinMethod.impl.PeriodImpl
+	 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getPeriod()
+	 * @generated
+	 */
+	int PERIOD = 28;
+
+	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1840,26 +1923,69 @@ public interface KragsteinMethodPackage extends EPackage {
 	EClass getMethod();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link KragsteinMethod.Method#getHeader <em>Header</em>}'.
+	 * Returns the meta object for the containment reference '{@link KragsteinMethod.Method#getDrakonDiagram <em>Drakon Diagram</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Drakon Diagram</em>'.
+	 * @see KragsteinMethod.Method#getDrakonDiagram()
+	 * @see #getMethod()
+	 * @generated
+	 */
+	EReference getMethod_DrakonDiagram();
+
+	/**
+	 * Returns the meta object for the attribute '{@link KragsteinMethod.Method#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see KragsteinMethod.Method#getName()
+	 * @see #getMethod()
+	 * @generated
+	 */
+	EAttribute getMethod_Name();
+
+	/**
+	 * Returns the meta object for class '{@link KragsteinMethod.DrakonDiagram <em>Drakon Diagram</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Drakon Diagram</em>'.
+	 * @see KragsteinMethod.DrakonDiagram
+	 * @generated
+	 */
+	EClass getDrakonDiagram();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link KragsteinMethod.DrakonDiagram#getHeader <em>Header</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Header</em>'.
-	 * @see KragsteinMethod.Method#getHeader()
-	 * @see #getMethod()
+	 * @see KragsteinMethod.DrakonDiagram#getHeader()
+	 * @see #getDrakonDiagram()
 	 * @generated
 	 */
-	EReference getMethod_Header();
+	EReference getDrakonDiagram_Header();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link KragsteinMethod.Method#getBranch <em>Branch</em>}'.
+	 * Returns the meta object for the attribute '{@link KragsteinMethod.DrakonDiagram#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Branch</em>'.
-	 * @see KragsteinMethod.Method#getBranch()
-	 * @see #getMethod()
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see KragsteinMethod.DrakonDiagram#getName()
+	 * @see #getDrakonDiagram()
 	 * @generated
 	 */
-	EReference getMethod_Branch();
+	EAttribute getDrakonDiagram_Name();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link KragsteinMethod.DrakonDiagram#getBranches <em>Branches</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Branches</em>'.
+	 * @see KragsteinMethod.DrakonDiagram#getBranches()
+	 * @see #getDrakonDiagram()
+	 * @generated
+	 */
+	EReference getDrakonDiagram_Branches();
 
 	/**
 	 * Returns the meta object for class '{@link KragsteinMethod.Header <em>Header</em>}'.
@@ -1949,6 +2075,81 @@ public interface KragsteinMethodPackage extends EPackage {
 	EReference getHeader_Parameter();
 
 	/**
+	 * Returns the meta object for class '{@link KragsteinMethod.Parameter <em>Parameter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Parameter</em>'.
+	 * @see KragsteinMethod.Parameter
+	 * @generated
+	 */
+	EClass getParameter();
+
+	/**
+	 * Returns the meta object for the attribute '{@link KragsteinMethod.Parameter#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see KragsteinMethod.Parameter#getName()
+	 * @see #getParameter()
+	 * @generated
+	 */
+	EAttribute getParameter_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link KragsteinMethod.Parameter#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see KragsteinMethod.Parameter#getType()
+	 * @see #getParameter()
+	 * @generated
+	 */
+	EAttribute getParameter_Type();
+
+	/**
+	 * Returns the meta object for the attribute '{@link KragsteinMethod.Parameter#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see KragsteinMethod.Parameter#getValue()
+	 * @see #getParameter()
+	 * @generated
+	 */
+	EAttribute getParameter_Value();
+
+	/**
+	 * Returns the meta object for class '{@link KragsteinMethod.Branches <em>Branches</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Branches</em>'.
+	 * @see KragsteinMethod.Branches
+	 * @generated
+	 */
+	EClass getBranches();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link KragsteinMethod.Branches#getBranch <em>Branch</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Branch</em>'.
+	 * @see KragsteinMethod.Branches#getBranch()
+	 * @see #getBranches()
+	 * @generated
+	 */
+	EReference getBranches_Branch();
+
+	/**
+	 * Returns the meta object for the attribute '{@link KragsteinMethod.Branches#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see KragsteinMethod.Branches#getName()
+	 * @see #getBranches()
+	 * @generated
+	 */
+	EAttribute getBranches_Name();
+
+	/**
 	 * Returns the meta object for class '{@link KragsteinMethod.Branch <em>Branch</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2011,6 +2212,16 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getRoute_Icon();
+
+	/**
+	 * Returns the meta object for class '{@link KragsteinMethod.ValencePoint <em>Valence Point</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Valence Point</em>'.
+	 * @see KragsteinMethod.ValencePoint
+	 * @generated
+	 */
+	EClass getValencePoint();
 
 	/**
 	 * Returns the meta object for class '{@link KragsteinMethod.Synchronizer <em>Synchronizer</em>}'.
@@ -2085,16 +2296,6 @@ public interface KragsteinMethodPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getLeftComment_Value();
-
-	/**
-	 * Returns the meta object for class '{@link KragsteinMethod.ValencePoint <em>Valence Point</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Valence Point</em>'.
-	 * @see KragsteinMethod.ValencePoint
-	 * @generated
-	 */
-	EClass getValencePoint();
 
 	/**
 	 * Returns the meta object for class '{@link KragsteinMethod.Icon <em>Icon</em>}'.
@@ -2772,49 +2973,6 @@ public interface KragsteinMethodPackage extends EPackage {
 	EAttribute getPeriod_Value();
 
 	/**
-	 * Returns the meta object for class '{@link KragsteinMethod.Parameter <em>Parameter</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Parameter</em>'.
-	 * @see KragsteinMethod.Parameter
-	 * @generated
-	 */
-	EClass getParameter();
-
-	/**
-	 * Returns the meta object for the attribute '{@link KragsteinMethod.Parameter#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see KragsteinMethod.Parameter#getName()
-	 * @see #getParameter()
-	 * @generated
-	 */
-	EAttribute getParameter_Name();
-
-	/**
-	 * Returns the meta object for the attribute '{@link KragsteinMethod.Parameter#getType <em>Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Type</em>'.
-	 * @see KragsteinMethod.Parameter#getType()
-	 * @see #getParameter()
-	 * @generated
-	 */
-	EAttribute getParameter_Type();
-
-	/**
-	 * Returns the meta object for the attribute '{@link KragsteinMethod.Parameter#getValue <em>Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see KragsteinMethod.Parameter#getValue()
-	 * @see #getParameter()
-	 * @generated
-	 */
-	EAttribute getParameter_Value();
-
-	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2847,20 +3005,54 @@ public interface KragsteinMethodPackage extends EPackage {
 		EClass METHOD = eINSTANCE.getMethod();
 
 		/**
+		 * The meta object literal for the '<em><b>Drakon Diagram</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference METHOD__DRAKON_DIAGRAM = eINSTANCE.getMethod_DrakonDiagram();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute METHOD__NAME = eINSTANCE.getMethod_Name();
+
+		/**
+		 * The meta object literal for the '{@link KragsteinMethod.impl.DrakonDiagramImpl <em>Drakon Diagram</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see KragsteinMethod.impl.DrakonDiagramImpl
+		 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getDrakonDiagram()
+		 * @generated
+		 */
+		EClass DRAKON_DIAGRAM = eINSTANCE.getDrakonDiagram();
+
+		/**
 		 * The meta object literal for the '<em><b>Header</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference METHOD__HEADER = eINSTANCE.getMethod_Header();
+		EReference DRAKON_DIAGRAM__HEADER = eINSTANCE.getDrakonDiagram_Header();
 
 		/**
-		 * The meta object literal for the '<em><b>Branch</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference METHOD__BRANCH = eINSTANCE.getMethod_Branch();
+		EAttribute DRAKON_DIAGRAM__NAME = eINSTANCE.getDrakonDiagram_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Branches</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DRAKON_DIAGRAM__BRANCHES = eINSTANCE.getDrakonDiagram_Branches();
 
 		/**
 		 * The meta object literal for the '{@link KragsteinMethod.impl.HeaderImpl <em>Header</em>}' class.
@@ -2929,6 +3121,66 @@ public interface KragsteinMethodPackage extends EPackage {
 		EReference HEADER__PARAMETER = eINSTANCE.getHeader_Parameter();
 
 		/**
+		 * The meta object literal for the '{@link KragsteinMethod.impl.ParameterImpl <em>Parameter</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see KragsteinMethod.impl.ParameterImpl
+		 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getParameter()
+		 * @generated
+		 */
+		EClass PARAMETER = eINSTANCE.getParameter();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PARAMETER__NAME = eINSTANCE.getParameter_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PARAMETER__TYPE = eINSTANCE.getParameter_Type();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PARAMETER__VALUE = eINSTANCE.getParameter_Value();
+
+		/**
+		 * The meta object literal for the '{@link KragsteinMethod.impl.BranchesImpl <em>Branches</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see KragsteinMethod.impl.BranchesImpl
+		 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getBranches()
+		 * @generated
+		 */
+		EClass BRANCHES = eINSTANCE.getBranches();
+
+		/**
+		 * The meta object literal for the '<em><b>Branch</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference BRANCHES__BRANCH = eINSTANCE.getBranches_Branch();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BRANCHES__NAME = eINSTANCE.getBranches_Name();
+
+		/**
 		 * The meta object literal for the '{@link KragsteinMethod.impl.BranchImpl <em>Branch</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2979,6 +3231,16 @@ public interface KragsteinMethodPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ROUTE__ICON = eINSTANCE.getRoute_Icon();
+
+		/**
+		 * The meta object literal for the '{@link KragsteinMethod.impl.ValencePointImpl <em>Valence Point</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see KragsteinMethod.impl.ValencePointImpl
+		 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getValencePoint()
+		 * @generated
+		 */
+		EClass VALENCE_POINT = eINSTANCE.getValencePoint();
 
 		/**
 		 * The meta object literal for the '{@link KragsteinMethod.impl.SynchronizerImpl <em>Synchronizer</em>}' class.
@@ -3041,16 +3303,6 @@ public interface KragsteinMethodPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute LEFT_COMMENT__VALUE = eINSTANCE.getLeftComment_Value();
-
-		/**
-		 * The meta object literal for the '{@link KragsteinMethod.impl.ValencePointImpl <em>Valence Point</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see KragsteinMethod.impl.ValencePointImpl
-		 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getValencePoint()
-		 * @generated
-		 */
-		EClass VALENCE_POINT = eINSTANCE.getValencePoint();
 
 		/**
 		 * The meta object literal for the '{@link KragsteinMethod.impl.IconImpl <em>Icon</em>}' class.
@@ -3591,40 +3843,6 @@ public interface KragsteinMethodPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute PERIOD__VALUE = eINSTANCE.getPeriod_Value();
-
-		/**
-		 * The meta object literal for the '{@link KragsteinMethod.impl.ParameterImpl <em>Parameter</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see KragsteinMethod.impl.ParameterImpl
-		 * @see KragsteinMethod.impl.KragsteinMethodPackageImpl#getParameter()
-		 * @generated
-		 */
-		EClass PARAMETER = eINSTANCE.getParameter();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PARAMETER__NAME = eINSTANCE.getParameter_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PARAMETER__TYPE = eINSTANCE.getParameter_Type();
-
-		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PARAMETER__VALUE = eINSTANCE.getParameter_Value();
 
 	}
 

@@ -6,6 +6,7 @@ import KragsteinMethod.Icon;
 import KragsteinMethod.KragsteinMethodPackage;
 import KragsteinMethod.LeftComment;
 import KragsteinMethod.RightComment;
+import KragsteinMethod.Synchronizer;
 import KragsteinMethod.ValencePoint;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -28,6 +29,7 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  *   <li>{@link KragsteinMethod.impl.IconImpl#getLeftComment <em>Left Comment</em>}</li>
  *   <li>{@link KragsteinMethod.impl.IconImpl#getRightComment <em>Right Comment</em>}</li>
  *   <li>{@link KragsteinMethod.impl.IconImpl#getNextIcon <em>Next Icon</em>}</li>
+ *   <li>{@link KragsteinMethod.impl.IconImpl#getSynchroniser <em>Synchroniser</em>}</li>
  * </ul>
  * </p>
  *
@@ -73,6 +75,16 @@ public abstract class IconImpl extends EObjectImpl implements Icon {
 	 * @ordered
 	 */
 	protected Icon nextIcon;
+
+	/**
+	 * The cached value of the '{@link #getSynchroniser() <em>Synchroniser</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSynchroniser()
+	 * @generated
+	 * @ordered
+	 */
+	protected Synchronizer synchroniser;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -265,6 +277,49 @@ public abstract class IconImpl extends EObjectImpl implements Icon {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Synchronizer getSynchroniser() {
+		return synchroniser;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetSynchroniser(Synchronizer newSynchroniser, NotificationChain msgs) {
+		Synchronizer oldSynchroniser = synchroniser;
+		synchroniser = newSynchroniser;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, KragsteinMethodPackage.ICON__SYNCHRONISER, oldSynchroniser, newSynchroniser);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSynchroniser(Synchronizer newSynchroniser) {
+		if (newSynchroniser != synchroniser) {
+			NotificationChain msgs = null;
+			if (synchroniser != null)
+				msgs = ((InternalEObject)synchroniser).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - KragsteinMethodPackage.ICON__SYNCHRONISER, null, msgs);
+			if (newSynchroniser != null)
+				msgs = ((InternalEObject)newSynchroniser).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - KragsteinMethodPackage.ICON__SYNCHRONISER, null, msgs);
+			msgs = basicSetSynchroniser(newSynchroniser, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, KragsteinMethodPackage.ICON__SYNCHRONISER, newSynchroniser, newSynchroniser));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -274,6 +329,8 @@ public abstract class IconImpl extends EObjectImpl implements Icon {
 				return basicSetLeftComment(null, msgs);
 			case KragsteinMethodPackage.ICON__RIGHT_COMMENT:
 				return basicSetRightComment(null, msgs);
+			case KragsteinMethodPackage.ICON__SYNCHRONISER:
+				return basicSetSynchroniser(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -295,6 +352,8 @@ public abstract class IconImpl extends EObjectImpl implements Icon {
 			case KragsteinMethodPackage.ICON__NEXT_ICON:
 				if (resolve) return getNextIcon();
 				return basicGetNextIcon();
+			case KragsteinMethodPackage.ICON__SYNCHRONISER:
+				return getSynchroniser();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -318,6 +377,9 @@ public abstract class IconImpl extends EObjectImpl implements Icon {
 				return;
 			case KragsteinMethodPackage.ICON__NEXT_ICON:
 				setNextIcon((Icon)newValue);
+				return;
+			case KragsteinMethodPackage.ICON__SYNCHRONISER:
+				setSynchroniser((Synchronizer)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -343,6 +405,9 @@ public abstract class IconImpl extends EObjectImpl implements Icon {
 			case KragsteinMethodPackage.ICON__NEXT_ICON:
 				setNextIcon((Icon)null);
 				return;
+			case KragsteinMethodPackage.ICON__SYNCHRONISER:
+				setSynchroniser((Synchronizer)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -363,6 +428,8 @@ public abstract class IconImpl extends EObjectImpl implements Icon {
 				return rightComment != null;
 			case KragsteinMethodPackage.ICON__NEXT_ICON:
 				return nextIcon != null;
+			case KragsteinMethodPackage.ICON__SYNCHRONISER:
+				return synchroniser != null;
 		}
 		return super.eIsSet(featureID);
 	}

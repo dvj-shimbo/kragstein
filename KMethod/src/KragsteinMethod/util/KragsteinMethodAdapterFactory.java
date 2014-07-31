@@ -76,6 +76,10 @@ public class KragsteinMethodAdapterFactory extends AdapterFactoryImpl {
 				return createHeaderAdapter();
 			}
 			@Override
+			public Adapter caseParameter(Parameter object) {
+				return createParameterAdapter();
+			}
+			@Override
 			public Adapter caseBranch(Branch object) {
 				return createBranchAdapter();
 			}
@@ -84,16 +88,20 @@ public class KragsteinMethodAdapterFactory extends AdapterFactoryImpl {
 				return createRouteAdapter();
 			}
 			@Override
+			public Adapter caseValencePoint(ValencePoint object) {
+				return createValencePointAdapter();
+			}
+			@Override
+			public Adapter caseSynchronizer(Synchronizer object) {
+				return createSynchronizerAdapter();
+			}
+			@Override
 			public Adapter caseRightComment(RightComment object) {
 				return createRightCommentAdapter();
 			}
 			@Override
 			public Adapter caseLeftComment(LeftComment object) {
 				return createLeftCommentAdapter();
-			}
-			@Override
-			public Adapter caseValencePoint(ValencePoint object) {
-				return createValencePointAdapter();
 			}
 			@Override
 			public Adapter caseIcon(Icon object) {
@@ -144,6 +152,14 @@ public class KragsteinMethodAdapterFactory extends AdapterFactoryImpl {
 				return createOutputAdapter();
 			}
 			@Override
+			public Adapter casePause(Pause object) {
+				return createPauseAdapter();
+			}
+			@Override
+			public Adapter caseStartTimer(StartTimer object) {
+				return createStartTimerAdapter();
+			}
+			@Override
 			public Adapter caseInput(Input object) {
 				return createInputAdapter();
 			}
@@ -152,8 +168,12 @@ public class KragsteinMethodAdapterFactory extends AdapterFactoryImpl {
 				return createEndAdapter();
 			}
 			@Override
-			public Adapter caseParameter(Parameter object) {
-				return createParameterAdapter();
+			public Adapter caseLoopArrow(LoopArrow object) {
+				return createLoopArrowAdapter();
+			}
+			@Override
+			public Adapter casePeriod(Period object) {
+				return createPeriodAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -228,6 +248,20 @@ public class KragsteinMethodAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createRouteAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link KragsteinMethod.Synchronizer <em>Synchronizer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see KragsteinMethod.Synchronizer
+	 * @generated
+	 */
+	public Adapter createSynchronizerAdapter() {
 		return null;
 	}
 
@@ -442,6 +476,34 @@ public class KragsteinMethodAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link KragsteinMethod.Pause <em>Pause</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see KragsteinMethod.Pause
+	 * @generated
+	 */
+	public Adapter createPauseAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link KragsteinMethod.StartTimer <em>Start Timer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see KragsteinMethod.StartTimer
+	 * @generated
+	 */
+	public Adapter createStartTimerAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link KragsteinMethod.Input <em>Input</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -466,6 +528,34 @@ public class KragsteinMethodAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createEndAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link KragsteinMethod.LoopArrow <em>Loop Arrow</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see KragsteinMethod.LoopArrow
+	 * @generated
+	 */
+	public Adapter createLoopArrowAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link KragsteinMethod.Period <em>Period</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see KragsteinMethod.Period
+	 * @generated
+	 */
+	public Adapter createPeriodAdapter() {
 		return null;
 	}
 

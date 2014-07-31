@@ -78,6 +78,12 @@ public class KragsteinMethodSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case KragsteinMethodPackage.PARAMETER: {
+				Parameter parameter = (Parameter)theEObject;
+				T result = caseParameter(parameter);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case KragsteinMethodPackage.BRANCH: {
 				Branch branch = (Branch)theEObject;
 				T result = caseBranch(branch);
@@ -90,6 +96,18 @@ public class KragsteinMethodSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case KragsteinMethodPackage.VALENCE_POINT: {
+				ValencePoint valencePoint = (ValencePoint)theEObject;
+				T result = caseValencePoint(valencePoint);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case KragsteinMethodPackage.SYNCHRONIZER: {
+				Synchronizer synchronizer = (Synchronizer)theEObject;
+				T result = caseSynchronizer(synchronizer);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case KragsteinMethodPackage.RIGHT_COMMENT: {
 				RightComment rightComment = (RightComment)theEObject;
 				T result = caseRightComment(rightComment);
@@ -99,12 +117,6 @@ public class KragsteinMethodSwitch<T> extends Switch<T> {
 			case KragsteinMethodPackage.LEFT_COMMENT: {
 				LeftComment leftComment = (LeftComment)theEObject;
 				T result = caseLeftComment(leftComment);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case KragsteinMethodPackage.VALENCE_POINT: {
-				ValencePoint valencePoint = (ValencePoint)theEObject;
-				T result = caseValencePoint(valencePoint);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -190,6 +202,20 @@ public class KragsteinMethodSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case KragsteinMethodPackage.PAUSE: {
+				Pause pause = (Pause)theEObject;
+				T result = casePause(pause);
+				if (result == null) result = caseIcon(pause);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case KragsteinMethodPackage.START_TIMER: {
+				StartTimer startTimer = (StartTimer)theEObject;
+				T result = caseStartTimer(startTimer);
+				if (result == null) result = caseIcon(startTimer);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case KragsteinMethodPackage.INPUT: {
 				Input input = (Input)theEObject;
 				T result = caseInput(input);
@@ -204,9 +230,16 @@ public class KragsteinMethodSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case KragsteinMethodPackage.PARAMETER: {
-				Parameter parameter = (Parameter)theEObject;
-				T result = caseParameter(parameter);
+			case KragsteinMethodPackage.LOOP_ARROW: {
+				LoopArrow loopArrow = (LoopArrow)theEObject;
+				T result = caseLoopArrow(loopArrow);
+				if (result == null) result = caseIcon(loopArrow);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case KragsteinMethodPackage.PERIOD: {
+				Period period = (Period)theEObject;
+				T result = casePeriod(period);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -271,6 +304,21 @@ public class KragsteinMethodSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseRoute(Route object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Synchronizer</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Synchronizer</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSynchronizer(Synchronizer object) {
 		return null;
 	}
 
@@ -500,6 +548,36 @@ public class KragsteinMethodSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Pause</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Pause</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePause(Pause object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Start Timer</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Start Timer</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseStartTimer(StartTimer object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Input</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -526,6 +604,36 @@ public class KragsteinMethodSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseEnd(End object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Loop Arrow</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Loop Arrow</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLoopArrow(LoopArrow object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Period</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Period</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePeriod(Period object) {
 		return null;
 	}
 

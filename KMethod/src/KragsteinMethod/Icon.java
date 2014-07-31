@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link KragsteinMethod.Icon#getLeftComment <em>Left Comment</em>}</li>
  *   <li>{@link KragsteinMethod.Icon#getRightComment <em>Right Comment</em>}</li>
  *   <li>{@link KragsteinMethod.Icon#getNextIcon <em>Next Icon</em>}</li>
+ *   <li>{@link KragsteinMethod.Icon#getSynchroniser <em>Synchroniser</em>}</li>
  * </ul>
  * </p>
  *
@@ -127,5 +128,31 @@ public interface Icon extends EObject {
 	 * @generated
 	 */
 	void setNextIcon(Icon value);
+
+	/**
+	 * Returns the value of the '<em><b>Synchroniser</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Synchroniser</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Synchroniser</em>' containment reference.
+	 * @see #setSynchroniser(Synchronizer)
+	 * @see KragsteinMethod.KragsteinMethodPackage#getIcon_Synchroniser()
+	 * @model containment="true"
+	 * @generated
+	 */
+	Synchronizer getSynchroniser();
+
+	/**
+	 * Sets the value of the '{@link KragsteinMethod.Icon#getSynchroniser <em>Synchroniser</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Synchroniser</em>' containment reference.
+	 * @see #getSynchroniser()
+	 * @generated
+	 */
+	void setSynchroniser(Synchronizer value);
 
 } // Icon

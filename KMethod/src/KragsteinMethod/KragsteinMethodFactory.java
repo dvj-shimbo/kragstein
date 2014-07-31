@@ -58,6 +58,15 @@ public interface KragsteinMethodFactory extends EFactory {
 	Route createRoute();
 
 	/**
+	 * Returns a new object of class '<em>Synchronizer</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Synchronizer</em>'.
+	 * @generated
+	 */
+	Synchronizer createSynchronizer();
+
+	/**
 	 * Returns a new object of class '<em>Right Comment</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -184,6 +193,24 @@ public interface KragsteinMethodFactory extends EFactory {
 	Output createOutput();
 
 	/**
+	 * Returns a new object of class '<em>Pause</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Pause</em>'.
+	 * @generated
+	 */
+	Pause createPause();
+
+	/**
+	 * Returns a new object of class '<em>Start Timer</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Start Timer</em>'.
+	 * @generated
+	 */
+	StartTimer createStartTimer();
+
+	/**
 	 * Returns a new object of class '<em>Input</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -200,6 +227,24 @@ public interface KragsteinMethodFactory extends EFactory {
 	 * @generated
 	 */
 	End createEnd();
+
+	/**
+	 * Returns a new object of class '<em>Loop Arrow</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Loop Arrow</em>'.
+	 * @generated
+	 */
+	LoopArrow createLoopArrow();
+
+	/**
+	 * Returns a new object of class '<em>Period</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Period</em>'.
+	 * @generated
+	 */
+	Period createPeriod();
 
 	/**
 	 * Returns a new object of class '<em>Parameter</em>'.

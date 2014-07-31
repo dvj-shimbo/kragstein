@@ -58,11 +58,13 @@ public class KragsteinMethodFactoryImpl extends EFactoryImpl implements Kragstei
 		switch (eClass.getClassifierID()) {
 			case KragsteinMethodPackage.METHOD: return createMethod();
 			case KragsteinMethodPackage.HEADER: return createHeader();
+			case KragsteinMethodPackage.PARAMETER: return createParameter();
 			case KragsteinMethodPackage.BRANCH: return createBranch();
 			case KragsteinMethodPackage.ROUTE: return createRoute();
+			case KragsteinMethodPackage.VALENCE_POINT: return createValencePoint();
+			case KragsteinMethodPackage.SYNCHRONIZER: return createSynchronizer();
 			case KragsteinMethodPackage.RIGHT_COMMENT: return createRightComment();
 			case KragsteinMethodPackage.LEFT_COMMENT: return createLeftComment();
-			case KragsteinMethodPackage.VALENCE_POINT: return createValencePoint();
 			case KragsteinMethodPackage.ACTION: return createAction();
 			case KragsteinMethodPackage.QUESTION: return createQuestion();
 			case KragsteinMethodPackage.CHOICE: return createChoice();
@@ -74,9 +76,12 @@ public class KragsteinMethodFactoryImpl extends EFactoryImpl implements Kragstei
 			case KragsteinMethodPackage.BEGIN_LOOP: return createBeginLoop();
 			case KragsteinMethodPackage.END_LOOP: return createEndLoop();
 			case KragsteinMethodPackage.OUTPUT: return createOutput();
+			case KragsteinMethodPackage.PAUSE: return createPause();
+			case KragsteinMethodPackage.START_TIMER: return createStartTimer();
 			case KragsteinMethodPackage.INPUT: return createInput();
 			case KragsteinMethodPackage.END: return createEnd();
-			case KragsteinMethodPackage.PARAMETER: return createParameter();
+			case KragsteinMethodPackage.LOOP_ARROW: return createLoopArrow();
+			case KragsteinMethodPackage.PERIOD: return createPeriod();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -120,6 +125,16 @@ public class KragsteinMethodFactoryImpl extends EFactoryImpl implements Kragstei
 	public Route createRoute() {
 		RouteImpl route = new RouteImpl();
 		return route;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Synchronizer createSynchronizer() {
+		SynchronizerImpl synchronizer = new SynchronizerImpl();
+		return synchronizer;
 	}
 
 	/**
@@ -267,6 +282,26 @@ public class KragsteinMethodFactoryImpl extends EFactoryImpl implements Kragstei
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Pause createPause() {
+		PauseImpl pause = new PauseImpl();
+		return pause;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public StartTimer createStartTimer() {
+		StartTimerImpl startTimer = new StartTimerImpl();
+		return startTimer;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Input createInput() {
 		InputImpl input = new InputImpl();
 		return input;
@@ -280,6 +315,26 @@ public class KragsteinMethodFactoryImpl extends EFactoryImpl implements Kragstei
 	public End createEnd() {
 		EndImpl end = new EndImpl();
 		return end;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LoopArrow createLoopArrow() {
+		LoopArrowImpl loopArrow = new LoopArrowImpl();
+		return loopArrow;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Period createPeriod() {
+		PeriodImpl period = new PeriodImpl();
+		return period;
 	}
 
 	/**

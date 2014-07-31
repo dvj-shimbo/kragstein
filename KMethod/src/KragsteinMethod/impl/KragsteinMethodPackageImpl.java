@@ -18,13 +18,18 @@ import KragsteinMethod.Insertion;
 import KragsteinMethod.KragsteinMethodFactory;
 import KragsteinMethod.KragsteinMethodPackage;
 import KragsteinMethod.LeftComment;
+import KragsteinMethod.LoopArrow;
 import KragsteinMethod.Method;
 import KragsteinMethod.Output;
 import KragsteinMethod.Parameter;
+import KragsteinMethod.Pause;
+import KragsteinMethod.Period;
 import KragsteinMethod.Question;
 import KragsteinMethod.RightComment;
 import KragsteinMethod.Route;
 import KragsteinMethod.Shelf;
+import KragsteinMethod.StartTimer;
+import KragsteinMethod.Synchronizer;
 import KragsteinMethod.ValencePoint;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -68,6 +73,13 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 	 * @generated
 	 */
 	private EClass routeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass synchronizerEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -179,6 +191,20 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass pauseEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass startTimerEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass inputEClass = null;
 
 	/**
@@ -187,6 +213,20 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 	 * @generated
 	 */
 	private EClass endEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass loopArrowEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass periodEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -414,6 +454,33 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getSynchronizer() {
+		return synchronizerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getSynchronizer_Name() {
+		return (EAttribute)synchronizerEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getSynchronizer_Value() {
+		return (EAttribute)synchronizerEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getRightComment() {
 		return rightCommentEClass;
 	}
@@ -497,6 +564,15 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 	 */
 	public EReference getIcon_NextIcon() {
 		return (EReference)iconEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getIcon_Synchroniser() {
+		return (EReference)iconEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -891,6 +967,51 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getPause() {
+		return pauseEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPause_Value() {
+		return (EAttribute)pauseEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getStartTimer() {
+		return startTimerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getStartTimer_Name() {
+		return (EAttribute)startTimerEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getStartTimer_Value() {
+		return (EAttribute)startTimerEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getInput() {
 		return inputEClass;
 	}
@@ -929,6 +1050,42 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 	 */
 	public EClass getEnd() {
 		return endEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getLoopArrow() {
+		return loopArrowEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getLoopArrow_Period() {
+		return (EReference)loopArrowEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getPeriod() {
+		return periodEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPeriod_Value() {
+		return (EAttribute)periodEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1008,6 +1165,11 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 		createEAttribute(headerEClass, HEADER__IS_STATIC);
 		createEReference(headerEClass, HEADER__PARAMETER);
 
+		parameterEClass = createEClass(PARAMETER);
+		createEAttribute(parameterEClass, PARAMETER__NAME);
+		createEAttribute(parameterEClass, PARAMETER__TYPE);
+		createEAttribute(parameterEClass, PARAMETER__VALUE);
+
 		branchEClass = createEClass(BRANCH);
 		createEReference(branchEClass, BRANCH__ROUTE);
 		createEReference(branchEClass, BRANCH__NEXT_BRANCH);
@@ -1016,19 +1178,24 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 		routeEClass = createEClass(ROUTE);
 		createEReference(routeEClass, ROUTE__ICON);
 
+		valencePointEClass = createEClass(VALENCE_POINT);
+
+		synchronizerEClass = createEClass(SYNCHRONIZER);
+		createEAttribute(synchronizerEClass, SYNCHRONIZER__NAME);
+		createEAttribute(synchronizerEClass, SYNCHRONIZER__VALUE);
+
 		rightCommentEClass = createEClass(RIGHT_COMMENT);
 		createEAttribute(rightCommentEClass, RIGHT_COMMENT__VALUE);
 
 		leftCommentEClass = createEClass(LEFT_COMMENT);
 		createEAttribute(leftCommentEClass, LEFT_COMMENT__VALUE);
 
-		valencePointEClass = createEClass(VALENCE_POINT);
-
 		iconEClass = createEClass(ICON);
 		createEReference(iconEClass, ICON__VALENCE_POINT);
 		createEReference(iconEClass, ICON__LEFT_COMMENT);
 		createEReference(iconEClass, ICON__RIGHT_COMMENT);
 		createEReference(iconEClass, ICON__NEXT_ICON);
+		createEReference(iconEClass, ICON__SYNCHRONISER);
 
 		actionEClass = createEClass(ACTION);
 		createEAttribute(actionEClass, ACTION__NAME);
@@ -1084,6 +1251,13 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 		createEAttribute(outputEClass, OUTPUT__VALUE);
 		createEReference(outputEClass, OUTPUT__METHOD);
 
+		pauseEClass = createEClass(PAUSE);
+		createEAttribute(pauseEClass, PAUSE__VALUE);
+
+		startTimerEClass = createEClass(START_TIMER);
+		createEAttribute(startTimerEClass, START_TIMER__NAME);
+		createEAttribute(startTimerEClass, START_TIMER__VALUE);
+
 		inputEClass = createEClass(INPUT);
 		createEAttribute(inputEClass, INPUT__NAME);
 		createEAttribute(inputEClass, INPUT__VALUE);
@@ -1091,10 +1265,11 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 
 		endEClass = createEClass(END);
 
-		parameterEClass = createEClass(PARAMETER);
-		createEAttribute(parameterEClass, PARAMETER__NAME);
-		createEAttribute(parameterEClass, PARAMETER__TYPE);
-		createEAttribute(parameterEClass, PARAMETER__VALUE);
+		loopArrowEClass = createEClass(LOOP_ARROW);
+		createEReference(loopArrowEClass, LOOP_ARROW__PERIOD);
+
+		periodEClass = createEClass(PERIOD);
+		createEAttribute(periodEClass, PERIOD__VALUE);
 	}
 
 	/**
@@ -1135,8 +1310,11 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 		beginLoopEClass.getESuperTypes().add(this.getIcon());
 		endLoopEClass.getESuperTypes().add(this.getIcon());
 		outputEClass.getESuperTypes().add(this.getIcon());
+		pauseEClass.getESuperTypes().add(this.getIcon());
+		startTimerEClass.getESuperTypes().add(this.getIcon());
 		inputEClass.getESuperTypes().add(this.getIcon());
 		endEClass.getESuperTypes().add(this.getIcon());
+		loopArrowEClass.getESuperTypes().add(this.getIcon());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(methodEClass, Method.class, "Method", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1152,6 +1330,11 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 		initEAttribute(getHeader_IsStatic(), ecorePackage.getEBoolean(), "isStatic", null, 0, 1, Header.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getHeader_Parameter(), this.getParameter(), null, "parameter", null, 0, -1, Header.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(parameterEClass, Parameter.class, "Parameter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getParameter_Name(), ecorePackage.getEString(), "name", null, 0, 1, Parameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getParameter_Type(), ecorePackage.getEString(), "type", null, 0, 1, Parameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getParameter_Value(), ecorePackage.getEString(), "value", null, 0, 1, Parameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(branchEClass, Branch.class, "Branch", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getBranch_Route(), this.getRoute(), null, "route", null, 1, 1, Branch.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getBranch_NextBranch(), this.getBranch(), null, "nextBranch", null, 0, 1, Branch.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1160,19 +1343,24 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 		initEClass(routeEClass, Route.class, "Route", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRoute_Icon(), this.getIcon(), null, "icon", null, 0, -1, Route.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(valencePointEClass, ValencePoint.class, "ValencePoint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(synchronizerEClass, Synchronizer.class, "Synchronizer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getSynchronizer_Name(), ecorePackage.getEString(), "name", null, 0, 1, Synchronizer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSynchronizer_Value(), ecorePackage.getEString(), "value", null, 0, 1, Synchronizer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(rightCommentEClass, RightComment.class, "RightComment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRightComment_Value(), ecorePackage.getEString(), "value", null, 0, 1, RightComment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(leftCommentEClass, LeftComment.class, "LeftComment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getLeftComment_Value(), ecorePackage.getEString(), "value", null, 0, 1, LeftComment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(valencePointEClass, ValencePoint.class, "ValencePoint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
 		initEClass(iconEClass, Icon.class, "Icon", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getIcon_ValencePoint(), this.getValencePoint(), null, "valencePoint", null, 0, 1, Icon.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getIcon_LeftComment(), this.getLeftComment(), null, "leftComment", null, 0, 1, Icon.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getIcon_RightComment(), this.getRightComment(), null, "RightComment", null, 0, 1, Icon.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getIcon_NextIcon(), this.getIcon(), null, "nextIcon", null, 0, 1, Icon.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getIcon_Synchroniser(), this.getSynchronizer(), null, "synchroniser", null, 0, 1, Icon.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(actionEClass, Action.class, "Action", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAction_Name(), ecorePackage.getEString(), "name", null, 0, 1, Action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1228,6 +1416,13 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 		initEAttribute(getOutput_Value(), ecorePackage.getEString(), "value", null, 0, 1, Output.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getOutput_Method(), this.getMethod(), null, "method", null, 1, 1, Output.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(pauseEClass, Pause.class, "Pause", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getPause_Value(), ecorePackage.getEString(), "value", null, 0, 1, Pause.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(startTimerEClass, StartTimer.class, "StartTimer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getStartTimer_Name(), ecorePackage.getEString(), "name", null, 0, 1, StartTimer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getStartTimer_Value(), ecorePackage.getEString(), "value", null, 0, 1, StartTimer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(inputEClass, Input.class, "Input", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getInput_Name(), ecorePackage.getEString(), "name", null, 0, 1, Input.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getInput_Value(), ecorePackage.getEString(), "value", null, 0, 1, Input.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1235,10 +1430,11 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 
 		initEClass(endEClass, End.class, "End", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(parameterEClass, Parameter.class, "Parameter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getParameter_Name(), ecorePackage.getEString(), "name", null, 0, 1, Parameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getParameter_Type(), ecorePackage.getEString(), "type", null, 0, 1, Parameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getParameter_Value(), ecorePackage.getEString(), "value", null, 0, 1, Parameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(loopArrowEClass, LoopArrow.class, "LoopArrow", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getLoopArrow_Period(), this.getPeriod(), null, "period", null, 0, 1, LoopArrow.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(periodEClass, Period.class, "Period", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getPeriod_Value(), ecorePackage.getEString(), "value", null, 0, 1, Period.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);
@@ -1289,6 +1485,30 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 		   });	
 		addAnnotation
 		  (routeEClass, 
+		   source, 
+		   new String[] {
+			 "label.placement", "none"
+		   });	
+		addAnnotation
+		  (valencePointEClass, 
+		   source, 
+		   new String[] {
+			 "label.placement", "none"
+		   });	
+		addAnnotation
+		  (synchronizerEClass, 
+		   source, 
+		   new String[] {
+			 "label", "name"
+		   });	
+		addAnnotation
+		  (rightCommentEClass, 
+		   source, 
+		   new String[] {
+			 "label.placement", "none"
+		   });	
+		addAnnotation
+		  (leftCommentEClass, 
 		   source, 
 		   new String[] {
 			 "label.placement", "none"
@@ -1361,6 +1581,18 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 			 "label", "name"
 		   });	
 		addAnnotation
+		  (pauseEClass, 
+		   source, 
+		   new String[] {
+			 "label.placement", "none"
+		   });	
+		addAnnotation
+		  (startTimerEClass, 
+		   source, 
+		   new String[] {
+			 "label", "name"
+		   });	
+		addAnnotation
 		  (inputEClass, 
 		   source, 
 		   new String[] {
@@ -1368,6 +1600,18 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 		   });	
 		addAnnotation
 		  (endEClass, 
+		   source, 
+		   new String[] {
+			 "label.placement", "none"
+		   });	
+		addAnnotation
+		  (loopArrowEClass, 
+		   source, 
+		   new String[] {
+			 "label.placement", "none"
+		   });	
+		addAnnotation
+		  (periodEClass, 
 		   source, 
 		   new String[] {
 			 "label.placement", "none"

@@ -8,19 +8,11 @@ This can be disabled with -vmargs -Dorg.eclipse.emf.examples.generator.validator
 Package KragsteinMethod <KragsteinMethod.ecore>
 
   Class Method
-    Reference icons : Icon<<0..*>>
+    Reference header : Header<<1..1>>
+    Reference branch : Branch<<1..*>>
 
-  Class Connection
-    Reference target : Icon
-    Reference source : Icon
-
-  Class Icon
-    Reference targetConnection : Connection<<0..*>>
-
-  Class Title -> Icon
+  Class Header
     Attribute name : EString
-
-  Class FormalParameters -> Icon
     Attribute type : EString
     Attribute visibility : EString
     Attribute isConst : EBoolean
@@ -28,10 +20,34 @@ Package KragsteinMethod <KragsteinMethod.ecore>
     Attribute isStatic : EBoolean
     Reference parameter : Parameter<<0..*>>
 
-  Class Parameter
-    Attribute name : EString
-    Attribute type : EString
+  Class Branch
+    Reference targetBranchConnection : BranchConnection
+    Reference route : Route<<1..1>>
+
+  Class BranchConnection
+    Reference source : Branch
+    Reference target : Branch
+
+  Class Route
+    Reference icon : Icon<<0..*>>
+
+  Class RightComment
     Attribute value : EString
+
+  Class LeftComment
+    Attribute value : EString
+
+  Class ValencePoint
+
+  Class IconConnection
+    Reference target : Icon
+    Reference source : Icon
+
+  Class Icon
+    Reference targetIconConnection : IconConnection
+    Reference valencePoint : ValencePoint
+    Reference leftComment : LeftComment
+    Reference RightComment : RightComment
 
   Class Action -> Icon
     Attribute name : EString
@@ -41,6 +57,7 @@ Package KragsteinMethod <KragsteinMethod.ecore>
     Attribute name : EString
     Attribute value : EString
     Attribute yesBelow : EBoolean
+    Reference route : Route<<1..1>>
 
   Class Choice -> Icon
     Attribute name : EString
@@ -52,6 +69,12 @@ Package KragsteinMethod <KragsteinMethod.ecore>
   Class Case
     Attribute name : EString
     Attribute value : EString
+    Reference targetCaseConnection : CaseConnection
+    Reference route : Route<<1..1>>
+
+  Class CaseConnection
+    Reference source : Case
+    Reference target : Case
 
   Class Headline -> Icon
     Attribute name : EString
@@ -90,3 +113,8 @@ Package KragsteinMethod <KragsteinMethod.ecore>
     Reference method : Method<<1..1>>
 
   Class End -> Icon
+
+  Class Parameter
+    Attribute name : EString
+    Attribute type : EString
+    Attribute value : EString

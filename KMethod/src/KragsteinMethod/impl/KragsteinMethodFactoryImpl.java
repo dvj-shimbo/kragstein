@@ -57,10 +57,8 @@ public class KragsteinMethodFactoryImpl extends EFactoryImpl implements Kragstei
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case KragsteinMethodPackage.METHOD: return createMethod();
-			case KragsteinMethodPackage.DRAKON_DIAGRAM: return createDrakonDiagram();
 			case KragsteinMethodPackage.HEADER: return createHeader();
 			case KragsteinMethodPackage.PARAMETER: return createParameter();
-			case KragsteinMethodPackage.BRANCHES: return createBranches();
 			case KragsteinMethodPackage.BRANCH: return createBranch();
 			case KragsteinMethodPackage.ROUTE: return createRoute();
 			case KragsteinMethodPackage.VALENCE_POINT: return createValencePoint();
@@ -104,16 +102,6 @@ public class KragsteinMethodFactoryImpl extends EFactoryImpl implements Kragstei
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DrakonDiagram createDrakonDiagram() {
-		DrakonDiagramImpl drakonDiagram = new DrakonDiagramImpl();
-		return drakonDiagram;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Header createHeader() {
 		HeaderImpl header = new HeaderImpl();
 		return header;
@@ -127,16 +115,6 @@ public class KragsteinMethodFactoryImpl extends EFactoryImpl implements Kragstei
 	public Parameter createParameter() {
 		ParameterImpl parameter = new ParameterImpl();
 		return parameter;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Branches createBranches() {
-		BranchesImpl branches = new BranchesImpl();
-		return branches;
 	}
 
 	/**

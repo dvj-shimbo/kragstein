@@ -31,15 +31,6 @@ public interface KragsteinMethodFactory extends EFactory {
 	Method createMethod();
 
 	/**
-	 * Returns a new object of class '<em>Drakon Diagram</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Drakon Diagram</em>'.
-	 * @generated
-	 */
-	DrakonDiagram createDrakonDiagram();
-
-	/**
 	 * Returns a new object of class '<em>Header</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -56,15 +47,6 @@ public interface KragsteinMethodFactory extends EFactory {
 	 * @generated
 	 */
 	Parameter createParameter();
-
-	/**
-	 * Returns a new object of class '<em>Branches</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Branches</em>'.
-	 * @generated
-	 */
-	Branches createBranches();
 
 	/**
 	 * Returns a new object of class '<em>Branch</em>'.

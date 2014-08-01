@@ -6,10 +6,8 @@ import KragsteinMethod.Action;
 import KragsteinMethod.Adress;
 import KragsteinMethod.BeginLoop;
 import KragsteinMethod.Branch;
-import KragsteinMethod.Branches;
 import KragsteinMethod.Case;
 import KragsteinMethod.Choice;
-import KragsteinMethod.DrakonDiagram;
 import KragsteinMethod.End;
 import KragsteinMethod.EndLoop;
 import KragsteinMethod.Header;
@@ -60,13 +58,6 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass drakonDiagramEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass headerEClass = null;
 
 	/**
@@ -75,13 +66,6 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 	 * @generated
 	 */
 	private EClass parameterEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass branchesEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -326,17 +310,8 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getMethod_DrakonDiagram() {
-		return (EReference)methodEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getMethod_Name() {
-		return (EAttribute)methodEClass.getEStructuralFeatures().get(1);
+		return (EAttribute)methodEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -344,8 +319,8 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getDrakonDiagram() {
-		return drakonDiagramEClass;
+	public EReference getMethod_Header() {
+		return (EReference)methodEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -353,26 +328,8 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDrakonDiagram_Header() {
-		return (EReference)drakonDiagramEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getDrakonDiagram_Name() {
-		return (EAttribute)drakonDiagramEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getDrakonDiagram_Branches() {
-		return (EReference)drakonDiagramEClass.getEStructuralFeatures().get(2);
+	public EReference getMethod_Branch() {
+		return (EReference)methodEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -481,33 +438,6 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 	 */
 	public EAttribute getParameter_Value() {
 		return (EAttribute)parameterEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getBranches() {
-		return branchesEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getBranches_Branch() {
-		return (EReference)branchesEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getBranches_Name() {
-		return (EAttribute)branchesEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1232,13 +1162,9 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 
 		// Create classes and their features
 		methodEClass = createEClass(METHOD);
-		createEReference(methodEClass, METHOD__DRAKON_DIAGRAM);
 		createEAttribute(methodEClass, METHOD__NAME);
-
-		drakonDiagramEClass = createEClass(DRAKON_DIAGRAM);
-		createEReference(drakonDiagramEClass, DRAKON_DIAGRAM__HEADER);
-		createEAttribute(drakonDiagramEClass, DRAKON_DIAGRAM__NAME);
-		createEReference(drakonDiagramEClass, DRAKON_DIAGRAM__BRANCHES);
+		createEReference(methodEClass, METHOD__HEADER);
+		createEReference(methodEClass, METHOD__BRANCH);
 
 		headerEClass = createEClass(HEADER);
 		createEAttribute(headerEClass, HEADER__NAME);
@@ -1253,10 +1179,6 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 		createEAttribute(parameterEClass, PARAMETER__NAME);
 		createEAttribute(parameterEClass, PARAMETER__TYPE);
 		createEAttribute(parameterEClass, PARAMETER__VALUE);
-
-		branchesEClass = createEClass(BRANCHES);
-		createEReference(branchesEClass, BRANCHES__BRANCH);
-		createEAttribute(branchesEClass, BRANCHES__NAME);
 
 		branchEClass = createEClass(BRANCH);
 		createEReference(branchEClass, BRANCH__ROUTE);
@@ -1406,13 +1328,9 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(methodEClass, Method.class, "Method", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getMethod_DrakonDiagram(), this.getDrakonDiagram(), null, "drakonDiagram", null, 1, 1, Method.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMethod_Name(), ecorePackage.getEString(), "name", null, 0, 1, Method.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(drakonDiagramEClass, DrakonDiagram.class, "DrakonDiagram", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDrakonDiagram_Header(), this.getHeader(), null, "header", null, 1, 1, DrakonDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDrakonDiagram_Name(), ecorePackage.getEString(), "name", null, 0, 1, DrakonDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDrakonDiagram_Branches(), this.getBranches(), null, "branches", null, 1, 1, DrakonDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMethod_Header(), this.getHeader(), null, "header", null, 1, 1, Method.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMethod_Branch(), this.getBranch(), null, "branch", null, 1, -1, Method.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(headerEClass, Header.class, "Header", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getHeader_Name(), ecorePackage.getEString(), "name", null, 0, 1, Header.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1427,10 +1345,6 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 		initEAttribute(getParameter_Name(), ecorePackage.getEString(), "name", null, 0, 1, Parameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getParameter_Type(), ecorePackage.getEString(), "type", null, 0, 1, Parameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getParameter_Value(), ecorePackage.getEString(), "value", null, 0, 1, Parameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(branchesEClass, Branches.class, "Branches", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getBranches_Branch(), this.getBranch(), null, "branch", null, 1, -1, Branches.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getBranches_Name(), ecorePackage.getEString(), "name", null, 0, 1, Branches.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(branchEClass, Branch.class, "Branch", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getBranch_Route(), this.getRoute(), null, "route", null, 1, 1, Branch.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1569,19 +1483,7 @@ public class KragsteinMethodPackageImpl extends EPackageImpl implements Kragstei
 	protected void createGmf_1Annotations() {
 		String source = "gmf.node";	
 		addAnnotation
-		  (drakonDiagramEClass, 
-		   source, 
-		   new String[] {
-			 "label", "name"
-		   });	
-		addAnnotation
 		  (headerEClass, 
-		   source, 
-		   new String[] {
-			 "label", "name"
-		   });	
-		addAnnotation
-		  (branchesEClass, 
 		   source, 
 		   new String[] {
 			 "label", "name"

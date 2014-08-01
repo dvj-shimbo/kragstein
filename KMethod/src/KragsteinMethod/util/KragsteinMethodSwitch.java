@@ -72,12 +72,6 @@ public class KragsteinMethodSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case KragsteinMethodPackage.DRAKON_DIAGRAM: {
-				DrakonDiagram drakonDiagram = (DrakonDiagram)theEObject;
-				T result = caseDrakonDiagram(drakonDiagram);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case KragsteinMethodPackage.HEADER: {
 				Header header = (Header)theEObject;
 				T result = caseHeader(header);
@@ -87,12 +81,6 @@ public class KragsteinMethodSwitch<T> extends Switch<T> {
 			case KragsteinMethodPackage.PARAMETER: {
 				Parameter parameter = (Parameter)theEObject;
 				T result = caseParameter(parameter);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case KragsteinMethodPackage.BRANCHES: {
-				Branches branches = (Branches)theEObject;
-				T result = caseBranches(branches);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -275,21 +263,6 @@ public class KragsteinMethodSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Drakon Diagram</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Drakon Diagram</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseDrakonDiagram(DrakonDiagram object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Header</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -316,21 +289,6 @@ public class KragsteinMethodSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseParameter(Parameter object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Branches</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Branches</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseBranches(Branches object) {
 		return null;
 	}
 

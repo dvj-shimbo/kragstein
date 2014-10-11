@@ -6,11 +6,38 @@
 
 <plugin>
 
+ 
+
+   <extension
+         point="org.eclipse.graphiti.ui.diagramTypes">
+      <diagramType
+            description="drakon"
+            id="org.drakon.diagram.DrakonDiagramType"
+            name="Drakon"
+            type="Drakon diagram">
+      </diagramType>
+   </extension>
+   
+<extension
+         point="org.eclipse.graphiti.ui.diagramTypeProviders">
+      <diagramTypeProvider
+            class="org.drakon.diagram.DrakonDiagramTypeProvider"
+            description="Drakon diagram"
+            id="org.drakon.diagram.DrakonDiagramType"
+            name="Drakon diagram">
+         <diagramType
+               id="org.drakon.diagram.DrakonDiagramType">
+         </diagramType>
+      </diagramTypeProvider>
+   </extension>
+ 
+ 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated method -->
       <package
             uri="KragsteinMethod.ecore"
-            class="KragsteinMethod.KragsteinMethodPackage"/>
+            class="KragsteinMethod.KragsteinMethodPackage"
+            genModel="model/method.genmodel"/>
    </extension>
-
+   
 </plugin>

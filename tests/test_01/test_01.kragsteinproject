@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<KragsteinProject:Project xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:KragsteinProject="KragsteinProject.ecore" lang="java">
-  <package name="pack">
-    <class name="Test" visibility="public"/>
-  </package>
-</KragsteinProject:Project>

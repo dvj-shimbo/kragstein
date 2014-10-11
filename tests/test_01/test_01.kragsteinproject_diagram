@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:KragsteinProject="KragsteinProject.ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_c8Mf4AFLEeSGNpYA3bGyvA" type="KragsteinProject" name="test_01.kragsteinproject_diagram" measurementUnit="Pixel">
-  <styles xmi:type="notation:DiagramStyle" xmi:id="_c8Mf4QFLEeSGNpYA3bGyvA"/>
-  <element xmi:type="KragsteinProject:Project" href="test_01.kragsteinproject#/"/>
-</notation:Diagram>

@@ -112,7 +112,7 @@
     </children>
     <styles xmi:type="notation:FontStyle" xmi:id="_n0h84QACEeSpOf8BGo6cRw"/>
     <element xmi:type="ecore:EReference" href="project.ecore#//Package/class"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_n0h84gACEeSpOf8BGo6cRw" points="[7, 6, -190, -38]$[197, 6, 0, -38]$[197, 41, 0, -3]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_n0h84gACEeSpOf8BGo6cRw" points="[6, 6, -211, -38]$[217, 6, 0, -38]$[217, 41, 0, -3]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_n0h85wACEeSpOf8BGo6cRw" id="(0.9363636363636364,0.2926829268292683)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_n0h86AACEeSpOf8BGo6cRw" id="(0.5120481927710844,0.019230769230769232)"/>
   </edges>

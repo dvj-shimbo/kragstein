@@ -11,5 +11,8 @@ Export-Package: KragsteinMethod,
  KragsteinMethod.impl,
  KragsteinMethod.util
 Require-Bundle: org.eclipse.core.runtime,
- org.eclipse.emf.ecore;visibility:=reexport
+ org.eclipse.emf.ecore;visibility:=reexport,
+ org.eclipse.graphiti;bundle-version="0.11.1",
+ org.eclipse.graphiti.ui;bundle-version="0.11.1",
+ org.eclipse.ui;bundle-version="3.106.0"
 Bundle-ActivationPolicy: lazy

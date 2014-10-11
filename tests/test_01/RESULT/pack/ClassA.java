@@ -1,1 +1,0 @@
-package pack;public class Test {	Test() {	}	}

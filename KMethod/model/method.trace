@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<trace:TraceModel
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:trace="http://www.eclipse.org/gmf/2006/Trace">
+  <nodeTraces
+      visualID="2003"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'KragsteinMethod.ecore' and _eClass_.name = 'Action') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'KragsteinMethod.ecore' and _eClass_.name = 'Method') and _containmentMF_.name = 'icons')">
+    <nodeLabelTraces
+        visualID="5015"
+        queryText="true"/>
+  </nodeTraces>
+  <nodeTraces
+      visualID="2004"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'KragsteinMethod.ecore' and _eClass_.name = 'Question') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'KragsteinMethod.ecore' and _eClass_.name = 'Method') and _containmentMF_.name = 'icons')">
+    <nodeLabelTraces
+        visualID="5016"
+        queryText="true"/>
+  </nodeTraces>
+  <nodeTraces
+      visualID="2005"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'KragsteinMethod.ecore' and _eClass_.name = 'Choice') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'KragsteinMethod.ecore' and _eClass_.name = 'Method') and _containmentMF_.name = 'icons')">
+    <nodeLabelTraces
+        visualID="5017"
+        queryText="true"/>
+    <compartmentTraces
+        visualID="7008"
+        queryText="true"/>
+  </nodeTraces>
+  <nodeTraces
+      visualID="2006"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'KragsteinMethod.ecore' and _eClass_.name = 'Headline') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'KragsteinMethod.ecore' and _eClass_.name = 'Method') and _containmentMF_.name = 'icons')">
+    <nodeLabelTraces
+        visualID="5018"
+        queryText="true"/>
+  </nodeTraces>
+  <nodeTraces
+      visualID="2007"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'KragsteinMethod.ecore' and _eClass_.name = 'Adress') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'KragsteinMethod.ecore' and _eClass_.name = 'Method') and _containmentMF_.name = 'icons')">
+    <nodeLabelTraces
+        visualID="5019"
+        queryText="true"/>
+  </nodeTraces>
+  <nodeTraces
+      visualID="2008"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'KragsteinMethod.ecore' and _eClass_.name = 'Insertion') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'KragsteinMethod.ecore' and _eClass_.name = 'Method') and _containmentMF_.name = 'icons')">
+    <nodeLabelTraces
+        visualID="5020"
+        queryText="true"/>
+  </nodeTraces>
+  <nodeTraces
+      visualID="2009"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'KragsteinMethod.ecore' and _eClass_.name = 'Shelf') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'KragsteinMethod.ecore' and _eClass_.name = 'Method') and _containmentMF_.name = 'icons')">
+    <nodeLabelTraces
+        visualID="5021"
+        queryText="true"/>
+  </nodeTraces>
+  <nodeTraces
+      visualID="2010"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'KragsteinMethod.ecore' and _eClass_.name = 'BeginLoop') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'KragsteinMethod.ecore' and _eClass_.name = 'Method') and _containmentMF_.name = 'icons')">
+    <nodeLabelTraces
+        visualID="5022"
+        queryText="true"/>
+  </nodeTraces>
+  <nodeTraces
+      visualID="2011"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'KragsteinMethod.ecore' and _eClass_.name = 'EndLoop') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'KragsteinMethod.ecore' and _eClass_.name = 'Method') and _containmentMF_.name = 'icons')">
+    <nodeLabelTraces
+        visualID="5023"
+        queryText="true"/>
+  </nodeTraces>
+  <nodeTraces
+      visualID="2012"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'KragsteinMethod.ecore' and _eClass_.name = 'Output') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'KragsteinMethod.ecore' and _eClass_.name = 'Method') and _containmentMF_.name = 'icons')">
+    <nodeLabelTraces
+        visualID="5024"
+        queryText="true"/>
+  </nodeTraces>
+  <nodeTraces
+      visualID="2013"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'KragsteinMethod.ecore' and _eClass_.name = 'Input') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'KragsteinMethod.ecore' and _eClass_.name = 'Method') and _containmentMF_.name = 'icons')">
+    <nodeLabelTraces
+        visualID="5025"
+        queryText="true"/>
+  </nodeTraces>
+  <nodeTraces
+      visualID="2014"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'KragsteinMethod.ecore' and _eClass_.name = 'End') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'KragsteinMethod.ecore' and _eClass_.name = 'Method') and _containmentMF_.name = 'icons')"/>
+  <nodeTraces
+      visualID="2015"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'KragsteinMethod.ecore' and _eClass_.name = 'FormalParameters') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'KragsteinMethod.ecore' and _eClass_.name = 'Method') and _containmentMF_.name = 'icons')"/>
+  <nodeTraces
+      visualID="2016"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'KragsteinMethod.ecore' and _eClass_.name = 'Title') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'KragsteinMethod.ecore' and _eClass_.name = 'Method') and _containmentMF_.name = 'icons')">
+    <nodeLabelTraces
+        visualID="5027"
+        queryText="true"/>
+  </nodeTraces>
+  <childNodeTraces
+      visualID="3018"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'KragsteinMethod.ecore' and _eClass_.name = 'Case') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'KragsteinMethod.ecore' and _eClass_.name = 'Choice') and _containmentMF_.name = 'case')">
+    <nodeLabelTraces
+        visualID="5003"
+        queryText="true"/>
+  </childNodeTraces>
+  <linkTraces
+      visualID="4006"
+      queryText="modelFacet.oclIsKindOf(gmfgen::TypeLinkModelFacet) and (let _eClass_:ecore::EClass = modelFacet.oclAsType(gmfgen::TypeLinkModelFacet).metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'KragsteinMethod.ecore' and _eClass_.name = 'Connection')"/>
+</trace:TraceModel>

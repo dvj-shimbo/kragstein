@@ -67,6 +67,7 @@ public class DrakonFeatureProvider extends DefaultFeatureProviderWithPatterns {
 		addPattern( new ActionPattern());
 		addPattern( new EndPattern());
 		addPattern( new AddressPattern());
+		addPattern( new ChoicePattern());
 		
 		
 	}

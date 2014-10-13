@@ -29,6 +29,7 @@ import org.eclipse.graphiti.features.context.ILayoutContext;
 import org.eclipse.graphiti.features.context.IUpdateContext;
 import org.eclipse.graphiti.features.impl.Reason;
 import org.eclipse.graphiti.mm.algorithms.GraphicsAlgorithm;
+import org.eclipse.graphiti.mm.algorithms.Polygon;
 import org.eclipse.graphiti.mm.algorithms.Polyline;
 import org.eclipse.graphiti.mm.algorithms.Rectangle;
 import org.eclipse.graphiti.mm.algorithms.RoundedRectangle;
@@ -52,24 +53,24 @@ import org.eclipse.graphiti.util.IColorConstant;
 
 import KragsteinMethod.*;
 
-public class ActionPattern extends IdPattern implements IPattern {
+public class ChoicePattern extends IdPattern implements IPattern {
 	private static final String ID_NAME_TEXT = "nameText";
 	private static final String ID_OUTER_RECTANGLE = "outerRectangle";
 	private static final String ID_MAIN_RECTANGLE = "mainRectangle";
 	private static int counter = 0;
-	public ActionPattern() {
+	public ChoicePattern() {
 		super();
 	}
 
 	
 	@Override
 	public String getCreateName() {
-		return "Действие";
+		return "Выбор";
 	}
 
 	@Override
 	public boolean isMainBusinessObjectApplicable(Object mainBusinessObject) {
-		return mainBusinessObject instanceof Action;
+		return mainBusinessObject instanceof Choice;
 	}
 
 	@Override
@@ -81,21 +82,32 @@ public class ActionPattern extends IdPattern implements IPattern {
 	public Object[] create(ICreateContext context) {
 		Resource resource = context.getTargetContainer().eResource();
 		
-		Icon icon;
-		
+	
 		EObject obj = Graphiti.getLinkService().getBusinessObjectForLinkedPictogramElement(context.getTargetContainer());
 		
 		
-		Action act = KragsteinMethodFactory.eINSTANCE.createAction();
-		act.setName( String.format("Action %d", counter));
-		counter += 1;
-		resource.getContents().add(act);
+		Choice act = KragsteinMethodFactory.eINSTANCE.createChoice();
+		act.setName( "Condition");
 		
+		resource.getContents().add(act);
 		
 		PatternUtils.SetNextIcon(obj,  act, getDiagram() );
 		
+		Case caseAct = (Case)KragsteinMethodFactory.eINSTANCE.createCase();
+		resource.getContents().add(act);
+		caseAct.setName("yes");
+		
+		act.setFirstCaseName("yes");
 		
 		
+		Route newRoute =  KragsteinMethodFactory.eINSTANCE.createRoute();
+		resource.getContents().add(newRoute);
+		
+
+		caseAct.setRoute(newRoute);
+		resource.getContents().add(caseAct);
+		
+
 		// Delegate to the add feature
 		addGraphicalRepresentation(context, act);
 		
@@ -121,27 +133,23 @@ public class ActionPattern extends IdPattern implements IPattern {
 		int height = target.getGraphicsAlgorithm().getY() + target.getGraphicsAlgorithm().getHeight();
 		int width = target.getGraphicsAlgorithm().getX() ;
 
-		Action param = (Action) context.getNewObject();
+		Choice param = (Choice) context.getNewObject();
 		
 		ContainerShape shape = createService.createContainerShape(target.getContainer(), true);
 		
-	
 		
 		Rectangle outrect = createService.createInvisibleRectangle(shape);
 		layoutService.setLocationAndSize(outrect, width, height, 150,  Style.IconFullHeight);
 		
-		Rectangle rect = createService.createRectangle(outrect);
-		rect.setLineWidth(1);
-		Text text = createService.createText(rect, param.getName());
-		rect.setBackground(manageColor(IColorConstant.WHITE));
+		int polygonXY[] = { 0, 20, 40, 0, 80, 0, 40, 40 };
+		Polygon poly = createService.createPolygon(shape, polygonXY);
+		Text text = createService.createText(poly, param.getName());
+		poly.setBackground(manageColor(IColorConstant.WHITE));
 		layoutService.setLocationAndSize(text, 0, 0, 80, 30);
-		layoutService.setLocationAndSize(rect, 0, 0, 100, Style.IconHeight);
+		layoutService.setLocationAndSize(poly, 0, 0, 100, Style.IconHeight);
 		
 		
-		int xy[] = new int[] { 50, 40, 50, 40 + Style.HeightInterval };
-		Polyline polyline = createService.createPlainPolyline(outrect, xy);
 		
-		polyline.setForeground(manageColor(IColorConstant.BLACK));
 		
 		link(shape, param);
 		

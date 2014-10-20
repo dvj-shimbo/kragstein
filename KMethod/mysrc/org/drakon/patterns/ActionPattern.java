@@ -138,10 +138,6 @@ public class ActionPattern extends IdPattern implements IPattern {
 		layoutService.setLocationAndSize(rect, 0, 0, 100, Style.IconHeight);
 		
 		
-		int xy[] = new int[] { 50, 40, 50, 40 + Style.HeightInterval };
-		Polyline polyline = createService.createPlainPolyline(outrect, xy);
-		
-		polyline.setForeground(manageColor(IColorConstant.BLACK));
 		
 		link(shape, param);
 		

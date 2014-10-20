@@ -153,10 +153,7 @@ public class MethodPattern extends IdPattern implements IPattern {
 		layoutService.setLocationAndSize(rect, 0, 0, 100, 40);
 		
 		
-		int xy[] = new int[] { 50, 40, 50, 80 };
-		Polyline polyline = createService.createPlainPolyline(outrect, xy);
 		
-		polyline.setForeground(manageColor(IColorConstant.BLACK));
 		
 		
 		link(HeaderShape, header);

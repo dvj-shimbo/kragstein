@@ -1,5 +1,7 @@
 package org.drakon.features;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 import org.drakon.main.Style;
@@ -68,29 +70,51 @@ public class RouteLayoutFeature extends AbstractLayoutFeature {
         IGaService gaService = Graphiti.getGaService();
         ILayoutService layoutService = Graphiti.getLayoutService();
         
-        for (Shape shape : containerShape.getChildren()){
-        	GraphicsAlgorithm graphicsAlgorithm = shape.getGraphicsAlgorithm();
-        	gaService.setWidth(graphicsAlgorithm,
-                    200);
+        List<GraphicsAlgorithm> delList = new ArrayList();
+        for (GraphicsAlgorithm graphicsAlgorithm : containerShape.getGraphicsAlgorithm().getGraphicsAlgorithmChildren()){
+        	
+        	if (graphicsAlgorithm instanceof Polyline) {
+        		delList.add(graphicsAlgorithm);
+                
+        	}
         }
+        containerShape.getGraphicsAlgorithm().getGraphicsAlgorithmChildren().removeAll(delList);
+        int x = 0 ;
         
         Method method = (Method)getDiagram().eResource().getContents().get(1);
         for(int i = 0;  i <  method.getBranch().size(); ++i ) {
         	
         	Route route =  method.getBranch().get(i).getRoute();
-        	int x = Style.leftPadding + i * ( Style.IconWidth + Style.WidthInterval);
+        	x = Style.leftPadding + i * ( Style.IconWidth + Style.WidthInterval);
         	int y = Style.topPadding + Style.IconFullHeight;
         	Icon icon = route.getIcon().get(0);
         	do {
         		List<PictogramElement> elemList = Graphiti.getLinkService().getPictogramElements(getDiagram(), icon);
+         
         		layoutService.setLocation(elemList.get(0).getGraphicsAlgorithm(), x, y);
         		y += Style.IconFullHeight;   		
         		icon = icon.getNextIcon();
         	}
         	while(icon != null);
+        	
+        	//add center line
+        	int xy[] = new int[] { x + Style.IconWidth/2, 40, + Style.IconWidth/2, y };
+    		Polyline polyline = Graphiti.getCreateService().createPlainPolyline(MethodPattern.HeaderShape.getGraphicsAlgorithm(), xy);
+    		
+    		polyline.setForeground(manageColor(IColorConstant.BLACK));
         }
         
         
+        //add center line
+    	int xy[] = new int[] { 
+    		Style.leftPadding, 
+			Style.topPadding + Style.IconFullHeight + Style.IconFullHeight/2, 
+			x,
+			Style.topPadding + Style.IconFullHeight + Style.IconFullHeight/2
+			};
+		Polyline polyline = Graphiti.getCreateService().createPlainPolyline(MethodPattern.HeaderShape.getGraphicsAlgorithm(), xy);
+		
+		polyline.setForeground(manageColor(IColorConstant.BLACK));
         
            
         return true;

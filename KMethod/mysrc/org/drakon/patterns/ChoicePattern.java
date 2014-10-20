@@ -141,7 +141,7 @@ public class ChoicePattern extends IdPattern implements IPattern {
 		Rectangle outrect = createService.createInvisibleRectangle(shape);
 		layoutService.setLocationAndSize(outrect, width, height, 150,  Style.IconFullHeight);
 		
-		int polygonXY[] = { 0, 20, 40, 0, 80, 0, 40, 40 };
+		int polygonXY[] = { 0, 20, 40, 0, 80, 20, 40, 40 };
 		Polygon poly = createService.createPolygon(shape, polygonXY);
 		Text text = createService.createText(poly, param.getName());
 		poly.setBackground(manageColor(IColorConstant.WHITE));

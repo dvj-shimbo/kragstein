@@ -153,10 +153,6 @@ public class BranchPattern extends IdPattern implements IPattern {
 			x =  50;
 		}
 		
-		int xy[] = new int[] {x, 40, x, 40 + Style.HeightInterval };
-		Polyline polyBottom = createService.createPlainPolyline(outrect, xy);
-		
-		polyBottom.setForeground(manageColor(IColorConstant.BLACK));
 		
 		
 		link(shape, head);

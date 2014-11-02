@@ -133,7 +133,8 @@ public class ActionPattern extends IdPattern implements IPattern {
 		Rectangle rect = createService.createRectangle(outrect);
 		rect.setLineWidth(1);
 		Text text = createService.createText(rect, action.getName());
-		text.setFont(gaService.manageDefaultFont(getDiagram(), false, true));
+		text.setFont(gaService.manageFont(getDiagram(), "Arial", 14));
+		
 		rect.setBackground(manageColor(IColorConstant.WHITE));
 		layoutService.setLocationAndSize(text, 0, 0, 80, 30);
 		layoutService.setLocationAndSize(rect, 0, 0, 100, Style.IconHeight);
@@ -155,7 +156,7 @@ public class ActionPattern extends IdPattern implements IPattern {
 		int w = GraphitiUi.getUiLayoutService().calculateTextSize(text.getValue(), text.getFont()).getWidth();
 		
 		IGaLayoutService layoutService = Graphiti.getGaLayoutService();	
-		layoutService.setSize( getRectPic(context.getGraphicsAlgorithm()), w, 50);
+		layoutService.setSize( getRectPic(context.getGraphicsAlgorithm()), w + 20, Style.IconHeight);
 		return changesDone;
 	}
 

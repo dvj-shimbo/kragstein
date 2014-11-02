@@ -50,11 +50,7 @@ import KragsteinMethod.*;
 
 public class BranchPattern extends IdPattern implements IPattern {
 
-	private static final String ID_NAME_TEXT = "nameText";
-	private static final String ID_OUTER_RECTANGLE = "outerRectangle";
-	private static final String ID_MAIN_RECTANGLE = "mainRectangle";
 
-	private Method method;
 	
 	public BranchPattern() {
 		super();
@@ -70,6 +66,7 @@ public class BranchPattern extends IdPattern implements IPattern {
 		return mainBusinessObject instanceof Headline;
 	}
 
+	
 	@Override
 	public boolean canCreate(ICreateContext context) {
 		return true;
@@ -126,6 +123,7 @@ public class BranchPattern extends IdPattern implements IPattern {
 		Headline head = (Headline) context.getNewObject();
 		ContainerShape shape = createService.createContainerShape(getDiagram(), true);
 		
+		this.setId(shape,  "name");
 		Rectangle outrect = createService.createInvisibleRectangle(shape);
 		layoutService.setLocationAndSize(outrect, width, 80, 150, 40);
 		
@@ -164,36 +162,32 @@ public class BranchPattern extends IdPattern implements IPattern {
 	protected boolean layout(IdLayoutContext context, String id) {
 		boolean changesDone = false;
 
-		Rectangle outerRectangle = (Rectangle) context.getRootPictogramElement().getGraphicsAlgorithm();
-
-		if (id.equals(ID_MAIN_RECTANGLE) || id.equals(ID_NAME_TEXT)) {
-			GraphicsAlgorithm ga = context.getGraphicsAlgorithm();
-			Graphiti.getGaService().setLocationAndSize(ga, 0, 10, outerRectangle.getWidth(),
-					outerRectangle.getHeight() - 10);
-			changesDone = true;
-		}
-
+		
 		return changesDone;
 	}
 
 	@Override
 	protected IReason updateNeeded(IdUpdateContext context, String id) {
-		if (id.equals(ID_NAME_TEXT)) {
-			Text nameText = (Text) context.getGraphicsAlgorithm();
-			Branch domainObject = (Branch) context.getDomainObject();
-			if (domainObject.getName() == null || !domainObject.getName().equals(nameText.getValue())) {
-				return Reason.createTrueReason("Name differs. Expected: '" + domainObject.getName() + "'");
-			}
-		}
-
+	
 		return Reason.createFalseReason();
 	}
+	Text getTextPic(GraphicsAlgorithm ga) {
+		EList<GraphicsAlgorithm> lst = ga.getGraphicsAlgorithmChildren();
+		lst = lst.get(0).getGraphicsAlgorithmChildren();
+		return (Text)lst.get(0);
+	}
 
+	Rectangle getRectPic(GraphicsAlgorithm ga) {
+		EList<GraphicsAlgorithm> lst = ga.getGraphicsAlgorithmChildren();
+		
+		return (Rectangle)lst.get(0);
+	}
+	
 	@Override
 	protected boolean update(IdUpdateContext context, String id) {
-		if (id.equals(ID_NAME_TEXT)) {
-			Text nameText = (Text) context.getGraphicsAlgorithm();
-			Branch domainObject = (Branch) context.getDomainObject();
+		if (id.equals("name")) {
+			Headline domainObject = (Headline) context.getDomainObject();
+			Text nameText = getTextPic(context.getGraphicsAlgorithm());
 			nameText.setValue(domainObject.getName());
 			return true;
 		}
@@ -207,43 +201,29 @@ public class BranchPattern extends IdPattern implements IPattern {
 
 	@Override
 	public boolean canDirectEdit(IDirectEditingContext context) {
-		Object domainObject = getBusinessObjectForPictogramElement(context.getPictogramElement());
-		GraphicsAlgorithm ga = context.getGraphicsAlgorithm();
-		if (domainObject instanceof Branch) {
-			return true;
-		}
-		return false;
+		return true;
 	}
 
 	@Override
 	public String getInitialValue(IDirectEditingContext context) {
-		Branch file = (Branch) getBusinessObjectForPictogramElement(context.getPictogramElement());
+		Headline file = (Headline) getBusinessObjectForPictogramElement(context.getPictogramElement());
 		return file.getName();
 	}
 
 	@Override
 	public String checkValueValid(String value, IDirectEditingContext context) {
-		if (value == null || value.length() == 0) {
-			return "File name must not be empty";
-		}
-
-		return "file";
+	
+		return null;
 	}
 
 	@Override
 	public void setValue(String value, IDirectEditingContext context) {
-		Branch file = (Branch) getBusinessObjectForPictogramElement(context.getPictogramElement());
+		Headline file = (Headline) getBusinessObjectForPictogramElement(context.getPictogramElement());
 		file.setName(value);
 		updatePictogramElement(context.getPictogramElement());
 	}
 
-	private String createNewName() {
-		String initialName = "NewFile";
-		String name = initialName;
-		int number = 0;
-		
-		return name;
-	}
+
 
 	
 

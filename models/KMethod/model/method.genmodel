@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/KMethod/src" modelPluginID="KMethod" modelName="Method"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="8.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>method.ecore</foreignModel>
+  <genPackages prefix="KragsteinMethod" disposableProviderFactory="true" ecorePackage="method.ecore#/">
+    <genClasses ecoreClass="method.ecore#//Method">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute method.ecore#//Method/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference method.ecore#//Method/header"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference method.ecore#//Method/branch"/>
+    </genClasses>
+    <genClasses ecoreClass="method.ecore#//Header">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute method.ecore#//Header/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute method.ecore#//Header/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute method.ecore#//Header/visibility"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute method.ecore#//Header/isConst"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute method.ecore#//Header/isVirtual"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute method.ecore#//Header/isStatic"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference method.ecore#//Header/parameter"/>
+    </genClasses>
+    <genClasses ecoreClass="method.ecore#//Parameter">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute method.ecore#//Parameter/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute method.ecore#//Parameter/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute method.ecore#//Parameter/value"/>
+    </genClasses>
+    <genClasses ecoreClass="method.ecore#//Branch">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference method.ecore#//Branch/route"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference method.ecore#//Branch/nextBranch"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute method.ecore#//Branch/name"/>
+    </genClasses>
+    <genClasses ecoreClass="method.ecore#//Route">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference method.ecore#//Route/icon"/>
+    </genClasses>
+    <genClasses ecoreClass="method.ecore#//ValencePoint"/>
+    <genClasses ecoreClass="method.ecore#//Synchronizer">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute method.ecore#//Synchronizer/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute method.ecore#//Synchronizer/value"/>
+    </genClasses>
+    <genClasses ecoreClass="method.ecore#//RightComment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute method.ecore#//RightComment/value"/>
+    </genClasses>
+    <genClasses ecoreClass="method.ecore#//LeftComment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute method.ecore#//LeftComment/value"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="method.ecore#//Icon">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference method.ecore#//Icon/valencePoint"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference method.ecore#//Icon/leftComment"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference method.ecore#//Icon/RightComment"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference method.ecore#//Icon/nextIcon"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference method.ecore#//Icon/synchroniser"/>
+    </genClasses>
+    <genClasses ecoreClass="method.ecore#//Action">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute method.ecore#//Action/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute method.ecore#//Action/value"/>
+    </genClasses>
+    <genClasses ecoreClass="method.ecore#//Question">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute method.ecore#//Question/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute method.ecore#//Question/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute method.ecore#//Question/yesBelow"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference method.ecore#//Question/route"/>
+    </genClasses>
+    <genClasses ecoreClass="method.ecore#//Choice">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute method.ecore#//Choice/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute method.ecore#//Choice/value"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference method.ecore#//Choice/case"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute method.ecore#//Choice/firstCaseName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute method.ecore#//Choice/firstCaseValue"/>
+    </genClasses>
+    <genClasses ecoreClass="method.ecore#//Case">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute method.ecore#//Case/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute method.ecore#//Case/value"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference method.ecore#//Case/route"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference method.ecore#//Case/nextCase"/>
+    </genClasses>
+    <genClasses ecoreClass="method.ecore#//Headline">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute method.ecore#//Headline/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute method.ecore#//Headline/isLoop"/>
+    </genClasses>
+    <genClasses ecoreClass="method.ecore#//Adress">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute method.ecore#//Adress/target"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute method.ecore#//Adress/isLoop"/>
+    </genClasses>
+    <genClasses ecoreClass="method.ecore#//Insertion">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute method.ecore#//Insertion/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute method.ecore#//Insertion/value"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference method.ecore#//Insertion/method"/>
+    </genClasses>
+    <genClasses ecoreClass="method.ecore#//Shelf">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute method.ecore#//Shelf/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute method.ecore#//Shelf/value"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference method.ecore#//Shelf/method"/>
+    </genClasses>
+    <genClasses ecoreClass="method.ecore#//BeginLoop">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute method.ecore#//BeginLoop/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute method.ecore#//BeginLoop/value"/>
+    </genClasses>
+    <genClasses ecoreClass="method.ecore#//EndLoop">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute method.ecore#//EndLoop/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute method.ecore#//EndLoop/value"/>
+    </genClasses>
+    <genClasses ecoreClass="method.ecore#//Output">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute method.ecore#//Output/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute method.ecore#//Output/value"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference method.ecore#//Output/method"/>
+    </genClasses>
+    <genClasses ecoreClass="method.ecore#//Pause">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute method.ecore#//Pause/value"/>
+    </genClasses>
+    <genClasses ecoreClass="method.ecore#//StartTimer">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute method.ecore#//StartTimer/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute method.ecore#//StartTimer/value"/>
+    </genClasses>
+    <genClasses ecoreClass="method.ecore#//Input">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute method.ecore#//Input/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute method.ecore#//Input/value"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference method.ecore#//Input/method"/>
+    </genClasses>
+    <genClasses ecoreClass="method.ecore#//End"/>
+    <genClasses ecoreClass="method.ecore#//LoopArrow">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference method.ecore#//LoopArrow/period"/>
+    </genClasses>
+    <genClasses ecoreClass="method.ecore#//Period">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute method.ecore#//Period/value"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

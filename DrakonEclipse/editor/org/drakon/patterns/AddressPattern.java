@@ -72,6 +72,11 @@ public class AddressPattern extends IdPattern implements IPattern {
 	}
 
 	@Override
+	public boolean canUpdate(IUpdateContext context) {
+		return true;
+	}
+	
+	@Override
 	public boolean canCreate(ICreateContext context) {
 		return true;
 	}

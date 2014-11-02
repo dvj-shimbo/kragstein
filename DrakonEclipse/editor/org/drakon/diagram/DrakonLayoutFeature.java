@@ -6,11 +6,11 @@ import java.util.List;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
-
 import org.eclipse.graphiti.features.IFeatureProvider;
 import org.eclipse.graphiti.features.context.IDirectEditingContext;
 import org.eclipse.graphiti.features.context.ILayoutContext;
 import org.eclipse.graphiti.features.context.IUpdateContext;
+import org.eclipse.graphiti.features.context.impl.LayoutContext;
 import org.eclipse.graphiti.features.impl.Reason;
 import org.eclipse.graphiti.mm.algorithms.GraphicsAlgorithm;
 import org.eclipse.graphiti.mm.algorithms.Polyline;
@@ -42,17 +42,13 @@ public class DrakonLayoutFeature extends AbstractLayoutFeature {
     private static final int MIN_HEIGHT = 30;
  
     private static final int MIN_WIDTH = 50;
- 
-    public DrakonLayoutFeature(IFeatureProvider fp) {
+    DrakonFeatureProvider patternProvider;
+    public DrakonLayoutFeature(DrakonFeatureProvider fp) {
         super(fp);
+        patternProvider = fp;
     }
  
     public boolean canLayout(ILayoutContext context) {
-       // return true, if pictogram element is linked to an EClass
-       PictogramElement pe = context.getPictogramElement();
-       if (!(pe instanceof ContainerShape))
-           return false;
-       EList<EObject> businessObjects = pe.getLink().getBusinessObjects();
        return true;
     }
  
@@ -86,16 +82,27 @@ public class DrakonLayoutFeature extends AbstractLayoutFeature {
         		List<PictogramElement> elemList = Graphiti.getLinkService().getPictogramElements(getDiagram(), icon);
          
         		layoutService.setLocation(elemList.get(0).getGraphicsAlgorithm(), x, y);
-        		y += Style.IconFullHeight;   		
+        		y += Style.IconFullHeight;  
+        		
+        		PictogramElement el = patternProvider.getPictogramElementForBusinessObject(icon);
+        		if (el != null ) {
+        			IPattern pat = patternProvider.getPatternForPictogramElement(el);
+        			if (pat != null )  {
+        				
+        				pat.layout(new LayoutContext(el));
+        			}
+        		}
         		icon = icon.getNextIcon();
         	}
         	while(icon != null);
         	
+        	///////////////////
         	//центральная линия для связи икон
         	int xy[] = new int[] { x + Style.IconWidth/2, 40 + Style.HeightInterval, x+ Style.IconWidth/2, y - Style.IconHeight};
     		Polyline polyline = Graphiti.getCreateService().createPlainPolyline(MethodPattern.HeaderShape.getGraphicsAlgorithm(), xy);
     		
     		polyline.setForeground(manageColor(IColorConstant.BLACK));
+    		/////////////////
         }
         
         
@@ -109,7 +116,8 @@ public class DrakonLayoutFeature extends AbstractLayoutFeature {
 		Polyline polyline = Graphiti.getCreateService().createPlainPolyline(MethodPattern.HeaderShape.getGraphicsAlgorithm(), xy);
 		
 		polyline.setForeground(manageColor(IColorConstant.BLACK));
-        
+        /////////////////////
+		
            
         return true;
     }

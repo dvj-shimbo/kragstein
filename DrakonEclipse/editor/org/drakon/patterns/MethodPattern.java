@@ -51,9 +51,7 @@ import KragsteinMethod.*;
 
 public class MethodPattern extends IdPattern implements IPattern {
 
-	private static final String ID_NAME_TEXT = "nameText";
-	private static final String ID_OUTER_RECTANGLE = "outerRectangle";
-	private static final String ID_MAIN_RECTANGLE = "mainRectangle";
+
 
 	public static ContainerShape MainContainer;
 	public static ContainerShape MainRoute;
@@ -90,33 +88,11 @@ public class MethodPattern extends IdPattern implements IPattern {
 		resource.getContents().add(method);
 		resource.getContents().add(header);
 		method.setHeader(header);
-		Route route = KragsteinMethodFactory.eINSTANCE.createRoute();
-		Branch branch = KragsteinMethodFactory.eINSTANCE.createBranch();
-		
-		Headline head = KragsteinMethodFactory.eINSTANCE.createHeadline();
-		
-		head.setName("branch 1");
-		route.getIcon().add(head);
-		//resource.getContents().add(route);
-		//resource.getContents().add(branch);
-		
-		//branch.setRoute(route);
-		//method.getBranch().add(branch);
-		resource.getContents().add(head);
-		
-		
-		
-		
-		
-		branch.setName("branch 1");
-		
-		
-		
+
 		// Delegate to the add feature
 		addGraphicalRepresentation(context, header);
 		
 
-		
 		return new Object[] { header };
 	}
 
@@ -136,9 +112,12 @@ public class MethodPattern extends IdPattern implements IPattern {
 		
 		HeaderShape = createService.createContainerShape(getDiagram(), true);
 		
+		
+		
 		Rectangle headrect = createService.createInvisibleRectangle(HeaderShape);
 		ContainerShape shape = createService.createContainerShape(HeaderShape, true);
 		
+		setId(shape, "name");
 		layoutService.setLocationAndSize(headrect, Style.leftPadding, Style.topPadding, 1500, 800);
 		
 		Rectangle outrect = createService.createInvisibleRectangle(shape);
@@ -151,12 +130,9 @@ public class MethodPattern extends IdPattern implements IPattern {
 		layoutService.setLocationAndSize(text, 0, 0, 80, 30);
 		layoutService.setLocationAndSize(rect, 0, 0, 100, 40);
 		
-		
-		
-		
-		
-		link(HeaderShape, header);
-		
+
+		link(shape, header);
+	
 		
 		return shape;
 	}
@@ -165,36 +141,24 @@ public class MethodPattern extends IdPattern implements IPattern {
 	protected boolean layout(IdLayoutContext context, String id) {
 		boolean changesDone = false;
 
-		Rectangle outerRectangle = (Rectangle) context.getRootPictogramElement().getGraphicsAlgorithm();
-
-		if (id.equals(ID_MAIN_RECTANGLE) || id.equals(ID_NAME_TEXT)) {
-			GraphicsAlgorithm ga = context.getGraphicsAlgorithm();
-			Graphiti.getGaService().setLocationAndSize(ga, 0, 10, outerRectangle.getWidth(),
-					outerRectangle.getHeight() - 10);
-			changesDone = true;
-		}
-
 		return changesDone;
 	}
 
 	@Override
 	protected IReason updateNeeded(IdUpdateContext context, String id) {
-		if (id.equals(ID_NAME_TEXT)) {
-			Text nameText = (Text) context.getGraphicsAlgorithm();
-			Branch domainObject = (Branch) context.getDomainObject();
-			if (domainObject.getName() == null || !domainObject.getName().equals(nameText.getValue())) {
-				return Reason.createTrueReason("Name differs. Expected: '" + domainObject.getName() + "'");
-			}
-		}
 
+		if (id.equals("name")) {
+			Header domainObject = (Header) context.getDomainObject();
+			return Reason.createTrueReason(domainObject.getName());
+		}
 		return Reason.createFalseReason();
 	}
 
 	@Override
 	protected boolean update(IdUpdateContext context, String id) {
-		if (id.equals(ID_NAME_TEXT)) {
-			Text nameText = (Text) context.getGraphicsAlgorithm();
-			Branch domainObject = (Branch) context.getDomainObject();
+		if (id.equals("name")) {
+			Header domainObject = (Header) context.getDomainObject();
+			Text nameText = getTextPic(context.getGraphicsAlgorithm());
 			nameText.setValue(domainObject.getName());
 			return true;
 		}
@@ -206,6 +170,12 @@ public class MethodPattern extends IdPattern implements IPattern {
 		return TYPE_TEXT;
 	}
 
+	Text getTextPic(GraphicsAlgorithm ga) {
+		EList<GraphicsAlgorithm> lst = ga.getGraphicsAlgorithmChildren();
+		lst = lst.get(0).getGraphicsAlgorithmChildren();
+		return (Text)lst.get(0);
+	}
+	
 	@Override
 	public boolean canDirectEdit(IDirectEditingContext context) {
 		return true;
@@ -213,23 +183,19 @@ public class MethodPattern extends IdPattern implements IPattern {
 
 	@Override
 	public String getInitialValue(IDirectEditingContext context) {
-		Branch file = (Branch) getBusinessObjectForPictogramElement(context.getPictogramElement());
-		return file.getName();
+		Header h = (Header) getBusinessObjectForPictogramElement(context.getPictogramElement());
+		return h.getName();
 	}
 
 	@Override
 	public String checkValueValid(String value, IDirectEditingContext context) {
-		if (value == null || value.length() == 0) {
-			return "File name must not be empty";
-		}
-
-		return "file";
+		return null;
 	}
 
 	@Override
 	public void setValue(String value, IDirectEditingContext context) {
-		Branch file = (Branch) getBusinessObjectForPictogramElement(context.getPictogramElement());
-		file.setName(value);
+		Header h = (Header) getBusinessObjectForPictogramElement(context.getPictogramElement());
+		h.setName(value);
 		updatePictogramElement(context.getPictogramElement());
 	}
 

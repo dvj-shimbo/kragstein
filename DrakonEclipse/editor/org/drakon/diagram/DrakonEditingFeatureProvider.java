@@ -66,7 +66,7 @@ public class DrakonEditingFeatureProvider extends
 	    PictogramElement pe = context.getPictogramElement();
 	    Action act = (Action) getBusinessObjectForPictogramElement(pe);
 	    
-	    return  act.getName();
+	    return  "New value";
 	}
 	
 	@Override

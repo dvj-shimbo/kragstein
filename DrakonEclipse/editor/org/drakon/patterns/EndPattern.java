@@ -165,35 +165,6 @@ public class EndPattern extends IdPattern implements IPattern {
 		return false;
 	}
 
-	@Override
-	public int getEditingType() {
-		return TYPE_TEXT;
-	}
-
-	@Override
-	public boolean canDirectEdit(IDirectEditingContext context) {
-		Object domainObject = getBusinessObjectForPictogramElement(context.getPictogramElement());
-		GraphicsAlgorithm ga = context.getGraphicsAlgorithm();
-		if (domainObject instanceof Branch) {
-			return true;
-		}
-		return false;
-	}
-
-	@Override
-	public String getInitialValue(IDirectEditingContext context) {
-		Branch file = (Branch) getBusinessObjectForPictogramElement(context.getPictogramElement());
-		return file.getName();
-	}
-
-	@Override
-	public String checkValueValid(String value, IDirectEditingContext context) {
-		if (value == null || value.length() == 0) {
-			return "File name must not be empty";
-		}
-
-		return "file";
-	}
 
 	@Override
 	public void setValue(String value, IDirectEditingContext context) {

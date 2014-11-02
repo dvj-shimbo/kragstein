@@ -1,0 +1,4 @@
+архитектура на базе graphiti дополнения eclipse
+
+http://help.eclipse.org/kepler/index.jsp?nav=%2F26
+http://help.eclipse.org/luna/nav/29

@@ -17,7 +17,6 @@ package org.drakon.diagram;
 import java.util.ArrayList;
 import java.util.List;
 
-
 import org.drakon.patterns.*;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.graphiti.dt.IDiagramTypeProvider;
@@ -36,6 +35,7 @@ import org.eclipse.graphiti.features.IMoveShapeFeature;
 import org.eclipse.graphiti.features.IReconnectionFeature;
 import org.eclipse.graphiti.features.IRemoveFeature;
 import org.eclipse.graphiti.features.IResizeShapeFeature;
+import org.eclipse.graphiti.features.IUpdateFeature;
 import org.eclipse.graphiti.features.context.IAddBendpointContext;
 import org.eclipse.graphiti.features.context.IAddContext;
 import org.eclipse.graphiti.features.context.ICustomContext;
@@ -47,6 +47,7 @@ import org.eclipse.graphiti.features.context.IMoveShapeContext;
 import org.eclipse.graphiti.features.context.IReconnectionContext;
 import org.eclipse.graphiti.features.context.IRemoveContext;
 import org.eclipse.graphiti.features.context.IResizeShapeContext;
+import org.eclipse.graphiti.features.context.IUpdateContext;
 import org.eclipse.graphiti.features.custom.ICustomFeature;
 import org.eclipse.graphiti.mm.algorithms.GraphicsAlgorithm;
 import org.eclipse.graphiti.mm.pictograms.ContainerShape;
@@ -84,6 +85,7 @@ public class DrakonFeatureProvider extends DefaultFeatureProviderWithPatterns {
 
 	@Override
 	public ILayoutFeature getLayoutFeature(ILayoutContext context) {
+		//return super.getLayoutFeature(context);
 	    PictogramElement pictogramElement = context.getPictogramElement();
 	    Object bo = getBusinessObjectForPictogramElement(pictogramElement);
 	    return new DrakonLayoutFeature(this);
@@ -120,6 +122,10 @@ public class DrakonFeatureProvider extends DefaultFeatureProviderWithPatterns {
 	}
 
 	@Override
+	public IUpdateFeature getUpdateFeature(IUpdateContext context) {
+		return super.getUpdateFeature(context);
+	}
+	@Override
 	public ICustomFeature[] getCustomFeatures(ICustomContext context) {
 		ICustomFeature[] ret = super.getCustomFeatures(context);
 
@@ -145,9 +151,10 @@ public class DrakonFeatureProvider extends DefaultFeatureProviderWithPatterns {
 	@Override
 	public IDirectEditingFeature getDirectEditingFeature(
 	    IDirectEditingContext context) {
-	    PictogramElement pe = context.getPictogramElement();
-	    Object bo = getBusinessObjectForPictogramElement(pe);
-	    return new DrakonEditingFeatureProvider(this);
+		return super.getDirectEditingFeature(context);
+//	    PictogramElement pe = context.getPictogramElement();
+//	    Object bo = getBusinessObjectForPictogramElement(pe);
+//	    return new DrakonEditingFeatureProvider(this);
 	    
 	}
 

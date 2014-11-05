@@ -28,11 +28,13 @@ import org.eclipse.graphiti.features.context.ILayoutContext;
 import org.eclipse.graphiti.features.context.IUpdateContext;
 import org.eclipse.graphiti.features.impl.Reason;
 import org.eclipse.graphiti.mm.algorithms.GraphicsAlgorithm;
+import org.eclipse.graphiti.mm.algorithms.Polygon;
 import org.eclipse.graphiti.mm.algorithms.Polyline;
 import org.eclipse.graphiti.mm.algorithms.Rectangle;
 import org.eclipse.graphiti.mm.algorithms.RoundedRectangle;
 import org.eclipse.graphiti.mm.algorithms.Text;
 import org.eclipse.graphiti.mm.algorithms.styles.Orientation;
+import org.eclipse.graphiti.mm.algorithms.styles.Point;
 import org.eclipse.graphiti.mm.pictograms.ContainerShape;
 import org.eclipse.graphiti.mm.pictograms.Diagram;
 import org.eclipse.graphiti.mm.pictograms.PictogramElement;
@@ -47,14 +49,13 @@ import org.eclipse.graphiti.services.ICreateService;
 import org.eclipse.graphiti.services.IGaLayoutService;
 import org.eclipse.graphiti.services.IGaService;
 import org.eclipse.graphiti.services.IPeCreateService;
+import org.eclipse.graphiti.ui.services.GraphitiUi;
 import org.eclipse.graphiti.util.IColorConstant;
 
 import KragsteinMethod.*;
 
 public class AddressPattern extends IdPattern implements IPattern {
-	private static final String ID_NAME_TEXT = "nameText";
-	private static final String ID_OUTER_RECTANGLE = "outerRectangle";
-	private static final String ID_MAIN_RECTANGLE = "mainRectangle";
+	
 	private static int counter = 0;
 	public AddressPattern() {
 		super();
@@ -125,24 +126,18 @@ public class AddressPattern extends IdPattern implements IPattern {
 		
 		ContainerShape target = context.getTargetContainer();
 		
-		
-		
-		int height = target.getGraphicsAlgorithm().getY() + target.getGraphicsAlgorithm().getHeight();
-		int width = target.getGraphicsAlgorithm().getX() ;
 
 		Adress param = (Adress) context.getNewObject();
 		
 		ContainerShape shape = createService.createContainerShape(target.getContainer(), true);
 		
-	
+		this.setId(shape,  "name");
 		
-		Rectangle outrect = createService.createInvisibleRectangle(shape);
-		layoutService.setLocationAndSize(outrect, width, height, 150,  Style.IconFullHeight);
-		
-		Rectangle rect = createService.createRectangle(outrect);
+		Polygon rect = createService.createPolygon(shape);
 		rect.setLineWidth(1);
 		Text text = createService.createText(rect, param.getTarget());
 		rect.setBackground(manageColor(IColorConstant.WHITE));
+		text.setFont(Graphiti.getGaService().manageFont(getDiagram(), "Arial", 14));
 		layoutService.setLocationAndSize(text, 0, 0, 80, 30);
 		layoutService.setLocationAndSize(rect, 0, 0, 100, Style.IconHeight);
 		
@@ -151,51 +146,68 @@ public class AddressPattern extends IdPattern implements IPattern {
 		
 		link(shape, param);
 		
-		layoutPictogramElement(MethodPattern.HeaderShape);
+		
 		
 		return shape;
 	}
 
 	@Override
 	protected boolean layout(IdLayoutContext context, String id) {
-		boolean changesDone = false;
-
-		Rectangle outerRectangle = (Rectangle) context.getRootPictogramElement().getGraphicsAlgorithm();
-
-		if (id.equals(ID_MAIN_RECTANGLE) || id.equals(ID_NAME_TEXT)) {
-			GraphicsAlgorithm ga = context.getGraphicsAlgorithm();
-			Graphiti.getGaService().setLocationAndSize(ga, 0, 10, outerRectangle.getWidth(),
-					outerRectangle.getHeight() - 10);
-			changesDone = true;
+		int curWidth = context.getGraphicsAlgorithm().getWidth();
+		Text text = getTextPic(context.getGraphicsAlgorithm());
+		int w = GraphitiUi.getUiLayoutService().calculateTextSize(text.getValue(), text.getFont()).getWidth();
+		int height = context.getGraphicsAlgorithm().getHeight();
+		IGaLayoutService layoutService = Graphiti.getGaLayoutService();
+		if (curWidth == 0) {
+			context.getGraphicsAlgorithm().setHeight(Style.IconHeight);
+			layoutService.setSize( getTextPic(context.getGraphicsAlgorithm()), w , Style.IconHeight);
+			layoutService.setSize( context.getGraphicsAlgorithm(), w, Style.IconHeight);
 		}
-
-		return changesDone;
+		else {
+			Polygon poly = (Polygon)context.getGraphicsAlgorithm();
+			poly.getPoints().clear();
+			IGaService gaService = Graphiti.getGaService();
+			Point pt1 = gaService.createPoint(0,height/4);
+			Point pt2 = gaService.createPoint(curWidth/2,0);
+			
+			Point pt3 = gaService.createPoint(curWidth, height/4);
+			Point pt4 = gaService.createPoint(curWidth,height);
+			Point pt5 = gaService.createPoint(0,height);
+			poly.getPoints().add(pt1);
+			poly.getPoints().add(pt2);
+			poly.getPoints().add(pt3);
+			poly.getPoints().add(pt4);
+			poly.getPoints().add(pt5);
+			
+		}
+		
+		return true;
 	}
 
 	@Override
 	protected IReason updateNeeded(IdUpdateContext context, String id) {
-		if (id.equals(ID_NAME_TEXT)) {
-			Text nameText = (Text) context.getGraphicsAlgorithm();
-			Branch domainObject = (Branch) context.getDomainObject();
-			if (domainObject.getName() == null || !domainObject.getName().equals(nameText.getValue())) {
-				return Reason.createTrueReason("Name differs. Expected: '" + domainObject.getName() + "'");
-			}
-		}
-
+	
 		return Reason.createFalseReason();
 	}
+	Text getTextPic(GraphicsAlgorithm ga) {
+		EList<GraphicsAlgorithm> lst = ga.getGraphicsAlgorithmChildren();
+		return (Text)lst.get(0);
+	}
 
+	Rectangle getRectPic(GraphicsAlgorithm ga) {
+		return (Rectangle)ga;
+	}
+	
 	@Override
 	protected boolean update(IdUpdateContext context, String id) {
-		if (id.equals(ID_NAME_TEXT)) {
-			Text nameText = (Text) context.getGraphicsAlgorithm();
-			Branch domainObject = (Branch) context.getDomainObject();
-			nameText.setValue(domainObject.getName());
+		if (id.equals("name")) {
+			Adress domainObject = (Adress) context.getDomainObject();
+			Text nameText = getTextPic(context.getGraphicsAlgorithm());
+			nameText.setValue(domainObject.getTarget());
 			return true;
 		}
 		return false;
 	}
-
 	@Override
 	public int getEditingType() {
 		return TYPE_TEXT;
@@ -219,17 +231,13 @@ public class AddressPattern extends IdPattern implements IPattern {
 
 	@Override
 	public String checkValueValid(String value, IDirectEditingContext context) {
-		if (value == null || value.length() == 0) {
-			return "File name must not be empty";
-		}
-
-		return "file";
+		return null;
 	}
 
 	@Override
 	public void setValue(String value, IDirectEditingContext context) {
-		Branch file = (Branch) getBusinessObjectForPictogramElement(context.getPictogramElement());
-		file.setName(value);
+		Adress file = (Adress) getBusinessObjectForPictogramElement(context.getPictogramElement());
+		file.setTarget(value);
 		updatePictogramElement(context.getPictogramElement());
 	}
 

@@ -26,6 +26,8 @@ import org.eclipse.graphiti.features.context.ICreateContext;
 import org.eclipse.graphiti.features.context.IDirectEditingContext;
 import org.eclipse.graphiti.features.context.ILayoutContext;
 import org.eclipse.graphiti.features.context.IUpdateContext;
+import org.eclipse.graphiti.features.context.impl.LayoutContext;
+import org.eclipse.graphiti.features.context.impl.UpdateContext;
 import org.eclipse.graphiti.features.impl.Reason;
 import org.eclipse.graphiti.mm.algorithms.GraphicsAlgorithm;
 import org.eclipse.graphiti.mm.algorithms.Polyline;
@@ -117,9 +119,7 @@ public class ActionPattern extends IdPattern implements IPattern {
 		
 		
 		
-		int height = target.getGraphicsAlgorithm().getY() + target.getGraphicsAlgorithm().getHeight();
-		int width = target.getGraphicsAlgorithm().getX() ;
-
+	
 		Action action = (Action) context.getNewObject();
 		
 		ContainerShape shape = createService.createContainerShape(target.getContainer(), true);
@@ -127,50 +127,56 @@ public class ActionPattern extends IdPattern implements IPattern {
 		this.setId(shape, "name");
 		
 		
-		Rectangle outrect = createService.createInvisibleRectangle(shape);
-		layoutService.setLocationAndSize(outrect, width, height, 150,  Style.IconFullHeight);
-		
-		Rectangle rect = createService.createRectangle(outrect);
+		Rectangle rect = createService.createRectangle(shape);
 		rect.setLineWidth(1);
 		Text text = createService.createText(rect, action.getName());
 		text.setFont(gaService.manageFont(getDiagram(), "Arial", 14));
 		
 		rect.setBackground(manageColor(IColorConstant.WHITE));
-		layoutService.setLocationAndSize(text, 0, 0, 80, 30);
-		layoutService.setLocationAndSize(rect, 0, 0, 100, Style.IconHeight);
-		
-		
-		
+	
 		link(shape, action);
-		
-		layoutPictogramElement(MethodPattern.HeaderShape);
-		
+
 		return shape;
+	}
+	
+	@Override
+	public PictogramElement add(IAddContext context) {
+		PictogramElement pictogramElement = doAdd(context);
+		setPatternType(pictogramElement, PROPERTY_VALUE_PATTERN_TYPE_ID);
+		update(new UpdateContext(pictogramElement));	
+		return pictogramElement;
 	}
 
 	@Override
 	protected boolean layout(IdLayoutContext context, String id) {
-		boolean changesDone = false;
 		
+		int curWidth = context.getGraphicsAlgorithm().getWidth();
 		Text text = getTextPic(context.getGraphicsAlgorithm());
 		int w = GraphitiUi.getUiLayoutService().calculateTextSize(text.getValue(), text.getFont()).getWidth();
 		
-		IGaLayoutService layoutService = Graphiti.getGaLayoutService();	
-		layoutService.setSize( getRectPic(context.getGraphicsAlgorithm()), w + 20, Style.IconHeight);
-		return changesDone;
+		IGaLayoutService layoutService = Graphiti.getGaLayoutService();
+		if (curWidth == 0) {
+			
+			layoutService.setSize( getTextPic(context.getGraphicsAlgorithm()), w , Style.IconHeight);
+			layoutService.setSize( context.getGraphicsAlgorithm(), w, Style.IconHeight);
+		}
+		else {
+			int textX = (curWidth - w)/2;
+			layoutService.setLocation( getTextPic(context.getGraphicsAlgorithm()), textX , 0);
+		}
+		
+		return true;
 	}
 
 	Text getTextPic(GraphicsAlgorithm ga) {
 		EList<GraphicsAlgorithm> lst = ga.getGraphicsAlgorithmChildren();
-		lst = lst.get(0).getGraphicsAlgorithmChildren();
 		return (Text)lst.get(0);
 	}
 
 	Rectangle getRectPic(GraphicsAlgorithm ga) {
-		EList<GraphicsAlgorithm> lst = ga.getGraphicsAlgorithmChildren();
-		
-		return (Rectangle)lst.get(0);
+		return (Rectangle)ga;
 	}
+	
 	
 	@Override
 	protected IReason updateNeeded(IdUpdateContext context, String id) {
@@ -180,9 +186,11 @@ public class ActionPattern extends IdPattern implements IPattern {
 	@Override
 	protected boolean update(IdUpdateContext context, String id) {
 		if (id.equals("name")) {
+			
 			Action domainObject = (Action) context.getDomainObject();
 			Text nameText = getTextPic(context.getGraphicsAlgorithm());
 			nameText.setValue(domainObject.getName());
+			
 			return true;
 		}
 		return false;

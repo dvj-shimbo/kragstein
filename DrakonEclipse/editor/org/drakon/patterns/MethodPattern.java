@@ -45,6 +45,7 @@ import org.eclipse.graphiti.services.ICreateService;
 import org.eclipse.graphiti.services.IGaLayoutService;
 import org.eclipse.graphiti.services.IGaService;
 import org.eclipse.graphiti.services.IPeCreateService;
+import org.eclipse.graphiti.ui.services.GraphitiUi;
 import org.eclipse.graphiti.util.IColorConstant;
 
 import KragsteinMethod.*;
@@ -107,7 +108,7 @@ public class MethodPattern extends IdPattern implements IPattern {
 		ICreateService createService = Graphiti.getCreateService();
 		IGaLayoutService layoutService = Graphiti.getGaLayoutService();		
 		Header header = (Header) context.getNewObject();
-		
+		IGaService gaService = Graphiti.getGaService();
 		
 		
 		HeaderShape = createService.createContainerShape(getDiagram(), true);
@@ -121,29 +122,45 @@ public class MethodPattern extends IdPattern implements IPattern {
 		layoutService.setLocationAndSize(headrect, Style.leftPadding, Style.topPadding, 1500, 800);
 		
 		Rectangle outrect = createService.createInvisibleRectangle(shape);
-		layoutService.setLocationAndSize(outrect, Style.leftPadding, Style.topPadding, 150, 80);
+		layoutService.setLocation(outrect, Style.leftPadding, Style.topPadding);
 		RoundedRectangle rect = createService.createRoundedRectangle(outrect, 30, 30);
 		
 		rect.setLineWidth(1);
 		Text text = createService.createText(rect, header.getName());
+		text.setFont(gaService.manageFont(getDiagram(), "Arial", 14));
 		rect.setBackground(manageColor(IColorConstant.WHITE));
-		layoutService.setLocationAndSize(text, 0, 0, 80, 30);
-		layoutService.setLocationAndSize(rect, 0, 0, 100, 40);
+		layoutService.setLocation(text, 0, 0);
+		layoutService.setLocation(rect, 0, 0);
 		
 
 		link(shape, header);
-	
+		
 		
 		return shape;
 	}
 
 	@Override
 	protected boolean layout(IdLayoutContext context, String id) {
-		boolean changesDone = false;
-
-		return changesDone;
+		
+		Text text = getTextPic(context.getGraphicsAlgorithm());
+		int w = GraphitiUi.getUiLayoutService().calculateTextSize(text.getValue(), text.getFont()).getWidth();
+		
+		IGaLayoutService layoutService = Graphiti.getGaLayoutService();	
+		int rectWidth = context.getGraphicsAlgorithm().getWidth();
+		if (rectWidth < w)
+			rectWidth = w + 20;
+		layoutService.setSize( getRectPic(context.getGraphicsAlgorithm()), rectWidth, Style.IconHeight);
+		layoutService.setSize( getTextPic(context.getGraphicsAlgorithm()), w , Style.IconHeight);
+		
+		return true;
 	}
 
+	RoundedRectangle getRectPic(GraphicsAlgorithm ga) {
+		EList<GraphicsAlgorithm> lst = ga.getGraphicsAlgorithmChildren();
+		
+		return (RoundedRectangle)lst.get(0);
+	}
+	
 	@Override
 	protected IReason updateNeeded(IdUpdateContext context, String id) {
 

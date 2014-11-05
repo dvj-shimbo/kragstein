@@ -26,11 +26,13 @@ import org.eclipse.graphiti.features.context.ILayoutContext;
 import org.eclipse.graphiti.features.context.IUpdateContext;
 import org.eclipse.graphiti.features.impl.Reason;
 import org.eclipse.graphiti.mm.algorithms.GraphicsAlgorithm;
+import org.eclipse.graphiti.mm.algorithms.Polygon;
 import org.eclipse.graphiti.mm.algorithms.Polyline;
 import org.eclipse.graphiti.mm.algorithms.Rectangle;
 import org.eclipse.graphiti.mm.algorithms.RoundedRectangle;
 import org.eclipse.graphiti.mm.algorithms.Text;
 import org.eclipse.graphiti.mm.algorithms.styles.Orientation;
+import org.eclipse.graphiti.mm.algorithms.styles.Point;
 import org.eclipse.graphiti.mm.pictograms.ContainerShape;
 import org.eclipse.graphiti.mm.pictograms.Diagram;
 import org.eclipse.graphiti.mm.pictograms.PictogramElement;
@@ -44,6 +46,7 @@ import org.eclipse.graphiti.services.Graphiti;
 import org.eclipse.graphiti.services.IGaLayoutService;
 import org.eclipse.graphiti.services.IGaService;
 import org.eclipse.graphiti.services.ICreateService;
+import org.eclipse.graphiti.ui.services.GraphitiUi;
 import org.eclipse.graphiti.util.IColorConstant;
 
 import KragsteinMethod.*;
@@ -108,7 +111,7 @@ public class BranchPattern extends IdPattern implements IPattern {
 	public PictogramElement doAdd(IAddContext context) {
 		
 		ICreateService createService = Graphiti.getCreateService();
-		
+		 IGaService gaService = Graphiti.getGaService();
 		IGaLayoutService layoutService = Graphiti.getGaLayoutService();
 		
 		Method method = (Method)getDiagram().eResource().getContents().get(1);
@@ -124,46 +127,58 @@ public class BranchPattern extends IdPattern implements IPattern {
 		ContainerShape shape = createService.createContainerShape(getDiagram(), true);
 		
 		this.setId(shape,  "name");
-		Rectangle outrect = createService.createInvisibleRectangle(shape);
-		layoutService.setLocationAndSize(outrect, width, 80, 150, 40);
 		
-		Rectangle rect = createService.createRectangle(outrect);
+		
+		Polygon rect = createService.createPolygon(shape);
+		
 		rect.setLineWidth(1);
 		Text text = createService.createText(rect, head.getName());
 		rect.setBackground(manageColor(IColorConstant.WHITE));
+		text.setFont(gaService.manageFont(getDiagram(), "Arial", 14));
 		int x = 0;
-		if (method.getBranch().size() > 1) {
+		layoutService.setLocationAndSize(text, 0, 0, 80, 30);
+		layoutService.setLocationAndSize(rect, 0, 0, Style.IconWidth , Style.IconHeight);
 			
-			layoutService.setLocationAndSize(outrect, width + Style.WidthInterval , Style.IconFullHeight, Style.IconWidth , Style.IconFullHeight);
-			layoutService.setLocationAndSize(text, 0, 0, 80, 30);
-			layoutService.setLocationAndSize(rect, 0, 0, Style.IconWidth , Style.IconHeight);
-			int xy[] = new int[] { 0, 20, 0, 20 };
-			Polyline polyline = createService.createPlainPolyline(outrect, xy);
-			
-			polyline.setForeground(manageColor(IColorConstant.BLACK));
-			x = 50;
-		}
-		else {
-			layoutService.setLocationAndSize(outrect, Style.leftPadding, Style.topPadding + Style.IconFullHeight, 100, 80);
-			layoutService.setLocationAndSize(text, 0, 0, 80, 30);
-			layoutService.setLocationAndSize(rect, 0, 0, 100, Style.IconHeight);
-			x =  50;
-		}
 		
 		
 		
 		link(shape, head);
 		
-		layoutPictogramElement(MethodPattern.HeaderShape);
+		
 		return shape;
 	}
 
 	@Override
 	protected boolean layout(IdLayoutContext context, String id) {
-		boolean changesDone = false;
-
+		int curWidth = context.getGraphicsAlgorithm().getWidth();
+		Text text = getTextPic(context.getGraphicsAlgorithm());
+		int w = GraphitiUi.getUiLayoutService().calculateTextSize(text.getValue(), text.getFont()).getWidth();
+		int height = context.getGraphicsAlgorithm().getHeight();
+		IGaLayoutService layoutService = Graphiti.getGaLayoutService();
+		if (curWidth == 0) {
+			context.getGraphicsAlgorithm().setHeight(Style.IconHeight);
+			layoutService.setSize( getTextPic(context.getGraphicsAlgorithm()), w , Style.IconHeight);
+			layoutService.setSize( context.getGraphicsAlgorithm(), w, Style.IconHeight);
+		}
+		else {
+			Polygon poly = (Polygon)context.getGraphicsAlgorithm();
+			poly.getPoints().clear();
+			IGaService gaService = Graphiti.getGaService();
+			Point pt1 = gaService.createPoint(0,0);
+			Point pt2 = gaService.createPoint(curWidth,0);
+			
+			Point pt3 = gaService.createPoint(curWidth,height - height/4);
+			Point pt4 = gaService.createPoint(curWidth/2,height);
+			Point pt5 = gaService.createPoint(0,height- height/4);
+			poly.getPoints().add(pt1);
+			poly.getPoints().add(pt2);
+			poly.getPoints().add(pt3);
+			poly.getPoints().add(pt4);
+			poly.getPoints().add(pt5);
+			//layoutService.setLocation( getTextPic(context.getGraphicsAlgorithm()), textX , 0);
+		}
 		
-		return changesDone;
+		return true;
 	}
 
 	@Override
@@ -173,14 +188,11 @@ public class BranchPattern extends IdPattern implements IPattern {
 	}
 	Text getTextPic(GraphicsAlgorithm ga) {
 		EList<GraphicsAlgorithm> lst = ga.getGraphicsAlgorithmChildren();
-		lst = lst.get(0).getGraphicsAlgorithmChildren();
 		return (Text)lst.get(0);
 	}
 
 	Rectangle getRectPic(GraphicsAlgorithm ga) {
-		EList<GraphicsAlgorithm> lst = ga.getGraphicsAlgorithmChildren();
-		
-		return (Rectangle)lst.get(0);
+		return (Rectangle)ga;
 	}
 	
 	@Override

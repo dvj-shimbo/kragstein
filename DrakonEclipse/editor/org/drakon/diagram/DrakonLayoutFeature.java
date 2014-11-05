@@ -52,14 +52,18 @@ public class DrakonLayoutFeature extends AbstractLayoutFeature {
        return true;
     }
  
-    public boolean layout(ILayoutContext context) {
-        boolean anythingChanged = false;
-        ContainerShape containerShape =
-                (ContainerShape) context.getPictogramElement();
-   
-        IGaService gaService = Graphiti.getGaService();
-        ILayoutService layoutService = Graphiti.getLayoutService();
-        
+    void layoutPattern(EObject icon) {
+    	PictogramElement el = patternProvider.getPictogramElementForBusinessObject(icon);
+		if (el != null ) {
+			IPattern pat = patternProvider.getPatternForPictogramElement(el);
+			if (pat != null )  {
+				
+				pat.layout(new LayoutContext(el));
+			}
+		}
+    }
+    
+    void cleanConnections(ContainerShape containerShape) {
         List<GraphicsAlgorithm> delList = new ArrayList();
         for (GraphicsAlgorithm graphicsAlgorithm : containerShape.getGraphicsAlgorithm().getGraphicsAlgorithmChildren()){
         	
@@ -69,48 +73,14 @@ public class DrakonLayoutFeature extends AbstractLayoutFeature {
         	}
         }
         containerShape.getGraphicsAlgorithm().getGraphicsAlgorithmChildren().removeAll(delList);
-        int x = 0 ;
-        
-        Method method = (Method)getDiagram().eResource().getContents().get(1);
-        for(int i = 0;  i <  method.getBranch().size(); ++i ) {
-        	
-        	Route route =  method.getBranch().get(i).getRoute();
-        	x = Style.leftPadding + i * ( Style.IconWidth + Style.WidthInterval);
-        	int y = Style.topPadding + Style.IconFullHeight;
-        	Icon icon = route.getIcon().get(0);
-        	do {
-        		List<PictogramElement> elemList = Graphiti.getLinkService().getPictogramElements(getDiagram(), icon);
-         
-        		layoutService.setLocation(elemList.get(0).getGraphicsAlgorithm(), x, y);
-        		y += Style.IconFullHeight;  
-        		
-        		PictogramElement el = patternProvider.getPictogramElementForBusinessObject(icon);
-        		if (el != null ) {
-        			IPattern pat = patternProvider.getPatternForPictogramElement(el);
-        			if (pat != null )  {
-        				
-        				pat.layout(new LayoutContext(el));
-        			}
-        		}
-        		icon = icon.getNextIcon();
-        	}
-        	while(icon != null);
-        	
-        	///////////////////
-        	//центральная линия для связи икон
-        	int xy[] = new int[] { x + Style.IconWidth/2, 40 + Style.HeightInterval, x+ Style.IconWidth/2, y - Style.IconHeight};
-    		Polyline polyline = Graphiti.getCreateService().createPlainPolyline(MethodPattern.HeaderShape.getGraphicsAlgorithm(), xy);
-    		
-    		polyline.setForeground(manageColor(IColorConstant.BLACK));
-    		/////////////////
-        }
-        
-        
-        //горизонтальная связь между бранчами
+    }
+    
+    void drawBranchConnections(int width) {
+    	 //горизонтальная связь между бранчами
     	int xy[] = new int[] { 
     		Style.leftPadding, 
 			Style.topPadding + Style.IconFullHeight + Style.IconHeight/2, 
-			x,
+			width,
 			Style.topPadding + Style.IconFullHeight + Style.IconHeight/2
 			};
 		Polyline polyline = Graphiti.getCreateService().createPlainPolyline(MethodPattern.HeaderShape.getGraphicsAlgorithm(), xy);
@@ -118,6 +88,82 @@ public class DrakonLayoutFeature extends AbstractLayoutFeature {
 		polyline.setForeground(manageColor(IColorConstant.BLACK));
         /////////////////////
 		
+    }
+    
+    void drawRouteConnections(int x, int y) {
+    	///////////////////
+		//центральная линия для связи икон
+		int xy[] = new int[] { x + Style.IconWidth/2, 40 + Style.HeightInterval, x+ Style.IconWidth/2, y - Style.IconHeight};
+		Polyline polyline = Graphiti.getCreateService().createPlainPolyline(MethodPattern.HeaderShape.getGraphicsAlgorithm(), xy);
+		
+		polyline.setForeground(manageColor(IColorConstant.BLACK));
+	/////////////////
+    }
+    public boolean layout(ILayoutContext context) {
+      
+        ContainerShape containerShape =
+                (ContainerShape) context.getPictogramElement();
+   
+     
+        IGaLayoutService layoutService = Graphiti.getGaLayoutService();
+        
+        cleanConnections(containerShape);
+        
+        int x = 0 ;
+        
+        
+        Method method = (Method)getDiagram().eResource().getContents().get(1);
+        
+       
+        PictogramElement headerElem = patternProvider.getPictogramElementForBusinessObject( method.getHeader());
+        layoutService.setSize(headerElem.getGraphicsAlgorithm(), 100,100);
+        layoutPattern(method.getHeader());
+        
+        for(int i = 0;  i <  method.getBranch().size(); ++i ) {
+        	
+        	Route route =  method.getBranch().get(i).getRoute();
+        	
+        	int routeWidth = 0;
+        	
+        	//Первый проход рассчитывает ширину элементов и вычисляет максимальный
+        	Icon icon = route.getIcon().get(0);
+        	do {
+        		PictogramElement picElem = patternProvider.getPictogramElementForBusinessObject(icon);
+        		picElem.getGraphicsAlgorithm().setWidth(0);
+        		layoutPattern(icon);
+        		int width = picElem.getGraphicsAlgorithm().getWidth();
+        		
+        		if (width > routeWidth)
+        			routeWidth = width;
+        		
+        		icon = icon.getNextIcon();
+        	}
+        	while(icon != null);
+        	
+        	////////////////////////
+        	//Второй проход рассчитывает позицию и задает ширину
+        	x = Style.leftPadding + i * ( Style.IconWidth + Style.WidthInterval);
+        	int y = Style.topPadding + Style.IconFullHeight;
+        	icon = route.getIcon().get(0);
+        	do {
+        		PictogramElement picElem = patternProvider.getPictogramElementForBusinessObject(icon);
+        		int height = picElem.getGraphicsAlgorithm().getHeight();
+        		layoutService.setLocationAndSize(picElem.getGraphicsAlgorithm(), x, y, routeWidth, height);
+        		layoutPattern(icon);
+        		
+        		y += height + Style.HeightInterval;  
+        		
+
+        		icon = icon.getNextIcon();
+        	}
+        	while(icon != null);
+        	
+        	
+        	//drawRouteConnections(x, y);
+        }
+        
+        //drawBranchConnections(x);
+       
            
         return true;
     }
